@@ -1,0 +1,15 @@
+# My Vagrant aliases 
+alias vgi="vagrant init"
+# Vmware Don't provision
+alias vgu="vagrant up --no-provision --provider=vmware_fusion && vagrant ssh"
+# Vmware Provision
+alias vgup="vagrant up --provider=vmware_fusion && vagrant ssh"
+# AWS
+alias vgua="vagrant up --provider=aws"
+#
+alias vgs="vagrant status"
+alias vgd="vagrant destroy -f"
+alias vgssh="vagrant ssh"
+alias vgbr="vagrant box remove $1"
+alias vgbl="vagrant box list"
+alias vgpl="vagrant plugin list"
