@@ -10,6 +10,8 @@ for name in `find . -maxdepth 1 -iname ".*" -type f | sed -e 's/\.\// /'`; do
 
     if [ -h $target ]; then
 		rm $target
+	 elif [ -f $target ]; then
+		rm $target
     elif [ -d $target ]; then
       rm -rf $target
     fi
@@ -20,6 +22,14 @@ for name in `find . -maxdepth 1 -iname ".*" -type f | sed -e 's/\.\// /'`; do
 done
 
 
-#setup bundler
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-vim +BundleInstall +qall
+#setup vim vundle
+VUNDLE_DIR=~/.vim/bundle/vundle
+
+if [ -d "$VUNDLE_DIR" ]; then
+	echo "Vundle already installed"
+else
+	echo "Cloning vundle, make sure if you are beind a proxy you can get to github"
+	sleep 10;
+	git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+	vim +BundleInstall +qall
+fi
