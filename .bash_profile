@@ -1,7 +1,7 @@
 #PS1 prompt with git status
 
 if [[ $EUID -ne 0 ]]; then
-	tail="~"
+	tail="$"
 else 
 	tail="#"
 fi
