@@ -18,3 +18,8 @@ for name in `find . -maxdepth 1 -iname ".*" -type f | sed -e 's/\.\// /'`; do
     echo "Linked $PWD/$name to $target."
   fi
 done
+
+
+#setup bundler
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+vim +BundleInstall +qall

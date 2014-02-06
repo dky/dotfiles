@@ -46,4 +46,4 @@ alias gbl='git branch -v'
 alias vi="vim"
 
 #less with color
-#alias ls="ls --color=always"
+alias ls="ls --color=always"
