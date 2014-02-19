@@ -32,3 +32,6 @@ if [ -n "$BASH_VERSION" ]; then
 	. "$HOME/.docker_aliases"
     fi
 fi
+
+PATH=$PATH:/usr/local/bin/packer
+export PATH
