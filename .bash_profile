@@ -29,5 +29,6 @@ if [ -n "$BASH_VERSION" ]; then
 	. "$HOME/.bashrc"
 	. "$HOME/.packer_aliases"
 	. "$HOME/.vagrant_aliases"
+	. "$HOME/.docker_aliases"
     fi
 fi
