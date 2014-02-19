@@ -27,5 +27,7 @@ if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
     if [ -f "$HOME/.bashrc" ]; then
 	. "$HOME/.bashrc"
+	. "$HOME/.packer_aliases"
+	. "$HOME/.vagrant_aliases"
     fi
 fi
