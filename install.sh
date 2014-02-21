@@ -24,12 +24,13 @@ done
 
 #setup vim vundle
 VUNDLE_DIR=~/.vim/bundle/vundle
+VUNDLE_GIT=https://github.com/gmarik/Vundle.vim.git
 
 if [ -d "$VUNDLE_DIR" ]; then
 	echo "Vundle already installed"
 else
 	echo "Cloning vundle, make sure if you are beind a proxy you can get to github"
 	sleep 10;
-	git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+	git clone $VUNDLE_GIT ~/.vim/bundle/vundle
 	vim +BundleInstall +qall
 fi

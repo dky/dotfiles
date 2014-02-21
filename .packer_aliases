@@ -1,4 +1,0 @@
-alias packv="packer validate"
-alias packb="packer build template.json"
-alias packc="rm -rf ./output-vmware"
-alias packit="packc && packb"
