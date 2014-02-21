@@ -2,7 +2,7 @@
 #
 # This installation is destructive, as it removes exisitng files/directories.
 # Use at your own risk.
-# This came from mitchellh's dotfiles git repo.  I modified it to suite my needs - dkynyc
+# This came from mitchellh's dotfiles git repo.  I modified it to suite my needs - dky
 
 for name in `find . -maxdepth 1 -iname ".*" -type f | sed -e 's/\.\// /'`; do 
   if [ ! $name == ".gitignore" -a ! $name == "install.sh" ]; then
@@ -21,16 +21,12 @@ for name in `find . -maxdepth 1 -iname ".*" -type f | sed -e 's/\.\// /'`; do
   fi
 done
 
+#setup .vim
+DOTVIM_DIR=~/.vim
+DOTVIM_GIT=https://github.com/dky/dotvim
 
-#setup vim vundle
-VUNDLE_DIR=~/.vim/bundle/vundle
-VUNDLE_GIT=https://github.com/gmarik/Vundle.vim.git
-
-if [ -d "$VUNDLE_DIR" ]; then
-	echo "Vundle already installed"
+if [ -d "$DOTVIM_DIR" ]; then
+	echo ".vim already installed"
 else
-	echo "Cloning vundle, make sure if you are beind a proxy you can get to github"
-	sleep 10;
-	git clone $VUNDLE_GIT ~/.vim/bundle/vundle
-	vim +BundleInstall +qall
+	git clone $DOTVIM_GIT ~/.vim
 fi
