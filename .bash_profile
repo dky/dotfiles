@@ -16,4 +16,4 @@ fi
 
 export TERM=xterm-256color
 export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}\007"'
-export PATH=$PATH:/usr/local/bin/packer
+export PATH=/opt/tmux/bin:/opt/vim/bin:/opt/git/bin:$PATH:/usr/local/bin/packer
