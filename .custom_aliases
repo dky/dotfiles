@@ -9,37 +9,32 @@ alias vgssh="vagrant ssh"
 alias vgbr="vagrant box remove $1"
 alias vgbl="vagrant box list"
 alias vgpl="vagrant plugin list"
+
 #Packer aliases
 alias packv="packer validate"
 alias packb="packer build template.json"
 alias packc="rm -rf ./output-vmware"
 alias packit="packc && packb"
+
 #Docker aliases
 alias dkr="docker run -i -t $1"
 alias dki="docker images"
 alias dkps="docker ps -a"
 
-# custom aliases
-alias ll="ls -lGa"
-alias lh="ls -lGah"
-alias hs="history"
-
-# screen aliases 
+#Screen aliases 
 alias sls="screen -ls"
 alias sr="screen -r"
 alias ss="screen -S"
 
-# tmux aliases 
+#Tmux aliases 
 alias tn="tmux new -s $1"
 alias ta="tmux attach -t $1"
 alias tls="tmux ls"
 
-# git 
-alias cdgit="cd ~/git"
+#Git 
 alias gi='git init'
 alias ga='git add'
 alias gp='git push'
-alias gpt="git push tfs master"
 alias gl='git log --pretty --pretty=oneline'
 alias gs='git status'
 alias gd='git diff'
@@ -53,12 +48,12 @@ alias grr='git remote rm'
 alias gpu='git pull'
 alias gcl='git clone'
 alias grv='git remote -v'
-alias gptfsp='git push tfs master'
 alias gco='git checkout'
 alias gbl='git branch -v'
 
-#vim alias
+#Vim alias
 alias vi="vim"
 
-#less with color
-alias ls="ls --color=always"
+#Custom aliases
+alias ll="ls -lh"
+alias hs="history"
