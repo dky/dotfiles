@@ -21,12 +21,12 @@ for name in `find . -maxdepth 1 -iname ".*" -type f | sed -e 's/\.\// /'`; do
   fi
 done
 
-#setup .vim
+# Setup .vim
 DOTVIM_DIR=~/.vim
 DOTVIM_GIT=https://github.com/dky/dotvim
 
 if [ -d "$DOTVIM_DIR" ]; then
-	echo ".vim already installed"
+	echo ".vim already present"
 else
-	git clone $DOTVIM_GIT ~/.vim
+	git clone $DOTVIM_GIT $DOTVIM_DIR
 fi
