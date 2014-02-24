@@ -62,5 +62,6 @@ alias hs="history"
 alias cddeploy="cd /opt/splunk/etc/deployment-apps"
 alias cdlocal="cd /opt/splunk/etc/system/local"
 alias spkrd="sudo /opt/splunk/bin/splunk reload deploy-server"
+alias tailsplunk="sudo tail -f /opt/splunkforwarder/var/log/splunk/splunkd.log"
 
 
