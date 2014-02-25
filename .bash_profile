@@ -14,6 +14,10 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
+if [ -f "$HOME/.work_aliases" ]; then
+	source "$HOME/.work_aliases"
+fi
+
 export TERM=xterm-256color
 export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}\007"'
 export PATH=/opt/tmux/bin:/opt/vim/bin:/opt/git/bin:$PATH:/usr/local/packer:"/Applications/VMware Fusion.app/Contents/Library/VMware OVF Tool"
