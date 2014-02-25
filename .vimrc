@@ -27,7 +27,6 @@ Bundle 'mattn/zencoding-vim'
 Bundle 'rodjek/vim-puppet'
 Bundle 'Raimondi/delimitMate'
 Bundle 'bling/vim-airline'
-Bundle 'airblade/vim-gitgutter'
 
 if has("autocmd")
   " Enable filetype detection
