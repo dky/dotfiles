@@ -27,7 +27,6 @@ Bundle 'mattn/zencoding-vim'
 Bundle 'rodjek/vim-puppet'
 Bundle 'Raimondi/delimitMate'
 Bundle 'bling/vim-airline'
-Bundle 'airblade/vim-gitgutter'
 
 if has("autocmd")
   " Enable filetype detection
@@ -83,8 +82,14 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
-"renamp esc to jj
-imap jj <Esc>
+"turn off h,j,k,l
+noremap h <NOP>
+noremap j <NOP>
+noremap k <NOP>
+noremap l <NOP>
+
+"renamp esc to jk
+imap jk <Esc>
 
 "enable paste mode for pasted code
 set pastetoggle=<F2>

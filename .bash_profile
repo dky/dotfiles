@@ -12,6 +12,9 @@ if [ -n "$BASH_VERSION" ]; then
 		source "$HOME/.custom_aliases"
 		source "$HOME/.custom_functions"
     fi
+		if [ -f "$HOME/.dot_private" ]; then
+			source "$HOME/.dot_private"
+		fi
 fi
 
 export TERM=xterm-256color
