@@ -64,4 +64,6 @@ alias cdlocal="cd /opt/splunk/etc/system/local"
 alias spkrd="sudo /opt/splunk/bin/splunk reload deploy-server"
 alias tailsplunk="sudo tail -f /opt/splunkforwarder/var/log/splunk/splunkd.log"
 
+#Puppet aliases
+alias cdnod="cd /etc/puppet/manifests/nodes/"
 
