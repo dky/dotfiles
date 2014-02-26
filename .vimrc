@@ -11,21 +11,11 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-ragtag'
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-Bundle 'garbas/vim-snipmate'
-Bundle 'honza/vim-snippets'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'henrik/vim-ruby-runner'
-Bundle 'mattn/zencoding-vim'
 Bundle 'rodjek/vim-puppet'
-Bundle 'Raimondi/delimitMate'
 Bundle 'bling/vim-airline'
 
 if has("autocmd")
