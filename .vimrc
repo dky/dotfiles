@@ -73,10 +73,10 @@ map <left> <nop>
 map <right> <nop>
 
 "turn off h,j,k,l
-noremap h <NOP>
-noremap j <NOP>
-noremap k <NOP>
-noremap l <NOP>
+"noremap h <NOP>
+"noremap j <NOP>
+"noremap k <NOP>
+"noremap l <NOP>
 
 "renamp esc to jk
 imap jk <Esc>
