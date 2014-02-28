@@ -66,4 +66,4 @@ alias tailsplunk="sudo tail -f /opt/splunkforwarder/var/log/splunk/splunkd.log"
 
 #Puppet aliases
 alias cdnod="cd /etc/puppet/manifests/nodes/"
-
+alias pl="puppet cert list --all"
