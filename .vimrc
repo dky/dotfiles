@@ -119,3 +119,47 @@ nmap ,gp <Esc>:Git push<CR>
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_left_sep=''
 let g:airline_right_sep=''
+
+"run shell commands and go code
+
+function! s:ExecuteInShell(command, bang)
+    let _ = a:bang != '' ? s:_ : a:command == '' ? '' : join(map(split(a:command), 'expand(v:val)'))
+
+    if (_ != '')
+        let s:_ = _
+        let bufnr = bufnr('%')
+        let winnr = bufwinnr('^' . _ . '$')
+        silent! execute  winnr < 0 ? 'belowright new ' . fnameescape(_) : winnr . 'wincmd w'
+        setlocal buftype=nowrite bufhidden=wipe nobuflisted noswapfile wrap number
+        silent! :%d
+        let message = 'Execute ' . _ . '...'
+        call append(0, message)
+        echo message
+        silent! 2d | resize 1 | redraw
+        silent! execute 'silent! %!'. _
+        silent! execute 'resize ' . line('$')
+        silent! execute 'syntax on'
+        silent! execute 'autocmd BufUnload <buffer> execute bufwinnr(' . bufnr . ') . ''wincmd w'''
+        silent! execute 'autocmd BufEnter <buffer> execute ''resize '' .  line(''$'')'
+        silent! execute 'nnoremap <silent> <buffer> <CR> :call <SID>ExecuteInShell(''' . _ . ''', '''')<CR>'
+        silent! execute 'nnoremap <silent> <buffer> <LocalLeader>r :call <SID>ExecuteInShell(''' . _ . ''', '''')<CR>'
+        silent! execute 'nnoremap <silent> <buffer> <LocalLeader>g :execute bufwinnr(' . bufnr . ') . ''wincmd w''<CR>'
+        nnoremap <silent> <buffer> <C-W>_ :execute 'resize ' . line('$')<CR>
+        silent! syntax on
+    endif
+endfunction
+
+command! -complete=shellcmd -nargs=* -bang Shell call s:ExecuteInShell(<q-args>, '<bang>')
+cabbrev shell Shell
+
+command! -complete=shellcmd -nargs=* -bang Gor call s:ExecuteInShell('go run %', '<bang>')
+command! -complete=shellcmd -nargs=* -bang Gon call s:ExecuteInShell('go install', '<bang>')
+command! -complete=shellcmd -nargs=* -bang Gob call s:ExecuteInShell('go build', '<bang>')
+command! -complete=shellcmd -nargs=* -bang Got call s:ExecuteInShell('go test -v', '<bang>')
+
+:map <F5>  :Gor<CR>
+:map <F6>  :Gob<CR>
+:map <F7>  :Gon<CR>
+:map <F9>  :Got<CR>
+:map <F10> :Fmt<CR>:w<CR>
+:map <F12> :q<CR>
