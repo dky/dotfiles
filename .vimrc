@@ -113,7 +113,8 @@ nmap ,tn <Esc>:tab new<CR>
 nmap ,gs <Esc>:Gstatus<CR>
 nmap ,gl <Esc>:Git log --pretty --pretty=oneline<CR>
 nmap ,gco <Esc>:Git checkout<CR>
-nmap ,gp <Esc>:Git push<CR>
+nmap ,gp <Esc>:Git push origin master<CR>
+nmap ,ga <Esc>:Git add .<CR>
 
 "Configure airline.
 let g:airline#extensions#tabline#enabled = 1
