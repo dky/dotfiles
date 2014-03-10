@@ -29,6 +29,7 @@ alias ss="screen -S"
 #Tmux aliases 
 alias tn="tmux new -s $1"
 alias ta="tmux attach -t $1"
+alias tad="tmux attach -dt $1"
 alias tls="tmux ls"
 
 #Git 
