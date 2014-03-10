@@ -5,6 +5,7 @@
 
 set ruler				" ruler bottom right
 set nocompatible		" be iMproved
+set hidden 				" no prompt for unsaved buffers
 filetype off			" required!
 
 set rtp+=~/.vim/bundle/vundle/
