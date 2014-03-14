@@ -72,5 +72,5 @@ alias pl="puppet cert list --all"
 
 #RPM Build aliases
 alias rpmspec="cd $HOME/rpmbuild/SPECS"
-alias rpmsrc="cd $HOME/rpmbuild/SPECS"
+alias rpmsrc="cd $HOME/rpmbuild/SOURCES"
 alias rpmba="rpmbuild -ba $1"
