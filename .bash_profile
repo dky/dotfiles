@@ -19,6 +19,10 @@ if [ -n "$BASH_VERSION" ]; then
 		if [ -f "$HOME/.rvm/scripts/rvm" ]; then
 			source "$HOME/.rvm/scripts/rvm"
 		fi
+
+		if [ -f "$HOME/.splunk" ]; then
+			source "$HOME/.splunk"
+		fi
 fi
 
 export TERM=xterm-256color
