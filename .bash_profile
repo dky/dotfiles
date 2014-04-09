@@ -20,8 +20,8 @@ if [ -n "$BASH_VERSION" ]; then
 			source "$HOME/.rvm/scripts/rvm"
 		fi
 
-		if [ -f "$HOME/.splunk" ]; then
-			source "$HOME/.splunk"
+		if [ -f "$HOME/.splunk_custom" ]; then
+			source "$HOME/.splunk_custom"
 		fi
 fi
 
