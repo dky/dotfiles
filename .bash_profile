@@ -23,6 +23,7 @@ if [ -n "$BASH_VERSION" ]; then
 		if [ -f "$HOME/.splunk_custom" ]; then
 			source "$HOME/.splunk_custom"
 		fi
+
 fi
 
 export TERM=xterm-256color
