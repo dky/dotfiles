@@ -1,6 +1,0 @@
-export SPLUNK_USERNAME=admin
-export SPLUNK_PASSWORD=changeme
-
-alias spkclean="/opt/splunk/bin/splunk stop && /opt/splunk/bin/splunk clean all -f && /opt/splunk/bin/splunk start"
-alias spkrestart="/opt/splunk/bin/splunk restart"
-alias spkoneshot="/opt/splunk/bin/splunk add oneshot"

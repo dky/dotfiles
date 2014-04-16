@@ -78,3 +78,13 @@ alias rpmba="rpmbuild -ba $1"
 #Octopress
 alias octserve="octopress serve"
 
+#Splunk
+export SPLUNK_USERNAME=admin
+export SPLUNK_PASSWORD=changeme
+
+alias spkclean="/opt/splunk/bin/splunk stop && /opt/splunk/bin/splunk clean eventdata -index main -f && /opt/splunk/bin/splunk start"
+alias spkrestart="/opt/splunk/bin/splunk restart"
+alias spkoneshot="/opt/splunk/bin/splunk add oneshot"
+alias spkrd="/opt/splunk/bin/splunk restart"
+alias cdspk="cd /opt/splunk/"
+alias cdspkapps="cd /opt/splunk/etc/apps/"
