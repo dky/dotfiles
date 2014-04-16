@@ -23,6 +23,10 @@ if [ -n "$BASH_VERSION" ]; then
 		if [ -f "$HOME/.splunk" ]; then
 			source "$HOME/.splunk"
 		fi
+
+		if [ -f "$HOME/.octopress" ]; then
+			source "$HOME/.octopress"
+		fi
 fi
 
 export TERM=xterm-256color
