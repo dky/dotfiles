@@ -12,7 +12,12 @@ function color_my_prompt {
 
 color_my_prompt
 
-function dkrmi {
+function dkrmc {
 	for i in `docker ps -a | awk '{ print $1 }' | grep -v "CONTAINER"`; do docker rm -f $i; done
 }
+
+function dkrmi {
+	for i in `docker images | awk '{ print $3 }' | grep -v IMAGE`; do docker rmi $i; done
+}
+
 
