@@ -165,3 +165,5 @@ command! -complete=shellcmd -nargs=* -bang Got call s:ExecuteInShell('go test -v
 :map <F9>  :Got<CR>
 :map <F10> :Fmt<CR>:w<CR>
 :map <F12> :q<CR>
+
+:map <leader>r :!perl %<cr>
