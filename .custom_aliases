@@ -11,6 +11,7 @@ alias vgd="vagrant destroy -f"
 alias vgssh="vagrant ssh"
 alias vgbr="vagrant box remove $1"
 alias vgrm="vagrant box remove $1"
+alias vgba="vagrant box add $1"
 alias vgbl="vagrant box list"
 alias vgpl="vagrant plugin list"
 
