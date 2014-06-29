@@ -96,3 +96,6 @@ alias spkoneshot="/opt/splunk/bin/splunk add oneshot"
 alias spkrd="/opt/splunk/bin/splunk restart"
 alias cdspk="cd /opt/splunk/"
 alias cdspkapps="cd /opt/splunk/etc/apps/"
+
+#Sudo
+alias sd="sudo"
