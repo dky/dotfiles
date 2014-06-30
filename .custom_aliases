@@ -41,7 +41,8 @@ alias tls="tmux ls"
 #Git 
 alias gi='git init'
 alias ga='git add'
-alias gp='git push'
+alias gp='git push --force'
+alias gpf='git push force'
 alias gl='git log --pretty --pretty=oneline'
 alias gs='git status'
 alias gd='git diff'
