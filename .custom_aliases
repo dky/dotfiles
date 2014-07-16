@@ -77,6 +77,8 @@ alias cdnod="cd /etc/puppet/manifests/nodes/"
 alias cdmod="cd /etc/puppet/modules"
 alias pcla="puppet cert list --all"
 alias pcla="puppet cert list"
+alias spcla="sudo puppet cert list"
+alias spcl="sudo puppet cert list"
 
 #RPM Build aliases
 alias rpmspec="cd $HOME/rpmbuild/SPECS"
