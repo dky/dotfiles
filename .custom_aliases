@@ -75,7 +75,8 @@ alias tailsplunk="sudo tail -f /opt/splunkforwarder/var/log/splunk/splunkd.log"
 #Puppet aliases
 alias cdnod="cd /etc/puppet/manifests/nodes/"
 alias cdmod="cd /etc/puppet/modules"
-alias pl="puppet cert list --all"
+alias pcla="puppet cert list --all"
+alias pcla="puppet cert list"
 
 #RPM Build aliases
 alias rpmspec="cd $HOME/rpmbuild/SPECS"
