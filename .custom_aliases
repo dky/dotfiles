@@ -79,6 +79,7 @@ alias pcla="puppet cert list --all"
 alias pcla="puppet cert list"
 alias spcla="sudo puppet cert list"
 alias spcl="sudo puppet cert list"
+alias spclean="sudo puppet cert sign $1; sudo puppet cert clean $1"
 
 #RPM Build aliases
 alias rpmspec="cd $HOME/rpmbuild/SPECS"
