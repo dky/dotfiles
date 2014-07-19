@@ -3,5 +3,3 @@
 	email = don.d.ky@gmail.com
 [push]
 	default = matching
-[credential]
-	helper = osxkeychain
