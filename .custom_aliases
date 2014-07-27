@@ -66,6 +66,7 @@ alias vi="vim"
 #Custom aliases
 alias ll="ls -lh"
 alias hs="history"
+alias wi="whois"
 
 #Splunk aliases
 alias cddeploy="cd /opt/splunk/etc/deployment-apps"
