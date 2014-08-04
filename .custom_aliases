@@ -43,11 +43,11 @@ alias tls="tmux ls"
 #Git 
 alias gi='git init'
 alias ga='git add'
-alias gp='git pull origin master'
+alias gpd='git pull origin master'
+alias gpu='git push origin master'
 alias gl='git log --pretty --pretty=oneline'
 alias gs='git status'
 alias gd='git diff'
-alias gm='git commit -m'
 alias gma='git commit -am'
 alias gb='git branch'
 alias gco='git checkout'
