@@ -18,6 +18,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'rodjek/vim-puppet'
 Bundle 'bling/vim-airline'
+Bundle 'mattn/emmet-vim'
 
 if has("autocmd")
   " Enable filetype detection

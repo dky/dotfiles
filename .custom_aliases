@@ -76,10 +76,11 @@ alias cdpnod="cd /etc/puppet/manifests/nodes/"
 alias cdpmod="cd /etc/puppet/modules"
 alias pcla="puppet cert list --all"
 alias pcl="puppet cert list"
+#Sudo aliases
 alias spcla="sudo puppet cert list"
 alias spcl="sudo puppet cert list"
-alias spclean="sudo puppet cert sign $1; sudo puppet cert clean $1"
-alias spsign="sudo puppet cert sign $1"
+alias spcc="sudo puppet cert sign $1; sudo puppet cert clean $1"
+alias spcs="sudo puppet cert sign $1"
 
 #RPM Build aliases
 alias rpmspec="cd $HOME/rpmbuild/SPECS"
