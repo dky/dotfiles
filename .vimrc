@@ -20,6 +20,7 @@ Bundle 'rodjek/vim-puppet'
 Bundle 'bling/vim-airline'
 Bundle 'mattn/emmet-vim'
 Bundle 'godlygeek/tabular'
+Bundle 'msanders/snipmate.vim'
 
 if has("autocmd")
   " Enable filetype detection
