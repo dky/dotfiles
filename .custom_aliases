@@ -25,7 +25,7 @@ alias packit="packc && packb"
 
 #Docker aliases
 alias dkr="docker run -i -t $1"
-alias dki="docker images"
+alias dkls="docker images"
 alias dkps="docker ps -a"
 alias dl='docker ps -l -q'
 
