@@ -79,7 +79,7 @@ alias cdpmod="cd /etc/puppet/modules"
 alias pcla="puppet cert list --all"
 alias pcl="puppet cert list"
 #Sudo aliases
-alias spcla="sudo puppet cert list"
+alias spcla="sudo puppet cert list --all"
 alias spcl="sudo puppet cert list"
 alias spcc="sudo puppet cert clean $1"
 alias spcs="sudo puppet cert sign $1"
