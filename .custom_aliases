@@ -88,9 +88,9 @@ alias rpmsrc="cd $HOME/rpmbuild/SOURCES"
 alias rpmba="rpmbuild -ba $1"
 
 #Octopress
-alias octosrv="octopress serve"
-alias octobd="octopress build"
-alias octonp="octopress new post"
+alias octs="octpress serve"
+alias octb="octopress build"
+alias octnp="octopress new post"
 
 #Splunk
 export SPLUNK_USERNAME=admin
