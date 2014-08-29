@@ -170,3 +170,9 @@ command! -complete=shellcmd -nargs=* -bang Got call s:ExecuteInShell('go test -v
 :map <F12> :q<CR>
 
 :map <leader>r :!perl %<cr>
+
+"Tabular plugin
+if exists(":Tabularize")
+	nmap <Leader>a> :Tabularize /=><CR>
+	vmap <Leader>a> :Tabularize /=><CR>
+endif

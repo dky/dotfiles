@@ -10,6 +10,8 @@ alias vguv="vagrant up --provider=virtualbox"
 alias vgs="vagrant status"
 alias vgsg="vagrant global-status"
 alias vgd="vagrant destroy -f"
+alias vghalt="vagrant halt"
+alias vgsuspend="vagrant suspend"
 alias vgssh="vagrant ssh"
 alias vgbr="vagrant box remove $1"
 alias vgrm="vagrant box remove $1"
@@ -51,7 +53,7 @@ alias gd='git diff'
 alias gma='git commit -am'
 alias gb='git branch'
 alias gco='git checkout'
-alias gra='git remote add'
+alias gra='git remote add origin'
 alias grr='git remote rm'
 alias gclone='git clone'
 alias grv='git remote -v'
@@ -77,7 +79,7 @@ alias cdpmod="cd /etc/puppet/modules"
 alias pcla="puppet cert list --all"
 alias pcl="puppet cert list"
 #Sudo aliases
-alias spcla="sudo puppet cert list"
+alias spcla="sudo puppet cert list --all"
 alias spcl="sudo puppet cert list"
 alias spcc="sudo puppet cert clean $1"
 alias spcs="sudo puppet cert sign $1"
