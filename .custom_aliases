@@ -90,7 +90,7 @@ alias rpmsrc="cd $HOME/rpmbuild/SOURCES"
 alias rpmba="rpmbuild -ba $1"
 
 #Octopress
-alias octs="octpress serve"
+alias octs="octopress serve"
 alias octb="octopress build"
 alias octnp="octopress new post"
 
