@@ -115,3 +115,9 @@ alias tbh="tugboat halt $1"
 
 #gem update
 alias gemupdate="gem update --no-ri --no-rdoc"
+
+#rvm aliases
+#
+alias rvmdefault="rvm use --default $1"
+alias rvmupdate="rvm get stable"
+alias rvmls="rvm list"
