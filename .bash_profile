@@ -31,3 +31,4 @@ fi
 export TERM=xterm-256color
 export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}\007"'
 export PATH=$PATH:"/Applications/VMware Fusion.app/Contents/Library/VMware OVF Tool":/usr/local/packer:/opt/tmux/bin:/opt/vim/bin:/opt/git/bin:/opt/node/bin
+export GOPATH="$HOME/go"
