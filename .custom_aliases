@@ -116,6 +116,8 @@ alias tbh="tugboat halt $1"
 #gem update
 alias gemupdate="gem update --no-ri --no-rdoc"
 alias gemls="gem list"
+alias gemoctopress="gem install octopress --pre --no-ri --no-rdoc"
+alias geminstall="gem install --no-ri --no-rdoc $1"
 
 #rvm aliases
 #
