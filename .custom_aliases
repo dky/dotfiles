@@ -115,6 +115,7 @@ alias tbh="tugboat halt $1"
 
 #gem update
 alias gemupdate="gem update --no-ri --no-rdoc"
+alias gemls="gem list"
 
 #rvm aliases
 #
