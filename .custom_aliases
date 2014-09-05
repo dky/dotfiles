@@ -26,10 +26,11 @@ alias packc="rm -rf ./output-vmware"
 alias packit="packc && packb"
 
 #Docker aliases
-alias dkr="docker run -i -t $1"
 alias dkls="docker images"
 alias dkps="docker ps -a"
-alias dl='docker ps -l -q'
+alias dkl='docker ps -l -q'
+alias dks='docker start $1'
+alias dka='docker attach $1'
 
 #Screen aliases 
 alias sls="screen -ls"

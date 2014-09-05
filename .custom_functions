@@ -12,6 +12,14 @@ function color_my_prompt {
 
 color_my_prompt
 
+#docker functions
+
+function dkri { 
+	name="$1" 
+	image="$2"
+	docker run -i -t --name $name $image /bin/bash;
+}
+
 function dkrmc {
 	for i in `docker ps -a | grep "Exited" | awk '{ print $1 }'`; do docker rm -f $i; done
 }
