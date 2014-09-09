@@ -103,6 +103,7 @@ alias spkclean="/opt/splunk/bin/splunk stop && /opt/splunk/bin/splunk clean even
 alias spkrestart="/opt/splunk/bin/splunk restart"
 alias spkoneshot="/opt/splunk/bin/splunk add oneshot"
 alias spkrd="/opt/splunk/bin/splunk restart"
+alias spkrl="/opt/splunk/bin/splunk reload deploy-server"
 alias cdspk="cd /opt/splunk/"
 alias cdspkapps="cd /opt/splunk/etc/apps/"
 
