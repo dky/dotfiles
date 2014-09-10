@@ -59,6 +59,7 @@ alias grr='git remote rm'
 alias gclone='git clone'
 alias grv='git remote -v'
 alias gbl='git branch -v'
+alias gamend='git commit --amend -m'
 
 #Vim alias
 alias vi="vim"
