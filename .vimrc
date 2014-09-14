@@ -32,6 +32,7 @@ if has("autocmd")
     \   exe "normal! g`\"" |
     \ endif
 endif
+
 if &t_Co > 2 || has("gui_running")
   " Enable syntax highlighting
   syntax on
@@ -43,7 +44,7 @@ set background=light
 colorscheme solarized
 
 "syntax highlighting
-filetype on
+"filetype on
 
 "line numering
 set number
