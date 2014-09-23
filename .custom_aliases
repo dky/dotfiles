@@ -123,7 +123,9 @@ alias gemoctopress="gem install octopress --pre --no-ri --no-rdoc"
 alias geminstall="gem install --no-ri --no-rdoc $1"
 
 #rvm aliases
-#
 alias rvmdefault="rvm use --default $1"
 alias rvmupdate="rvm get stable"
 alias rvmls="rvm list"
+
+#go aliases
+alias gob="go build"
