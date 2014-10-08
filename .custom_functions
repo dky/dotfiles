@@ -14,10 +14,10 @@ color_my_prompt
 
 #docker functions
 
-function dkri { 
+function dkr { 
 	name="$1" 
 	image="$2"
-	docker run -i -t --name $name $image /bin/bash;
+	docker run -i -t --name $name -h $name $image /bin/bash;
 }
 
 function dkrmce {
