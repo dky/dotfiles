@@ -31,6 +31,8 @@ alias dkps="docker ps -a"
 alias dkl='docker ps -l -q'
 alias dks='docker start $1'
 alias dka='docker attach $1'
+alias dkrmc='docker rm $1'
+alias dkrmi='docker rmi $1'
 
 #Screen aliases 
 alias sls="screen -ls"
