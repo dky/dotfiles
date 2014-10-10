@@ -21,6 +21,7 @@ Bundle 'bling/vim-airline'
 Bundle 'mattn/emmet-vim'
 Bundle 'godlygeek/tabular'
 Bundle 'msanders/snipmate.vim'
+Bundle 'fatih/vim-go'
 
 if has("autocmd")
   " Enable filetype detection
