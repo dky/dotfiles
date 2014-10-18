@@ -131,3 +131,4 @@ alias rvmls="rvm list"
 
 #go aliases
 alias gob="go build"
+alias gor="go run"
