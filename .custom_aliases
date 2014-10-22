@@ -1,5 +1,6 @@
 # Vagrant aliases 
 alias vgi="vagrant init"
+alias vgu="vagrant up"
 alias vguf="vagrant up --no-provision --provider=vmware_fusion && vagrant ssh"
 alias vgufp="vagrant up --provider=vmware_fusion && vagrant ssh"
 alias vguw="vagrant up --no-provision --provider=vmware_workstation && vagrant ssh"
