@@ -22,7 +22,6 @@ Bundle 'mattn/emmet-vim'
 Bundle 'godlygeek/tabular'
 Bundle 'msanders/snipmate.vim'
 Bundle 'fatih/vim-go'
-Bundle 'Valloric/YouCompleteMe'
 
 if has("autocmd")
   " Enable filetype detection
