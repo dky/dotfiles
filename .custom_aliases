@@ -133,3 +133,7 @@ alias rvmls="rvm list"
 #go aliases
 alias gob="go build"
 alias gor="go run"
+
+#yum aliases
+alias yla="yum list all"
+alias yi="yum -y install"
