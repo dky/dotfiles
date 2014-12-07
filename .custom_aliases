@@ -38,6 +38,9 @@ alias dka='docker attach $1'
 alias dkrmc='docker rm $1'
 alias dkrmcf='docker rm -f $1'
 alias dkrmi='docker rmi $1'
+#Logs/top
+alias dklog='docker logs $1'
+alias dktop='docker top $1'
 
 #Screen aliases 
 alias sls="screen -ls"
