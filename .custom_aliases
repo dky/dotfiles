@@ -29,10 +29,14 @@ alias packit="packc && packb"
 #Docker aliases
 alias dkls="docker images"
 alias dkps="docker ps -a"
+#docker last container to start, only list id
 alias dkl='docker ps -l -q'
+#Docker start stop
 alias dks='docker start $1'
 alias dka='docker attach $1'
+#Docker rm images/containers
 alias dkrmc='docker rm $1'
+alias dkrmcf='docker rm -f $1'
 alias dkrmi='docker rmi $1'
 
 #Screen aliases 
