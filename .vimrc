@@ -22,6 +22,7 @@ Bundle 'mattn/emmet-vim'
 Bundle 'godlygeek/tabular'
 Bundle 'msanders/snipmate.vim'
 Bundle 'fatih/vim-go'
+Bundle 'kchmck/vim-coffee-script'
 
 if has("autocmd")
   " Enable filetype detection
