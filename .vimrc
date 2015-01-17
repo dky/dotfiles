@@ -79,10 +79,6 @@ nmap <space> :
 "Shave off shift
 nnoremap ; :
 
-"Shortcut for NERDTreeToggle
-nmap ,nt :NERDTreeToggle<cr>
-let NERDTreeShowHidden=1
-
 "Shortcut for vundle
 nmap ,bi :BundleInstall<cr>
 
