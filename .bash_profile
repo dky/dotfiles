@@ -23,6 +23,9 @@ if [ -n "$BASH_VERSION" ]; then
 	if [ -f "$HOME/.splunk_custom" ]; then
 		source "$HOME/.splunk_custom"
 	fi
+	if [ -f "$HOME/.goenv" ]; then
+		source "$HOME/.goenv"
+	fi
 	if [ -f $HOME/.venvburrito/startup.sh ]; then
 		 . $HOME/.venvburrito/startup.sh
 	fi
