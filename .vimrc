@@ -13,14 +13,9 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
-Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'rodjek/vim-puppet'
-Bundle 'mattn/emmet-vim'
-Bundle 'godlygeek/tabular'
-Bundle 'msanders/snipmate.vim'
 Bundle 'fatih/vim-go'
-Bundle 'kchmck/vim-coffee-script'
 
 if has("autocmd")
   " Enable filetype detection
@@ -72,12 +67,6 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
-"turn off h,j,k,l
-"noremap h <NOP>
-"noremap j <NOP>
-"noremap k <NOP>
-"noremap l <NOP>
-
 "renamp esc to jk
 imap jk <Esc>
 
@@ -100,30 +89,20 @@ nmap ,bi :BundleInstall<cr>
 "Run ruby code
 nmap ,r :!ruby %<cr>
 
+"perl code
+:map <leader>r :!perl %<cr>
+
 "map F5 to toggle numbers 
 map <F5> :set number!<CR>><ESC>
-map <F4> :NERDTreeToggle<cr>
 
 "tabs 
 nmap ,t <Esc>:tabn<CR>
 nmap ,tp <Esc>:tabp<CR>
 nmap ,tn <Esc>:tab new<CR>
 
-"vim fugitive git mappings 
+"vim fugitive mappings 
 nmap ,gs <Esc>:Gstatus<CR>
 nmap ,gl <Esc>:Git log --pretty --pretty=oneline<CR>
 nmap ,gco <Esc>:Git checkout<CR>
 nmap ,gp <Esc>:Git push origin master<CR>
 nmap ,ga <Esc>:Git add .<CR>
-
-"perl code
-:map <leader>r :!perl %<cr>
-
-"Tabular plugin
-if exists(":Tabularize")
-	nmap <Leader>a> :Tabularize /=><CR>
-	vmap <Leader>a> :Tabularize /=><CR>
-endif
-
-let g:netrw_liststyle=3
-
