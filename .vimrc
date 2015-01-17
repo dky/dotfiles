@@ -15,9 +15,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
-Bundle 'altercation/vim-colors-solarized'
 Bundle 'rodjek/vim-puppet'
-Bundle 'bling/vim-airline'
 Bundle 'mattn/emmet-vim'
 Bundle 'godlygeek/tabular'
 Bundle 'msanders/snipmate.vim'
@@ -39,11 +37,6 @@ if &t_Co > 2 || has("gui_running")
   " Enable syntax highlighting
   syntax on
 endif
-
-"solarized
-let g:solarized_termtrans = 1
-set background=light
-colorscheme solarized
 
 "syntax highlighting
 "filetype on
@@ -122,11 +115,6 @@ nmap ,gl <Esc>:Git log --pretty --pretty=oneline<CR>
 nmap ,gco <Esc>:Git checkout<CR>
 nmap ,gp <Esc>:Git push origin master<CR>
 nmap ,ga <Esc>:Git add .<CR>
-
-"Configure airline.
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_left_sep=''
-let g:airline_right_sep=''
 
 "perl code
 :map <leader>r :!perl %<cr>
