@@ -44,7 +44,7 @@ alias dkrmclf='docker rm -f `docker ps -l -q`'
 alias dklog='docker logs $1'
 alias dktop='docker top $1'
 #Docker exec
-alias dkexec='docker exec -it $1 /bin/bash'
+alias dkexec='docker exec -it'
 alias dkexecl='docker exec -it `docker ps -l -q` /bin/bash'
 
 #Screen aliases 
