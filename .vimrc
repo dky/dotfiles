@@ -88,6 +88,9 @@ nmap ,r :!ruby %<cr>
 "perl code
 :map <leader>r :!perl %<cr>
 
+"go code
+:map <leader>r :!go run %<CR>
+
 "map F5 to toggle numbers 
 map <F5> :set number!<CR>><ESC>
 
