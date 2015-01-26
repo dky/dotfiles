@@ -105,3 +105,8 @@ nmap ,gl <Esc>:Git log --pretty --pretty=oneline<CR>
 nmap ,gco <Esc>:Git checkout<CR>
 nmap ,gp <Esc>:Git push origin master<CR>
 nmap ,ga <Esc>:Git add .<CR>
+
+"vim comment out mappings
+map ,# :s/^/\/*/<CR> <Esc>:nohlsearch <CR>
+map ,* :s/^\(.*\)$/\/\* \1 \*\//<CR>:nohlsearch<CR>
+
