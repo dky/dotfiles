@@ -16,6 +16,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/syntastic'
 Bundle 'rodjek/vim-puppet'
 Bundle 'fatih/vim-go'
+Bundle 'scrooloose/nerdtree'
 
 if has("autocmd")
   " Enable filetype detection
@@ -110,3 +111,5 @@ nmap ,ga <Esc>:Git add .<CR>
 map ,# :s/^/\/*/<CR> <Esc>:nohlsearch <CR>
 map ,* :s/^\(.*\)$/\/\* \1 \*\//<CR>:nohlsearch<CR>
 
+"nerdtree
+map ,nt :NERDTreeToggle<CR>
