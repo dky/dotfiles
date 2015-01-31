@@ -17,6 +17,10 @@ Bundle 'scrooloose/syntastic'
 Bundle 'rodjek/vim-puppet'
 Bundle 'fatih/vim-go'
 Bundle 'scrooloose/nerdtree'
+"keyword completion
+Bundle 'Shougo/neocomplete'
+Bundle 'Shougo/neosnippet'
+Bundle 'Shougo/neosnippet-snippets'
 
 if has("autocmd")
   " Enable filetype detection
@@ -113,3 +117,9 @@ map ,* :s/^\(.*\)$/\/\* \1 \*\//<CR>:nohlsearch<CR>
 
 "nerdtree
 map ,nt :NERDTreeToggle<CR>
+
+" Navigate 4x faster when holding down Ctrl
+nmap <c-j> 4j
+nmap <c-k> 4k
+nmap <c-h> 4h
+nmap <c-l> 4l
