@@ -17,35 +17,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'rodjek/vim-puppet'
 Bundle 'fatih/vim-go'
 Bundle 'scrooloose/nerdtree'
-"check for lua support
-"brew install vim --with-lua
-if has("lua")
-
-Bundle 'Shougo/neocomplete'
-Bundle 'Shougo/neosnippet'
-Bundle 'Shougo/neosnippet-snippets'
-
-" Plugin key-mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
-
-" SuperTab like snippets behavior.
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: "\<TAB>"
-
-" For snippet_complete marker.
-if has('conceal')
-  set conceallevel=2 concealcursor=i
-endif
-
-else
-"no lua, install it.
-endif
+Bundle 'SirVer/ultisnips'
 
 if has("autocmd")
   " Enable filetype detection
@@ -148,3 +120,12 @@ nmap <c-j> 4j
 nmap <c-k> 4k
 nmap <c-h> 4h
 nmap <c-l> 4l
+
+" Trigger configuration. Do not use <tab> if you use
+" https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
