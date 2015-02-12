@@ -31,3 +31,7 @@ function dkrmin {
 function dkip {
 	docker inspect $1 | grep -i IPAddress | cut -d '"' -f 4
 }
+
+function sshnokey {
+	ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $1
+}
