@@ -33,5 +33,17 @@ function dkip {
 }
 
 function sshnokey {
-	ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $1
+	echo "Usage: sshnokey host port"
+	sshhost=$1
+	sshport=$2
+
+	if [ -n "$sshport" ]; then
+		 echo "sshport not empty"
+	else
+		 echo "ssh port empty using default"
+		 sshport=22
+	fi
+
+	echo "Connecting to $sshhost on port: $sshport"
+	ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $sshhost -p $sshport
 }
