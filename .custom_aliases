@@ -149,3 +149,9 @@ alias gor="go run"
 #yum aliases
 alias yla="yum list all"
 alias yi="yum -y install"
+
+#fleetctl
+alias flm='fleetctl list-machines'
+alias flssh='fleetctl ssh' 
+alias flu='fleetctl list-units' 
+alias flus='fleetctl list-units' 
