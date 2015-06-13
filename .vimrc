@@ -16,8 +16,12 @@ Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/syntastic'
 Bundle 'rodjek/vim-puppet'
 Bundle 'fatih/vim-go'
+Bundle 'fatih/molokai'
 Bundle 'scrooloose/nerdtree'
 Bundle 'SirVer/ultisnips'
+Bundle 'bling/vim-airline'
+Bundle 'Yggdroot/indentLine'
+Bundle 'Shougo/neocomplete.vim'
 
 if has("autocmd")
   " Enable filetype detection
@@ -135,3 +139,15 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
+" Enable vim-airline
+let g:airline#extensions#tabline#enabled = 1
+
+" Vim indentline
+let g:indentLine_color_term = 239
+
+" Vim neocomplete
+let g:neocomplete#enable_at_startup = 1
+
+"molokai colorscheme
+colorscheme molokai
