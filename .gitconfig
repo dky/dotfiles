@@ -4,4 +4,6 @@
 [push]
 	default = matching
 [alias]
-	ca = !git add -A && git commit
+	a = add .
+	cm = commit -am
+	pu = push origin master
