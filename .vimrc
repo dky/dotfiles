@@ -22,6 +22,8 @@ Bundle 'SirVer/ultisnips'
 Bundle 'bling/vim-airline'
 Bundle 'Yggdroot/indentLine'
 Bundle 'Shougo/neocomplete.vim'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'godlygeek/tabular'
 
 if has("autocmd")
   " Enable filetype detection
@@ -118,6 +120,8 @@ map ,* :s/^\(.*\)$/\/\* \1 \*\//<CR>:nohlsearch<CR>
 
 "nerdtree
 map ,nt :NERDTreeToggle<CR>
+"open nerdtree auto
+autocmd VimEnter * NERDTree
 
 " Navigate 4x faster when holding down Ctrl
 nmap <c-j> 4j
@@ -151,3 +155,5 @@ let g:neocomplete#enable_at_startup = 1
 
 "molokai colorscheme
 colorscheme molokai
+
+
