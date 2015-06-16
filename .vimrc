@@ -121,7 +121,7 @@ map ,* :s/^\(.*\)$/\/\* \1 \*\//<CR>:nohlsearch<CR>
 "nerdtree
 map ,nt :NERDTreeToggle<CR>
 "open nerdtree auto
-autocmd VimEnter * NERDTree
+"autocmd VimEnter * NERDTree
 
 " Navigate 4x faster when holding down Ctrl
 nmap <c-j> 4j
