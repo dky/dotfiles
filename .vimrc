@@ -18,10 +18,13 @@ Bundle 'rodjek/vim-puppet'
 Bundle 'fatih/vim-go'
 Bundle 'fatih/molokai'
 Bundle 'scrooloose/nerdtree'
-Bundle 'SirVer/ultisnips'
+"Replacing with neosnippets
+"Bundle 'SirVer/ultisnips'
 Bundle 'bling/vim-airline'
 Bundle 'Yggdroot/indentLine'
 Bundle 'Shougo/neocomplete.vim'
+Bundle 'Shougo/neosnippet.vim'
+Bundle 'Shougo/neosnippet-snippets'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'godlygeek/tabular'
 
@@ -135,23 +138,34 @@ nmap ,gl <Esc>:Git log --pretty --pretty=oneline<CR>
 nmap ,gpu <Esc>:Git push origin master<CR>
 nmap ,ga <Esc>:Git add .<CR>
 
-" Trigger configuration. Do not use <tab> if you use
-" https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-
 " Enable vim-airline
 let g:airline#extensions#tabline#enabled = 1
 
 " Vim indentline
 let g:indentLine_color_term = 239
 
-" Vim neocomplete
+" neocomplete
 let g:neocomplete#enable_at_startup = 1
+
+" neosnippets
+
+" Plugin key-mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+			\ "\<Plug>(neosnippet_expand_or_jump)"
+			\: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+			\ "\<Plug>(neosnippet_expand_or_jump)"
+			\: "\<TAB>"
+
+" For snippet_complete marker.
+if has('conceal')
+	  set conceallevel=2 concealcursor=niv
+endif
 
 "molokai colorscheme
 colorscheme molokai
