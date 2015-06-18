@@ -18,10 +18,12 @@ Bundle 'rodjek/vim-puppet'
 Bundle 'fatih/vim-go'
 Bundle 'fatih/molokai'
 Bundle 'scrooloose/nerdtree'
-Bundle 'SirVer/ultisnips'
+"Replacing with neosnippets
+"Bundle 'SirVer/ultisnips'
 Bundle 'bling/vim-airline'
 Bundle 'Yggdroot/indentLine'
 Bundle 'Shougo/neocomplete.vim'
+Bundle 'Shougo/neosnippet.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'godlygeek/tabular'
 
