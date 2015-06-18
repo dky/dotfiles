@@ -21,7 +21,6 @@ Bundle 'scrooloose/nerdtree'
 "Replacing with neosnippets
 "Bundle 'SirVer/ultisnips'
 Bundle 'bling/vim-airline'
-Bundle 'Yggdroot/indentLine'
 Bundle 'Shougo/neocomplete.vim'
 Bundle 'Shougo/neosnippet.vim'
 Bundle 'Shougo/neosnippet-snippets'
@@ -51,7 +50,7 @@ endif
 "line numering
 set number
 
-"when you hit tab go three spaces.
+"when you hit tab use 3 spaces
 set tabstop=3
 set shiftwidth=3
 
@@ -141,9 +140,6 @@ nmap ,ga <Esc>:Git add .<CR>
 
 " Enable vim-airline
 let g:airline#extensions#tabline#enabled = 1
-
-" Vim indentline
-let g:indentLine_color_term = 239
 
 " neocomplete
 let g:neocomplete#enable_at_startup = 1
