@@ -21,7 +21,6 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'bling/vim-airline'
 Bundle 'Shougo/neocomplete.vim'
 Bundle 'Shougo/neosnippet.vim'
-Bundle 'Shougo/neosnippet-snippets'
 Bundle 'honza/vim-snippets'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'godlygeek/tabular'
@@ -29,7 +28,6 @@ Bundle 'godlygeek/tabular'
 if has("autocmd")
   " Enable filetype detection
   filetype plugin indent on
- 
   " Restore cursor position
   autocmd BufReadPost *
     \ if line("'\"") > 1 && line("'\"") <= line("$") |
@@ -41,9 +39,6 @@ if &t_Co > 2 || has("gui_running")
   " Enable syntax highlighting
   syntax on
 endif
-
-"syntax highlighting
-"filetype on
 
 "line numering
 set number
@@ -121,8 +116,6 @@ map ,* :s/^\(.*\)$/\/\* \1 \*\//<CR>:nohlsearch<CR>
 
 "nerdtree
 map ,nt :NERDTreeToggle<CR>
-"open nerdtree auto
-"autocmd VimEnter * NERDTree
 
 " Navigate 4x faster when holding down Ctrl
 nmap <c-j> 4j
@@ -171,8 +164,6 @@ set laststatus=2
 let g:neocomplete#enable_at_startup = 1
 
 " neosnippets
-
-" Plugin key-mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
@@ -194,12 +185,13 @@ endif
 let g:neosnippet#enable_snipmate_compatibility = 1
 " Tell Neosnippet about the other snippets
 let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
+" My personal snippets
+let g:neosnippet#snippets_directory='~/.vim/snippets'
 
 "molokai colorscheme
 colorscheme molokai
 
-"hidden characters
-"" Shortcut to rapidly toggle `set list`
+"" Shortcut to rapidly toggle `set list` hidden characters
 nmap <leader>l :set list!<CR>
 
 " Use the same symbols as TextMate for tabstops and EOLs
