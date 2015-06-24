@@ -89,6 +89,14 @@ nmap ,bi :BundleInstall<cr>
 "Run ruby code
 nmap ,r :!ruby %<cr>
 
+"Vim fugitive 
+nmap ,gs :Gitstatus<cr>
+nmap ,gpu :Git push origin master<cr>
+nmap ,gpd :Git pull origin master<cr>
+nmap ,gma :Git cm "
+nmap ,gl :Git log --pretty --pretty=oneline<CR>
+nmap ,ga :Git add .<CR>
+
 "perl code
 :map <leader>r :!perl %<cr>
 
@@ -103,12 +111,6 @@ nmap ,t <Esc>:tabn<CR>
 nmap ,tp <Esc>:tabp<CR>
 nmap ,tn <Esc>:tab new<CR>
 
-"vim fugitive mappings 
-nmap ,gs <Esc>:Gstatus<CR>
-nmap ,gl <Esc>:Git log --pretty --pretty=oneline<CR>
-nmap ,gco <Esc>:Git checkout<CR>
-nmap ,gp <Esc>:Git push origin master<CR>
-nmap ,ga <Esc>:Git add .<CR>
 
 "vim comment out mappings
 map ,# :s/^/\/*/<CR> <Esc>:nohlsearch <CR>
