@@ -132,10 +132,11 @@ nmap ,gpu <Esc>:Git push origin master<CR>
 nmap ,ga <Esc>:Git add .<CR>
 
 " Enable vim-airline
-let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='molokai'
+let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#hunks#enabled=0
 let g:airline#extensions#branch#enabled=1
+let g:airline#extensions#syntastic#enabled=1
 
 " Buffer tabs
 let g:airline#extensions#tabline#left_sep = ' '
@@ -198,3 +199,4 @@ nmap <leader>l :set list!<CR>
 
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
+

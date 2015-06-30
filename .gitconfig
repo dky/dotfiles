@@ -7,3 +7,5 @@
 	a = add .
 	cm = commit -am
 	pu = push origin master
+[credential]
+	helper = cache --timeout 86400
