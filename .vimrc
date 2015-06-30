@@ -25,6 +25,7 @@ Bundle 'Shougo/neocomplete.vim'
 Bundle 'honza/vim-snippets'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'godlygeek/tabular'
+Bundle 'kien/ctrlp.vim'
 
 if has("autocmd")
   " Enable filetype detection
@@ -91,7 +92,7 @@ nmap ,bi :BundleInstall<cr>
 nmap ,r :!ruby %<cr>
 
 "Vim fugitive 
-nmap ,gs :Gitstatus<cr>
+nmap ,gs :Gstatus<cr>
 nmap ,gpu :Git push origin master<cr>
 nmap ,gpd :Git pull origin master<cr>
 nmap ,gma :Git cm "
@@ -119,6 +120,7 @@ map ,* :s/^\(.*\)$/\/\* \1 \*\//<CR>:nohlsearch<CR>
 
 "nerdtree
 map ,nt :NERDTreeToggle<CR>
+nmap ,nb :Bookmark 
 
 " Navigate 4x faster when holding down Ctrl
 nmap <c-j> 4j
@@ -158,34 +160,6 @@ let g:airline_symbols.whitespace = 'Ξ'
 "set statusline at the bottom
 set laststatus=2
 
-" neocomplete
-let g:neocomplete#enable_at_startup = 1
-
-" neosnippets
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
-
-" SuperTab like snippets behavior.
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-			\ "\<Plug>(neosnippet_expand_or_jump)"
-			\: pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-			\ "\<Plug>(neosnippet_expand_or_jump)"
-			\: "\<TAB>"
-
-" For snippet_complete marker.
-if has('conceal')
-	  set conceallevel=2 concealcursor=niv
-endif
-
-" Enable snipMate compatibility feature.
-let g:neosnippet#enable_snipmate_compatibility = 1
-" Tell Neosnippet about the other snippets
-let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
-" My personal snippets
-let g:neosnippet#snippets_directory='~/.vim/snippets'
-
 "molokai colorscheme
 colorscheme molokai
 
@@ -195,3 +169,8 @@ nmap <leader>l :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 
+"neocomplete
+let g:neocomplete#enable_at_startup = 1
+
+"ctrlp
+let g:ctrlp_map = '<c-p>'
