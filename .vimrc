@@ -126,12 +126,6 @@ nmap <c-k> 4k
 nmap <c-h> 4h
 nmap <c-l> 4l
 
-" vim fugitive
-nmap ,gs <Esc>:Gstatus<CR>
-nmap ,gl <Esc>:Git log --pretty --pretty=oneline<CR>
-nmap ,gpu <Esc>:Git push origin master<CR>
-nmap ,ga <Esc>:Git add .<CR>
-
 " Enable vim-airline
 let g:airline_theme='molokai'
 let g:airline#extensions#tabline#enabled=1
