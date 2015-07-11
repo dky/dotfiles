@@ -47,3 +47,10 @@ function sshnokey {
 	echo "Connecting to $sshhost on port: $sshport"
 	ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $sshhost -p $sshport
 }
+
+function vsd {
+	vmname=$1
+	echo "looking up $vmname server id"
+	server_id=`vultr server list | grep $vmname | awk '{ print $1 }'`
+	echo "$server_id being deleted"
+}

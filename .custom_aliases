@@ -155,3 +155,8 @@ alias flm='fleetctl list-machines'
 alias flssh='fleetctl ssh' 
 alias flu='fleetctl list-units' 
 alias flus='fleetctl list-units' 
+
+#vultr
+alias vls='vultr server list'
+
+
