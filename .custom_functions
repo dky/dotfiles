@@ -53,6 +53,7 @@ function vsd {
 	echo "looking up $vmname server id"
 	server_id=`vultr server list | grep $vmname | awk '{ print $1 }'`
 	echo "$server_id being deleted"
+	vultr server delete $server_id
 }
 
 function vip {
