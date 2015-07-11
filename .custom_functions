@@ -54,3 +54,18 @@ function vsd {
 	server_id=`vultr server list | grep $vmname | awk '{ print $1 }'`
 	echo "$server_id being deleted"
 }
+
+function vip {
+	vmname=$1
+	echo "looking up $vmname ip"
+	server_ip=`vultr server list | grep $vmname | awk '{ print $3 }'`
+	echo "$vmname has $server_ip"
+}
+
+function vssh {
+	vmname=$1
+	echo "looking up $vmname ip"
+	server_ip=`vultr server list | grep $vmname | awk '{ print $3 }'`
+	echo "$vmname has $server_ip"
+	ssh core@$server_ip
+}
