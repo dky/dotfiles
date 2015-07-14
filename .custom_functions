@@ -64,9 +64,17 @@ function vip {
 }
 
 function vssh {
+
 	vmname=$1
 	echo "looking up $vmname ip"
 	server_ip=`vultr server list | grep $vmname | awk '{ print $3 }'`
 	echo "$vmname has $server_ip"
-	ssh core@$server_ip
+
+	if nc -w 1 $server_ip 22; then
+    echo "connect to ${server_ip}:22"
+		ssh core@$server_ip
+		else
+    echo "connect to ${server_ip}:22 failed; exit code from netcat was $?; attempting on ${server_ip}:2222"
+	 	ssh $server_ip -p 2222
+	fi
 }
