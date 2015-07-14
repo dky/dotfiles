@@ -71,10 +71,10 @@ function vssh {
 	echo "$vmname has $server_ip"
 
 	if nc -w 1 $server_ip 22; then
-    echo "connect to ${server_ip}:22"
-		ssh core@$server_ip
-		else
-    echo "connect to ${server_ip}:22 failed; exit code from netcat was $?; attempting on ${server_ip}:2222"
-	 	ssh $server_ip -p 2222
+		echo "connect to ${server_ip}:22"
+		ssh -o StrictHostKeyChecking=no core@$server_ip
+	else
+		echo "connect to ${server_ip}:22 failed; exit code from netcat was $?; attempting on ${server_ip}:2222"
+		ssh -o StrictHostKeyChecking=no $server_ip -p 2222
 	fi
 }
