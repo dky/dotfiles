@@ -174,3 +174,6 @@ let g:neocomplete#enable_at_startup = 1
 
 "ctrlp
 let g:ctrlp_map = '<c-p>'
+
+"c programming
+:map <leader>c :!gcc % && ./a.out<CR>
