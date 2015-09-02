@@ -29,5 +29,8 @@ if [ -n "$BASH_VERSION" ]; then
 	if [ -f $HOME/.venvburrito/startup.sh ]; then
 		 . $HOME/.venvburrito/startup.sh
 	fi
+	if [ -f $HOME/bin/export ]; then
+		 . $HOME/bin/export
+	fi
 fi
 
