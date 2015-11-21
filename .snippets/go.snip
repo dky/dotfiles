@@ -11,6 +11,19 @@ options     head
     fmt.Printf("Hello, world\n")
   }
 
+snippet     goboil
+abbr        package main\nimport fmt...
+options     head
+  package main
+
+  import (
+    "fmt"
+  )
+
+  func main() {
+    ${1}
+  }
+
 snippet     func
 abbr        func ...() { ... }
 options     head
