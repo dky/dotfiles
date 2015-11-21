@@ -143,7 +143,7 @@ alias rvmupdate="rvm get stable"
 alias rvmls="rvm list"
 
 #go aliases
-alias gob="go build"
+alias gob="go build main.go"
 alias gor="go run"
 
 #yum aliases
