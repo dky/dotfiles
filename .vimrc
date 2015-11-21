@@ -167,3 +167,8 @@ inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y>  neocomplete#close_popup()
 inoremap <expr><C-e>  neocomplete#cancel_popup()
+
+let g:neosnippet#snippets_directory='~/.dotfiles/.snippets'
+  "Plugin key-mappings." Expansion of the snippet in the <Ck>
+imap <Ck> <Plug> (neosnippet_expand_or_jump)
+smap <Ck> <Plug> (neosnippet_expand_or_jump)
