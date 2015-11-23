@@ -70,7 +70,8 @@ set pastetoggle=<F2>
 "map space rather than colon
 nmap <space> :
 "Shave off shift
-nnoremap ; :
+"Commented this out, was keeping me from using ; to jump to next match
+"nnoremap ; :
 "Shortcut for vundle
 nmap ,bi :BundleInstall<cr>
 "Run ruby code
