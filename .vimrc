@@ -141,8 +141,8 @@ colorscheme molokai
 "" Shortcut to rapidly toggle `set list` hidden characters
 nmap <leader>l :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:▸\ ,eol:¬,space:␣
-set list
+"set listchars=tab:▸\ ,eol:¬,space:␣
+"set list
 "ctrlp
 let g:ctrlp_map = '<c-p>'
 "neocomplete
