@@ -2,10 +2,10 @@
 " git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 " BundleInstall
 " ,bi
-set ruler				" ruler bottom right
+set ruler		" ruler bottom right
 set nocompatible		" be iMproved
-set hidden 				" no prompt for unsaved buffers
-filetype off			" required!
+set hidden"			" no prompt for unsaved buffers
+filetype off		" required!
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -141,7 +141,6 @@ colorscheme molokai
 "" Shortcut to rapidly toggle `set list` hidden characters
 nmap <leader>l :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
-"set listchars=tab:▸\ ,eol:
 set listchars=eol:¬,tab:▸-,trail:~,extends:>,precedes:<
 set list
 "ctrlp
