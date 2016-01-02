@@ -6,4 +6,4 @@ shopt -s histappend
 
 export TERM=xterm-256color
 export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}\007"'
-export PATH=$HOME/.linuxbrew/bin:$HOME/.rvm/bin:$HOME/bin:"/Applications/VMware Fusion.app/Contents/Library/VMware OVF Tool":/usr/local/packer:/usr/local/terraform:/opt/tmux/bin:/opt/node/bin:/usr/local/heroku/bin:$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
+export PATH=$HOME/.linuxbrew/bin:$HOME/.rvm/bin:$HOME/bin:"/Applications/VMware Fusion.app/Contents/Library/VMware OVF Tool":/usr/local/packer:/usr/local/terraform:/opt/tmux/bin:/opt/node/bin:/usr/local/heroku/bin:/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH
