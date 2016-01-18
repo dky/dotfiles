@@ -82,3 +82,7 @@ function vssh {
 		ssh -o StrictHostKeyChecking=no $server_ip -p 2222
 	fi
 }
+
+function jcurl() {
+	curl -s "$@" | json | pygmentize -l json
+}
