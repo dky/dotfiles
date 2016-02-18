@@ -159,4 +159,9 @@ alias flus='fleetctl list-units'
 #vultr
 alias vls='vultr server list'
 
+#azure
+alias azstls='azure storage account list'
+alias azvmls='azure vm list'
+
+
 
