@@ -159,4 +159,7 @@ alias flus='fleetctl list-units'
 #vultr
 alias vls='vultr server list'
 
+#docker
+alias doctlls="doctl droplet list"
+
 

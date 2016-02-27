@@ -47,7 +47,7 @@ set shiftwidth=3
 "autocompletion
 set wildmode=list:longest
 set smartindent
-set autoindent
+"set autoindent
 "split below
 set splitbelow
 set hlsearch
