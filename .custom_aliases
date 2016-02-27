@@ -161,5 +161,7 @@ alias vls='vultr server list'
 
 #docker
 alias doctlls="doctl droplet list"
-
-
+=======
+#azure
+alias azstls='azure storage account list'
+alias azvmls='azure vm list'
