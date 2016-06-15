@@ -164,3 +164,6 @@ alias doctlls="doctl droplet list"
 #azure
 alias azstls='azure storage account list'
 alias azvmls='azure vm list'
+
+#hugo
+alias mp="cd ~/git/hugo/dky.io && make public"
