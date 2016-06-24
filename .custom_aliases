@@ -96,10 +96,10 @@ alias cdpmod="cd /etc/puppet/modules"
 alias pcla="puppet cert list --all"
 alias pcl="puppet cert list"
 #Sudo aliases
-alias spcla="sudo puppet cert list --all"
-alias spcl="sudo puppet cert list"
-alias spcc="sudo puppet cert clean $1"
-alias spcs="sudo puppet cert sign $1"
+alias spcla="sudo /opt/puppetlabs/bin/puppet cert list --all"
+alias spcl="sudo /opt/puppetlabs/bin/puppet cert list"
+alias spcc="sudo /opt/puppetlabs/bin/puppet cert clean $1"
+alias spcs="sudo /opt/puppetlabs/bin/puppet cert sign $1"
 
 #RPM Build aliases
 alias rpmspec="cd $HOME/rpmbuild/SPECS"
