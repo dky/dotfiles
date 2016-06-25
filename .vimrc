@@ -62,13 +62,13 @@ map <up> <nop>
 map <down> <nop>
 map <left> <nop>
 map <right> <nop>
-"perl code
-:map <leader>r :!perl %<cr>
-"go code
-:map <leader>r :!go run %<CR>
-"c programming
-:map <leader>c :!gcc % && ./a.out<CR>
-"map F5 to toggle numbers 
+" run perl
+map <leader>r :!perl %<cr>
+" run go
+map <leader>r :!go run %<CR>
+" run c
+map <leader>c :!gcc % && ./a.out<CR>
+" F5 to toggle numbers 
 map <F5> :set number!<CR>><ESC>
 " comment out code mappings
 map ,# :s/^/\/*/<CR> <Esc>:nohlsearch <CR>
