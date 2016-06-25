@@ -73,6 +73,8 @@ map <F5> :set number!<CR>><ESC>
 " comment out code mappings
 map ,# :s/^/\/*/<CR> <Esc>:nohlsearch <CR>
 map ,* :s/^\(.*\)$/\/\* \1 \*\//<CR>:nohlsearch<CR>
+" nerdtree
+map ,nt :NERDTreeToggle<CR>
 " edit .vimrc quickly
 nmap ,ev :tabedit $MYVIMRC<cr>
 " map space rather than colon
@@ -94,8 +96,6 @@ nmap ,tp <Esc>:tabp<CR>
 nmap ,tn <Esc>:tab new<CR>
 " vim-go - run gofmt on save
 let g:go_fmt_autosave = 0
-" nerdtree
-map ,nt :NERDTreeToggle<CR>
 nmap ,nb :Bookmark 
 " Navigate 4x faster when holding down Ctrl
 nmap <c-j> 4j
