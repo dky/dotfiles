@@ -131,7 +131,7 @@ let g:airline_symbols.whitespace = 'Ξ'
 "set statusline at the bottom
 set laststatus=2
 "molokai colorscheme
-colorscheme molokai
+silent! colorscheme molokai
 "" Shortcut to rapidly toggle `set list` hidden characters
 nmap <leader>l :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
