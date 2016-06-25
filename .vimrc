@@ -1,7 +1,7 @@
 " Setting up vundle
 " git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 " BundleInstall
-" ,bi
+" ,bi - vim mapping shortcut for BundleInstall
 set ruler		" ruler bottom right
 set nocompatible		" be iMproved
 set hidden"			" no prompt for unsaved buffers
@@ -70,6 +70,9 @@ map <right> <nop>
 :map <leader>c :!gcc % && ./a.out<CR>
 "map F5 to toggle numbers 
 map <F5> :set number!<CR>><ESC>
+" comment out code mappings
+map ,# :s/^/\/*/<CR> <Esc>:nohlsearch <CR>
+map ,* :s/^\(.*\)$/\/\* \1 \*\//<CR>:nohlsearch<CR>
 " edit .vimrc quickly
 nmap ,ev :tabedit $MYVIMRC<cr>
 " map space rather than colon
@@ -78,23 +81,20 @@ nmap <space> :
 nmap ,bi :BundleInstall<cr>
 " ruby code
 nmap ,r :!ruby %<cr>
-" fugitive 
+" fugitive
 nmap ,gs :Gstatus<cr>
 nmap ,gpu :Git push origin master<cr>
 nmap ,gpd :Git pull origin master<cr>
 nmap ,gma :Git cm "
 nmap ,gl :Git log --pretty --pretty=oneline<CR>
 nmap ,ga :Git add .<CR>
-"vim-go
-let g:go_fmt_autosave = 0
-"tabs 
+" tabs
 nmap ,t <Esc>:tabn<CR>
 nmap ,tp <Esc>:tabp<CR>
 nmap ,tn <Esc>:tab new<CR>
-"vim comment out mappings
-map ,# :s/^/\/*/<CR> <Esc>:nohlsearch <CR>
-map ,* :s/^\(.*\)$/\/\* \1 \*\//<CR>:nohlsearch<CR>
-"nerdtree
+" vim-go - run gofmt on save
+let g:go_fmt_autosave = 0
+" nerdtree
 map ,nt :NERDTreeToggle<CR>
 nmap ,nb :Bookmark 
 " Navigate 4x faster when holding down Ctrl
@@ -102,13 +102,15 @@ nmap <c-j> 4j
 nmap <c-k> 4k
 nmap <c-h> 4h
 nmap <c-l> 4l
-" Enable vim-airline
+" shortcut to rapidly toggle `set list` hidden characters
+nmap <leader>l :set list!<CR>
+" enable vim-airline
 let g:airline_theme='molokai'
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#hunks#enabled=0
 let g:airline#extensions#branch#enabled=1
 let g:airline#extensions#syntastic#enabled=1
-" Buffer tabs
+" buffer tabs
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
@@ -128,44 +130,42 @@ let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
-"set statusline at the bottom
+" set statusline at the bottom
 set laststatus=2
-"molokai colorscheme
+" molokai colorscheme
 silent! colorscheme molokai
-"" Shortcut to rapidly toggle `set list` hidden characters
-nmap <leader>l :set list!<CR>
-" Use the same symbols as TextMate for tabstops and EOLs
+" use the same symbols as TextMate for tabstops and EOLs
 set listchars=eol:¬,tab:▸-,trail:~,extends:>,precedes:<
 set list
-"ctrlp
+" ctrlp
 let g:ctrlp_map = '<c-p>'
-"neocomplete
-"Disable AutoComplPop.
+" neocomplete
+" disable AutoComplPop.
 let g:acp_enableAtStartup = 0
-"Use neocomplete.
+" use neocomplete.
 let g:neocomplete#enable_at_startup = 1
-"Use smartcase.
+" use smartcase.
 let g:neocomplete#enable_smart_case = 1
-"Set minimum syntax keyword length.
+" set minimum syntax keyword length.
 let g:neocomplete#sources#syntax#min_keyword_length = 3
-"Plugin key-mappings.
-inoremap <expr><C-g>     neocomplete#undo_completion()
-inoremap <expr><C-l>     neocomplete#complete_common_string()
-"Recommended key-mappings.
-"<CR>: close popup and save indent.
+" plugin key-mappings.
+inoremap <expr><C-g> neocomplete#undo_completion()
+inoremap <expr><C-l> neocomplete#complete_common_string()
+" recommended key-mappings.
+" <CR>: close popup and save indent.
 inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
 function! s:my_cr_function()
 	return neocomplete#close_popup() . "\<CR>"
 endfunction
-"<TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-"<C-h>, <BS>: close popup and delete backword char.
+" <TAB>: completion.
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+" <C-h>, <BS>: close popup and delete backword char.
 inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y>  neocomplete#close_popup()
-inoremap <expr><C-e>  neocomplete#cancel_popup()
-"neosnippets
+inoremap <expr><C-y> neocomplete#close_popup()
+inoremap <expr><C-e> neocomplete#cancel_popup()
+" neosnippets
 let g:neosnippet#snippets_directory='~/.dotfiles/.snippets'
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+xmap <C-k> <Plug>(neosnippet_expand_target)
