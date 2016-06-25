@@ -6,7 +6,6 @@ set ruler		" ruler bottom right
 set nocompatible		" be iMproved
 set hidden"			" no prompt for unsaved buffers
 filetype off		" required!
-
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
@@ -27,6 +26,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'kien/ctrlp.vim'
 
 if has("autocmd")
+	" autocmd bufwritepost .vimrc source $MYVIMRC
   " Enable filetype detection
   filetype plugin indent on
   " Restore cursor position
@@ -40,60 +40,53 @@ if &t_Co > 2 || has("gui_running")
   " Enable syntax highlighting
   syntax on
 endif
-"line numering
+" line numering
 set number
-"when you hit tab use 3 spaces
+" Tab use 3 spaces
 set tabstop=3
 set shiftwidth=3
 "autocompletion
 set wildmode=list:longest
 set smartindent
-"set autoindent
-"split below
+" set autoindent
+" split below
 set splitbelow
 set hlsearch
 set foldenable
-"source the .vimrc file after saving
-if has("autocmd")
-	autocmd bufwritepost .vimrc source $MYVIMRC
-endif
-"edit .vimrc quickly
-nmap ,ev :tabedit $MYVIMRC<cr>
-"turn off arrow keys
+" enable paste mode for pasted code
+set pastetoggle=<F2>
+" renamp esc to jk
+imap jk <Esc>
+" no arrow keys
 map <up> <nop>
 map <down> <nop>
 map <left> <nop>
 map <right> <nop>
-"renamp esc to jk
-imap jk <Esc>
-"enable paste mode for pasted code
-set pastetoggle=<F2>
-"map space rather than colon
+"perl code
+:map <leader>r :!perl %<cr>
+"go code
+:map <leader>r :!go run %<CR>
+"c programming
+:map <leader>c :!gcc % && ./a.out<CR>
+"map F5 to toggle numbers 
+map <F5> :set number!<CR>><ESC>
+" edit .vimrc quickly
+nmap ,ev :tabedit $MYVIMRC<cr>
+" map space rather than colon
 nmap <space> :
-"Shave off shift
-"Commented this out, was keeping me from using ; to jump to next match
-"nnoremap ; :
-"Shortcut for vundle
+" Shortcut for vundle
 nmap ,bi :BundleInstall<cr>
-"Run ruby code
+" ruby code
 nmap ,r :!ruby %<cr>
-"Vim fugitive 
+" fugitive 
 nmap ,gs :Gstatus<cr>
 nmap ,gpu :Git push origin master<cr>
 nmap ,gpd :Git pull origin master<cr>
 nmap ,gma :Git cm "
 nmap ,gl :Git log --pretty --pretty=oneline<CR>
 nmap ,ga :Git add .<CR>
-"perl code
-:map <leader>r :!perl %<cr>
-"go code
-:map <leader>r :!go run %<CR>
 "vim-go
 let g:go_fmt_autosave = 0
-"c programming
-:map <leader>c :!gcc % && ./a.out<CR>
-"map F5 to toggle numbers 
-map <F5> :set number!<CR>><ESC>
 "tabs 
 nmap ,t <Esc>:tabn<CR>
 nmap ,tp <Esc>:tabp<CR>
