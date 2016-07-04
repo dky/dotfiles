@@ -26,7 +26,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'kien/ctrlp.vim'
 
 if has("autocmd")
-	" autocmd bufwritepost .vimrc source $MYVIMRC
+  " autocmd bufwritepost .vimrc source $MYVIMRC
   " Enable filetype detection
   filetype plugin indent on
   " Restore cursor position
@@ -70,11 +70,15 @@ map <leader>r :!go run %<CR>
 map <leader>c :!gcc % && ./a.out<CR>
 " F5 to toggle numbers 
 map <F5> :set number!<CR>><ESC>
+" F4 to toggle numbers off + toggle of special characters
+map <F4> :set number! <bar> :set list!<CR>
 " comment out code mappings
 map ,# :s/^/\/*/<CR> <Esc>:nohlsearch <CR>
 map ,* :s/^\(.*\)$/\/\* \1 \*\//<CR>:nohlsearch<CR>
 " nerdtree
 map ,nt :NERDTreeToggle<CR>
+" shortcut to rapidly toggle `set list` hidden characters
+nmap <leader>l :set list!<CR>
 " edit .vimrc quickly
 nmap ,ev :tabedit $MYVIMRC<cr>
 " map space rather than colon
@@ -102,8 +106,6 @@ nmap <c-j> 4j
 nmap <c-k> 4k
 nmap <c-h> 4h
 nmap <c-l> 4l
-" shortcut to rapidly toggle `set list` hidden characters
-nmap <leader>l :set list!<CR>
 " enable vim-airline
 let g:airline_theme='molokai'
 let g:airline#extensions#tabline#enabled=1
