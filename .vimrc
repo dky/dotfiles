@@ -55,6 +55,8 @@ set hlsearch
 set foldenable
 " enable paste mode for pasted code
 set pastetoggle=<F2>
+" Allow backspacing in insert mode
+set backspace=indent,eol,start
 " renamp esc to jk
 imap jk <Esc>
 " no arrow keys
