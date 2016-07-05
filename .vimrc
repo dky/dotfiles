@@ -16,6 +16,7 @@ Bundle 'rodjek/vim-puppet'
 Bundle 'fatih/vim-go'
 Bundle 'fatih/molokai'
 Bundle 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
 Bundle 'Shougo/neocomplete.vim'
@@ -58,6 +59,8 @@ set foldenable
 set pastetoggle=<F2>
 " Allow backspacing in insert mode
 set backspace=indent,eol,start
+set visualbell           " don't beep
+set noerrorbells         " don't beep
 " renamp esc to jk
 imap jk <Esc>
 " no arrow keys
