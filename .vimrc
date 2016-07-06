@@ -26,6 +26,7 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'godlygeek/tabular'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mattn/emmet-vim'
+Bundle 'sheerun/vim-polyglot'
 
 if has("autocmd")
   " autocmd bufwritepost .vimrc source $MYVIMRC
