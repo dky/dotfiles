@@ -167,3 +167,4 @@ alias azvmls='azure vm list'
 
 #hugo
 alias mp="cd ~/git/hugo/dky.io && make public"
+alias ml="cd ~/git/hugo/dky.io && make public"
