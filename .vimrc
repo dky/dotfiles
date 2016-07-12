@@ -28,6 +28,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'sheerun/vim-polyglot'
 Bundle 'plasticboy/vim-markdown'
+Bundle 'junegunn/goyo.vim'
 
 if has("autocmd")
   " autocmd bufwritepost .vimrc source $MYVIMRC
