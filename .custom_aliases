@@ -91,12 +91,17 @@ alias spkrd="sudo /opt/splunk/bin/splunk reload deploy-server"
 alias tailsplunk="sudo tail -f /opt/splunkforwarder/var/log/splunk/splunkd.log"
 
 #Puppet aliases
-alias cdpnod="cd /etc/puppetlabs/code/environments/production/modules"
-alias cdpmod="cd /etc/puppetlabs/code/environments/production/modules"
-alias cdeprd="cd /etc/puppetlabs/code/environments/production"
+alias cdmanprd="cd /etc/puppetlabs/code/environments/production/manifests"
+alias cdmodprd="cd /etc/puppetlabs/code/environments/production/modules"
+alias cdenvprd="cd /etc/puppetlabs/code/environments/production"
+
+alias cdmandev="cd /etc/puppetlabs/code/environments/development/manifests"
+alias cdmoddev="cd /etc/puppetlabs/code/environments/development/modules"
+alias cdenvdev="cd /etc/puppetlabs/code/environments/development"
+
 alias pcla="puppet cert list --all"
 alias pcl="puppet cert list"
-#Sudo aliases
+
 alias spcla="sudo /opt/puppetlabs/bin/puppet cert list --all"
 alias spcl="sudo /opt/puppetlabs/bin/puppet cert list"
 alias spcc="sudo /opt/puppetlabs/bin/puppet cert clean $1"
