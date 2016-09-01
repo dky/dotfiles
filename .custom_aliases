@@ -171,3 +171,6 @@ alias mp="cd ~/git/hugo/dky.io && make public"
 alias ml="cd ~/git/hugo/dky.io && make public"
 alias cddky="cd ~/git/hugo/dky.io/"
 alias cddk="cd ~/git/hugo/dky.io/"
+
+#sudo alias for mispellings
+alias suod="sudo"
