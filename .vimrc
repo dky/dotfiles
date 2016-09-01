@@ -185,4 +185,5 @@ smap <C-k> <Plug>(neosnippet_expand_or_jump)
 xmap <C-k> <Plug>(neosnippet_expand_target)
 " plasticboy vim markdown disable folding
 let g:vim_markdown_folding_disabled = 1
-
+" hugo
+:command! -nargs=1 Hnp exe '!hugo new posts/<args>'
