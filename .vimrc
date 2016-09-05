@@ -100,7 +100,8 @@ nmap ,r :!ruby %<cr>
 nmap ,gs :Gstatus<cr>
 nmap ,gpu :Git push origin master<cr>
 nmap ,gpd :Git pull origin master<cr>
-nmap ,gma :Git cm "
+nmap ,gcm :Git cm "
+nmap ,gma :Git add . && Git cm "
 nmap ,gl :Git log --pretty --pretty=oneline<CR>
 nmap ,ga :Git add .<CR>
 " tabs
