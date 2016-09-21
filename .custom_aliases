@@ -46,6 +46,10 @@ alias dktop='docker top $1'
 #Docker exec
 alias dkexec='docker exec -it'
 alias dkexecl='docker exec -it `docker ps -l -q` /bin/bash'
+#Docker compose
+alias dcu="docker-compose up"
+alias dcud="docker-compose up -d"
+alias dcd="docker-compose down"
 
 #Screen aliases 
 alias sls="screen -ls"
