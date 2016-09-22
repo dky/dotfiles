@@ -43,9 +43,6 @@ alias dkrmclf='docker rm -f `docker ps -l -q`'
 #Logs/top
 alias dklog='docker logs $1'
 alias dktop='docker top $1'
-#Docker exec
-alias dkexec='docker exec -it'
-alias dkexecl='docker exec -it `docker ps -l -q` /bin/bash'
 #Docker compose
 alias dcu="docker-compose up"
 alias dcud="docker-compose up -d"
