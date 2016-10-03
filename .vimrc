@@ -188,3 +188,10 @@ xmap <C-k> <Plug>(neosnippet_expand_target)
 let g:vim_markdown_folding_disabled = 1
 " hugo
 :command! -nargs=1 Hnp exe '!hugo new posts/<args>'
+"vim-go highlighting
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
