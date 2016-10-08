@@ -29,6 +29,8 @@ Bundle 'mattn/emmet-vim'
 Bundle 'sheerun/vim-polyglot'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'junegunn/goyo.vim'
+Bundle 'lambadatoast/elm.vim'
+Bundle 'elmcast/elm-vim'
 
 if has("autocmd")
   " autocmd bufwritepost .vimrc source $MYVIMRC
@@ -195,3 +197,24 @@ let g:go_highlight_fields = 1
 let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+
+let g:syntastic_go_checkers = ['go', 'golint', 'errorcheck']
+
+"elm
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:elm_syntastic_show_warnings = 1
+
+" Elm
+let g:polyglot_disabled = ['elm']
+let g:elm_detailed_complete = 1
+let g:elm_format_autosave = 1
+let g:elm_syntastic_show_warnings = 1
+
+
+call neocomplete#util#set_default_dictionary(
+ \ 'g:neocomplete#sources#omni#input_patterns',
+ \ 'elm',
+ \ '\.')
+
+let g:elm_format_autosave = 1
