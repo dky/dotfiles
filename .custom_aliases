@@ -82,7 +82,7 @@ alias gamend='git commit --amend -m'
 alias vi="vim"
 
 #Custom aliases
-alias ll="ls -lh"
+alias ll="ls -ltrh"
 alias hs="history"
 alias wi="whois"
 
