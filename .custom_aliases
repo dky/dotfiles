@@ -1,4 +1,4 @@
-# Vagrant aliases 
+#vagrant aliases
 alias vgi="vagrant init"
 alias vgu="vagrant up"
 alias vguf="vagrant up --no-provision --provider=vmware_fusion && vagrant ssh"
@@ -20,13 +20,13 @@ alias vgba="vagrant box add $1"
 alias vgbl="vagrant box list"
 alias vgpl="vagrant plugin list"
 
-#Packer aliases
+#packer aliases
 alias packv="packer validate"
 alias packb="packer build template.json"
 alias packc="rm -rf ./output-vmware"
 alias packit="packc && packb"
 
-#Docker aliases
+#docker aliases
 alias dkls="docker images"
 alias dkps="docker ps -a"
 #docker last container to start, only list id
@@ -40,20 +40,20 @@ alias dkrmcf='docker rm -f $1'
 alias dkrmi='docker rmi $1'
 alias dkrmcl='docker rm `docker ps -l -q`'
 alias dkrmclf='docker rm -f `docker ps -l -q`'
-#Logs/top
+#logs/top
 alias dklog='docker logs $1'
 alias dktop='docker top $1'
-#Docker compose
+#docker compose
 alias dcu="docker-compose up"
 alias dcud="docker-compose up -d"
 alias dcd="docker-compose down"
 
-#Screen aliases 
+#screen aliases 
 alias sls="screen -ls"
 alias sr="screen -r"
 alias ss="screen -S"
 
-#Tmux aliases 
+#tmux aliases 
 alias tn="tmux new -s $1"
 alias ta="tmux attach -t $1"
 alias tad="tmux attach -dt $1"
@@ -78,10 +78,10 @@ alias gbl='git branch -v'
 alias gbd='git branch -d'
 alias gamend='git commit --amend -m'
 
-#Vim alias
+#vim alias
 alias vi="vim"
 
-#Custom aliases
+#custom aliases
 alias ll="ls -ltrh"
 alias hs="history"
 alias wi="whois"
@@ -114,12 +114,12 @@ alias rpmspec="cd $HOME/rpmbuild/SPECS"
 alias rpmsrc="cd $HOME/rpmbuild/SOURCES"
 alias rpmba="rpmbuild -ba $1"
 
-#Octopress
+#octopress
 alias octs="octopress serve"
 alias octb="octopress build"
 alias octnp="octopress new post"
 
-#Splunk
+#splunk
 export SPLUNK_USERNAME=admin
 export SPLUNK_PASSWORD=changeme
 
@@ -131,27 +131,14 @@ alias spkrl="/opt/splunk/bin/splunk reload deploy-server"
 alias cdspk="cd /opt/splunk/"
 alias cdspkapps="cd /opt/splunk/etc/apps/"
 
-#Sudo
+#sudo
 alias sd="sudo"
-
-#gem update
-alias gemupdate="gem update --no-ri --no-rdoc"
-alias gemls="gem list"
-alias gemoctopress="gem install octopress --pre --no-ri --no-rdoc"
-alias geminstall="gem install --no-ri --no-rdoc $1"
-
-#rvm aliases
-alias rvmdefault="rvm use --default $1"
-alias rvmupdate="rvm get stable"
-alias rvmls="rvm list"
+#sudo alias for mispellings
+alias suod="sudo"
 
 #go aliases
 alias gob="go build main.go"
 alias gor="go run"
-
-#yum aliases
-alias yla="yum list all"
-alias yi="yum -y install"
 
 #fleetctl
 alias flm='fleetctl list-machines'
@@ -159,10 +146,7 @@ alias flssh='fleetctl ssh'
 alias flu='fleetctl list-units' 
 alias flus='fleetctl list-units' 
 
-#vultr
-alias vls='vultr server list'
-
-#docker
+#digital ocean
 alias doctlls="doctl droplet list"
 #azure
 alias azstls='azure storage account list'
@@ -173,6 +157,3 @@ alias mp="cd ~/git/hugo/dky.io && make public"
 alias ml="cd ~/git/hugo/dky.io && make public"
 alias cddky="cd ~/git/hugo/dky.io/"
 alias cddk="cd ~/git/hugo/dky.io/"
-
-#sudo alias for mispellings
-alias suod="sudo"
