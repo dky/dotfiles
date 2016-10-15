@@ -134,11 +134,6 @@ alias cdspkapps="cd /opt/splunk/etc/apps/"
 #Sudo
 alias sd="sudo"
 
-#Tugboat
-alias tbls="tugboat droplets"
-alias tbs="tugboat start $1"
-alias tbh="tugboat halt $1"
-
 #gem update
 alias gemupdate="gem update --no-ri --no-rdoc"
 alias gemls="gem list"

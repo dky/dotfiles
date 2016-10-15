@@ -218,3 +218,6 @@ call neocomplete#util#set_default_dictionary(
  \ '\.')
 
 let g:elm_format_autosave = 1
+
+" Spell checking on markdown
+autocmd BufRead,BufNewFile *.md setlocal spell
