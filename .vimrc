@@ -88,8 +88,8 @@ map ,# :s/^/\/*/<CR> <Esc>:nohlsearch <CR>
 map ,* :s/^\(.*\)$/\/\* \1 \*\//<CR>:nohlsearch<CR>
 " nerdtree
 map ,nt :NERDTreeToggle<CR>
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
+" autocmd VimEnter * NERDTree
+" autocmd VimEnter * wincmd p
 " shortcut to rapidly toggle `set list` hidden characters
 nmap <leader>l :set list!<CR>
 " edit .vimrc quickly
