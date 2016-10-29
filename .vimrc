@@ -29,7 +29,6 @@ Bundle 'mattn/emmet-vim'
 Bundle 'sheerun/vim-polyglot'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'junegunn/goyo.vim'
-Bundle 'lambadatoast/elm.vim'
 Bundle 'elmcast/elm-vim'
 
 if has("autocmd")
