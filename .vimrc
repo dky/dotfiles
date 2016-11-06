@@ -29,7 +29,6 @@ Bundle 'mattn/emmet-vim'
 Bundle 'sheerun/vim-polyglot'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'junegunn/goyo.vim'
-Bundle 'lambadatoast/elm.vim'
 Bundle 'elmcast/elm-vim'
 
 if has("autocmd")
@@ -82,7 +81,7 @@ map <leader>c :!gcc % && ./a.out<CR>
 " F5 to toggle numbers 
 map <F5> :set number!<CR>><ESC>
 " F4 to toggle numbers off + toggle of special characters
-map <F4> :set number! <bar> :set list!<CR>
+map <F4> :set number! <bar> :set list! <bar> :GitGutterSignsDisable<CR>
 " comment out code mappings
 map ,# :s/^/\/*/<CR> <Esc>:nohlsearch <CR>
 map ,* :s/^\(.*\)$/\/\* \1 \*\//<CR>:nohlsearch<CR>
