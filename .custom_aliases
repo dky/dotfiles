@@ -108,6 +108,8 @@ alias spcla="sudo /opt/puppetlabs/bin/puppet cert list --all"
 alias spcl="sudo /opt/puppetlabs/bin/puppet cert list"
 alias spcc="sudo /opt/puppetlabs/bin/puppet cert clean $1"
 alias spcs="sudo /opt/puppetlabs/bin/puppet cert sign $1"
+#
+alias spv="sudo /opt/puppetlabs/bin/puppet parser validate $1"
 
 #RPM Build aliases
 alias rpmspec="cd $HOME/rpmbuild/SPECS"
