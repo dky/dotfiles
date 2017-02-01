@@ -160,3 +160,7 @@ alias cddky="cd ~/git/hugo/dky.io/"
 alias cddk="cd ~/git/hugo/dky.io/"
 alias cdtt="cd ~/git/hugo/tuxtutorials/"
 alias cdmath="cd ~/git/hugo/maths.io/"
+
+#exercism commands
+alias exer="exercism"
+alias exerf="exercism fetch"
