@@ -141,6 +141,7 @@ alias suod="sudo"
 #go aliases
 alias gob="go build main.go"
 alias gor="go run"
+alias cdgo="cd $GOPATH/src/github.com/dky"
 
 #fleetctl
 alias flm='fleetctl list-machines'
@@ -164,3 +165,5 @@ alias cdmath="cd ~/git/hugo/maths.io/"
 #exercism commands
 alias exer="exercism"
 alias exerf="exercism fetch"
+
+
