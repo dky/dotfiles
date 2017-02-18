@@ -141,7 +141,7 @@ alias suod="sudo"
 #go aliases
 alias gob="go build main.go"
 alias gor="go run"
-alias cdgo="cd $GOPATH/src/github.com/dky"
+alias cdgo="cd /Users/dky/go/src/github.com/dky"
 
 #fleetctl
 alias flm='fleetctl list-machines'
