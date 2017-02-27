@@ -32,5 +32,8 @@ if [ -n "$BASH_VERSION" ]; then
 	if [ -f $HOME/bin/export ]; then
 		 . $HOME/bin/export
 	fi
+	if [ -f $HOME/lib/azure-cli ]; then
+		. '/Users/dky/lib/azure-cli/az.completion'
+	fi
 fi
 
