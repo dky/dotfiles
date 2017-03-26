@@ -9,3 +9,10 @@
 	pu = push origin master
 [credential]
 	helper = cache --timeout 86400
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = true
+  pager = true
