@@ -77,6 +77,7 @@ alias gb='git branch'
 alias gbl='git branch -v'
 alias gbd='git branch -d'
 alias gamend='git commit --amend -m'
+alias gdiff='git diff'
 
 #vim alias
 alias vi="vim"
