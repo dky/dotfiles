@@ -167,4 +167,7 @@ alias cdmath="cd ~/git/hugo/maths.io/"
 alias exer="exercism"
 alias exerf="exercism fetch"
 
+#terraform 
+alias tp="terraform plan"
+alias ta="terraform apply"
 
