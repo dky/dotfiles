@@ -120,7 +120,7 @@ nmap <c-k> 4k
 nmap <c-h> 4h
 nmap <c-l> 4l
 " enable vim-airline
-let g:airline_theme='molokai'
+let g:airline_theme='badwolf'
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#hunks#enabled=0
 let g:airline#extensions#branch#enabled=1
