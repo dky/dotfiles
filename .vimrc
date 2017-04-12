@@ -47,6 +47,7 @@ if &t_Co > 2 || has("gui_running")
   syntax on
 endif
 " line numering
+set relativenumber
 set number
 " Tab use 3 spaces
 set tabstop=3
