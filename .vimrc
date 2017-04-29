@@ -223,3 +223,8 @@ let g:elm_format_autosave = 1
 
 " Spell checking on markdown
 autocmd BufRead,BufNewFile *.md setlocal spell
+
+" Python
+"
+nnoremap <silent> <F5> :!clear;python %<CR>
+
