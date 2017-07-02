@@ -226,5 +226,5 @@ autocmd BufRead,BufNewFile *.md setlocal spell
 
 " Python
 "
-nnoremap <silent> <F5> :!clear;python %<CR>
+nnoremap <silent> <F5> :!clear;python3 %<CR>
 
