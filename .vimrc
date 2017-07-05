@@ -79,10 +79,11 @@ map <leader>r :!perl %<cr>
 map <leader>r :!go run %<CR>
 " run c
 map <leader>c :!gcc % && ./a.out<CR>
-" F5 to toggle numbers 
-map <F5> :set number!<CR>><ESC>
+" F5 to toggle numbers - Re-assign this, get's overwritten by Python map
+" below.
+" map <F5> :set number!<CR>><ESC>
 " F4 to toggle numbers off + toggle of special characters
-map <F4> :set number! <bar> :set list! <bar> :GitGutterSignsDisable<CR>
+map <F4> :set number! <bar> :set list! <bar> se rnu!" <bar> se nu! <bar> :GitGutterSignsDisable<CR>
 " comment out code mappings
 map ,# :s/^/\/*/<CR> <Esc>:nohlsearch <CR>
 map ,* :s/^\(.*\)$/\/\* \1 \*\//<CR>:nohlsearch<CR>
@@ -213,7 +214,6 @@ let g:elm_detailed_complete = 1
 let g:elm_format_autosave = 1
 let g:elm_syntastic_show_warnings = 1
 
-
 call neocomplete#util#set_default_dictionary(
  \ 'g:neocomplete#sources#omni#input_patterns',
  \ 'elm',
@@ -227,4 +227,3 @@ autocmd BufRead,BufNewFile *.md setlocal spell
 " Python
 "
 nnoremap <silent> <F5> :!clear;python3 %<CR>
-
