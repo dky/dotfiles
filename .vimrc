@@ -223,6 +223,7 @@ let g:elm_format_autosave = 1
 
 " Spell checking on markdown
 autocmd BufRead,BufNewFile *.md setlocal spell
+au BufReadPost *.gohtml set syntax=html
 
 " Python
 "
