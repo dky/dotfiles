@@ -6,4 +6,4 @@ shopt -s histappend
 
 export TERM=xterm-256color
 export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}\007"'
-export PATH=$HOME/bin:$PATH
+export PATH=$HOME/bin:/usr/local/sbin:$PATH
