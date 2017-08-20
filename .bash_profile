@@ -16,10 +16,6 @@ if [ -n "$BASH_VERSION" ]; then
 		source "$HOME/.dot_private"
 	fi
 
-	if [ -f "$HOME/.rvm/scripts/rvm" ]; then
-		source "$HOME/.rvm/scripts/rvm"
-	fi
-
 	if [ -f "$HOME/.splunk_custom" ]; then
 		source "$HOME/.splunk_custom"
 	fi
@@ -34,6 +30,12 @@ if [ -n "$BASH_VERSION" ]; then
 	fi
 	if [ -f $HOME/lib/azure-cli ]; then
 		. '/Users/dky/lib/azure-cli/az.completion'
+	fi
+	# The next line updates PATH for the Google Cloud SDK.
+	if [ -f '/Users/dky/Downloads/google-cloud-sdk/path.bash.inc' ]; then source '/Users/dky/Downloads/google-cloud-sdk/path.bash.inc'; 
+	fi
+	# The next line enables shell command completion for gcloud.
+	if [ -f '/Users/dky/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/dky/Downloads/google-cloud-sdk/completion.bash.inc'; 
 	fi
 fi
 
