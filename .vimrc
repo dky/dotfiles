@@ -169,21 +169,9 @@ let NERDTreeDirArrows = 1
 " plugin key-mappings.
 inoremap <expr><C-g> neocomplete#undo_completion()
 inoremap <expr><C-l> neocomplete#complete_common_string()
-" recommended key-mappings.
-" <CR>: close popup and save indent.
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function()
-	return neocomplete#close_popup() . "\<CR>"
-endfunction
-" <TAB>: completion.
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-" <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y> neocomplete#close_popup()
-inoremap <expr><C-e> neocomplete#cancel_popup()
 " neosnippets
 let g:neosnippet#snippets_directory='~/.dotfiles/.snippets'
+let g:neosnippet#enable_snipmate_compatibility = 1
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
 xmap <C-k> <Plug>(neosnippet_expand_target)
@@ -203,8 +191,6 @@ let g:syntastic_go_checkers = ['go', 'golint', 'errorcheck']
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:elm_syntastic_show_warnings = 1
-
-" Elm
 let g:polyglot_disabled = ['elm']
 let g:elm_detailed_complete = 1
 let g:elm_format_autosave = 1
