@@ -105,7 +105,7 @@ nmap ,gs :Gstatus<cr>
 nmap ,gpu :Git push origin master<cr>
 nmap ,gpd :Git pull origin master<cr>
 nmap ,gcm :Git cm "
-nmap ,gma :Git add . && Git cm "
+nmap ,gma :!git add . && git cm "
 nmap ,gl :Git log --pretty --pretty=oneline<CR>
 nmap ,ga :Git add .<CR>
 " tabs
