@@ -16,20 +16,18 @@ Bundle 'rodjek/vim-puppet'
 Bundle 'fatih/vim-go'
 Bundle 'fatih/molokai'
 Bundle 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+Bundle 'Xuyuanp/nerdtree-git-plugin'
 Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
 Bundle 'Shougo/neocomplete.vim'
-Bundle 'Shougo/neosnippet.vim'
 Bundle 'Shougo/neosnippet-snippets'
+Bundle 'Shougo/neosnippet.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'godlygeek/tabular'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'sheerun/vim-polyglot'
 Bundle 'plasticboy/vim-markdown'
-Bundle 'junegunn/goyo.vim'
-Bundle 'elmcast/elm-vim'
 
 if has("autocmd")
   " autocmd bufwritepost .vimrc source $MYVIMRC
@@ -79,15 +77,17 @@ map <leader>r :!perl %<cr>
 map <leader>r :!go run %<CR>
 " run c
 map <leader>c :!gcc % && ./a.out<CR>
-" F5 to toggle numbers 
-map <F5> :set number!<CR>><ESC>
+" F5 to toggle numbers - Re-assign this, get's overwritten by Python map
+" below.
+" map <F5> :set number!<CR>><ESC>
 " F4 to toggle numbers off + toggle of special characters
-map <F4> :set number! <bar> :set list! <bar> :GitGutterSignsDisable<CR>
+map <F4> :set number! <bar> :set list! <bar> se rnu!" <bar> se nu! <bar> :GitGutterSignsDisable<CR>
 " comment out code mappings
 map ,# :s/^/\/*/<CR> <Esc>:nohlsearch <CR>
 map ,* :s/^\(.*\)$/\/\* \1 \*\//<CR>:nohlsearch<CR>
 " nerdtree
 map ,nt :NERDTreeToggle<CR>
+autocmd VimEnter * if !argc() | NERDTree | endif
 " autocmd VimEnter * NERDTree
 " autocmd VimEnter * wincmd p
 " shortcut to rapidly toggle `set list` hidden characters
@@ -170,28 +170,30 @@ let NERDTreeDirArrows = 1
 " plugin key-mappings.
 inoremap <expr><C-g> neocomplete#undo_completion()
 inoremap <expr><C-l> neocomplete#complete_common_string()
-" recommended key-mappings.
+" Recommended key-mappings.
 " <CR>: close popup and save indent.
 inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
 function! s:my_cr_function()
-	return neocomplete#close_popup() . "\<CR>"
+  return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
+  " For no inserting <CR> key.
+  "return pumvisible() ? "\<C-y>" : "\<CR>"
 endfunction
 " <TAB>: completion.
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " <C-h>, <BS>: close popup and delete backword char.
 inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y> neocomplete#close_popup()
-inoremap <expr><C-e> neocomplete#cancel_popup()
+" Close popup by <Space>.
+"inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
+
 " neosnippets
 let g:neosnippet#snippets_directory='~/.dotfiles/.snippets'
+let g:neosnippet#enable_snipmate_compatibility = 1
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
 xmap <C-k> <Plug>(neosnippet_expand_target)
 " plasticboy vim markdown disable folding
 let g:vim_markdown_folding_disabled = 1
-" hugo
-:command! -nargs=1 Hnp exe '!hugo new posts/<args>'
 "vim-go highlighting
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
@@ -206,13 +208,10 @@ let g:syntastic_go_checkers = ['go', 'golint', 'errorcheck']
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:elm_syntastic_show_warnings = 1
-
-" Elm
 let g:polyglot_disabled = ['elm']
 let g:elm_detailed_complete = 1
 let g:elm_format_autosave = 1
 let g:elm_syntastic_show_warnings = 1
-
 
 call neocomplete#util#set_default_dictionary(
  \ 'g:neocomplete#sources#omni#input_patterns',
@@ -223,8 +222,7 @@ let g:elm_format_autosave = 1
 
 " Spell checking on markdown
 autocmd BufRead,BufNewFile *.md setlocal spell
+au BufReadPost *.gohtml set syntax=html
 
 " Python
-"
-nnoremap <silent> <F5> :!clear;python %<CR>
-
+nnoremap <silent> <F5> :!clear;python3 %<CR>

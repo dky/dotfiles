@@ -60,6 +60,7 @@ alias tad="tmux attach -dt $1"
 alias tls="tmux ls"
 
 #Git 
+alias Git='git'
 alias gi='git init'
 alias ga='git add'
 alias gpd='git pull origin master'
@@ -167,4 +168,12 @@ alias cdmath="cd ~/git/hugo/maths.io/"
 alias exer="exercism"
 alias exerf="exercism fetch"
 
+#terraform 
+alias tp="terraform plan"
+alias ta="terraform apply"
 
+#gcp
+alias gcl="gcloud config list"
+alias gpl="gcloud projects list"
+alias gcsp="gcloud config set project"
+alias gcrl="gcloud compute regions list"
