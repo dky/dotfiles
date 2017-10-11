@@ -1,14 +1,12 @@
-snippet     hboil
-abbr        hboil
+snippet     tboil
+abbr        tboil
 options     head
    +++
    author = ["Don Ky"]
-   date = "2017-09-19T06:17:41-04:00"
-   linktitle = "${1}"
+   date = "2017-10-11T06:17:41-04:00"
+   draft = ${1}
    title = "${2}"
-   draft = true
-   layout = "static"
-   keywords = "${3}"
-
+   categories = [ "${3}" ]
+   tags = [ "${4}" ]
+   description = "${5}"
    +++
-
