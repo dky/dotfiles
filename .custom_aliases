@@ -48,18 +48,18 @@ alias dcu="docker-compose up"
 alias dcud="docker-compose up -d"
 alias dcd="docker-compose down"
 
-#screen aliases 
+#screen aliases
 alias sls="screen -ls"
 alias sr="screen -r"
 alias ss="screen -S"
 
-#tmux aliases 
+#tmux aliases
 alias tn="tmux new -s $1"
 alias ta="tmux attach -t $1"
 alias tad="tmux attach -dt $1"
 alias tls="tmux ls"
 
-#Git 
+#Git
 alias Git='git'
 alias gi='git init'
 alias ga='git add'
@@ -122,10 +122,6 @@ alias rpmba="rpmbuild -ba $1"
 alias octs="octopress serve"
 alias octb="octopress build"
 alias octnp="octopress new post"
-
-#splunk
-export SPLUNK_USERNAME=admin
-export SPLUNK_PASSWORD=changeme
 
 alias spkclean="/opt/splunk/bin/splunk stop && /opt/splunk/bin/splunk clean eventdata -index main -f && /opt/splunk/bin/splunk start"
 alias spkrestart="/opt/splunk/bin/splunk restart"
