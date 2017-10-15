@@ -87,6 +87,7 @@ map ,# :s/^/\/*/<CR> <Esc>:nohlsearch <CR>
 map ,* :s/^\(.*\)$/\/\* \1 \*\//<CR>:nohlsearch<CR>
 " nerdtree
 map ,nt :NERDTreeToggle<CR>
+nmap ,nb :Bookmark
 autocmd VimEnter * if !argc() | NERDTree | endif
 " autocmd VimEnter * NERDTree
 " autocmd VimEnter * wincmd p
@@ -98,23 +99,17 @@ nmap ,ev :tabedit $MYVIMRC<cr>
 nmap <space> :
 " Shortcut for vundle
 nmap ,bi :BundleInstall<cr>
-" ruby code
-nmap ,r :!ruby %<cr>
 " fugitive
-nmap ,gs :Gstatus<cr>
-nmap ,gpu :Git push origin master<cr>
-nmap ,gpd :Git pull origin master<cr>
-nmap ,gcm :Git cm "
-nmap ,gma :!git add . && git cm "
-nmap ,gl :Git log --pretty --pretty=oneline<CR>
-nmap ,ga :Git add .<CR>
+nnoremap ,gs :Gstatus<cr>
+nnoremap <silent> ,gpu :execute ":!git push origin master"<CR>
+nnoremap ,gma :!git add . && git cm "
+nnoremap ,gpd :Git pull origin master<cr>
 " tabs
 nmap ,t <Esc>:tabn<CR>
 nmap ,tp <Esc>:tabp<CR>
 nmap ,tn <Esc>:tab new<CR>
 " vim-go - run gofmt on save
 let g:go_fmt_autosave = 0
-nmap ,nb :Bookmark 
 " Navigate 4x faster when holding down Ctrl
 nmap <c-j> 4j
 nmap <c-k> 4k
