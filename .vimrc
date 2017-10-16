@@ -150,6 +150,7 @@ set listchars=eol:¬,tab:▸-,trail:~,extends:>,precedes:<
 set list
 " ctrlp
 let g:ctrlp_map = '<c-p>'
+nmap <Leader>b :CtrlPBuffer<CR>
 " neocomplete
 " disable AutoComplPop.
 let g:acp_enableAtStartup = 0
