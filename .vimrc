@@ -71,15 +71,10 @@ map <up> <nop>
 map <down> <nop>
 map <left> <nop>
 map <right> <nop>
-" run perl
+
 map <leader>r :!perl %<cr>
-" run go
 map <leader>r :!go run %<CR>
-" run c
 map <leader>c :!gcc % && ./a.out<CR>
-" F5 to toggle numbers - Re-assign this, get's overwritten by Python map
-" below.
-" map <F5> :set number!<CR>><ESC>
 " F4 to toggle numbers off + toggle of special characters
 map <F4> :set number! <bar> :set list! <bar> se rnu!" <bar> se nu! <bar> :GitGutterSignsDisable<CR>
 " comment out code mappings
@@ -200,25 +195,16 @@ let g:go_highlight_build_constraints = 1
 
 let g:syntastic_go_checkers = ['go', 'golint', 'errorcheck']
 
-"elm
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:elm_syntastic_show_warnings = 1
-let g:polyglot_disabled = ['elm']
-let g:elm_detailed_complete = 1
-let g:elm_format_autosave = 1
-let g:elm_syntastic_show_warnings = 1
-
-call neocomplete#util#set_default_dictionary(
- \ 'g:neocomplete#sources#omni#input_patterns',
- \ 'elm',
- \ '\.')
-
-let g:elm_format_autosave = 1
-
 " Spell checking on markdown
 autocmd BufRead,BufNewFile *.md setlocal spell
 au BufReadPost *.gohtml set syntax=html
 
-" Python
-nnoremap <silent> <F5> :!clear;python3 %<CR>
+"Python indentation/spacing
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
