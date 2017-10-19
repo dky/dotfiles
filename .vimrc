@@ -73,10 +73,9 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
-"map <leader>r :!perl %<cr>
-map <leader>r :!go run %<CR>
-"map <leader>c :!gcc % && ./a.out<CR>
-" F4 to toggle numbers off + toggle of special characters
+au FileType go map <leader>r :echo system('go run "' . expand('%') . '"')<CR>
+au FileType python map <leader>r :echo system('python3 "' . expand('%') . '"')<CR>
+
 "map <F4> :set number! <bar> :set list! <bar> se rnu!" <bar> se nu! <bar> :GitGutterSignsDisable<CR>
 map <F4> :set number! <bar> :set list! <bar> :GitGutterSignsDisable<CR>
 " comment out code mappings
@@ -85,10 +84,6 @@ map ,* :s/^\(.*\)$/\/\* \1 \*\//<CR>:nohlsearch<CR>
 " nerdtree
 map ,nt :NERDTreeToggle<CR>
 nmap ,nb :Bookmark
-" autocmd VimEnter * if !argc() | NERDTree | endif
-" autocmd VimEnter * NERDTree
-" autocmd VimEnter * wincmd p
-" shortcut to rapidly toggle `set list` hidden characters
 nmap <leader>l :set list!<CR>
 " edit .vimrc quickly
 nmap ,ev :tabedit $MYVIMRC<cr>
@@ -210,8 +205,6 @@ au BufNewFile,BufRead *.py
     \ set autoindent | 
     \ set fileformat=unix
 
-" Bind F5 to save file if modified and execute python script in a buffer.
-nnoremap <F5> :echo system('python3 "' . expand('%') . '"')<cr>
 "https://stackoverflow.com/questions/11037825/vim-get-out-of-parenthesis-brackets-etc
 inoremap <C-e> <C-o>A
 inoremap <C-f> <C-o>l
