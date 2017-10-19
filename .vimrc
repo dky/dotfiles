@@ -28,6 +28,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'sheerun/vim-polyglot'
 Bundle 'plasticboy/vim-markdown'
+Bundle 'Raimondi/delimitMate'
 
 if has("autocmd")
   " autocmd bufwritepost .vimrc source $MYVIMRC
@@ -45,7 +46,7 @@ if &t_Co > 2 || has("gui_running")
   syntax on
 endif
 " line numering
-set relativenumber
+"set relativenumber
 set number
 " Tab use 3 spaces
 set tabstop=3
@@ -83,7 +84,7 @@ map ,* :s/^\(.*\)$/\/\* \1 \*\//<CR>:nohlsearch<CR>
 " nerdtree
 map ,nt :NERDTreeToggle<CR>
 nmap ,nb :Bookmark
-autocmd VimEnter * if !argc() | NERDTree | endif
+" autocmd VimEnter * if !argc() | NERDTree | endif
 " autocmd VimEnter * NERDTree
 " autocmd VimEnter * wincmd p
 " shortcut to rapidly toggle `set list` hidden characters
@@ -209,23 +210,18 @@ au BufNewFile,BufRead *.py
     \ set autoindent | 
     \ set fileformat=unix
 
-
 " Bind F5 to save file if modified and execute python script in a buffer.
 nnoremap <silent> <F5> :call SaveAndExecutePython()<CR>
 vnoremap <silent> <F5> :<C-u>call SaveAndExecutePython()<CR>
 
 function! SaveAndExecutePython()
     " SOURCE [reusable window]: https://github.com/fatih/vim-go/blob/master/autoload/go/ui.vim
-
     " save and reload current file
     silent execute "update | edit"
-
     " get file path of current file
     let s:current_buffer_file_path = expand("%")
-
     let s:output_buffer_name = "Python"
     let s:output_buffer_filetype = "output"
-
     " reuse existing buffer window if it exists otherwise create a new one
     if !exists("s:buf_nr") || !bufexists(s:buf_nr)
         silent execute 'botright new ' . s:output_buffer_name
@@ -247,15 +243,12 @@ function! SaveAndExecutePython()
     setlocal nonumber
     setlocal norelativenumber
     setlocal showbreak=""
-
     " clear the buffer
     setlocal noreadonly
     setlocal modifiable
     %delete _
-
     " add the console output
     silent execute ".!python " . shellescape(s:current_buffer_file_path, 1)
-
     " resize window to content length
     " Note: This is annoying because if you print a lot of lines then your code buffer is forced to a height of one line every time you run this function.
     "       However without this line the buffer starts off as a default size and if you resize the buffer then it keeps that custom size after repeated runs of this function.
