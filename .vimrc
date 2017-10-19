@@ -178,7 +178,6 @@ inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 " Close popup by <Space>.
 "inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
-
 " neosnippets
 let g:neosnippet#snippets_directory='~/.dotfiles/.snippets'
 let g:neosnippet#enable_snipmate_compatibility = 1
@@ -213,7 +212,6 @@ au BufNewFile,BufRead *.py
 
 " Bind F5 to save file if modified and execute python script in a buffer.
 nnoremap <F5> :echo system('python3 "' . expand('%') . '"')<cr>
-
 "https://stackoverflow.com/questions/11037825/vim-get-out-of-parenthesis-brackets-etc
 inoremap <C-e> <C-o>A
 inoremap <C-f> <C-o>l
