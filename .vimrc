@@ -248,7 +248,7 @@ function! SaveAndExecutePython()
     setlocal modifiable
     %delete _
     " add the console output
-    silent execute ".!python " . shellescape(s:current_buffer_file_path, 1)
+    silent execute ".!python3 " . shellescape(s:current_buffer_file_path, 1)
     " resize window to content length
     " Note: This is annoying because if you print a lot of lines then your code buffer is forced to a height of one line every time you run this function.
     "       However without this line the buffer starts off as a default size and if you resize the buffer then it keeps that custom size after repeated runs of this function.
