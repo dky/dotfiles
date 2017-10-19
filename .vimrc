@@ -259,3 +259,7 @@ function! SaveAndExecutePython()
     setlocal readonly
     setlocal nomodifiable
 endfunction
+
+"https://stackoverflow.com/questions/11037825/vim-get-out-of-parenthesis-brackets-etc
+inoremap <C-e> <C-o>A
+inoremap <C-f> <C-o>l
