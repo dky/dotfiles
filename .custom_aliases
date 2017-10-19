@@ -176,3 +176,6 @@ alias gcrl="gcloud compute regions list"
 
 #homebrew
 alias bu="brew update && brew upgrade"
+
+#python
+alias python=/usr/local/bin/python3
