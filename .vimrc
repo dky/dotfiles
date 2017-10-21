@@ -11,6 +11,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-repeat'
 Bundle 'scrooloose/syntastic'
 Bundle 'rodjek/vim-puppet'
 Bundle 'fatih/vim-go'
@@ -29,6 +30,7 @@ Bundle 'mattn/emmet-vim'
 Bundle 'sheerun/vim-polyglot'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'Raimondi/delimitMate'
+
 
 if has("autocmd")
   " autocmd bufwritepost .vimrc source $MYVIMRC
@@ -208,3 +210,6 @@ au BufNewFile,BufRead *.py
 "https://stackoverflow.com/questions/11037825/vim-get-out-of-parenthesis-brackets-etc
 inoremap <C-e> <C-o>A
 inoremap <C-f> <C-o>l
+
+"surround markdown emphasis
+nnoremap ,em ciw**<C-r>"**<Esc>
