@@ -84,6 +84,11 @@ map ,# :s/^/\/*/<CR> <Esc>:nohlsearch <CR>
 map ,* :s/^\(.*\)$/\/\* \1 \*\//<CR>:nohlsearch<CR>
 " nerdtree
 map ,nt :NERDTreeToggle<CR>
+" tabs
+nmap ,t <Esc>:tabn<CR>
+nmap ,tp <Esc>:tabp<CR>
+nmap ,tn <Esc>:tab new<CR>
+" Nerdtree bookmark
 nmap ,nb :Bookmark
 nmap <leader>l :set list!<CR>
 " edit .vimrc quickly
@@ -92,22 +97,18 @@ nmap ,ev :tabedit $MYVIMRC<cr>
 nmap <space> :
 " Shortcut for vundle
 nmap ,bi :BundleInstall<cr>
-" fugitive
-nnoremap ,gs :Gstatus<cr>
-nnoremap <silent> ,gpu :execute ":!git push origin master"<CR>
-nnoremap ,gma :!git add . && git cm "
-nnoremap ,gpd :Git pull origin master<cr>
-" tabs
-nmap ,t <Esc>:tabn<CR>
-nmap ,tp <Esc>:tabp<CR>
-nmap ,tn <Esc>:tab new<CR>
-" vim-go - run gofmt on save
-let g:go_fmt_autosave = 0
 " Navigate 4x faster when holding down Ctrl
 nmap <c-j> 4j
 nmap <c-k> 4k
 nmap <c-h> 4h
 nmap <c-l> 4l
+" fugitive
+nnoremap ,gs :Gstatus<cr>
+nnoremap <silent> ,gpu :execute ":!git push origin master"<CR>
+nnoremap ,gma :!git add . && git cm "
+nnoremap ,gpd :Git pull origin master<cr>
+" vim-go - run gofmt on save
+let g:go_fmt_autosave = 0
 " enable vim-airline
 let g:airline_theme='badwolf'
 let g:airline#extensions#tabline#enabled=1
@@ -189,13 +190,10 @@ let g:go_highlight_fields = 1
 let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
-
 let g:syntastic_go_checkers = ['go', 'golint', 'errorcheck']
-
 " Spell checking on markdown
 autocmd BufRead,BufNewFile *.md setlocal spell
 au BufReadPost *.gohtml set syntax=html
-
 "Python indentation/spacing
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
@@ -205,10 +203,8 @@ au BufNewFile,BufRead *.py
     \ set expandtab | 
     \ set autoindent | 
     \ set fileformat=unix
-
 "https://stackoverflow.com/questions/11037825/vim-get-out-of-parenthesis-brackets-etc
 inoremap <C-e> <C-o>A
 inoremap <C-f> <C-o>l
-
 "surround markdown emphasis
 nnoremap ,em ciw**<C-r>"**<Esc>
