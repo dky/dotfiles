@@ -31,7 +31,6 @@ Bundle 'sheerun/vim-polyglot'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'Raimondi/delimitMate'
 
-
 if has("autocmd")
   " autocmd bufwritepost .vimrc source $MYVIMRC
   " Enable filetype detection
