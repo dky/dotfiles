@@ -32,7 +32,7 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'Raimondi/delimitMate'
 
 if has("autocmd")
-  " autocmd bufwritepost .vimrc source $MYVIMRC
+  "autocmd bufwritepost .vimrc source $MYVIMRC
   " Enable filetype detection
   filetype plugin indent on
   " Restore cursor position
@@ -93,6 +93,7 @@ nmap ,nb :Bookmark
 nmap <leader>l :set list!<CR>
 " edit .vimrc quickly
 nmap ,ev :tabedit $MYVIMRC<cr>
+nmap ,rv :source $MYVIMRC<CR>
 " map space rather than colon
 nmap <space> :
 " Shortcut for vundle
@@ -208,3 +209,4 @@ inoremap <C-e> <C-o>A
 inoremap <C-f> <C-o>l
 "surround markdown emphasis
 nnoremap ,em ciw**<C-r>"**<Esc>
+nnoremap ,qt ciw"<C-r>""<Esc>
