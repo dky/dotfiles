@@ -213,3 +213,30 @@ nnoremap ,qt ciw"<C-r>""<Esc>
 "open line below
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
+"update Hugo time stamp
+autocmd! BufWritePre * :call s:timestamp()
+" to update timestamp when saving if its in the first 20 lines of a file
+function! s:timestamp()
+    let pat = 'date = \".*\"'
+    let rep = '\1' . strftime("date \= \"%FT%T%z\"")
+    call s:subst(1, 10, pat, rep)
+endfunction
+" subst taken from timestamp.vim
+" {{{ subst( start, end, pat, rep): substitute on range start - end.
+function! s:subst(start, end, pat, rep)
+    let lineno = a:start
+    while lineno <= a:end
+	let curline = getline(lineno)
+	if match(curline, a:pat) != -1
+	    let newline = substitute( curline, a:pat, a:rep, '' )
+	    if( newline != curline )
+		" Only substitute if we made a change
+		"silent! undojoin
+		keepjumps call setline(lineno, newline)
+	    endif
+	endif
+	let lineno = lineno + 1
+    endwhile
+endfunction
+" }}}
+
