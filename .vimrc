@@ -208,8 +208,9 @@ au BufNewFile,BufRead *.py
 inoremap <C-e> <C-o>A
 inoremap <C-f> <C-o>l
 "surround markdown emphasis
-nnoremap ,em ciw**<C-r>"**<Esc>
-nnoremap ,qt ciw"<C-r>""<Esc>
+nnoremap ,yem ciw**<C-r>"**<Esc>
+nnoremap ,yqt ciw"<C-r>""<Esc>
+nnoremap ,yqb ciw[<C-r>"]<Esc>
 "open line below
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
