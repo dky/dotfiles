@@ -13,6 +13,19 @@ options     head
 
    ${5}
 
+snippet     hsboil
+abbr        hsboil
+options     head
+   +++
+   author = ["Don Ky"]
+   date = "`strftime("%Y-%m-%dT%H:%M:%S-04:00")`"
+   title = "${1}"
+   draft = "false"
+   layout = "static"
+   +++
+
+   ${2}
+
 snippet     hquote
 abbr        hquote
 options     head
