@@ -40,6 +40,17 @@ options     head
     ${2}
     \`\`\`
 
+snippet     hcodej
+abbr        hcode
+options     head
+    \`\`\`${1:javascript}
+    ${2}
+    \`\`\`
+
 snippet     hlink
 abbr        hlink
     [${1}]({{< ref "${2}.md" >}})
+
+snippet     hlinku
+abbr        hlink
+    [${1}](${2})
