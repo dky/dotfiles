@@ -209,7 +209,8 @@ inoremap <C-e> <C-o>A
 inoremap <C-f> <C-o>l
 "surround markdown emphasis
 nnoremap ,ysem ciw**<C-r>"**<Esc>
-nnoremap ,yst ciw"<C-r>""<Esc>
+nnoremap ,ysq ciw"<C-r>""<Esc>
+nnoremap ,yssq ciw"<C-r>''<Esc>
 nnoremap ,ysb ciw[<C-r>"]<Esc>
 "open line below
 nmap <S-Enter> O<Esc>
