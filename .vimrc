@@ -30,6 +30,7 @@ Bundle 'mattn/emmet-vim'
 Bundle 'sheerun/vim-polyglot'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'Raimondi/delimitMate'
+Bundle 'pangloss/vim-javascript'
 
 if has("autocmd")
   "autocmd bufwritepost .vimrc source $MYVIMRC
@@ -214,3 +215,8 @@ nnoremap ,ysb ciw[<C-r>"]<Esc>
 "open line below
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
+"js syntax
+" use jshint
+let g:syntastic_javascript_checkers = ['jshint']
+" show any linting errors immediately
+let g:syntastic_check_on_open = 1
