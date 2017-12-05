@@ -30,6 +30,7 @@ Bundle 'mattn/emmet-vim'
 Bundle 'sheerun/vim-polyglot'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'Raimondi/delimitMate'
+Bundle 'fatih/vim-hclfmt'
 
 if has("autocmd")
   "autocmd bufwritepost .vimrc source $MYVIMRC
@@ -215,3 +216,8 @@ nnoremap ,ysb ciw[<C-r>"]<Esc>
 "open line below
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
+
+"Hashicorp fmt
+let g:hcl_fmt_autosave = 0
+let g:tf_fmt_autosave = 0
+let g:nomad_fmt_autosave = 0
