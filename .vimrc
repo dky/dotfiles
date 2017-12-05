@@ -30,7 +30,11 @@ Bundle 'mattn/emmet-vim'
 Bundle 'sheerun/vim-polyglot'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'Raimondi/delimitMate'
+<<<<<<< HEAD
 Bundle 'fatih/vim-hclfmt'
+=======
+Bundle 'pangloss/vim-javascript'
+>>>>>>> a838fe921eba043291e630865df8f67076b355bf
 
 if has("autocmd")
   "autocmd bufwritepost .vimrc source $MYVIMRC
@@ -221,3 +225,8 @@ nmap <CR> o<Esc>
 let g:hcl_fmt_autosave = 0
 let g:tf_fmt_autosave = 0
 let g:nomad_fmt_autosave = 0
+"js syntax
+" use jshint
+let g:syntastic_javascript_checkers = ['jshint']
+" show any linting errors immediately
+let g:syntastic_check_on_open = 1
