@@ -30,11 +30,8 @@ Bundle 'mattn/emmet-vim'
 Bundle 'sheerun/vim-polyglot'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'Raimondi/delimitMate'
-<<<<<<< HEAD
 Bundle 'fatih/vim-hclfmt'
-=======
 Bundle 'pangloss/vim-javascript'
->>>>>>> a838fe921eba043291e630865df8f67076b355bf
 
 if has("autocmd")
   "autocmd bufwritepost .vimrc source $MYVIMRC
