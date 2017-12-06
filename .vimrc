@@ -217,13 +217,14 @@ nnoremap ,ysb ciw[<C-r>"]<Esc>
 "open line below
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
-
 "Hashicorp fmt
 let g:hcl_fmt_autosave = 0
 let g:tf_fmt_autosave = 0
 let g:nomad_fmt_autosave = 0
-"js syntax
+"js prettier
+autocmd FileType javascript set formatprg=prettier\ --stdin
+autocmd BufWritePre *.js :normal gggqG
 " use jshint
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['jslint']
 " show any linting errors immediately
 let g:syntastic_check_on_open = 1
