@@ -4,6 +4,9 @@
         "sourceType": "script",
         "ecmaFeatures": {}
     },
+    "env": {
+        "node": true
+    },
     "rules": {
         "constructor-super": 2,
         "no-case-declarations": 2,
