@@ -12,7 +12,6 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
-Bundle 'scrooloose/syntastic'
 Bundle 'rodjek/vim-puppet'
 Bundle 'fatih/vim-go'
 Bundle 'fatih/molokai'
@@ -32,6 +31,8 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'Raimondi/delimitMate'
 Bundle 'fatih/vim-hclfmt'
 Bundle 'pangloss/vim-javascript'
+Bundle 'w0rp/ale'
+"Bundle 'scrooloose/syntastic'
 
 if has("autocmd")
   "autocmd bufwritepost .vimrc source $MYVIMRC
@@ -117,7 +118,6 @@ let g:airline_theme='badwolf'
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#hunks#enabled=0
 let g:airline#extensions#branch#enabled=1
-let g:airline#extensions#syntastic#enabled=1
 " buffer tabs
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
@@ -193,7 +193,6 @@ let g:go_highlight_fields = 1
 let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
-let g:syntastic_go_checkers = ['go', 'golint', 'errorcheck']
 " Spell checking on markdown
 autocmd BufRead,BufNewFile *.md setlocal spell
 au BufReadPost *.gohtml set syntax=html
@@ -222,9 +221,19 @@ let g:hcl_fmt_autosave = 0
 let g:tf_fmt_autosave = 0
 let g:nomad_fmt_autosave = 0
 "js prettier
-autocmd FileType javascript set formatprg=prettier\ --stdin
-autocmd BufWritePre *.js :normal gggqG
-" use jshint
-let g:syntastic_javascript_checkers = ['jslint']
+"autocmd FileType javascript set formatprg=prettier\ --stdin
+"autocmd BufWritePre *.js :normal gggqG
+"syntastic
+"let g:airline#extensions#syntastic#enabled=1
+"let g:syntastic_javascript_checkers = ['jslint']
+"let g:syntastic_go_checkers = ['go', 'golint', 'errorcheck']
 " show any linting errors immediately
-let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_open = 1
+"ale
+" set Prettier up to run on save
+let g:ale_linters = {'javascript': ['eslint'],}
+let g:ale_fixers = {}
+let g:ale_fixers['javascript'] = ['prettier', 'eslint']
+let g:ale_fix_on_save = 1
+let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --no-semi'
+let g:airline#extensions#ale#enabled = 1
