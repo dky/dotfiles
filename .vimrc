@@ -220,9 +220,6 @@ nmap <CR> o<Esc>
 let g:hcl_fmt_autosave = 0
 let g:tf_fmt_autosave = 0
 let g:nomad_fmt_autosave = 0
-"js prettier
-"autocmd FileType javascript set formatprg=prettier\ --stdin
-"autocmd BufWritePre *.js :normal gggqG
 "syntastic
 "let g:airline#extensions#syntastic#enabled=1
 "let g:syntastic_javascript_checkers = ['jslint']
@@ -237,3 +234,6 @@ let g:ale_fixers['javascript'] = ['prettier', 'eslint']
 let g:ale_fix_on_save = 1
 let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --no-semi'
 let g:airline#extensions#ale#enabled = 1
+let g:ale_sign_error = '●' " Less aggressive than the default '>>'
+let g:ale_sign_warning = '.'
+let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
