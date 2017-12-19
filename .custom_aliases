@@ -182,3 +182,6 @@ alias python=/usr/local/bin/python3
 
 #get to aliases dir
 alias cdsnip="cd /Users/dky/.dotfiles/.snippets"
+
+#sudo make local
+alias sml="sudo make local"
