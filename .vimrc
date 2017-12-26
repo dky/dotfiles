@@ -208,6 +208,7 @@ au BufNewFile,BufRead *.py
 "https://stackoverflow.com/questions/11037825/vim-get-out-of-parenthesis-brackets-etc
 inoremap <C-e> <C-o>A
 inoremap <C-f> <C-o>l
+inoremap <C-o> <C-o>o
 "surround markdown emphasis
 nnoremap ,yse ciw**<C-r>"**<Esc>
 nnoremap ,ysq ciw"<C-r>""<Esc>
