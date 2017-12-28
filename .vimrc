@@ -32,6 +32,7 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'fatih/vim-hclfmt'
 Bundle 'pangloss/vim-javascript'
 Bundle 'w0rp/ale'
+Bundle 'vim-python/python-syntax'
 "Bundle 'scrooloose/syntastic'
 
 if has("autocmd")
@@ -79,6 +80,7 @@ map <right> <nop>
 
 au FileType go map <leader>r :echo system('go run "' . expand('%') . '"')<CR>
 au FileType python map <leader>r :echo system('python3 "' . expand('%') . '"')<CR>
+au FileType javascript map <leader>r :echo system('node "' . expand('%') . '"')<CR>
 
 "map <F4> :set number! <bar> :set list! <bar> se rnu!" <bar> se nu! <bar> :GitGutterSignsDisable<CR>
 map <F4> :set number! <bar> :set list! <bar> :GitGutterSignsDisable<CR>
@@ -242,3 +244,5 @@ let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
 " save automatically when text is changed
 set updatetime=200
 au CursorHold * silent! update
+
+let g:python_highlight_all = 1
