@@ -145,6 +145,8 @@ set laststatus=2
 " molokai colorscheme
 silent! colorscheme molokai
 " use the same symbols as TextMate for tabstops and EOLs
+scriptencoding utf-8
+set encoding=utf-8
 set listchars=eol:¬,tab:▸-,trail:~,extends:>,precedes:<
 set list
 " ctrlp
