@@ -47,6 +47,11 @@ alias dktop='docker top $1'
 alias dcu="docker-compose up"
 alias dcud="docker-compose up -d"
 alias dcd="docker-compose down"
+#docker swarm
+alias dksls="docker service ls"
+alias dksps="docker service ps"
+alias dksl="docker service logs -f"
+alias dksrm="docker service rm"
 
 #screen aliases
 alias sls="screen -ls"
