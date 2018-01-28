@@ -52,6 +52,7 @@ alias dksls="docker service ls"
 alias dksps="docker service ps"
 alias dksl="docker service logs -f"
 alias dksrm="docker service rm"
+alias dknls="docker node ls" 
 
 #screen aliases
 alias sls="screen -ls"
