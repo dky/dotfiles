@@ -1,11 +1,11 @@
-" Setting up vundle
-" git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-" BundleInstall
-" ,bi - vim mapping shortcut for BundleInstall
-set ruler		" ruler bottom right
-set nocompatible		" be iMproved
-set hidden"			" no prompt for unsaved buffers
-filetype off		" required!
+"Setting up vundle
+"git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+"BundleInstall
+",bi - vim mapping shortcut for BundleInstall
+set ruler		"ruler bottom right
+set nocompatible		"be iMproved
+set hidden"			"no prompt for unsaved buffers
+filetype off		"required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
@@ -37,9 +37,9 @@ Bundle 'vim-python/python-syntax'
 
 if has("autocmd")
   "autocmd bufwritepost .vimrc source $MYVIMRC
-  " Enable filetype detection
+  "Enable filetype detection
   filetype plugin indent on
-  " Restore cursor position
+  "Restore cursor position
   autocmd BufReadPost *
     \ if line("'\"") > 1 && line("'\"") <= line("$") |
     \   exe "normal! g`\"" |
@@ -47,10 +47,10 @@ if has("autocmd")
 endif
 
 if &t_Co > 2 || has("gui_running")
-  " Enable syntax highlighting
+  "Enable syntax highlighting
   syntax on
 endif
-" line numering
+"line numering
 "set relativenumber
 set number
 " Tab use 3 spaces
@@ -59,20 +59,20 @@ set shiftwidth=3
 "autocompletion
 set wildmode=list:longest
 set smartindent
-" set autoindent
-" split below
+"set autoindent
+"split below
 set splitbelow
 set hlsearch
 set foldenable
-" enable paste mode for pasted code
+"enable paste mode for pasted code
 set pastetoggle=<F2>
-" Allow backspacing in insert mode
+"Allow backspacing in insert mode
 set backspace=indent,eol,start
-set visualbell           " don't beep
-set noerrorbells         " don't beep
-" renamp esc to jk
+set visualbell           "don't beep
+set noerrorbells         "don't beep
+"renamp esc to jk
 imap jk <Esc>
-" no arrow keys
+"no arrow keys
 map <up> <nop>
 map <down> <nop>
 map <left> <nop>
@@ -84,50 +84,50 @@ au FileType javascript map <leader>r :echo system('node "' . expand('%') . '"')<
 
 "map <F4> :set number! <bar> :set list! <bar> se rnu!" <bar> se nu! <bar> :GitGutterSignsDisable<CR>
 map <F4> :set number! <bar> :set list! <bar> :GitGutterSignsDisable<CR>
-" comment out code mappings
+"comment out code mappings
 map ,# :s/^/\/*/<CR> <Esc>:nohlsearch <CR>
 map ,* :s/^\(.*\)$/\/\* \1 \*\//<CR>:nohlsearch<CR>
-" nerdtree
+"nerdtree
 map ,nt :NERDTreeToggle<CR>
-" tabs
+"tabs
 nmap ,t <Esc>:tabn<CR>
 nmap ,tp <Esc>:tabp<CR>
 nmap ,tn <Esc>:tab new<CR>
-" Nerdtree bookmark
+"Nerdtree bookmark
 nmap ,nb :Bookmark
 nmap <leader>l :set list!<CR>
-" edit .vimrc quickly
+"edit .vimrc quickly
 nmap ,ev :tabedit $MYVIMRC<cr>
 nmap ,rv :source $MYVIMRC<CR>
-" map space rather than colon
+"map space rather than colon
 nmap <space> :
-" Shortcut for vundle
+"Shortcut for vundle
 nmap ,bi :BundleInstall<cr>
-" Navigate 4x faster when holding down Ctrl
+"Navigate 4x faster when holding down Ctrl
 nmap <c-j> 4j
 nmap <c-k> 4k
 nmap <c-h> 4h
 nmap <c-l> 4l
-" fugitive
+"fugitive
 nnoremap ,gs :Gstatus<cr>
 nnoremap <silent> ,gpu :execute ":!git push origin master"<CR>
 nnoremap ,gma :!git add . && git cm "
 nnoremap ,gpd :Git pull origin master<cr>
-" vim-go - run gofmt on save
+"vim-go - run gofmt on save
 let g:go_fmt_autosave = 0
-" enable vim-airline
+"enable vim-airline
 let g:airline_theme='badwolf'
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#hunks#enabled=0
 let g:airline#extensions#branch#enabled=1
-" buffer tabs
+"buffer tabs
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
-" unicode symbols
+"unicode symbols
 let g:airline_left_sep = '»'
 let g:airline_left_sep = '▶'
 let g:airline_right_sep = '«'
@@ -140,57 +140,56 @@ let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
-" set statusline at the bottom
+"set statusline at the bottom
 set laststatus=2
-" molokai colorscheme
+"molokai colorscheme
 silent! colorscheme molokai
-" use the same symbols as TextMate for tabstops and EOLs
+"use the same symbols as TextMate for tabstops and EOLs
 scriptencoding utf-8
 set encoding=utf-8
 set listchars=eol:¬,tab:▸-,trail:~,extends:>,precedes:<
 set list
-" ctrlp
+"ctrlp
 let g:ctrlp_map = '<c-p>'
 nmap <Leader>b :CtrlPBuffer<CR>
-" neocomplete
-" disable AutoComplPop.
-let g:acp_enableAtStartup = 0
 if has("lua")
-  " use neocomplete.
+  "neocomplete
+  "disable AutoComplPop.
+  let g:acp_enableAtStartup = 0
   let g:neocomplete#enable_at_startup = 1
-  " use smartcase.
+  "use smartcase.
   let g:neocomplete#enable_smart_case = 1
-  " set minimum syntax keyword length.
+  "set minimum syntax keyword length.
   let g:neocomplete#sources#syntax#min_keyword_length = 3
 endif
-" nerdtree
+"nerdtree
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
-" plugin key-mappings.
+"plugin key-mappings.
 inoremap <expr><C-g> neocomplete#undo_completion()
 inoremap <expr><C-l> neocomplete#complete_common_string()
-" Recommended key-mappings.
-" <CR>: close popup and save indent.
+"Recommended key-mappings.
+"<CR>: close popup and save indent.
 inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
 function! s:my_cr_function()
   return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
-  " For no inserting <CR> key.
+  "For no inserting <CR> key.
   "return pumvisible() ? "\<C-y>" : "\<CR>"
 endfunction
-" <TAB>: completion.
+"<TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" <C-h>, <BS>: close popup and delete backword char.
+"<C-h>, <BS>: close popup and delete backword char.
 inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-" Close popup by <Space>.
+"Close popup by <Space>.
 "inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
-" neosnippets
+"neosnippets
 let g:neosnippet#snippets_directory='~/.dotfiles/.snippets'
 let g:neosnippet#enable_snipmate_compatibility = 1
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
 xmap <C-k> <Plug>(neosnippet_expand_target)
-" plasticboy vim markdown disable folding
+"plasticboy vim markdown disable folding
 let g:vim_markdown_folding_disabled = 1
 "vim-go highlighting
 let g:go_highlight_functions = 1
@@ -199,7 +198,7 @@ let g:go_highlight_fields = 1
 let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
-" Spell checking on markdown
+"Spell checking on markdown
 autocmd BufRead,BufNewFile *.md setlocal spell
 au BufReadPost *.gohtml set syntax=html
 "Python indentation/spacing
@@ -234,7 +233,7 @@ let g:nomad_fmt_autosave = 0
 " show any linting errors immediately
 "let g:syntastic_check_on_open = 1
 "ale
-" set Prettier up to run on save
+"set Prettier up to run on save
 let g:ale_linters = {'javascript': ['eslint'],}
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['prettier', 'eslint']
@@ -245,7 +244,7 @@ let g:ale_sign_error = '●' " Less aggressive than the default '>>'
 let g:ale_sign_warning = '.'
 let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
 
-" save automatically when text is changed
+"save automatically when text is changed
 set updatetime=200
 au CursorHold * silent! update
 
