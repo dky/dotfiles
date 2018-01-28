@@ -155,12 +155,14 @@ nmap <Leader>b :CtrlPBuffer<CR>
 " neocomplete
 " disable AutoComplPop.
 let g:acp_enableAtStartup = 0
-" use neocomplete.
-let g:neocomplete#enable_at_startup = 1
-" use smartcase.
-let g:neocomplete#enable_smart_case = 1
-" set minimum syntax keyword length.
-let g:neocomplete#sources#syntax#min_keyword_length = 3
+if has("lua")
+  " use neocomplete.
+  let g:neocomplete#enable_at_startup = 1
+  " use smartcase.
+  let g:neocomplete#enable_smart_case = 1
+  " set minimum syntax keyword length.
+  let g:neocomplete#sources#syntax#min_keyword_length = 3
+endif
 " nerdtree
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
