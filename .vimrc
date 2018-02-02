@@ -19,7 +19,6 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'Xuyuanp/nerdtree-git-plugin'
 Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
-Bundle 'Shougo/neocomplete.vim'
 Bundle 'Shougo/neosnippet-snippets'
 Bundle 'Shougo/neosnippet.vim'
 Bundle 'airblade/vim-gitgutter'
@@ -31,8 +30,11 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'Raimondi/delimitMate'
 Bundle 'fatih/vim-hclfmt'
 Bundle 'pangloss/vim-javascript'
-Bundle 'w0rp/ale'
 Bundle 'vim-python/python-syntax'
+if v:version >= 800
+Bundle 'Shougo/neocomplete.vim'
+Bundle 'w0rp/ale'
+endif
 "Bundle 'scrooloose/syntastic'
 
 if has("autocmd")
@@ -152,19 +154,15 @@ set list
 "ctrlp
 let g:ctrlp_map = '<c-p>'
 nmap <Leader>b :CtrlPBuffer<CR>
-if has("lua")
-  "neocomplete
-  "disable AutoComplPop.
-  let g:acp_enableAtStartup = 0
-  let g:neocomplete#enable_at_startup = 1
-  "use smartcase.
-  let g:neocomplete#enable_smart_case = 1
-  "set minimum syntax keyword length.
-  let g:neocomplete#sources#syntax#min_keyword_length = 3
-endif
-"nerdtree
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
+if has("lua") && v:version >= 800
+"neocomplete
+"disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+let g:neocomplete#enable_at_startup = 1
+"use smartcase.
+let g:neocomplete#enable_smart_case = 1
+"set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length = 3
 "plugin key-mappings.
 inoremap <expr><C-g> neocomplete#undo_completion()
 inoremap <expr><C-l> neocomplete#complete_common_string()
@@ -181,8 +179,10 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 "<C-h>, <BS>: close popup and delete backword char.
 inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-"Close popup by <Space>.
-"inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
+endif
+"nerdtree
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
 "neosnippets
 let g:neosnippet#snippets_directory='~/.dotfiles/.snippets'
 let g:neosnippet#enable_snipmate_compatibility = 1
