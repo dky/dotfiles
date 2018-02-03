@@ -226,12 +226,6 @@ nmap <CR> o<Esc>
 let g:hcl_fmt_autosave = 0
 let g:tf_fmt_autosave = 0
 let g:nomad_fmt_autosave = 0
-"syntastic
-"let g:airline#extensions#syntastic#enabled=1
-"let g:syntastic_javascript_checkers = ['jslint']
-"let g:syntastic_go_checkers = ['go', 'golint', 'errorcheck']
-" show any linting errors immediately
-"let g:syntastic_check_on_open = 1
 "ale
 "set Prettier up to run on save
 let g:ale_linters = {'javascript': ['eslint'],}
@@ -243,7 +237,6 @@ let g:airline#extensions#ale#enabled = 1
 let g:ale_sign_error = '●' " Less aggressive than the default '>>'
 let g:ale_sign_warning = '.'
 let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
-
 "save automatically when text is changed
 set updatetime=200
 au CursorHold * silent! update
