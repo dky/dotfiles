@@ -249,3 +249,9 @@ set updatetime=200
 au CursorHold * silent! update
 
 let g:python_highlight_all = 1
+
+" set 'updatetime' to 5 seconds when in insert mode
+au InsertEnter * let updaterestore = &updatetime | set updatetime=5000
+au InsertLeave * let &updatetime = updaterestore
+" automatically leave insert mode after 'updatetime' milliseconds of inaction
+au CursorHoldI * stopinsert
