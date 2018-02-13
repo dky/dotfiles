@@ -12,12 +12,10 @@ options     head
   }
 
 snippet     goboil
-abbr        gboil
-options     head
   package main
 
   import (
-    ${1}
+    ${1:TARGET}
   )
 
   func main() {
