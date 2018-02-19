@@ -5,4 +5,4 @@ export EDITOR=vim
 shopt -s histappend
 
 export TERM=xterm-256color
-export PATH=$HOME/bin:/usr/local/sbin:/usr/local/go/bin:$PATH
+export PATH=$HOME/bin:$HOME/go/bin:/usr/local/sbin:/usr/local/go/bin:$PATH
