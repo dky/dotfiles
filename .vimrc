@@ -189,6 +189,7 @@ let g:neosnippet#enable_snipmate_compatibility = 1
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
 xmap <C-k> <Plug>(neosnippet_expand_target)
+nnoremap <leader>rs :call neosnippet#variables#set_snippets({})<cr>
 "plasticboy vim markdown disable folding
 let g:vim_markdown_folding_disabled = 1
 "vim-go highlighting
