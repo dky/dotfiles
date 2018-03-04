@@ -13,7 +13,6 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'rodjek/vim-puppet'
-Bundle 'fatih/vim-go'
 Bundle 'fatih/molokai'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Xuyuanp/nerdtree-git-plugin'
@@ -34,6 +33,7 @@ Bundle 'vim-python/python-syntax'
 if v:version >= 800
 Bundle 'Shougo/neocomplete.vim'
 Bundle 'w0rp/ale'
+Bundle 'fatih/vim-go'
 endif
 "Bundle 'scrooloose/syntastic'
 
