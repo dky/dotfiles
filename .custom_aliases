@@ -124,11 +124,6 @@ alias rpmspec="cd $HOME/rpmbuild/SPECS"
 alias rpmsrc="cd $HOME/rpmbuild/SOURCES"
 alias rpmba="rpmbuild -ba $1"
 
-#octopress
-alias octs="octopress serve"
-alias octb="octopress build"
-alias octnp="octopress new post"
-
 alias spkclean="/opt/splunk/bin/splunk stop && /opt/splunk/bin/splunk clean eventdata -index main -f && /opt/splunk/bin/splunk start"
 alias spkrestart="/opt/splunk/bin/splunk restart"
 alias spkoneshot="/opt/splunk/bin/splunk add oneshot"
@@ -139,19 +134,12 @@ alias cdspkapps="cd /opt/splunk/etc/apps/"
 
 #sudo
 alias sd="sudo"
-#sudo alias for mispellings
 alias suod="sudo"
 
 #go aliases
 alias gob="go build main.go"
 alias gor="go run"
 alias cdgo="cd /Users/dky/go/src/github.com/dky"
-
-#fleetctl
-alias flm='fleetctl list-machines'
-alias flssh='fleetctl ssh' 
-alias flu='fleetctl list-units' 
-alias flus='fleetctl list-units' 
 
 #digital ocean
 alias doctlls="doctl droplet list"
@@ -163,8 +151,6 @@ alias azvmls='azure vm list'
 alias mp="make public"
 alias cddky="cd ~/git/hugo/dky.io/"
 alias cddk="cd ~/git/hugo/dky.io/"
-alias cdtt="cd ~/git/hugo/tuxtutorials/"
-alias cdmath="cd ~/git/hugo/maths.io/"
 
 #exercism commands
 alias exer="exercism"
