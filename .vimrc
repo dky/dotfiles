@@ -13,7 +13,6 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'rodjek/vim-puppet'
-Bundle 'fatih/vim-go'
 Bundle 'fatih/molokai'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Xuyuanp/nerdtree-git-plugin'
@@ -34,6 +33,7 @@ Bundle 'vim-python/python-syntax'
 if v:version >= 800
 Bundle 'Shougo/neocomplete.vim'
 Bundle 'w0rp/ale'
+Bundle 'fatih/vim-go'
 endif
 "Bundle 'scrooloose/syntastic'
 
@@ -130,10 +130,10 @@ if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
 "unicode symbols
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
+"let g:airline_left_sep = '»'
+"let g:airline_left_sep = '▶'
+"let g:airline_right_sep = '«'
+"let g:airline_right_sep = '◀'
 let g:airline_symbols.linenr = '␊'
 let g:airline_symbols.linenr = '␤'
 let g:airline_symbols.linenr = '¶'
@@ -189,6 +189,7 @@ let g:neosnippet#enable_snipmate_compatibility = 1
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
 xmap <C-k> <Plug>(neosnippet_expand_target)
+nnoremap <leader>rs :call neosnippet#variables#set_snippets({})<cr>
 "plasticboy vim markdown disable folding
 let g:vim_markdown_folding_disabled = 1
 "vim-go highlighting
