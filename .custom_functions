@@ -33,7 +33,8 @@ function dkrmin {
 }
 
 function dkip {
-	docker inspect $1 | grep -i IPAddress | cut -d '"' -f 4
+	#docker inspect $1 | grep -i IPAddress | cut -d '"' -f 4
+	docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $1
 }
 
 function sshnokey {
