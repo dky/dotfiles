@@ -215,14 +215,17 @@ au BufNewFile,BufRead *.py
 inoremap <C-e> <C-o>A
 inoremap <C-f> <C-o>l
 inoremap <C-o> <C-o>o
+inoremap <C-k> <C-o>O
 "surround markdown emphasis
 nnoremap ,yse ciw**<C-r>"**<Esc>
 nnoremap ,ysq ciw"<C-r>""<Esc>
 nnoremap ,yst ciw`<C-r>"`<Esc>
 nnoremap ,ysb ciw[<C-r>"]<Esc>
+"http://vim.wikia.com/wiki/Insert_newline_without_entering_insert_mode
 "open line below
-nmap <S-Enter> O<Esc>
-nmap <CR> o<Esc>
+"Shift Enter O
+"nmap <S-Enter> O<Esc>
+"nmap <CR> o<Esc>
 "Hashicorp fmt
 let g:hcl_fmt_autosave = 0
 let g:tf_fmt_autosave = 0
