@@ -57,7 +57,7 @@ alias dknls="docker node ls"
 #screen aliases
 alias sls="screen -ls"
 alias sr="screen -r"
-alias ss="screen -S"
+#alias ss="screen -S"
 
 #tmux aliases
 alias tn="tmux new -s $1"
