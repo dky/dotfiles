@@ -130,10 +130,10 @@ if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
 "unicode symbols
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
+"let g:airline_left_sep = '»'
+"let g:airline_left_sep = '▶'
+"let g:airline_right_sep = '«'
+"let g:airline_right_sep = '◀'
 let g:airline_symbols.linenr = '␊'
 let g:airline_symbols.linenr = '␤'
 let g:airline_symbols.linenr = '¶'
@@ -152,8 +152,11 @@ set encoding=utf-8
 set listchars=eol:¬,tab:▸-,trail:~,extends:>,precedes:<
 set list
 "ctrlp
-let g:ctrlp_map = '<c-p>'
-nmap <Leader>b :CtrlPBuffer<CR>
+"let g:ctrlp_map = '<c-p>'
+"let g:ctrlp_cmd = 'CtrlPLastMode [--dir]'
+"nmap <Leader>b :CtrlPBuffer<CR>
+"let g:ctrlp_cmd = 'CtrlPMRU'
+let g:ctrlp_cmd = 'CtrlPBuffer'
 if has("lua") && v:version >= 800
 "neocomplete
 "disable AutoComplPop.
@@ -186,9 +189,9 @@ let NERDTreeDirArrows = 1
 "neosnippets
 let g:neosnippet#snippets_directory='~/.dotfiles/.snippets'
 let g:neosnippet#enable_snipmate_compatibility = 1
-imap <C-k> <Plug>(neosnippet_expand_or_jump)
-smap <C-k> <Plug>(neosnippet_expand_or_jump)
-xmap <C-k> <Plug>(neosnippet_expand_target)
+imap <C-l> <Plug>(neosnippet_expand_or_jump)
+smap <C-l> <Plug>(neosnippet_expand_or_jump)
+xmap <C-l> <Plug>(neosnippet_expand_target)
 nnoremap <leader>rs :call neosnippet#variables#set_snippets({})<cr>
 "plasticboy vim markdown disable folding
 let g:vim_markdown_folding_disabled = 1
@@ -215,14 +218,17 @@ au BufNewFile,BufRead *.py
 inoremap <C-e> <C-o>A
 inoremap <C-f> <C-o>l
 inoremap <C-o> <C-o>o
+inoremap <C-k> <C-o>O
 "surround markdown emphasis
 nnoremap ,yse ciw**<C-r>"**<Esc>
 nnoremap ,ysq ciw"<C-r>""<Esc>
 nnoremap ,yst ciw`<C-r>"`<Esc>
 nnoremap ,ysb ciw[<C-r>"]<Esc>
+"http://vim.wikia.com/wiki/Insert_newline_without_entering_insert_mode
 "open line below
-nmap <S-Enter> O<Esc>
-nmap <CR> o<Esc>
+"Shift Enter O
+"nmap <S-Enter> O<Esc>
+"nmap <CR> o<Esc>
 "Hashicorp fmt
 let g:hcl_fmt_autosave = 0
 let g:tf_fmt_autosave = 0
