@@ -152,8 +152,11 @@ set encoding=utf-8
 set listchars=eol:¬,tab:▸-,trail:~,extends:>,precedes:<
 set list
 "ctrlp
-let g:ctrlp_map = '<c-p>'
-nmap <Leader>b :CtrlPBuffer<CR>
+"let g:ctrlp_map = '<c-p>'
+"let g:ctrlp_cmd = 'CtrlPLastMode [--dir]'
+"nmap <Leader>b :CtrlPBuffer<CR>
+"let g:ctrlp_cmd = 'CtrlPMRU'
+let g:ctrlp_cmd = 'CtrlPBuffer'
 if has("lua") && v:version >= 800
 "neocomplete
 "disable AutoComplPop.

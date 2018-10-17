@@ -15,7 +15,9 @@ if [ -n "$BASH_VERSION" ]; then
 	if [ -f "$HOME/.dot_private" ]; then
 		source "$HOME/.dot_private"
 	fi
-
+	if [ -f "$HOME/.cargo" ]; then
+		source $HOME/.cargo/env
+	fi
 	if [ -f "$HOME/.splunk_custom" ]; then
 		source "$HOME/.splunk_custom"
 	fi
@@ -40,3 +42,5 @@ if [ -n "$BASH_VERSION" ]; then
 		source "/Users/dky/Downloads/google-cloud-sdk/completion.bash.inc"
 	fi
 fi
+
+export PATH="$HOME/.cargo/bin:$PATH"
