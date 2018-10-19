@@ -30,6 +30,7 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'fatih/vim-hclfmt'
 Bundle 'pangloss/vim-javascript'
 Bundle 'vim-python/python-syntax'
+Bundle 'jamesroutley/vim-logbook'
 if v:version >= 800
 Bundle 'Shougo/neocomplete.vim'
 Bundle 'w0rp/ale'
