@@ -156,7 +156,7 @@ set list
 "let g:ctrlp_cmd = 'CtrlPLastMode [--dir]'
 "nmap <Leader>b :CtrlPBuffer<CR>
 "let g:ctrlp_cmd = 'CtrlPMRU'
-let g:ctrlp_cmd = 'CtrlPBuffer'
+let g:ctrlp_cmd = 'CtrlPMixed'
 if has("lua") && v:version >= 800
 "neocomplete
 "disable AutoComplPop.
