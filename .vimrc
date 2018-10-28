@@ -30,6 +30,7 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'fatih/vim-hclfmt'
 Bundle 'pangloss/vim-javascript'
 Bundle 'vim-python/python-syntax'
+Bundle 'jamesroutley/vim-logbook'
 if v:version >= 800
 Bundle 'Shougo/neocomplete.vim'
 Bundle 'w0rp/ale'
@@ -156,7 +157,7 @@ set list
 "let g:ctrlp_cmd = 'CtrlPLastMode [--dir]'
 "nmap <Leader>b :CtrlPBuffer<CR>
 "let g:ctrlp_cmd = 'CtrlPMRU'
-let g:ctrlp_cmd = 'CtrlPBuffer'
+let g:ctrlp_cmd = 'CtrlPMixed'
 if has("lua") && v:version >= 800
 "neocomplete
 "disable AutoComplPop.
