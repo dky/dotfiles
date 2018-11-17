@@ -111,6 +111,8 @@ nmap <c-j> 4j
 nmap <c-k> 4k
 nmap <c-h> 4h
 nmap <c-l> 4l
+"Map f1 to nothing because I keep hitting it randomly.
+nmap <F1> <nop>
 "fugitive
 nnoremap ,gs :Gstatus<cr>
 nnoremap <silent> ,gpu :execute ":!git push origin master"<CR>
