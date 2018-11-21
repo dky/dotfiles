@@ -169,13 +169,5 @@ alias gcrl="gcloud compute regions list"
 #homebrew
 alias bu="brew update && brew upgrade"
 
-#python
-#alias python=/usr/local/bin/python3
-#alias python=python3
-#
-
-#get to aliases dir
-alias cdsnip="cd /Users/dky/.dotfiles/.snippets"
-
 #sudo make local
 alias sml="sudo make local"
