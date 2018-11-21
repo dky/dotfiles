@@ -107,7 +107,7 @@ function lb() {
 	vim ~/logbook/$(date '+%Y-%m-%d').md
 }
 
-fs() {
+ts() {
 	local -r fmt='#{session_id}:|#S|(#{session_attached} attached)'
 	{ tmux display-message -p -F "$fmt" && tmux list-sessions -F "$fmt"; } \
 	| awk '!seen[$1]++' \
