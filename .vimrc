@@ -189,6 +189,7 @@ endif
 "nerdtree
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
+let NERDTreeShowHidden=1
 "neosnippets
 let g:neosnippet#snippets_directory='~/.dotfiles/.snippets'
 let g:neosnippet#enable_snipmate_compatibility = 1
