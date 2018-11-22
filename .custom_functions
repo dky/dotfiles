@@ -1,13 +1,13 @@
 function color_my_prompt {
-    local __user="\[\033[1;37m\]\u"
-    local __asterisk="\[\033[0;36m\]@"
-    local __host="\[\033[0;31m\]\h"
-    local __cur_location="\[\033[01;34m\]\w"
-    local __git_branch_color="\[\033[31m\]"
-    local __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
-    local __prompt_tail="\[\033[35m\]$tail"
-    local __last_color="\[\033[00m\]"
-    export PS1="$__user$__asterisk$__host $__cur_location $__git_branch_color$__git_branch$__prompt_tail$__last_color "
+	local __user="\[\033[1;37m\]\u"
+		local __asterisk="\[\033[0;36m\]@"
+		local __host="\[\033[0;31m\]\h"
+		local __cur_location="\[\033[01;34m\]\w"
+		local __git_branch_color="\[\033[31m\]"
+		local __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
+		local __prompt_tail="\[\033[35m\]$tail"
+		local __last_color="\[\033[00m\]"
+		export PS1="$__user$__asterisk$__host $__cur_location $__git_branch_color$__git_branch$__prompt_tail$__last_color "
 }
 
 color_my_prompt
@@ -16,8 +16,8 @@ color_my_prompt
 
 function dkr { 
 	name="$1" 
-	image="$2"
-	docker run -i -t --name $name -h $name $image /bin/bash;
+		image="$2"
+		docker run -i -t --name $name -h $name $image /bin/bash;
 }
 
 function dkrmce {
@@ -33,55 +33,55 @@ function dkrmin {
 }
 
 function dkip {
-	#docker inspect $1 | grep -i IPAddress | cut -d '"' -f 4
+#docker inspect $1 | grep -i IPAddress | cut -d '"' -f 4
 	docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $1
 }
 
 function sshnokey {
 	echo "Usage: sshnokey host port"
-	sshhost=$1
-	sshport=$2
+		sshhost=$1
+		sshport=$2
 
-	if [ -n "$sshport" ]; then
-		 echo "sshport not empty"
-	else
-		 echo "ssh port empty using default"
-		 sshport=22
-	fi
+		if [ -n "$sshport" ]; then
+			echo "sshport not empty"
+		else
+			echo "ssh port empty using default"
+				sshport=22
+				fi
 
-	echo "Connecting to $sshhost on port: $sshport"
-	ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $sshhost -p $sshport
+				echo "Connecting to $sshhost on port: $sshport"
+				ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $sshhost -p $sshport
 }
 
 function vsd {
 	vmname=$1
-	echo "looking up $vmname server id"
-	server_id=`vultr server list | grep $vmname | awk '{ print $1 }'`
-	echo "$server_id being deleted"
-	vultr server delete $server_id
+		echo "looking up $vmname server id"
+		server_id=`vultr server list | grep $vmname | awk '{ print $1 }'`
+		echo "$server_id being deleted"
+		vultr server delete $server_id
 }
 
 function vip {
 	vmname=$1
-	echo "looking up $vmname ip"
-	server_ip=`vultr server list | grep $vmname | awk '{ print $3 }'`
-	echo "$vmname has $server_ip"
+		echo "looking up $vmname ip"
+		server_ip=`vultr server list | grep $vmname | awk '{ print $3 }'`
+		echo "$vmname has $server_ip"
 }
 
 function vssh {
 
 	vmname=$1
-	echo "looking up $vmname ip"
-	server_ip=`vultr server list | grep $vmname | awk '{ print $3 }'`
-	echo "$vmname has $server_ip"
+		echo "looking up $vmname ip"
+		server_ip=`vultr server list | grep $vmname | awk '{ print $3 }'`
+		echo "$vmname has $server_ip"
 
-	if nc -w 1 $server_ip 22; then
-		echo "connect to ${server_ip}:22"
-		ssh -o StrictHostKeyChecking=no core@$server_ip
-	else
-		echo "connect to ${server_ip}:22 failed; exit code from netcat was $?; attempting on ${server_ip}:2222"
-		ssh -o StrictHostKeyChecking=no $server_ip -p 2222
-	fi
+		if nc -w 1 $server_ip 22; then
+			echo "connect to ${server_ip}:22"
+				ssh -o StrictHostKeyChecking=no core@$server_ip
+		else
+			echo "connect to ${server_ip}:22 failed; exit code from netcat was $?; attempting on ${server_ip}:2222"
+				ssh -o StrictHostKeyChecking=no $server_ip -p 2222
+				fi
 }
 
 function jcurl() {
@@ -90,19 +90,31 @@ function jcurl() {
 
 function hnp {
 	post_id=$1
-	hugo new post/$post_id
+		hugo new post/$post_id
 }
 
 ssh() {
-    if [ "$(ps -p $(ps -p $$ -o ppid=) -o comm=)" = "tmux" ]; then
-        tmux rename-window "$(echo $* | cut -d . -f 1)"
-        command ssh "$@"
-        tmux set-window-option automatic-rename "on" 1>/dev/null
-    else
-        command ssh "$@"
-    fi
+	if [ "$(ps -p $(ps -p $$ -o ppid=) -o comm=)" = "tmux" ]; then
+		tmux rename-window "$(echo $* | cut -d . -f 1)"
+			command ssh "$@"
+			tmux set-window-option automatic-rename "on" 1>/dev/null
+	else
+		command ssh "$@"
+			fi
 }
 
 function lb() {
-    vim ~/logbook/$(date '+%Y-%m-%d').md
+	vim ~/logbook/$(date '+%Y-%m-%d').md
+}
+
+# Use FZF to switch Tmux sessions:
+# bind-key s run "tmux new-window 'bash -ci fs'"
+fs() {
+	local -r fmt='#{session_id}:|#S|(#{session_attached} attached)'
+	{ tmux display-message -p -F "$fmt" && tmux list-sessions -F "$fmt"; } \
+		| awk '!seen[$1]++' \
+		| column -t -s'|' \
+		| fzf -q '$' --reverse --prompt 'switch session: ' -1 \
+		| cut -d':' -f1 \
+		| xargs tmux switch-client -t
 }
