@@ -179,3 +179,6 @@ alias rmrf="rm -rf"
 alias yi="yum -y install"
 alias yu="yum -y update"
 alias yug="yum -y upgrade"
+
+#cd dotfiles
+alias cddot"cd cd ~/.dotfiles/"
