@@ -171,3 +171,6 @@ alias bu="brew update && brew upgrade"
 
 #sudo make local
 alias sml="sudo make local"
+
+alias la="ls -lah"
+alias rmrf="rm -rf"

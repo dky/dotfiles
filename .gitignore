@@ -1,3 +1,6 @@
 *.dot_private
 *.swp
 *.swo
+*.swl
+*.swm
+*.swn
