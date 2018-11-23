@@ -35,6 +35,7 @@ if v:version >= 800
 Bundle 'Shougo/neocomplete.vim'
 Bundle 'w0rp/ale'
 Bundle 'fatih/vim-go'
+Bundle 'metakirby5/codi.vim'
 endif
 "Bundle 'scrooloose/syntastic'
 
