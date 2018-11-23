@@ -181,4 +181,4 @@ alias yu="yum -y update"
 alias yug="yum -y upgrade"
 
 #cd dotfiles
-alias cddot"cd cd ~/.dotfiles/"
+alias cddot="cd cd ~/.dotfiles/"
