@@ -174,3 +174,8 @@ alias sml="sudo make local"
 
 alias la="ls -lah"
 alias rmrf="rm -rf"
+
+#yum
+alias yi="yum -y install"
+alias yu="yum -y update"
+alias yug="yum -y upgrade"
