@@ -8,6 +8,8 @@ set hidden"			"no prompt for unsaved buffers
 filetype off		"required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+
+Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
@@ -17,10 +19,10 @@ Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
 Bundle 'Shougo/neosnippet-snippets'
 Bundle 'Shougo/neosnippet.vim'
-Bundle 'gmarik/vundle'
 Bundle 'rodjek/vim-puppet'
 Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
+"Bundle 'scrooloose/syntastic'
 Bundle 'Xuyuanp/nerdtree-git-plugin'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'godlygeek/tabular'
@@ -31,13 +33,13 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'pangloss/vim-javascript'
 Bundle 'vim-python/python-syntax'
 Bundle 'jamesroutley/vim-logbook'
+Bundle 'metakirby5/codi.vim'
+
 if v:version >= 800
+Bundle 'fatih/vim-go'
 Bundle 'Shougo/neocomplete.vim'
 Bundle 'w0rp/ale'
-Bundle 'fatih/vim-go'
-Bundle 'metakirby5/codi.vim'
 endif
-"Bundle 'scrooloose/syntastic'
 
 if has("autocmd")
   "autocmd bufwritepost .vimrc source $MYVIMRC
@@ -119,9 +121,15 @@ nnoremap ,gs :Gstatus<cr>
 nnoremap <silent> ,gpu :execute ":!git push origin master"<CR>
 nnoremap ,gma :!git add . && git cm "
 nnoremap ,gpd :Git pull origin master<cr>
-"vim-go - run gofmt on save
+"vim-go
 let g:go_fmt_autosave = 0
-"enable vim-airline
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+"vim-airline
 let g:airline_theme='badwolf'
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#hunks#enabled=0
@@ -200,13 +208,6 @@ xmap <C-l> <Plug>(neosnippet_expand_target)
 nnoremap <leader>rs :call neosnippet#variables#set_snippets({})<cr>
 "plasticboy vim markdown disable folding
 let g:vim_markdown_folding_disabled = 1
-"vim-go highlighting
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_types = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
 "Spell checking on markdown
 autocmd BufRead,BufNewFile *.md setlocal spell
 au BufReadPost *.gohtml set syntax=html
