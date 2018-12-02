@@ -33,8 +33,11 @@ function dkrmin {
 }
 
 function dkip {
-#docker inspect $1 | grep -i IPAddress | cut -d '"' -f 4
 	docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $1
+}
+
+function dkesh {
+	docker exec -it $1 /bin/sh
 }
 
 function sshnokey {
@@ -112,7 +115,7 @@ function lb() {
 fs() {
 	local -r fmt='#{session_id}:|#S|(#{session_attached} attached)'
 	{ tmux display-message -p -F "$fmt" && tmux list-sessions -F "$fmt"; } \
-		| awk '!seen[$1]++' \
+	| awk '!seen[$1]++' \
 		| column -t -s'|' \
 		| fzf -q '$' --reverse --prompt 'switch session: ' -1 \
 		| cut -d':' -f1 \
