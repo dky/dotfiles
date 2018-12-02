@@ -88,6 +88,9 @@ au FileType go map <leader>r :echo system('go run "' . expand('%') . '"')<CR>
 au FileType python map <leader>r :echo system('python3 "' . expand('%') . '"')<CR>
 au FileType javascript map <leader>r :echo system('node "' . expand('%') . '"')<CR>
 
+"nnoremap <silent> <F8> :!clear;gcc % -o % && ./%<CR>
+map <F8> :w <CR> :!gcc % -o %< && ./%< <CR>
+
 "map <F4> :set number! <bar> :set list! <bar> se rnu!" <bar> se nu! <bar> :GitGutterSignsDisable<CR>
 map <F4> :set number! <bar> :set list! <bar> :GitGutterSignsDisable<CR>
 "comment out code mappings
