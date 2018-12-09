@@ -122,6 +122,7 @@ nmap <F1> <nop>
 "fugitive
 nnoremap ,gs :Gstatus<cr>
 nnoremap <silent> ,gpu :execute ":!git push origin master"<CR>
+map <F9> :execute ":!git push origin master"<CR>
 nnoremap ,gma :!git add . && git cm "
 nnoremap ,gpd :Git pull origin master<cr>
 "vim-go
