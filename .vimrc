@@ -121,6 +121,7 @@ nmap <c-l> 4l
 nmap <F1> <nop>
 "fugitive
 nnoremap ,gs :Gstatus<cr>
+map <F10> :Gstatus<CR>
 nnoremap <silent> ,gpu :execute ":!git push origin master"<CR>
 map <F9> :execute ":!git push origin master"<CR>
 nnoremap ,gma :!git add . && git cm "
