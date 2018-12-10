@@ -11,10 +11,10 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-repeat'
+"Bundle 'tpope/vim-surround'
+"Bundle 'tpope/vim-repeat'
 Bundle 'fatih/molokai'
-Bundle 'fatih/vim-hclfmt'
+"Bundle 'fatih/vim-hclfmt'
 Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
 Bundle 'Shougo/neosnippet-snippets'
@@ -22,16 +22,17 @@ Bundle 'Shougo/neosnippet.vim'
 Bundle 'rodjek/vim-puppet'
 Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
-"Bundle 'scrooloose/syntastic'
 Bundle 'Xuyuanp/nerdtree-git-plugin'
+"Bundle 'scrooloose/syntastic'
+"Bundle 'rstacruz/vim-closer'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'godlygeek/tabular'
 Bundle 'mattn/emmet-vim'
 Bundle 'sheerun/vim-polyglot'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'Raimondi/delimitMate'
-Bundle 'pangloss/vim-javascript'
-Bundle 'vim-python/python-syntax'
+"Bundle 'plasticboy/vim-markdown'
+"Bundle 'Raimondi/delimitMate'
+"Bundle 'pangloss/vim-javascript'
+"Bundle 'vim-python/python-syntax'
 Bundle 'jamesroutley/vim-logbook'
 Bundle 'metakirby5/codi.vim'
 
@@ -83,14 +84,12 @@ map <up> <nop>
 map <down> <nop>
 map <left> <nop>
 map <right> <nop>
-
+"
 au FileType go map <leader>r :echo system('go run "' . expand('%') . '"')<CR>
 au FileType python map <leader>r :echo system('python3 "' . expand('%') . '"')<CR>
 au FileType javascript map <leader>r :echo system('node "' . expand('%') . '"')<CR>
-
 "nnoremap <silent> <F8> :!clear;gcc % -o % && ./%<CR>
 map <F8> :w <CR> :!gcc % -o %< && ./%< <CR>
-
 "map <F4> :set number! <bar> :set list! <bar> se rnu!" <bar> se nu! <bar> :GitGutterSignsDisable<CR>
 map <F4> :set number! <bar> :set list! <bar> :GitGutterSignsDisable<CR>
 "comment out code mappings
