@@ -4,7 +4,7 @@ if [[ ! "$PATH" == *$HOME/.fzf/bin* ]]; then
 	export PATH="$PATH:$HOME/.fzf/bin"
 fi
 
-if [[ ! -f "$HOME/.fzf" ]]; then
+if [[ ! -L "$HOME/.fzf" ]]; then
 	ln -s ~/.dotfiles/.fzf $HOME/.fzf
 fi
 
