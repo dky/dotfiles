@@ -11,11 +11,12 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
-Bundle 'jiangmiao/auto-pairs'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
+Bundle 'jiangmiao/auto-pairs'
 Bundle 'fatih/molokai'
 Bundle 'morhetz/gruvbox'
+Bundle 'junegunn/seoul256.vim'
 Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
 Bundle 'Shougo/neosnippet-snippets'
@@ -155,7 +156,7 @@ let g:airline_symbols.whitespace = 'Ξ'
 "set statusline at the bottom
 set laststatus=2
 "molokai colorscheme
-silent! colorscheme gruvbox
+silent! colorscheme seoul256
 "use the same symbols as TextMate for tabstops and EOLs
 scriptencoding utf-8
 set encoding=utf-8
@@ -253,3 +254,5 @@ set updatetime=200
 au CursorHold * silent! update
 
 let g:python_highlight_all = 1
+
+inoremap <F1> <nop>
