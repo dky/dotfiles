@@ -15,6 +15,7 @@ Bundle 'jiangmiao/auto-pairs'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'fatih/molokai'
+Bundle 'morhetz/gruvbox'
 Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
 Bundle 'Shougo/neosnippet-snippets'
@@ -154,7 +155,7 @@ let g:airline_symbols.whitespace = 'Ξ'
 "set statusline at the bottom
 set laststatus=2
 "molokai colorscheme
-silent! colorscheme molokai
+silent! colorscheme gruvbox
 "use the same symbols as TextMate for tabstops and EOLs
 scriptencoding utf-8
 set encoding=utf-8
