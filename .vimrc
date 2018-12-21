@@ -75,6 +75,9 @@ set backspace=indent,eol,start
 set visualbell           "don't beep
 set noerrorbells         "don't beep
 
+"Map f1 to nothing because I keep hitting it randomly.
+nmap <F1> <nop>
+inoremap <F1> <nop>
 "renamp esc to jk
 imap jk <Esc>
 nmap <F7> <leader>cc
@@ -83,16 +86,14 @@ nmap <up> <nop>
 nmap <down> <nop>
 nmap <left> <nop>
 nmap <right> <nop>
-"
-au FileType go map <leader>r :echo system('go run "' . expand('%') . '"')<CR>
-au FileType python map <leader>r :echo system('python3 "' . expand('%') . '"')<CR>
-au FileType javascript map <leader>r :echo system('node "' . expand('%') . '"')<CR>
 
-nmap <F8> :w <CR> :!gcc % -o %< && ./%< <CR>
+au FileType go nmap <F8> :echo system('go run "' . expand('%') . '"')<CR>
+au FileType python nmap <F8> :echo system('python3 "' . expand('%') . '"')<CR>
+au FileType javascript nmap <F8> :echo system('node "' . expand('%') . '"')<CR>
+au FileType sh nmap <F8> :echo system('bash "' . expand('%') . '"')<CR>
+au FileType c nmap <F8> :w <CR> :!gcc % -o %< && ./%< <CR>
+
 nmap <F4> :set number! <bar> :set list! <bar> :GitGutterSignsDisable<CR>
-"comment blocks of code
-nmap ,# :s/^/\/*/<CR> <Esc>:nohlsearch <CR>
-nmap ,* :s/^\(.*\)$/\/\* \1 \*\//<CR>:nohlsearch<CR>
 "nerdtree
 nmap ,nt :NERDTreeToggle<CR>
 "tabs
@@ -115,9 +116,6 @@ nmap <c-j> 4j
 nmap <c-k> 4k
 nmap <c-h> 4h
 nmap <c-l> 4l
-"Map f1 to nothing because I keep hitting it randomly.
-nmap <F1> <nop>
-inoremap <F1> <nop>
 "fugitive
 nnoremap ,gs :Gstatus<cr>
 nmap <F10> :Gstatus<CR>
