@@ -79,6 +79,7 @@ inoremap <F1> <nop>
 imap jk <Esc>
 "comment out blocks of code using nerdcommenter shortcut
 nmap <F7> <leader>cc
+vmap <F7> <leader>cc
 "no arrow keys
 nmap <up> <nop>
 nmap <down> <nop>
