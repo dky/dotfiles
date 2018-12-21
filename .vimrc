@@ -93,6 +93,8 @@ au FileType python nmap <F8> :echo system('python3 "' . expand('%') . '"')<CR>
 au FileType javascript nmap <F8> :echo system('node "' . expand('%') . '"')<CR>
 au FileType sh nmap <F8> :echo system('bash "' . expand('%') . '"')<CR>
 au FileType c nmap <F8> :w <CR> :!gcc % -o %< && ./%< <CR>
+au FileType c imap <F8> <Esc> :w <CR> :!gcc % -o %< && ./%< <CR>
+
 
 nmap <F4> :set number! <bar> :set list! <bar> :GitGutterSignsDisable<CR>
 "nerdtree
