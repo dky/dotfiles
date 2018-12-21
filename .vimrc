@@ -13,12 +13,12 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
-Bundle 'jiangmiao/auto-pairs'
+"Bundle 'jiangmiao/auto-pairs'
 Bundle 'fatih/molokai'
 Bundle 'morhetz/gruvbox'
-Bundle 'junegunn/seoul256.vim'
+"Bundle 'junegunn/seoul256.vim'
 Bundle 'joshdick/onedark.vim'
-Bundle 'romainl/Apprentice'
+"Bundle 'romainl/Apprentice'
 Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
 Bundle 'Shougo/neosnippet-snippets'
@@ -262,5 +262,3 @@ autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
 autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
 " Toggle auto formatting:
 nmap <Leader>C :ClangFormatAutoToggle<CR>
-
-autocmd FileType c ClangFormatAutoEnable
