@@ -107,7 +107,7 @@ ssh() {
 }
 
 up() {
-	curl -F "uploadfile=@$1" $2
+	curl $1 -F "uploadfile=@$2"
 }
 
 function lb() {
