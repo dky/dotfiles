@@ -33,6 +33,7 @@ Bundle 'mattn/emmet-vim'
 Bundle 'sheerun/vim-polyglot'
 Bundle 'jamesroutley/vim-logbook'
 Bundle 'metakirby5/codi.vim'
+Bundle 'rhysd/vim-clang-format'
 
 if v:version >= 800
 Bundle 'fatih/vim-go'
@@ -94,7 +95,6 @@ au FileType javascript nmap <F8> :echo system('node "' . expand('%') . '"')<CR>
 au FileType sh nmap <F8> :echo system('bash "' . expand('%') . '"')<CR>
 au FileType c nmap <F8> :w <CR> :!gcc % -o %< && ./%< <CR>
 au FileType c imap <F8> <Esc> :w <CR> :!gcc % -o %< && ./%< <CR>
-
 
 nmap <F4> :set number! <bar> :set list! <bar> :GitGutterSignsDisable<CR>
 "nerdtree
@@ -249,3 +249,16 @@ let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
 "save automatically when text is changed
 set updatetime=200
 au CursorHold * silent! update
+
+"Clangformat C code
+let g:clang_format#style_options = {
+			\ "AccessModifierOffset" : -4,
+			\ "AllowShortIfStatementsOnASingleLine" : "true",
+			\ "AlwaysBreakTemplateDeclarations" : "true",
+			\ "Standard" : "C++11"}
+
+" map to <Leader>cf in C++ code
+autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
+autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
+" Toggle auto formatting:
+nmap <Leader>C :ClangFormatAutoToggle<CR>
