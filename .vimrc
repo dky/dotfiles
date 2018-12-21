@@ -76,10 +76,10 @@ set visualbell           "don't beep
 set noerrorbells         "don't beep
 
 "Map f1 to nothing because I keep hitting it randomly.
-nmap <F1> <nop>
 inoremap <F1> <nop>
 "renamp esc to jk
 imap jk <Esc>
+"comment out blocks of code using nerdcommenter shortcut
 nmap <F7> <leader>cc
 "no arrow keys
 nmap <up> <nop>
@@ -95,7 +95,8 @@ au FileType c nmap <F8> :w <CR> :!gcc % -o %< && ./%< <CR>
 
 nmap <F4> :set number! <bar> :set list! <bar> :GitGutterSignsDisable<CR>
 "nerdtree
-nmap ,nt :NERDTreeToggle<CR>
+"nmap ,nt :NERDTreeToggle<CR>
+nmap <F1> :NERDTreeToggle<CR>
 "tabs
 nmap ,t <Esc>:tabn<CR>
 nmap ,tp <Esc>:tabp<CR>
