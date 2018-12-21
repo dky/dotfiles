@@ -106,6 +106,10 @@ ssh() {
 			fi
 }
 
+up() {
+	curl -F "uploadfile=@$1" $2
+}
+
 function lb() {
 	vim ~/logbook/$(date '+%Y-%m-%d').md
 }
