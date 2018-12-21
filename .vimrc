@@ -96,6 +96,8 @@ nmap <F4> :set number! <bar> :set list! <bar> :GitGutterSignsDisable<CR>
 "nerdtree
 "nmap ,nt :NERDTreeToggle<CR>
 nmap <F1> :NERDTreeToggle<CR>
+"Indent code
+nmap <F3> gg=G'.
 "tabs
 nmap ,t <Esc>:tabn<CR>
 nmap ,tp <Esc>:tabp<CR>
@@ -258,6 +260,5 @@ autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
 autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
 " Toggle auto formatting:
 nmap <Leader>C :ClangFormatAutoToggle<CR>
-
 " Auto-insert closing parenthesis/brace
 inoremap ( ()<Left>
