@@ -74,26 +74,27 @@ set pastetoggle=<F2>
 set backspace=indent,eol,start
 set visualbell           "don't beep
 set noerrorbells         "don't beep
+
 "renamp esc to jk
 imap jk <Esc>
+nmap <F7> <leader>cc
 "no arrow keys
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
+nmap <up> <nop>
+nmap <down> <nop>
+nmap <left> <nop>
+nmap <right> <nop>
 "
 au FileType go map <leader>r :echo system('go run "' . expand('%') . '"')<CR>
 au FileType python map <leader>r :echo system('python3 "' . expand('%') . '"')<CR>
 au FileType javascript map <leader>r :echo system('node "' . expand('%') . '"')<CR>
-"nnoremap <silent> <F8> :!clear;gcc % -o % && ./%<CR>
-map <F8> :w <CR> :!gcc % -o %< && ./%< <CR>
-"map <F4> :set number! <bar> :set list! <bar> se rnu!" <bar> se nu! <bar> :GitGutterSignsDisable<CR>
-map <F4> :set number! <bar> :set list! <bar> :GitGutterSignsDisable<CR>
-"comment out code mappings
-map ,# :s/^/\/*/<CR> <Esc>:nohlsearch <CR>
-map ,* :s/^\(.*\)$/\/\* \1 \*\//<CR>:nohlsearch<CR>
+
+nmap <F8> :w <CR> :!gcc % -o %< && ./%< <CR>
+nmap <F4> :set number! <bar> :set list! <bar> :GitGutterSignsDisable<CR>
+"comment blocks of code
+nmap ,# :s/^/\/*/<CR> <Esc>:nohlsearch <CR>
+nmap ,* :s/^\(.*\)$/\/\* \1 \*\//<CR>:nohlsearch<CR>
 "nerdtree
-map ,nt :NERDTreeToggle<CR>
+nmap ,nt :NERDTreeToggle<CR>
 "tabs
 nmap ,t <Esc>:tabn<CR>
 nmap ,tp <Esc>:tabp<CR>
@@ -103,6 +104,7 @@ nmap ,nb :Bookmark
 nmap <leader>l :set list!<CR>
 "edit .vimrc quickly
 nmap ,ev :tabedit $MYVIMRC<cr>
+"reload vim quickly
 nmap ,rv :source $MYVIMRC<CR>
 "map space rather than colon
 nmap <space> :
@@ -115,13 +117,25 @@ nmap <c-h> 4h
 nmap <c-l> 4l
 "Map f1 to nothing because I keep hitting it randomly.
 nmap <F1> <nop>
+inoremap <F1> <nop>
 "fugitive
 nnoremap ,gs :Gstatus<cr>
-map <F10> :Gstatus<CR>
+nmap <F10> :Gstatus<CR>
 nnoremap <silent> ,gpu :execute ":!git push origin master"<CR>
-map <F9> :execute ":!git push origin master"<CR>
+nmap <F9> :execute ":!git push origin master"<CR>
 nnoremap ,gma :!git add . && git cm "
 nnoremap ,gpd :Git pull origin master<cr>
+
+"https://stackoverflow.com/questions/11037825/vim-get-out-of-parenthesis-brackets-etc
+inoremap <C-e> <C-o>A
+inoremap <C-f> <C-o>l
+inoremap <C-o> <C-o>o
+inoremap <C-k> <C-o>O
+"surround markdown emphasis
+nnoremap ,yse ciw**<C-r>"**<Esc>
+nnoremap ,ysq ciw"<C-r>""<Esc>
+nnoremap ,yst ciw`<C-r>"`<Esc>
+nnoremap ,ysb ciw[<C-r>"]<Esc>
 "vim-go
 let g:go_fmt_autosave = 0
 let g:go_highlight_functions = 1
@@ -142,11 +156,7 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
-"unicode symbols
-"let g:airline_left_sep = '»'
-"let g:airline_left_sep = '▶'
-"let g:airline_right_sep = '«'
-"let g:airline_right_sep = '◀'
+
 let g:airline_symbols.linenr = '␊'
 let g:airline_symbols.linenr = '␤'
 let g:airline_symbols.linenr = '¶'
@@ -164,12 +174,7 @@ scriptencoding utf-8
 set encoding=utf-8
 set listchars=eol:¬,tab:▸-,trail:~,extends:>,precedes:<
 set list
-"ctrlp
-"let g:ctrlp_map = '<c-p>'
-"let g:ctrlp_cmd = 'CtrlPLastMode [--dir]'
-"nmap <Leader>b :CtrlPBuffer<CR>
-"let g:ctrlp_cmd = 'CtrlPMRU'
-"let g:ctrlp_cmd = 'CtrlPMixed'
+
 if has("lua") && v:version >= 800
 "neocomplete
 "disable AutoComplPop.
@@ -221,21 +226,9 @@ au BufNewFile,BufRead *.py
     \ set expandtab | 
     \ set autoindent | 
     \ set fileformat=unix
-"https://stackoverflow.com/questions/11037825/vim-get-out-of-parenthesis-brackets-etc
-inoremap <C-e> <C-o>A
-inoremap <C-f> <C-o>l
-inoremap <C-o> <C-o>o
-inoremap <C-k> <C-o>O
-"surround markdown emphasis
-nnoremap ,yse ciw**<C-r>"**<Esc>
-nnoremap ,ysq ciw"<C-r>""<Esc>
-nnoremap ,yst ciw`<C-r>"`<Esc>
-nnoremap ,ysb ciw[<C-r>"]<Esc>
-"http://vim.wikia.com/wiki/Insert_newline_without_entering_insert_mode
-"open line below
-"Shift Enter O
-"nmap <S-Enter> O<Esc>
-"nmap <CR> o<Esc>
+
+"Python syntax highlighting
+let g:python_highlight_all = 1
 "Hashicorp fmt
 let g:hcl_fmt_autosave = 0
 let g:tf_fmt_autosave = 0
@@ -254,7 +247,3 @@ let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
 "save automatically when text is changed
 set updatetime=200
 au CursorHold * silent! update
-
-let g:python_highlight_all = 1
-
-inoremap <F1> <nop>
