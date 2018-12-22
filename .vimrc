@@ -263,3 +263,4 @@ autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
 nmap <Leader>C :ClangFormatAutoToggle<CR>
 " Auto-insert closing parenthesis/brace
 inoremap ( ()<Left>
+inoremap [ []<Left>
