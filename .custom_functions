@@ -106,8 +106,14 @@ ssh() {
 			fi
 }
 
+#up http://url.example.com:8000 code2.c
 up() {
 	curl $1 -F "uploadfile=@$2"
+}
+
+#dl http://url.example.com:8000 code2.c
+dl() {
+	curl $1/$2 -o $2
 }
 
 function lb() {
