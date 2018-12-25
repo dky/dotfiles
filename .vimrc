@@ -264,3 +264,5 @@ nmap <Leader>C :ClangFormatAutoToggle<CR>
 " Auto-insert closing parenthesis/brace
 inoremap ( ()<Left>
 inoremap [ []<Left>
+inoremap " ""<Left>
+inoremap ' ''<Left>
