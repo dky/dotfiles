@@ -121,10 +121,11 @@ nmap <c-h> 4h
 nmap <c-l> 4l
 "fugitive
 nnoremap ,gs :Gstatus<cr>
-nmap <F10> :Gstatus<CR>
+nnoremap <F11> :Gstatus<CR>
 nnoremap <silent> ,gpu :execute ":!git push origin master"<CR>
-nmap <F9> :execute ":!git push origin master"<CR>
+nnoremap <F9> :execute ":!git push origin master"<CR>
 nnoremap ,gma :!git add . && git cm "
+nnoremap <F10> :!git add . && git cm "
 nnoremap ,gpd :Git pull origin master<cr>
 
 "https://stackoverflow.com/questions/11037825/vim-get-out-of-parenthesis-brackets-etc
