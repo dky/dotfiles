@@ -78,8 +78,10 @@ inoremap <F1> <nop>
 "renamp esc to jk
 imap jk <Esc>
 "comment out blocks of code using nerdcommenter shortcut
-nmap <F7> <leader>cc
-vmap <F7> <leader>cc
+"nmap <F7> <leader>cc
+"vmap <F7> <leader>cc
+nmap <F7> <leader>c<space>
+vmap <F7> <leader>c<space>
 "no arrow keys
 nmap <up> <nop>
 nmap <down> <nop>
