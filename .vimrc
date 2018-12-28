@@ -30,6 +30,7 @@ Bundle 'sheerun/vim-polyglot'
 Bundle 'jamesroutley/vim-logbook'
 Bundle 'metakirby5/codi.vim'
 Bundle 'rhysd/vim-clang-format'
+Bundle 'junegunn/goyo.vim'
 
 if v:version >= 800
 Bundle 'fatih/vim-go'
