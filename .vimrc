@@ -8,36 +8,36 @@ set hidden"			"no prompt for unsaved buffers
 filetype off		"required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
-Bundle 'rodjek/vim-puppet'
+Bundle 'rstacruz/vim-closer'
 Bundle 'fatih/molokai'
-Bundle 'scrooloose/nerdtree'
-Bundle 'Xuyuanp/nerdtree-git-plugin'
 Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
 Bundle 'Shougo/neosnippet-snippets'
 Bundle 'Shougo/neosnippet.vim'
+Bundle 'ctrlpvim/ctrlp.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'Xuyuanp/nerdtree-git-plugin'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'godlygeek/tabular'
-Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'sheerun/vim-polyglot'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'Raimondi/delimitMate'
-Bundle 'fatih/vim-hclfmt'
-Bundle 'pangloss/vim-javascript'
-Bundle 'vim-python/python-syntax'
 Bundle 'jamesroutley/vim-logbook'
+Bundle 'metakirby5/codi.vim'
+Bundle 'rhysd/vim-clang-format'
+Bundle 'junegunn/goyo.vim'
+Bundle 'iberianpig/tig-explorer.vim'
+
 if v:version >= 800
+Bundle 'fatih/vim-go'
 Bundle 'Shougo/neocomplete.vim'
 Bundle 'w0rp/ale'
-Bundle 'fatih/vim-go'
-Bundle 'metakirby5/codi.vim'
 endif
-"Bundle 'scrooloose/syntastic'
 
 if has("autocmd")
   "autocmd bufwritepost .vimrc source $MYVIMRC
@@ -74,25 +74,35 @@ set pastetoggle=<F2>
 set backspace=indent,eol,start
 set visualbell           "don't beep
 set noerrorbells         "don't beep
+
+"Map f1 to nothing because I keep hitting it randomly.
+inoremap <F1> <nop>
 "renamp esc to jk
 imap jk <Esc>
+"comment out blocks of code using nerdcommenter shortcut
+"nmap <F7> <leader>cc
+"vmap <F7> <leader>cc
+nmap <F7> <leader>c<space>
+vmap <F7> <leader>c<space>
 "no arrow keys
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
+nmap <up> <nop>
+nmap <down> <nop>
+nmap <left> <nop>
+nmap <right> <nop>
 
-au FileType go map <leader>r :echo system('go run "' . expand('%') . '"')<CR>
-au FileType python map <leader>r :echo system('python3 "' . expand('%') . '"')<CR>
-au FileType javascript map <leader>r :echo system('node "' . expand('%') . '"')<CR>
+au FileType go nmap <F8> :echo system('go run "' . expand('%') . '"')<CR>
+au FileType python nmap <F8> :echo system('python3 "' . expand('%') . '"')<CR>
+au FileType javascript nmap <F8> :echo system('node "' . expand('%') . '"')<CR>
+au FileType sh nmap <F8> :echo system('bash "' . expand('%') . '"')<CR>
+au FileType c nmap <F8> :w <CR> :!gcc % -o %< && ./%< <CR>
+au FileType c imap <F8> <Esc> :w <CR> :!gcc % -o %< && ./%< <CR>
 
-"map <F4> :set number! <bar> :set list! <bar> se rnu!" <bar> se nu! <bar> :GitGutterSignsDisable<CR>
-map <F4> :set number! <bar> :set list! <bar> :GitGutterSignsDisable<CR>
-"comment out code mappings
-map ,# :s/^/\/*/<CR> <Esc>:nohlsearch <CR>
-map ,* :s/^\(.*\)$/\/\* \1 \*\//<CR>:nohlsearch<CR>
+nmap <F4> :set number! <bar> :set list! <bar> :GitGutterSignsDisable<CR>
 "nerdtree
-map ,nt :NERDTreeToggle<CR>
+"nmap ,nt :NERDTreeToggle<CR>
+nmap <F1> :NERDTreeToggle<CR>
+"Indent code
+nmap <F3> gg=G'.
 "tabs
 nmap ,t <Esc>:tabn<CR>
 nmap ,tp <Esc>:tabp<CR>
@@ -102,6 +112,7 @@ nmap ,nb :Bookmark
 nmap <leader>l :set list!<CR>
 "edit .vimrc quickly
 nmap ,ev :tabedit $MYVIMRC<cr>
+"reload vim quickly
 nmap ,rv :source $MYVIMRC<CR>
 "map space rather than colon
 nmap <space> :
@@ -112,16 +123,34 @@ nmap <c-j> 4j
 nmap <c-k> 4k
 nmap <c-h> 4h
 nmap <c-l> 4l
-"Map f1 to nothing because I keep hitting it randomly.
-nmap <F1> <nop>
 "fugitive
 nnoremap ,gs :Gstatus<cr>
+nnoremap <F11> :Gstatus<CR>
 nnoremap <silent> ,gpu :execute ":!git push origin master"<CR>
+nnoremap <F9> :execute ":!git push origin master"<CR>
 nnoremap ,gma :!git add . && git cm "
+nnoremap <F10> :!git add . && git cm "
 nnoremap ,gpd :Git pull origin master<cr>
-"vim-go - run gofmt on save
+
+"https://stackoverflow.com/questions/11037825/vim-get-out-of-parenthesis-brackets-etc
+inoremap <C-e> <C-o>A
+inoremap <C-f> <C-o>l
+inoremap <C-o> <C-o>o
+inoremap <C-k> <C-o>O
+"surround markdown emphasis
+nnoremap ,yse ciw**<C-r>"**<Esc>
+nnoremap ,ysq ciw"<C-r>""<Esc>
+nnoremap ,yst ciw`<C-r>"`<Esc>
+nnoremap ,ysb ciw[<C-r>"]<Esc>
+"vim-go :GoInstallBinaries on first open of .go file if you encounter errrors.
 let g:go_fmt_autosave = 0
-"enable vim-airline
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+"vim-airline
 let g:airline_theme='badwolf'
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#hunks#enabled=0
@@ -133,11 +162,7 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
-"unicode symbols
-"let g:airline_left_sep = '»'
-"let g:airline_left_sep = '▶'
-"let g:airline_right_sep = '«'
-"let g:airline_right_sep = '◀'
+
 let g:airline_symbols.linenr = '␊'
 let g:airline_symbols.linenr = '␤'
 let g:airline_symbols.linenr = '¶'
@@ -155,12 +180,7 @@ scriptencoding utf-8
 set encoding=utf-8
 set listchars=eol:¬,tab:▸-,trail:~,extends:>,precedes:<
 set list
-"ctrlp
-"let g:ctrlp_map = '<c-p>'
-"let g:ctrlp_cmd = 'CtrlPLastMode [--dir]'
-"nmap <Leader>b :CtrlPBuffer<CR>
-"let g:ctrlp_cmd = 'CtrlPMRU'
-"let g:ctrlp_cmd = 'CtrlPMixed'
+
 if has("lua") && v:version >= 800
 "neocomplete
 "disable AutoComplPop.
@@ -190,7 +210,7 @@ endif
 "nerdtree
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
-let NERDTreeShowHidden=1
+let NERDTreeShowHidden = 0
 "neosnippets
 let g:neosnippet#snippets_directory='~/.dotfiles/.snippets'
 let g:neosnippet#enable_snipmate_compatibility = 1
@@ -200,13 +220,6 @@ xmap <C-l> <Plug>(neosnippet_expand_target)
 nnoremap <leader>rs :call neosnippet#variables#set_snippets({})<cr>
 "plasticboy vim markdown disable folding
 let g:vim_markdown_folding_disabled = 1
-"vim-go highlighting
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_types = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
 "Spell checking on markdown
 autocmd BufRead,BufNewFile *.md setlocal spell
 au BufReadPost *.gohtml set syntax=html
@@ -219,38 +232,37 @@ au BufNewFile,BufRead *.py
     \ set expandtab | 
     \ set autoindent | 
     \ set fileformat=unix
-"https://stackoverflow.com/questions/11037825/vim-get-out-of-parenthesis-brackets-etc
-inoremap <C-e> <C-o>A
-inoremap <C-f> <C-o>l
-inoremap <C-o> <C-o>o
-inoremap <C-k> <C-o>O
-"surround markdown emphasis
-nnoremap ,yse ciw**<C-r>"**<Esc>
-nnoremap ,ysq ciw"<C-r>""<Esc>
-nnoremap ,yst ciw`<C-r>"`<Esc>
-nnoremap ,ysb ciw[<C-r>"]<Esc>
-"http://vim.wikia.com/wiki/Insert_newline_without_entering_insert_mode
-"open line below
-"Shift Enter O
-"nmap <S-Enter> O<Esc>
-"nmap <CR> o<Esc>
+
+"Python syntax highlighting
+let g:python_highlight_all = 1
 "Hashicorp fmt
 let g:hcl_fmt_autosave = 0
 let g:tf_fmt_autosave = 0
 let g:nomad_fmt_autosave = 0
 "ale
 "set Prettier up to run on save
-let g:ale_linters = {'javascript': ['eslint'],}
-let g:ale_fixers = {}
-let g:ale_fixers['javascript'] = ['prettier', 'eslint']
-let g:ale_fix_on_save = 1
-let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --no-semi'
-let g:airline#extensions#ale#enabled = 1
-let g:ale_sign_error = '●' " Less aggressive than the default '>>'
-let g:ale_sign_warning = '.'
-let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
+"let g:ale_linters = {'javascript': ['eslint'],}
+"let g:ale_fixers = {}
+"let g:ale_fixers['javascript'] = ['prettier', 'eslint']
+"let g:ale_fix_on_save = 1
+"let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --no-semi'
+"let g:airline#extensions#ale#enabled = 1
+"let g:ale_sign_error = '●' " Less aggressive than the default '>>'
+"let g:ale_sign_warning = '.'
+"let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
 "save automatically when text is changed
 set updatetime=200
 au CursorHold * silent! update
 
-let g:python_highlight_all = 1
+"Clangformat C code
+let g:clang_format#style_options = {
+			\ "AccessModifierOffset" : -4,
+			\ "AllowShortIfStatementsOnASingleLine" : "true",
+			\ "AlwaysBreakTemplateDeclarations" : "true",
+			\ "Standard" : "C++11"}
+
+" map to <Leader>cf in C++ code
+autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
+autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
+" Toggle auto formatting:
+nmap <Leader>C :ClangFormatAutoToggle<CR>
