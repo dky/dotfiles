@@ -132,6 +132,10 @@ fs() {
 		| xargs tmux switch-client -t
 }
 
+rl() {
+	docker run --rm -v /var/run/docker.sock:/var/run/docker.sock assaflavie/runlike $1
+}
+
 gignore() {
 tee .gitignore <<EOF
 main
