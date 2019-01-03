@@ -137,6 +137,8 @@ inoremap <C-e> <C-o>A
 inoremap <C-f> <C-o>l
 inoremap <C-o> <C-o>o
 inoremap <C-k> <C-o>O
+inoremap <C-y> <C-o><S-}>
+
 "surround markdown emphasis
 nnoremap ,yse ciw**<C-r>"**<Esc>
 nnoremap ,ysq ciw"<C-r>""<Esc>

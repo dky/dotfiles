@@ -4,10 +4,6 @@ if [[ ! "$PATH" == *$HOME/.fzf/bin* ]]; then
 	export PATH="$PATH:$HOME/.fzf/bin"
 fi
 
-if [[ ! -L "$HOME/.fzf" ]]; then
-	ln -s ~/.dotfiles/.fzf $HOME/.fzf
-fi
-
 # Auto-completion
 # ---------------
 [[ $- == *i* ]] && source "$HOME/.fzf/shell/completion.bash" 2> /dev/null
