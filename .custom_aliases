@@ -169,6 +169,9 @@ alias gpl="gcloud projects list"
 alias gcsp="gcloud config set project"
 alias gcrl="gcloud compute regions list"
 
+#docker
+alias dcoker=docker
+
 #homebrew
 alias bu="brew update && brew upgrade"
 
