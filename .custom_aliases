@@ -56,6 +56,7 @@ alias dksps="docker service ps"
 alias dksl="docker service logs -f"
 alias dksrm="docker service rm"
 alias dknls="docker node ls" 
+alias dcoker=docker
 
 #screen aliases
 alias sls="screen -ls"
@@ -168,9 +169,6 @@ alias gcl="gcloud config list"
 alias gpl="gcloud projects list"
 alias gcsp="gcloud config set project"
 alias gcrl="gcloud compute regions list"
-
-#docker
-alias dcoker=docker
 
 #homebrew
 alias bu="brew update && brew upgrade"
