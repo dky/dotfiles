@@ -91,6 +91,7 @@ nmap <left> <nop>
 nmap <right> <nop>
 
 au FileType go nmap <F8> :echo system('go run "' . expand('%') . '"')<CR>
+au FileType go imap <F8> <Esc> :w <CR> :echo system('go run "' . expand('%') . '"')<CR>
 au FileType python nmap <F8> :echo system('python3 "' . expand('%') . '"')<CR>
 au FileType javascript nmap <F8> :echo system('node "' . expand('%') . '"')<CR>
 au FileType sh nmap <F8> :echo system('bash "' . expand('%') . '"')<CR>
@@ -270,3 +271,5 @@ autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
 autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
 " Toggle auto formatting:
 nmap <Leader>C :ClangFormatAutoToggle<CR>
+
+set omnifunc=syntaxcomplete#Complete
