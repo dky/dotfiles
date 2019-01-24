@@ -1,4 +1,9 @@
 ## Find my full .zshrc at <github.com/mislav/dotfiles/blob/master/zshrc>.
+#
+bindkey -v
+bindkey '^R' history-incremental-search-backward
+
+source .custom_aliases
 
 # setup
 
