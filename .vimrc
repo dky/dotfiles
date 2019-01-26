@@ -53,7 +53,10 @@ if &t_Co > 2 || has("gui_running")
   "Enable syntax highlighting
   syntax on
 endif
-"line numering
+
+"Set a better visual color for dark backgrounds when selecting.
+hi Visual cterm=bold ctermbg=Blue ctermfg=NONE
+"line numbering
 "set relativenumber
 set number
 " Tab use 3 spaces
