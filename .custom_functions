@@ -144,3 +144,6 @@ main
 EOF
 }
 
+crtverify() {
+	openssl x509 -in $1 -text | less
+}
