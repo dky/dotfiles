@@ -32,6 +32,7 @@ Bundle 'metakirby5/codi.vim'
 Bundle 'rhysd/vim-clang-format'
 Bundle 'junegunn/goyo.vim'
 Bundle 'iberianpig/tig-explorer.vim'
+Bundle '907th/vim-auto-save'
 
 if v:version >= 800
 Bundle 'fatih/vim-go'
@@ -276,3 +277,14 @@ autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
 nmap <Leader>C :ClangFormatAutoToggle<CR>
 
 set omnifunc=syntaxcomplete#Complete
+
+"Turn off swp files because they are so annoying, rely on autosave instead.
+set noswapfile
+"enable autosave plugin
+let g:auto_save = 1
+let g:auto_save_in_insert_mode = 0
+let g:auto_save_silent = 1
+
+
+
+
