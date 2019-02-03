@@ -278,4 +278,8 @@ nmap <Leader>C :ClangFormatAutoToggle<CR>
 set omnifunc=syntaxcomplete#Complete
 
 "Turn off swp files because they are so annoying, rely on autosave instead.
-set noswapfile
+"set noswapfile
+"autocmd TextChanged,TextChangedI <buffer> silent write
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+set undodir=~/.vim/undo//"
