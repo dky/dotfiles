@@ -105,6 +105,8 @@ nmap <F4> :set number! <bar> :set list! <bar> :GitGutterSignsDisable<CR>
 "nerdtree
 "nmap ,nt :NERDTreeToggle<CR>
 nmap <F1> :NERDTreeToggle<CR>
+set wildignore+=*.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.*,go.mod,go.sum
+let NERDTreeRespectWildIgnore=1
 "Indent code
 nmap <F3> gg=G'.
 "tabs
