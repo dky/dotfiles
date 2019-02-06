@@ -192,3 +192,6 @@ alias powershell="/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
 
 #open windows explorer from wsl
 alias exp="explorer.exe ."
+
+#python 3 please
+alias python=python3
