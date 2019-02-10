@@ -285,7 +285,7 @@ set omnifunc=syntaxcomplete#Complete
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 set undodir=~/.vim/undo//"
-
+set viminfo+=n~/.vim/viminfo
 
 inoremap " ""<left>
 inoremap ' ''<left>
