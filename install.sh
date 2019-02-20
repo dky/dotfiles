@@ -30,3 +30,12 @@ if [ -d "$DOTVIM_DIR" ]; then
 else
 	git clone $DOTVIM_GIT $DOTVIM_DIR
 fi
+
+VIM_BACKUP_DIR=~/.vim/backup
+if [ -d "$VIM_BACKUP_DIR" ]; then
+	echo "/.vim/backup already present"
+else
+	mkdir ~/.vim/backup ~/.vim/swap ~/.vim/undo
+fi
+
+
