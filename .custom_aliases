@@ -45,6 +45,7 @@ alias dkvls='docker volume ls'
 alias dkvrm='docker volume rm'
 #logs/top
 alias dklog='docker logs $1'
+alias dlf='docker logs -f'
 alias dktop='docker top $1'
 #docker compose
 alias dcu="docker-compose up"
