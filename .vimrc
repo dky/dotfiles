@@ -290,3 +290,8 @@ set viminfo+=n~/.vim/viminfo
 
 "auto save leave insert mode
 autocmd InsertLeave * write
+
+"Shorter aliases for vim-go plugin
+cabbrev gi GoImport
+cabbrev gf GoFmt
+cabbrev gd GoDoc
