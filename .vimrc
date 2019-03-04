@@ -57,7 +57,7 @@ if &t_Co > 2 || has("gui_running")
 endif
 
 "Set a better visual color for dark backgrounds when selecting.
-hi Visual cterm=bold ctermbg=Blue ctermfg=NONE
+"hi Visual cterm=bold ctermbg=Blue ctermfg=NONE
 "line numbering
 "set relativenumber
 set number
@@ -251,6 +251,9 @@ let g:hcl_fmt_autosave = 0
 let g:tf_fmt_autosave = 0
 let g:nomad_fmt_autosave = 0
 "ale
+let g:ale_linters = {
+    \   'go': ['gometalinter', 'gofmt'],
+\}
 "set Prettier up to run on save
 "let g:ale_linters = {'javascript': ['eslint'],}
 "let g:ale_fixers = {}
@@ -289,7 +292,7 @@ set undodir=~/.vim/undo//"
 set viminfo+=n~/.vim/viminfo
 
 "auto save leave insert mode
-autocmd InsertLeave * write
+autocmd InsertLeave * update
 
 "Shorter aliases for vim-go plugin
 cabbrev gi GoImport
