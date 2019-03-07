@@ -298,3 +298,6 @@ autocmd InsertLeave * update
 cabbrev gi GoImport
 cabbrev gf GoFmt
 cabbrev gd GoDoc
+
+"Shorter aliases for ctrl-p search buffers
+cabbrev sb CtrlPBuffer
