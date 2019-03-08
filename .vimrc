@@ -301,6 +301,8 @@ cabbrev gd GoDoc
 
 "Shorter aliases for ctrl-p search buffers
 cabbrev sb CtrlPBuffer
-
+,
 "Reload go for now. Until I read about other methods, this will have to do.
 nnoremap <silent> ,gr :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<CR><CR>
+nnoremap <silent> ,grr :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<CR><CR>
+nnoremap <silent> ,gk :execute ":!tmux send-keys -t 3 C-c"<CR><CR>
