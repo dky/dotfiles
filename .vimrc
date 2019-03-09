@@ -162,7 +162,7 @@ let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 "vim-airline
-let g:airline_theme='badwolf'
+let g:airline_theme='papercolor'
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#hunks#enabled=0
 let g:airline#extensions#branch#enabled=1
