@@ -156,18 +156,24 @@ nnoremap ,ysq ciw"<C-r>""<Esc>
 nnoremap ,yst ciw`<C-r>"`<Esc>
 nnoremap ,ysb ciw[<C-r>"]<Esc>
 "vim-go :GoInstallBinaries on first open of .go file if you encounter errrors.
-let g:go_fmt_autosave = 0
+let g:go_fmt_autosave = 1
 let g:go_highlight_functions = 1
+let g:go_highlight_extra_types = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_types = 1
+let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+let g:go_auto_sameids = 1
 let g:go_auto_type_info = 1
+let g:go_fmt_command = "goimports"
 "Shorter aliases for vim-go plugin
+au FileType go nmap <leader>gt :GoDeclsDir<cr>
+au FileType go nmap <F12> <Plug>(go-def)
+"
 cabbrev gi GoImport
 cabbrev gf GoFmt
-cabbrev gd GoDoc
 "vim-airline
 let g:airline_theme='papercolor'
 let g:airline#extensions#tabline#enabled=1
