@@ -324,6 +324,7 @@ nnoremap <silent> ,mpr :execute ":!tmux send-keys -t 2 'make post-registrator' C
 nnoremap <silent> ,cl :execute ":!tmux send-keys -t 2 'clear' C-m"<CR><CR>
 
 " Run the current file with rspec
+let g:VimuxPromptString = ":"
 map <Leader>rb :call VimuxRunCommand("clear; rspec " . bufname("%"))<CR>
 map <Leader>vp :VimuxPromptCommand<CR>
 map <Leader>vl :VimuxRunLastCommand<CR>
