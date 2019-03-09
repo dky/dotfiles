@@ -164,6 +164,10 @@ let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_auto_type_info = 1
+"Shorter aliases for vim-go plugin
+cabbrev gi GoImport
+cabbrev gf GoFmt
+cabbrev gd GoDoc
 "vim-airline
 let g:airline_theme='papercolor'
 let g:airline#extensions#tabline#enabled=1
@@ -301,12 +305,6 @@ set viminfo+=n~/.vim/viminfo
 
 "auto save leave insert mode
 autocmd InsertLeave * update
-
-"Shorter aliases for vim-go plugin
-cabbrev gi GoImport
-cabbrev gf GoFmt
-cabbrev gd GoDoc
-
 "Shorter aliases for ctrl-p search buffers
 cabbrev sb CtrlPBuffer
 
@@ -321,17 +319,12 @@ nnoremap <silent> ,cl :execute ":!tmux send-keys -t 2 'clear' C-m"<CR><CR>
 
 " Run the current file with rspec
 map <Leader>rb :call VimuxRunCommand("clear; rspec " . bufname("%"))<CR>
- " Prompt for a command to run
 map <Leader>vp :VimuxPromptCommand<CR>
- " Run last command executed by VimuxRunCommand
 map <Leader>vl :VimuxRunLastCommand<CR>
- " Inspect runner pane
 map <Leader>vi :VimuxInspectRunner<CR>
- " Close vim tmux runner opened by VimuxRunCommand
 map <Leader>vq :VimuxCloseRunner<CR>
- " Interrupt any command running in the runner pane
 map <Leader>vx :VimuxInterruptRunner<CR>
- " Zoom the runner pane (use <bind-key> z to restore runner pane)
 map <Leader>vz :call VimuxZoomRunner()<CR>
 
+"vim-arpeggio
 call arpeggio#map('n', '', 0, 'vp', ':VimuxPromptCommand<CR>')
