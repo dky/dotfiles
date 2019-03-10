@@ -153,5 +153,4 @@ function pet-select() {
   READLINE_LINE=$BUFFER
   READLINE_POINT=${#BUFFER}
 }
-bind -x '"\C-e": pet-select'
 
