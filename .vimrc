@@ -3,6 +3,15 @@ set nocompatible		"be iMproved
 set hidden"			"no prompt for unsaved buffers
 call plug#begin('~/.vim/plugged')
 
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup = 1
+
 Plug 'gmarik/vundle'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -110,6 +119,7 @@ nmap ,nb :Bookmark
 nmap <leader>l :set list!<CR>
 "edit .vimrc quickly
 nmap ,ev :tabedit $MYVIMRC<cr>
+nmap ,ch :CheckHealth<cr>
 "reload vim quickly
 nmap ,rv :source $MYVIMRC<CR>
 "map space rather than colon
