@@ -40,26 +40,10 @@ endif
 
 call plug#end()
 
-if has("autocmd")
-  "autocmd bufwritepost .vimrc source $MYVIMRC
-  "Enable filetype detection
-  filetype plugin indent on
-  "Restore cursor position
-  autocmd BufReadPost *
-    \ if line("'\"") > 1 && line("'\"") <= line("$") |
-    \   exe "normal! g`\"" |
-    \ endif
-endif
+"Disable backups and swap
+set noswapfile
+set nobackup
 
-if &t_Co > 2 || has("gui_running")
-  "Enable syntax highlighting
-  syntax on
-endif
-
-"Set a better visual color for dark backgrounds when selecting.
-"hi Visual cterm=bold ctermbg=Blue ctermfg=NONE
-"line numbering
-"set relativenumber
 set number
 " Tab use 3 spaces
 set tabstop=3
@@ -302,14 +286,6 @@ autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
 nmap <Leader>C :ClangFormatAutoToggle<CR>
 
 set omnifunc=syntaxcomplete#Complete
-
-"Turn off swp files because they are so annoying, rely on autosave instead.
-"set noswapfile
-"autocmd TextChanged,TextChangedI <buffer> silent write
-set backupdir=~/.vim/backup//
-set directory=~/.vim/swap//
-set undodir=~/.vim/undo//"
-set viminfo+=n~/.vim/viminfo
 
 "auto save leave insert mode
 autocmd InsertLeave * update
