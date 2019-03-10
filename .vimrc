@@ -4,11 +4,9 @@ set hidden
 call plug#begin('~/.vim/plugged')
 
 if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+	Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }
 else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
 endif
 let g:deoplete#enable_at_startup = 1
 
@@ -40,8 +38,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'fatih/vim-go'
 Plug 'w0rp/ale'
+Plug 'fatih/vim-go'
 
 call plug#end()
 
@@ -208,30 +206,30 @@ set listchars=eol:¬,tab:▸-,trail:~,extends:>,precedes:<
 set list
 
 if has("lua") && v:version >= 800
-"neocomplete
-"disable AutoComplPop.
-let g:acp_enableAtStartup = 0
-let g:neocomplete#enable_at_startup = 1
-"use smartcase.
-let g:neocomplete#enable_smart_case = 1
-"set minimum syntax keyword length.
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-"plugin key-mappings.
-inoremap <expr><C-g> neocomplete#undo_completion()
-inoremap <expr><C-l> neocomplete#complete_common_string()
-"Recommended key-mappings.
-"<CR>: close popup and save indent.
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function()
-  return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
-  "For no inserting <CR> key.
-  "return pumvisible() ? "\<C-y>" : "\<CR>"
-endfunction
-"<TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-"<C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+	"neocomplete
+	"disable AutoComplPop.
+	let g:acp_enableAtStartup = 0
+	let g:neocomplete#enable_at_startup = 1
+	"use smartcase.
+	let g:neocomplete#enable_smart_case = 1
+	"set minimum syntax keyword length.
+	let g:neocomplete#sources#syntax#min_keyword_length = 3
+	"plugin key-mappings.
+	inoremap <expr><C-g> neocomplete#undo_completion()
+	inoremap <expr><C-l> neocomplete#complete_common_string()
+	"Recommended key-mappings.
+	"<CR>: close popup and save indent.
+	inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+	function! s:my_cr_function()
+		return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
+		"For no inserting <CR> key.
+		"return pumvisible() ? "\<C-y>" : "\<CR>"
+	endfunction
+	"<TAB>: completion.
+	inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+	"<C-h>, <BS>: close popup and delete backword char.
+	inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+	inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 endif
 "neosnippets
 let g:neosnippet#snippets_directory='~/.dotfiles/.snippets'
@@ -247,13 +245,13 @@ autocmd BufRead,BufNewFile *.md setlocal spell
 au BufReadPost *.gohtml set syntax=html
 "Python indentation/spacing
 au BufNewFile,BufRead *.py
-    \ set tabstop=4 |
-    \ set softtabstop=4 | 
-    \ set shiftwidth=4 | 
-    \ set textwidth=79 | 
-    \ set expandtab | 
-    \ set autoindent | 
-    \ set fileformat=unix
+			\ set tabstop=4 |
+			\ set softtabstop=4 | 
+			\ set shiftwidth=4 | 
+			\ set textwidth=79 | 
+			\ set expandtab | 
+			\ set autoindent | 
+			\ set fileformat=unix
 
 "Python syntax highlighting
 let g:python_highlight_all = 1
@@ -264,15 +262,15 @@ let g:nomad_fmt_autosave = 0
 "ale
 let g:ale_linters = {'go': ['gometalinter', 'gofmt'],}
 "set Prettier up to run on save
-"let g:ale_linters = {'javascript': ['eslint'],}
-"let g:ale_fixers = {}
-"let g:ale_fixers['javascript'] = ['prettier', 'eslint']
-"let g:ale_fix_on_save = 1
-"let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --no-semi'
-"let g:airline#extensions#ale#enabled = 1
-"let g:ale_sign_error = '●' " Less aggressive than the default '>>'
-"let g:ale_sign_warning = '.'
-"let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
+let g:ale_linters = {'javascript': ['eslint'],}
+let g:ale_fixers = {}
+let g:ale_fixers['javascript'] = ['prettier', 'eslint']
+let g:ale_fix_on_save = 1
+let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --no-semi'
+let g:airline#extensions#ale#enabled = 1
+let g:ale_sign_error = '●' " Less aggressive than the default '>>'
+let g:ale_sign_warning = '.'
+let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
 
 "Clangformat C code
 let g:clang_format#style_options = {
@@ -313,3 +311,9 @@ nmap <Leader>F :GFiles<CR>
 nmap <Leader>f :Files<CR>
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>h :History<CR>
+
+" deoplete tab-complete
+set completeopt+=noinsert
+set completeopt+=noselect
+set completeopt-=preview " disable preview window at the bottom of the
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
