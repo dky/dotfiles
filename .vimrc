@@ -116,6 +116,7 @@ nmap <leader>l :set list!<CR>
 "edit .vimrc quickly
 nmap ,ev :tabedit $MYVIMRC<cr>
 nmap ,ch :CheckHealth<cr>
+nmap ,up :UpdateRemotePlugins<cr>
 "reload vim quickly
 nmap ,rv :source $MYVIMRC<CR>
 "map space rather than colon
