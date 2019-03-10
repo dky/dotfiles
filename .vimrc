@@ -35,6 +35,7 @@ Bundle 'jiangmiao/auto-pairs'
 Bundle 'kana/vim-arpeggio'
 Bundle 'benmills/vimux'
 Bundle 'rodjek/vim-puppet'
+Bundle 'junegunn/fzf'
 Bundle 'junegunn/fzf.vim'
 
 if v:version >= 800
