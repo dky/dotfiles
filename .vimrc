@@ -343,7 +343,7 @@ map <Leader>vz :call VimuxZoomRunner()<CR>
 call arpeggio#map('n', '', 0, 'vp', ':VimuxPromptCommand<CR>')
 
 "fzf
-nmap <Leader>f :GFiles<CR>
-nmap <Leader>F :Files<CR>
+nmap <Leader>F :GFiles<CR>
+nmap <Leader>f :Files<CR>
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>h :History<CR>
