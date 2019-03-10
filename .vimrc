@@ -1,48 +1,44 @@
-"Setting up vundle
-"git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-"BundleInstall
-",bi - vim mapping shortcut for BundleInstall
 set ruler		"ruler bottom right
 set nocompatible		"be iMproved
 set hidden"			"no prompt for unsaved buffers
-filetype off		"required!
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call plug#begin('~/.vim/plugged')
 
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-repeat'
-Bundle 'fatih/molokai'
-Bundle 'vim-airline/vim-airline'
-Bundle 'vim-airline/vim-airline-themes'
-Bundle 'Shougo/neosnippet-snippets'
-Bundle 'Shougo/neosnippet.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'Xuyuanp/nerdtree-git-plugin'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'godlygeek/tabular'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'mattn/emmet-vim'
-Bundle 'jamesroutley/vim-logbook'
-Bundle 'metakirby5/codi.vim'
-Bundle 'rhysd/vim-clang-format'
-Bundle 'iberianpig/tig-explorer.vim'
-Bundle 'jiangmiao/auto-pairs'
-Bundle 'kana/vim-arpeggio'
-Bundle 'benmills/vimux'
-Bundle 'rodjek/vim-puppet'
-Bundle 'ctrlpvim/ctrlp.vim'
-Bundle 'junegunn/goyo.vim'
-Bundle 'junegunn/fzf'
-Bundle 'junegunn/fzf.vim'
+Plug 'gmarik/vundle'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'fatih/molokai'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'Shougo/neosnippet.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'airblade/vim-gitgutter'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+Plug 'mattn/emmet-vim'
+Plug 'jamesroutley/vim-logbook'
+Plug 'metakirby5/codi.vim'
+Plug 'rhysd/vim-clang-format'
+Plug 'iberianpig/tig-explorer.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'kana/vim-arpeggio'
+Plug 'benmills/vimux'
+Plug 'rodjek/vim-puppet'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 
 if v:version >= 800
-Bundle 'fatih/vim-go'
-Bundle 'Shougo/neocomplete.vim'
-Bundle 'w0rp/ale'
+Plug 'fatih/vim-go'
+Plug 'Shougo/neocomplete.vim'
+Plug 'w0rp/ale'
 endif
+
+call plug#end()
 
 if has("autocmd")
   "autocmd bufwritepost .vimrc source $MYVIMRC
@@ -135,7 +131,7 @@ nmap ,rv :source $MYVIMRC<CR>
 "map space rather than colon
 nmap <space> :
 "Shortcut for vundle
-nmap ,bi :BundleInstall<cr>
+nmap ,bi :PlugInstall<cr>
 "Navigate 4x faster when holding down Ctrl
 nmap <c-j> 4j
 nmap <c-k> 4k
@@ -338,9 +334,6 @@ map <Leader>vi :VimuxInspectRunner<CR>
 map <Leader>vq :VimuxCloseRunner<CR>
 map <Leader>vx :VimuxInterruptRunner<CR>
 map <Leader>vz :call VimuxZoomRunner()<CR>
-
-"vim-arpeggio
-call arpeggio#map('n', '', 0, 'vp', ':VimuxPromptCommand<CR>')
 
 "fzf
 nmap <Leader>F :GFiles<CR>
