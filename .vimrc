@@ -114,7 +114,7 @@ nmap ,tn <Esc>:tab new<CR>
 nmap ,nb :Bookmark
 nmap <leader>l :set list!<CR>
 "edit .vimrc quickly
-nmap ,ev :tabedit $MYVIMRC<cr>
+nmap ,ev :tabedit $HOME/.vimrc<cr>
 nmap ,ch :CheckHealth<cr>
 nmap ,up :UpdateRemotePlugins<cr>
 "reload vim quickly
