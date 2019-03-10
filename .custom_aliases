@@ -200,3 +200,6 @@ alias chux="chmod u+x"
 
 #apt update
 alias aptupdate="sudo apt-get update && sudo apt-get -y upgrade"
+
+
+alias vim="nvim"
