@@ -1,6 +1,6 @@
-set ruler		"ruler bottom right
-set nocompatible		"be iMproved
-set hidden"			"no prompt for unsaved buffers
+set ruler
+set nocompatible
+set hidden
 call plug#begin('~/.vim/plugged')
 
 if has('nvim')
@@ -40,16 +40,12 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-
-if v:version >= 800
 Plug 'fatih/vim-go'
-Plug 'Shougo/neocomplete.vim'
 Plug 'w0rp/ale'
-endif
 
 call plug#end()
 
-"Disable backups and swap
+" Disable backups and swap
 set noswapfile
 set nobackup
 
