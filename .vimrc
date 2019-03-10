@@ -35,6 +35,7 @@ Bundle 'iberianpig/tig-explorer.vim'
 Bundle 'jiangmiao/auto-pairs'
 Bundle 'kana/vim-arpeggio'
 Bundle 'benmills/vimux'
+Bundle 'rodjek/vim-puppet'
 
 if v:version >= 800
 Bundle 'fatih/vim-go'
