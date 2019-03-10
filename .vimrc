@@ -255,9 +255,7 @@ let g:hcl_fmt_autosave = 0
 let g:tf_fmt_autosave = 0
 let g:nomad_fmt_autosave = 0
 "ale
-let g:ale_linters = {
-    \   'go': ['gometalinter', 'gofmt'],
-\}
+let g:ale_linters = {'go': ['gometalinter', 'gofmt'],}
 "set Prettier up to run on save
 "let g:ale_linters = {'javascript': ['eslint'],}
 "let g:ale_fixers = {}
@@ -268,9 +266,6 @@ let g:ale_linters = {
 "let g:ale_sign_error = '●' " Less aggressive than the default '>>'
 "let g:ale_sign_warning = '.'
 "let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
-"save automatically when text is changed
-set updatetime=200
-au CursorHold * silent! update
 
 "Clangformat C code
 let g:clang_format#style_options = {
@@ -286,11 +281,6 @@ autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
 nmap <Leader>C :ClangFormatAutoToggle<CR>
 
 set omnifunc=syntaxcomplete#Complete
-
-"auto save leave insert mode
-autocmd InsertLeave * update
-"Shorter aliases for ctrl-p search buffers
-cabbrev sb CtrlPBuffer
 
 "Reload go for now. Until I read about other methods, this will have to do.
 nnoremap <silent> ,rg :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<CR><CR>
