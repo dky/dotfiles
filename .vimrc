@@ -35,6 +35,7 @@ Bundle 'jiangmiao/auto-pairs'
 Bundle 'kana/vim-arpeggio'
 Bundle 'benmills/vimux'
 Bundle 'rodjek/vim-puppet'
+Bundle 'junegunn/fzf.vim'
 
 if v:version >= 800
 Bundle 'fatih/vim-go'
@@ -336,3 +337,9 @@ map <Leader>vz :call VimuxZoomRunner()<CR>
 
 "vim-arpeggio
 call arpeggio#map('n', '', 0, 'vp', ':VimuxPromptCommand<CR>')
+
+"fzf
+nmap <Leader>f :GFiles<CR>
+nmap <Leader>F :Files<CR>
+nmap <Leader>b :Buffers<CR>
+nmap <Leader>h :History<CR>
