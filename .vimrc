@@ -313,8 +313,12 @@ nmap <Leader>f :Files<CR>
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>h :History<CR>
 
-" deoplete tab-complete
-set completeopt+=noinsert
-set completeopt+=noselect
-set completeopt-=preview " disable preview window at the bottom of the
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
+" neocomplete like
+set completeopt+=noinsert
+" deoplete.nvim recommend
+set completeopt+=noselect
+" deoplete-go settings
+let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
+let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
