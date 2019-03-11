@@ -121,6 +121,7 @@ nmap ,rv :source $MYVIMRC<CR>
 nmap <space> :
 "Shortcut for vundle
 nmap ,bi :PlugInstall<cr>
+nmap ,gib :GoInstallBinaries<cr>
 "Navigate 4x faster when holding down Ctrl
 nmap <c-j> 4j
 nmap <c-k> 4k
