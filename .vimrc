@@ -42,6 +42,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'
 Plug 'fatih/vim-go'
 Plug 'takac/vim-hardtime'
+Plug 'zchee/deoplete-jedi'
 
 call plug#end()
 
@@ -167,7 +168,7 @@ let g:go_auto_sameids = 1
 let g:go_auto_type_info = 1
 let g:go_fmt_command = "goimports"
 "Shorter aliases for vim-go plugin
-au FileType go nmap <leader>gt :GoDeclsDir
+au FileType go nmap <leader>gt :GoDeclsDir<CR>
 au FileType go nmap <F12> <Plug>(go-def)
 "
 cabbrev gi GoImport
@@ -327,5 +328,5 @@ let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 "hardmode vim
-let g:hardtime_default_on = 1
-let g:hardtime_showmsg = 1
+"let g:hardtime_default_on = 1
+"let g:hardtime_showmsg = 1
