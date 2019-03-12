@@ -147,9 +147,8 @@ inoremap <C-e> <C-o>A
 inoremap <C-f> <C-o>l
 inoremap <C-o> <C-o>o
 inoremap <C-k> <C-o>O
-"Get me out of functions without a bunch of keystrokes.
-inoremap <C-y> <C-o><S-}>
-nnoremap <C-y> <C-o><S-}>
+"Jump to next bracket/empty line
+inoremap <C-j> <C-o>}
 
 "surround markdown emphasis
 nnoremap ,yse ciw**<C-r>"**<Esc>
