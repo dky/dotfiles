@@ -149,6 +149,9 @@ inoremap <C-o> <C-o>o
 inoremap <C-k> <C-o>O
 "Jump to next bracket/empty line
 inoremap <C-j> <C-o>}
+" Quickly insert an empty new line without entering insert mode
+noremap <Leader>o o<Esc>
+nnoremap <Leader>O O<Esc>
 
 "surround markdown emphasis
 nnoremap ,yse ciw**<C-r>"**<Esc>
