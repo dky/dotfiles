@@ -133,6 +133,9 @@ nmap <c-j> 4j
 nmap <c-k> 4k
 nmap <c-h> 4h
 nmap <c-l> 4l
+
+nmap <c-o> o
+nmap <c-k> O
 "fugitive
 nnoremap ,gs :Gstatus<cr>
 nnoremap <F11> :Gstatus<CR>
