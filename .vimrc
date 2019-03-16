@@ -64,6 +64,7 @@ set smartindent
 "split below
 set splitbelow
 set hlsearch
+set incsearch
 set foldenable
 "enable paste mode for pasted code
 set pastetoggle=<F2>
@@ -334,6 +335,6 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 "hardmode vim
 let g:hardtime_default_on = 1
 let g:hardtime_showmsg = 1
-autocmd InsertLeave * update
+autocmd InsertLeave * write
 
 cabbrev gy Goyo
