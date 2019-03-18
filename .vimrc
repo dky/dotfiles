@@ -91,6 +91,7 @@ nmap <right> <nop>
 au FileType go nmap <F8> :echo system('go run "' . expand('%') . '"')<CR>
 au FileType go imap <F8> <Esc> :w <CR> :echo system('go run "' . expand('%') . '"')<CR>
 au FileType python nmap <F8> :echo system('python3 "' . expand('%') . '"')<CR>
+au FileType python imap <F8> <Esc> :w <CR> :echo system('python3 "' . expand('%') . '"')<CR>
 au FileType javascript nmap <F8> :echo system('node "' . expand('%') . '"')<CR>
 au FileType sh nmap <F8> :echo system('bash "' . expand('%') . '"')<CR>
 au FileType c nmap <F8> :w <CR> :!gcc % -o %< && ./%< <CR>
