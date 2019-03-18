@@ -193,7 +193,7 @@ alias powershell="/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
 alias exp="explorer.exe ."
 
 #python 3 please
-alias python=python3
+#alias python=python3
 
 #alias for chmod
 alias chux="chmod u+x"
