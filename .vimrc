@@ -42,6 +42,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'
 Plug 'fatih/vim-go'
 Plug 'takac/vim-hardtime'
+Plug 'reedes/vim-wordy'
 "This plugin is used for Python autocompletion
 "pip3 install jedi
 Plug 'zchee/deoplete-jedi'
