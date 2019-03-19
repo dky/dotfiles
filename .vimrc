@@ -335,8 +335,8 @@ let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 "hardmode vim
-let g:hardtime_default_on = 1
-let g:hardtime_showmsg = 1
+"let g:hardtime_default_on = 1
+"let g:hardtime_showmsg = 1
 autocmd InsertLeave * write
 
 cabbrev gy Goyo
