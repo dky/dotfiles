@@ -340,3 +340,13 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 autocmd InsertLeave * write
 
 cabbrev gy Goyo
+
+"https://vi.stackexchange.com/questions/678/how-do-i-save-a-file-in-a-directory-that-does-not-yet-exist
+"Auto create directory if it doesn't exist.
+augroup Mkdir
+	autocmd!
+	autocmd BufWritePre *
+				\ if !isdirectory(expand("<afile>:p:h")) |
+				\ call mkdir(expand("<afile>:p:h"), "p") |
+				\ endif
+augroup END
