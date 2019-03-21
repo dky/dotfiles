@@ -359,6 +359,7 @@ augroup insertLeaveWrite
 	function! s:auto_mkdir(dir, force)
 		if !isdirectory(a:dir)
 			call mkdir(iconv(a:dir, &encoding, &termencoding), 'p')
+			write
 		else
 			autocmd InsertLeave * write
 		endif
