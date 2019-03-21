@@ -324,6 +324,7 @@ nmap <Leader>f :Files<CR>
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>h :History<CR>
 
+cabbrev gy Goyo
 " neocomplete like
 set completeopt+=noinsert
 " deoplete.nvim recommend
@@ -337,13 +338,13 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 "hardmode vim
 "let g:hardtime_default_on = 1
 "let g:hardtime_showmsg = 1
+"
+"save everytime you leave insert mode
 autocmd InsertLeave * write
 
-cabbrev gy Goyo
 
 "https://vi.stackexchange.com/questions/678/how-do-i-save-a-file-in-a-directory-that-does-not-yet-exist
-"Auto create directory if it doesn't exist.
-augroup Mkdir
+augroup createDirIfNoneExists
 	autocmd!
 	autocmd BufWritePre *
 				\ if !isdirectory(expand("<afile>:p:h")) |
