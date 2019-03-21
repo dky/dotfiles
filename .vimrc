@@ -6,6 +6,7 @@ call plug#begin('~/.vim/plugged')
 if has('nvim')
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }
+	"This go package is needed for autocomplete
 	"go get -u github.com/mdempsky/gocode
 else
 endif
@@ -121,16 +122,16 @@ nmap ,tn <Esc>:tab new<CR>
 nmap ,nb :Bookmark
 nmap <leader>l :set list!<CR>
 "edit .vimrc quickly
-nmap ,ev :tabedit $HOME/.vimrc<cr>
-nmap ,ch :CheckHealth<cr>
-nmap ,up :UpdateRemotePlugins<cr>
+nmap ,ev :tabedit $HOME/.vimrc<CR>
+nmap ,ch :CheckHealth<CR>
+nmap ,up :UpdateRemotePlugins<CR>
 "reload vim quickly
 nmap ,rv :source $MYVIMRC<CR>
 "map space rather than colon
 nmap <space> :
 "Shortcut for vundle
-nmap ,bi :PlugInstall<cr>
-nmap ,gib :GoInstallBinaries<cr>
+nmap ,bi :PlugInstall<CR>
+nmap ,gib :GoInstallBinaries<CR>
 "Navigate 4x faster when holding down Ctrl
 nmap <c-j> 4j
 nmap <c-k> 4k
@@ -140,7 +141,7 @@ nmap <c-l> 4l
 nmap <c-o> o
 nmap <c-k> O
 "fugitive
-nnoremap ,gs :Gstatus<cr>
+nnoremap ,gs :Gstatus<CR>
 nnoremap <F11> :Gstatus<CR>
 nnoremap <silent> ,gpu :execute ":!git push origin master"<CR><CR>
 nnoremap <F9> :execute ":!git push origin master"<CR>
@@ -249,7 +250,7 @@ let g:neosnippet#enable_snipmate_compatibility = 1
 imap <C-l> <Plug>(neosnippet_expand_or_jump)
 smap <C-l> <Plug>(neosnippet_expand_or_jump)
 xmap <C-l> <Plug>(neosnippet_expand_target)
-nnoremap <leader>rs :call neosnippet#variables#set_snippets({})<cr>
+nnoremap <leader>rs :call neosnippet#variables#set_snippets({})<CR>
 "plasticboy vim markdown disable folding
 let g:vim_markdown_folding_disabled = 1
 "Spell checking on markdown
@@ -339,18 +340,9 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 "let g:hardtime_default_on = 1
 "let g:hardtime_showmsg = 1
 
-"https://vi.stackexchange.com/questions/678/how-do-i-save-a-file-in-a-directory-that-does-not-yet-exist
-augroup createDirIfNoneExists
-	autocmd!
-	autocmd BufWritePre *
-				\ if !isdirectory(expand("<afile>:p:h")) |
-				\ call mkdir(expand("<afile>:p:h"), "p") |
-				\ endif
-augroup END
-
-"save everytime you leave insert mode, but also check for existence of file
-"prior to writing
-"This is a mix of this command autocmd InsertLeave * write and this post
+"save everytime leave insert mode + also check for existence of file prior
+"This is a mix of
+"command autocmd InsertLeave * write and this post
 "https://stackoverflow.com/questions/10394707/create-file-inside-new-directory-in-vim-in-one-step
 augroup insertLeaveWrite
 	autocmd!
@@ -362,4 +354,13 @@ augroup insertLeaveWrite
 			autocmd InsertLeave * write
 		endif
 	endfunction
+augroup END
+"create dir that does not exist on save
+"https://vi.stackexchange.com/questions/678/how-do-i-save-a-file-in-a-directory-that-does-not-yet-exist
+augroup createDirIfNoneExists
+	autocmd!
+	autocmd BufWritePre *
+				\ if !isdirectory(expand("<afile>:p:h")) |
+				\ call mkdir(expand("<afile>:p:h"), "p") |
+				\ endif
 augroup END
