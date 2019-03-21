@@ -338,10 +338,6 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 "hardmode vim
 "let g:hardtime_default_on = 1
 "let g:hardtime_showmsg = 1
-"
-"save everytime you leave insert mode
-autocmd InsertLeave * write
-
 
 "https://vi.stackexchange.com/questions/678/how-do-i-save-a-file-in-a-directory-that-does-not-yet-exist
 augroup createDirIfNoneExists
@@ -350,4 +346,20 @@ augroup createDirIfNoneExists
 				\ if !isdirectory(expand("<afile>:p:h")) |
 				\ call mkdir(expand("<afile>:p:h"), "p") |
 				\ endif
+augroup END
+
+"save everytime you leave insert mode, but also check for existence of file
+"prior to writing
+"This is a mix of this command autocmd InsertLeave * write and this post
+"https://stackoverflow.com/questions/10394707/create-file-inside-new-directory-in-vim-in-one-step
+augroup insertLeaveWrite
+	autocmd!
+	autocmd InsertLeave * call s:auto_mkdir(expand('<afile>:p:h'), v:cmdbang)
+	function! s:auto_mkdir(dir, force)
+		if !isdirectory(a:dir)
+			call mkdir(iconv(a:dir, &encoding, &termencoding), 'p')
+		else
+			autocmd InsertLeave * write
+		endif
+	endfunction
 augroup END
