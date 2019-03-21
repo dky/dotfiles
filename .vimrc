@@ -339,7 +339,16 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 "hardmode vim
 "let g:hardtime_default_on = 1
 "let g:hardtime_showmsg = 1
-
+"
+"create dir that does not exist on save
+"https://vi.stackexchange.com/questions/678/how-do-i-save-a-file-in-a-directory-that-does-not-yet-exist
+augroup createDirIfNoneExists
+	autocmd!
+	autocmd BufWritePre *
+				\ if !isdirectory(expand("<afile>:p:h")) |
+				\ call mkdir(expand("<afile>:p:h"), "p") |
+				\ endif
+augroup END
 "save everytime leave insert mode + also check for existence of file prior
 "This is a mix of
 "command autocmd InsertLeave * write and this post
@@ -354,13 +363,4 @@ augroup insertLeaveWrite
 			autocmd InsertLeave * write
 		endif
 	endfunction
-augroup END
-"create dir that does not exist on save
-"https://vi.stackexchange.com/questions/678/how-do-i-save-a-file-in-a-directory-that-does-not-yet-exist
-augroup createDirIfNoneExists
-	autocmd!
-	autocmd BufWritePre *
-				\ if !isdirectory(expand("<afile>:p:h")) |
-				\ call mkdir(expand("<afile>:p:h"), "p") |
-				\ endif
 augroup END
