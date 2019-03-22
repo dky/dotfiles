@@ -338,3 +338,9 @@ augroup insertLeaveWrite
 		endif
 	endfunction
 augroup END
+
+set cursorline
+hi cursorline cterm=none term=none
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
+highlight CursorLine guibg=#303000 ctermbg=234
