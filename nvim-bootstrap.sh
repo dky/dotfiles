@@ -1,7 +1,10 @@
 #!/bin/bash
-#Assuming you are on a Debian/Ubuntu machine... Haven't tested this on any platform.
+#Getting deoplete working on nvim isn't easy... This is all the boostrapping to get it functional.
+#Script assumes you are on a Debian/Ubuntu machine... Haven't tested this on any other platform.
 #Requires Python3.6.1, if you are on a release such as Ubuntu 16.04, Python will need to get upgraded.
-#This was tested on Ubuntu 16.04.6 LTS
+#Tested on Ubuntu 16.04.6 LTS
+#Use at own risk.
+
 python_version(){
 	PYTHON_VERSION=$(python3 -c 'import platform; print(platform.python_version())')
 	#PYTHON_VERSION=3.6.2
