@@ -154,7 +154,8 @@ nnoremap ,yse ciw**<C-r>"**<Esc>
 nnoremap ,ysq ciw"<C-r>""<Esc>
 nnoremap ,yst ciw`<C-r>"`<Esc>
 nnoremap ,ysb ciw[<C-r>"]<Esc>
-"vim-go :GoInstallBinaries on first open of .go file if you encounter errrors.
+
+"vim-go
 let g:go_fmt_autosave = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_extra_types = 1
