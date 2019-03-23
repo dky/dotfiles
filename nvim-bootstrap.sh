@@ -30,6 +30,7 @@ install_python36(){
 
 nvim_bootstrap() {
 	nvim -c PlugInstall +qall
+	#Required for vim-go
 	nvim -c GoInstallBinaries +qall
 	nvim -c UpdateRemotePlugins +qall
 	nvim -c checkhealth
