@@ -57,8 +57,8 @@ set tabstop=3
 set shiftwidth=3
 "autocompletion
 set wildmode=list:longest
-set smartindent
 "set autoindent
+set smartindent
 "split below
 set splitbelow
 set hlsearch
@@ -70,9 +70,6 @@ set pastetoggle=<F2>
 set backspace=indent,eol,start
 set visualbell           "don't beep
 set noerrorbells         "don't beep
-
-"Map f1 to nothing because I keep hitting it randomly.
-inoremap <F1> <nop>
 "renamp esc to jk
 imap jk <Esc>
 "comment out blocks of code using nerdcommenter shortcut
@@ -95,8 +92,9 @@ au FileType c imap <F8> <Esc> :w <CR> :!gcc % -o %< && ./%< <CR>
 
 nmap <F4> :set number! <bar> :set list! <bar> :GitGutterSignsDisable<CR>
 "nerdtree
-"nmap ,nt :NERDTreeToggle<CR>
+nmap ,nt :NERDTreeToggle<CR>
 nmap <F1> :NERDTreeToggle<CR>
+
 set wildignore+=*.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.*,go.mod,go.sum
 let NERDTreeRespectWildIgnore=1
 let NERDTreeMinimalUI = 1
