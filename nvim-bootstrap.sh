@@ -45,7 +45,7 @@ go_bootstrap() {
 }
 
 pip_bootstrap() {
-	sudo apt-get install python3-pip
+	sudo apt-get -y install python3-pip
 	#deoplete
 	pip3 install --user pynvim
 	#python autocompletion
