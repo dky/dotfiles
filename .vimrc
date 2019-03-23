@@ -6,8 +6,6 @@ call plug#begin('~/.vim/plugged')
 if has('nvim')
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }
-	"This go package is needed for autocomplete
-	"go get -u github.com/mdempsky/gocode
 else
 endif
 let g:deoplete#enable_at_startup = 1
@@ -44,8 +42,6 @@ Plug 'w0rp/ale'
 Plug 'fatih/vim-go'
 Plug 'takac/vim-hardtime'
 Plug 'reedes/vim-wordy'
-"This plugin is used for Python autocompletion
-"pip3 install jedi
 Plug 'zchee/deoplete-jedi'
 
 call plug#end()
@@ -80,8 +76,6 @@ inoremap <F1> <nop>
 "renamp esc to jk
 imap jk <Esc>
 "comment out blocks of code using nerdcommenter shortcut
-"nmap <F7> <leader>cc
-"vmap <F7> <leader>cc
 nmap <F7> <leader>c<space>
 vmap <F7> <leader>c<space>
 "no arrow keys
