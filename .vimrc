@@ -250,6 +250,8 @@ let g:airline#extensions#ale#enabled = 1
 let g:ale_sign_error = '●' " Less aggressive than the default '>>'
 let g:ale_sign_warning = '.'
 let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
+let g:ale_lint_on_text_changed = 1
+let g:ale_lint_on_save = 0
 
 "Clangformat C code
 let g:clang_format#style_options = {
@@ -337,3 +339,6 @@ hi cursorline cterm=none term=none
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 highlight CursorLine guibg=#303000 ctermbg=234
+
+"map f1 vim help to esc
+imap <F1> <Esc>
