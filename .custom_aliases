@@ -197,6 +197,8 @@ alias exp="explorer.exe ."
 
 #alias for chmod
 alias chux="chmod u+x"
-
 #apt update
 alias aptupdate="sudo apt-get update && sudo apt-get -y upgrade"
+
+#nvim alias to ni
+alias ni=nvim
