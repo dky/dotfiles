@@ -6,8 +6,6 @@ call plug#begin('~/.vim/plugged')
 if has('nvim')
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }
-	"This go package is needed for autocomplete
-	"go get -u github.com/mdempsky/gocode
 else
 endif
 let g:deoplete#enable_at_startup = 1
@@ -44,8 +42,6 @@ Plug 'w0rp/ale'
 Plug 'fatih/vim-go'
 Plug 'takac/vim-hardtime'
 Plug 'reedes/vim-wordy'
-"This plugin is used for Python autocompletion
-"pip3 install jedi
 Plug 'zchee/deoplete-jedi'
 
 call plug#end()
@@ -61,8 +57,8 @@ set tabstop=3
 set shiftwidth=3
 "autocompletion
 set wildmode=list:longest
-set smartindent
 "set autoindent
+set smartindent
 "split below
 set splitbelow
 set hlsearch
@@ -74,14 +70,9 @@ set pastetoggle=<F2>
 set backspace=indent,eol,start
 set visualbell           "don't beep
 set noerrorbells         "don't beep
-
-"Map f1 to nothing because I keep hitting it randomly.
-inoremap <F1> <nop>
 "renamp esc to jk
 imap jk <Esc>
 "comment out blocks of code using nerdcommenter shortcut
-"nmap <F7> <leader>cc
-"vmap <F7> <leader>cc
 nmap <F7> <leader>c<space>
 vmap <F7> <leader>c<space>
 "no arrow keys
@@ -101,8 +92,9 @@ au FileType c imap <F8> <Esc> :w <CR> :!gcc % -o %< && ./%< <CR>
 
 nmap <F4> :set number! <bar> :set list! <bar> :GitGutterSignsDisable<CR>
 "nerdtree
-"nmap ,nt :NERDTreeToggle<CR>
+nmap ,nt :NERDTreeToggle<CR>
 nmap <F1> :NERDTreeToggle<CR>
+
 set wildignore+=*.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.*,go.mod,go.sum
 let NERDTreeRespectWildIgnore=1
 let NERDTreeMinimalUI = 1
@@ -162,7 +154,8 @@ nnoremap ,yse ciw**<C-r>"**<Esc>
 nnoremap ,ysq ciw"<C-r>""<Esc>
 nnoremap ,yst ciw`<C-r>"`<Esc>
 nnoremap ,ysb ciw[<C-r>"]<Esc>
-"vim-go :GoInstallBinaries on first open of .go file if you encounter errrors.
+
+"vim-go
 let g:go_fmt_autosave = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_extra_types = 1

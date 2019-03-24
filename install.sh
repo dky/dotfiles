@@ -31,11 +31,12 @@ else
 	git clone $DOTVIM_GIT $DOTVIM_DIR
 fi
 
-VIM_BACKUP_DIR=~/.vim/backup
-if [ -d "$VIM_BACKUP_DIR" ]; then
-	echo "/.vim/backup already present"
+CONFIG_DIR=~/.config
+DOTCONFIG_GIT=https://github.com/dky/dotconfig
+if [ -d "$CONFIG_DIR" ]; then
+	echo "/.config already present"
 else
-	mkdir ~/.vim/backup ~/.vim/swap ~/.vim/undo
+	git clone $DOTCONFIG_GIT $CONFIG_DIR
 fi
 
 
