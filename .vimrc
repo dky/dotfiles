@@ -178,7 +178,7 @@ cabbrev gd GoDoc
 "vim-airline
 let g:airline_theme='papercolor'
 let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#hunks#enabled=1
+let g:airline#extensions#hunks#enabled=0
 let g:airline#extensions#branch#enabled=1
 "buffer tabs
 let g:airline#extensions#tabline#left_sep = ' '
