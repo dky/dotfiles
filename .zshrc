@@ -3,6 +3,7 @@ bindkey '^R' history-incremental-search-backward
 
 source $HOME/.custom_aliases
 source $HOME/.dotfiles/z.sh
+source $HOME/.fzf.zsh
 
 autoload colors; colors;
 export LSCOLORS="Gxfxcxdxbxegedabagacad"
