@@ -154,3 +154,17 @@ function pet-select() {
   READLINE_POINT=${#BUFFER}
 }
 
+gitpc() {
+GIT_HOOKS="./.git/hooks"
+if [ -d $GIT_HOOKS ]; then
+	echo "./git/hooks exists, creating post-commit script"
+cat > $GIT_HOOKS/post-commit << EOF
+#!/bin/sh
+
+git push origin master >/dev/null 2>&1 &
+EOF
+chmod u+x $GIT_HOOKS/post-commit
+else
+	echo "Git hooks dir doesn't exist"
+fi
+}
