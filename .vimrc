@@ -173,8 +173,8 @@ au FileType go nmap <leader>gt :GoDeclsDir<CR>
 au FileType go nmap <F12> <Plug>(go-def)
 "
 cabbrev gi GoImport
+cabbrev gd GoDrop
 cabbrev gf GoFmt
-cabbrev gd GoDoc
 "vim-airline
 let g:airline_theme='papercolor'
 let g:airline#extensions#tabline#enabled=1
