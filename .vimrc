@@ -175,6 +175,7 @@ au FileType go nmap <F12> <Plug>(go-def)
 cabbrev gi GoImport
 cabbrev gd GoDrop
 cabbrev gf GoFmt
+cabbrev gt GoTest
 "vim-airline
 let g:airline_theme='papercolor'
 let g:airline#extensions#tabline#enabled=1
