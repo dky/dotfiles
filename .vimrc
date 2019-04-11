@@ -156,6 +156,9 @@ nnoremap ,yst ciw`<C-r>"`<Esc>
 nnoremap ,ysb ciw[<C-r>"]<Esc>
 
 "vim-go
+"Don't show warnings if we are not using nvim or > 7.4.1099, thanks RedHat...
+let g:go_version_warning = 0
+
 let g:go_fmt_autosave = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_extra_types = 1
