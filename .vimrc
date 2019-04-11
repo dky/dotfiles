@@ -299,6 +299,7 @@ nmap <Leader>h :History<CR>
 
 cabbrev gy Goyo
 
+" This if block is required because I often jump on Redhat 7.x...
 " deoplete.nvim recommend
 if has("noinsert")
 	" neocomplete like
