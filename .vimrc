@@ -298,10 +298,14 @@ nmap <Leader>b :Buffers<CR>
 nmap <Leader>h :History<CR>
 
 cabbrev gy Goyo
-" neocomplete like
-set completeopt+=noinsert
+
 " deoplete.nvim recommend
-set completeopt+=noselect
+if has("noinsert")
+	" neocomplete like
+	set completeopt+=noinsert
+elseif has ("noselect")
+	set completeopt+=noselect
+endif
 " deoplete-go settings
 let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
