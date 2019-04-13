@@ -144,10 +144,10 @@ nnoremap ,gpd :Git pull origin master<CR>
 "https://stackoverflow.com/questions/11037825/vim-get-out-of-parenthesis-brackets-etc
 inoremap <C-e> <C-o>A
 inoremap <C-f> <C-o>l
-inoremap <C-o> <C-o>o
+inoremap <C-j> <C-o>o
 inoremap <C-k> <C-o>O
 "Jump to next bracket/empty line
-inoremap <C-j> <C-o>}
+"inoremap <C-j> <C-o>}
 
 "surround markdown emphasis
 nnoremap ,yse ciw**<C-r>"**<Esc>
