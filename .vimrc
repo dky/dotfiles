@@ -43,6 +43,7 @@ Plug 'fatih/vim-go'
 Plug 'takac/vim-hardtime'
 Plug 'reedes/vim-wordy'
 Plug 'zchee/deoplete-jedi'
+Plug 'roxma/vim-tmux-clipboard'
 
 call plug#end()
 
