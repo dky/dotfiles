@@ -357,3 +357,6 @@ highlight CursorLine guibg=#303000 ctermbg=234
 "map f1 vim help to esc
 imap <F1> <Esc>
 
+"vim-logbook shortcuts
+noremap ,lb :Lb<cr>
+noremap ,ts :Ts<cr>
