@@ -46,6 +46,10 @@ Plug 'fatih/vim-go'
 Plug 'takac/vim-hardtime'
 Plug 'reedes/vim-wordy'
 Plug 'roxma/vim-tmux-clipboard'
+"Override colorscheme defaults, I needed this because the pmenu popup was too
+"dark and wanted to use a lighter popup color
+"Customizations are stored in ~/.vim/after/colors/molokai.vim
+Plug 'dky/vim-aftercolors'
 
 call plug#end()
 
