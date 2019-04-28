@@ -5,7 +5,9 @@ call plug#begin('~/.vim/plugged')
 
 if has('nvim')
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+	"Go
 	Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }
+	"Python
 	Plug 'zchee/deoplete-jedi'
 	"JS support
 	Plug 'carlitux/deoplete-ternjs'
