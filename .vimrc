@@ -79,8 +79,6 @@ imap jk <Esc>
 nmap <F7> <leader>c<space>
 vmap <F7> <leader>c<space>
 "no arrow keys
-nmap <up> <nop>
-nmap <down> <nop>
 nmap <left> <nop>
 nmap <right> <nop>
 
