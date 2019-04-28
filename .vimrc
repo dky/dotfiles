@@ -6,11 +6,12 @@ call plug#begin('~/.vim/plugged')
 if has('nvim')
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }
-	Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 	Plug 'zchee/deoplete-jedi'
+	"JS support
+	Plug 'carlitux/deoplete-ternjs'
+	Plug 'ternjs/tern_for_vim', { 'do': 'npm install -g tern' }
 else
 endif
-let g:deoplete#enable_at_startup = 1
 
 Plug 'gmarik/vundle'
 Plug 'tpope/vim-fugitive'
@@ -307,6 +308,24 @@ cabbrev gy Goyo
 
 " This if block is required because I often jump on Redhat 7.x...
 " deoplete.nvim recommend
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_ignore_case = 1
+let g:deoplete#enable_smart_case = 1
+let g:deoplete#enable_camel_case = 1
+let g:deoplete#enable_refresh_always = 1
+let g:deoplete#max_abbr_width = 0
+let g:deoplete#max_menu_width = 0
+
+"tern
+let g:tern_request_timeout = 1
+let g:tern_request_timeout = 6000
+let g:tern#command = ["tern"]
+let g:tern#arguments = ["--persistent"]
+let g:deoplete#sources#tss#javascript_support = 1
+let g:tsuquyomi_javascript_support = 1
+let g:tsuquyomi_auto_open = 1
+let g:tsuquyomi_disable_quickfix = 1
+
 if has("noinsert")
 	" neocomplete like
 	set completeopt+=noinsert
