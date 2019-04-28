@@ -6,6 +6,7 @@ call plug#begin('~/.vim/plugged')
 if has('nvim')
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }
+	Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 else
 endif
 let g:deoplete#enable_at_startup = 1
@@ -44,7 +45,6 @@ Plug 'takac/vim-hardtime'
 Plug 'reedes/vim-wordy'
 Plug 'zchee/deoplete-jedi'
 Plug 'roxma/vim-tmux-clipboard'
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 
 call plug#end()
 
