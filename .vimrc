@@ -44,6 +44,7 @@ Plug 'takac/vim-hardtime'
 Plug 'reedes/vim-wordy'
 Plug 'zchee/deoplete-jedi'
 Plug 'roxma/vim-tmux-clipboard'
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 
 call plug#end()
 
