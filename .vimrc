@@ -49,6 +49,7 @@ Plug 'roxma/vim-tmux-clipboard'
 "Override colorscheme defaults, I needed this because the pmenu popup was too
 "dark and wanted to use a lighter popup color
 "Customizations are stored in ~/.vim/after/colors/molokai.vim
+"https://stackoverflow.com/questions/10454038/setting-vim-omnicompletion-colors-pmenu-in-vimrc-not-working
 Plug 'dky/vim-aftercolors'
 
 call plug#end()
