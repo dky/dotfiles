@@ -217,6 +217,9 @@ set encoding=utf-8
 set listchars=eol:¬,tab:▸-,trail:~,extends:>,precedes:<
 set list
 "neosnippets
+"reload snippets
+nnoremap ,rs :call neosnippet#variables#set_snippets({})<cr>
+
 let g:neosnippet#snippets_directory='~/.dotfiles/.snippets'
 let g:neosnippet#enable_snipmate_compatibility = 1
 imap <C-l> <Plug>(neosnippet_expand_or_jump)
@@ -354,3 +357,7 @@ highlight CursorLine guibg=#303000 ctermbg=234
 
 "map f1 vim help to esc
 imap <F1> <Esc>
+
+"vim-logbook shortcuts
+noremap ,lb :Lb<cr>
+noremap ,ts :Ts<cr>

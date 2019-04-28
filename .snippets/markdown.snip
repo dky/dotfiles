@@ -1,0 +1,91 @@
+snippet     lboil
+abbr        lboil
+options     head
+   #Sleep - Are you rested?
+   ${1}
+   #Sit?
+   ${2}
+   #Mood - How do you feel today?
+   ${3}
+   #Accomplishments - What got completed today/yesterday?
+
+   #Code - Did we code and how long? What did we work on?
+
+   #Math - Did we invest any time in Math foo?
+
+   #Tasks - Tasks we need to hit today (work/personal)
+
+   #Learnings - What did we learn today/yesterday?
+
+   #Gratitude - What are you grateful for today?
+
+   #Thoughts - The random bits that fill your waking hours
+
+snippet     hboil
+abbr        hboil
+options     head
+   +++
+   author = ["Don Ky"]
+   date = "`strftime("%Y-%m-%dT%H:%M:%S")`"
+   title = "${1}"
+   description = "${2}"
+   categories = [ "${3}" ]
+   tags = [ "${4}" ]
+   draft = true
+   +++
+
+   ${5}
+
+snippet     hsboil
+abbr        hsboil
+options     head
+   +++
+   author = ["Don Ky"]
+   date = "`strftime("%Y-%m-%dT%H:%M:%S")`"
+   title = "${1}"
+   layout = "static"
+   draft = true
+   +++
+
+   ${2}
+
+snippet     hquote
+abbr        hquote
+options     head
+   {{< blockquote author="${1}" >}}
+   “${2}”
+   {{< /blockquote >}}
+
+
+snippet     hlinki
+abbr        hlink
+    [${1}]({{< ref "${2}.md" >}})
+
+snippet     hlinke
+abbr        hlink
+    [${1}](${2})
+
+snippet     bigo
+abbr        bigo
+    $\mathcal{${1}}(${2})$
+
+snippet     hcodep
+ \`\`\`python
+ ${0}
+ \`\`\`
+
+snippet hcodej
+ \`\`\`javascript
+ ${0}
+ \`\`\`
+
+snippet hcodeb
+ \`\`\`bash
+ ${0}
+ \`\`\`
+
+snippet hcodeg
+ \`\`\`go
+ ${0}
+ \`\`\`
+
