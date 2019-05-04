@@ -387,10 +387,12 @@ imap <F1> <Esc>
 noremap ,lb :Lb<cr>
 noremap ,ts :Ts<cr>
 
+"Everything here deals with spelling and dictionary support
 "vim underline spelling errors don't color them.
 hi clear SpellBad
 hi SpellBad cterm=underline ctermfg=009 guifg=#ff0000
 
+"Configure vim-lexical plugin
 augroup lexical
   autocmd!
   autocmd FileType markdown,mkd call lexical#init()
@@ -400,6 +402,5 @@ augroup END
 
 let g:lexical#dictionary = ['/usr/share/dict/words','~/.vim/dict/custom.txt']
 let g:lexical#thesaurus = ['~/.vim/thesaurus/mthesaur.txt',]
-
 let g:lexical#spell_key = '<leader>s'
 let g:lexical#dictionary_key = '<leader>k'
