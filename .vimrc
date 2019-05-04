@@ -389,7 +389,7 @@ noremap ,ts :Ts<cr>
 
 "vim underline spelling errors don't color them.
 hi clear SpellBad
-hi SpellBad cterm=underline
+hi SpellBad cterm=underline ctermfg=009 guifg=#ff0000
 
 augroup lexical
   autocmd!
