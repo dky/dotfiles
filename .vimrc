@@ -389,3 +389,4 @@ noremap ,ts :Ts<cr>
 "vim underline spelling errors don't color them.
 hi clear SpellBad
 hi SpellBad cterm=underline
+set dictionary+=/usr/share/dict/words
