@@ -48,6 +48,7 @@ Plug 'fatih/vim-go'
 Plug 'takac/vim-hardtime'
 Plug 'reedes/vim-wordy'
 Plug 'roxma/vim-tmux-clipboard'
+Plug 'reedes/vim-lexical'
 "Override colorscheme defaults, I needed this because the pmenu popup was too
 "dark and wanted to use a lighter popup color
 "Customizations are stored in ~/.vim/after/colors/molokai.vim
@@ -235,7 +236,7 @@ nnoremap <leader>rs :call neosnippet#variables#set_snippets({})<CR>
 "plasticboy vim markdown disable folding
 let g:vim_markdown_folding_disabled = 1
 "Spell checking on markdown
-autocmd BufRead,BufNewFile *.md setlocal spell
+"autocmd BufRead,BufNewFile *.md setlocal spell
 au BufReadPost *.gohtml set syntax=html
 "Python indentation/spacing
 au BufNewFile,BufRead *.py
@@ -389,4 +390,16 @@ noremap ,ts :Ts<cr>
 "vim underline spelling errors don't color them.
 hi clear SpellBad
 hi SpellBad cterm=underline
-set dictionary+=/usr/share/dict/words
+
+augroup lexical
+  autocmd!
+  autocmd FileType markdown,mkd call lexical#init()
+  autocmd FileType textile call lexical#init()
+  autocmd FileType text call lexical#init({ 'spell': 0 })
+augroup END
+
+let g:lexical#dictionary = ['/usr/share/dict/words','~/.vim/dict/custom.txt']
+let g:lexical#thesaurus = ['~/.vim/thesaurus/mthesaur.txt',]
+
+let g:lexical#spell_key = '<leader>s'
+let g:lexical#dictionary_key = '<leader>k'
