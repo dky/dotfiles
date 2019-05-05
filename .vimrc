@@ -46,9 +46,10 @@ Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'
 Plug 'fatih/vim-go'
 Plug 'takac/vim-hardtime'
-Plug 'reedes/vim-wordy'
 Plug 'roxma/vim-tmux-clipboard'
+"writing plugins
 Plug 'reedes/vim-lexical'
+Plug 'reedes/vim-wordy'
 Plug 'fncll/wordnet.vim'
 Plug 'rhysd/vim-grammarous'
 "Override colorscheme defaults, I needed this because the pmenu popup was too
@@ -410,4 +411,9 @@ let g:lexical#thesaurus = ['~/.vim/thesaurus/mthesaur.txt',]
 let g:lexical#spell_key = '<leader>s'
 let g:lexical#dictionary_key = '<leader>k'
 
+"vim-grammarous
 nmap <F8> :GrammarousCheck<CR>
+hi GrammarousError ctermfg=white ctermbg=red
+hi GrammarousInfoError ctermfg=white ctermbg=blue
+hi GrammarousInfoSection ctermfg=white ctermbg=blue
+hi GrammarousInfoHelp ctermfg=white ctermbg=blue
