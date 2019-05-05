@@ -50,6 +50,7 @@ Plug 'reedes/vim-wordy'
 Plug 'roxma/vim-tmux-clipboard'
 Plug 'reedes/vim-lexical'
 Plug 'fncll/wordnet.vim'
+Plug 'rhysd/vim-grammarous'
 "Override colorscheme defaults, I needed this because the pmenu popup was too
 "dark and wanted to use a lighter popup color
 "Customizations are stored in ~/.vim/after/colors/molokai.vim
