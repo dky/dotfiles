@@ -406,3 +406,5 @@ let g:lexical#dictionary = ['/usr/share/dict/words','~/.vim/dict/custom.txt']
 let g:lexical#thesaurus = ['~/.vim/thesaurus/mthesaur.txt',]
 let g:lexical#spell_key = '<leader>s'
 let g:lexical#dictionary_key = '<leader>k'
+
+nmap <F8> :GrammarousCheck<CR>
