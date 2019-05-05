@@ -392,7 +392,10 @@ noremap ,ts :Ts<cr>
 "Everything here deals with spelling and dictionary support
 "vim underline spelling errors don't color them.
 hi clear SpellBad
-hi SpellBad cterm=underline ctermfg=009 guifg=#ff0000
+hi SpellBad cterm=underline ctermfg=red
+hi SpellCap cterm=underline ctermfg=yellow
+hi SpellLocal cterm=underline
+hi SpellRare cterm=underline
 
 "Configure vim-lexical plugin
 augroup lexical
