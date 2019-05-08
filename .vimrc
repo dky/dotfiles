@@ -379,9 +379,9 @@ augroup END
 
 set cursorline
 " default colors for CursorLine
+" https://jonasjacek.github.io/colors
 hi CursorLine ctermbg=236
 "hi Cursor guibg=#A6E22E;
-"
 " change Color when entering Insert Mode
 autocmd InsertEnter * hi CursorLine ctermbg=237
 "autocmd InsertEnter * hi Cursor guibg=#00AAFF;
@@ -390,7 +390,6 @@ autocmd InsertLeave * hi CursorLine ctermbg=236
 "autocmd InsertLeave * highlight  Cursor guibg=#A6E22E;"
 hi LineNr ctermbg=236 ctermfg=246
 hi Visual ctermbg=76 ctermfg=16
-
 
 "map f1 vim help to esc
 imap <F1> <Esc>
