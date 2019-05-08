@@ -379,7 +379,7 @@ augroup END
 
 set cursorline
 " default colors for CursorLine
-hi CursorLine ctermbg=235
+hi CursorLine ctermbg=236
 "hi Cursor guibg=#A6E22E;
 "
 " change Color when entering Insert Mode
