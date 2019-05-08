@@ -1,25 +1,25 @@
 snippet     lboil
 abbr        lboil
 options     head
-   #Sleep - Are you rested?
+   #Sleep/Mood - Rested/Mental state?
    ${1}
    #Sit?
    ${2}
-   #Mood - How do you feel today?
+   #Accomplishments - Completed today/yesterday?
    ${3}
-   #Accomplishments - What got completed today/yesterday?
+   #Code - Duration? Worked on?
+   ${4}
+   #Math - Math foo?
+   ${5}
+   #Anki?
+   ${6}
+   #Tasks - Tasks (work/personal)
+   ${7}
+   #Learnings - today/yesterday?
 
-   #Code - Did we code and how long? What did we work on?
+   #Gratitude - today/yesterday?
 
-   #Math - Did we invest any time in Math foo?
-
-   #Tasks - Tasks we need to hit today (work/personal)
-
-   #Learnings - What did we learn today/yesterday?
-
-   #Gratitude - What are you grateful for today?
-
-   #Thoughts - The random bits that fill your waking hours
+   #Thoughts - Concious bits
 
 snippet     hboil
 abbr        hboil
@@ -32,6 +32,7 @@ options     head
    categories = [ "${3}" ]
    tags = [ "${4}" ]
    draft = true
+   math = true
    +++
 
    ${5}
@@ -45,6 +46,7 @@ options     head
    title = "${1}"
    layout = "static"
    draft = true
+   math = true
    +++
 
    ${2}

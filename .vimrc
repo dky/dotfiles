@@ -46,8 +46,12 @@ Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'
 Plug 'fatih/vim-go'
 Plug 'takac/vim-hardtime'
-Plug 'reedes/vim-wordy'
 Plug 'roxma/vim-tmux-clipboard'
+"writing plugins
+Plug 'reedes/vim-lexical'
+Plug 'reedes/vim-wordy'
+Plug 'fncll/wordnet.vim'
+Plug 'rhysd/vim-grammarous'
 "Override colorscheme defaults, I needed this because the pmenu popup was too
 "dark and wanted to use a lighter popup color
 "Customizations are stored in ~/.vim/after/colors/molokai.vim
@@ -235,7 +239,7 @@ nnoremap <leader>rs :call neosnippet#variables#set_snippets({})<CR>
 "plasticboy vim markdown disable folding
 let g:vim_markdown_folding_disabled = 1
 "Spell checking on markdown
-autocmd BufRead,BufNewFile *.md setlocal spell
+"autocmd BufRead,BufNewFile *.md setlocal spell
 au BufReadPost *.gohtml set syntax=html
 "Python indentation/spacing
 au BufNewFile,BufRead *.py
@@ -394,3 +398,39 @@ imap <F1> <Esc>
 "vim-logbook shortcuts
 noremap ,lb :Lb<cr>
 noremap ,ts :Ts<cr>
+
+"Everything here deals with spelling and dictionary support
+"vim underline spelling errors don't color them.
+hi clear SpellBad
+hi SpellBad cterm=underline ctermfg=red
+hi SpellCap cterm=underline ctermfg=yellow
+hi SpellLocal cterm=underline
+hi SpellRare cterm=underline
+
+"Configure vim-lexical plugin
+augroup lexical
+  autocmd!
+  autocmd FileType markdown,mkd call lexical#init()
+  autocmd FileType textile call lexical#init()
+  autocmd FileType text call lexical#init({ 'spell': 0 })
+augroup END
+
+let g:lexical#dictionary = ['/usr/share/dict/words','~/.vim/dict/custom.txt']
+let g:lexical#thesaurus = ['~/.vim/thesaurus/mthesaur.txt',]
+let g:lexical#spell_key = '<leader>s'
+let g:lexical#dictionary_key = '<leader>k'
+
+"vim-grammarous
+nmap <F8> :GrammarousCheck<CR>
+hi GrammarousError ctermfg=white ctermbg=red
+hi GrammarousInfoError ctermfg=white ctermbg=blue
+hi GrammarousInfoSection ctermfg=white ctermbg=blue
+hi GrammarousInfoHelp ctermfg=white ctermbg=blue
+
+"proselint
+call ale#linter#Define('text', {
+\   'name': 'proselint',
+\   'executable': 'proselint',
+\   'command': 'proselint %t',
+\   'callback': 'ale#handlers#unix#HandleAsWarning',
+\})
