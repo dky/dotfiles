@@ -374,10 +374,19 @@ augroup insertLeaveWrite
 augroup END
 
 set cursorline
-hi cursorline cterm=none term=none
-autocmd WinEnter * setlocal cursorline
-autocmd WinLeave * setlocal nocursorline
-highlight CursorLine guibg=#303000 ctermbg=234
+" default colors for CursorLine
+hi CursorLine ctermbg=236
+"hi Cursor guibg=#A6E22E;
+"
+" change Color when entering Insert Mode
+autocmd InsertEnter * hi CursorLine ctermbg=24
+"autocmd InsertEnter * hi Cursor guibg=#00AAFF;
+" revert Color to default when leaving Insert Mode
+autocmd InsertLeave * hi CursorLine ctermbg=236
+"autocmd InsertLeave * highlight  Cursor guibg=#A6E22E;"
+hi LineNr ctermbg=236 ctermfg=246
+hi Visual ctermbg=76 ctermfg=16
+
 
 "map f1 vim help to esc
 imap <F1> <Esc>
