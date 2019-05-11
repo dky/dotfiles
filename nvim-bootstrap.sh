@@ -7,12 +7,13 @@
 
 python_version(){
 	PYTHON_VERSION=$(python3 -c 'import platform; print(platform.python_version())')
+	echo $PYTHON_VERSION
 	#PYTHON_VERSION=3.6.2
 	echo "Checking version of Python >= 3.6"
 	# check if $PYTHON_VERSION is set at all
 	[ -z $PYTHON_VERSION ] && return 1
 	# If it's set, check the version
-	if ! [[ $PYTHON_VERSION =~ (3.6.*) ]]; then
+	if ! [[ $PYTHON_VERSION =~ (3.6.*) ]] || [[ $PYTHON_VERSION =~ (3.7.*) ]]; then
 		return 1
 	else
 		return 0
