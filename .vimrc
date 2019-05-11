@@ -383,7 +383,8 @@ set cursorline
 hi CursorLine ctermbg=236
 "hi Cursor guibg=#A6E22E;
 " change Color when entering Insert Mode
-autocmd InsertEnter * hi CursorLine ctermbg=237
+"autocmd InsertEnter * hi CursorLine ctermbg=237
+autocmd InsertEnter * hi CursorLine ctermbg=24
 "autocmd InsertEnter * hi Cursor guibg=#00AAFF;
 " revert Color to default when leaving Insert Mode
 autocmd InsertLeave * hi CursorLine ctermbg=236
