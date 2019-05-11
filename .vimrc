@@ -60,13 +60,13 @@ Plug 'dky/vim-aftercolors'
 
 call plug#end()
 
-" Disable backups and swap
+"Disable backups and swap
 set noswapfile
 set nobackup
 
 set number
 set relativenumber
-" Tab use 3 spaces
+"Tab use 3 spaces
 set tabstop=3
 set shiftwidth=3
 "autocompletion
@@ -186,7 +186,7 @@ let g:go_fmt_command = "goimports"
 "Shorter aliases for vim-go plugin
 au FileType go nmap <leader>gt :GoDeclsDir<CR>
 au FileType go nmap <F12> <Plug>(go-def)
-"
+
 cabbrev gi GoImport
 cabbrev gd GoDrop
 cabbrev gf GoFmt
@@ -279,10 +279,10 @@ let g:clang_format#style_options = {
 			\ "AlwaysBreakTemplateDeclarations" : "true",
 			\ "Standard" : "C++11"}
 
-" map to <Leader>cf in C++ code
+"map to <Leader>cf in C++ code
 autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
 autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
-" Toggle auto formatting:
+"Toggle auto formatting:
 nmap <Leader>C :ClangFormatAutoToggle<CR>
 
 set omnifunc=syntaxcomplete#Complete
@@ -297,7 +297,7 @@ nnoremap <silent> ,mpr :execute ":!tmux send-keys -t 2 'make post-registrator' C
 nnoremap <silent> ,cl :execute ":!tmux send-keys -t 2 'clear' C-m"<CR><CR>
 nnoremap <silent> ,pa :execute ":!tmux send-keys -t 2 './apply.sh' C-m"<CR><CR>
 
-" Run the current file with rspec
+"Run the current file with rspec
 let g:VimuxPromptString = ":"
 map <Leader>rb :call VimuxRunCommand("clear; rspec " . bufname("%"))<CR>
 map <Leader>vp :VimuxPromptCommand<CR>
@@ -315,8 +315,8 @@ nmap <Leader>h :History<CR>
 
 cabbrev gy Goyo
 
-" This if block is required because I often jump on Redhat 7.x...
-" deoplete.nvim recommend
+"This if block is required because I often jump on Redhat 7.x...
+"deoplete.nvim recommend
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_ignore_case = 1
 let g:deoplete#enable_smart_case = 1
@@ -336,15 +336,15 @@ let g:tsuquyomi_auto_open = 1
 let g:tsuquyomi_disable_quickfix = 1
 
 if has("noinsert")
-	" neocomplete like
+	"neocomplete like
 	set completeopt+=noinsert
 elseif has ("noselect")
 	set completeopt+=noselect
 endif
-" deoplete-go settings
+"deoplete-go settings
 let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
-" deoplete tab completion
+"deoplete tab completion
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 "hardmode vim
@@ -378,20 +378,20 @@ augroup insertLeaveWrite
 augroup END
 
 set cursorline
-" default colors for CursorLine
-" https://jonasjacek.github.io/colors
+"default colors for CursorLine
+"https://jonasjacek.github.io/colors
 hi CursorLine ctermbg=236
 "hi Cursor guibg=#A6E22E;
-" change Color when entering Insert Mode
+"change Color when entering Insert Mode
 "autocmd InsertEnter * hi CursorLine ctermbg=237
 autocmd InsertEnter * hi CursorLine ctermbg=24
 "autocmd InsertEnter * hi Cursor guibg=#00AAFF;
-" revert Color to default when leaving Insert Mode
+"revert Color to default when leaving Insert Mode
 autocmd InsertLeave * hi CursorLine ctermbg=236
-"autocmd InsertLeave * highlight  Cursor guibg=#A6E22E;"
+"autocmd InsertLeave * highlight  Cursor guibg=#A6E22E;" This 
 hi LineNr ctermbg=236 ctermfg=246
 hi Visual ctermbg=76 ctermfg=16
-hi Comment ctermfg=green
+hi Comment ctermfg=43
 
 
 "map f1 vim help to esc
