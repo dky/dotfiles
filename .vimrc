@@ -390,7 +390,7 @@ autocmd InsertEnter * hi CursorLine ctermbg=24
 autocmd InsertLeave * hi CursorLine ctermbg=236
 "autocmd InsertLeave * highlight  Cursor guibg=#A6E22E;" This 
 hi LineNr ctermbg=236 ctermfg=246
-"hi Visual ctermbg=76 ctermfg=16
+hi Visual ctermbg=190 ctermfg=16
 hi Comment ctermfg=43
 
 "map f1 vim help to esc
