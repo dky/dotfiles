@@ -87,8 +87,8 @@ set noerrorbells         "don't beep
 "renamp esc to jk
 imap jk <Esc>
 "comment out blocks of code using nerdcommenter shortcut
-nmap <F7> <leader>c<space>
-vmap <F7> <leader>c<space>
+nmap <F6> <leader>c<space>
+vmap <F6> <leader>c<space>
 "no arrow keys
 nmap <left> <nop>
 nmap <right> <nop>
@@ -98,6 +98,7 @@ au FileType go imap <F8> <Esc> :w <CR> :echo system('go run "' . expand('%') . '
 au FileType python nmap <F8> :echo system('python3 "' . expand('%') . '"')<CR>
 au FileType python imap <F8> <Esc> :w <CR> :echo system('python3 "' . expand('%') . '"')<CR>
 au FileType javascript nmap <F8> :echo system('node "' . expand('%') . '"')<CR>
+au FileType javascript imap <F8> <Esc> :w <CR> :echo system('node "' . expand('%') . '"')<CR>
 au FileType sh nmap <F8> :echo system('bash "' . expand('%') . '"')<CR>
 au FileType c nmap <F8> :w <CR> :!gcc % -o %< && ./%< <CR>
 au FileType c imap <F8> <Esc> :w <CR> :!gcc % -o %< && ./%< <CR>
