@@ -93,7 +93,7 @@ vmap <F6> <leader>c<space>
 nmap <left> <nop>
 nmap <right> <nop>
 
-au FileType go nmap <F8> :echo system('go run "' . expand('%') . '"')<CR>
+au FileType go nmap <F8> :w <CR> :echo system('go run "' . expand('%') . '"')<CR>
 au FileType go imap <F8> <Esc> :w <CR> :echo system('go run "' . expand('%') . '"')<CR>
 au FileType python nmap <F8> :echo system('python3 "' . expand('%') . '"')<CR>
 au FileType python imap <F8> <Esc> :w <CR> :echo system('python3 "' . expand('%') . '"')<CR>
@@ -424,7 +424,8 @@ let g:lexical#spell_key = '<leader>s'
 let g:lexical#dictionary_key = '<leader>k'
 
 "vim-grammarous
-nmap <F8> :GrammarousCheck<CR>
+"nmap <F8> :GrammarousCheck<CR>
+au FileType markdown nmap <F8> :GrammarousCheck<CR>
 hi GrammarousError ctermfg=white ctermbg=red
 hi GrammarousInfoError ctermfg=white ctermbg=blue
 hi GrammarousInfoSection ctermfg=white ctermbg=blue
