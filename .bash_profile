@@ -33,3 +33,7 @@ if [ -n "$BASH_VERSION" ]; then
 		source "/Users/dky/Downloads/google-cloud-sdk/completion.bash.inc"
 	fi
 fi
+
+if [ -x /usr/games/cowsay -a -x /usr/games/fortune ]; then
+	fortune | cowsay
+fi
