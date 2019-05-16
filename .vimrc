@@ -50,7 +50,7 @@ Plug 'roxma/vim-tmux-clipboard'
 "writing plugins
 Plug 'reedes/vim-lexical'
 Plug 'reedes/vim-wordy'
-Plug 'fncll/wordnet.vim'
+Plug 'dky/wordnet.vim'
 Plug 'rhysd/vim-grammarous'
 "Override colorscheme defaults, I needed this because the pmenu popup was too
 "dark and wanted to use a lighter popup color
@@ -441,3 +441,6 @@ call ale#linter#Define('text', {
 
 "restore me to the last position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
+"wordnet/dictionary lookup for F7 only on markdown files please.
+au FileType markdown nmap <F7> :call wordnet#overviews("<C-r>=expand("<cword>")<CR>")<CR>
