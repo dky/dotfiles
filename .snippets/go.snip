@@ -11,6 +11,11 @@ options     head
     fmt.Printf("Hello, world\n")
   }
 
+snippet     iferr
+  if err != nil {
+    ${1:TARGET}
+  }
+
 snippet     funcm
   func main () {
     ${1:TARGET}
