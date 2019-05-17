@@ -108,6 +108,8 @@ nmap <F4> :set number! <bar> :set relativenumber! <bar> :set list! <bar> :GitGut
 "nerdtree
 nmap ,nt :NERDTreeToggle<CR>
 nmap <F1> :NERDTreeToggle<CR>
+"map f1 vim help to esc
+imap <F1> <Esc>
 
 "tagbar toggle
 "requires exuberant-ctags, 
@@ -401,9 +403,6 @@ autocmd InsertLeave * hi CursorLine ctermbg=236
 hi LineNr ctermbg=236 ctermfg=246
 hi Visual ctermbg=190 ctermfg=16
 hi Comment ctermfg=43
-
-"map f1 vim help to esc
-imap <F1> <Esc>
 
 "vim-logbook shortcuts
 noremap ,lb :Lb<cr>
