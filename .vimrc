@@ -109,7 +109,9 @@ nmap <F4> :set number! <bar> :set relativenumber! <bar> :set list! <bar> :GitGut
 nmap ,nt :NERDTreeToggle<CR>
 nmap <F1> :NERDTreeToggle<CR>
 
-"tagbar support, ensure exuberant-ctags package is installed
+"tagbar toggle
+"requires exuberant-ctags, 
+"go - github.com/jstemmer/gotags
 nmap ,tb :TagbarToggle<CR>
 nmap <F6> :TagbarToggle<CR>
 
