@@ -1,30 +1,17 @@
-snippet     helloworld
-abbr        package main\nimport fmt...
-options     head
-  package main
-
-  import (
-    "fmt"
-  )
-
-  func main() {
-    fmt.Printf("Hello, world\n")
-  }
-
-snippet     iferr
+snippet     ife
   if err != nil {
     ${1:TARGET}
   }
 
-snippet     funcm
+snippet     fm
   func main () {
     ${1:TARGET}
   }
 
-snippet     fmtpl
+snippet     fpl
   fmt.Println(${1:TARGET})
 
-snippet     goboil
+snippet     gb
   package main
 
   import (
@@ -58,7 +45,7 @@ snippet     printf
 options     word
   fmt.Printf("${1}\n"${2:})
 
-snippet     println
+snippet     fpl
 options     word
   fmt.Println(${0:TARGET})
 
