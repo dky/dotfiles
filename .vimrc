@@ -475,3 +475,9 @@ au BufNewFile,BufRead *.js, *.html, *.css
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2
+
+au BufNewFile,BufRead *.md
+    \ set noautoindent |
+    \ set nocindent |
+    \ set nosmartindent |
+    \ set indentexpr=
