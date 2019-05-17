@@ -454,24 +454,24 @@ au FileType markdown nmap <F7> :call wordnet#overviews("<C-r>=expand("<cword>")<
 
 "Code Spacing
 "python spacing
-au BufNewFile,BufRead py
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 | 
+    \ set textwidth=79 |
+    \ set expandtab | 
+    \ set autoindent |
     \ set fileformat=unix
 
 "go spacing
-au BufNewFile,BufRead go
-    \ set noexpandtab
-    \ set tabstop=4
-    \ set softtabstop=4
+au BufNewFile,BufRead *.go
+    \ set noexpandtab |
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
     \ set shiftwidth=4
 
 "js, html, css
 au BufNewFile,BufRead *.js, *.html, *.css
-    \ set tabstop=2
-    \ set softtabstop=2
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
     \ set shiftwidth=2
