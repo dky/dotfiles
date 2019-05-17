@@ -109,6 +109,10 @@ nmap <F4> :set number! <bar> :set relativenumber! <bar> :set list! <bar> :GitGut
 nmap ,nt :NERDTreeToggle<CR>
 nmap <F1> :NERDTreeToggle<CR>
 
+"tagbar support, ensure exuberant-ctags package is installed
+nmap ,tb :TagbarToggle<CR>
+nmap <F6> :TagbarToggle<CR>
+
 set wildignore+=*.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.*,go.mod,go.sum
 let NERDTreeRespectWildIgnore=1
 let NERDTreeMinimalUI = 1
