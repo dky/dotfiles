@@ -87,8 +87,8 @@ set noerrorbells         "don't beep
 "renamp esc to jk
 imap jk <Esc>
 "comment out blocks of code using nerdcommenter shortcut
-nmap <F6> <leader>c<space>
-vmap <F6> <leader>c<space>
+nmap <F7> <leader>c<space>
+vmap <F7> <leader>c<space>
 "no arrow keys
 nmap <left> <nop>
 nmap <right> <nop>
