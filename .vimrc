@@ -451,3 +451,27 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 "wordnet/dictionary lookup for F7 only on markdown files please.
 au FileType markdown nmap <F7> :call wordnet#overviews("<C-r>=expand("<cword>")<CR>")<CR>
+
+"Code Spacing
+"python spacing
+au BufNewFile,BufRead py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
+
+"go spacing
+au BufNewFile,BufRead go
+    \ set noexpandtab
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+
+"js, html, css
+au BufNewFile,BufRead *.js, *.html, *.css
+    \ set tabstop=2
+    \ set softtabstop=2
+    \ set shiftwidth=2
