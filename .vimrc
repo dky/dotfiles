@@ -47,6 +47,7 @@ Plug 'w0rp/ale'
 Plug 'fatih/vim-go'
 Plug 'takac/vim-hardtime'
 Plug 'roxma/vim-tmux-clipboard'
+Plug 'majutsushi/tagbar'
 "writing plugins
 Plug 'reedes/vim-lexical'
 Plug 'reedes/vim-wordy'
