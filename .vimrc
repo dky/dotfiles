@@ -403,6 +403,8 @@ autocmd InsertLeave * hi CursorLine ctermbg=236
 hi LineNr ctermbg=236 ctermfg=246
 hi Visual ctermbg=190 ctermfg=16
 hi Comment ctermfg=43
+"search colors
+hi Search cterm=NONE ctermfg=white ctermbg=blue
 
 "vim-logbook shortcuts
 noremap ,lb :Lb<cr>
@@ -480,3 +482,5 @@ au BufNewFile,BufRead *.md
     \ set nocindent |
     \ set nosmartindent |
     \ set indentexpr=
+
+
