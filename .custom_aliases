@@ -202,3 +202,6 @@ alias aptupdate="sudo apt-get update && sudo apt-get -y upgrade"
 
 #nvim alias to ni
 alias ni=nvim
+
+#alias dict to dic
+alias dict=dic
