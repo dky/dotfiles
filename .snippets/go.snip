@@ -34,13 +34,21 @@ options     head
   package ${1:main}
   ${0:TARGET}
 
-snippet     printf
+snippet     fpf
 options     word
   fmt.Printf("${1}\n"${2:})
 
 snippet     fpl
 options     word
   fmt.Println(${0:TARGET})
+
+snippet     lpl
+options     word
+  log.Println("${1}", err)
+
+snippet     lfl
+options     word
+  log.Fatalln(err)
 
 snippet     fpf
 options     word
