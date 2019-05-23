@@ -115,7 +115,7 @@ imap <F1> <Esc>
 "requires exuberant-ctags, 
 "go - github.com/jstemmer/gotags
 nmap ,tb :TagbarToggle<CR>
-nmap <F6> :TagbarToggle<CR>
+nmap <Leader><F1> :TagbarToggle<CR>
 
 set wildignore+=*.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.*,go.mod,go.sum
 let NERDTreeRespectWildIgnore=1
@@ -195,7 +195,7 @@ let g:go_auto_sameids = 1
 let g:go_auto_type_info = 1
 let g:go_fmt_command = "goimports"
 "Shorter aliases for vim-go plugin
-au FileType go nmap <leader>gt :GoDeclsDir<CR>
+au FileType go nmap <leader>gt :GoDeclsDir
 au FileType go nmap <F12> <Plug>(go-def)
 
 cabbrev gi GoImport
@@ -299,7 +299,11 @@ nmap <Leader>C :ClangFormatAutoToggle<CR>
 set omnifunc=syntaxcomplete#Complete
 
 "Reload go for now. Until I read about other methods, this will have to do.
+au FileType go nmap <F5> :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<CR><CR>
+au FileType go imap <F5> <Esc> :w <CR> :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<CR><CR>
 nnoremap <silent> ,rg :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<CR><CR>
+au FileType go nmap <leader><F5> :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<CR><CR>
+au FileType go imap <leader><F5> <Esc> :w <CR> :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<CR><CR>
 nnoremap <silent> ,gr :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<CR><CR>
 nnoremap <silent> ,c :execute ":!tmux send-keys -t 3 C-c"<CR><CR>
 nnoremap <silent> ,dkps :execute ":!tmux send-keys -t 2 'docker ps' C-m"<CR><CR>
