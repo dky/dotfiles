@@ -300,7 +300,7 @@ nmap <Leader>C :ClangFormatAutoToggle<CR>
 
 set omnifunc=syntaxcomplete#Complete
 
-"Reload go for now. Until I read about other methods, this will have to do.
+" Use tmux-send keys to send commands to other panes.
 au FileType go nmap <F5> :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<CR><CR>
 au FileType go imap <F5> <Esc> :w <CR> :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<CR><CR>
 nnoremap <silent> ,rg :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<CR><CR>
@@ -308,6 +308,8 @@ au FileType go nmap ,<F5> :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<CR>
 au FileType go imap ,<F5> <Esc> :w <CR> :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<CR><CR>
 nnoremap <silent> ,gr :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<CR><CR>
 nnoremap <silent> ,c :execute ":!tmux send-keys -t 3 C-c"<CR><CR>
+nnoremap <silent> ,cl :execute ":!tmux send-keys -t 3 clear"<CR><CR>
+
 nnoremap <silent> ,dkps :execute ":!tmux send-keys -t 2 'docker ps' C-m"<CR><CR>
 nnoremap <silent> ,mpl :execute ":!tmux send-keys -t 2 'make post-linux' C-m"<CR><CR>
 nnoremap <silent> ,mpr :execute ":!tmux send-keys -t 2 'make post-registrator' C-m"<CR><CR>
@@ -315,7 +317,7 @@ nnoremap <silent> ,cl :execute ":!tmux send-keys -t 2 'clear' C-m"<CR><CR>
 nnoremap <silent> ,pa :execute ":!tmux send-keys -t 2 './apply.sh' C-m"<CR><CR>
 
 "Run the current file with rspec
-let g:VimuxPromptString = ":"
+let g:VimuxPromptString = "run: "
 map <Leader>rb :call VimuxRunCommand("clear; rspec " . bufname("%"))<CR>
 map <Leader>vp :VimuxPromptCommand<CR>
 map <Leader>vl :VimuxRunLastCommand<CR>
