@@ -156,8 +156,8 @@ nmap <c-l> 4l
 "nmap <c-k> O
 "fugitive
 nnoremap ,gs :Gstatus<CR>
-nnoremap ,gd :Git diff<CR>
-nnoremap <F11> :Git diff<CR>
+nnoremap ,gd :Gdiff<CR>
+nnoremap <F11> :Gdiff<CR>
 nnoremap ,<F11> :Gstatus<CR>
 nnoremap <silent> ,gpu :execute ":!git push origin master"<CR><CR>
 nnoremap <F9> :execute ":!git push origin master"<CR>
