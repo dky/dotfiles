@@ -115,7 +115,7 @@ imap <F1> <Esc>
 "requires exuberant-ctags, 
 "go - github.com/jstemmer/gotags
 nmap ,tb :TagbarToggle<CR>
-nmap <Leader><F1> :TagbarToggle<CR>
+nmap ,<F1> :TagbarToggle<CR>
 
 set wildignore+=*.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.*,go.mod,go.sum
 let NERDTreeRespectWildIgnore=1
@@ -302,8 +302,8 @@ set omnifunc=syntaxcomplete#Complete
 au FileType go nmap <F5> :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<CR><CR>
 au FileType go imap <F5> <Esc> :w <CR> :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<CR><CR>
 nnoremap <silent> ,rg :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<CR><CR>
-au FileType go nmap <leader><F5> :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<CR><CR>
-au FileType go imap <leader><F5> <Esc> :w <CR> :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<CR><CR>
+au FileType go nmap ,<F5> :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<CR><CR>
+au FileType go imap ,<F5> <Esc> :w <CR> :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<CR><CR>
 nnoremap <silent> ,gr :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<CR><CR>
 nnoremap <silent> ,c :execute ":!tmux send-keys -t 3 C-c"<CR><CR>
 nnoremap <silent> ,dkps :execute ":!tmux send-keys -t 2 'docker ps' C-m"<CR><CR>
@@ -486,5 +486,3 @@ au BufNewFile,BufRead *.md
     \ set nocindent |
     \ set nosmartindent |
     \ set indentexpr=
-
-
