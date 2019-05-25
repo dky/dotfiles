@@ -10,6 +10,10 @@ function color_my_prompt {
 		export PS1="$__user$__asterisk$__host $__cur_location $__git_branch_color$__git_branch$__prompt_tail$__last_color "
 }
 
+function pmin {
+	export PS1="👽$ "
+}
+
 color_my_prompt
 
 #docker functions
