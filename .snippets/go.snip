@@ -44,19 +44,15 @@ options     word
 
 snippet     lpf
 options     word
-  log.Printf("${1}", err)
+  log.Printf("${1}")
 
 snippet     lpl
 options     word
-  log.Println("${1}", err)
+  log.Println("${1}")
 
 snippet     lfl
 options     word
   log.Fatalln(err)
-
-snippet     fpf
-options     word
-  fmt.Printf(${0:TARGET})
 
 snippet     struct
 options     head
