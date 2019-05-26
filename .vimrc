@@ -197,7 +197,7 @@ let g:go_auto_sameids = 1
 let g:go_auto_type_info = 1
 let g:go_fmt_command = "goimports"
 "Shorter aliases for vim-go plugin
-au FileType go nmap <leader>gt :GoDeclsDir
+au FileType go nmap <leader>gt :GoDecls<CR>
 au FileType go nmap <F12> <Plug>(go-def)
 
 cabbrev gi GoImport
