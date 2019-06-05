@@ -47,6 +47,7 @@ Plug 'w0rp/ale'
 Plug 'takac/vim-hardtime'
 Plug 'roxma/vim-tmux-clipboard'
 Plug 'majutsushi/tagbar'
+Plug 'easymotion/vim-easymotion'
 "writing plugins
 Plug 'junegunn/goyo.vim'
 Plug 'reedes/vim-lexical'
@@ -175,10 +176,10 @@ inoremap <C-k> <C-o>O
 "inoremap <C-j> <C-o>}
 
 "surround markdown emphasis
-nnoremap ,yse ciw**<C-r>"**<Esc>
-nnoremap ,ysq ciw"<C-r>""<Esc>
-nnoremap ,yst ciw`<C-r>"`<Esc>
-nnoremap ,ysb ciw[<C-r>"]<Esc>
+nnoremap ,s* ciw**<C-r>"**<Esc>
+nnoremap ,s" ciw"<C-r>""<Esc>
+nnoremap ,s` ciw`<C-r>"`<Esc>
+nnoremap ,s[ ciw[<C-r>"]<Esc>
 
 "vim-go
 "Don't show warnings if we are not using nvim or > 7.4.1099, thanks RedHat...
@@ -490,3 +491,21 @@ au BufNewFile,BufRead *.md
     \ set nocindent |
     \ set nosmartindent |
     \ set indentexpr=
+
+"Easy motion
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+
+" Jump to anywhere you want with minimal keystrokes, with just one key binding.
+" `s{char}{label}`
+nmap s <Plug>(easymotion-overwin-f)
+" or
+" `s{char}{char}{label}`
+" Need one more keystroke, but on average, it may be more comfortable.
+nmap s <Plug>(easymotion-overwin-f2)
+
+" Turn on case-insensitive feature
+let g:EasyMotion_smartcase = 1
+
+" JK motions: Line motions
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
