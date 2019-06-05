@@ -198,13 +198,14 @@ let g:go_auto_sameids = 1
 let g:go_auto_type_info = 1
 let g:go_fmt_command = "goimports"
 "Shorter aliases for vim-go plugin
-au FileType go nmap <leader>gt :GoDecls<CR>
+au FileType go nmap <leader><F12> :GoDecls<CR>
 au FileType go nmap <F12> <Plug>(go-def)
 
 cabbrev gi GoImport
 cabbrev gd GoDrop
 cabbrev gf GoFmt
 cabbrev gt GoTest
+
 "vim-airline
 let g:airline_theme='papercolor'
 let g:airline#extensions#tabline#enabled=1
