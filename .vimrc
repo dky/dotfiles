@@ -494,5 +494,5 @@ au BufNewFile,BufRead *.md
     \ set indentexpr=
 
 let g:sneak#label = 1
-map f <Plug>Sneak_s
-map F <Plug>Sneak_S
+map ,s <Plug>Sneak_s
+map ,S <Plug>Sneak_S
