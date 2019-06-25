@@ -306,8 +306,8 @@ set omnifunc=syntaxcomplete#Complete
 au FileType go nmap <F5> :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<CR><CR>
 au FileType go imap <F5> <Esc> :w <CR> :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<CR><CR>
 nnoremap <silent> ,rg :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<CR><CR>
-au FileType go nmap ,<F5> :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<CR><CR>
-au FileType go imap ,<F5> <Esc> :w <CR> :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<CR><CR>
+au FileType go nmap <F5><F5> :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<CR><CR>
+au FileType go imap <F5><F5> <Esc> :w <CR> :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<CR><CR>
 nnoremap <silent> ,gr :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<CR><CR>
 nnoremap <silent> ,c :execute ":!tmux send-keys -t 3 C-c"<CR><CR>
 nnoremap <silent> ,cl :execute ":!tmux send-keys -t 3 clear"<CR><CR>
