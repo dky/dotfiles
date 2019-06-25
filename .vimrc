@@ -116,7 +116,7 @@ imap <F1> <Esc>
 "requires exuberant-ctags, 
 "go - github.com/jstemmer/gotags
 nmap ,tb :TagbarToggle<CR>
-nmap ,<F1> :TagbarToggle<CR>
+nmap <F1><F1> :TagbarToggle<CR>
 
 set wildignore+=*.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.*,go.mod,go.sum
 let NERDTreeRespectWildIgnore=1
