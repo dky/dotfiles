@@ -197,6 +197,7 @@ let g:go_highlight_build_constraints = 1
 let g:go_auto_sameids = 1
 let g:go_auto_type_info = 1
 let g:go_fmt_command = "goimports"
+let g:go_fmt_experimental = 1
 "Shorter aliases for vim-go plugin
 au FileType go nmap <leader><F12> :GoDecls<CR>
 au FileType go nmap <F12> <Plug>(go-def)
@@ -496,3 +497,9 @@ au BufNewFile,BufRead *.md
 let g:sneak#label = 1
 map ,s <Plug>Sneak_s
 map ,S <Plug>Sneak_S
+
+augroup remember_folds
+  autocmd!
+  autocmd BufWinLeave * mkview
+  autocmd BufWinEnter * silent! loadview
+augroup END
