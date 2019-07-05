@@ -23,6 +23,18 @@ options     head
    ${10}
    #Thoughts - Concious bits
 
+
+snippet     fm
+abbr        fm
+options     head
+   ---
+   title: ${1}
+   date: "`strftime("%Y-%m-%d")`"
+   tags: ["${2}"]
+   ---
+
+   ${3}
+
 snippet     hl
 abbr        hboil
 options     head
