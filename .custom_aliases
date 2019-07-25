@@ -162,6 +162,7 @@ alias exerf="exercism fetch"
 #terraform 
 alias tp="terraform plan"
 alias ta="terraform apply"
+alias tsrm="terraform state rm"
 
 #gcp
 alias gcl="gcloud config list"
@@ -205,3 +206,6 @@ alias ni=nvim
 
 #alias dict to dic
 alias dict=dic
+
+#unset proxy
+alias unsetproxy="unset HTTP_PROXY HTTPS_PROXY http_proxy https_proxy"
