@@ -59,6 +59,7 @@ Plug 'rhysd/vim-grammarous'
 "Customizations are stored in ~/.vim/after/colors/molokai.vim
 "https://stackoverflow.com/questions/10454038/setting-vim-omnicompletion-colors-pmenu-in-vimrc-not-working
 Plug 'dky/vim-aftercolors'
+Plug '907th/vim-auto-save'
 
 call plug#end()
 
@@ -387,18 +388,18 @@ augroup END
 "This is a mix of
 "command autocmd InsertLeave * write and this post
 "https://stackoverflow.com/questions/10394707/create-file-inside-new-directory-in-vim-in-one-step
-augroup insertLeaveWrite
-	autocmd!
-	autocmd InsertLeave * call s:auto_mkdir(expand('<afile>:p:h'), v:cmdbang)
-	function! s:auto_mkdir(dir, force)
-		if !isdirectory(a:dir)
-			call mkdir(iconv(a:dir, &encoding, &termencoding), 'p')
-			write
-		else
-			autocmd InsertLeave * write
-		endif
-	endfunction
-augroup END
+"augroup insertLeaveWrite
+	"autocmd!
+	"autocmd InsertLeave * call s:auto_mkdir(expand('<afile>:p:h'), v:cmdbang)
+	"function! s:auto_mkdir(dir, force)
+		"if !isdirectory(a:dir)
+			"call mkdir(iconv(a:dir, &encoding, &termencoding), 'p')
+			"write
+		"else
+			"autocmd InsertLeave * write
+		"endif
+	"endfunction
+"augroup END
 
 set cursorline
 "default colors for CursorLine
@@ -504,3 +505,7 @@ augroup remember_folds
   autocmd BufWinLeave * mkview
   autocmd BufWinEnter * silent! loadview
 augroup END
+
+
+let g:auto_save = 1  " enable AutoSave on Vim startup
+
