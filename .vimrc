@@ -44,7 +44,6 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'
-Plug 'takac/vim-hardtime'
 Plug 'roxma/vim-tmux-clipboard'
 Plug 'majutsushi/tagbar'
 Plug 'justinmk/vim-sneak'
@@ -371,10 +370,6 @@ let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const
 "deoplete tab completion
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
-"hardmode vim
-"let g:hardtime_default_on = 1
-"let g:hardtime_showmsg = 1
-"
 "create dir that does not exist on save
 "https://vi.stackexchange.com/questions/678/how-do-i-save-a-file-in-a-directory-that-does-not-yet-exist
 augroup createDirIfNoneExists
