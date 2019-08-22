@@ -163,6 +163,7 @@ alias exerf="exercism fetch"
 alias tp="terraform plan"
 alias ta="terraform apply"
 alias tsrm="terraform state rm"
+alias ti="terraform init"
 
 #gcp
 alias gcl="gcloud config list"
