@@ -44,7 +44,7 @@ function dkesh {
 	docker exec -it $1 /bin/sh
 }
 
-function sshnokey {
+function sshn {
 	echo "Usage: sshnokey host port"
 		sshhost=$1
 		sshport=$2
