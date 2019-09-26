@@ -501,6 +501,7 @@ augroup remember_folds
   autocmd BufWinEnter * silent! loadview
 augroup END
 
-
 let g:auto_save = 1  " enable AutoSave on Vim startup
-
+"https://github.com/Shougo/neosnippet.vim/issues/331
+"Autosave broke snippet expansion
+let g:neosnippet#enable_auto_clear_markers = 0
