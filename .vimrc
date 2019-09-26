@@ -502,6 +502,7 @@ augroup remember_folds
 augroup END
 
 let g:auto_save = 1  " enable AutoSave on Vim startup
-"https://github.com/Shougo/neosnippet.vim/issues/331
-"Autosave broke snippet expansion
+" Autosave broke snippet expansion
+" https://github.com/Shougo/neosnippet.vim/issues/331
+" :help g:neosnippet#enable_auto_clear_markers
 let g:neosnippet#enable_auto_clear_markers = 0
