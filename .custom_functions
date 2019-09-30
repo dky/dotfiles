@@ -11,7 +11,7 @@ function color_my_prompt {
 }
 
 function pmin {
-	export PS1="👽$ "
+	export PS1="🤓 "
 }
 
 color_my_prompt
