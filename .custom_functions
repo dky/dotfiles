@@ -60,6 +60,11 @@ function sshn {
 				ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $sshhost -p $sshport
 }
 
+function sshf {
+	host=$1
+	ssh-keygen -f "$HOME/.ssh/known_hosts" -R "$host"
+}
+
 function vsd {
 	vmname=$1
 		echo "looking up $vmname server id"
