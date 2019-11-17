@@ -496,8 +496,14 @@ map ,S <Plug>Sneak_S
 
 augroup remember_folds
   autocmd!
-  autocmd BufWinLeave * mkview
-  autocmd BufWinEnter * silent! loadview
+  "https://vi.stackexchange.com/questions/13864/bufwinleave-mkview-with-unnamed-file-error-32
+  "autocmd BufWinLeave * mkview
+  "autocmd BufWinEnter * silent! loadview
+  " view files are about 500 bytes
+  " bufleave but not bufwinleave captures closing 2nd tab
+  " nested is needed by bufwrite* (if triggered via other autocmd)
+  autocmd BufWinLeave,BufLeave,BufWritePost ?* nested silent! mkview!
+  autocmd BufWinEnter ?* silent! loadview
 augroup END
 
 let g:auto_save = 1  " enable AutoSave on Vim startup
