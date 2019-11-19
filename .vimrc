@@ -239,6 +239,7 @@ set laststatus=2
 silent! colorscheme molokai
 "use the same symbols as TextMate for tabstops and EOLs
 scriptencoding utf-8
+nnoremap <silent> ,cd :execute ":Codi"<CR>
 set encoding=utf-8
 set listchars=eol:¬,tab:▸-,trail:~,extends:>,precedes:<
 set list
