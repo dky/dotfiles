@@ -313,6 +313,8 @@ au FileType go imap <F5><F5> <Esc> :w <CR> :execute ":!tmux send-keys -t 3 'go r
 nnoremap <silent> ,gr :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<CR><CR>
 nnoremap <silent> ,c :execute ":!tmux send-keys -t 3 C-c"<CR><CR>
 nnoremap <silent> ,cl :execute ":!tmux send-keys -t 3 clear"<CR><CR>
+au FileType python nmap <F5> :execute ":!tmux send-keys -t bottom 'python *.py' C-m"<CR><CR>
+au FileType python imap <F5> <Esc> :w <CR> :execute ":!tmux send-keys -t bottom 'python *.py' C-m"<CR><CR>
 
 nnoremap <silent> ,dkps :execute ":!tmux send-keys -t 2 'docker ps' C-m"<CR><CR>
 nnoremap <silent> ,mpl :execute ":!tmux send-keys -t 2 'make post-linux' C-m"<CR><CR>
