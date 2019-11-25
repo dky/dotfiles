@@ -270,6 +270,8 @@ au BufNewFile,BufRead *.py
 			\ set autoindent | 
 			\ set fileformat=unix
 
+"Python help
+nnoremap <buffer> H :<C-u>execute "!pydoc3 " . expand("<cword>")<CR>
 "Python syntax highlighting
 let g:python_highlight_all = 1
 "Hashicorp fmt
