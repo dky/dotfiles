@@ -116,7 +116,8 @@ imap <F1> <Esc>
 "go - github.com/jstemmer/gotags
 nmap ,tb :TagbarToggle<CR>
 "nmap <F1><F1> :TagbarToggle<CR>
-au FileType go nmap <F1><F1> :TagbarToggle<CR>
+"Disabling TagbarToggle because this is buggy...
+"au FileType go nmap <F1><F1> :TagbarToggle<CR>
 
 set wildignore+=*.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.*,go.mod,go.sum
 let NERDTreeRespectWildIgnore=1
