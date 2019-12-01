@@ -127,7 +127,7 @@ let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 "Indent code
-nmap <F3> gg=G'.
+"nmap <F3> gg=G'.
 "tabs
 nmap ,t <Esc>:tabn<CR>
 nmap ,tp <Esc>:tabp<CR>
