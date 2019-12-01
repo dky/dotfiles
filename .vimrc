@@ -50,8 +50,6 @@ Plug 'justinmk/vim-sneak'
 Plug 'junegunn/goyo.vim'
 Plug 'reedes/vim-lexical'
 Plug 'reedes/vim-wordy'
-Plug 'dky/wordnet.vim'
-Plug 'rhysd/vim-grammarous'
 "Override colorscheme defaults, I needed this because the pmenu popup was too
 "dark and wanted to use a lighter popup color
 "Customizations are stored in ~/.vim/after/colors/molokai.vim
@@ -159,8 +157,6 @@ nmap <c-l> 4l
 "fugitive
 nnoremap ,gs :Gstatus<CR>
 nnoremap ,gd :Gdiff<CR>
-nnoremap <F11> :Gdiff<CR>
-nnoremap ,<F11> :Gstatus<CR>
 nnoremap <silent> ,gpu :execute ":!git push origin master"<CR><CR>
 nnoremap <F9> :execute ":!git push origin master"<CR>
 nnoremap ,gma :!git add . && git cm "
@@ -446,14 +442,6 @@ let g:lexical#thesaurus = ['~/.vim/thesaurus/mthesaur.txt',]
 let g:lexical#spell_key = '<leader>s'
 let g:lexical#dictionary_key = '<leader>k'
 
-"vim-grammarous
-"nmap <F8> :GrammarousCheck<CR>
-au FileType markdown nmap <F8> :GrammarousCheck<CR>
-hi GrammarousError ctermfg=white ctermbg=red
-hi GrammarousInfoError ctermfg=white ctermbg=blue
-hi GrammarousInfoSection ctermfg=white ctermbg=blue
-hi GrammarousInfoHelp ctermfg=white ctermbg=blue
-
 "proselint
 call ale#linter#Define('text', {
 \   'name': 'proselint',
@@ -464,9 +452,6 @@ call ale#linter#Define('text', {
 
 "restore me to the last position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
-
-"wordnet/dictionary lookup for F7 only on markdown files please.
-au FileType markdown nmap <F7> :call wordnet#overviews("<C-r>=expand("<cword>")<CR>")<CR>
 
 "Code Spacing
 "python spacing
