@@ -160,14 +160,17 @@ nmap <c-l> 4l
 "nmap <c-o> o
 "nmap <c-k> O
 "fugitive
-nnoremap ,gs :Gstatus<CR>
-nnoremap ,gd :Gdiff<CR>
 nnoremap <silent> ,gpu :execute ":!git push origin master"<CR><CR>
 nnoremap <F9> :execute ":!git push origin master"<CR>
 nnoremap ,gma :!git add . && git cm "
 nnoremap <F10> :!git add . && git cm "
 imap <F10> <Esc> :!git add . && git cm "
 nnoremap ,gpd :Git pull origin master<CR>
+
+cabbrev gco Git checkout %
+cabbrev gs Git status
+cabbrev gd Git diff
+cabbrev gpu Git push origin master
 
 "https://stackoverflow.com/questions/11037825/vim-get-out-of-parenthesis-brackets-etc
 inoremap <C-e> <C-o>A
