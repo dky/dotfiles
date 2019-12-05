@@ -146,6 +146,7 @@ nmap ,ch :CheckHealth<CR>
 nmap ,up :UpdateRemotePlugins<CR>
 "reload vim quickly
 nmap ,rv :source $MYVIMRC<CR>
+cabbrev rv source $MYVIMRC<CR>
 "map space rather than colon
 nmap <space> :
 "Shortcut for vundle
@@ -253,6 +254,7 @@ set list
 "neosnippets
 "reload snippets
 nnoremap ,rs :call neosnippet#variables#set_snippets({})<cr>
+cabbrev rs call neosnippet#variables#set_snippets({})<cr>
 
 let g:neosnippet#snippets_directory='~/.dotfiles/.snippets'
 let g:neosnippet#enable_snipmate_compatibility = 1
