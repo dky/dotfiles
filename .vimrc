@@ -278,6 +278,17 @@ au BufNewFile,BufRead *.py
 			\ set autoindent | 
 			\ set fileformat=unix
 
+" Ale linting for .py, ensure flake8 is installed with pip
+let b:ale_linters = ['flake8']
+let b:ale_fixers = [
+\   'remove_trailing_lines',
+\   'isort',
+\   'ale#fixers#generic_python#BreakUpLongLines',
+\   'yapf',
+\]
+
+let g:ale_fix_on_save = 1
+
 "Python help
 nnoremap <buffer> H :<C-u>execute "!pydoc3 " . expand("<cword>")<CR>
 "Python syntax highlighting
