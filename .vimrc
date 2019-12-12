@@ -101,6 +101,8 @@ au FileType python nmap <F8> :echo system('python3 "' . expand('%') . '"')<CR>
 au FileType python imap <F8> <Esc> :w <CR> :echo system('python3 "' . expand('%') . '"')<CR>
 au FileType javascript nmap <F8> :echo system('node "' . expand('%') . '"')<CR>
 au FileType javascript imap <F8> <Esc> :w <CR> :echo system('node "' . expand('%') . '"')<CR>
+au FileType coffee nmap <F8> :echo system('coffee "' . expand('%') . '"')<CR>
+au FileType coffee imap <F8> <Esc> :w <CR> :echo system('coffee "' . expand('%') . '"')<CR>
 au FileType sh nmap <F8> :echo system('bash "' . expand('%') . '"')<CR>
 au FileType c nmap <F8> :w <CR> :!gcc % -o %< && ./%< <CR>
 au FileType c imap <F8> <Esc> :w <CR> :!gcc % -o %< && ./%< <CR>
