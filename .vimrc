@@ -1,6 +1,8 @@
 set ruler
 set nocompatible
 set hidden
+filetype on
+
 call plug#begin('~/.vim/plugged')
 
 if has('nvim')
@@ -56,6 +58,7 @@ Plug 'reedes/vim-wordy'
 "https://stackoverflow.com/questions/10454038/setting-vim-omnicompletion-colors-pmenu-in-vimrc-not-working
 Plug 'dky/vim-aftercolors'
 Plug '907th/vim-auto-save'
+Plug 'kchmck/vim-coffee-script'
 
 call plug#end()
 
