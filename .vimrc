@@ -523,6 +523,7 @@ let g:neosnippet#enable_auto_clear_markers = 0
 
 inoremap " ""<left>
 "inoremap ' ''<left>
+inoremap ` ``<left>
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
