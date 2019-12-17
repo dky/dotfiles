@@ -200,3 +200,13 @@ function dic {
     wn $1 -over | fold
   fi
 }
+
+function unproxy {
+	unset HTTP_PROXY HTTPS_PROXY https_proxy http_proxy
+}
+
+function setproxy() {
+	proxy=$1
+	export http_proxy=http://$proxy:3128 && export https_proxy=http://$proxy:3128
+	export HTTP_PROXY=http://$proxy:3128 && export HTTPS_PROXY=http://$proxy:3128
+}
