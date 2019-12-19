@@ -287,6 +287,7 @@ au BufNewFile,BufRead *.py
 
 "Python help
 nnoremap <buffer> H :<C-u>execute "!pydoc3 " . expand("<cword>")<CR>
+cabbrev sfp set ft=python
 "Python syntax highlighting
 let g:python_highlight_all = 1
 "Hashicorp fmt
