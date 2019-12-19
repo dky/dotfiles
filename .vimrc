@@ -288,10 +288,10 @@ au BufNewFile,BufRead *.py
 "Python help
 nnoremap <buffer> H :<C-u>execute "!pydoc3 " . expand("<cword>")<CR>
 
-#Python add trailing space when using #
+"Python add trailing space when using #
 autocmd BufRead,BufNewFile *.py inoremap # #<space>
 
-#Quickly set file type
+"Quickly set file type
 cabbrev sfp set ft=python
 "Python syntax highlighting
 let g:python_highlight_all = 1
