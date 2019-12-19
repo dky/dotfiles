@@ -301,7 +301,7 @@ let g:ale_fixers['python'] = ['remove_trailing_lines', 'isort', 'ale#fixers#gene
 
 let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --no-semi'
 
-"let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 1
 
 let g:ale_sign_error = '●' " Less aggressive than the default '>>'
 let g:ale_sign_warning = '.'
@@ -522,7 +522,6 @@ augroup remember_folds
 augroup END
 
 let g:auto_save = 1  " enable AutoSave on Vim startup
-let g:auto_save_postsave_hook = 'AleFix'
 
 " Autosave broke snippet expansion
 " https://github.com/Shougo/neosnippet.vim/issues/331
