@@ -275,15 +275,6 @@ let g:vim_markdown_folding_disabled = 1
 "Spell checking on markdown
 "autocmd BufRead,BufNewFile *.md setlocal spell
 au BufReadPost *.gohtml set syntax=html
-"Python indentation/spacing
-au BufNewFile,BufRead *.py
-			\ set tabstop=4 |
-			\ set softtabstop=4 | 
-			\ set shiftwidth=4 | 
-			\ set textwidth=79 | 
-			\ set expandtab | 
-			\ set autoindent | 
-			\ set fileformat=unix
 
 "Python help
 nnoremap <buffer> H :<C-u>execute "!pydoc3 " . expand("<cword>")<CR>
@@ -537,7 +528,6 @@ let g:auto_save = 1  " enable AutoSave on Vim startup
 let g:neosnippet#enable_auto_clear_markers = 0
 
 inoremap " ""<left>
-"inoremap ' ''<left>
 inoremap ` ``<left>
 inoremap ( ()<left>
 inoremap [ []<left>
