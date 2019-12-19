@@ -404,22 +404,6 @@ augroup createDirIfNoneExists
 				\ call mkdir(expand("<afile>:p:h"), "p") |
 				\ endif
 augroup END
-"save everytime leave insert mode + also check for existence of file prior
-"This is a mix of
-"command autocmd InsertLeave * write and this post
-"https://stackoverflow.com/questions/10394707/create-file-inside-new-directory-in-vim-in-one-step
-"augroup insertLeaveWrite
-	"autocmd!
-	"autocmd InsertLeave * call s:auto_mkdir(expand('<afile>:p:h'), v:cmdbang)
-	"function! s:auto_mkdir(dir, force)
-		"if !isdirectory(a:dir)
-			"call mkdir(iconv(a:dir, &encoding, &termencoding), 'p')
-			"write
-		"else
-			"autocmd InsertLeave * write
-		"endif
-	"endfunction
-"augroup END
 
 set cursorline
 "default colors for CursorLine
