@@ -4,7 +4,6 @@ set hidden
 filetype on
 
 call plug#begin('~/.vim/plugged')
-
 if has('nvim')
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	"Go
@@ -61,7 +60,6 @@ Plug '907th/vim-auto-save'
 Plug 'kchmck/vim-coffee-script'
 Plug 'sheerun/vim-polyglot'
 
-
 call plug#end()
 
 "Disable backups and swap
@@ -88,11 +86,14 @@ set pastetoggle=<F2>
 set backspace=indent,eol,start
 set visualbell           "don't beep
 set noerrorbells         "don't beep
+
 "renamp esc to jk
 imap jk <Esc>
+
 "comment out blocks of code using nerdcommenter shortcut
 nmap <F7> <leader>c<space>
 vmap <F7> <leader>c<space>
+
 "no arrow keys
 nmap <left> <nop>
 nmap <right> <nop>
@@ -110,26 +111,21 @@ au FileType c nmap <F8> :w <CR> :!gcc % -o %< && ./%< <CR>
 au FileType c imap <F8> <Esc> :w <CR> :!gcc % -o %< && ./%< <CR>
 
 nmap <F4> :set number! <bar> :set relativenumber! <bar> :set list! <bar> :GitGutterSignsDisable<CR>
+
+"tagbar toggle
+nmap ,tb :TagbarToggle<CR>
+
+"map f1 vim help to esc, kept bringing up the help menu in insert mode
+imap <F1> <Esc>
+
 "nerdtree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-"let NERDTreeQuitOnOpen = 1
-let NERDTreeAutoDeleteBuffer = 1
-let NERDTreeIgnore = ['\.pyc$', '^__pycache__$']
 
 nmap ,nt :NERDTreeToggle<CR>
 nmap <F1> :NERDTreeToggle<CR>
-"map f1 vim help to esc
-imap <F1> <Esc>
 
-"tagbar toggle
-"requires exuberant-ctags, 
-"go - github.com/jstemmer/gotags
-nmap ,tb :TagbarToggle<CR>
-"nmap <F1><F1> :TagbarToggle<CR>
-"Disabling TagbarToggle because this is buggy...
-"au FileType go nmap <F1><F1> :TagbarToggle<CR>
-
+let NERDTreeIgnore = ['\.pyc$', '^__pycache__$']
 set wildignore+=*.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.*,go.mod,go.sum
 let NERDTreeRespectWildIgnore=1
 let NERDTreeMinimalUI = 1
@@ -139,35 +135,39 @@ let NERDTreeShowHidden = 0
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
-"Indent code
-"nmap <F3> gg=G'.
+let NERDTreeAutoDeleteBuffer = 1
+
 "tabs
 nmap ,t <Esc>:tabn<CR>
 nmap ,tp <Esc>:tabp<CR>
 nmap ,tn <Esc>:tab new<CR>
+
 "Nerdtree bookmark
 nmap ,nb :Bookmark
 nmap <leader>l :set list!<CR>
+
 "edit .vimrc quickly
 nmap ,ev :tabedit $HOME/.vimrc<CR>
 nmap ,ch :CheckHealth<CR>
 nmap ,up :UpdateRemotePlugins<CR>
+
 "reload vim quickly
 nmap ,rv :source $MYVIMRC<CR>
 cabbrev rv source $MYVIMRC<CR>
+
 "map space rather than colon
 nmap <space> :
+
 "Shortcut for vundle
 nmap ,bi :PlugInstall<CR>
 nmap ,gib :GoInstallBinaries<CR>
+
 "Navigate 4x faster when holding down Ctrl
 nmap <c-j> 4j
 nmap <c-k> 4k
 nmap <c-h> 4h
 nmap <c-l> 4l
 
-"nmap <c-o> o
-"nmap <c-k> O
 "fugitive
 nnoremap <silent> ,gpu :execute ":!git push origin master"<CR><CR>
 nnoremap <F9> :execute ":!git push origin master"<CR>
@@ -186,6 +186,7 @@ inoremap <C-e> <C-o>A
 inoremap <C-f> <C-o>l
 inoremap <C-j> <C-o>o
 inoremap <C-k> <C-o>O
+
 "Jump to next bracket/empty line
 "inoremap <C-j> <C-o>}
 
@@ -198,7 +199,6 @@ nnoremap ,s[ ciw[<C-r>"]<Esc>
 "vim-go
 "Don't show warnings if we are not using nvim or > 7.4.1099, thanks RedHat...
 let g:go_version_warning = 0
-
 let g:go_fmt_autosave = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_extra_types = 1
@@ -259,6 +259,7 @@ cabbrev ec Codi!
 set encoding=utf-8
 set listchars=eol:¬,tab:▸-,trail:~,extends:>,precedes:<
 set list
+
 "neosnippets
 "reload snippets
 nnoremap ,rs :call neosnippet#variables#set_snippets({})<cr>
@@ -266,12 +267,15 @@ cabbrev rs call neosnippet#variables#set_snippets({})<cr>
 
 let g:neosnippet#snippets_directory='~/.dotfiles/.snippets'
 let g:neosnippet#enable_snipmate_compatibility = 1
+
 imap <C-l> <Plug>(neosnippet_expand_or_jump)
 smap <C-l> <Plug>(neosnippet_expand_or_jump)
 xmap <C-l> <Plug>(neosnippet_expand_target)
 nnoremap <leader>rs :call neosnippet#variables#set_snippets({})<CR>
+
 "plasticboy vim markdown disable folding
 let g:vim_markdown_folding_disabled = 1
+
 "Spell checking on markdown
 "autocmd BufRead,BufNewFile *.md setlocal spell
 au BufReadPost *.gohtml set syntax=html
@@ -284,12 +288,10 @@ autocmd BufRead,BufNewFile *.py inoremap # #<space>
 
 "Quickly set file type
 cabbrev sfp set ft=python
+
 "Python syntax highlighting
 let g:python_highlight_all = 1
-"Hashicorp fmt
-let g:hcl_fmt_autosave = 0
-let g:tf_fmt_autosave = 0
-let g:nomad_fmt_autosave = 0
+
 "ale
 let g:ale_linters = {'go': ['gometalinter', 'gofmt'],}
 let g:ale_linters = {'javascript': ['eslint'],}
@@ -361,6 +363,7 @@ nmap <Leader>f :Files<CR>
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>h :History<CR>
 
+"Goyo
 cabbrev gy Goyo
 
 "This if block is required because I often jump on Redhat 7.x...
@@ -409,11 +412,8 @@ set cursorline
 "default colors for CursorLine
 "https://jonasjacek.github.io/colors
 hi CursorLine ctermbg=236
-"hi Cursor guibg=#A6E22E;
 "change Color when entering Insert Mode
-"autocmd InsertEnter * hi CursorLine ctermbg=237
 autocmd InsertEnter * hi CursorLine ctermbg=24
-"autocmd InsertEnter * hi Cursor guibg=#00AAFF;
 "revert Color to default when leaving Insert Mode
 autocmd InsertLeave * hi CursorLine ctermbg=236
 "autocmd InsertLeave * highlight  Cursor guibg=#A6E22E;" This 
@@ -460,7 +460,7 @@ call ale#linter#Define('text', {
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
 "Code Spacing
-"python spacing
+"python
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
     \ set softtabstop=4 |
@@ -470,7 +470,7 @@ au BufNewFile,BufRead *.py
     \ set autoindent |
     \ set fileformat=unix
 
-"go spacing
+"go
 au BufNewFile,BufRead *.go
     \ set noexpandtab |
     \ set tabstop=4 |
@@ -489,6 +489,7 @@ au BufNewFile,BufRead *.md
     \ set nosmartindent |
     \ set indentexpr=
 
+"vim sneak
 let g:sneak#label = 1
 map ,s <Plug>Sneak_s
 map ,S <Plug>Sneak_S
@@ -506,12 +507,12 @@ augroup remember_folds
 augroup END
 
 let g:auto_save = 1  " enable AutoSave on Vim startup
-
 " Autosave broke snippet expansion
 " https://github.com/Shougo/neosnippet.vim/issues/331
 " :help g:neosnippet#enable_auto_clear_markers
 let g:neosnippet#enable_auto_clear_markers = 0
 
+"Autoclose
 inoremap " ""<left>
 inoremap ` ``<left>
 inoremap ( ()<left>
