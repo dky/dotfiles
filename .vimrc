@@ -93,6 +93,24 @@ set backspace=indent,eol,start
 set visualbell           "don't beep
 set noerrorbells         "don't beep
 
+" set statusline at the bottom
+set laststatus=2
+
+" molokai colorscheme
+silent! colorscheme molokai
+
+" use the same symbols as TextMate for tabstops and EOLs
+scriptencoding utf-8
+
+set encoding=utf-8
+set listchars=eol:¬,tab:▸-,trail:~,extends:>,precedes:<
+set list
+
+" codi
+nnoremap <silent> ,cd :execute ":Codi"<CR>
+cabbrev oc Codi
+cabbrev ec Codi!
+
 " remap esc to jk
 imap jk <Esc>
 
@@ -252,18 +270,6 @@ let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
-" set statusline at the bottom
-set laststatus=2
-" molokai colorscheme
-silent! colorscheme molokai
-" use the same symbols as TextMate for tabstops and EOLs
-scriptencoding utf-8
-nnoremap <silent> ,cd :execute ":Codi"<CR>
-cabbrev oc Codi
-cabbrev ec Codi!
-set encoding=utf-8
-set listchars=eol:¬,tab:▸-,trail:~,extends:>,precedes:<
-set list
 
 " neosnippets
 " reload snippets
