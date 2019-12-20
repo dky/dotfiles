@@ -161,6 +161,10 @@ let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeAutoDeleteBuffer = 1
 
+" refresh nerdtree
+set autoread
+au CursorHold * if exists("t:NerdTreeBufName") | call <SNR>15_refreshRoot() | endif
+
 " tabs
 nmap ,t <Esc>:tabn<CR>
 nmap ,tp <Esc>:tabp<CR>
