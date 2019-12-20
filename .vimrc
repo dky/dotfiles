@@ -58,11 +58,10 @@ Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
 call plug#end()
 
+filetype on
 set ruler
 set nocompatible
 set hidden
-
-filetype on
 
 " no backups and swap
 set noswapfile
@@ -100,7 +99,7 @@ set laststatus=2
 " molokai colorscheme
 silent! colorscheme molokai
 
-" use the same symbols as TextMate for tabstops and EOLs
+" used for vimscripts
 scriptencoding utf-8
 
 set encoding=utf-8
@@ -278,6 +277,10 @@ cabbrev rs call neosnippet#variables#set_snippets({})<cr>
 
 let g:neosnippet#snippets_directory='~/.dotfiles/.snippets'
 let g:neosnippet#enable_snipmate_compatibility = 1
+" Autosave broke snippet expansion
+" https://github.com/Shougo/neosnippet.vim/issues/331
+" :help g:neosnippet#enable_auto_clear_markers
+let g:neosnippet#enable_auto_clear_markers = 0
 
 imap <C-l> <Plug>(neosnippet_expand_or_jump)
 smap <C-l> <Plug>(neosnippet_expand_or_jump)
@@ -509,9 +512,9 @@ map ,S <Plug>Sneak_S
 
 augroup remember_folds
   autocmd!
-  "https://vi.stackexchange.com/questions/13864/bufwinleave-mkview-with-unnamed-file-error-32
-  "autocmd BufWinLeave * mkview
-  "autocmd BufWinEnter * silent! loadview
+  " https://vi.stackexchange.com/questions/13864/bufwinleave-mkview-with-unnamed-file-error-32
+  " autocmd BufWinLeave * mkview
+  " autocmd BufWinEnter * silent! loadview
   " view files are about 500 bytes
   " bufleave but not bufwinleave captures closing 2nd tab
   " nested is needed by bufwrite* (if triggered via other autocmd)
@@ -520,10 +523,6 @@ augroup remember_folds
 augroup END
 
 let g:auto_save = 1  " enable AutoSave on Vim startup
-" Autosave broke snippet expansion
-" https://github.com/Shougo/neosnippet.vim/issues/331
-" :help g:neosnippet#enable_auto_clear_markers
-let g:neosnippet#enable_auto_clear_markers = 0
 
 " autoclose
 inoremap " ""<left>
