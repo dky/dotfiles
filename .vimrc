@@ -134,7 +134,8 @@ au FileType sh nmap <F8> :echo system('bash "' . expand('%') . '"')<CR>
 au FileType c nmap <F8> :w <CR> :!gcc % -o %< && ./%< <CR>
 au FileType c imap <F8> <Esc> :w <CR> :!gcc % -o %< && ./%< <CR>
 
-nmap <F4> :set number! <bar> :set relativenumber! <bar> :set list! <bar> :GitGutterSignsDisable<CR>
+" collapse all - nothing but editor
+nmap <F4> :set number! <bar> :set relativenumber! <bar> :set list! <bar> :GitGutterSignsDisable <bar> :Codi! <bar> :NERDTreeToggle<CR>
 
 " tagbar toggle
 nmap ,tb :TagbarToggle<CR>
