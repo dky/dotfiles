@@ -210,3 +210,8 @@ function setproxy() {
 	export http_proxy=http://$proxy:3128 && export https_proxy=http://$proxy:3128
 	export HTTP_PROXY=http://$proxy:3128 && export HTTPS_PROXY=http://$proxy:3128
 }
+
+mkcd () {
+  mkdir "$1"
+  cd "$1"
+}
