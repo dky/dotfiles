@@ -54,6 +54,7 @@ Plug 'dky/vim-aftercolors'
 Plug '907th/vim-auto-save'
 Plug 'kchmck/vim-coffee-script'
 Plug 'sheerun/vim-polyglot'
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
 call plug#end()
 
@@ -300,7 +301,7 @@ autocmd BufRead,BufNewFile *.py inoremap # #<space>
 cabbrev sfp set ft=python
 
 " Python syntax highlighting
-let g:python_highlight_all = 1
+"let g:python_highlight_all = 1
 
 " ale
 let g:ale_linters = {'go': ['gometalinter', 'gofmt'],}
