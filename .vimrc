@@ -1,16 +1,11 @@
-set ruler
-set nocompatible
-set hidden
-filetype on
-
 call plug#begin('~/.vim/plugged')
 if has('nvim')
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-	"Go
+	" Go
 	Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }
-	"Python
+	" Python
 	Plug 'zchee/deoplete-jedi'
-	"JS support
+	" JS
 	Plug 'carlitux/deoplete-ternjs'
 	Plug 'ternjs/tern_for_vim', { 'do': 'npm install -g tern' }
 else
@@ -47,14 +42,14 @@ Plug 'w0rp/ale'
 Plug 'roxma/vim-tmux-clipboard'
 Plug 'majutsushi/tagbar'
 Plug 'justinmk/vim-sneak'
-"writing plugins
+" writing plugins
 Plug 'junegunn/goyo.vim'
 Plug 'reedes/vim-lexical'
 Plug 'reedes/vim-wordy'
-"Override colorscheme defaults, I needed this because the pmenu popup was too
-"dark and wanted to use a lighter popup color
-"Customizations are stored in ~/.vim/after/colors/molokai.vim
-"https://stackoverflow.com/questions/10454038/setting-vim-omnicompletion-colors-pmenu-in-vimrc-not-working
+" Override colorscheme defaults, I needed this because the pmenu popup was too
+" dark and wanted to use a lighter popup color
+" Customizations are stored in ~/.vim/after/colors/molokai.vim
+" https://stackoverflow.com/questions/10454038/setting-vim-omnicompletion-colors-pmenu-in-vimrc-not-working
 Plug 'dky/vim-aftercolors'
 Plug '907th/vim-auto-save'
 Plug 'kchmck/vim-coffee-script'
@@ -62,39 +57,50 @@ Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
-"Disable backups and swap
+set ruler
+set nocompatible
+set hidden
+
+filetype on
+
+" no backups and swap
 set noswapfile
 set nobackup
-
 set number
 set relativenumber
-"Tab use 3 spaces
+
+" tab use 3 spaces
 set tabstop=3
 set shiftwidth=3
-"autocompletion
+
+" autocompletion
 set wildmode=list:longest
-"set autoindent
+
+" set autoindent
 set smartindent
-"split below
+
+" split below
 set splitbelow
 set hlsearch
 set incsearch
 set foldenable
-"enable paste mode for pasted code
+
+" enable paste mode for pasted code
 set pastetoggle=<F2>
-"Allow backspacing in insert mode
+
+" Allow backspacing in insert mode
 set backspace=indent,eol,start
 set visualbell           "don't beep
 set noerrorbells         "don't beep
 
-"renamp esc to jk
+" remap esc to jk
 imap jk <Esc>
 
-"comment out blocks of code using nerdcommenter shortcut
+" comment out blocks of code using nerdcommenter shortcut
 nmap <F7> <leader>c<space>
 vmap <F7> <leader>c<space>
 
-"no arrow keys
+" no l/r arrow keys
 nmap <left> <nop>
 nmap <right> <nop>
 
@@ -112,13 +118,13 @@ au FileType c imap <F8> <Esc> :w <CR> :!gcc % -o %< && ./%< <CR>
 
 nmap <F4> :set number! <bar> :set relativenumber! <bar> :set list! <bar> :GitGutterSignsDisable<CR>
 
-"tagbar toggle
+" tagbar toggle
 nmap ,tb :TagbarToggle<CR>
 
-"map f1 vim help to esc, kept bringing up the help menu in insert mode
+" map f1 vim help to esc, kept bringing up the help menu in insert mode
 imap <F1> <Esc>
 
-"nerdtree
+" nerdtree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
@@ -131,44 +137,44 @@ let NERDTreeRespectWildIgnore=1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeShowHidden = 0
-"let NERDTreeQuitOnOpen=1
+" let NERDTreeQuitOnOpen=1
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeAutoDeleteBuffer = 1
 
-"tabs
+" tabs
 nmap ,t <Esc>:tabn<CR>
 nmap ,tp <Esc>:tabp<CR>
 nmap ,tn <Esc>:tab new<CR>
 
-"Nerdtree bookmark
+" Nerdtree bookmark
 nmap ,nb :Bookmark
 nmap <leader>l :set list!<CR>
 
-"edit .vimrc quickly
+" edit .vimrc quickly
 nmap ,ev :tabedit $HOME/.vimrc<CR>
 nmap ,ch :CheckHealth<CR>
 nmap ,up :UpdateRemotePlugins<CR>
 
-"reload vim quickly
+" reload vim quickly
 nmap ,rv :source $MYVIMRC<CR>
 cabbrev rv source $MYVIMRC<CR>
 
-"map space rather than colon
+" map space rather than colon
 nmap <space> :
 
-"Shortcut for vundle
+" shortcut for vundle
 nmap ,bi :PlugInstall<CR>
 nmap ,gib :GoInstallBinaries<CR>
 
-"Navigate 4x faster when holding down Ctrl
+" navigate 4x faster when holding down Ctrl
 nmap <c-j> 4j
 nmap <c-k> 4k
 nmap <c-h> 4h
 nmap <c-l> 4l
 
-"fugitive
+" fugitive
 nnoremap <silent> ,gpu :execute ":!git push origin master"<CR><CR>
 nnoremap <F9> :execute ":!git push origin master"<CR>
 nnoremap ,gma :!git add . && git cm "
@@ -181,23 +187,20 @@ cabbrev gs Git status
 cabbrev gd Git diff
 cabbrev gpu Git push origin master
 
-"https://stackoverflow.com/questions/11037825/vim-get-out-of-parenthesis-brackets-etc
+" https://stackoverflow.com/questions/11037825/vim-get-out-of-parenthesis-brackets-etc
 inoremap <C-e> <C-o>A
 inoremap <C-f> <C-o>l
 inoremap <C-j> <C-o>o
 inoremap <C-k> <C-o>O
 
-"Jump to next bracket/empty line
-"inoremap <C-j> <C-o>}
-
-"surround markdown emphasis
+" surround markdown emphasis
 nnoremap ,s* ciw**<C-r>"**<Esc>
 nnoremap ,s" ciw"<C-r>""<Esc>
 nnoremap ,s` ciw`<C-r>"`<Esc>
 nnoremap ,s[ ciw[<C-r>"]<Esc>
 
-"vim-go
-"Don't show warnings if we are not using nvim or > 7.4.1099, thanks RedHat...
+" vim-go
+" Don't show warnings if we are not using nvim or > 7.4.1099, thanks RedHat...
 let g:go_version_warning = 0
 let g:go_fmt_autosave = 1
 let g:go_highlight_functions = 1
@@ -212,7 +215,8 @@ let g:go_auto_sameids = 1
 let g:go_auto_type_info = 1
 let g:go_fmt_command = "goimports"
 let g:go_fmt_experimental = 1
-"Shorter aliases for vim-go plugin
+
+" shorter aliases for vim-go plugin
 au FileType go nmap <leader><F12> :GoDecls<CR>
 au FileType go nmap <F12> <Plug>(go-def)
 
@@ -221,12 +225,13 @@ cabbrev gd GoDrop
 cabbrev gf GoFmt
 cabbrev gt GoTest
 
-"vim-airline
+" vim-airline
 let g:airline_theme='papercolor'
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#hunks#enabled=0
 let g:airline#extensions#branch#enabled=1
-"buffer tabs
+
+" buffer tabs
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
@@ -247,11 +252,11 @@ let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
-"set statusline at the bottom
+" set statusline at the bottom
 set laststatus=2
-"molokai colorscheme
+" molokai colorscheme
 silent! colorscheme molokai
-"use the same symbols as TextMate for tabstops and EOLs
+" use the same symbols as TextMate for tabstops and EOLs
 scriptencoding utf-8
 nnoremap <silent> ,cd :execute ":Codi"<CR>
 cabbrev oc Codi
@@ -260,8 +265,8 @@ set encoding=utf-8
 set listchars=eol:¬,tab:▸-,trail:~,extends:>,precedes:<
 set list
 
-"neosnippets
-"reload snippets
+" neosnippets
+" reload snippets
 nnoremap ,rs :call neosnippet#variables#set_snippets({})<cr>
 cabbrev rs call neosnippet#variables#set_snippets({})<cr>
 
@@ -273,26 +278,26 @@ smap <C-l> <Plug>(neosnippet_expand_or_jump)
 xmap <C-l> <Plug>(neosnippet_expand_target)
 nnoremap <leader>rs :call neosnippet#variables#set_snippets({})<CR>
 
-"plasticboy vim markdown disable folding
+" plasticboy vim markdown disable folding
 let g:vim_markdown_folding_disabled = 1
 
-"Spell checking on markdown
-"autocmd BufRead,BufNewFile *.md setlocal spell
+" Spell check markdown
+" autocmd BufRead,BufNewFile *.md setlocal spell
 au BufReadPost *.gohtml set syntax=html
 
-"Python help
+" Python help
 nnoremap <buffer> H :<C-u>execute "!pydoc3 " . expand("<cword>")<CR>
 
-"Python add trailing space when using #
+" Python add trailing space when using #
 autocmd BufRead,BufNewFile *.py inoremap # #<space>
 
-"Quickly set file type
+" quickly set file type
 cabbrev sfp set ft=python
 
-"Python syntax highlighting
+" Python syntax highlighting
 let g:python_highlight_all = 1
 
-"ale
+" ale
 let g:ale_linters = {'go': ['gometalinter', 'gofmt'],}
 let g:ale_linters = {'javascript': ['eslint'],}
 let g:ale_linters = {'python': ['flake8'],}
@@ -314,22 +319,23 @@ let g:ale_lint_on_save = 0
 
 let g:airline#extensions#ale#enabled = 1
 
-"Clangformat C code
+" clangformat C code
 let g:clang_format#style_options = {
 			\ "AccessModifierOffset" : -4,
 			\ "AllowShortIfStatementsOnASingleLine" : "true",
 			\ "AlwaysBreakTemplateDeclarations" : "true",
 			\ "Standard" : "C++11"}
 
-"map to <Leader>cf in C++ code
+" map to <Leader>cf in C++ code
 autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
 autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
-"Toggle auto formatting:
+
+" toggle auto formatting:
 nmap <Leader>C :ClangFormatAutoToggle<CR>
 
 set omnifunc=syntaxcomplete#Complete
 
-" Use tmux-send keys to send commands to other panes.
+" tmux-send keys to send commands to other panes.
 au FileType go nmap <F5> :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<CR><CR>
 au FileType go imap <F5> <Esc> :w <CR> :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<CR><CR>
 nnoremap <silent> ,rg :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<CR><CR>
@@ -347,7 +353,7 @@ nnoremap <silent> ,mpr :execute ":!tmux send-keys -t 2 'make post-registrator' C
 nnoremap <silent> ,cl :execute ":!tmux send-keys -t 2 'clear' C-m"<CR><CR>
 nnoremap <silent> ,pa :execute ":!tmux send-keys -t 2 './apply.sh' C-m"<CR><CR>
 
-"Run the current file with rspec
+" run the current file with rspec
 let g:VimuxPromptString = "run: "
 map <Leader>rb :call VimuxRunCommand("clear; rspec " . bufname("%"))<CR>
 map <Leader>vp :VimuxPromptCommand<CR>
@@ -357,17 +363,17 @@ map <Leader>vq :VimuxCloseRunner<CR>
 map <Leader>vx :VimuxInterruptRunner<CR>
 map <Leader>vz :call VimuxZoomRunner()<CR>
 
-"fzf
+" fzf
 nmap <Leader>F :GFiles<CR>
 nmap <Leader>f :Files<CR>
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>h :History<CR>
 
-"Goyo
+" goyo
 cabbrev gy Goyo
 
-"This if block is required because I often jump on Redhat 7.x...
-"deoplete.nvim recommend
+" Redhat 7.x deoplete support
+" deoplete.nvim recommend
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_ignore_case = 1
 let g:deoplete#enable_smart_case = 1
@@ -376,7 +382,7 @@ let g:deoplete#enable_refresh_always = 1
 let g:deoplete#max_abbr_width = 0
 let g:deoplete#max_menu_width = 0
 
-"tern
+" tern
 let g:tern_request_timeout = 1
 let g:tern_request_timeout = 6000
 let g:tern#command = ["tern"]
@@ -392,14 +398,15 @@ if has("noinsert")
 elseif has ("noselect")
 	set completeopt+=noselect
 endif
-"deoplete-go settings
+
+" deoplete-go
 let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
-"deoplete tab completion
+" deoplete tab completion
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
-"create dir that does not exist on save
-"https://vi.stackexchange.com/questions/678/how-do-i-save-a-file-in-a-directory-that-does-not-yet-exist
+" create dir that does not exist on save
+" https://vi.stackexchange.com/questions/678/how-do-i-save-a-file-in-a-directory-that-does-not-yet-exist
 augroup createDirIfNoneExists
 	autocmd!
 	autocmd BufWritePre *
@@ -409,33 +416,33 @@ augroup createDirIfNoneExists
 augroup END
 
 set cursorline
-"default colors for CursorLine
-"https://jonasjacek.github.io/colors
+" default colors for CursorLine
+" https://jonasjacek.github.io/colors
 hi CursorLine ctermbg=236
-"change Color when entering Insert Mode
+" change Color when entering Insert Mode
 autocmd InsertEnter * hi CursorLine ctermbg=24
-"revert Color to default when leaving Insert Mode
+" revert Color to default when leaving Insert Mode
 autocmd InsertLeave * hi CursorLine ctermbg=236
-"autocmd InsertLeave * highlight  Cursor guibg=#A6E22E;" This 
+" autocmd InsertLeave * highlight  Cursor guibg=#A6E22E;" This 
 hi LineNr ctermbg=236 ctermfg=246
 hi Visual ctermbg=190 ctermfg=16
 hi Comment ctermfg=43
-"search colors
+" search colors
 hi Search cterm=NONE ctermfg=white ctermbg=238
 
-"vim-logbook shortcuts
+" vim-logbook
 noremap ,lb :Lb<cr>
 noremap ,ts :Ts<cr>
 
-"Everything here deals with spelling and dictionary support
-"vim underline spelling errors don't color them.
+" spelling and dictionary support
+" vim underline spelling errors don't color them.
 hi clear SpellBad
 hi SpellBad cterm=underline ctermfg=red
 hi SpellCap cterm=underline ctermfg=yellow
 hi SpellLocal cterm=underline
 hi SpellRare cterm=underline
 
-"Configure vim-lexical plugin
+" vim-lexical
 augroup lexical
   autocmd!
   autocmd FileType markdown,mkd call lexical#init()
@@ -448,7 +455,7 @@ let g:lexical#thesaurus = ['~/.vim/thesaurus/mthesaur.txt',]
 let g:lexical#spell_key = '<leader>s'
 let g:lexical#dictionary_key = '<leader>k'
 
-"proselint
+" proselint
 call ale#linter#Define('text', {
 \   'name': 'proselint',
 \   'executable': 'proselint',
@@ -456,11 +463,11 @@ call ale#linter#Define('text', {
 \   'callback': 'ale#handlers#unix#HandleAsWarning',
 \})
 
-"restore me to the last position
+" restore last position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
-"Code Spacing
-"python
+" Code Spacing
+" python
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
     \ set softtabstop=4 |
@@ -470,14 +477,14 @@ au BufNewFile,BufRead *.py
     \ set autoindent |
     \ set fileformat=unix
 
-"go
+" go
 au BufNewFile,BufRead *.go
     \ set noexpandtab |
     \ set tabstop=4 |
     \ set softtabstop=4 |
     \ set shiftwidth=4
 
-"js, html, css
+" js, html, css
 au BufNewFile,BufRead *.js,*.html,*.css
     \ set tabstop=2 |
     \ set softtabstop=2 |
@@ -489,7 +496,7 @@ au BufNewFile,BufRead *.md
     \ set nosmartindent |
     \ set indentexpr=
 
-"vim sneak
+" vim sneak
 let g:sneak#label = 1
 map ,s <Plug>Sneak_s
 map ,S <Plug>Sneak_S
@@ -512,7 +519,7 @@ let g:auto_save = 1  " enable AutoSave on Vim startup
 " :help g:neosnippet#enable_auto_clear_markers
 let g:neosnippet#enable_auto_clear_markers = 0
 
-"Autoclose
+" autoclose
 inoremap " ""<left>
 inoremap ` ``<left>
 inoremap ( ()<left>
