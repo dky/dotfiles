@@ -1,7 +1,3 @@
-if (has("termguicolors"))
-  set termguicolors
-endif
-
 call plug#begin('~/.vim/plugged')
 if has('nvim')
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
