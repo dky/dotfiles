@@ -205,6 +205,7 @@ imap <F10> <Esc> :!git add . && git cm "
 nnoremap ,gpd :Git pull origin master<CR>
 
 cabbrev gco Git checkout %
+cabbrev grh Git reset --hard
 cabbrev gs Git status
 cabbrev gd Git diff
 cabbrev gpu Git push origin master
