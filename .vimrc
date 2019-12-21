@@ -111,6 +111,18 @@ nnoremap <silent> ,cd :execute ":Codi"<CR>
 cabbrev oc Codi
 cabbrev ec Codi!
 
+" close all buffers
+function! CloseAllBuffersButCurrent()
+	let curr = bufnr("%")
+	let last = bufnr("$")
+
+	if curr > 1    | silent! execute "1,".(curr-1)."bd"     | endif
+	if curr < last | silent! execute (curr+1).",".last."bd" | endif
+endfunction
+
+"nmap <Leader>c :call CloseAllBuffersButCurrent()<CR>
+cabbrev cab :call CloseAllBuffersButCurrent()<CR>
+
 " remap esc to jk
 imap jk <Esc>
 
@@ -459,10 +471,10 @@ hi SpellRare cterm=underline
 
 " vim-lexical
 augroup lexical
-  autocmd!
-  autocmd FileType markdown,mkd call lexical#init()
-  autocmd FileType textile call lexical#init()
-  autocmd FileType text call lexical#init({ 'spell': 0 })
+	autocmd!
+	autocmd FileType markdown,mkd call lexical#init()
+	autocmd FileType textile call lexical#init()
+	autocmd FileType text call lexical#init({ 'spell': 0 })
 augroup END
 
 let g:lexical#dictionary = ['/usr/share/dict/words','~/.vim/dict/custom.txt']
@@ -472,11 +484,11 @@ let g:lexical#dictionary_key = '<leader>k'
 
 " proselint
 call ale#linter#Define('text', {
-\   'name': 'proselint',
-\   'executable': 'proselint',
-\   'command': 'proselint %t',
-\   'callback': 'ale#handlers#unix#HandleAsWarning',
-\})
+			\   'name': 'proselint',
+			\   'executable': 'proselint',
+			\   'command': 'proselint %t',
+			\   'callback': 'ale#handlers#unix#HandleAsWarning',
+			\})
 
 " restore last position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
@@ -484,32 +496,32 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " Code Spacing
 " python
 au BufNewFile,BufRead *.py
-    \ set tabstop=4 |
-    \ set softtabstop=4 |
-    \ set shiftwidth=4 | 
-    \ set textwidth=79 |
-    \ set expandtab | 
-    \ set autoindent |
-    \ set fileformat=unix
+			\ set tabstop=4 |
+			\ set softtabstop=4 |
+			\ set shiftwidth=4 | 
+			\ set textwidth=79 |
+			\ set expandtab | 
+			\ set autoindent |
+			\ set fileformat=unix
 
 " go
 au BufNewFile,BufRead *.go
-    \ set noexpandtab |
-    \ set tabstop=4 |
-    \ set softtabstop=4 |
-    \ set shiftwidth=4
+			\ set noexpandtab |
+			\ set tabstop=4 |
+			\ set softtabstop=4 |
+			\ set shiftwidth=4
 
 " js, html, css
 au BufNewFile,BufRead *.js,*.html,*.css
-    \ set tabstop=2 |
-    \ set softtabstop=2 |
-    \ set shiftwidth=2
+			\ set tabstop=2 |
+			\ set softtabstop=2 |
+			\ set shiftwidth=2
 
 au BufNewFile,BufRead *.md
-    \ set noautoindent |
-    \ set nocindent |
-    \ set nosmartindent |
-    \ set indentexpr=
+			\ set noautoindent |
+			\ set nocindent |
+			\ set nosmartindent |
+			\ set indentexpr=
 
 " vim sneak
 let g:sneak#label = 1
@@ -517,15 +529,15 @@ map ,s <Plug>Sneak_s
 map ,S <Plug>Sneak_S
 
 augroup remember_folds
-  autocmd!
-  " https://vi.stackexchange.com/questions/13864/bufwinleave-mkview-with-unnamed-file-error-32
-  " autocmd BufWinLeave * mkview
-  " autocmd BufWinEnter * silent! loadview
-  " view files are about 500 bytes
-  " bufleave but not bufwinleave captures closing 2nd tab
-  " nested is needed by bufwrite* (if triggered via other autocmd)
-  autocmd BufWinLeave,BufLeave,BufWritePost ?* nested silent! mkview!
-  autocmd BufWinEnter ?* silent! loadview
+	autocmd!
+	" https://vi.stackexchange.com/questions/13864/bufwinleave-mkview-with-unnamed-file-error-32
+	" autocmd BufWinLeave * mkview
+	" autocmd BufWinEnter * silent! loadview
+	" view files are about 500 bytes
+	" bufleave but not bufwinleave captures closing 2nd tab
+	" nested is needed by bufwrite* (if triggered via other autocmd)
+	autocmd BufWinLeave,BufLeave,BufWritePost ?* nested silent! mkview!
+	autocmd BufWinEnter ?* silent! loadview
 augroup END
 
 let g:auto_save = 1  " enable AutoSave on Vim startup
