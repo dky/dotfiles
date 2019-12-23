@@ -1,4 +1,5 @@
 call plug#begin('~/.vim/plugged')
+
 if has('nvim')
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	" Go
@@ -88,7 +89,7 @@ set foldenable
 " enable paste mode for pasted code
 set pastetoggle=<F2>
 
-" Allow backspacing in insert mode
+" allow backspacing in insert mode
 set backspace=indent,eol,start
 set visualbell           "don't beep
 set noerrorbells         "don't beep
@@ -120,7 +121,7 @@ function! CloseAllBuffersButCurrent()
 	if curr < last | silent! execute (curr+1).",".last."bd" | endif
 endfunction
 
-"nmap <Leader>c :call CloseAllBuffersButCurrent()<CR>
+" Short for "Close all buffers" - Closes all open buffers except current.
 cabbrev cab :call CloseAllBuffersButCurrent()<CR>
 
 " remap esc to jk
@@ -146,8 +147,25 @@ au FileType sh nmap <F8> :echo system('bash "' . expand('%') . '"')<CR>
 au FileType c nmap <F8> :w <CR> :!gcc % -o %< && ./%< <CR>
 au FileType c imap <F8> <Esc> :w <CR> :!gcc % -o %< && ./%< <CR>
 
-" collapse all - nothing but editor
-nmap <F4> :set number! <bar> :set relativenumber! <bar> :set list! <bar> :GitGutterSignsDisable <bar> :Codi! <bar> :NERDTreeToggle<CR>
+" Disable line numbers, relative line numbers, Git Gutter and any spacing
+" symbols.
+function! NumberToggle()
+  if(&relativenumber == 1 && &number == 1 && &list == 1)
+    set norelativenumber
+    set nonumber
+    set nolist
+    GitGutterDisable
+  else
+    set relativenumber
+    set number
+    set list
+    GitGutterEnable
+  endif
+endfunc
+
+nnoremap <F4> :call NumberToggle()<cr>
+" Disable relative numbers
+cabbrev norel set relativenumber!
 
 " tagbar toggle
 nmap ,tb :TagbarToggle<CR>
@@ -163,11 +181,10 @@ nmap ,nt :NERDTreeToggle<CR>
 nmap <F1> :NERDTreeToggle<CR>
 
 let NERDTreeIgnore = ['\.pyc$', '\.go.mod$', '\.DS_Store$']
-let NERDTreeRespectWildIgnore=1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeShowHidden = 0
-" let NERDTreeQuitOnOpen=1
+let NERDTreeQuitOnOpen = 1
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
@@ -184,12 +201,14 @@ nmap ,tn <Esc>:tab new<CR>
 
 " Nerdtree bookmark
 nmap ,nb :Bookmark
-nmap <leader>l :set list!<CR>
 
 " edit .vimrc quickly
 nmap ,ev :tabedit $HOME/.vimrc<CR>
 nmap ,ch :CheckHealth<CR>
 nmap ,up :UpdateRemotePlugins<CR>
+" shortcut for vundle
+nmap ,bi :PlugInstall<CR>
+nmap ,gib :GoInstallBinaries<CR>
 
 " reload vim quickly
 nmap ,rv :source $MYVIMRC<CR>
@@ -197,10 +216,6 @@ cabbrev rv source $MYVIMRC<CR>
 
 " map space rather than colon
 nmap <space> :
-
-" shortcut for vundle
-nmap ,bi :PlugInstall<CR>
-nmap ,gib :GoInstallBinaries<CR>
 
 " navigate 4x faster when holding down Ctrl
 nmap <c-j> 4j
