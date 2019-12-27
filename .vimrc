@@ -182,7 +182,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 nmap ,nt :NERDTreeToggle<CR>
 nmap <F1> :NERDTreeToggle<CR>
 
-let NERDTreeIgnore = ['\.pyc$', '\.go.mod$', '\.DS_Store$']
+let NERDTreeIgnore = ['\.pyc$', '\.go.mod$', '\.DS_Store$', '__pycache__']
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeShowHidden = 0
