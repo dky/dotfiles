@@ -155,11 +155,13 @@ function! NumberToggle()
     set nonumber
     set nolist
     GitGutterDisable
+	 ALEToggle
   else
     set relativenumber
     set number
     set list
     GitGutterEnable
+	 ALEToggle
   endif
 endfunc
 
