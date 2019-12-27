@@ -340,7 +340,7 @@ cabbrev sfp set ft=python
 " Disabled because we use semshi...
 "let g:python_highlight_all = 1
 " Toggle ale on and off.
-cabbrev at :ALEToggle<CR>
+cabbrev at ALEToggle<CR>
 
 
 " ale
