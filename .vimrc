@@ -337,7 +337,11 @@ autocmd BufRead,BufNewFile *.py inoremap # #<space>
 cabbrev sfp set ft=python
 
 " Python syntax highlighting
+" Disabled because we use semshi...
 "let g:python_highlight_all = 1
+" Toggle ale on and off.
+cabbrev at :ALEToggle<CR>
+
 
 " ale
 let g:ale_linters = {'go': ['gometalinter', 'gofmt'],}
