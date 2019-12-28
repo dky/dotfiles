@@ -571,3 +571,9 @@ inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
+
+" semshi default highlight color SteelBlue3
+function MyCustomHighlights()
+	hi semshiSelected ctermfg=231 ctermbg=68
+endfunction
+autocmd FileType python call MyCustomHighlights()
