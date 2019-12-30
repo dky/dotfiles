@@ -577,3 +577,17 @@ function MyCustomHighlights()
 	hi semshiSelected ctermfg=231 ctermbg=68
 endfunction
 autocmd FileType python call MyCustomHighlights()
+
+" Function to copy current buffer into a new file without manually writing and
+" re-opening
+function! CopyCurrentFile()
+    let old_name = expand('%')
+    let new_name = input('New file name: ', expand('%'), 'file')
+    if new_name != '' && new_name != old_name
+        exec ':saveas ' . new_name
+        redraw!
+    endif
+endfunction
+
+map <leader>c :call CopyCurrentFile()<cr>
+cabbrev cp :call CopyCurrentFile()<CR>
