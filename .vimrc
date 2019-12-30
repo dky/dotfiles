@@ -582,7 +582,7 @@ autocmd FileType python call SemshiCustomHighlights()
 " re-opening
 function! CopyCurrentFile()
     let old_name = expand('%')
-    let new_name = input('New file name: ', expand('%'), 'file')
+    let new_name = input('New file name: ', )
     if new_name != '' && new_name != old_name
         exec ':saveas ' . new_name
         redraw!
@@ -590,4 +590,3 @@ function! CopyCurrentFile()
 endfunction
 
 map <leader>c :call CopyCurrentFile()<cr>
-cabbrev cp :call CopyCurrentFile()<CR>
