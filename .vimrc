@@ -573,10 +573,10 @@ inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 
 " semshi default highlight color SteelBlue3
-function MyCustomHighlights()
+function SemshiCustomHighlights()
 	hi semshiSelected ctermfg=231 ctermbg=68
 endfunction
-autocmd FileType python call MyCustomHighlights()
+autocmd FileType python call SemshiCustomHighlights()
 
 " Function to copy current buffer into a new file without manually writing and
 " re-opening
