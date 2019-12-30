@@ -122,7 +122,7 @@ function! CloseAllBuffersButCurrent()
 endfunction
 
 " Short for "Close all buffers" - Closes all open buffers except current.
-cabbrev cab :call CloseAllBuffersButCurrent()<CR>
+cabbrev cab call CloseAllBuffersButCurrent()<CR>
 
 " remap esc to jk
 imap jk <Esc>
@@ -589,4 +589,5 @@ function! CopyCurrentFile()
     endif
 endfunction
 
-map <leader>c :call CopyCurrentFile()<cr>
+map <leader>c call CopyCurrentFile()<cr>
+cabbrev cp call CopyCurrentFile()<cr>
