@@ -1,6 +1,8 @@
 call plug#begin('~/.vim/plugged')
 
 if has('nvim')
+	" pip3 install --user pynvim
+	" Do this at the OS level, then Run :UpdateRemotePlugins
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	" Go
 	Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }
