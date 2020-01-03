@@ -589,3 +589,19 @@ endfunction
 
 nnoremap <leader>c :call CopyCurrentFile()<cr>
 cabbrev cp call CopyCurrentFile()<cr>
+
+if has('nvim')
+	" map esc back to something sane in terminal mode.
+	tnoremap <Esc> <C-\><C-n>
+	" once you map esc you can't send esc key to the underlying program in the
+	" buffer. Map Alt+[ to send esc to the underlying program.
+	tnoremap <A-[> <Esc>
+	" alt+[h,j,k,l] for quickly switching between splits with terminals.
+	tnoremap <A-h> <c-\><c-n><c-w>h
+	tnoremap <A-j> <c-\><c-n><c-w>j
+	tnoremap <A-k> <c-\><c-n><c-w>k
+	tnoremap <A-l> <c-\><c-n><c-w>l
+endif
+
+" leader l to quickly switch buffers.
+nnoremap <leader>l :ls<CR>:b<space>
