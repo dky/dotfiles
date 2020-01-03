@@ -232,10 +232,15 @@ nnoremap <F10> :!git add . && git cm "
 imap <F10> <Esc> :!git add . && git cm "
 nnoremap ,gpd :Git pull origin master<CR>
 
-cabbrev gco Git checkout %
+cabbrev gco Git checkout
 cabbrev grh Git reset --hard
 cabbrev gs Git status
 cabbrev gd Git diff
+cabbrev gdiff Git diff
+cabbrev ga Git add .
+cabbrev gc Git commit
+cabbrev gb Git branch
+cabbrev gbc Git checkout -b
 cabbrev gpu Git push origin master
 
 " https://stackoverflow.com/questions/11037825/vim-get-out-of-parenthesis-brackets-etc
