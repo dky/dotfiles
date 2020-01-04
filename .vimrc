@@ -229,6 +229,11 @@ nnoremap <F9> :execute ":!git push origin master"<CR>
 nnoremap <F10> :!git add . && git cm "
 imap <F10> <Esc> :!git add . && git cm "
 
+func Eatchar(pat)
+   let c = nr2char(getchar(0))
+   return (c =~ a:pat) ? '' : c
+endfunc
+
 cabbrev gco Git checkout
 cabbrev grh Git reset --hard
 cabbrev gs Git status
@@ -239,7 +244,7 @@ cabbrev gc Git commit
 cabbrev gb Git branch
 cabbrev gbc Git checkout -b
 cabbrev gpu Git push origin master
-cabbrev gma Git add .<CR>:Git commit -m
+cabbrev gma Git add .<CR>:Git commit -mEatchar('\s')<CR>
 cabbrev gpd Git pull origin master
 cabbrev gl Git log --pretty --pretty=oneline
 
