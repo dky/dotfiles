@@ -246,7 +246,6 @@ cabbrev gc Git commit
 cabbrev gb Git branch
 cabbrev gbc Git checkout -b
 cabbrev gpu Git push origin master
-"cabbrev gma Git add .<CR>:Git commit -m ""<left>=Eatchar('\s')
 cabbrev gpd Git pull origin master
 cabbrev gl Git log --pretty --pretty=oneline
 cabbrev gma Git add .<CR>:Git commit -m ""<Left><C-R>=Eatchar('\s')<CR>
