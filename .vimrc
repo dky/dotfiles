@@ -229,6 +229,8 @@ nnoremap <F9> :execute ":!git push origin master"<CR>
 nnoremap <F10> :!git add . && git cm "
 imap <F10> <Esc> :!git add . && git cm "
 
+" This func is necessary to remove the additional whitespace added after
+" cabbrev, see cabbrev gma as an example
 func Eatchar(pat)
    let c = nr2char(getchar(0))
    return (c =~ a:pat) ? '' : c
