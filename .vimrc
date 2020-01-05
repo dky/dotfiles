@@ -9,6 +9,7 @@ if has('nvim')
 	" Python
 	Plug 'zchee/deoplete-jedi'
 	" JS
+	Plug 'ujihisa/neco-look'
 	Plug 'carlitux/deoplete-ternjs'
 	Plug 'ternjs/tern_for_vim', { 'do': 'npm install -g tern' }
 else
