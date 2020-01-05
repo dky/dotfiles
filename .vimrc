@@ -502,20 +502,24 @@ hi SpellCap cterm=underline ctermfg=yellow
 hi SpellLocal cterm=underline
 hi SpellRare cterm=underline
 
-" vim-lexical
-augroup lexical
-	autocmd!
-	autocmd FileType markdown,mkd call lexical#init()
-	autocmd FileType textile call lexical#init()
-	autocmd FileType text call lexical#init({ 'spell': 0 })
-augroup END
+" vim-lexical, we use a custom config so we aren't loading the gigantic
+" dictionary file we barely use. Using the default config for some reason
+" continues to load in /usr/local/dict/words by default...
 
-let g:lexical#dictionary = ['/usr/share/dict/words','~/.vim/dict/custom.txt']
-let g:lexical#thesaurus = ['~/.vim/thesaurus/mthesaur.txt',]
+command -nargs=0 CustomLexical call lexical#init({ 
+			\ 'spell': 1,
+			\ 'spelllang':  ['en'],
+			\ 'dictionary': ['~/.vim/dict/custom.txt'],
+			\ 'thesaurus':  ['~/.vim/thesaurus/mthesaur.txt'],
+			\ 'spellfile':  ['~/.vim/spell/en.utf-8.add'],
+			\ })
+
 let g:lexical#spell_key = '<leader>s'
-
 " map dictionary completion to F11.
 inoremap <F11> <C-X><C-K>
+
+" For all files with .md extension load CustomLexical above
+au BufReadPost,BufNewFile *.md CustomLexical
 
 " proselint
 call ale#linter#Define('text', {
@@ -595,12 +599,12 @@ autocmd FileType python call SemshiCustomHighlights()
 " Function to copy current buffer into a new file without manually writing and
 " re-opening
 function! CopyCurrentFile()
-    let old_name = expand('%')
-    let new_name = input('Copy to file name: ',)
-    if new_name != '' && new_name != old_name
-        exec ':saveas ' . new_name
-        redraw!
-    endif
+	let old_name = expand('%')
+	let new_name = input('Copy to file name: ',)
+	if new_name != '' && new_name != old_name
+		exec ':saveas ' . new_name
+		redraw!
+	endif
 endfunction
 
 nnoremap <leader>c :call CopyCurrentFile()<cr>
