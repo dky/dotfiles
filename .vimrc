@@ -513,7 +513,9 @@ augroup END
 let g:lexical#dictionary = ['/usr/share/dict/words','~/.vim/dict/custom.txt']
 let g:lexical#thesaurus = ['~/.vim/thesaurus/mthesaur.txt',]
 let g:lexical#spell_key = '<leader>s'
-let g:lexical#dictionary_key = '<leader>k'
+
+" map dictionary completion to F11.
+inoremap <F11> <C-X><C-K>
 
 " proselint
 call ale#linter#Define('text', {
