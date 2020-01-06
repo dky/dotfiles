@@ -9,6 +9,7 @@ if has('nvim')
 	" Python
 	Plug 'zchee/deoplete-jedi'
 	" JS
+	" neco-look is a plugin to auto expand dictionary words using `look`"
 	Plug 'ujihisa/neco-look'
 	Plug 'carlitux/deoplete-ternjs'
 	Plug 'ternjs/tern_for_vim', { 'do': 'npm install -g tern' }
