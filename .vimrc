@@ -13,6 +13,7 @@ if has('nvim')
 	Plug 'ujihisa/neco-look'
 	Plug 'carlitux/deoplete-ternjs'
 	Plug 'ternjs/tern_for_vim', { 'do': 'npm install -g tern' }
+	Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 else
 endif
 
@@ -51,6 +52,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'junegunn/goyo.vim'
 Plug 'reedes/vim-lexical'
 Plug 'reedes/vim-wordy'
+Plug 'johngrib/vim-mac-dictionary'
 " Override colorscheme defaults, I needed this because the pmenu popup was too
 " dark and wanted to use a lighter popup color
 " Customizations are stored in ~/.vim/after/colors/molokai.vim
@@ -59,7 +61,6 @@ Plug 'dky/vim-aftercolors'
 Plug '907th/vim-auto-save'
 Plug 'kchmck/vim-coffee-script'
 Plug 'sheerun/vim-polyglot'
-Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
 call plug#end()
 
@@ -234,8 +235,8 @@ imap <F10> <Esc> :!git add . && git cm "
 " This func is necessary to remove the additional whitespace added after
 " cabbrev, see cabbrev gma as an example
 func Eatchar(pat)
-   let c = nr2char(getchar(0))
-   return (c =~ a:pat) ? '' : c
+	let c = nr2char(getchar(0))
+	return (c =~ a:pat) ? '' : c
 endfunc
 
 cabbrev gco Git checkout
@@ -627,3 +628,7 @@ endif
 
 " leader l to quickly switch buffers.
 nnoremap <leader>l :ls<CR>:b<space>
+
+" macdictionary support
+cabbrev define MacDictWord<CR>
+cabbrev lu MacDictQuery
