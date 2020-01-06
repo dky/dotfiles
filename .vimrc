@@ -630,5 +630,5 @@ endif
 nnoremap <leader>l :ls<CR>:b<space>
 
 " macdictionary support
-cabbrev define MacDictWord<CR>
-cabbrev lu MacDictQuery
+cabbrev lu MacDictWord<CR>
+cabbrev define MacDictQuery
