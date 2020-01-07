@@ -509,7 +509,7 @@ hi SpellRare cterm=underline
 " dictionary file we barely use. Using the default config for some reason
 " continues to load in /usr/local/dict/words by default...
 
-command -nargs=0 CustomLexical call lexical#init({ 
+command! -nargs=0 CustomLexical call lexical#init({
 			\ 'spell': 1,
 			\ 'spelllang':  ['en'],
 			\ 'dictionary': ['~/.vim/dict/custom.txt'],
@@ -632,3 +632,11 @@ nnoremap <leader>l :ls<CR>:b<space>
 " macdictionary support
 cabbrev lu MacDictWord<CR>
 cabbrev define MacDictQuery
+
+" Wordy
+cabbrev ww Wordy weak
+cabbrev wp Wordy problematic
+cabbrev wr Wordy redundant
+cabbrev wadj Wordy adjectives
+cabbrev wadv Wordy adverbs
+cabbrev nw NoWordy
