@@ -265,6 +265,9 @@ nnoremap ,s* ciw**<C-r>"**<Esc>
 nnoremap ,s" ciw"<C-r>""<Esc>
 nnoremap ,s` ciw`<C-r>"`<Esc>
 nnoremap ,s[ ciw[<C-r>"]<Esc>
+"nnoremap <leader>d Vi S`
+"map <leader>d Vi,S`<CR>
+
 
 " vim-go
 " Don't show warnings if we are not using nvim or > 7.4.1099, thanks RedHat...
