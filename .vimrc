@@ -266,7 +266,7 @@ nnoremap ,s" ciw"<C-r>""<Esc>
 nnoremap ,s` ciw`<C-r>"`<Esc>
 nnoremap ,s[ ciw[<C-r>"]<Esc>
 
-map <leader>gcb VS`<CR>
+map <leader>gc VS`<CR>
 
 
 " vim-go
