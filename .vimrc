@@ -590,9 +590,9 @@ let g:auto_save = 1  " enable AutoSave on Vim startup
 " autoclose
 "inoremap " ""<left>
 "inoremap ` ``<left>
-"inoremap ( ()<left>
-"inoremap [ []<left>
-"inoremap { {}<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
 "inoremap {<CR> {<CR>}<ESC>O
 "inoremap {;<CR> {<CR>};<ESC>O
 
