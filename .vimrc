@@ -73,7 +73,7 @@ set hidden
 set noswapfile
 set nobackup
 set number
-set relativenumber
+"set relativenumber
 
 " tab use 3 spaces
 set tabstop=3
@@ -155,14 +155,15 @@ au FileType c imap <F8> <Esc> :w <CR> :!gcc % -o %< && ./%< <CR>
 " Disable line numbers, relative line numbers, Git Gutter and any spacing
 " symbols.
 function! NumberToggle()
-	if(&relativenumber == 1 && &number == 1 && &list == 1)
-		set norelativenumber
+	"if(&relativenumber == 1 && &number == 1 && &list == 1)
+	if(&number == 1 && &list == 1)
+		"set norelativenumber
 		set nonumber
 		set nolist
 		GitGutterDisable
 		ALEToggle
 	else
-		set relativenumber
+		"set relativenumber
 		set number
 		set list
 		GitGutterEnable
