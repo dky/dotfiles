@@ -114,11 +114,11 @@ else
 fi
 }
 
-function unproxy {
+function up {
 	unset HTTP_PROXY HTTPS_PROXY https_proxy http_proxy
 }
 
-function setproxy() {
+function sp() {
 	proxy=$1
 	export http_proxy=http://$proxy:3128 && export https_proxy=http://$proxy:3128
 	export HTTP_PROXY=http://$proxy:3128 && export HTTPS_PROXY=http://$proxy:3128
