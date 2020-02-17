@@ -266,6 +266,8 @@ nnoremap ,s* ciw**<C-r>"**<Esc>
 nnoremap ,s" ciw"<C-r>""<Esc>
 nnoremap ,s` ciw`<C-r>"`<Esc>
 nnoremap ,s[ ciw[<C-r>"]<Esc>
+nnoremap ,s( ciw(<C-r>")<Esc>
+nnoremap ,s{ ciw{<C-r>"}<Esc>
 
 map <leader>gc VS`<CR>
 
