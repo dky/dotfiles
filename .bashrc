@@ -8,7 +8,7 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 shopt -s histappend
 
 export LANG=en_US.UTF-8
-export PATH=$HOME/bin:$HOME/go/bin:/usr/local/sbin:/usr/local/go/bin:$PATH
+export PATH=$HOME/bin:$HOME/go/bin:/usr/local/sbin:/usr/local/go/bin:$HOME/.local/bin:$PATH
 
 [ -f ~/.fzf/bin/fzf -o -f /usr/local/bin/fzf ] && source ~/.fzf.bash
 [ -f ~/.custom_functions ] && source ~/.custom_functions
