@@ -12,15 +12,6 @@ snippet for
 snippet     pr
   print(${1})
 
-snippet     of1
-  #O(1) #Constant time
-
-snippet     ofn
-  #O(n) #Linear time
-
-snippet     oln
-   0(log n)0(log n¬)
-
 snippet     ifnm
    if __name__ == "__main__":
 
@@ -32,5 +23,7 @@ snippet    def
    def ${1}(${2}):
     ${3}
 
-snippet     _
-   __
+snippet    defs
+   def __str__(self${1}):
+    ${2}
+
