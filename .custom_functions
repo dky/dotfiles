@@ -129,6 +129,15 @@ mkcd () {
 	cd "$1"
 }
 
+# Django
+dasp () {
+	django-admin startproject "$1" .
+}
+
+pipei () {
+	pipenv install django==$1
+}
+
 function color {
 	case $1 in
 		green)

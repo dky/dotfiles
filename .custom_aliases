@@ -215,7 +215,5 @@ alias dict=dic
 #unset proxy
 alias unsetproxy="unset HTTP_PROXY HTTPS_PROXY http_proxy https_proxy"
 
-#django
-alias dsp="django-admin startproject $1 ."
-alias pipi="pip install django=$1"
-alias pips="pipenv shell"
+#pipenv
+alias pipes="pipenv shell"

@@ -12,6 +12,7 @@ export PATH=$HOME/bin:$HOME/go/bin:/usr/local/sbin:/usr/local/go/bin:$HOME/.loca
 
 [ -f ~/.fzf/bin/fzf -o -f /usr/local/bin/fzf ] && source ~/.fzf.bash
 [ -f ~/.custom_functions ] && source ~/.custom_functions
+[ -f ~/.custom_aliases ] && source ~/.custom_aliases
 [ -f ~/.dotfiles/z.sh ] && source ~/.dotfiles/z.sh
 
 # Don't exit the shell on ctrl+d
