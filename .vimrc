@@ -240,11 +240,19 @@ func Eatchar(pat)
 	return (c =~ a:pat) ? '' : c
 endfunc
 
+" Check to ensure we aren't in a nerdtree file browser when running command
+function! IsNerdTreeOpen(command_str)
+  if (expand('%') =~# 'NERD_tree' && winnr('$') > 1)
+    exe "normal! \<c-w>\<c-w>"
+  endif
+  exe 'normal! ' . a:command_str . "\<cr>"
+endfunction
+
+nnoremap <silent> <leader>gs :call IsNerdTreeOpen(':Git status')<CR>
+nnoremap <silent> <leader>gd :call IsNerdTreeOpen(':Git diff')<CR>
+
 cabbrev gco Git checkout
 cabbrev grh Git reset --hard
-cabbrev gs Git status
-cabbrev gd Git diff
-cabbrev gdiff Git diff
 cabbrev ga Git add .
 cabbrev gc Git commit
 cabbrev gb Git branch
