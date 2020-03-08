@@ -432,11 +432,14 @@ map <Leader>vq :VimuxCloseRunner<CR>
 map <Leader>vx :VimuxInterruptRunner<CR>
 map <Leader>vz :call VimuxZoomRunner()<CR>
 
-" fzf
-nmap <Leader>F :GFiles<CR>
-nmap <Leader>f :Files<CR>
-nmap <Leader>b :Buffers<CR>
-nmap <Leader>h :History<CR>
+" fzf - check first to make sure we aren't in a nerdtree buffer
+"nmap <Leader>F :GFiles<CR>
+nnoremap <silent> <expr> <Leader>F (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":GFiles\<cr>"
+"nmap <Leader>f :Files<CR>
+nnoremap <silent> <expr> <Leader>f (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Files\<cr>"
+"nmap <Leader>b :Buffers<CR>
+nnoremap <silent> <expr> <Leader>b (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Buffers\<cr>"
+"nmap <Leader>h :History<CR>
 
 " goyo
 cabbrev gy Goyo
