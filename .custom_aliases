@@ -218,3 +218,4 @@ alias pipes="pipenv shell"
 
 #codebreakers
 alias cbd="cd ~/git/cb/daily"
+alias cb="cd ~/git/cb"
