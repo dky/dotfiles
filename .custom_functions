@@ -138,6 +138,16 @@ pipei () {
 	pipenv install django==$1
 }
 
+mkt () {
+	date_today=$(date +%m-%d-%y)
+	if [ -d "$date_today" ];
+	then
+		echo "This dir exists!"
+	else
+		mkdir $date_today && cd $date_today
+	fi
+}
+
 function color {
 	case $1 in
 		green)
