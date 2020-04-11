@@ -207,7 +207,7 @@ au CursorHold * if exists("t:NerdTreeBufName") | call <SNR>15_refreshRoot() | en
 nmap ,nb :Bookmark
 
 " edit .vimrc quickly
-nmap ,ev :tabedit $HOME/.vimrc<CR>
+nmap ,ev :tabedit $HOME/.dotfiles/.vimrc<CR>
 nmap ,ch :CheckHealth<CR>
 nmap ,up :UpdateRemotePlugins<CR>
 " shortcut for vundle
@@ -251,6 +251,8 @@ endfunction
 nnoremap <silent> <leader>gs :call IsNerdTreeOpen(':Git status')<CR>
 nnoremap <silent> <leader>gd :call IsNerdTreeOpen(':Git diff')<CR>
 
+cabbrev gs Git status
+cabbrev gd Git diff
 cabbrev gco Git checkout
 cabbrev grh Git reset --hard
 cabbrev ga Git add .
