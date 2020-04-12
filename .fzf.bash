@@ -12,3 +12,13 @@ fi
 # ------------
 source "$HOME/.fzf/shell/key-bindings.bash"
 
+
+#determines search program for fzf
+#ag = silver_searcher/rg = ripgrep
+if type ag &> /dev/null; then
+	export FZF_DEFAULT_COMMAND='ag -p ~/.gitignore -g ""'
+fi
+#refer rg over ag
+if type rg &> /dev/null; then
+	export FZF_DEFAULT_COMMAND='rg --files --hidden'
+fi
