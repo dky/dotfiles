@@ -44,7 +44,7 @@ function dkesh {
 	docker exec -it $1 /bin/sh
 }
 
-rl() {
+function rl() {
 	docker run --rm -v /var/run/docker.sock:/var/run/docker.sock assaflavie/runlike $1
 }
 
@@ -81,7 +81,7 @@ function lb() {
 
 # Use FZF to switch Tmux sessions:
 # bind-key s run "tmux new-window 'bash -ci fs'"
-fs() {
+function fs() {
 	local -r fmt='#{session_id}:|#S|(#{session_attached} attached)'
 	{ tmux display-message -p -F "$fmt" && tmux list-sessions -F "$fmt"; } \
 	| awk '!seen[$1]++' \
@@ -91,7 +91,7 @@ fs() {
 		| xargs tmux switch-client -t
 }
 
-gignore() {
+function gignore() {
 tee .gitignore <<EOF
 main
 
@@ -99,7 +99,7 @@ main
 EOF
 }
 
-gitpc() {
+function gitpc() {
 GIT_HOOKS="./.git/hooks"
 if [ -d $GIT_HOOKS ]; then
 	echo "./git/hooks exists, creating post-commit script"
@@ -124,21 +124,21 @@ function sp() {
 	export HTTP_PROXY=http://$proxy:3128 && export HTTPS_PROXY=http://$proxy:3128
 }
 
-mkcd () {
+function mkcd () {
 	mkdir "$1"
 	cd "$1"
 }
 
 # Django
-dasp () {
+function dasp () {
 	django-admin startproject "$1" .
 }
 
-pipei () {
+function pipei () {
 	pipenv install django==$1
 }
 
-mkt () {
+function mkt () {
 	date_today=$(date +%m-%d-%y)
 	if [ -d "$date_today" ];
 	then
