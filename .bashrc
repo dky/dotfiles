@@ -10,6 +10,13 @@ shopt -s histappend
 export LANG=en_US.UTF-8
 export PATH=$HOME/bin:$HOME/go/bin:/usr/local/sbin:/usr/local/go/bin:$HOME/.local/bin:$PATH
 
+function pet-select() {
+  BUFFER=$(pet search --query "$READLINE_LINE")
+  READLINE_LINE=$BUFFER
+  READLINE_POINT=${#BUFFER}
+}
+bind -x '"\C-x\C-x": pet-select'
+
 [ -f ~/.fzf/bin/fzf -o -f /usr/local/bin/fzf ] && source ~/.fzf.bash
 [ -f ~/.custom_functions ] && source ~/.custom_functions
 [ -f ~/.custom_aliases ] && source ~/.custom_aliases
