@@ -217,5 +217,5 @@ alias unsetproxy="unset HTTP_PROXY HTTPS_PROXY http_proxy https_proxy"
 alias pipes="pipenv shell"
 
 #codebreakers
-alias cbd="cd ~/git/cb/daily"
-alias cb="cd ~/git/cb"
+alias cdcbd="cd ~/git/cb/daily"
+alias cdcb="cd ~/git/cb"
