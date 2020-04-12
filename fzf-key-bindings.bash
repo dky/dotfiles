@@ -16,6 +16,15 @@
 __fzf_select__() {
   local cmd="${FZF_CTRL_T_COMMAND:-"command find -L . -mindepth 1 \\( -path '*/\\.*' -o -fstype 'sysfs' -o -fstype 'devfs' -o -fstype 'devtmpfs' -o -fstype 'proc' \\) -prune \
     -o -name Music -prune \
+    -o -name go -prune \
+    -o -name logbook -prune \
+    -o -name Library -prune \
+    -o -name Pictures -prune \
+    -o -name Public -prune \
+    -o -name Movies -prune \
+    -o -name Applications -prune \
+    -o -name .git -prune \
+    -o -name '*.bz2' -prune \
     -o -type f -print \
     -o -type d -print \
     -o -type l -print 2> /dev/null | cut -b3-"}"
