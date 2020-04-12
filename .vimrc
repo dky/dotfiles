@@ -366,8 +366,10 @@ nnoremap <buffer> H :<C-u>execute "!pydoc3 " . expand("<cword>")<CR>
 " Python add trailing space when using #
 autocmd BufRead,BufNewFile *.py inoremap # #<space>
 
-" quickly set file type
-cabbrev sfp set ft=python
+" quickly set file type, python, bash, shell
+cabbrev setftp set ft=python
+cabbrev setfts set ft=sh
+cabbrev setftb set ft=sh
 
 " Python syntax highlighting
 " Disabled because we use semshi...
