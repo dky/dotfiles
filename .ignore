@@ -9,8 +9,12 @@ Public
 Library
 Desktop
 google-cloud-sdk
-
+Documents/.localized
+.pytest_cache
 
 # Files
 .DS_Store
 *.bz2
+.git
+.pyenv
+.lib
