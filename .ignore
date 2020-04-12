@@ -1,0 +1,15 @@
+# Directories
+logbook
+bin
+Pictures
+Movies
+Applications
+Public
+Library
+Desktop
+google-cloud-sdk
+
+
+# Files
+.DS_Store
+*.bz2
