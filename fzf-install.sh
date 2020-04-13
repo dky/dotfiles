@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# Quick script to get fzf installed by cloning the source and running the provided install script.
 
 FZF_DIR=~/.fzf
 
