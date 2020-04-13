@@ -681,3 +681,9 @@ nnoremap <C-k> :tabnext<CR>
 map <leader>cd :lcd %:h<CR>
 " Open files located in the same dir in with the current file is edited
 map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
+
+" Experimenting with tabs
+nmap tp :tabp<cr>
+nmap tn :tabn<cr>
+nmap <C-t> :tabnew<cr>
+nmap <C-w> :tabclose<cr>
