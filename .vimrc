@@ -675,3 +675,9 @@ nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
 nnoremap <C-j> :tabprevious<CR>
 nnoremap <C-k> :tabnext<CR>
+
+" 'cd' towards the dir in which the current file is edited
+" but only change the path for the current window
+map <leader>cd :lcd %:h<CR>
+" Open files located in the same dir in with the current file is edited
+map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
