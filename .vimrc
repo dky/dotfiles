@@ -683,7 +683,10 @@ map <leader>cd :lcd %:h<CR>
 map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
 
 " Experimenting with tabs
+" tp "tab previous in normal mode"
 nmap tp :tabp<cr>
+" tn "tab next in normal mode"
 nmap tn :tabn<cr>
+" control-t for new tab, control-w to close, similar to browser
 nmap <C-t> :tabnew<cr>
 nmap <C-w> :tabclose<cr>
