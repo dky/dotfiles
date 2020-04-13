@@ -375,7 +375,7 @@ cabbrev setftb set ft=sh
 " Python syntax highlighting
 " Disabled because we use semshi...
 "let g:python_highlight_all = 1
-" Toggle ale on and off.
+" Toggle ale on and off. At was for ale toggle...
 cabbrev at ALEToggle<CR>
 
 
@@ -454,7 +454,11 @@ nnoremap <silent> <expr> <Leader>f (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" 
 "nmap <Leader>b :Buffers<CR>
 nnoremap <silent> <expr> <Leader>b (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Buffers\<cr>"
 "nmap <Leader>h :History<CR>
-"
+
+" ctrl+f brings up fzf
+" ctrl-t on a file brings up in new tab
+" ctrl-i on a file splits horizontally.
+" ctrl-v on a file splits vertically.
 nnoremap <C-f> :FZF<CR>
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
@@ -613,7 +617,7 @@ augroup END
 
 let g:auto_save = 1  " enable AutoSave on Vim startup
 
-" autoclose
+" autoclose for only certain strings/braces
 "inoremap " ""<left>
 "inoremap ` ``<left>
 inoremap ( ()<left>
@@ -639,9 +643,11 @@ function! CopyCurrentFile()
 	endif
 endfunction
 
+" Quickly copy a file in the buffer
 nnoremap <leader>c :call CopyCurrentFile()<cr>
 cabbrev cp call CopyCurrentFile()<cr>
 
+" Experiments with nvim terminal
 if has('nvim')
 	" map esc back to something sane in terminal mode.
 	tnoremap <Esc> <C-\><C-n>
