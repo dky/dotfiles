@@ -670,12 +670,6 @@ cabbrev wadj Wordy adjectives
 cabbrev wadv Wordy adverbs
 cabbrev nw NoWordy
 
-" Experimenting with ctrl left/right or ctrl k/j to switch tabs
-nnoremap <C-Left> :tabprevious<CR>
-nnoremap <C-Right> :tabnext<CR>
-nnoremap <C-j> :tabprevious<CR>
-nnoremap <C-k> :tabnext<CR>
-
 " 'cd' towards the dir in which the current file is edited
 " but only change the path for the current window
 map <leader>cd :lcd %:h<CR>
