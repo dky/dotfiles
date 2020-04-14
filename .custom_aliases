@@ -220,3 +220,11 @@ alias pipes="pipenv shell"
 #codebreakers
 alias cdcbd="cd ~/git/cb/daily"
 alias cdcb="cd ~/git/cb"
+
+#cd shortcuts
+alias ..='cd ..'
+alias ...='cd ..; cd ..'
+alias ....='cd ..; cd ..; cd ..'
+
+alias q=’exit’
+
