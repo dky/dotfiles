@@ -228,3 +228,5 @@ alias ....='cd ..; cd ..; cd ..'
 
 alias q=’exit’
 
+#cd configs
+alias cdconf="cd ~/.config"
