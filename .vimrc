@@ -690,3 +690,8 @@ nmap tn :tabn<cr>
 " control-t for new tab, control-w to close, similar to browser
 nmap <C-t> :tabnew<cr>
 nmap <C-w> :tabclose<cr>
+
+" Aliases for jumping around quickly
+cabbrev cdcb cd $HOME/git/cb<CR>
+cabbrev cdcbd cd $HOME/git/cb/daily<CR>
+cabbrev cdgit cd $HOME/git<CR>
