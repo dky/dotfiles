@@ -695,3 +695,4 @@ nmap <C-w> :tabclose<cr>
 cabbrev cdcb cd $HOME/git/cb<CR>
 cabbrev cdcbd cd $HOME/git/cb/daily<CR>
 cabbrev cdgit cd $HOME/git<CR>
+cabbrev cddot cd $HOME/.dotfiles<CR>
