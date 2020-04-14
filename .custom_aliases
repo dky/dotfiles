@@ -226,7 +226,7 @@ alias ..='cd ..'
 alias ...='cd ..; cd ..'
 alias ....='cd ..; cd ..; cd ..'
 
-alias q=’exit’
+alias q="logout"
 
 #cd configs
 alias cdconf="cd ~/.config"
