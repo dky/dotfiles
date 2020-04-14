@@ -304,10 +304,10 @@ let g:go_fmt_experimental = 1
 au FileType go nmap <leader><F12> :GoDecls<CR>
 au FileType go nmap <F12> <Plug>(go-def)
 
-cabbrev gi GoImport
-cabbrev gd GoDrop
-cabbrev gf GoFmt
-cabbrev gt GoTest
+cabbrev goi GoImport
+cabbrev god GoDrop
+cabbrev gof GoFmt
+cabbrev got GoTest
 
 " vim-airline
 let g:airline_theme='papercolor'
