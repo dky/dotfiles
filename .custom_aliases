@@ -232,8 +232,9 @@ alias q="logout"
 alias cdconf="cd ~/.config"
 
 # pet aliases
+alias ptedit="pet edit"
 alias ptl="pet list"
-alias pted="pet edit"
-alias pte="pet exec"
-alias ptf="pet search"
+alias pts="pet search"
 alias ptn="pet new"
+alias pte="pet exec"
+alias ptsc="pet search | pbcopy"
