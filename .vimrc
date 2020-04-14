@@ -697,3 +697,6 @@ cabbrev cdcbd cd $HOME/git/cb/daily<CR>
 cabbrev cdgit cd $HOME/git<CR>
 cabbrev cddot cd $HOME/.dotfiles<CR>
 cabbrev cdh cd $HOME<CR>
+
+" Create a directory with current date
+cabbrev mkd :!mkdir $HOME/git/cb/daily/<C-r>=strftime("%m-%d-%y")<cr><cr>
