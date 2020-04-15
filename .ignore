@@ -11,6 +11,7 @@ Desktop
 google-cloud-sdk
 Documents/.localized
 .pytest_cache
+.fzf
 
 # Files
 .DS_Store
