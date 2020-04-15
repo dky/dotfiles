@@ -21,3 +21,6 @@ Documents/.localized
 .git
 .pyenv
 .lib
+*.mp3
+*.mp4
+*.m4v
