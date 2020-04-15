@@ -231,8 +231,8 @@ nmap <c-l> 4l
 
 " fugitive
 nnoremap <F9> :execute ":!git push origin master"<CR>
-nnoremap <F10> :!git add . && git commit "
-imap <F10> <Esc> :!git add . && git commit "
+nnoremap <F10> :!git add . && git commit -a -m "
+imap <F10> <Esc> :!git add . && git commit -a -m "
 
 " This func is necessary to remove the additional whitespace added after
 " cabbrev, see cabbrev gma as an example
