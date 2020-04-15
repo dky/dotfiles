@@ -692,11 +692,11 @@ nmap <C-t> :tabnew<cr>
 nmap <C-w> :tabclose<cr>
 
 " Aliases for jumping around quickly
-cabbrev cdcb cd $HOME/git/cb<CR>
-cabbrev cdcbd cd $HOME/git/cb/daily<CR>
-cabbrev cdgit cd $HOME/git<CR>
-cabbrev cddot cd $HOME/.dotfiles<CR>
-cabbrev cdh cd $HOME<CR>
-
+cabbrev cdh cd $HOME<cr>
+cabbrev cdgit cd $HOME/git<cr>
+cabbrev cddot cd $HOME/.dotfiles<cr>
+cabbrev cddot cdconf $HOME/.config<cr>
 " Create a directory with current date
+cabbrev cdcb cd $HOME/git/cb<cr>
 cabbrev mkd :!mkdir $HOME/git/cb/daily/<C-r>=strftime("%m-%d-%y")<cr><cr>
+cabbrev cdcbd cd $HOME/git/cb/daily/<C-r>=strftime("%m-%d-%y")<cr><cr>
