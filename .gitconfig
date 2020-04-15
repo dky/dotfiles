@@ -4,9 +4,6 @@
 [push]
 	default = matching
 [alias]
-	a = add .
-	cm = commit -am
-	pu = push origin master
 	lb = for-each-ref --sort='-authordate:iso8601' --format='%(authordate:relative)%09%(refname:short)' refs/heads
 [credential]
 	helper = cache --timeout 86400
