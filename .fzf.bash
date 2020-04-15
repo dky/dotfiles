@@ -12,11 +12,7 @@ source "$HOME/.dotfiles/.fzf/key-bindings.bash"
 
 # Which search program to use for fzf
 # This is only used if you use fzf command from shell, won't be called with ctrl-t
-# ag = silver_searcher
 # rg = ripgrep
-if type ag &> /dev/null; then
-	export FZF_DEFAULT_COMMAND='ag -p ~/.gitignore -g ""'
-fi
-if type rg &> /dev/null; then
-	export FZF_DEFAULT_COMMAND='rg --files --hidden'
-fi
+export FZF_DEFAULT_OPTS='--height=70% --preview="cat {}" --preview-window=right:60%:wrap'
+export FZF_DEFAULT_COMMAND='rg --files --hidden'
+export FZF_CTRL_T_COMMAND='$FZF_DEFAULT_COMMAND'
