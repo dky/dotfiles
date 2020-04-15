@@ -12,6 +12,8 @@ google-cloud-sdk
 Documents/.localized
 .pytest_cache
 .fzf
+.local
+.Trash
 
 # Files
 .DS_Store
