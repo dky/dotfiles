@@ -14,5 +14,3 @@ source "$HOME/.dotfiles/.fzf/key-bindings.bash"
 # This is only used if you use fzf command from shell, won't be called with ctrl-t
 # rg = ripgrep
 export FZF_DEFAULT_OPTS='--height=90% --preview="cat {}" --preview-window=down:60%:wrap'
-export FZF_DEFAULT_COMMAND='rg --files --hidden'
-export FZF_CTRL_T_COMMAND='$FZF_DEFAULT_COMMAND'
