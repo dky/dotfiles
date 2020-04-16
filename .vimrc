@@ -229,11 +229,6 @@ nmap <c-k> 4k
 nmap <c-h> 4h
 nmap <c-l> 4l
 
-" fugitive
-nnoremap <F9> :execute ":!git push origin master"<CR>
-nnoremap <F10> :!git add . && git commit -a -m "
-imap <F10> <Esc> :!git add . && git commit -a -m "
-
 " This func is necessary to remove the additional whitespace added after
 " cabbrev, see cabbrev gma as an example
 func Eatchar(pat)
@@ -251,6 +246,11 @@ endfunction
 
 nnoremap <silent> <leader>gs :call IsNerdTreeOpen(':Git status')<CR>
 nnoremap <silent> <leader>gd :call IsNerdTreeOpen(':Git diff')<CR>
+
+" fugitive
+nnoremap <F9> :execute ":!git push origin master"<CR>
+nnoremap <F10> :!git add . && git commit -a -m "
+imap <F10> <Esc> :!git add . && git commit -a -m "
 
 cabbrev gs Git status
 cabbrev gd Git diff
