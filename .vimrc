@@ -700,3 +700,6 @@ cabbrev cdconf cdconf $HOME/.config<cr>
 cabbrev cdcb cd $HOME/git/cb<cr>
 cabbrev mkd :!mkdir $HOME/git/cb/daily/<C-r>=strftime("%m-%d-%y")<cr><cr>
 cabbrev cdcbd cd $HOME/git/cb/daily/<C-r>=strftime("%m-%d-%y")<cr><cr>
+
+" Hugo make public
+cabbrev mp :!make public<cr><cr>
