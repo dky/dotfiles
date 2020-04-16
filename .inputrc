@@ -1,4 +1,3 @@
-# Remap Ctrl-x Ctrl-e to edit command history commands with just Ctrl-e
+# Remap Ctrl-x Ctrl-e to edit command history commands with just Ctrl-g
+# Hopefully ctrl-g isn't mapped to anything specific, remove if issues arise.
 "\C-g": edit-and-execute-command
-# Ctrl-x + Ctrl-x to pet select
-"\C-x\C-x": pet-select
