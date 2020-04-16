@@ -256,7 +256,7 @@ cabbrev gs Git status
 cabbrev gd Git diff
 cabbrev gco Git checkout
 cabbrev grh Git reset --hard
-cabbrev ga Git add .
+cabbrev ga Git add
 cabbrev gcm Git commit -m ""<Left><C-R>=Eatchar('\s')<CR>
 cabbrev gb Git branch
 cabbrev gbc Git checkout -b
@@ -264,7 +264,7 @@ cabbrev gpu Git push origin master
 cabbrev gpd Git pull origin master
 cabbrev gl Git log --pretty --pretty=oneline
 cabbrev gcma Git add .<CR>:Git commit -m ""<Left><C-R>=Eatchar('\s')<CR>
-cabbrev gamend Git commit --amend
+cabbrev gam Git commit --amend
 
 " https://stackoverflow.com/questions/11037825/vim-get-out-of-parenthesis-brackets-etc
 inoremap <C-e> <C-o>A
