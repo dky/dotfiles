@@ -704,4 +704,6 @@ cabbrev cdcbd cd $HOME/git/cb/daily/<C-r>=strftime("%m-%d-%y")<cr><cr>
 " Hugo make public
 cabbrev mp :!make public<cr><cr>
 
-command! -range FmtSh <line1>!format_shell_cmd.py
+" Shell command formatter, call this when editing ugly shell one liners with
+" ctr-e
+command! -range Fmtsh <line1>!format_shell_cmd.py
