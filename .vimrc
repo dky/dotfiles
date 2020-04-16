@@ -695,7 +695,7 @@ nmap <C-w> :tabclose<cr>
 cabbrev cdh cd $HOME<cr>
 cabbrev cdgit cd $HOME/git<cr>
 cabbrev cddot cd $HOME/.dotfiles<cr>
-cabbrev cddot cdconf $HOME/.config<cr>
+cabbrev cdconf cdconf $HOME/.config<cr>
 " Create a directory with current date
 cabbrev cdcb cd $HOME/git/cb<cr>
 cabbrev mkd :!mkdir $HOME/git/cb/daily/<C-r>=strftime("%m-%d-%y")<cr><cr>
