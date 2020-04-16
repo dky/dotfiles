@@ -15,7 +15,6 @@ function pet-select() {
   READLINE_LINE=$BUFFER
   READLINE_POINT=${#BUFFER}
 }
-bind -x '"\C-x\C-x": pet-select'
 
 [ -f ~/.fzf/bin/fzf -o -f /usr/local/bin/fzf ] && source ~/.fzf.bash
 [ -f ~/.custom_functions ] && source ~/.custom_functions
