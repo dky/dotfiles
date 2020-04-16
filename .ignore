@@ -15,6 +15,9 @@ Documents/.localized
 .local
 .Trash
 .dotnet
+.bash_sessions
+.terraform.d
+.cups
 
 # Files
 .DS_Store
@@ -25,3 +28,7 @@ Documents/.localized
 *.mp3
 *.mp4
 *.m4v
+*.graffle
+*.doc
+*.iso
+*.vmdk
