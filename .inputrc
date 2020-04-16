@@ -1,1 +1,2 @@
+# Remap Ctrl-x Ctrl-e to edit command history commands with just Ctrl-e
 "\C-e": edit-and-execute-command
