@@ -703,7 +703,7 @@ cabbrev cdcb cd $HOME/git/cb<cr>
 "cabbrev cdd cd $HOME/git/cb/daily/<C-r>=strftime("%m-%d-%y")<cr><cr>
 "Replace both commands above with a single function to create directory and cd
 "into it.
-function! CreateCodeBreakersDaily()
+function! CreateDailyFolder()
 	let tstamp = strftime("%m-%d-%y")
 	let folderpath = $HOME."/git/cb/daily/".tstamp
 	let cmd = 'cd ' . folderpath
@@ -717,7 +717,7 @@ function! CreateCodeBreakersDaily()
 	endif
 endfunction
 
-nnoremap cdd :call CreateCodeBreakersDaily()<cr>
+nnoremap cdd :call CreateDailyFolder()<cr>
 
 " Hugo make public
 cabbrev mp :!make public<cr><cr>
