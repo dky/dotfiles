@@ -707,9 +707,14 @@ function! CreateCodeBreakersDaily()
 	let tstamp = strftime("%m-%d-%y")
 	let folderpath = $HOME."/git/cb/daily/".tstamp
 	let cmd = 'cd ' . folderpath
-	echo 'Creating and changing directory to:' folderpath
-	call mkdir(folderpath, 'p')
-	execute cmd
+	if !isdirectory(folderpath)
+		echo 'Dir does not exist, creating:' folderpath
+		call mkdir(folderpath, 'p')
+		echo 'Switching working dir to:' folderpath
+	else
+		echo 'Switching working dir to:' folderpath
+		execute cmd
+	endif
 endfunction
 
 nnoremap cdd :call CreateCodeBreakersDaily()<cr>
