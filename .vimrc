@@ -698,8 +698,21 @@ cabbrev cddot cd $HOME/.dotfiles<cr>
 cabbrev cdconf cdconf $HOME/.config<cr>
 " Create a directory with current date
 cabbrev cdcb cd $HOME/git/cb<cr>
-cabbrev mkd :!mkdir $HOME/git/cb/daily/<C-r>=strftime("%m-%d-%y")<cr><cr>
-cabbrev cdd cd $HOME/git/cb/daily/<C-r>=strftime("%m-%d-%y")<cr><cr>
+
+"cabbrev mkd :!mkdir $HOME/git/cb/daily/<C-r>=strftime("%m-%d-%y")<cr><cr>
+"cabbrev cdd cd $HOME/git/cb/daily/<C-r>=strftime("%m-%d-%y")<cr><cr>
+"Replace both commands above with a single function to create directory and cd
+"into it.
+function! CreateCodeBreakersDaily()
+	let tstamp = strftime("%m-%d-%y")
+	let folderpath = $HOME."/git/cb/daily/".tstamp
+	let cmd = 'cd ' . folderpath
+	echo 'Creating and changing directory to:' folderpath
+	call mkdir(folderpath, 'p')
+	execute cmd
+endfunction
+
+nnoremap cdd :call CreateCodeBreakersDaily()<cr>
 
 " Hugo make public
 cabbrev mp :!make public<cr><cr>
