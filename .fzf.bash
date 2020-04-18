@@ -10,9 +10,17 @@ fi
 # Customizations are handled in .dotfiles/.fzf/key-bindings.bash
 source "$HOME/.dotfiles/.fzf/key-bindings.bash"
 
-# Which search program to use for fzf
-# This is only used if you use fzf command from shell, won't be called with ctrl-t
-# rg = ripgrep
+fzf_then_open_in_editor() {
+	local file=$(fzf-tmux)
+	# Open the file if it exists
+	if [ -n "$file" ]; then
+		# Use the default editor if it's defined, otherwise Vim
+		${EDITOR:-vim} "$file"
+	fi
+}
+
+# Disable ctr-t in .fzf/key-bindings.bash and override with this function which opens a file directly in vim when ctrl-t is used.
+bind -x '"\C-t": fzf_then_open_in_editor'
 
 export FZF_DEFAULT_OPTS='--height=90% --preview="cat {}" --preview-window=down:60%:wrap --color fg:-1,bg:-1,hl:230,fg+:3,bg+:233,hl+:229 --color info:150,prompt:110,spinner:150,pointer:167,marker:174'
 

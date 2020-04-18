@@ -81,10 +81,11 @@ if [ "${BASH_VERSINFO[0]}" -lt 4 ]; then
   bind -m vi-command '"\C-r": "\C-z\C-r\C-z"'
   bind -m vi-insert '"\C-r": "\C-z\C-r\C-z"'
 else
+  # Don't use these, use the fzf_then_open_in_editor function override in .fzf.bash
   # CTRL-T - Paste the selected file path into the command line
-  bind -m emacs-standard -x '"\C-t": fzf-file-widget'
-  bind -m vi-command -x '"\C-t": fzf-file-widget'
-  bind -m vi-insert -x '"\C-t": fzf-file-widget'
+  #bind -m emacs-standard -x '"\C-t": fzf-file-widget'
+  #bind -m vi-command -x '"\C-t": fzf-file-widget'
+  #bind -m vi-insert -x '"\C-t": fzf-file-widget'
 
   # CTRL-R - Paste the selected command from history into the command line
   bind -m emacs-standard -x '"\C-r": __fzf_history__'
