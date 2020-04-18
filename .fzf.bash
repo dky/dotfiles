@@ -15,5 +15,5 @@ source "$HOME/.dotfiles/.fzf/key-bindings.bash"
 # rg = ripgrep
 export FZF_DEFAULT_OPTS='--height=90% --preview="cat {}" --preview-window=down:60%:wrap'
 export FZF_DEFAULT_COMMAND="find . \
-	\( -name Music -o -name logbook -o -name Library -o -name Pictures -o -name Public -o -name Movies -o -name Applications -o -name Downloads \) -prune \
+	\( -name Music -o -name logbook -o -name Library -o -name Pictures -o -name Public -o -name Movies -o -name Applications -o -name Downloads -o -name .git \) -prune \
 	-o -type f -print"

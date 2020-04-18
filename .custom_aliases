@@ -238,3 +238,6 @@ alias pts="pet search"
 alias ptn="pet new"
 alias pte="pet exec"
 alias ptsc="pet search | pbcopy"
+
+# nvim + fzf
+alias nf='nvim $(fzf)'
