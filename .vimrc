@@ -455,6 +455,10 @@ nnoremap <silent> <expr> <Leader>f (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" 
 "nmap <Leader>b :Buffers<CR>
 nnoremap <silent> <expr> <Leader>b (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Buffers\<cr>"
 "nmap <Leader>h :History<CR>
+" In insert mode if ctrl+f use blines to search for string in file.
+inoremap <C-f> <Esc><Esc>:BLines!<cr>
+" ctrl+g opens git commit browser
+nnoremap <C-g> :BCommits!<cr>
 
 " ctrl+f brings up fzf
 " ctrl-t on a file brings up in new tab
