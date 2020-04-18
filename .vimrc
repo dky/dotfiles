@@ -628,8 +628,6 @@ let g:auto_save = 1  " enable AutoSave on Vim startup
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
-"inoremap {<CR> {<CR>}<ESC>O
-"inoremap {;<CR> {<CR>};<ESC>O
 
 " semshi default highlight color SteelBlue3
 function SemshiCustomHighlights()
@@ -706,8 +704,7 @@ cabbrev cdcb cd $HOME/git/cb<cr>
 
 "cabbrev mkd :!mkdir $HOME/git/cb/daily/<C-r>=strftime("%m-%d-%y")<cr><cr>
 "cabbrev cdd cd $HOME/git/cb/daily/<C-r>=strftime("%m-%d-%y")<cr><cr>
-"Replace both commands above with a single function to create directory and cd
-"into it.
+"Replace both commands above with a single function to create directory and cd into it.
 function! CreateDailyFolder()
 	let tstamp = strftime("%m-%d-%y")
 	let folderpath = $HOME."/git/cb/daily/".tstamp
@@ -722,11 +719,10 @@ function! CreateDailyFolder()
 	endif
 endfunction
 
-nnoremap cdd :call CreateDailyFolder()<cr>
+nnoremap mkd :call CreateDailyFolder()<cr>
 
 " Hugo make public
 cabbrev mp :!make public<cr><cr>
 
-" Shell command formatter, call this when editing ugly shell one liners with
-" ctr-e
+" Shell command formatter, call this when editing ugly shell one liners with ctr-g
 command! -range Fmtsh <line1>!format_shell_cmd.py
