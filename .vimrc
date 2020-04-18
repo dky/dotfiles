@@ -722,7 +722,7 @@ endfunction
 nnoremap mkd :call CreateDailyFolder()<cr>
 
 cabbrev Cd :call fzf#run({
-\   'source':  'find . -name .git -o -name .vim -prune -o -type d -print',
+\   'source':  'find . \( -name ".git" -o -name ".vim" -o -name "Library" \) -prune  -o -type d -print',
 \   'sink': 'cd'
 \ })
 
