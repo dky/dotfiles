@@ -13,7 +13,9 @@ source "$HOME/.dotfiles/.fzf/key-bindings.bash"
 # Which search program to use for fzf
 # This is only used if you use fzf command from shell, won't be called with ctrl-t
 # rg = ripgrep
-export FZF_DEFAULT_OPTS='--height=90% --preview="cat {}" --preview-window=down:60%:wrap'
+
+export FZF_DEFAULT_OPTS='--height=90% --preview="cat {}" --preview-window=down:60%:wrap --color fg:-1,bg:-1,hl:230,fg+:3,bg+:233,hl+:229 --color info:150,prompt:110,spinner:150,pointer:167,marker:174'
+
 export FZF_DEFAULT_COMMAND="find . \
 	\( -name Music -o -name logbook -o -name Library -o -name Pictures -o -name Public -o -name Movies -o -name Applications -o -name Downloads \) -prune \
 	-o \( -name '.git' \) -prune \
