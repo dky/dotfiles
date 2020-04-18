@@ -721,6 +721,11 @@ endfunction
 
 nnoremap mkd :call CreateDailyFolder()<cr>
 
+cabbrev Cd :call fzf#run({
+\   'source':  'find . -name .git -o -name .vim -prune -o -type d -print',
+\   'sink': 'cd'
+\ })
+
 " Hugo make public
 cabbrev mp :!make public<cr><cr>
 
