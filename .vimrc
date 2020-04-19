@@ -213,6 +213,7 @@ nmap ,ch :CheckHealth<CR>
 nmap ,up :UpdateRemotePlugins<CR>
 " shortcut for vundle
 nmap ,bi :PlugInstall<CR>
+cabbrev bi PlugInstall<CR>
 nmap ,gib :GoInstallBinaries<CR>
 
 " reload vim quickly
