@@ -62,7 +62,6 @@ Plug 'johngrib/vim-mac-dictionary'
 Plug 'dky/vim-aftercolors'
 Plug '907th/vim-auto-save'
 Plug 'kchmck/vim-coffee-script'
-Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
