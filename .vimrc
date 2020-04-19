@@ -8,12 +8,12 @@ if has('nvim')
 	Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }
 	" Python
 	Plug 'zchee/deoplete-jedi'
+	Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 	" JS
-	" neco-look is a plugin to auto expand dictionary words using `look`"
-	Plug 'ujihisa/neco-look'
 	Plug 'carlitux/deoplete-ternjs'
 	Plug 'ternjs/tern_for_vim', { 'do': 'npm install -g tern' }
-	Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+	" neco-look is a plugin to auto expand dictionary words using `look`"
+	Plug 'ujihisa/neco-look'
 else
 endif
 
@@ -369,16 +369,11 @@ nnoremap <buffer> H :<C-u>execute "!pydoc3 " . expand("<cword>")<CR>
 autocmd BufRead,BufNewFile *.py inoremap # #<space>
 
 " quickly set file type, python, bash, shell
-cabbrev setftp set ft=python
-cabbrev setfts set ft=sh
-cabbrev setftb set ft=sh
+cabbrev setftpy set ft=python
+cabbrev setftsh set ft=sh
 
-" Python syntax highlighting
-" Disabled because we use semshi...
-"let g:python_highlight_all = 1
 " Toggle ale on and off. At was for ale toggle...
 cabbrev at ALEToggle<CR>
-
 
 " ale
 let g:ale_linters = {'go': ['gometalinter', 'gofmt'],}
