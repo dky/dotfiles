@@ -238,10 +238,10 @@ endfunc
 
 " Check to ensure we aren't in a nerdtree file browser when running command
 function! IsNerdTreeOpen(command_str)
-  if (expand('%') =~# 'NERD_tree' && winnr('$') > 1)
-    exe "normal! \<c-w>\<c-w>"
-  endif
-  exe 'normal! ' . a:command_str . "\<cr>"
+	if (expand('%') =~# 'NERD_tree' && winnr('$') > 1)
+		exe "normal! \<c-w>\<c-w>"
+	endif
+	exe 'normal! ' . a:command_str . "\<cr>"
 endfunction
 
 nnoremap <silent> <leader>gs :call IsNerdTreeOpen(':Git status')<CR>
@@ -460,9 +460,9 @@ nnoremap <C-g> :BCommits!<cr>
 " ctrl-v on a file splits vertically.
 nnoremap <C-f> :FZF<CR>
 let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-i': 'split',
-  \ 'ctrl-v': 'vsplit' }
+			\ 'ctrl-t': 'tab split',
+			\ 'ctrl-i': 'split',
+			\ 'ctrl-v': 'vsplit' }
 
 " goyo
 cabbrev gy Goyo
@@ -716,9 +716,9 @@ endfunction
 nnoremap mkd :call CreateDailyFolder()<cr>
 
 cabbrev Cd :call fzf#run({
-\   'source':  'find . \( -name ".git" -o -name ".vim" -o -name "Library" \) -prune  -o -type d -print',
-\   'sink': 'cd'
-\ })
+			\   'source':  'find . \( -name ".git" -o -name ".vim" -o -name "Library" \) -prune  -o -type d -print',
+			\   'sink': 'cd'
+			\ })
 
 " Hugo make public
 cabbrev mp :!make public<cr><cr>
