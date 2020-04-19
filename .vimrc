@@ -382,7 +382,7 @@ let g:ale_linters = {'python': ['flake8'],}
 
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['prettier', 'eslint']
-let g:ale_fixers['python'] = ['remove_trailing_lines', 'isort', 'ale#fixers#generic_python#BreakUpLongLines', 'yapf']
+let g:ale_fixers['python'] = ['remove_trailing_lines', 'isort', 'yapf']
 
 let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --no-semi'
 
