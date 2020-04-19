@@ -28,5 +28,5 @@ export FZF_DEFAULT_COMMAND="find . \
 	\( -name Music -o -name logbook -o -name Library -o -name Pictures -o -name Public -o -name Movies -o -name Applications -o -name Downloads \) -prune \
 	-o \( -name '.git' \) -prune \
 	-o \( -path './go/bin/*' -o -path './go/pkg/*' \) -prune \
-	-o \( -name '*.mp4' -o -name '*.mp3' -o -name '.DS_Store' -o -name '*.png' -o -name '*.jpg' -o -name '*.jpeg' -o -name '*.gz' \) -prune \
+	-o \( -name '*.mp4' -o -name '*.mp3' -o -name '.DS_Store' -o -name '*.png' -o -name '*.jpg' -o -name '*.jpeg' -o -name '*.gz' -o -name '*.tgz' \) -prune \
 	-o -type f -print"
