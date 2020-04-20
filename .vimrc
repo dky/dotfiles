@@ -338,6 +338,12 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " Don't open up multiple buffer views (they are not tabs)
 let g:airline#extensions#tabline#show_buffers = 1
 
+nmap <Leader>1 <Plug>AirlineSelectTab1
+nmap <Leader>2 <Plug>AirlineSelectTab2
+nmap <Leader>3 <Plug>AirlineSelectTab3
+nmap <Leader>4 <Plug>AirlineSelectTab4
+nmap <Leader>5 <Plug>AirlineSelectTab5
+
 " buffer tabs
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
