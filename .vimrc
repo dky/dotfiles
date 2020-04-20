@@ -316,6 +316,19 @@ let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#hunks#enabled=0
 let g:airline#extensions#branch#enabled=1
 
+let g:airline#extensions#tabline#buffers_label = 'b'
+let g:airline#extensions#tabline#tabs_label = 't'
+let g:airline#extensions#tabline#show_tab_nr = 1
+
+"
+" Display the buffer number
+let g:airline#extensions#tabline#buffer_nr_show = 1
+" Don't display full buffer path for files.
+let g:airline#extensions#tabline#fnamemod = ':t'
+" Correctly display the tab number
+let g:airline#extensions#tabline#tab_nr_type = 1
+
+
 " buffer tabs
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
