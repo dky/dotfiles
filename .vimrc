@@ -62,7 +62,7 @@ Plug 'johngrib/vim-mac-dictionary'
 Plug 'dky/vim-aftercolors'
 Plug '907th/vim-auto-save'
 Plug 'kchmck/vim-coffee-script'
-Plug 'stephpy/vim-yaml'
+Plug 'Yggdroot/indentLine'
 
 call plug#end()
 
@@ -233,7 +233,7 @@ nmap <c-l> 4l
 
 " This func is necessary to remove the additional whitespace added after
 " cabbrev, see cabbrev gma as an example
-func Eatchar(pat)
+func! Eatchar(pat)
 	let c = nr2char(getchar(0))
 	return (c =~ a:pat) ? '' : c
 endfunc
@@ -652,7 +652,7 @@ inoremap [ []<left>
 inoremap { {}<left>
 
 " semshi default highlight color SteelBlue3
-function SemshiCustomHighlights()
+function! SemshiCustomHighlights()
 	hi semshiSelected ctermfg=231 ctermbg=237
 endfunction
 autocmd FileType python call SemshiCustomHighlights()
