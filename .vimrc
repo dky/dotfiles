@@ -357,13 +357,7 @@ if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
 
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.linenr = '¶'
 let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
 
 " neosnippets
@@ -547,7 +541,7 @@ hi CursorLine ctermbg=236
 autocmd InsertEnter * hi CursorLine ctermbg=24
 " revert Color to default when leaving Insert Mode
 autocmd InsertLeave * hi CursorLine ctermbg=236
-" autocmd InsertLeave * highlight  Cursor guibg=#A6E22E;" This 
+" autocmd InsertLeave * highlight  Cursor guibg=#A6E22E;" This
 hi LineNr ctermbg=236 ctermfg=246
 hi Visual ctermbg=190 ctermfg=16
 hi Comment ctermfg=43
@@ -601,9 +595,9 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 au BufNewFile,BufRead *.py
 			\ set tabstop=4 |
 			\ set softtabstop=4 |
-			\ set shiftwidth=4 | 
+			\ set shiftwidth=4 |
 			\ set textwidth=79 |
-			\ set expandtab | 
+			\ set expandtab |
 			\ set autoindent |
 			\ set fileformat=unix
 
