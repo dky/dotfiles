@@ -20,7 +20,7 @@ fzf_then_open_in_editor() {
 }
 
 # Disable ctr-t in .fzf/key-bindings.bash and override with this function which opens a file directly in vim when ctrl-t is used.
-bind -x '"\C-h": fzf_then_open_in_editor'
+bind -x '"\C-t": fzf_then_open_in_editor'
 
 export FZF_DEFAULT_OPTS='--height=90% --preview="cat {}" --preview-window=down:60%:wrap --color fg:-1,bg:-1,hl:230,fg+:3,bg+:233,hl+:229 --color info:150,prompt:110,spinner:150,pointer:167,marker:174'
 
