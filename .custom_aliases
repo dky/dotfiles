@@ -87,7 +87,7 @@ alias gc='git clone'
 alias gb='git branch'
 alias gbl='git branch -v'
 alias gbd='git branch -d'
-alias gam='git commit --amend -m'
+alias gamend='git commit --amend'
 alias gdiff='git diff'
 alias gbc='git checkout -b'
 
