@@ -606,7 +606,16 @@ call ale#linter#Define('text', {
 " restore last position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
-" Code Spacing
+" If a file is detected as bash set it to sh
+fun! s:DetectNode()
+	if getline(1) == '#!/bin/bash'
+		set ft=sh
+	endif
+endfun
+
+" space code appropriately for file type.
+autocmd BufNewFile,BufRead * call s:DetectNode()
+
 " python
 au BufNewFile,BufRead *.py
 			\ set tabstop=4 |
