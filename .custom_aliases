@@ -241,3 +241,6 @@ alias ptsc="pet search | pbcopy"
 
 # nvim + fzf
 alias nf='nvim $(fzf)'
+
+# map powershell alias ii to open
+alias ii="open"
