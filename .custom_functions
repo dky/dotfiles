@@ -1,13 +1,13 @@
 function color_my_prompt {
 	local __user="\[\033[1;37m\]\u"
-		local __asterisk="\[\033[0;36m\]@"
-		local __host="\[\033[0;31m\]\h"
-		local __cur_location="\[\033[01;34m\]\w"
-		local __git_branch_color="\[\033[31m\]"
-		local __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
-		local __prompt_tail="\[\033[35m\]$tail"
-		local __last_color="\[\033[00m\]"
-		export PS1="$__user$__asterisk$__host $__cur_location $__git_branch_color$__git_branch$__prompt_tail$__last_color "
+	local __asterisk="\[\033[0;36m\]@"
+	local __host="\[\033[0;31m\]\h"
+	local __cur_location="\[\033[01;34m\]\w"
+	local __git_branch_color="\[\033[31m\]"
+	local __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
+	local __prompt_tail="\[\033[35m\]$tail"
+	local __last_color="\[\033[00m\]"
+	export PS1="$__user$__asterisk$__host $__cur_location $__git_branch_color$__git_branch$__prompt_tail$__last_color "
 }
 
 function pmin {
@@ -17,8 +17,8 @@ function pmin {
 color_my_prompt
 
 #docker functions
-function dkr { 
-	name="$1" 
+function dkr {
+	name="$1"
 	image="$2"
 	docker run -it --name $name -h $name $image /bin/bash;
 }
@@ -49,18 +49,18 @@ function rl() {
 
 function sshn {
 	echo "Usage: sshnokey host port"
-		sshhost=$1
-		sshport=$2
+	sshhost=$1
+	sshport=$2
 
-		if [ -n "$sshport" ]; then
-			echo "sshport not empty"
-		else
-			echo "ssh port empty using default"
-				sshport=22
-				fi
+	if [ -n "$sshport" ]; then
+		echo "sshport not empty"
+	else
+		echo "ssh port empty using default"
+		sshport=22
+	fi
 
-				echo "Connecting to $sshhost on port: $sshport"
-				ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $sshhost -p $sshport
+	echo "Connecting to $sshhost on port: $sshport"
+	ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $sshhost -p $sshport
 }
 
 function sshf {
@@ -70,7 +70,7 @@ function sshf {
 
 function hnp {
 	post_id=$1
-		hugo new post/$post_id
+	hugo new post/$post_id
 }
 
 function lb() {
@@ -81,13 +81,13 @@ function lb() {
 # bind-key s run "tmux new-window 'bash -ci fs'"
 function fs() {
 	local -r fmt='#{session_id}:|#S|(#{session_attached} attached)'
-	{ tmux display-message -p -F "$fmt" && tmux list-sessions -F "$fmt"; } \
-	| awk '!seen[$1]++' \
-		| column -t -s'|' \
-		| fzf -q '$' --reverse --prompt 'switch session: ' -1 \
-		| cut -d':' -f1 \
-		| xargs tmux switch-client -t
-}
+		{ tmux display-message -p -F "$fmt" && tmux list-sessions -F "$fmt"; } \
+			| awk '!seen[$1]++' \
+			| column -t -s'|' \
+			| fzf -q '$' --reverse --prompt 'switch session: ' -1 \
+			| cut -d':' -f1 \
+			| xargs tmux switch-client -t
+		}
 
 # FZF to switch Tmux panes:
 function ftpane() {
@@ -129,7 +129,7 @@ EOF
 chmod u+x $GIT_HOOKS/post-commit
 else
 	echo "Git hooks dir doesn't exist"
-fi
+	fi
 }
 
 function up {
@@ -171,14 +171,14 @@ function mkd () {
 fd() {
 	local dir
 	dir=$(find ${1:-.} -path '*/\.*' \
-	-o \( -name Music -o -name logbook -o -name Library -o -name Pictures -o -name Public -o -name Movies -o -name Applications -o -name Downloads \) -prune \
-	-o \( -name '.git' -o -name 'lib' \) -prune \
-	-o \( -path './go/bin/*' -o -path './go/pkg/*' -o -path './.vim/plugged/*' -o -path './.vim/view/*' -o -path './.local/share/nvim/view/*' -o -path './go/src/*' -o -path './iCloud*/*' -o -path './google-cloud-sdk/*' -o -path './tmp/*' -o -path './Documents/*' -o -path './Desktop/*' -o -path './git/dky.io/*' -o -path './git/docker/*' -o -path './git/kinesis-qmk/*' \) -prune \
-	-o \( -name '*.mp4' -o -name '*.mp3' -o -name '.DS_Store' -o -name '*.png' -o -name '*.jpg' -o -name '*.jpeg' -o -name '*.gz' -o -name '*.tgz' \) -prune \
-	-o -type d \
-	-print 2> /dev/null | fzf +m) &&
-	cd "$dir"
-}
+		-o \( -name Music -o -name logbook -o -name Library -o -name Pictures -o -name Public -o -name Movies -o -name Applications -o -name Downloads \) -prune \
+		-o \( -name '.git' -o -name 'lib' \) -prune \
+		-o \( -path './go/bin/*' -o -path './go/pkg/*' -o -path './.vim/plugged/*' -o -path './.vim/view/*' -o -path './.local/share/nvim/view/*' -o -path './go/src/*' -o -path './iCloud*/*' -o -path './google-cloud-sdk/*' -o -path './tmp/*' -o -path './Documents/*' -o -path './Desktop/*' -o -path './git/dky.io/*' -o -path './git/docker/*' -o -path './git/kinesis-qmk/*' \) -prune \
+		-o \( -name '*.mp4' -o -name '*.mp3' -o -name '.DS_Store' -o -name '*.png' -o -name '*.jpg' -o -name '*.jpeg' -o -name '*.gz' -o -name '*.tgz' \) -prune \
+		-o -type d \
+		-print 2> /dev/null | fzf +m) &&
+		cd "$dir"
+	}
 
 # Pet snippets shortcut for "pet new"
 function pta() {
@@ -203,10 +203,8 @@ function spell {
 
 # Lookup definition of word using `wn $1 -over`.
 # If $1 is not provided, we'll use the `spell` command to pick a word.
-#
-# Requires:
-#   brew install wordnet
-#   brew install fzf
+# brew install wordnet
+# brew install fzf
 function dic {
 	if [ $# -eq 0 ]; then
 		wn `spell` -over | fold
