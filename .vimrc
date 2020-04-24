@@ -395,7 +395,9 @@ autocmd BufRead,BufNewFile *.py inoremap # #<space>
 
 " quickly set file type, python, bash, shell
 cabbrev setftpy set ft=python
+cabbrev setftpython set ft=python
 cabbrev setftsh set ft=sh
+cabbrev setftbash set ft=sh
 
 " Toggle ale on and off. At was for ale toggle...
 cabbrev at ALEToggle<CR>
