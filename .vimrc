@@ -63,7 +63,8 @@ Plug 'johngrib/vim-mac-dictionary'
 Plug 'dky/vim-aftercolors'
 Plug '907th/vim-auto-save'
 Plug 'kchmck/vim-coffee-script'
-Plug 'Yggdroot/indentLine'
+"Plug 'Yggdroot/indentLine' "Do not use this plugin currently breaks snippet
+"expansion
 
 call plug#end()
 
@@ -743,11 +744,7 @@ function! CreateDailyFolder()
 endfunction
 
 nnoremap mkd :call CreateDailyFolder()<cr>
-
-cabbrev Cd :call fzf#run({
-			\   'source':  'find . \( -name ".git" -o -name ".vim" -o -name "Library" \) -prune  -o -type d -print',
-			\   'sink': 'cd'
-			\ })
+cabbrev Cd :call fzf#run({'source':  'find . \( -name ".git" -o -name ".vim" -o -name "Library" \) -prune  -o -type d -print','sink': 'cd'})
 
 " Hugo make public
 cabbrev mp :!make public<cr><cr>
