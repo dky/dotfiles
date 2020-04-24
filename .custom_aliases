@@ -56,7 +56,7 @@ alias dksls="docker service ls"
 alias dksps="docker service ps"
 alias dksl="docker service logs -f"
 alias dksrm="docker service rm"
-alias dknls="docker node ls" 
+alias dknls="docker node ls"
 alias dcoker=docker
 
 #screen aliases
@@ -161,7 +161,7 @@ alias cddk="cd ~/git/hugo/dky.io/"
 alias exer="exercism"
 alias exerf="exercism fetch"
 
-#terraform 
+#terraform
 alias tp="terraform plan"
 alias td="terraform destroy"
 alias ta="terraform apply"
