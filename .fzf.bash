@@ -8,7 +8,7 @@ fi
 
 # Key bindings, Load customized keybindings from dotfiles with excluded directories
 # Customizations are handled in .dotfiles/.fzf/key-bindings.bash
-source "$HOME/.dotfiles/.fzf/key-bindings.bash"
+source "$HOME/.dotfiles/.fzf.key-bindings.bash"
 
 fzf_then_open_in_editor() {
 	local file=$(fzf-tmux)
