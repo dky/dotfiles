@@ -173,6 +173,8 @@ function! NumberToggle()
 	endif
 endfunc
 
+"Map ALEFix to F3
+nmap <F3> :ALEFix<CR>
 nnoremap <F4> :call NumberToggle()<cr>
 " Disable relative numbers
 cabbrev norel set relativenumber!
