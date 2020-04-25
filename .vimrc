@@ -173,8 +173,6 @@ function! NumberToggle()
 	endif
 endfunc
 
-"Map ALEFix to F3
-au FileType python nmap <F3> :ALEFix<cr>
 nnoremap <F4> :call NumberToggle()<cr>
 " Disable relative numbers
 cabbrev norel set relativenumber!
@@ -412,6 +410,9 @@ cabbrev setftbash set ft=sh
 " Toggle ale on and off. At was for ale toggle...
 cabbrev at ALEToggle<CR>
 cabbrev af ALEFix<CR>
+
+"Map ALEFix to F3
+au FileType python nmap <silent> <F3> :ALEFix<cr>
 
 " ale
 let g:ale_linters = {'go': ['gometalinter', 'gofmt'],}
