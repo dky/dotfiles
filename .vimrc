@@ -77,6 +77,10 @@ set noswapfile
 set nobackup
 set number
 "set relativenumber
+"
+set tabstop=3
+set shiftwidth=3
+set smartindent
 
 " autocompletion
 set wildmode=list:longest
