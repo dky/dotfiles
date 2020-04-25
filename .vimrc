@@ -781,6 +781,8 @@ let g:indentguides_firstlevel = 1
 " Ignore indent these file types please
 let g:indentguides_ignorelist = ['text', 'markdown', 'tex', 'pandoc', 'nerdtree', 'vim']
 let g:indentguides_conceal_color = 'ctermfg=238 ctermbg=234'
+"Allow us to toggle indentlines on off
+cabbrev it IndentGuidesToggle
 
 " gitgutter
 set updatetime=100
