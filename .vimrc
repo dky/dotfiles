@@ -158,12 +158,14 @@ function! NumberToggle()
 		set nolist
 		GitGutterDisable
 		ALEToggle
+		IndentLinesToggle
 	else
 		"set relativenumber
 		set number
 		set list
 		GitGutterEnable
 		ALEToggle
+		IndentLinesToggle
 	endif
 endfunc
 
@@ -403,6 +405,7 @@ cabbrev setftbash set ft=sh
 
 " Toggle ale on and off. At was for ale toggle...
 cabbrev at ALEToggle<CR>
+cabbrev af ALEFix<CR>
 
 " ale
 let g:ale_linters = {'go': ['gometalinter', 'gofmt'],}
