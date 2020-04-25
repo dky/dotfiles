@@ -1,11 +1,7 @@
-Bootstrap Linux dotfiles
-========================
+# Bootstrap Linux .dotfiles
 
-Bootstrap custom .dotfiles 
+All my various customizations for the Shell + Vim and Beyond.
 
 - Wipes out and symlinks all .dotfiles in .dotfiles directory.
-- Clones pulls down vundle and does a Bundle install for plugins.
-
 ```
 Usage: ./install
-```

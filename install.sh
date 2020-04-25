@@ -38,5 +38,3 @@ if [ -d "$CONFIG_DIR" ]; then
 else
 	git clone $DOTCONFIG_GIT $CONFIG_DIR
 fi
-
-
