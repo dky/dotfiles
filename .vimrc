@@ -63,8 +63,7 @@ Plug 'johngrib/vim-mac-dictionary'
 Plug 'dky/vim-aftercolors'
 Plug '907th/vim-auto-save'
 Plug 'kchmck/vim-coffee-script'
-"Plug 'Yggdroot/indentLine' "Do not use this plugin currently breaks snippet
-"expansion
+Plug 'Yggdroot/indentLine' "Toggle on and off with it this is off by default.
 
 call plug#end()
 
@@ -773,3 +772,9 @@ cabbrev mp :!make public<cr><cr>
 
 " Shell command formatter, call this when editing ugly shell one liners with ctr-g
 command! -range Fmtsh <line1>!format_shell_cmd.py
+
+" Disable indentline, only toggle on when needed.
+let g:indentLine_enabled = 0
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+" Use a simple toggle to enable indent lines
+cabbrev it IndentLinesToggle
