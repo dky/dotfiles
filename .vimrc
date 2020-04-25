@@ -78,15 +78,8 @@ set nobackup
 set number
 "set relativenumber
 
-" tab use 3 spaces
-set tabstop=3
-set shiftwidth=3
-
 " autocompletion
 set wildmode=list:longest
-
-" set autoindent
-set smartindent
 
 " split below
 set splitbelow
