@@ -415,7 +415,8 @@ let g:ale_fixers['python'] = ['remove_trailing_lines', 'isort', 'yapf']
 
 let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --no-semi'
 
-let g:ale_fix_on_save = 1
+" Don't fix on every save please.
+let g:ale_fix_on_save = 0
 
 let g:ale_sign_error = '●' " Less aggressive than the default '>>'
 let g:ale_sign_warning = '.'
