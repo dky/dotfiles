@@ -781,10 +781,3 @@ cabbrev it IndentLinesToggle
 let g:indentLine_color_term = 239
 " Enable for *.py files by default
 autocmd BufRead,BufNewFile *.py :IndentLinesToggle
-
-" show leading spaces only for Python files.
-hi Conceal ctermbg=NONE ctermfg=DarkGrey
-autocmd BufWinEnter *.py setl conceallevel=2 concealcursor=nv
-autocmd BufWinEnter *.py syn match LeadingSpace /\(^ *\)\@<= / containedin=ALL conceal cchar=·
-autocmd BufReadPre *.py setl conceallevel=2 concealcursor=nv
-autocmd BufReadPre *.py syn match LeadingSpace /\(^ *\)\@<= / containedin=ALL conceal cchar=·
