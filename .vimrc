@@ -777,3 +777,6 @@ command! -range Fmtsh <line1>!format_shell_cmd.py
 " vim-indentguides
 let g:indentguides_spacechar = '┆'
 let g:indentguides_tabchar = '|'
+let g:indentguides_firstlevel = 1
+let g:indentguides_ignorelist = ['text', 'rmd', 'markdown', 'tex', 'rmarkdown', 'pandoc', 'nerdtree']
+let g:indentguides_conceal_color = 'ctermfg=238 ctermbg=234'
