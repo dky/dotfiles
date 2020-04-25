@@ -63,7 +63,7 @@ Plug 'johngrib/vim-mac-dictionary'
 Plug 'dky/vim-aftercolors'
 Plug '907th/vim-auto-save'
 Plug 'kchmck/vim-coffee-script'
-Plug 'Yggdroot/indentLine' "Toggle on and off with it this is off by default.
+Plug 'thaerkh/vim-indentguides'
 
 call plug#end()
 
@@ -158,14 +158,14 @@ function! NumberToggle()
 		set nolist
 		GitGutterDisable
 		ALEToggle
-		IndentLinesToggle
+		IndentGuidesToggle
 	else
 		"set relativenumber
 		set number
 		set list
 		GitGutterEnable
 		ALEToggle
-		IndentLinesToggle
+		IndentGuidesToggle
 	endif
 endfunc
 
@@ -770,11 +770,6 @@ cabbrev mp :!make public<cr><cr>
 " Shell command formatter, call this when editing ugly shell one liners with ctr-g
 command! -range Fmtsh <line1>!format_shell_cmd.py
 
-" Disable indentline, only toggle on when needed.
-let g:indentLine_enabled = 0
-let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-" Use a simple toggle to enable indent lines
-cabbrev it IndentLinesToggle
-let g:indentLine_color_term = 239
-" Enable for *.py files by default
-autocmd BufRead,BufNewFile *.py :IndentLinesToggle
+" vim-indentguides
+let g:indentguides_spacechar = '┆'
+let g:indentguides_tabchar = '|'
