@@ -778,3 +778,13 @@ let g:indentLine_enabled = 0
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 " Use a simple toggle to enable indent lines
 cabbrev it IndentLinesToggle
+let g:indentLine_color_term = 239
+" Enable for *.py files by default
+autocmd BufRead,BufNewFile *.py :IndentLinesToggle
+
+" show leading spaces
+hi Conceal guibg=NONE ctermbg=NONE ctermfg=DarkGrey
+autocmd BufWinEnter * setl conceallevel=2 concealcursor=nv
+autocmd BufWinEnter * syn match LeadingSpace /\(^ *\)\@<= / containedin=ALL conceal cchar=·
+autocmd BufReadPre * setl conceallevel=2 concealcursor=nv
+autocmd BufReadPre * syn match LeadingSpace /\(^ *\)\@<= / containedin=ALL conceal cchar=·
