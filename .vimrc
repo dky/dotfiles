@@ -665,11 +665,11 @@ augroup END
 let g:auto_save = 1  " enable AutoSave on Vim startup
 
 " autoclose for only certain strings/braces
-"inoremap " ""<left>
 "inoremap ` ``<left>
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
+inoremap " ""<left>
 
 " semshi default highlight color SteelBlue3
 function! SemshiCustomHighlights()
