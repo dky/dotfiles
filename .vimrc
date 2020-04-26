@@ -117,15 +117,6 @@ nnoremap <silent> ,cd :execute ":Codi"<cr>
 cabbrev oc Codi
 cabbrev ec Codi!
 
-" close all buffers
-function! CloseAllBuffersButCurrent()
-	let curr = bufnr("%")
-	let last = bufnr("$")
-
-	if curr > 1    | silent! execute "1,".(curr-1)."bd"     | endif
-	if curr < last | silent! execute (curr+1).",".last."bd" | endif
-endfunction
-
 " Short for "Close all buffers" - Closes all open buffers except current.
 cabbrev cab call CloseAllBuffersButCurrent()<cr>
 
@@ -172,6 +163,61 @@ function! NumberToggle()
 		IndentGuidesToggle
 	endif
 endfunc
+
+" close all buffers
+function! CloseAllBuffersButCurrent()
+	let curr = bufnr("%")
+	let last = bufnr("$")
+
+	if curr > 1    | silent! execute "1,".(curr-1)."bd"     | endif
+	if curr < last | silent! execute (curr+1).",".last."bd" | endif
+endfunction
+
+" This func is necessary to remove the additional whitespace added after
+" cabbrev, see cabbrev gma as an example
+func! Eatchar(pat)
+	let c = nr2char(getchar(0))
+	return (c =~ a:pat) ? '' : c
+endfunc
+
+" Check to ensure we aren't in a nerdtree file browser when running command
+function! IsNerdTreeOpen(command_str)
+	if (expand('%') =~# 'NERD_tree' && winnr('$') > 1)
+		exe "normal! \<c-w>\<c-w>"
+	endif
+	exe 'normal! ' . a:command_str . "\<cr>"
+endfunction
+
+" function to create directory and cd into it.
+function! CreateDailyFolder()
+	let tstamp = strftime("%m-%d-%y")
+	let folderpath = $HOME."/git/cb/daily/".tstamp
+	let cmd = 'cd ' . folderpath
+	if !isdirectory(folderpath)
+		echo 'Dir does not exist, creating:' folderpath
+		call mkdir(folderpath, 'p')
+		echo 'Switching working dir to:' folderpath
+	else
+		echo 'Switching working dir to:' folderpath
+		execute cmd
+	endif
+endfunction
+
+" semshi default highlight color SteelBlue3
+function! SemshiCustomHighlights()
+	hi semshiSelected ctermfg=231 ctermbg=237
+endfunction
+
+" Function to copy current buffer into a new file without manually writing and
+" re-opening
+function! CopyCurrentFile()
+	let old_name = expand('%')
+	let new_name = input('Copy to file name: ',)
+	if new_name != '' && new_name != old_name
+		exec ':saveas ' . new_name
+		redraw!
+	endif
+endfunction
 
 nnoremap <F4> :call NumberToggle()<cr>
 " Disable relative numbers
@@ -230,21 +276,6 @@ nmap <c-j> 4j
 nmap <c-k> 4k
 nmap <c-h> 4h
 nmap <c-l> 4l
-
-" This func is necessary to remove the additional whitespace added after
-" cabbrev, see cabbrev gma as an example
-func! Eatchar(pat)
-	let c = nr2char(getchar(0))
-	return (c =~ a:pat) ? '' : c
-endfunc
-
-" Check to ensure we aren't in a nerdtree file browser when running command
-function! IsNerdTreeOpen(command_str)
-	if (expand('%') =~# 'NERD_tree' && winnr('$') > 1)
-		exe "normal! \<c-w>\<c-w>"
-	endif
-	exe 'normal! ' . a:command_str . "\<cr>"
-endfunction
 
 nnoremap <silent> <leader>gs :call IsNerdTreeOpen(':Git status')<cr>
 nnoremap <silent> <leader>gd :call IsNerdTreeOpen(':Git diff')<cr>
@@ -679,22 +710,7 @@ inoremap [ []<left>
 inoremap { {}<left>
 inoremap " ""<left>
 
-" semshi default highlight color SteelBlue3
-function! SemshiCustomHighlights()
-	hi semshiSelected ctermfg=231 ctermbg=237
-endfunction
 autocmd FileType python call SemshiCustomHighlights()
-
-" Function to copy current buffer into a new file without manually writing and
-" re-opening
-function! CopyCurrentFile()
-	let old_name = expand('%')
-	let new_name = input('Copy to file name: ',)
-	if new_name != '' && new_name != old_name
-		exec ':saveas ' . new_name
-		redraw!
-	endif
-endfunction
 
 " Quickly copy a file in the buffer
 nnoremap <leader>c :call CopyCurrentFile()<cr>
@@ -752,22 +768,6 @@ cabbrev cdconf cdconf $HOME/.config<cr>
 " Create a directory with current date
 cabbrev cdcb cd $HOME/git/cb<cr>
 
-"cabbrev mkd :!mkdir $HOME/git/cb/daily/<C-r>=strftime("%m-%d-%y")<cr><cr>
-"cabbrev cdd cd $HOME/git/cb/daily/<C-r>=strftime("%m-%d-%y")<cr><cr>
-"Replace both commands above with a single function to create directory and cd into it.
-function! CreateDailyFolder()
-	let tstamp = strftime("%m-%d-%y")
-	let folderpath = $HOME."/git/cb/daily/".tstamp
-	let cmd = 'cd ' . folderpath
-	if !isdirectory(folderpath)
-		echo 'Dir does not exist, creating:' folderpath
-		call mkdir(folderpath, 'p')
-		echo 'Switching working dir to:' folderpath
-	else
-		echo 'Switching working dir to:' folderpath
-		execute cmd
-	endif
-endfunction
 
 nnoremap mkd :call CreateDailyFolder()<cr>
 cabbrev Cd :call fzf#run({'source':  'find . \( -name ".git" -o -name ".vim" -o -name "Library" \) -prune  -o -type d -print','sink': 'cd'})
