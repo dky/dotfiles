@@ -541,16 +541,6 @@ let g:fzf_action = {
 " goyo
 cabbrev gy Goyo
 
-" Redhat 7.x deoplete support
-" deoplete.nvim recommend
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#enable_ignore_case = 1
-let g:deoplete#enable_smart_case = 1
-let g:deoplete#enable_camel_case = 1
-let g:deoplete#enable_refresh_always = 1
-let g:deoplete#max_abbr_width = 0
-let g:deoplete#max_menu_width = 0
-
 " tern
 let g:tern_request_timeout = 1
 let g:tern_request_timeout = 6000
