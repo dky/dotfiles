@@ -651,16 +651,6 @@ endfun
 " space code appropriately for file type.
 autocmd BufNewFile,BufRead * call s:DetectNode()
 
-" python
-au BufNewFile,BufRead *.py
-			\ set tabstop=4 |
-			\ set softtabstop=4 |
-			\ set shiftwidth=4 |
-			\ set textwidth=79 |
-			\ set expandtab |
-			\ set autoindent |
-			\ set fileformat=unix
-
 " go
 au BufNewFile,BufRead *.go
 			\ set noexpandtab |
