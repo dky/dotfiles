@@ -113,7 +113,7 @@ set listchars=eol:¬,tab:▸-,trail:~,extends:>,precedes:<
 set list
 
 " codi
-nnoremap <silent> ,cd :execute ":Codi"<CR>
+nnoremap <silent> ,cd :execute ":Codi"<cr>
 cabbrev oc Codi
 cabbrev ec Codi!
 
@@ -127,7 +127,7 @@ function! CloseAllBuffersButCurrent()
 endfunction
 
 " Short for "Close all buffers" - Closes all open buffers except current.
-cabbrev cab call CloseAllBuffersButCurrent()<CR>
+cabbrev cab call CloseAllBuffersButCurrent()<cr>
 
 " remap esc to jk
 imap jk <Esc>
@@ -140,17 +140,17 @@ vmap <F7> <leader>c<space>
 nmap <left> <nop>
 nmap <right> <nop>
 
-au FileType go nmap <F8> :w <CR> :echo system('go run "' . expand('%') . '"')<CR>
-au FileType go imap <F8> <Esc> :w <CR> :echo system('go run "' . expand('%') . '"')<CR>
-au FileType python nmap <F8> :echo system('python3 "' . expand('%') . '"')<CR>
-au FileType python imap <F8> <Esc> :w <CR> :echo system('python3 "' . expand('%') . '"')<CR>
-au FileType javascript nmap <F8> :echo system('node "' . expand('%') . '"')<CR>
-au FileType javascript imap <F8> <Esc> :w <CR> :echo system('node "' . expand('%') . '"')<CR>
-au FileType coffee nmap <F8> :echo system('coffee "' . expand('%') . '"')<CR>
-au FileType coffee imap <F8> <Esc> :w <CR> :echo system('coffee "' . expand('%') . '"')<CR>
-au FileType sh nmap <F8> :echo system('bash "' . expand('%') . '"')<CR>
-au FileType c nmap <F8> :w <CR> :!gcc % -o %< && ./%< <CR>
-au FileType c imap <F8> <Esc> :w <CR> :!gcc % -o %< && ./%< <CR>
+au FileType go nmap <F8> :w <cr> :echo system('go run "' . expand('%') . '"')<cr>
+au FileType go imap <F8> <Esc> :w <cr> :echo system('go run "' . expand('%') . '"')<cr>
+au FileType python nmap <F8> :echo system('python3 "' . expand('%') . '"')<cr>
+au FileType python imap <F8> <Esc> :w <cr> :echo system('python3 "' . expand('%') . '"')<cr>
+au FileType javascript nmap <F8> :echo system('node "' . expand('%') . '"')<cr>
+au FileType javascript imap <F8> <Esc> :w <cr> :echo system('node "' . expand('%') . '"')<cr>
+au FileType coffee nmap <F8> :echo system('coffee "' . expand('%') . '"')<cr>
+au FileType coffee imap <F8> <Esc> :w <cr> :echo system('coffee "' . expand('%') . '"')<cr>
+au FileType sh nmap <F8> :echo system('bash "' . expand('%') . '"')<cr>
+au FileType c nmap <F8> :w <cr> :!gcc % -o %< && ./%< <cr>
+au FileType c imap <F8> <Esc> :w <cr> :!gcc % -o %< && ./%< <cr>
 
 " Disable line numbers, relative line numbers, Git Gutter and any spacing
 " symbols.
@@ -178,7 +178,7 @@ nnoremap <F4> :call NumberToggle()<cr>
 cabbrev norel set relativenumber!
 
 " tagbar toggle
-nmap ,tb :TagbarToggle<CR>
+nmap ,tb :TagbarToggle<cr>
 
 " map f1 vim help to esc, kept bringing up the help menu in insert mode
 imap <F1> <Esc>
@@ -188,8 +188,8 @@ imap <F1> <Esc>
 "autocmd StdinReadPre * let s:std_in=1
 "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-nmap ,nt :NERDTreeToggle<CR>
-nmap <F1> :NERDTreeToggle<CR>
+nmap ,nt :NERDTreeToggle<cr>
+nmap <F1> :NERDTreeToggle<cr>
 
 let NERDTreeIgnore = ['\.pyc$', '\.go.mod$', '\.DS_Store$', '__pycache__']
 let NERDTreeMinimalUI = 1
@@ -209,18 +209,18 @@ au CursorHold * if exists("t:NerdTreeBufName") | call <SNR>15_refreshRoot() | en
 nmap ,nb :Bookmark
 
 " edit .vimrc quickly
-nmap ,ev :tabedit $HOME/.dotfiles/.vimrc<CR>
-nmap ,ch :CheckHealth<CR>
-nmap ,up :UpdateRemotePlugins<CR>
+nmap ,ev :tabedit $HOME/.dotfiles/.vimrc<cr>
+nmap ,ch :CheckHealth<cr>
+nmap ,up :UpdateRemotePlugins<cr>
 " shortcut for vundle
-nmap ,bi :PlugInstall<CR>
-cabbrev bi PlugInstall<CR>
-nmap ,gib :GoInstallBinaries<CR>
+nmap ,bi :PlugInstall<cr>
+cabbrev bi PlugInstall<cr>
+nmap ,gib :GoInstallBinaries<cr>
 
 " reload vim quickly
-nmap ,rv :source $MYVIMRC<CR>
-cabbrev rv :source $MYVIMRC<CR>
-nnoremap <leader>r :source $MYVIMRC<CR>
+nmap ,rv :source $MYVIMRC<cr>
+cabbrev rv :source $MYVIMRC<cr>
+nnoremap <leader>r :source $MYVIMRC<cr>
 
 " map space rather than colon
 nmap <space> :
@@ -246,11 +246,11 @@ function! IsNerdTreeOpen(command_str)
 	exe 'normal! ' . a:command_str . "\<cr>"
 endfunction
 
-nnoremap <silent> <leader>gs :call IsNerdTreeOpen(':Git status')<CR>
-nnoremap <silent> <leader>gd :call IsNerdTreeOpen(':Git diff')<CR>
+nnoremap <silent> <leader>gs :call IsNerdTreeOpen(':Git status')<cr>
+nnoremap <silent> <leader>gd :call IsNerdTreeOpen(':Git diff')<cr>
 
 " fugitive
-nnoremap <F9> :execute ":!git push origin master"<CR>
+nnoremap <F9> :execute ":!git push origin master"<cr>
 nnoremap <F10> :!git add . && git commit -a -m "
 imap <F10> <Esc> :!git add . && git commit -a -m "
 
@@ -259,13 +259,13 @@ cabbrev gd Git diff
 cabbrev gco Git checkout
 cabbrev grh Git reset --hard
 cabbrev ga Git add
-cabbrev gcm Git commit -m ""<Left><C-R>=Eatchar('\s')<CR>
+cabbrev gcm Git commit -m ""<Left><C-R>=Eatchar('\s')<cr>
 cabbrev gb Git branch
 cabbrev gbc Git checkout -b
 cabbrev gpu Git push origin master
 cabbrev gpd Git pull origin master
 cabbrev gl Git log --pretty --pretty=oneline
-cabbrev gcma Git add .<CR>:Git commit -m ""<Left><C-R>=Eatchar('\s')<CR>
+cabbrev gcma Git add .<cr>:Git commit -m ""<Left><C-R>=Eatchar('\s')<cr>
 cabbrev gam Git commit --amend
 cabbrev gamend Git commit --amend
 
@@ -283,7 +283,7 @@ nnoremap ,s[ ciw[<C-r>"]<Esc>
 nnoremap ,s( ciw(<C-r>")<Esc>
 nnoremap ,s{ ciw{<C-r>"}<Esc>
 
-map <leader>gc VS`<CR>
+map <leader>gc VS`<cr>
 
 
 " vim-go
@@ -304,7 +304,7 @@ let g:go_fmt_command = "goimports"
 let g:go_fmt_experimental = 1
 
 " shorter aliases for vim-go plugin
-au FileType go nmap <leader><F12> :GoDecls<CR>
+au FileType go nmap <leader><F12> :GoDecls<cr>
 au FileType go nmap <F12> <Plug>(go-def)
 
 cabbrev goi GoImport
@@ -387,7 +387,7 @@ let g:neosnippet#enable_auto_clear_markers = 0
 imap <C-l> <Plug>(neosnippet_expand_or_jump)
 smap <C-l> <Plug>(neosnippet_expand_or_jump)
 xmap <C-l> <Plug>(neosnippet_expand_target)
-nnoremap <leader>rs :call neosnippet#variables#set_snippets({})<CR>
+nnoremap <leader>rs :call neosnippet#variables#set_snippets({})<cr>
 
 " plasticboy vim markdown disable folding
 let g:vim_markdown_folding_disabled = 1
@@ -397,7 +397,7 @@ let g:vim_markdown_folding_disabled = 1
 au BufReadPost *.gohtml set syntax=html
 
 " Python help
-nnoremap <buffer> H :<C-u>execute "!pydoc3 " . expand("<cword>")<CR>
+nnoremap <buffer> H :<C-u>execute "!pydoc3 " . expand("<cword>")<cr>
 
 " Python add trailing space when using #
 autocmd BufRead,BufNewFile *.py inoremap # #<space>
@@ -409,8 +409,8 @@ cabbrev setftsh set ft=sh
 cabbrev setftbash set ft=sh
 
 " Toggle ale on and off. At was for ale toggle...
-cabbrev at ALEToggle<CR>
-cabbrev af ALEFix<CR>
+cabbrev at ALEToggle<cr>
+cabbrev af ALEFix<cr>
 
 "Map ALEFix to F3
 au FileType python nmap <silent> <F3> :ALEFix<cr>
@@ -446,51 +446,51 @@ let g:clang_format#style_options = {
 			\ "Standard" : "C++11"}
 
 " map to <Leader>cf in C++ code
-autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
-autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
+autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<cr>
+autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<cr>
 
 " toggle auto formatting:
-nmap <Leader>C :ClangFormatAutoToggle<CR>
+nmap <Leader>C :ClangFormatAutoToggle<cr>
 
 set omnifunc=syntaxcomplete#Complete
 
 " tmux-send keys to send commands to other panes.
-au FileType go nmap <F5> :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<CR><CR>
-au FileType go imap <F5> <Esc> :w <CR> :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<CR><CR>
-nnoremap <silent> ,rg :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<CR><CR>
-au FileType go nmap <F5><F5> :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<CR><CR>
-au FileType go imap <F5><F5> <Esc> :w <CR> :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<CR><CR>
-nnoremap <silent> ,gr :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<CR><CR>
-nnoremap <silent> ,c :execute ":!tmux send-keys -t 3 C-c"<CR><CR>
-nnoremap <silent> ,cl :execute ":!tmux send-keys -t 3 clear"<CR><CR>
-au FileType python nmap <F5> :execute ":!tmux send-keys -t bottom 'python3 *.py' C-m"<CR><CR>
-au FileType python imap <F5> <Esc> :w <CR> :execute ":!tmux send-keys -t bottom 'python3 *.py' C-m"<CR><CR>
+au FileType go nmap <F5> :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<cr><cr>
+au FileType go imap <F5> <Esc> :w <cr> :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<cr><cr>
+nnoremap <silent> ,rg :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<cr><cr>
+au FileType go nmap <F5><F5> :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<cr><cr>
+au FileType go imap <F5><F5> <Esc> :w <cr> :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<cr><cr>
+nnoremap <silent> ,gr :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<cr><cr>
+nnoremap <silent> ,c :execute ":!tmux send-keys -t 3 C-c"<cr><cr>
+nnoremap <silent> ,cl :execute ":!tmux send-keys -t 3 clear"<cr><cr>
+au FileType python nmap <F5> :execute ":!tmux send-keys -t bottom 'python3 *.py' C-m"<cr><cr>
+au FileType python imap <F5> <Esc> :w <cr> :execute ":!tmux send-keys -t bottom 'python3 *.py' C-m"<cr><cr>
 
-nnoremap <silent> ,dkps :execute ":!tmux send-keys -t 2 'docker ps' C-m"<CR><CR>
-nnoremap <silent> ,mpl :execute ":!tmux send-keys -t 2 'make post-linux' C-m"<CR><CR>
-nnoremap <silent> ,mpr :execute ":!tmux send-keys -t 2 'make post-registrator' C-m"<CR><CR>
-nnoremap <silent> ,cl :execute ":!tmux send-keys -t 2 'clear' C-m"<CR><CR>
-nnoremap <silent> ,pa :execute ":!tmux send-keys -t 2 './apply.sh' C-m"<CR><CR>
+nnoremap <silent> ,dkps :execute ":!tmux send-keys -t 2 'docker ps' C-m"<cr><cr>
+nnoremap <silent> ,mpl :execute ":!tmux send-keys -t 2 'make post-linux' C-m"<cr><cr>
+nnoremap <silent> ,mpr :execute ":!tmux send-keys -t 2 'make post-registrator' C-m"<cr><cr>
+nnoremap <silent> ,cl :execute ":!tmux send-keys -t 2 'clear' C-m"<cr><cr>
+nnoremap <silent> ,pa :execute ":!tmux send-keys -t 2 './apply.sh' C-m"<cr><cr>
 
 " run the current file with rspec
 let g:VimuxPromptString = "run: "
-map <Leader>rb :call VimuxRunCommand("clear; rspec " . bufname("%"))<CR>
-map <Leader>vp :VimuxPromptCommand<CR>
-map <Leader>vl :VimuxRunLastCommand<CR>
-map <Leader>vi :VimuxInspectRunner<CR>
-map <Leader>vq :VimuxCloseRunner<CR>
-map <Leader>vx :VimuxInterruptRunner<CR>
-map <Leader>vz :call VimuxZoomRunner()<CR>
+map <Leader>rb :call VimuxRunCommand("clear; rspec " . bufname("%"))<cr>
+map <Leader>vp :VimuxPromptCommand<cr>
+map <Leader>vl :VimuxRunLastCommand<cr>
+map <Leader>vi :VimuxInspectRunner<cr>
+map <Leader>vq :VimuxCloseRunner<cr>
+map <Leader>vx :VimuxInterruptRunner<cr>
+map <Leader>vz :call VimuxZoomRunner()<cr>
 
 " FZF key bindings
 " fzf - check first to make sure we aren't in a nerdtree buffer
-"nmap <Leader>F :GFiles<CR>
+"nmap <Leader>F :GFiles<cr>
 nnoremap <silent> <expr> <Leader>F (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":GFiles\<cr>"
-"nmap <Leader>f :Files<CR>
+"nmap <Leader>f :Files<cr>
 nnoremap <silent> <expr> <Leader>f (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Files\<cr>"
-"nmap <Leader>b :Buffers<CR>
+"nmap <Leader>b :Buffers<cr>
 nnoremap <silent> <expr> <Leader>b (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Buffers\<cr>"
-"nmap <Leader>h :History<CR>
+"nmap <Leader>h :History<cr>
 " In insert mode if ctrl+f use blines to search for string in file.
 "inoremap <C-f> <Esc><Esc>:BLines!<cr> "This conflicts with other mappings,
 "re-think
@@ -501,7 +501,7 @@ nnoremap <C-g> :BCommits!<cr>
 " ctrl-t on a file brings up in new tab
 " ctrl-i on a file splits horizontally.
 " ctrl-v on a file splits vertically.
-nnoremap <C-f> :FZF<CR>
+nnoremap <C-f> :FZF<cr>
 let g:fzf_action = {
 			\ 'ctrl-t': 'tab split',
 			\ 'ctrl-i': 'split',
@@ -715,10 +715,10 @@ if has('nvim')
 endif
 
 " leader l to quickly switch buffers.
-nnoremap <leader>l :ls<CR>:b<space>
+nnoremap <leader>l :ls<cr>:b<space>
 
 " macdictionary support
-cabbrev lu MacDictWord<CR>
+cabbrev lu MacDictWord<cr>
 cabbrev define MacDictQuery
 
 " Wordy
@@ -731,9 +731,9 @@ cabbrev nw NoWordy
 
 " 'cd' towards the dir in which the current file is edited
 " but only change the path for the current window
-map <leader>cd :lcd %:h<CR>
+map <leader>cd :lcd %:h<cr>
 " Open files located in the same dir in with the current file is edited
-map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
+map <leader>ew :e <C-R>=expand("%:p:h") . "/" <cr>
 
 " Experimenting with tabs
 " tp "tab previous in normal mode"
