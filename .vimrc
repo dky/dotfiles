@@ -267,6 +267,7 @@ cabbrev gpd Git pull origin master
 cabbrev gl Git log --pretty --pretty=oneline
 cabbrev gcma Git add .<CR>:Git commit -m ""<Left><C-R>=Eatchar('\s')<CR>
 cabbrev gam Git commit --amend
+cabbrev gamend Git commit --amend
 
 " https://stackoverflow.com/questions/11037825/vim-get-out-of-parenthesis-brackets-etc
 inoremap <C-e> <C-o>A
