@@ -78,7 +78,6 @@ function lb() {
 }
 
 # FZF to switch Tmux sessions:
-# bind-key s run "tmux new-window 'bash -ci fs'"
 function fs() {
 	local -r fmt='#{session_id}:|#S|(#{session_attached} attached)'
 		{ tmux display-message -p -F "$fmt" && tmux list-sessions -F "$fmt"; } \
@@ -90,7 +89,7 @@ function fs() {
 		}
 
 # FZF to switch Tmux panes:
-function ftpane() {
+function fp() {
 	local panes current_window current_pane target target_window target_pane
 	panes=$(tmux list-panes -s -F '#I:#P - #{pane_current_path} #{pane_current_command}')
 	current_pane=$(tmux display-message -p '#I:#P')
@@ -105,7 +104,7 @@ function ftpane() {
 		tmux select-pane -t ${target_window}.${target_pane}
 	else
 		tmux select-pane -t ${target_window}.${target_pane} &&
-			tmux select-window -t $target_window
+		tmux select-window -t $target_window
 	fi
 }
 
