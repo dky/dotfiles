@@ -18,6 +18,9 @@ if has('nvim')
 else
 endif
 
+"nvim view/cache location
+"$HOME/.local/share/nvim/view
+
 Plug 'gmarik/vundle'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
