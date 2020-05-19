@@ -17,6 +17,8 @@ if has('nvim')
 	Plug 'ujihisa/neco-look'
 else
 endif
+let g:deoplete#enable_at_startup = 1
+
 
 "nvim view/cache location
 "$HOME/.local/share/nvim/view
