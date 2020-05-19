@@ -722,6 +722,8 @@ nnoremap <leader>l :ls<cr>:b<space>
 " macdictionary support
 cabbrev dw MacDictWord<cr>
 cabbrev luw MacDictQuery<cr>
+nnoremap <C-d> :MacDictWord<cr>
+
 
 let g:vim_mac_dictionary_use_app = 1
 
