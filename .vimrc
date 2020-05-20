@@ -61,6 +61,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'reedes/vim-lexical'
 Plug 'reedes/vim-wordy'
 Plug 'johngrib/vim-mac-dictionary'
+Plug 'dpelle/vim-LanguageTool'
 " Override colorscheme defaults, I needed this because the pmenu popup was too
 " dark and wanted to use a lighter popup color
 " Customizations are stored in ~/.vim/after/colors/molokai.vim
@@ -456,6 +457,7 @@ au FileType python nmap <silent> <F3> :ALEFix<cr>
 let g:ale_linters = {'go': ['gometalinter', 'gofmt'],}
 let g:ale_linters = {'javascript': ['eslint'],}
 let g:ale_linters = {'python': ['flake8'],}
+let g:ale_linters = {'markdown': ['proselint'],}
 
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['prettier', 'eslint']
@@ -626,13 +628,6 @@ inoremap <F11> <C-X><C-K>
 " For all files with .md extension load CustomLexical above
 au BufReadPost,BufNewFile *.md CustomLexical
 
-call ale#linter#Define('markdown', {
-\   'name': 'vale',
-\   'executable': 'vale',
-\   'command': "vale --output=line %t",
-\   'callback': 'ale#handlers#unix#HandleAsWarning',
-\})
-
 " restore last position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
@@ -723,6 +718,8 @@ cabbrev dw MacDictWord<cr>
 cabbrev luw MacDictQuery<cr>
 nnoremap <C-d> :MacDictWord<cr>
 
+cabbrev lt LanguageToolCheck<cr>
+cabbrev ltc LanguageToolClear<cr>
 
 let g:vim_mac_dictionary_use_app = 1
 
