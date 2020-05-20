@@ -626,13 +626,12 @@ inoremap <F11> <C-X><C-K>
 " For all files with .md extension load CustomLexical above
 au BufReadPost,BufNewFile *.md CustomLexical
 
-" proselint
-call ale#linter#Define('text', {
-			\   'name': 'proselint',
-			\   'executable': 'proselint',
-			\   'command': 'proselint %t',
-			\   'callback': 'ale#handlers#unix#HandleAsWarning',
-			\})
+call ale#linter#Define('markdown', {
+\   'name': 'vale',
+\   'executable': 'vale',
+\   'command': "vale --output=line %t",
+\   'callback': 'ale#handlers#unix#HandleAsWarning',
+\})
 
 " restore last position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
