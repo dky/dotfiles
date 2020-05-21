@@ -718,8 +718,8 @@ cabbrev dw MacDictWord<cr>
 cabbrev luw MacDictQuery<cr>
 nnoremap <C-d> :MacDictWord<cr>
 
-cabbrev lt LanguageToolCheck<cr>
-cabbrev ltc LanguageToolClear<cr>
+cabbrev gc LanguageToolCheck<cr>
+cabbrev gq LanguageToolClear<cr>
 
 let g:vim_mac_dictionary_use_app = 1
 
