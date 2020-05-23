@@ -79,7 +79,7 @@ alias gpu='git push origin HEAD'
 alias gl='git log --pretty --pretty=oneline'
 alias gs='git status'
 alias gd='git diff'
-alias gcma='git commit -am'
+alias gcma='git add . && git commit -m && git push origin HEAD'
 alias gcm='git commit -m'
 alias gco='git checkout'
 alias gra='git remote add origin'
@@ -212,6 +212,7 @@ alias ni=nvim
 
 #alias dict to dic
 alias dict=dic
+alias def=dic
 
 #unset proxy
 alias unsetproxy="unset HTTP_PROXY HTTPS_PROXY http_proxy https_proxy"

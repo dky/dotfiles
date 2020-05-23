@@ -715,8 +715,10 @@ nnoremap <leader>l :ls<cr>:b<space>
 
 " macdictionary support
 cabbrev dw MacDictWord<cr>
-cabbrev luw MacDictQuery<cr>
 nnoremap <C-d> :MacDictWord<cr>
+
+cabbrev luw MacDictQuery<cr>
+cabbrev lu MacDictQuery<cr>
 
 cabbrev gc LanguageToolCheck<cr>
 cabbrev gq LanguageToolClear<cr>
