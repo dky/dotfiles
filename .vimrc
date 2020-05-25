@@ -51,7 +51,6 @@ Plug 'rodjek/vim-puppet'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/vim-peekaboo'
 Plug 'w0rp/ale'
 Plug 'roxma/vim-tmux-clipboard'
 Plug 'majutsushi/tagbar'
@@ -688,7 +687,7 @@ let g:auto_save = 1  " enable AutoSave on Vim startup
 "inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
-inoremap " ""<left>
+"inoremap " ""<left>
 
 autocmd FileType python call SemshiCustomHighlights()
 
