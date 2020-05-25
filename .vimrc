@@ -320,8 +320,9 @@ nnoremap ,s[ ciw[<C-r>"]<Esc>
 nnoremap ,s( ciw(<C-r>")<Esc>
 nnoremap ,s{ ciw{<C-r>"}<Esc>
 
-map <leader>gc VS`<cr>
-
+" Custom surrounds
+" Python docstring
+let b:surround_{char2nr('c')} = "\"\"\"\r\"\"\""
 
 " vim-go
 " Don't show warnings if we are not using nvim or > 7.4.1099, thanks RedHat...
