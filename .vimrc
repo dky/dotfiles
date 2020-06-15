@@ -69,7 +69,6 @@ Plug 'dky/vim-aftercolors'
 Plug '907th/vim-auto-save'
 Plug 'kchmck/vim-coffee-script'
 Plug 'thaerkh/vim-indentguides'
-Plug 'mtth/scratch.vim'
 
 call plug#end()
 
