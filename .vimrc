@@ -123,6 +123,9 @@ nnoremap <silent> ,cd :execute ":Codi"<cr>
 cabbrev oc Codi
 cabbrev ec Codi!
 
+let g:codi#width = winwidth(winnr()) / 2
+let g:codi#rightalign = 0
+
 " Short for "Close all buffers" - Closes all open buffers except current.
 cabbrev cab call CloseAllBuffersButCurrent()<cr>
 
