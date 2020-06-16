@@ -31,11 +31,16 @@ snippet    defs
    def __str__(self${1}):
     ${2}
 
-snippet    fi
+snippet    fori
    for i in ${1}
 
-snippet    fir
-   for i in range ${1}
+snippet    forir
+   for i in range(${1}):
+      ${2}
+
+snippet    forirl
+   for i in range(len(${1})):
+      ${2}
 
 snippet     dstr
 abbr        docstring
