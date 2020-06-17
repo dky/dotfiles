@@ -36,19 +36,15 @@ abbr       printtype
    print(type(${1}))
 
 snippet    fori
-   for i in ${1}
+   for ${1} in ${2}
 
 snippet    forir
-   for i in range(${1}):
-      ${2}
+   for ${1} in range(${2}):
+      ${3}
 
 snippet    forirl
-   for i in range(len(${1})):
-      ${2}
-
-snippet    forjrl
-   for i in range(len(${1})):
-      ${2}
+   for ${1} in range(len(${2})):
+      ${3}
 
 snippet     dstr
 abbr        docstring
