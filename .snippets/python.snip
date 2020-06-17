@@ -31,6 +31,10 @@ snippet    defs
    def __str__(self${1}):
     ${2}
 
+snippet    prty
+abbr       printtype
+   print(type(${1}))
+
 snippet    fori
    for i in ${1}
 
@@ -39,6 +43,10 @@ snippet    forir
       ${2}
 
 snippet    forirl
+   for i in range(len(${1})):
+      ${2}
+
+snippet    forjrl
    for i in range(len(${1})):
       ${2}
 
