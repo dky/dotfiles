@@ -100,3 +100,14 @@ snippet tb
     |${1}   |${2}  |
     |-------|:----:|
     |${3}   |${4}  |
+
+snippet pq
+   {{< show "${1}" >}}
+
+   <div id="${2}" style="display: none">
+
+   {{< highlight Python "linenos=table" >}}
+   ${3}
+   {{< / highlight >}}
+
+   </div>
