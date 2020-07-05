@@ -101,7 +101,7 @@ snippet tb
     |-------|:----:|
     |${3}   |${4}  |
 
-snippet pq
+snippet pqc
    {{< show "${1}" >}}
 
    <div id="${2}" style="display: none">
@@ -109,5 +109,16 @@ snippet pq
    {{< highlight Python "linenos=table" >}}
    ${3}
    {{< / highlight >}}
+
+   </div>
+
+snippet pq
+   {{< show "${1}" >}}
+
+   <div id="${2}" style="display: none">
+
+   <p class="standard-question" >
+   ${3}
+   <p>
 
    </div>
