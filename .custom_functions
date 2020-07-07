@@ -145,15 +145,6 @@ function mkcd () {
 	cd "$1"
 }
 
-# Django
-function dasp () {
-	django-admin startproject "$1" .
-}
-
-function pipei () {
-	pipenv install django==$1
-}
-
 # Create a timestamped directory quickly
 function mkd () {
 	date_today=$(date +%m-%d-%y)
@@ -209,4 +200,28 @@ function dic {
 	else
 		wn $1 -over | fold
 	fi
+}
+
+function uvenv {
+	python3 -m venv venv 
+	source venv/bin/activate 
+	pip install --upgrade pip setuptools
+	mkdir -p app/templates \
+		app/static \
+		app/views \
+		app/viewmodels \
+		app/data \
+		app/static/js app/static/css app/static/img
+		touch app/app.py
+
+cat << EOF > app/requirements.txt
+flask
+sqlalchemy
+passlib
+pytest
+pytest-cov
+webtest
+EOF
+
+	pip install -r app/requirements.txt
 }
