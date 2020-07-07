@@ -212,16 +212,35 @@ function uvenv {
 		app/viewmodels \
 		app/data \
 		app/static/js app/static/css app/static/img
-		touch app/app.py
 
 cat << EOF > app/requirements.txt
 flask
 sqlalchemy
 passlib
+EOF
+
+cat << EOF > app/requirements-dev.txt
+-r requirements.txt
 pytest
 pytest-cov
 webtest
 EOF
 
 	pip install -r app/requirements.txt
+	pip install -r app/requirements-dev.txt
+
+cat << EOF > app/app.py
+import flask
+
+
+app = flask.Flask(__name__)
+
+
+@app.route('/')
+def index():
+    return "Hello World!"
+
+
+app.run()
+EOF
 }
