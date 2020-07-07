@@ -207,6 +207,8 @@ function uvenv {
 	source venv/bin/activate 
 	pip install --upgrade pip setuptools
 	mkdir -p app/templates \
+		app/bin \
+		app/db \
 		app/static \
 		app/views \
 		app/viewmodels \
