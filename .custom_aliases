@@ -201,6 +201,12 @@ alias exp="explorer.exe ."
 
 #python 3 please
 #alias python=python3
+#Virtual env aliases
+alias uvenv="python3 -m venv venv && . venv/bin/activate && pip install --upgrade pip setuptools > /dev/null"
+alias svenv="source venv/bin/activate"
+alias qvenv="deactivate"
+alias evenv="deactivate"
+alias pipl="pip list"
 
 #alias for chmod
 alias chux="chmod u+x"
