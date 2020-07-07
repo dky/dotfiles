@@ -215,21 +215,21 @@ function uvenv {
 		app/data \
 		app/static/js app/static/css app/static/img
 
-cat << EOF > app/requirements.txt
+cat << EOF > ./requirements.txt
 flask
 sqlalchemy
 passlib
 EOF
 
-cat << EOF > app/requirements-dev.txt
+cat << EOF > ./requirements-dev.txt
 -r requirements.txt
 pytest
 pytest-cov
 webtest
 EOF
 
-	pip install -r app/requirements.txt
-	pip install -r app/requirements-dev.txt
+pip install -r ./requirements.txt
+pip install -r ./requirements-dev.txt
 
 cat << EOF > app/app.py
 import flask
@@ -243,6 +243,7 @@ def index():
     return "Hello World!"
 
 
-app.run()
+if __name__ == '__main__':
+app.run(debug=True)
 EOF
 }
