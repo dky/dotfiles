@@ -69,6 +69,9 @@ Plug 'dky/vim-aftercolors'
 Plug '907th/vim-auto-save'
 Plug 'kchmck/vim-coffee-script'
 Plug 'thaerkh/vim-indentguides'
+Plug 'luochen1990/rainbow'
+
+let g:rainbow_active = 1
 
 call plug#end()
 
@@ -687,10 +690,10 @@ augroup END
 let g:auto_save = 1  " enable AutoSave on Vim startup
 
 " autoclose for only certain strings/braces
-"inoremap ` ``<left>
-"inoremap ( ()<left>
+inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
+"inoremap ` ``<left>
 "inoremap " ""<left>
 
 autocmd FileType python call SemshiCustomHighlights()
