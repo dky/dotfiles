@@ -38,6 +38,10 @@ snippet     h4
 abbr        h4
     #### ${1}
 
+snippet     h6
+abbr        h6
+    ###### ${1}
+
 snippet     g3
 abbr        g3
     \`\`\`${1}
@@ -103,7 +107,7 @@ snippet tb
 
 snippet pqc
    {{< show "${1}" >}}
-   <div id="${2}" style="display: none">
+   <div id="${2}" class="code" style="display: none">
 
    {{< highlight Python "linenos=table" >}}
    ${3}
@@ -119,4 +123,11 @@ snippet pq
    ${3}
 
    </p>
+   </div>
+
+snippet hpc
+   <div class="code" "linenos=table">
+   {{< highlight Python >}}
+   ${1}
+   {{< / highlight >}}
    </div>
