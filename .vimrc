@@ -700,7 +700,7 @@ autocmd FileType python call SemshiCustomHighlights()
 
 " Quickly copy a file in the buffer
 nnoremap <leader>c :call CopyCurrentFile()<cr>
-cabbrev cp call CopyCurrentFile()<cr>
+"cabbrev cp call CopyCurrentFile()<cr>
 
 " Experiments with nvim terminal
 if has('nvim')
