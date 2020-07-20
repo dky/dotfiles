@@ -207,6 +207,7 @@ alias qvenv="deactivate"
 alias evenv="deactivate"
 alias pipl="pip list"
 alias pipr="pip install -r requirements.txt"
+alias pipi="pip install"
 
 #alias for chmod
 alias chux="chmod u+x"
