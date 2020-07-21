@@ -788,3 +788,6 @@ set updatetime=100
 "Delete everything in the file and start over, good for scratch testing.
 nnoremap <leader>d :1,$d<cr>
 inoremap <leader>d <esc>:1,$d<cr>
+
+nnoremap <silent> <Right> :bn<cr>
+nnoremap <silent> <Left> :bp<cr>
