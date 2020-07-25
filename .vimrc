@@ -465,7 +465,7 @@ au FileType python nmap <silent> <F3> :ALEFix<cr>
 " ale
 let g:ale_linters = {'go': ['gometalinter', 'gofmt'],}
 let g:ale_linters = {'javascript': ['eslint'],}
-let g:ale_linters = {'python': ['flake8'],}
+let g:ale_linters = {'python': ['flake8', 'pylint'],}
 let g:ale_linters = {'markdown': ['proselint'],}
 
 let g:ale_fixers = {}
