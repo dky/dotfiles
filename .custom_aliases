@@ -205,8 +205,10 @@ alias exp="explorer.exe ."
 alias venva="source venv/bin/activate"
 alias venvd="deactivate"
 alias pipl="pip list"
-alias pipr="pip install -r requirements.txt"
 alias pipi="pip install"
+alias pipr="pip install -r requirements.txt"
+alias pipvim="pip install flake8 yapf pynvim"
+alias pippurge="pip uninstall -y -r <(pip freeze)"
 
 #alias for chmod
 alias chux="chmod u+x"
