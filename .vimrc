@@ -218,6 +218,10 @@ function! SemshiCustomHighlights()
 	hi semshiSelected ctermfg=231 ctermbg=237
 endfunction
 
+"Disable semshi error sign and just let flake8 handle it.
+let g:semshi#error_sign = v:false
+
+
 " Function to copy current buffer into a new file without manually writing and
 " re-opening
 function! CopyCurrentFile()

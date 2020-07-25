@@ -210,7 +210,7 @@ alias pipl="pip list"
 alias pipf="pip freeze > requirements.txt"
 alias pipi="pip install"
 alias pipr="pip install -r requirements.txt"
-alias pipvim="pip install flake8 yapf pynvim"
+alias pipvim="pip install flake8 yapf pynvim jedi"
 alias pippurge="pip uninstall -y -r <(pip freeze)"
 
 #alias for chmod
