@@ -121,14 +121,14 @@ set list
 
 " codi
 nnoremap <silent> ,cd :execute ":Codi"<cr>
-cabbrev oc Codi
-cabbrev ec Codi!
+"cabbrev oc Codi
+"cabbrev ec Codi!
 
 let g:codi#width = winwidth(winnr()) / 2
 let g:codi#rightalign = 0
 
 " Short for "Close all buffers" - Closes all open buffers except current.
-cabbrev cab call CloseAllBuffersButCurrent()<cr>
+"cabbrev cab call CloseAllBuffersButCurrent()<cr>
 
 " remap esc to jk
 imap jk <Esc>
@@ -235,7 +235,7 @@ endfunction
 
 nnoremap <F4> :call NumberToggle()<cr>
 " Disable relative numbers
-cabbrev norel set relativenumber!
+"cabbrev norel set relativenumber!
 
 " tagbar toggle
 nmap ,tb :TagbarToggle<cr>
@@ -274,7 +274,7 @@ nmap ,ch :CheckHealth<cr>
 nmap ,up :UpdateRemotePlugins<cr>
 " shortcut for vundle
 nmap ,bi :PlugInstall<cr>
-cabbrev bi PlugInstall<cr>
+"cabbrev bi PlugInstall<cr>
 nmap ,gib :GoInstallBinaries<cr>
 
 " reload vim quickly
@@ -354,10 +354,10 @@ let g:go_fmt_experimental = 1
 au FileType go nmap <leader><F12> :GoDecls<cr>
 au FileType go nmap <F12> <Plug>(go-def)
 
-cabbrev goi GoImport
-cabbrev god GoDrop
-cabbrev gof GoFmt
-cabbrev got GoTest
+"cabbrev goi GoImport
+"cabbrev god GoDrop
+"cabbrev gof GoFmt
+"cabbrev got GoTest
 
 " vim-airline
 let g:airline_theme='papercolor'
@@ -456,8 +456,8 @@ cabbrev setftsh set ft=sh
 cabbrev setftbash set ft=sh
 
 " Toggle ale on and off. At was for ale toggle...
-cabbrev at ALEToggle<cr>
-cabbrev af ALEFix<cr>
+"cabbrev at ALEToggle<cr>
+"cabbrev af ALEFix<cr>
 
 "Map ALEFix to F3
 au FileType python nmap <silent> <F3> :ALEFix<cr>
@@ -556,7 +556,7 @@ let g:fzf_action = {
 			\ 'ctrl-v': 'vsplit' }
 
 " goyo
-cabbrev gy Goyo
+"cabbrev gy Goyo
 
 " tern
 let g:tern_request_timeout = 1
@@ -727,21 +727,21 @@ nnoremap <leader>l :ls<cr>:b<space>
 cabbrev dw MacDictWord<cr>
 nnoremap <C-d> :MacDictWord<cr>
 
-cabbrev luw MacDictQuery<cr>
-cabbrev lu MacDictQuery<cr>
+"cabbrev luw MacDictQuery<cr>
+"cabbrev lu MacDictQuery<cr>
 
-cabbrev gc LanguageToolCheck<cr>
-cabbrev gq LanguageToolClear<cr>
+"cabbrev gc LanguageToolCheck<cr>
+"cabbrev gq LanguageToolClear<cr>
 
 let g:vim_mac_dictionary_use_app = 1
 
 " Wordy
-cabbrev ww Wordy weak
-cabbrev wp Wordy problematic
-cabbrev wr Wordy redundant
-cabbrev wadj Wordy adjectives
-cabbrev wadv Wordy adverbs
-cabbrev nw NoWordy
+"cabbrev ww Wordy weak
+"cabbrev wp Wordy problematic
+"cabbrev wr Wordy redundant
+"cabbrev wadj Wordy adjectives
+"cabbrev wadv Wordy adverbs
+"cabbrev nw NoWordy
 
 " 'cd' towards the dir in which the current file is edited
 " but only change the path for the current window
