@@ -203,7 +203,7 @@ alias exp="explorer.exe ."
 #alias python=python3
 #Virtual env aliases
 alias venva="source venv/bin/activate"
-alias senv="source venv/bin/activate"
+alias svenv="source venv/bin/activate"
 alias venvd="deactivate"
 alias pipl="pip list"
 alias pipf="pip freeze > requirements.txt"
