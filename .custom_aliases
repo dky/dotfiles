@@ -204,6 +204,7 @@ alias exp="explorer.exe ."
 #Virtual env aliases
 alias venva="source venv/bin/activate"
 alias svenv="source venv/bin/activate"
+alias da="deactivate"
 alias venvd="deactivate"
 alias pipl="pip list"
 alias pipf="pip freeze > requirements.txt"
