@@ -128,7 +128,7 @@ let g:codi#width = winwidth(winnr()) / 2
 let g:codi#rightalign = 0
 
 " Short for "Close all buffers" - Closes all open buffers except current.
-"cabbrev cab call CloseAllBuffersButCurrent()<cr>
+cabbrev cab call CloseAllBuffersButCurrent()<cr>
 
 " remap esc to jk
 imap jk <Esc>
