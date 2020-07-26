@@ -457,7 +457,7 @@ cabbrev setftbash set ft=sh
 
 " Toggle ale on and off. At was for ale toggle...
 "cabbrev at ALEToggle<cr>
-"cabbrev af ALEFix<cr>
+cabbrev af ALEFix<cr>
 
 "Map ALEFix to F3
 au FileType python nmap <silent> <F3> :ALEFix<cr>
