@@ -789,9 +789,12 @@ cabbrev it IndentGuidesToggle
 " gitgutter
 set updatetime=100
 
-"Delete everything in the file and start over, good for scratch testing.
+" Delete everything in the file and start over, good for scratch testing.
 nnoremap <leader>d :1,$d<cr>
 inoremap <leader>d <esc>:1,$d<cr>
 
 nnoremap <silent> <Right> :bn<cr>
 nnoremap <silent> <Left> :bp<cr>
+
+" Quickly create Python scratch files.
+nnoremap <leader>ns :execute 'edit ~/tmp/py_scratch_' . strftime("%Y%m%d_%H%M") . '.py'<cr>
