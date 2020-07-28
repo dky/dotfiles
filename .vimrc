@@ -456,13 +456,11 @@ cabbrev setftsh set ft=sh
 cabbrev setftbash set ft=sh
 
 " Toggle ale on and off. At was for ale toggle...
-cabbrev at ALEToggle<cr>
-cabbrev af ALEFix<cr>
-
-"Map ALEFix to F3
-"au FileType python nmap <silent> <F3> :ALEFix<cr>
+map <leader>at :ALEToggle<CR>
+map <leader>af :ALEFix<CR>
 
 " ale
+"au FileType python nmap <silent> <F3> :ALEFix<cr>
 let g:ale_linters = {'go': ['gometalinter', 'gofmt'],}
 let g:ale_linters = {'javascript': ['eslint'],}
 let g:ale_linters = {'python': ['flake8', 'pylint'],}
@@ -766,9 +764,12 @@ cabbrev cdconf cdconf $HOME/.config<cr>
 " Create a directory with current date
 cabbrev cdcb cd $HOME/git/cb<cr>
 
-
 nnoremap mkd :call CreateDailyFolder()<cr>
 cabbrev Cd :call fzf#run({'source':  'find . \( -name ".git" -o -name ".vim" -o -name "Library" \) -prune  -o -type d -print','sink': 'cd'})
+
+" Quickly create Python scratch files.
+"nnoremap <leader>ns :execute 'edit ~/tmp/py_scratch_' . strftime("%Y%m%d_%H%M%S") . '.py'<cr>
+nnoremap <F3> :execute 'edit ~/tmp/py_scratch_' . strftime("%Y%m%d_%H%M%S") . '.py'<cr>
 
 " Hugo make public
 cabbrev mp :!make public<cr><cr>
@@ -796,6 +797,3 @@ inoremap <leader>d <esc>:1,$d<cr>
 nnoremap <silent> <Right> :bn<cr>
 nnoremap <silent> <Left> :bp<cr>
 
-" Quickly create Python scratch files.
-"nnoremap <leader>ns :execute 'edit ~/tmp/py_scratch_' . strftime("%Y%m%d_%H%M%S") . '.py'<cr>
-nnoremap <F3> :execute 'edit ~/tmp/py_scratch_' . strftime("%Y%m%d_%H%M%S") . '.py'<cr>
