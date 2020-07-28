@@ -768,8 +768,7 @@ nnoremap mkd :call CreateDailyFolder()<cr>
 cabbrev Cd :call fzf#run({'source':  'find . \( -name ".git" -o -name ".vim" -o -name "Library" \) -prune  -o -type d -print','sink': 'cd'})
 
 " Quickly create Python scratch files.
-"nnoremap <leader>ns :execute 'edit ~/tmp/py_scratch_' . strftime("%Y%m%d_%H%M%S") . '.py'<cr>
-nnoremap <F3> :execute 'edit ~/tmp/py_scratch_' . strftime("%Y%m%d_%H%M%S") . '.py'<cr>
+nnoremap <F3> :execute 'edit ~/tmp/py_' . strftime("%m%d%y_%H%M%S") . '.py'<cr>
 
 " Hugo make public
 cabbrev mp :!make public<cr><cr>
