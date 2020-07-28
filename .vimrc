@@ -797,4 +797,4 @@ nnoremap <silent> <Right> :bn<cr>
 nnoremap <silent> <Left> :bp<cr>
 
 " Quickly create Python scratch files.
-nnoremap <leader>ns :execute 'edit ~/tmp/py_scratch_' . strftime("%Y%m%d_%H%M") . '.py'<cr>
+nnoremap <leader>ns :execute 'edit ~/tmp/py_scratch_' . strftime("%Y%m%d_%H%M%S") . '.py'<cr>
