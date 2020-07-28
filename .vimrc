@@ -460,7 +460,7 @@ cabbrev at ALEToggle<cr>
 cabbrev af ALEFix<cr>
 
 "Map ALEFix to F3
-au FileType python nmap <silent> <F3> :ALEFix<cr>
+"au FileType python nmap <silent> <F3> :ALEFix<cr>
 
 " ale
 let g:ale_linters = {'go': ['gometalinter', 'gofmt'],}
@@ -797,4 +797,5 @@ nnoremap <silent> <Right> :bn<cr>
 nnoremap <silent> <Left> :bp<cr>
 
 " Quickly create Python scratch files.
-nnoremap <leader>ns :execute 'edit ~/tmp/py_scratch_' . strftime("%Y%m%d_%H%M%S") . '.py'<cr>
+"nnoremap <leader>ns :execute 'edit ~/tmp/py_scratch_' . strftime("%Y%m%d_%H%M%S") . '.py'<cr>
+nnoremap <F3> :execute 'edit ~/tmp/py_scratch_' . strftime("%Y%m%d_%H%M%S") . '.py'<cr>
