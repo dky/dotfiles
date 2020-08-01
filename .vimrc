@@ -321,8 +321,8 @@ inoremap <C-f> <C-o>l
 inoremap <C-j> <C-o>o
 inoremap <C-k> <C-o>O
 "Open a line below in insert, backspace then add a blank line. Useful for def
-"in Python
-inoremap <C-o> <C-o>o<BS><cr>
+"in Python, map this to Alt. A = Alt
+inoremap <A-o> <C-o>o<BS><cr>
 
 " surround markdown emphasis
 nnoremap ,s* ciw**<C-r>"**<Esc>
@@ -798,4 +798,3 @@ inoremap <leader>d <esc>:1,$d<cr>
 
 nnoremap <silent> <Right> :bn<cr>
 nnoremap <silent> <Left> :bp<cr>
-
