@@ -1,7 +1,14 @@
 snippet #!
    #!/usr/bin/env python
 
-snippet smpdict
+snippet samplenesteddict
+   students = {
+        "Peter": {"age": 10, "address": "Lisbon"},
+        "Isabel": {"age": 11, "address": "Sesimbra"},
+        "Anna": {"age": 9, "address": "Lisbon"}
+   }
+
+snippet sampledict
    Student = {
         "Peter": 10,
         "Isabel": 11,
@@ -13,8 +20,8 @@ snippet smpdict
         "Gabriel": 10
    }
 
-snippet smplist
-   list_ = [1, 2, 3, 4, 5, 6]
+snippet samplelist
+   list_ = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 snippet enum
    for i, item in enumerate(list_):
