@@ -278,9 +278,8 @@ nmap ,bi :PlugInstall<cr>
 nmap ,gib :GoInstallBinaries<cr>
 
 " reload vim quickly
-nmap ,rv :source $MYVIMRC<cr>
-cabbrev rv :source $MYVIMRC<cr>
-nnoremap <leader>r :source $MYVIMRC<cr>
+cabbrev rv source $MYVIMRC<cr>
+"nnoremap <leader>r :source $MYVIMRC<cr>
 
 " map space rather than colon
 nmap <space> :
