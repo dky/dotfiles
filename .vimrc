@@ -675,8 +675,10 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab indentkeys-=0# indentke
 
 " vim sneak
 let g:sneak#label = 1
-map ,s <Plug>Sneak_s
-map ,S <Plug>Sneak_S
+"map ,s <Plug>Sneak_s
+"map ,S <Plug>Sneak_S
+map f <Plug>Sneak_s
+map F <Plug>Sneak_S
 
 augroup remember_folds
 	autocmd!
