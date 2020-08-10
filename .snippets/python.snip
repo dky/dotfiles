@@ -1,7 +1,7 @@
 snippet #!
    #!/usr/bin/env python
 
-snippet samplenesteddict
+snippet samplenestdic
    students = {
         "Peter": {"age": 10, "address": "Lisbon"},
         "Isabel": {"age": 11, "address": "Sesimbra"},
@@ -20,20 +20,45 @@ snippet sampledict
         "Gabriel": 10
    }
 
+snippet el
+   list = [${1}]
+
+
 snippet samplelist
    list_ = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-snippet enum
-   for i, item in enumerate(list_):
-      ${1}
+snippet rev
+   reverse(${1}):
+
+snippet ed
+   ${1} = {}
+   ${2}
+
+snippet di
+   dict[${1}] ${2}
+
+snippet dg
+   dict.get(${1}, 0)
 
 snippet wh
    while ${1:condition}:
       ${2:# code...}
 
-snippet for
-   for ${1:needle} in ${2:haystack}:
-      ${3:# code...}
+snippet fori
+   for ${1} in ${2}:
+
+snippet forir
+   for ${1} in range(${2}):
+      ${3}
+
+snippet forirl
+   for ${1} in range(len(${2})):
+      ${3}
+
+snippet enum
+   for i, item in enumerate(list_):
+      ${1}
+
 
 snippet pr
   print(${1}
@@ -67,16 +92,6 @@ snippet dfs
 snippet prty
    print(type(${1}))
 
-snippet fori
-   for ${1} in ${2}
-
-snippet forir
-   for ${1} in range(${2}):
-      ${3}
-
-snippet forirl
-   for ${1} in range(len(${2})):
-      ${3}
 
 snippet dstr
     """
