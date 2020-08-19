@@ -655,7 +655,13 @@ endfun
 " space code appropriately for file type.
 autocmd BufNewFile,BufRead * call s:DetectNode()
 
-" go
+" neosnippets
+" You can :set noet|%retab! in your .snip file to replace all spaces with hard tabs, that way the extra indentation is fixed!
+" https://github.com/Shougo/neosnippet.vim/issues/445
+au BufNewFile,BufRead *.snip
+			\ set noet|%retab!
+
+" golang
 au BufNewFile,BufRead *.go
 			\ set noexpandtab |
 			\ set tabstop=4 |
