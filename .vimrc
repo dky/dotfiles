@@ -5,20 +5,18 @@ if has('nvim')
 	" Do this at the OS level, then Run :UpdateRemotePlugins
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	" Go
-	Plug 'deoplete-plugins/deoplete-go', { 'do': 'make' }
+	Plug 'deoplete-plugins/deoplete-go', { 'do': 'make', 'for': 'go' }
+	Plug 'fatih/vim-go', { 'for': 'go' }
 	" Python
-	Plug 'zchee/deoplete-jedi'
-	Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
-	Plug 'jeetsukumaran/vim-pythonsense'
+	Plug 'zchee/deoplete-jedi', { 'for': 'python' }
+	Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins', 'for': 'python' }
+	Plug 'jeetsukumaran/vim-pythonsense', { 'for': 'python' }
 	" JS
-	Plug 'carlitux/deoplete-ternjs'
-	Plug 'ternjs/tern_for_vim', { 'do': 'npm install -g tern' }
-	" neco-look is a plugin to auto expand dictionary words using `look`"
-	Plug 'ujihisa/neco-look', { 'for': 'markdown' }
+	Plug 'carlitux/deoplete-ternjs', { 'for': 'javascript' }
+	Plug 'ternjs/tern_for_vim', { 'do': 'npm install -g tern', 'for': 'javascript' }
 else
 endif
 let g:deoplete#enable_at_startup = 1
-
 
 "nvim view/cache location
 "$HOME/.local/share/nvim/view
@@ -28,7 +26,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'fatih/molokai'
-Plug 'fatih/vim-go'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Shougo/neosnippet.vim'
@@ -54,12 +51,14 @@ Plug 'w0rp/ale'
 Plug 'roxma/vim-tmux-clipboard'
 Plug 'majutsushi/tagbar'
 Plug 'justinmk/vim-sneak'
+
 " writing plugins
-Plug 'junegunn/goyo.vim'
-Plug 'reedes/vim-lexical'
-Plug 'reedes/vim-wordy'
-Plug 'johngrib/vim-mac-dictionary'
-Plug 'dpelle/vim-LanguageTool'
+Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
+Plug 'reedes/vim-lexical', { 'for': 'markdown' }
+Plug 'reedes/vim-wordy', { 'for': 'markdown' }
+Plug 'johngrib/vim-mac-dictionary', { 'for': 'markdown' }
+Plug 'dpelle/vim-LanguageTool', { 'for': 'markdown' }
+Plug 'ujihisa/neco-look', { 'for': 'markdown' }
 " Override colorscheme defaults, I needed this because the pmenu popup was too
 " dark and wanted to use a lighter popup color
 " Customizations are stored in ~/.vim/after/colors/molokai.vim
