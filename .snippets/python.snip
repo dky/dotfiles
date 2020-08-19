@@ -1,8 +1,8 @@
 snippet #!
    #!/usr/bin/env python
+   ${0}
 
 # Sample nested dictionary
-
 snippet samplenestdic
    students = {
         "Peter": {"age": 10, "address": "Lisbon"},
@@ -11,7 +11,6 @@ snippet samplenestdic
    }
 
 # Sample dictionary
-
 snippet sampledict
    ages = {
         "Peter": 10,
@@ -25,7 +24,6 @@ snippet sampledict
    }
 
 # Sample list
-
 snippet samplelist
    list_ = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
@@ -40,19 +38,24 @@ snippet ed
    ${2}
 
 # Dictionaries
-
 snippet di
    ${1}["${2}"] = ${3}
 
 snippet dg
    ${1}.get(${2}, 0)
 
+# for key,value in dictionary.item()
+snippet forkvindic
+    abbrev for key, value in dictionary.items()
+    for key, value in ${1}.items():
+      ${2}
+
+# While
 snippet wh
    while ${1:condition}:
       ${2:# code...}
 
 # For loops
-
 snippet fori
    for ${1} in ${2}:
       ${3}
@@ -70,7 +73,6 @@ snippet enum
       ${1}
 
 # Print
-
 snippet pr
   print(${1}
 
@@ -78,12 +80,10 @@ snippet prt
   print(${1})
 
 # Conditionals
-
 snippet ifnm
    if __name__ == "__main__":
 
 # Functions
-
 snippet dis
    def __init__(self${1}):
     ${2}
@@ -108,7 +108,6 @@ snippet prty
    print(type(${1}))
 
 # Docstring
-
 snippet dstr
     """
     ${1}
@@ -116,7 +115,6 @@ snippet dstr
     ${2}
 
 # SQLAlchemy
-
 snippet sacs
    sa.Column(sa.String)
 
@@ -124,12 +122,9 @@ snippet _name
    __name__
 
 # List functions
-
 snippet rev
    reverse(${1}):
 
 # Strings
-
-# Print string slice
 snippet pss
    print(${1}[${2}:${3}]
