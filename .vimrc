@@ -31,7 +31,6 @@ Plug 'fatih/molokai'
 Plug 'fatih/vim-go'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'Shougo/neosnippet-snippets'
 Plug 'Shougo/neosnippet.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
@@ -432,6 +431,8 @@ let g:neosnippet#enable_snipmate_compatibility = 1
 " https://github.com/Shougo/neosnippet.vim/issues/331
 " :help g:neosnippet#enable_auto_clear_markers
 let g:neosnippet#enable_auto_clear_markers = 0
+" Get rid of preview popup
+set completeopt-=preview
 
 imap <C-l> <Plug>(neosnippet_expand_or_jump)
 smap <C-l> <Plug>(neosnippet_expand_or_jump)
