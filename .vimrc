@@ -1,19 +1,35 @@
 call plug#begin('~/.vim/plugged')
 
 if has('nvim')
-	" pip3 install --user pynvim
 	" Do this at the OS level, then Run :UpdateRemotePlugins
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
 	" Go
 	Plug 'deoplete-plugins/deoplete-go', { 'do': 'make', 'for': 'go' }
 	Plug 'fatih/vim-go', { 'for': 'go' }
+
 	" Python
+	" pip3 install --user pynvim
 	Plug 'zchee/deoplete-jedi', { 'for': 'python' }
 	Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins', 'for': 'python' }
 	Plug 'jeetsukumaran/vim-pythonsense', { 'for': 'python' }
+
 	" JS
 	Plug 'carlitux/deoplete-ternjs', { 'for': 'javascript' }
 	Plug 'ternjs/tern_for_vim', { 'do': 'npm install -g tern', 'for': 'javascript' }
+
+	" Markdown
+	Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
+	Plug 'reedes/vim-lexical', { 'for': 'markdown' }
+	Plug 'reedes/vim-wordy', { 'for': 'markdown' }
+	Plug 'johngrib/vim-mac-dictionary', { 'for': 'markdown' }
+	Plug 'dpelle/vim-LanguageTool', { 'for': 'markdown' }
+	"Plug 'ujihisa/neco-look', { 'for': 'markdown' }
+	Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+
+	Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+
+	Plug 'thaerkh/vim-indentguides', { 'for': ['go', 'python'] }
 else
 endif
 let g:deoplete#enable_at_startup = 1
@@ -35,7 +51,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
 Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
 Plug 'mattn/emmet-vim'
 Plug 'jamesroutley/vim-logbook'
 Plug 'metakirby5/codi.vim'
@@ -43,7 +58,6 @@ Plug 'rhysd/vim-clang-format'
 Plug 'iberianpig/tig-explorer.vim'
 Plug 'kana/vim-arpeggio'
 Plug 'benmills/vimux'
-Plug 'rodjek/vim-puppet'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
@@ -51,22 +65,12 @@ Plug 'w0rp/ale'
 Plug 'roxma/vim-tmux-clipboard'
 Plug 'majutsushi/tagbar'
 Plug 'justinmk/vim-sneak'
-
-" writing plugins
-Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
-Plug 'reedes/vim-lexical', { 'for': 'markdown' }
-Plug 'reedes/vim-wordy', { 'for': 'markdown' }
-Plug 'johngrib/vim-mac-dictionary', { 'for': 'markdown' }
-Plug 'dpelle/vim-LanguageTool', { 'for': 'markdown' }
-Plug 'ujihisa/neco-look', { 'for': 'markdown' }
 " Override colorscheme defaults, I needed this because the pmenu popup was too
 " dark and wanted to use a lighter popup color
 " Customizations are stored in ~/.vim/after/colors/molokai.vim
 " https://stackoverflow.com/questions/10454038/setting-vim-omnicompletion-colors-pmenu-in-vimrc-not-working
 Plug 'dky/vim-aftercolors'
 Plug '907th/vim-auto-save'
-Plug 'kchmck/vim-coffee-script'
-Plug 'thaerkh/vim-indentguides'
 Plug 'luochen1990/rainbow'
 
 let g:rainbow_active = 1
