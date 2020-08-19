@@ -1,14 +1,15 @@
-# Sample nested dictionary
 snippet samplenestdic
+alias nestdic
+abbr Sample nested dictionary
    students = {
         "Peter": {"age": 10, "address": "Lisbon"},
         "Isabel": {"age": 11, "address": "Sesimbra"},
         "Anna": {"age": 9, "address": "Lisbon"}
    }
 
-# Sample dictionary
 snippet sampledict
 alias smpdict
+abbr Sample dictionary
    ages = {
         "Peter": 10,
         "Isabel": 11,
@@ -20,9 +21,9 @@ alias smpdict
         "Gabriel": 10
    }
 
-# Sample list
 snippet samplelist
 alias smplist
+abbr Sample list
    list_ = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 snippet et
@@ -32,17 +33,18 @@ snippet el
    ${1} = [${2}]
 
 snippet ed
+abbr dict = {} - Empty dictionary
    ${1} = {}
    ${2}
 
 # Dictionaries
 snippet di
+abbr dict_name["key"] = value
    ${1}["${2}"] = ${3}
 
 snippet dg
    ${1}.get(${2}, 0)
 
-# for key,value in dictionary.item()
 snippet forkvindic
 alias forkv
 abbr for key, value in dictionary.items()
@@ -50,13 +52,13 @@ options head
     for key, value in ${1}.items():
       ${2}
 
-# While
 snippet wh
+alias while
    while ${1:condition}:
       ${2:# code...}
 
-# For loops
 snippet fori
+abbr for i in list:
    for ${1} in ${2}:
       ${3}
 
@@ -72,7 +74,6 @@ snippet enum
    for i, item in enumerate(list_):
       ${1}
 
-# Print
 snippet pr
   print(${1}
 
