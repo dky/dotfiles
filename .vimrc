@@ -29,7 +29,7 @@ if has('nvim')
 
 	Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 
-	Plug 'thaerkh/vim-indentguides', { 'for': ['go', 'python'] }
+	Plug 'thaerkh/vim-indentguides', { 'for': ['go', 'python', 'neosnippet', 'sh'] }
 else
 endif
 let g:deoplete#enable_at_startup = 1
@@ -789,8 +789,6 @@ command! -range Fmtsh <line1>!format_shell_cmd.py
 let g:indentguides_spacechar = '┆'
 let g:indentguides_tabchar = '|'
 let g:indentguides_firstlevel = 1
-" Ignore indent these file types please
-let g:indentguides_ignorelist = ['text', 'markdown', 'tex', 'pandoc', 'nerdtree', 'vim', 'dockerfile', 'json']
 let g:indentguides_conceal_color = 'ctermfg=238 ctermbg=234'
 "Allow us to toggle indentlines on off
 cabbrev it IndentGuidesToggle
