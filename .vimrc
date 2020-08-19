@@ -6,7 +6,7 @@ if has('nvim')
 
 	" Go
 	Plug 'deoplete-plugins/deoplete-go', { 'do': 'make', 'for': 'go' }
-	Plug 'fatih/vim-go', { 'for': 'go' }
+	Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
 
 	" Python
 	" pip3 install --user pynvim
