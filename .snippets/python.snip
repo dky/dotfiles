@@ -74,50 +74,50 @@ snippet forirl
 		${3}
 
 snippet enum
-	for i, item in enumerate(list_):
-		${1}
+	for i, item in enumerate(list_): ${1}
 
 snippet pr
-  print(${1}
+	print(${1}
 
 snippet prt
-  print(${1})
+	print(${1})
 
-# Conditionals
 snippet ifnm
+abbr if __name__ == "__main__"
 	if __name__ == "__main__":
+	${0}
 
 # Functions
 snippet dis
 	def __init__(self${1}):
-	 ${2}
+		${2}
 
 snippet dss
 	def __str__(self${1}):
-	 ${2}
+		${2}
 
 snippet df
 	def ${1}(${2}):
-	 ${3}
+		${3}
 
 snippet cls
 	class ${1}(${2}):
-	 ${3}
+		${3}
 
 snippet dfs
 	def __str__(self${1}):
-	 ${2}
+		${2}
 
 snippet prty
 abbr print(type(var))
 	print(type(${1}))
 
-# Docstring
 snippet dstr
-	 """
-	 ${1}
-	 """
-	 ${2}
+abbr print docString
+	"""
+	${1}
+	"""
+	${2}
 
 # SQLAlchemy
 snippet sacs
@@ -132,4 +132,5 @@ snippet rev
 
 # Strings
 snippet pss
+abbr print(string[start:stop]) - String slice
 	print(${1}[${2}:${3}]
