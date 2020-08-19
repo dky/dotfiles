@@ -19,12 +19,12 @@ if has('nvim')
 	Plug 'ternjs/tern_for_vim', { 'do': 'npm install -g tern', 'for': 'javascript' }
 
 	" Markdown
+	Plug 'ujihisa/neco-look', { 'for': 'markdown' }
 	Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
 	Plug 'reedes/vim-lexical', { 'for': 'markdown' }
 	Plug 'reedes/vim-wordy', { 'for': 'markdown' }
 	Plug 'johngrib/vim-mac-dictionary', { 'for': 'markdown' }
 	Plug 'dpelle/vim-LanguageTool', { 'for': 'markdown' }
-	"Plug 'ujihisa/neco-look', { 'for': 'markdown' }
 	Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 
 	Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
