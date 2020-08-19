@@ -442,6 +442,8 @@ imap <C-l> <Plug>(neosnippet_expand_or_jump)
 smap <C-l> <Plug>(neosnippet_expand_or_jump)
 xmap <C-l> <Plug>(neosnippet_expand_target)
 nnoremap <leader>rs :call neosnippet#variables#set_snippets({})<cr>
+" Pull up help docs for snippet syntax
+nnoremap <leader>hs :help neosnippet-snippet-syntax<cr>
 
 " plasticboy vim markdown disable folding
 let g:vim_markdown_folding_disabled = 1
@@ -797,7 +799,8 @@ let g:indentguides_tabchar = '|'
 let g:indentguides_firstlevel = 1
 let g:indentguides_conceal_color = 'ctermfg=238 ctermbg=234'
 "Allow us to toggle indentlines on off
-cabbrev it IndentGuidesToggle
+"cabbrev it IndentGuidesToggle
+nnoremap <leader>it :IndentGuidesToggle<cr>
 
 " gitgutter
 set updatetime=100
