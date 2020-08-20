@@ -1,5 +1,8 @@
 call plug#begin('~/.vim/plugged')
 
+" nvim view/cache location
+" $HOME/.local/share/nvim/view
+
 if has('nvim')
 	" Do this at the OS level, then Run :UpdateRemotePlugins
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -19,7 +22,7 @@ if has('nvim')
 	Plug 'ternjs/tern_for_vim', { 'do': 'npm install -g tern', 'for': 'javascript' }
 
 	" Markdown
-	"Plug 'ujihisa/neco-look', { 'for': 'markdown' }
+	Plug 'ujihisa/neco-look', { 'for': 'markdown' }
 	Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
 	Plug 'reedes/vim-lexical', { 'for': 'markdown' }
 	Plug 'reedes/vim-wordy', { 'for': 'markdown' }
@@ -29,13 +32,10 @@ if has('nvim')
 
 	Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 
+	" Indentguides
 	Plug 'thaerkh/vim-indentguides', { 'for': ['go', 'python', 'neosnippet', 'sh'] }
 else
 endif
-let g:deoplete#enable_at_startup = 1
-
-"nvim view/cache location
-"$HOME/.local/share/nvim/view
 
 Plug 'gmarik/vundle'
 Plug 'tpope/vim-fugitive'
@@ -74,8 +74,12 @@ Plug '907th/vim-auto-save'
 Plug 'luochen1990/rainbow'
 
 let g:rainbow_active = 1
+let g:deoplete#enable_at_startup = 1
 
 call plug#end()
+"Limits necolook to markdown files and nothing else.
+"https://github.com/ujihisa/neco-look/issues/24
+call deoplete#custom#source('look', 'filetypes', ['markdown'])
 
 filetype on
 set ruler
