@@ -1,5 +1,8 @@
 call plug#begin('~/.vim/plugged')
 
+" nvim view/cache location
+" $HOME/.local/share/nvim/view
+
 if has('nvim')
 	" Do this at the OS level, then Run :UpdateRemotePlugins
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -29,13 +32,10 @@ if has('nvim')
 
 	Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 
+	" Indentguides
 	Plug 'thaerkh/vim-indentguides', { 'for': ['go', 'python', 'neosnippet', 'sh'] }
 else
 endif
-let g:deoplete#enable_at_startup = 1
-
-"nvim view/cache location
-"$HOME/.local/share/nvim/view
 
 Plug 'gmarik/vundle'
 Plug 'tpope/vim-fugitive'
@@ -74,8 +74,12 @@ Plug '907th/vim-auto-save'
 Plug 'luochen1990/rainbow'
 
 let g:rainbow_active = 1
+let g:deoplete#enable_at_startup = 1
 
 call plug#end()
+"Limits necolook to markdown files and nothing else.
+"https://github.com/ujihisa/neco-look/issues/24
+call deoplete#custom#source('look', 'filetypes', ['markdown'])
 
 filetype on
 set ruler
@@ -442,6 +446,8 @@ imap <C-l> <Plug>(neosnippet_expand_or_jump)
 smap <C-l> <Plug>(neosnippet_expand_or_jump)
 xmap <C-l> <Plug>(neosnippet_expand_target)
 nnoremap <leader>rs :call neosnippet#variables#set_snippets({})<cr>
+" Pull up help docs for snippet syntax
+nnoremap <leader>hs :help neosnippet-snippet-syntax<cr>
 
 " plasticboy vim markdown disable folding
 let g:vim_markdown_folding_disabled = 1
@@ -655,7 +661,13 @@ endfun
 " space code appropriately for file type.
 autocmd BufNewFile,BufRead * call s:DetectNode()
 
-" go
+" neosnippets
+" You can :set noet|%retab! in your .snip file to replace all spaces with hard tabs, that way the extra indentation is fixed!
+" https://github.com/Shougo/neosnippet.vim/issues/445
+au BufNewFile,BufRead *.snip
+			\ set noet|%retab!
+
+" golang
 au BufNewFile,BufRead *.go
 			\ set noexpandtab |
 			\ set tabstop=4 |
@@ -791,7 +803,8 @@ let g:indentguides_tabchar = '|'
 let g:indentguides_firstlevel = 1
 let g:indentguides_conceal_color = 'ctermfg=238 ctermbg=234'
 "Allow us to toggle indentlines on off
-cabbrev it IndentGuidesToggle
+"cabbrev it IndentGuidesToggle
+nnoremap <leader>it :IndentGuidesToggle<cr>
 
 " gitgutter
 set updatetime=100

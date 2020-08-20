@@ -1,129 +1,136 @@
-# Sample nested dictionary
 snippet samplenestdic
-   students = {
-        "Peter": {"age": 10, "address": "Lisbon"},
-        "Isabel": {"age": 11, "address": "Sesimbra"},
-        "Anna": {"age": 9, "address": "Lisbon"}
-   }
+alias nestdic
+abbr Sample nested dictionary
+	students = {
+		"Peter": {"age": 10, "address": "Lisbon"},
+		"Isabel": {"age": 11, "address": "Sesimbra"},
+		"Anna": {"age": 9, "address": "Lisbon"}
+	}
+	${0}
 
-# Sample dictionary
 snippet sampledict
-alias smpdict
-   ages = {
-        "Peter": 10,
-        "Isabel": 11,
-        "Anna": 9,
-        "Thomas": 10,
-        "Bob": 10,
-        "Joseph": 11,
-        "Maria": 12,
-        "Gabriel": 10
-   }
+alias smpdict sdict
+abbr Sample dictionary
+	ages = {
+		"Peter": 10,
+		"Isabel": 11,
+		"Anna": 9,
+		"Thomas": 10,
+		"Bob": 10,
+		"Joseph": 11,
+		"Maria": 12,
+		"Gabriel": 10
+	}
+	${0}
 
-# Sample list
 snippet samplelist
-alias smplist
-   list_ = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+alias smplist slist
+abbr Sample list
+	List = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+	${0}
 
 snippet et
-   ${1} = (${2})
+	${1} = (${2})
 
 snippet el
-   ${1} = [${2}]
+	${1} = [${2}]
 
 snippet ed
-   ${1} = {}
-   ${2}
+abbr dict = {} - Empty dictionary
+	${1} = {}
+	${2}
 
 # Dictionaries
 snippet di
-   ${1}["${2}"] = ${3}
+abbr dict_name["key"] = value
+	${1}["${2}"] = ${3}
 
 snippet dg
-   ${1}.get(${2}, 0)
+	${1}.get(${2}, 0)
 
-# for key,value in dictionary.item()
 snippet forkvindic
+alias forkv
 abbr for key, value in dictionary.items()
 options head
-    for key, value in ${1}.items():
-      ${2}
+	for key, value in ${1}.items():
+		${2}
 
-# While
 snippet wh
-   while ${1:condition}:
-      ${2:# code...}
+alias while
+	while ${1:condition}:
+		${2:# code...}
 
-# For loops
 snippet fori
-   for ${1} in ${2}:
-      ${3}
+abbr for i in list:
+	for ${1} in ${2}:
+		${3}
 
 snippet forir
-   for ${1} in range(${2}):
-      ${3}
+	for ${1} in range(${2}):
+		${3}
 
 snippet forirl
-   for ${1} in range(len(${2})):
-      ${3}
+	for ${1} in range(len(${2})):
+		${3}
 
 snippet enum
-   for i, item in enumerate(list_):
-      ${1}
+	for i, item in enumerate(list_): ${1}
 
-# Print
 snippet pr
-  print(${1}
+	print(${1}
 
 snippet prt
-  print(${1})
+	print(${1})
 
-# Conditionals
 snippet ifnm
-   if __name__ == "__main__":
+abbr if __name__ == "__main__"
+	if __name__ == "__main__":
+	${0}
 
 # Functions
 snippet dis
-   def __init__(self${1}):
-    ${2}
+	def __init__(self${1}):
+		${2}
 
 snippet dss
-   def __str__(self${1}):
-    ${2}
+	def __str__(self${1}):
+		${2}
 
 snippet df
-   def ${1}(${2}):
-    ${3}
+	def ${1}(${2}):
+		${3}
 
 snippet cls
-   class ${1}(${2}):
-    ${3}
+	class ${1}(${2}):
+		${3}
 
 snippet dfs
-   def __str__(self${1}):
-    ${2}
+	def __str__(self${1}):
+		${2}
 
 snippet prty
-   print(type(${1}))
+abbr print(type(var))
+	print(type(${1}))
 
-# Docstring
 snippet dstr
-    """
-    ${1}
-    """
-    ${2}
+abbr print docString
+	"""
+	${1}
+	"""
+	${2}
 
 # SQLAlchemy
 snippet sacs
-   sa.Column(sa.String)
+	sa.Column(sa.String)
 
 snippet _name
-   __name__
+	__name__
 
 # List functions
 snippet rev
-   reverse(${1}):
+	reverse(${1}):
 
 # Strings
 snippet pss
-   print(${1}[${2}:${3}]
+abbr print(string[start:stop]) - String slice
+	print(${1}[${2}:${3}]
