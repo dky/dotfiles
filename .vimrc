@@ -160,23 +160,20 @@ au FileType sh nmap <F8> :echo system('bash "' . expand('%') . '"')<cr>
 au FileType c nmap <F8> :w <cr> :!gcc % -o %< && ./%< <cr>
 au FileType c imap <F8> <Esc> :w <cr> :!gcc % -o %< && ./%< <cr>
 
-" Disable line numbers, relative line numbers, Git Gutter and any spacing
-" symbols.
+" Disable line numbers, Git Gutter, Indent Guides (Need this for cutting and
+" pasting)
 function! NumberToggle()
-	"if(&relativenumber == 1 && &number == 1 && &list == 1)
 	if(&number == 1 && &list == 1)
-		"set norelativenumber
 		set nonumber
 		set nolist
 		GitGutterDisable
-		ALEToggle
+		ALEDisable
 		IndentGuidesToggle
 	else
-		"set relativenumber
 		set number
 		set list
 		GitGutterEnable
-		ALEToggle
+		ALEEnable
 		IndentGuidesToggle
 	endif
 endfunc
