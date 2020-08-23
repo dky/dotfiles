@@ -169,6 +169,8 @@ function! NumberToggle()
 		GitGutterDisable
 		ALEDisable
 		IndentGuidesToggle
+		"setlocal conceallevel=0
+		"set concealcursor=
 	else
 		set number
 		set list
