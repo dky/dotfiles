@@ -300,7 +300,7 @@ nnoremap <silent> <leader>gs :call IsNerdTreeOpen(':Git status')<cr>
 nnoremap <silent> <leader>gd :call IsNerdTreeOpen(':Git diff')<cr>
 
 " fugitive
-nnoremap <F9> :execute ":!git push origin master"<cr>
+nnoremap <F9> :execute ":!git push origin HEAD"<cr>
 nnoremap <F10> :!git add . && git commit -a -m "
 imap <F10> <Esc> :!git add . && git commit -a -m "
 
