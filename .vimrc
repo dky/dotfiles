@@ -33,7 +33,7 @@ if has('nvim')
 	Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 
 	" Indentguides
-	Plug 'thaerkh/vim-indentguides', { 'for': ['go', 'python', 'neosnippet', 'sh'] }
+	Plug 'thaerkh/vim-indentguides', { 'for': ['go', 'python', 'neosnippet', 'sh', 'yaml'] }
 else
 endif
 
