@@ -33,10 +33,11 @@ if has('nvim')
 	Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 
 	" Indentguides
-	Plug 'thaerkh/vim-indentguides', { 'for': ['go', 'python', 'neosnippet', 'sh', 'yaml'] }
+	Plug 'thaerkh/vim-indentguides', { 'for': ['go', 'python', 'neosnippet', 'sh', 'yaml', 'tf'] }
 else
 endif
 
+Plug 'hashivim/vim-terraform'
 Plug 'gmarik/vundle'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -814,3 +815,7 @@ inoremap <leader>d <esc>:1,$d<cr>
 
 nnoremap <silent> <Right> :bn<cr>
 nnoremap <silent> <Left> :bp<cr>
+
+" terraform-vim plugin
+let g:terraform_fmt_on_save=1
+let g:terraform_align=1
