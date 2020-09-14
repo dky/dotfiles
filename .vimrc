@@ -717,7 +717,7 @@ let g:auto_save = 1  " enable AutoSave on Vim startup
 "inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
-inoremap ` ``<left>
+"inoremap ` ``<left>
 autocmd FileType python,go,sh inoremap " ""<left>
 autocmd FileType python,go,sh inoremap ' ''<left>
 
