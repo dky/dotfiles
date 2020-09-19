@@ -527,6 +527,9 @@ nnoremap <silent> ,cl :execute ":!tmux send-keys -t 3 clear"<cr><cr>
 au FileType python nmap <F5> :execute ":!tmux send-keys -t bottom 'python3 *.py' C-m"<cr><cr>
 au FileType python imap <F5> <Esc> :w <cr> :execute ":!tmux send-keys -t bottom 'python3 *.py' C-m"<cr><cr>
 
+au FileType terraform nmap <F5> :execute ":!tmux send-keys -t bottom 'terraform apply -auto-approve' C-m"<cr><cr>
+au FileType terraform imap <F5> <Esc> :w <cr> :execute ":!tmux send-keys -t bottom 'terraform apply -auto-approve' C-m"<cr><cr>
+
 nnoremap <silent> ,dkps :execute ":!tmux send-keys -t 2 'docker ps' C-m"<cr><cr>
 nnoremap <silent> ,mpl :execute ":!tmux send-keys -t 2 'make post-linux' C-m"<cr><cr>
 nnoremap <silent> ,mpr :execute ":!tmux send-keys -t 2 'make post-registrator' C-m"<cr><cr>
