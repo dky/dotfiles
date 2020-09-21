@@ -169,6 +169,7 @@ alias td="terraform destroy"
 alias ta="terraform apply"
 alias tsrm="terraform state rm"
 alias ti="terraform init"
+alias tf="terraform fmt"
 
 #gcp
 alias gcl="gcloud config list"
