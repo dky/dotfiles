@@ -253,3 +253,9 @@ function venv {
 	source venv/bin/activate
 	pip install --upgrade pip setuptools
 }
+
+function unsetaws {
+	unset AWS_SESSION_TOKEN
+	unset AWS_ACCESS_KEY_ID
+	unset AWS_SECRET_ACCESS_KEY
+}
