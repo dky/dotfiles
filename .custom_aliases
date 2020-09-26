@@ -170,6 +170,7 @@ alias ta="terraform apply"
 alias tsrm="terraform state rm"
 alias ti="terraform init"
 alias tf="terraform fmt"
+alias to="terraform output"
 
 #gcp
 alias gcl="gcloud config list"
@@ -261,3 +262,9 @@ alias nf='nvim $(fzf)'
 alias ii="open"
 
 alias chme="chown `echo $(whoami):$(whoami)`"
+
+# kubernetes
+alias kb="kubectl"
+alias kbgs="kubectl get svc"
+alias kbgn="kubectl get nodes"
+alias kba="kubectl apply -f"

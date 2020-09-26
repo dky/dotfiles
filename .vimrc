@@ -530,6 +530,9 @@ au FileType python imap <F5> <Esc> :w <cr> :execute ":!tmux send-keys -t bottom 
 au FileType terraform nmap <F5> :execute ":!tmux send-keys -t bottom 'terraform apply -auto-approve' C-m"<cr><cr>
 au FileType terraform imap <F5> <Esc> :w <cr> :execute ":!tmux send-keys -t bottom 'terraform apply -auto-approve' C-m"<cr><cr>
 
+au FileType terraform nmap <F6> :execute ":!tmux send-keys -t bottom 'terraform destroy -auto-approve' C-m"<cr><cr>
+au FileType terraform imap <F6> <Esc> :w <cr> :execute ":!tmux send-keys -t bottom 'terraform destroy -auto-approve' C-m"<cr><cr>
+
 nnoremap <silent> ,dkps :execute ":!tmux send-keys -t 2 'docker ps' C-m"<cr><cr>
 nnoremap <silent> ,mpl :execute ":!tmux send-keys -t 2 'make post-linux' C-m"<cr><cr>
 nnoremap <silent> ,mpr :execute ":!tmux send-keys -t 2 'make post-registrator' C-m"<cr><cr>
