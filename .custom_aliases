@@ -165,8 +165,8 @@ alias exerf="exercism fetch"
 
 #terraform
 alias tp="terraform plan"
-alias td="terraform destroy"
-alias ta="terraform apply"
+alias td="terraform destroy -auto-approve"
+alias ta="terraform apply -auto-approve"
 alias tsrm="terraform state rm"
 alias ti="terraform init"
 alias tf="terraform fmt"
