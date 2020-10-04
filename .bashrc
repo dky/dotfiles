@@ -16,5 +16,8 @@ export PATH=$HOME/bin:$HOME/.dotfiles/bin:$HOME/go/bin:/usr/local/sbin:/usr/loca
 [ -f ~/.custom_aliases ] && source ~/.custom_aliases
 [ -f ~/.dotfiles/z.sh ] && source ~/.dotfiles/z.sh
 
+# Kubctl bash completions
+source <(kubectl completion bash)
+
 # Don't exit the shell on ctrl+d
 shopt -s -o ignoreeof
