@@ -23,10 +23,7 @@ if has('nvim')
 
 	" Markdown
 	Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
-	Plug 'reedes/vim-lexical', { 'for': 'markdown' }
 	Plug 'reedes/vim-wordy', { 'for': 'markdown' }
-	Plug 'johngrib/vim-mac-dictionary', { 'for': 'markdown' }
-	Plug 'dpelle/vim-LanguageTool', { 'for': 'markdown' }
 	Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 
 	Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
@@ -635,25 +632,6 @@ hi SpellBad cterm=underline ctermfg=red
 hi SpellCap cterm=underline ctermfg=yellow
 hi SpellLocal cterm=underline
 hi SpellRare cterm=underline
-
-" vim-lexical, we use a custom config so we aren't loading the gigantic
-" dictionary file we barely use. Using the default config for some reason
-" continues to load in /usr/local/dict/words by default...
-
-command! -nargs=0 CustomLexical call lexical#init({
-			\ 'spell': 1,
-			\ 'spelllang':  ['en'],
-			\ 'dictionary': ['~/.vim/dict/custom.txt'],
-			\ 'thesaurus':  ['~/.vim/thesaurus/mthesaur.txt'],
-			\ 'spellfile':  ['~/.vim/spell/en.utf-8.add'],
-			\ })
-
-let g:lexical#spell_key = '<leader>s'
-" map dictionary completion to F11.
-inoremap <F11> <C-X><C-K>
-
-" For all files with .md extension load CustomLexical above
-au BufReadPost,BufNewFile *.md CustomLexical
 
 " restore last position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
