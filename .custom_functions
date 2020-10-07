@@ -259,3 +259,8 @@ function unsetaws {
 	unset AWS_ACCESS_KEY_ID
 	unset AWS_SECRET_ACCESS_KEY
 }
+
+# Git clone and cd into dir immediately after
+gccd() {
+  git clone "$1" && cd "$(basename "$1" .git)"
+}
