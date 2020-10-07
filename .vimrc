@@ -22,7 +22,6 @@ if has('nvim')
 	Plug 'ternjs/tern_for_vim', { 'do': 'npm install -g tern', 'for': 'javascript' }
 
 	" Markdown
-	Plug 'ujihisa/neco-look', { 'for': 'markdown' }
 	Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
 	Plug 'reedes/vim-lexical', { 'for': 'markdown' }
 	Plug 'reedes/vim-wordy', { 'for': 'markdown' }
@@ -80,9 +79,9 @@ let g:deoplete#enable_at_startup = 1
 call plug#end()
 "Limits necolook to markdown files and nothing else.
 "https://github.com/ujihisa/neco-look/issues/24
-if has_key(g:plugs, "deoplete.nvim")
-call deoplete#custom#source('look', 'filetypes', ['markdown'])
-endif
+"if has_key(g:plugs, "deoplete.nvim")
+"call deoplete#custom#source('look', 'filetypes', ['markdown'])
+"endif
 
 filetype on
 set ruler
