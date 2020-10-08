@@ -286,6 +286,8 @@ nmap ,gib :GoInstallBinaries<cr>
 " reload vim quickly
 cabbrev rv source $MYVIMRC<cr>
 "nnoremap <leader>r :source $MYVIMRC<cr>
+"
+cabbrev rva source ~/.abbreviations.vim<cr>
 
 " map space rather than colon
 nmap <space> :
@@ -808,7 +810,7 @@ let g:terraform_align=1
 
 " Experimenting with abbreviations
 func! WordProcessorMode()
-  source ~/.vim_abbreviations
+  source ~/.abbreviations.vim
 
   augroup auto_capitalize_sentences
     au!
@@ -817,3 +819,5 @@ func! WordProcessorMode()
 endfu
 
 au BufNewFile,BufRead *.md call WordProcessorMode()
+
+iab <buffer> iab iab <buffer> 
