@@ -8,19 +8,14 @@ let g:abolish_save_file = expand('<sfile>:p')
 
 iab <buffer> i I
 iab <buffer> (i (I
-
 iab <buffer> t to
 iab <buffer> T To
 iab <buffer> (t (to
-
 iab <buffer> tdi Today I learned
 iab <buffer> abb abbreviation
 iab <buffer> kb Kubernetes
 iab <buffer> dk Docker
 iab <buffer> al alot
-iab <:q
-
-iab <buffer> test test
 
 Abolish -buffer {he,she,there,here,mum,dad,children}s {}'s
 Abolish -buffer {he,she,there,here,mum,dad,children}s {}'s
