@@ -818,6 +818,5 @@ func! WordProcessorMode()
   augroup END
 endfu
 
+" When opening markdown files call WordProcessorMode
 au BufNewFile,BufRead *.md call WordProcessorMode()
-
-iab <buffer> iab iab <buffer> 

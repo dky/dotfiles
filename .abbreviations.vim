@@ -12,3 +12,4 @@ iab <buffer> dk Docker
 iab <buffer> al alot
 iab <:q
 
+iab <buffer> test test
