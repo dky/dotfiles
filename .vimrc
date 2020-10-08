@@ -77,9 +77,9 @@ let g:deoplete#enable_at_startup = 1
 call plug#end()
 "Limits necolook to markdown files and nothing else.
 "https://github.com/ujihisa/neco-look/issues/24
-"if has_key(g:plugs, "deoplete.nvim")
-"call deoplete#custom#source('look', 'filetypes', ['markdown'])
-"endif
+if has_key(g:plugs, "deoplete.nvim")
+call deoplete#custom#source('look', 'filetypes', ['markdown'])
+endif
 
 filetype on
 set ruler
