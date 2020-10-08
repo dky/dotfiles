@@ -21,17 +21,18 @@ if has('nvim')
 	Plug 'carlitux/deoplete-ternjs', { 'for': 'javascript' }
 	Plug 'ternjs/tern_for_vim', { 'do': 'npm install -g tern', 'for': 'javascript' }
 
-	" Markdown
-	Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
-	Plug 'reedes/vim-wordy', { 'for': 'markdown' }
-	Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
-
-	Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
-
-	" Indentguides
-	Plug 'thaerkh/vim-indentguides', { 'for': ['go', 'python', 'neosnippet', 'sh', 'yaml', 'tf'] }
 else
 endif
+
+" Markdown
+Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
+Plug 'reedes/vim-wordy', { 'for': 'markdown' }
+Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+
+Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+
+" Indentguides
+Plug 'thaerkh/vim-indentguides', { 'for': ['go', 'python', 'neosnippet', 'sh', 'yaml', 'tf'] }
 
 Plug 'hashivim/vim-terraform'
 Plug 'gmarik/vundle'
@@ -804,3 +805,15 @@ nnoremap <silent> <Left> :bp<cr>
 " terraform-vim plugin
 "let g:terraform_fmt_on_save=1
 let g:terraform_align=1
+
+" Experimenting with abbreviations
+func! WordProcessorMode()
+  source ~/.vim_abbreviations
+
+  augroup auto_capitalize_sentences
+    au!
+    au InsertCharPre <buffer> if search('\v(%^|%^[1-7]{2}\s|[.!?]\_s+|\_^\s*\-\s|\_^#+\s|\_^title\:\s|\n\n)%#', 'bcnw') != 0 | let v:char = toupper(v:char) | endif
+  augroup END
+endfu
+
+au BufNewFile,BufRead *.md call WordProcessorMode()

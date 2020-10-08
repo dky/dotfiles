@@ -1,0 +1,12 @@
+iab <buffer> i I
+iab <buffer> (i (I
+
+iab <buffer> h the
+iab <buffer> H The
+iab <buffer> (h (the
+
+iab <buffer> t to
+iab <buffer> T To
+iab <buffer> (t (to
+
+iab <buffer> tdil Today I learned
