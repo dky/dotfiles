@@ -28,9 +28,7 @@ endif
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
 Plug 'reedes/vim-wordy', { 'for': 'markdown' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
-
-Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
-
+Plug 'ujihisa/neco-look'
 " Indentguides
 Plug 'thaerkh/vim-indentguides', { 'for': ['go', 'python', 'neosnippet', 'sh', 'yaml', 'tf'] }
 
@@ -71,6 +69,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'dky/vim-aftercolors'
 Plug '907th/vim-auto-save'
 Plug 'luochen1990/rainbow'
+Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 
 let g:rainbow_active = 1
 let g:deoplete#enable_at_startup = 1
