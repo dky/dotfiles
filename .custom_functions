@@ -163,6 +163,7 @@ function mkd () {
 
 # fd - Find any directory and cd to selected directory
 fd() {
+	cd ~
 	local dir
 	dir=$(find ${1:-.} -path '*/\.*' \
 		-o \( -name Music -o -name logbook -o -name Library -o -name Pictures -o -name Public -o -name Movies -o -name Applications -o -name Downloads \) -prune \
@@ -172,7 +173,7 @@ fd() {
 		-o -type d \
 		-print 2> /dev/null | fzf +m) &&
 		cd "$dir"
-	}
+}
 
 # Pet snippets shortcut for "pet new"
 function pta() {
