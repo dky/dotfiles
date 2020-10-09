@@ -11,7 +11,12 @@ function color_my_prompt {
 }
 
 function pmin {
-	export PS1="🤓 "
+	local __cur_location="\[\033[01;34m\]\w"
+	local __git_branch_color="\[\033[31m\]"
+	local __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
+	local __prompt_tail="\[\033[35m\]$tail"
+	local __last_color="\[\033[00m\]"
+	export PS1="👽 $__cur_location $__git_branch_color$__git_branch$__prompt_tail$__last_color "
 }
 
 color_my_prompt
@@ -158,6 +163,7 @@ function mkd () {
 
 # fd - Find any directory and cd to selected directory
 fd() {
+	cd ~
 	local dir
 	dir=$(find ${1:-.} -path '*/\.*' \
 		-o \( -name Music -o -name logbook -o -name Library -o -name Pictures -o -name Public -o -name Movies -o -name Applications -o -name Downloads \) -prune \
@@ -167,7 +173,7 @@ fd() {
 		-o -type d \
 		-print 2> /dev/null | fzf +m) &&
 		cd "$dir"
-	}
+}
 
 # Pet snippets shortcut for "pet new"
 function pta() {

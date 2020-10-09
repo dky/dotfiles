@@ -8,18 +8,18 @@ let g:abolish_save_file = expand('<sfile>:p')
 
 iab <buffer> i I
 iab <buffer> (i (I
-iab <buffer> t to
-iab <buffer> T To
 iab <buffer> (t (to
-iab <buffer> tdi Today I learned
-iab <buffer> abb abbreviation
-iab <buffer> kb Kubernetes
-iab <buffer> dk Docker
+iab <buffer> t to
 iab <buffer> al alot
+iab <buffer> dk Docker
+iab <buffer> kub Kubernetes
 
-Abolish -buffer {he,she,there,here,mum,dad,children}s {}'s
-Abolish -buffer {he,she,there,here,mum,dad,children}s {}'s
-Abolish -buffer {he,she,there,here,mum,dad,children}s {}'s
+Abolish -buffer kubernetes Kubernetes
+Abolish -buffer docker Docker
+
+Abolish -buffer {he,she,there,here,mom,dad,children}s {}'s
+Abolish -buffer {he,she,there,here,mom,dad,children}s {}'s
+Abolish -buffer {he,she,there,here,mom,dad,children}s {}'s
 Abolish -buffer {you,they}ve {}'ve
 Abolish -buffer {do,did,ca,is,wo,have,has,was,does,could,would,are,were,had,should}nt {}n't
 
@@ -33,6 +33,7 @@ Abolish -buffer sho should
 Abolish -buffer wo would
 Abolish -buffer viment environment
 Abolish -buffer wout without
+Abolish -buffer teh the
 
 Abolish -buffer praps perhaps
 Abolish -buffer rn{,s} reason{,s}
