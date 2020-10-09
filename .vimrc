@@ -820,3 +820,6 @@ endfu
 
 " When opening markdown files call WordProcessorMode
 au BufNewFile,BufRead *.md call WordProcessorMode()
+" Map to custom dictionary
+set dictionary+=~/.vim/dict/custom.txt
+inoremap <silent> <C-s> <C-x><C-k>
