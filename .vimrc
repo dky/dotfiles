@@ -24,11 +24,11 @@ if has('nvim')
 else
 endif
 
+Plug 'deoplete-plugins/deoplete-dictionary'
 " Markdown
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
 Plug 'reedes/vim-wordy', { 'for': 'markdown' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
-Plug 'ujihisa/neco-look'
 " Indentguides
 Plug 'thaerkh/vim-indentguides', { 'for': ['go', 'python', 'neosnippet', 'sh', 'yaml', 'tf'] }
 
@@ -75,11 +75,6 @@ let g:rainbow_active = 1
 let g:deoplete#enable_at_startup = 1
 
 call plug#end()
-"Limits necolook to markdown files and nothing else.
-"https://github.com/ujihisa/neco-look/issues/24
-if has_key(g:plugs, "deoplete.nvim")
-call deoplete#custom#source('look', 'filetypes', ['markdown'])
-endif
 
 filetype on
 set ruler
@@ -820,6 +815,6 @@ endfu
 
 " When opening markdown files call WordProcessorMode
 au BufNewFile,BufRead *.md call WordProcessorMode()
+
 " Map to custom dictionary
 set dictionary+=~/.vim/dict/custom.txt
-inoremap <silent> <C-s> <C-x><C-k>
