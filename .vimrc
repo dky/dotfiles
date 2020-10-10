@@ -429,7 +429,7 @@ let g:airline_symbols.whitespace = 'Ξ'
 nnoremap ,rs :call neosnippet#variables#set_snippets({})<cr>
 cabbrev rs call neosnippet#variables#set_snippets({})<cr>
 
-let g:neosnippet#snippets_directory='~/.dotfiles/.snippets'
+let g:neosnippet#snippets_directory='~/.vim/snippets'
 let g:neosnippet#enable_snipmate_compatibility = 1
 " Autosave broke snippet expansion
 " https://github.com/Shougo/neosnippet.vim/issues/331
