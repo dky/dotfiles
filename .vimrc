@@ -449,7 +449,7 @@ nnoremap <leader>hs :help neosnippet-snippet-syntax<cr>
 let g:vim_markdown_folding_disabled = 1
 
 " Spell check markdown
-" autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_us
 au BufReadPost *.gohtml set syntax=html
 
 " Python help
