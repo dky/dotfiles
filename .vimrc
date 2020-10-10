@@ -282,7 +282,7 @@ nmap ,gib :GoInstallBinaries<cr>
 cabbrev rv source $MYVIMRC<cr>
 "nnoremap <leader>r :source $MYVIMRC<cr>
 " re-source vim abbreviations
-cabbrev ra source ~/.abbreviations.vim<cr>
+cabbrev ra source ~/.vim/dict/abbreviations.vim<cr>
 
 " map space rather than colon
 nmap <space> :
