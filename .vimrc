@@ -445,13 +445,6 @@ nnoremap <leader>rs :call neosnippet#variables#set_snippets({})<cr>
 " Pull up help docs for snippet syntax
 nnoremap <leader>hs :help neosnippet-snippet-syntax<cr>
 
-" plasticboy vim markdown disable folding
-let g:vim_markdown_folding_disabled = 1
-
-" Spell check markdown
-autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_us
-au BufReadPost *.gohtml set syntax=html
-
 " Python help
 nnoremap <buffer> H :<C-u>execute "!pydoc3 " . expand("<cword>")<cr>
 
@@ -805,7 +798,7 @@ let g:terraform_align=1
 
 " Experimenting with abbreviations
 func! WordProcessorMode()
-  source ~/.abbreviations.vim
+  source ~/.vim/dict/abbreviations.vim
 
   augroup auto_capitalize_sentences
     au!
@@ -817,4 +810,11 @@ endfu
 au BufNewFile,BufRead *.md call WordProcessorMode()
 
 " Map to custom dictionary
-set dictionary+=~/.vim/dict/custom.txt
+set dictionary+=~/.vim/dict/custom_dictionary.txt
+
+" plasticboy vim markdown disable folding
+let g:vim_markdown_folding_disabled = 1
+
+" Spell check markdown
+autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_us
+au BufReadPost *.gohtml set syntax=html
