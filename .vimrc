@@ -756,9 +756,8 @@ nmap tn :tabn<cr>
 
 " Aliases for jumping around quickly
 cabbrev cdh cd $HOME<cr>
-cabbrev cdgit cd $HOME/git<cr>
-cabbrev cddot cd $HOME/.dotfiles<cr>
-cabbrev cdconf cdconf $HOME/.config<cr>
+cabbrev cdg cd $HOME/git<cr>
+cabbrev cdd cd $HOME/.dotfiles<cr>
 " Create a directory with current date
 cabbrev cdcb cd $HOME/git/cb<cr>
 
@@ -819,8 +818,6 @@ let g:vim_markdown_folding_disabled = 1
 " Spell check markdown
 autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_us
 au BufReadPost *.gohtml set syntax=html
-
-cabbrev term :17sp term://bash<cr>
 
 " Hop around splits faster, this break my faster ctrl+j,k,l,h movements
 "map <C-j> <C-W>j
