@@ -20,6 +20,7 @@ if has('nvim')
 	" JS
 	Plug 'carlitux/deoplete-ternjs', { 'for': 'javascript' }
 	Plug 'ternjs/tern_for_vim', { 'do': 'npm install -g tern', 'for': 'javascript' }
+	Plug 'kassio/neoterm'
 
 else
 endif
@@ -821,8 +822,15 @@ au BufReadPost *.gohtml set syntax=html
 
 cabbrev term :17sp term://bash<cr>
 
-" Hop around splits faster
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+" Hop around splits faster, this break my faster ctrl+j,k,l,h movements
+"map <C-j> <C-W>j
+"map <C-k> <C-W>k
+"map <C-h> <C-W>h
+"map <C-l> <C-W>l
+
+" neoterm
+let g:neoterm_default_mod='belowright' " open terminal in bottom split
+let g:neoterm_size=16 " terminal split size
+let g:neoterm_autoscroll=1 " scroll to the bottom when running a command
+"nnoremap <leader><cr> :TREPLSendLine<cr>j " send current line and move down
+"vnoremap <leader><cr> :TREPLSendSelection<cr> " send current selection
