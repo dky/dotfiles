@@ -800,6 +800,10 @@ let g:terraform_align=1
 func! WordProcessorMode()
   source ~/.vim/dict/abbreviations.vim
 
+  " Map to custom dictionary
+  set dictionary+=~/.vim/dict/custom_dictionary.txt
+  setlocal spell spelllang=en_us
+
   augroup auto_capitalize_sentences
     au!
     au InsertCharPre <buffer> if search('\v(%^|%^[1-7]{2}\s|[.!?]\_s+|\_^\s*\-\s|\_^#+\s|\_^title\:\s|\n\n)%#', 'bcnw') != 0 | let v:char = toupper(v:char) | endif
@@ -809,14 +813,10 @@ endfu
 " When opening markdown files call WordProcessorMode
 au BufNewFile,BufRead *.md call WordProcessorMode()
 
-" Map to custom dictionary
-set dictionary+=~/.vim/dict/custom_dictionary.txt
-
 " plasticboy vim markdown disable folding
 let g:vim_markdown_folding_disabled = 1
 
-" Spell check markdown
-autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_us
+" .gohtml files should be html
 au BufReadPost *.gohtml set syntax=html
 
 " Hop around splits faster, this break my faster ctrl+j,k,l,h movements
