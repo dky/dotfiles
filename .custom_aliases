@@ -270,3 +270,6 @@ alias kb="kubectl"
 alias kbgs="kubectl get svc"
 alias kbgn="kubectl get nodes"
 alias kba="kubectl apply -f"
+
+# mutt
+alias nm="neomutt"
