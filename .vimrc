@@ -750,8 +750,8 @@ nmap tp :tabp<cr>
 " tn "tab next in normal mode"
 nmap tn :tabn<cr>
 " control-t for new tab, control-w to close, similar to browser
-nmap <C-t> :tabnew<cr>
-nmap <C-w> :tabclose<cr>
+"nmap <C-t> :tabnew<cr>
+"nmap <C-w> :tabclose<cr>
 
 " Aliases for jumping around quickly
 cabbrev cdh cd $HOME<cr>
