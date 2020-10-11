@@ -820,3 +820,9 @@ autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_us
 au BufReadPost *.gohtml set syntax=html
 
 cabbrev term :17sp term://bash<cr>
+
+" Hop around splits faster
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
