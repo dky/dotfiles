@@ -820,10 +820,10 @@ autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_us
 au BufReadPost *.gohtml set syntax=html
 
 " Hop around splits faster, this break my faster ctrl+j,k,l,h movements
-"map <C-j> <C-W>j
-"map <C-k> <C-W>k
-"map <C-h> <C-W>h
-"map <C-l> <C-W>l
+map <A-j> <C-W>j
+map <A-k> <C-W>k
+map <A-h> <C-W>h
+map <A-l> <C-W>l
 
 " neoterm
 let g:neoterm_default_mod='belowright' " open terminal in bottom split
