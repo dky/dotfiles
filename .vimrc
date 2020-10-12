@@ -25,6 +25,7 @@ if has('nvim')
 else
 endif
 
+Plug 'vim-test/vim-test'
 Plug 'deoplete-plugins/deoplete-dictionary'
 " Markdown
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
