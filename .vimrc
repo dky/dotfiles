@@ -799,9 +799,8 @@ let g:terraform_align=1
 
 " Experimenting with abbreviations
 func! WordProcessorMode()
+  " Map to custom abbreviations + dictionary
   source ~/.vim-dictionary/abbreviations.vim
-
-  " Map to custom dictionary
   set dictionary+=~/.vim-dictionary/custom_dictionary.txt
   set dictionary+=~/.vim-dictionary/20k.txt
   setlocal spell spelllang=en_us
