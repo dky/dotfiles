@@ -803,6 +803,7 @@ func! WordProcessorMode()
 
   " Map to custom dictionary
   set dictionary+=~/.vim/dict/custom_dictionary.txt
+  set dictionary+=~/.vim/dict/20k.txt
   setlocal spell spelllang=en_us
 
   augroup auto_capitalize_sentences
