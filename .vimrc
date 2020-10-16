@@ -803,8 +803,8 @@ func! WordProcessorMode()
   if !empty(glob("~/.vim-dictionary/abbreviations.vim"))
     source ~/.vim-dictionary/abbreviations.vim
   endif
+  set dictionary+=~/.vim/dict/20k.txt
   set dictionary+=~/.vim-dictionary/custom_dictionary.txt
-  set dictionary+=~/.vim-dictionary/20k.txt
   setlocal spell spelllang=en_us
 
   augroup auto_capitalize_sentences
