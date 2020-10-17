@@ -33,6 +33,8 @@ Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'thaerkh/vim-indentguides', { 'for': ['go', 'python', 'neosnippet', 'sh', 'yaml', 'tf'] }
 
 Plug 'voldikss/vim-floaterm'
+Plug 'kassio/neoterm'
+
 Plug 'hashivim/vim-terraform'
 Plug 'gmarik/vundle'
 Plug 'tpope/vim-fugitive'
@@ -826,6 +828,11 @@ map <A-j> <C-W>j
 map <A-k> <C-W>k
 map <A-h> <C-W>h
 map <A-l> <C-W>l
+
+" neoterm
+let g:neoterm_default_mod='belowright' " open terminal in bottom split
+let g:neoterm_size=16 " terminal split size
+let g:neoterm_autoscroll=1 " scroll to the bottom when running a command
 
 " floatterm
 cabbrev fts FloatermShow<cr>
