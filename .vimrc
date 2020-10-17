@@ -838,8 +838,13 @@ let g:neoterm_autoscroll=1 " scroll to the bottom when running a command
 "
 " floatterm
 cabbrev fts FloatermShow<cr>
-cabbrev ft FloatermNew --height=0.7 --width=0.8 --wintype=floating --name=ft1 --autoclose=2<cr>
+cabbrev ft FloatermNew --wintype=floating --position=bottom<cr>
 cabbrev ftt FloatermToggle<cr>
 cabbrev ftp FloatermPrev<cr>
 cabbrev ftn FloatermNext<cr>
 cabbrev ftk FloatermKill<cr>
+
+let g:floaterm_autoinsert=1
+let g:floaterm_width=0.8
+let g:floaterm_height=0.5
+let g:floaterm_autoclose=1
