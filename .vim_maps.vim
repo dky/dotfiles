@@ -100,3 +100,137 @@ nnoremap <buffer> H :<C-u>execute "!pydoc3 " . expand("<cword>")<cr>
 
 " Python add trailing space when using #
 autocmd BufRead,BufNewFile *.py inoremap # #<space>
+" Toggle ale on and off. At was for ale toggle...
+"au FileType python nmap <silent> <F3> :ALEFix<cr>
+map <leader>at :ALEToggle<CR>
+map <leader>af :ALEFix<CR>
+" map to <Leader>cf in C++ code
+autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<cr>
+autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<cr>
+
+" toggle auto formatting:
+nmap <Leader>C :ClangFormatAutoToggle<cr>
+" tmux-send keys to send commands to other panes.
+au FileType go nmap <F5> :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<cr><cr>
+au FileType go imap <F5> <Esc> :w <cr> :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<cr><cr>
+nnoremap <silent> ,rg :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<cr><cr>
+au FileType go nmap <F5><F5> :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<cr><cr>
+au FileType go imap <F5><F5> <Esc> :w <cr> :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<cr><cr>
+nnoremap <silent> ,gr :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<cr><cr>
+nnoremap <silent> ,c :execute ":!tmux send-keys -t 3 C-c"<cr><cr>
+nnoremap <silent> ,cl :execute ":!tmux send-keys -t 3 clear"<cr><cr>
+au FileType python nmap <F5> :execute ":!tmux send-keys -t bottom 'python3 *.py' C-m"<cr><cr>
+au FileType python imap <F5> <Esc> :w <cr> :execute ":!tmux send-keys -t bottom 'python3 *.py' C-m"<cr><cr>
+
+au FileType terraform nmap <F5> :execute ":!tmux send-keys -t bottom 'terraform apply -auto-approve' C-m"<cr><cr>
+au FileType terraform imap <F5> <Esc> :w <cr> :execute ":!tmux send-keys -t bottom 'terraform apply -auto-approve' C-m"<cr><cr>
+
+au FileType terraform nmap <F6> :execute ":!tmux send-keys -t bottom 'terraform destroy -auto-approve' C-m"<cr><cr>
+au FileType terraform imap <F6> <Esc> :w <cr> :execute ":!tmux send-keys -t bottom 'terraform destroy -auto-approve' C-m"<cr><cr>
+
+nnoremap <silent> ,dkps :execute ":!tmux send-keys -t 2 'docker ps' C-m"<cr><cr>
+nnoremap <silent> ,mpl :execute ":!tmux send-keys -t 2 'make post-linux' C-m"<cr><cr>
+nnoremap <silent> ,mpr :execute ":!tmux send-keys -t 2 'make post-registrator' C-m"<cr><cr>
+nnoremap <silent> ,cl :execute ":!tmux send-keys -t 2 'clear' C-m"<cr><cr>
+nnoremap <silent> ,pa :execute ":!tmux send-keys -t 2 './apply.sh' C-m"<cr><cr>
+
+" run the current file with rspec
+let g:VimuxPromptString = "run: "
+map <Leader>rb :call VimuxRunCommand("clear; rspec " . bufname("%"))<cr>
+map <Leader>vp :VimuxPromptCommand<cr>
+map <Leader>vl :VimuxRunLastCommand<cr>
+map <Leader>vi :VimuxInspectRunner<cr>
+map <Leader>vq :VimuxCloseRunner<cr>
+map <Leader>vx :VimuxInterruptRunner<cr>
+map <Leader>vz :call VimuxZoomRunner()<cr>
+" FZF key bindings
+" fzf - check first to make sure we aren't in a nerdtree buffer
+"nmap <Leader>F :GFiles<cr>
+nnoremap <silent> <expr> <Leader>F (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":GFiles\<cr>"
+"nmap <Leader>f :Files<cr>
+nnoremap <silent> <expr> <Leader>f (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Files\<cr>"
+"nmap <Leader>b :Buffers<cr>
+nnoremap <silent> <expr> <Leader>b (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Buffers\<cr>"
+"nmap <Leader>h :History<cr>
+" In insert mode if ctrl+f use blines to search for string in file.
+"inoremap <C-f> <Esc><Esc>:BLines!<cr> "This conflicts with other mappings,
+"re-think
+" ctrl+g opens git commit browser
+nnoremap <C-g> :BCommits!<cr>
+
+" ctrl+f brings up fzf
+" ctrl-t on a file brings up in new tab
+" ctrl-i on a file splits horizontally.
+" ctrl-v on a file splits vertically.
+nnoremap <C-f> :FZF<cr>
+" deoplete tab completion
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+" vim-logbook
+noremap ,lb :Lb<cr>
+noremap ,ts :Ts<cr>
+"map ,s <Plug>Sneak_s
+"map ,S <Plug>Sneak_S
+map f <Plug>Sneak_s
+map F <Plug>Sneak_S
+" autoclose for only certain strings/braces
+"inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+"inoremap ` ``<left>
+autocmd FileType python,go,sh inoremap " ""<left>
+autocmd FileType python,go,sh inoremap ' ''<left>
+
+autocmd FileType python call SemshiCustomHighlights()
+
+" Quickly copy a file in the buffer
+nnoremap <leader>c :call CopyCurrentFile()<cr>
+" Experiments with nvim terminal
+if has('nvim')
+	" map esc back to something sane in terminal mode.
+	tnoremap <Esc> <C-\><C-n>
+	" once you map esc you can't send esc key to the underlying program in the
+	" buffer. Map Alt+[ to send esc to the underlying program.
+	tnoremap <A-[> <Esc>
+	" alt+[h,j,k,l] for quickly switching between splits with terminals.
+	tnoremap <A-h> <c-\><c-n><c-w>h
+	tnoremap <A-j> <c-\><c-n><c-w>j
+	tnoremap <A-k> <c-\><c-n><c-w>k
+	tnoremap <A-l> <c-\><c-n><c-w>l
+endif
+
+" leader l to quickly switch buffers.
+nnoremap <leader>l :ls<cr>:b<space>
+
+" macdictionary support
+nnoremap <C-d> :MacDictWord<cr>
+" 'cd' towards the dir in which the current file is edited
+" but only change the path for the current window
+map <leader>cd :lcd %:h<cr>
+" Open files located in the same dir in with the current file is edited
+map <leader>ew :e <C-R>=expand("%:p:h") . "/" <cr>
+
+" Experimenting with tabs
+" tp "tab previous in normal mode"
+nmap tp :tabp<cr>
+" tn "tab next in normal mode"
+nmap tn :tabn<cr>
+" control-t for new tab, control-w to close, similar to browser
+"nmap <C-t> :tabnew<cr>
+"nmap <C-w> :tabclose<cr>
+
+nnoremap mkd :call CreateDailyFolder()<cr>
+
+" Quickly create Python scratch files.
+nnoremap <F3> :execute 'edit ~/tmp/py_' . strftime("%m%d%y_%H%M%S") . '.py'<cr>
+nnoremap <leader>it :IndentGuidesToggle<cr>
+" Delete everything in the file and start over, good for scratch testing.
+" Hop around splits faster, this break my faster ctrl+j,k,l,h movements
+map <A-j> <C-W>j
+map <A-k> <C-W>k
+map <A-h> <C-W>h
+map <A-l> <C-W>l
+nnoremap <leader>d :1,$d<cr>
+inoremap <leader>d <esc>:1,$d<cr>
+
+nnoremap <silent> <Right> :bn<cr>
+nnoremap <silent> <Left> :bp<cr>
