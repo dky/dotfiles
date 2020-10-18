@@ -2,11 +2,9 @@
 nnoremap <silent> ,cd :execute ":Codi"<cr>
 " remap esc to jk
 imap jk <Esc>
-
 " comment out blocks of code using nerdcommenter shortcut
 nmap <F7> <leader>c<space>
 vmap <F7> <leader>c<space>
-
 " no l/r arrow keys
 nmap <left> <nop>
 nmap <right> <nop>
@@ -26,7 +24,6 @@ nnoremap <F4> :call NumberToggle()<cr>
 
 " tagbar toggle
 nmap ,tb :TagbarToggle<cr>
-
 " map f1 vim help to esc, kept bringing up the help menu in insert mode
 imap <F1> <Esc>
 nmap ,nt :NERDTreeToggle<cr>
@@ -61,7 +58,6 @@ nnoremap <F9> :execute ":!git push origin HEAD"<cr>
 nnoremap <F10> :!git add . && git commit -a -m "
 imap <F10> <Esc> :!git add . && git commit -a -m "
 
-
 " https://stackoverflow.com/questions/11037825/vim-get-out-of-parenthesis-brackets-etc
 inoremap <C-e> <C-o>A
 inoremap <C-f> <C-o>l
@@ -78,6 +74,7 @@ nnoremap ,s` ciw`<C-r>"`<Esc>
 nnoremap ,s[ ciw[<C-r>"]<Esc>
 nnoremap ,s( ciw(<C-r>")<Esc>
 nnoremap ,s{ ciw{<C-r>"}<Esc>
+
 " shorter aliases for vim-go plugin
 au FileType go nmap <leader><F12> :GoDecls<cr>
 au FileType go nmap <F12> <Plug>(go-def)
@@ -86,6 +83,7 @@ nmap <Leader>2 <Plug>AirlineSelectTab2
 nmap <Leader>3 <Plug>AirlineSelectTab3
 nmap <Leader>4 <Plug>AirlineSelectTab4
 nmap <Leader>5 <Plug>AirlineSelectTab5
+
 " reload snippets
 nnoremap ,rs :call neosnippet#variables#set_snippets({})<cr>
 imap <C-l> <Plug>(neosnippet_expand_or_jump)
@@ -100,10 +98,12 @@ nnoremap <buffer> H :<C-u>execute "!pydoc3 " . expand("<cword>")<cr>
 
 " Python add trailing space when using #
 autocmd BufRead,BufNewFile *.py inoremap # #<space>
+
 " Toggle ale on and off. At was for ale toggle...
 "au FileType python nmap <silent> <F3> :ALEFix<cr>
 map <leader>at :ALEToggle<CR>
 map <leader>af :ALEFix<CR>
+
 " map to <Leader>cf in C++ code
 autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<cr>
 autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<cr>
@@ -134,15 +134,6 @@ nnoremap <silent> ,mpr :execute ":!tmux send-keys -t 2 'make post-registrator' C
 nnoremap <silent> ,cl :execute ":!tmux send-keys -t 2 'clear' C-m"<cr><cr>
 nnoremap <silent> ,pa :execute ":!tmux send-keys -t 2 './apply.sh' C-m"<cr><cr>
 
-" run the current file with rspec
-let g:VimuxPromptString = "run: "
-map <Leader>rb :call VimuxRunCommand("clear; rspec " . bufname("%"))<cr>
-map <Leader>vp :VimuxPromptCommand<cr>
-map <Leader>vl :VimuxRunLastCommand<cr>
-map <Leader>vi :VimuxInspectRunner<cr>
-map <Leader>vq :VimuxCloseRunner<cr>
-map <Leader>vx :VimuxInterruptRunner<cr>
-map <Leader>vz :call VimuxZoomRunner()<cr>
 " FZF key bindings
 " fzf - check first to make sure we aren't in a nerdtree buffer
 "nmap <Leader>F :GFiles<cr>
@@ -182,8 +173,6 @@ autocmd FileType python,go,sh inoremap ' ''<left>
 
 autocmd FileType python call SemshiCustomHighlights()
 
-" Quickly copy a file in the buffer
-nnoremap <leader>c :call CopyCurrentFile()<cr>
 " Experiments with nvim terminal
 if has('nvim')
 	" map esc back to something sane in terminal mode.
@@ -201,14 +190,6 @@ endif
 " leader l to quickly switch buffers.
 nnoremap <leader>l :ls<cr>:b<space>
 
-" macdictionary support
-nnoremap <C-d> :MacDictWord<cr>
-" 'cd' towards the dir in which the current file is edited
-" but only change the path for the current window
-map <leader>cd :lcd %:h<cr>
-" Open files located in the same dir in with the current file is edited
-map <leader>ew :e <C-R>=expand("%:p:h") . "/" <cr>
-
 " Experimenting with tabs
 " tp "tab previous in normal mode"
 nmap tp :tabp<cr>
@@ -218,19 +199,41 @@ nmap tn :tabn<cr>
 "nmap <C-t> :tabnew<cr>
 "nmap <C-w> :tabclose<cr>
 
-nnoremap mkd :call CreateDailyFolder()<cr>
-
-" Quickly create Python scratch files.
-nnoremap <F3> :execute 'edit ~/tmp/py_' . strftime("%m%d%y_%H%M%S") . '.py'<cr>
-nnoremap <leader>it :IndentGuidesToggle<cr>
-" Delete everything in the file and start over, good for scratch testing.
 " Hop around splits faster, this break my faster ctrl+j,k,l,h movements
 map <A-j> <C-W>j
 map <A-k> <C-W>k
 map <A-h> <C-W>h
 map <A-l> <C-W>l
+
+" 'cd' towards the dir in which the current file is edited
+" but only change the path for the current window
+map <leader>cd :lcd %:h<cr>
+" Open files located in the same dir in with the current file is edited
+map <leader>ew :e <C-R>=expand("%:p:h") . "/" <cr>
+
+" run the current file with rspec
+let g:VimuxPromptString = "run: "
+map <Leader>rb :call VimuxRunCommand("clear; rspec " . bufname("%"))<cr>
+map <Leader>vp :VimuxPromptCommand<cr>
+map <Leader>vl :VimuxRunLastCommand<cr>
+map <Leader>vi :VimuxInspectRunner<cr>
+map <Leader>vq :VimuxCloseRunner<cr>
+map <Leader>vx :VimuxInterruptRunner<cr>
+map <Leader>vz :call VimuxZoomRunner()<cr>
+
+" Delete everything in the file and start over, good for scratch testing.
 nnoremap <leader>d :1,$d<cr>
 inoremap <leader>d <esc>:1,$d<cr>
 
 nnoremap <silent> <Right> :bn<cr>
 nnoremap <silent> <Left> :bp<cr>
+
+" Quickly create Python scratch files.
+nnoremap <F3> :execute 'edit ~/tmp/py_' . strftime("%m%d%y_%H%M%S") . '.py'<cr>
+nnoremap <leader>it :IndentGuidesToggle<cr>
+
+nnoremap mkd :call CreateDailyFolder()<cr>
+" macdictionary support
+nnoremap <C-d> :MacDictWord<cr>
+" Quickly copy a file in the buffer
+nnoremap <leader>c :call CopyCurrentFile()<cr>
