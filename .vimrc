@@ -126,14 +126,9 @@ set list
 
 " codi
 nnoremap <silent> ,cd :execute ":Codi"<cr>
-"cabbrev oc Codi
-"cabbrev ec Codi!
 
 let g:codi#width = winwidth(winnr()) / 2
 let g:codi#rightalign = 0
-
-" Short for "Close all buffers" - Closes all open buffers except current.
-cabbrev cab call CloseAllBuffersButCurrent()<cr>
 
 " remap esc to jk
 imap jk <Esc>
@@ -188,7 +183,6 @@ function! CloseAllBuffersButCurrent()
 endfunction
 
 " This func is necessary to remove the additional whitespace added after
-" cabbrev, see cabbrev gma as an example
 func! Eatchar(pat)
 	let c = nr2char(getchar(0))
 	return (c =~ a:pat) ? '' : c
@@ -238,8 +232,6 @@ function! CopyCurrentFile()
 endfunction
 
 nnoremap <F4> :call NumberToggle()<cr>
-" Disable relative numbers
-"cabbrev norel set relativenumber!
 
 " tagbar toggle
 nmap ,tb :TagbarToggle<cr>
@@ -278,14 +270,9 @@ nmap ,ch :CheckHealth<cr>
 nmap ,up :UpdateRemotePlugins<cr>
 " shortcut for vundle
 nmap ,bi :PlugInstall<cr>
-"cabbrev bi PlugInstall<cr>
 nmap ,gib :GoInstallBinaries<cr>
 
-" reload vim quickly
-cabbrev rv source $MYVIMRC<cr>
 "nnoremap <leader>r :source $MYVIMRC<cr>
-" re-source vim abbreviations
-cabbrev ra source ~/.vim/dict/abbreviations.vim<cr>
 
 " map space rather than colon
 nmap <space> :
@@ -304,21 +291,6 @@ nnoremap <F9> :execute ":!git push origin HEAD"<cr>
 nnoremap <F10> :!git add . && git commit -a -m "
 imap <F10> <Esc> :!git add . && git commit -a -m "
 
-cabbrev gs Git status
-cabbrev gd Git diff
-cabbrev gco Git checkout
-cabbrev grh Git reset --hard
-cabbrev ga Git add
-cabbrev gcm Git commit -m ""<Left><C-R>=Eatchar('\s')<cr>
-cabbrev gb Git branch
-cabbrev gbc Git checkout -b
-cabbrev gpu Git push origin master
-cabbrev gpoh Git push origin HEAD
-cabbrev gpd Git pull origin master
-cabbrev gl Git log --pretty --pretty=oneline
-cabbrev gcma Git add .<cr>:Git commit -m ""<Left><C-R>=Eatchar('\s')<cr>
-cabbrev gam Git commit --amend
-cabbrev gamend Git commit --amend
 
 " https://stackoverflow.com/questions/11037825/vim-get-out-of-parenthesis-brackets-etc
 inoremap <C-e> <C-o>A
@@ -362,10 +334,6 @@ let g:go_fmt_experimental = 1
 au FileType go nmap <leader><F12> :GoDecls<cr>
 au FileType go nmap <F12> <Plug>(go-def)
 
-"cabbrev goi GoImport
-"cabbrev god GoDrop
-"cabbrev gof GoFmt
-"cabbrev got GoTest
 
 " vim-airline
 let g:airline_theme='papercolor'
@@ -430,7 +398,6 @@ let g:airline_symbols.whitespace = 'Ξ'
 " neosnippets
 " reload snippets
 nnoremap ,rs :call neosnippet#variables#set_snippets({})<cr>
-cabbrev rs call neosnippet#variables#set_snippets({})<cr>
 
 let g:neosnippet#snippets_directory='~/.vim/snippets'
 let g:neosnippet#enable_snipmate_compatibility = 1
@@ -454,11 +421,6 @@ nnoremap <buffer> H :<C-u>execute "!pydoc3 " . expand("<cword>")<cr>
 " Python add trailing space when using #
 autocmd BufRead,BufNewFile *.py inoremap # #<space>
 
-" quickly set file type, python, bash, shell
-cabbrev setftpy set ft=python
-cabbrev setftpython set ft=python
-cabbrev setftsh set ft=sh
-cabbrev setftbash set ft=sh
 
 " Toggle ale on and off. At was for ale toggle...
 map <leader>at :ALEToggle<CR>
@@ -564,8 +526,6 @@ let g:fzf_action = {
 			\ 'ctrl-i': 'split',
 			\ 'ctrl-v': 'vsplit' }
 
-" goyo
-"cabbrev gy Goyo
 
 " tern
 let g:tern_request_timeout = 1
@@ -702,7 +662,6 @@ autocmd FileType python call SemshiCustomHighlights()
 
 " Quickly copy a file in the buffer
 nnoremap <leader>c :call CopyCurrentFile()<cr>
-"cabbrev cp call CopyCurrentFile()<cr>
 
 " Experiments with nvim terminal
 if has('nvim')
@@ -722,24 +681,10 @@ endif
 nnoremap <leader>l :ls<cr>:b<space>
 
 " macdictionary support
-cabbrev dw MacDictWord<cr>
 nnoremap <C-d> :MacDictWord<cr>
 
-"cabbrev luw MacDictQuery<cr>
-"cabbrev lu MacDictQuery<cr>
-
-"cabbrev gc LanguageToolCheck<cr>
-"cabbrev gq LanguageToolClear<cr>
 
 let g:vim_mac_dictionary_use_app = 1
-
-" Wordy
-"cabbrev ww Wordy weak
-"cabbrev wp Wordy problematic
-"cabbrev wr Wordy redundant
-"cabbrev wadj Wordy adjectives
-"cabbrev wadv Wordy adverbs
-"cabbrev nw NoWordy
 
 " 'cd' towards the dir in which the current file is edited
 " but only change the path for the current window
@@ -756,21 +701,11 @@ nmap tn :tabn<cr>
 "nmap <C-t> :tabnew<cr>
 "nmap <C-w> :tabclose<cr>
 
-" Aliases for jumping around quickly
-cabbrev cdh cd $HOME<cr>
-cabbrev cdg cd $HOME/git<cr>
-cabbrev cdd cd $HOME/.dotfiles<cr>
-" Create a directory with current date
-cabbrev cdcb cd $HOME/git/cb<cr>
-
 nnoremap mkd :call CreateDailyFolder()<cr>
-cabbrev Cd :call fzf#run({'source':  'find . \( -name ".git" -o -name ".vim" -o -name "Library" \) -prune  -o -type d -print','sink': 'cd'})
 
 " Quickly create Python scratch files.
 nnoremap <F3> :execute 'edit ~/tmp/py_' . strftime("%m%d%y_%H%M%S") . '.py'<cr>
 
-" Hugo make public
-cabbrev mp :!make public<cr><cr>
 
 " Shell command formatter, call this when editing ugly shell one liners with ctr-g
 command! -range Fmtsh <line1>!format_shell_cmd.py
@@ -780,8 +715,6 @@ let g:indentguides_spacechar = '┆'
 let g:indentguides_tabchar = '|'
 let g:indentguides_firstlevel = 1
 let g:indentguides_conceal_color = 'ctermfg=238 ctermbg=234'
-"Allow us to toggle indentlines on off
-"cabbrev it IndentGuidesToggle
 nnoremap <leader>it :IndentGuidesToggle<cr>
 
 " gitgutter
@@ -797,6 +730,10 @@ nnoremap <silent> <Left> :bp<cr>
 " terraform-vim plugin
 "let g:terraform_fmt_on_save=1
 let g:terraform_align=1
+
+if !empty(glob("~/.dotfiles/.vim_cabbrev.vim"))
+ source ~/.dotfiles/.vim_cabbrev.vim
+endif
 
 " Experimenting with abbreviations
 func! WordProcessorMode()
@@ -833,16 +770,6 @@ map <A-l> <C-W>l
 let g:neoterm_default_mod='belowright' " open terminal in bottom split
 let g:neoterm_size=16 " terminal split size
 let g:neoterm_autoscroll=1 " scroll to the bottom when running a command
-cabbrev tn Tnew<cr>
-cabbrev t T
-
-" floatterm
-cabbrev fts FloatermShow<cr>
-cabbrev ft FloatermNew<cr>
-cabbrev ftt FloatermToggle<cr>
-cabbrev ftp FloatermPrev<cr>
-cabbrev ftn FloatermNext<cr>
-cabbrev ftk FloatermKill<cr>
 
 let g:floaterm_autoinsert=1
 let g:floaterm_width=0.9
