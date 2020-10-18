@@ -127,84 +127,8 @@ set list
 let g:codi#width = winwidth(winnr()) / 2
 let g:codi#rightalign = 0
 
-" Disable line numbers, Git Gutter, Indent Guides (Need this for cutting and
-" pasting)
-function! NumberToggle()
-	if(&number == 1 && &list == 1)
-		set nonumber
-		set nolist
-		GitGutterDisable
-		ALEDisable
-		IndentGuidesToggle
-		"setlocal conceallevel=0
-		"set concealcursor=
-	else
-		set number
-		set list
-		GitGutterEnable
-		ALEEnable
-		IndentGuidesToggle
-	endif
-endfunc
-
-" close all buffers
-function! CloseAllBuffersButCurrent()
-	let curr = bufnr("%")
-	let last = bufnr("$")
-
-	if curr > 1    | silent! execute "1,".(curr-1)."bd"     | endif
-	if curr < last | silent! execute (curr+1).",".last."bd" | endif
-endfunction
-
-" This func is necessary to remove the additional whitespace added after
-func! Eatchar(pat)
-	let c = nr2char(getchar(0))
-	return (c =~ a:pat) ? '' : c
-endfunc
-
-" Check to ensure we aren't in a nerdtree file browser when running command
-function! IsNerdTreeOpen(command_str)
-	if (expand('%') =~# 'NERD_tree' && winnr('$') > 1)
-		exe "normal! \<c-w>\<c-w>"
-	endif
-	exe 'normal! ' . a:command_str . "\<cr>"
-endfunction
-
-" function to create directory and cd into it.
-function! CreateDailyFolder()
-	let tstamp = strftime("%m-%d-%y")
-	let folderpath = $HOME."/git/cb/daily/".tstamp
-	let cmd = 'cd ' . folderpath
-	if !isdirectory(folderpath)
-		echo 'Dir does not exist, creating:' folderpath
-		call mkdir(folderpath, 'p')
-		echo 'Switching working dir to:' folderpath
-	else
-		echo 'Switching working dir to:' folderpath
-		execute cmd
-	endif
-endfunction
-
-" semshi default highlight color SteelBlue3
-function! SemshiCustomHighlights()
-	hi semshiSelected ctermfg=231 ctermbg=237
-endfunction
-
 "Disable semshi error sign and just let flake8 handle it.
 let g:semshi#error_sign = v:false
-
-
-" Function to copy current buffer into a new file without manually writing and
-" re-opening
-function! CopyCurrentFile()
-	let old_name = expand('%')
-	let new_name = input('Copy to file name: ',)
-	if new_name != '' && new_name != old_name
-		exec ':saveas ' . new_name
-		redraw!
-	endif
-endfunction
-
 
 " nerdtree
 " Open nerdtree on startup.
@@ -462,8 +386,10 @@ augroup remember_folds
 	autocmd BufWinEnter ?* silent! loadview
 augroup END
 
+" vim AutoSave
 let g:auto_save = 1  " enable AutoSave on Vim startup
 
+" mac dictionary
 let g:vim_mac_dictionary_use_app = 1
 
 " Shell command formatter, call this when editing ugly shell one liners with ctr-g
@@ -482,30 +408,6 @@ set updatetime=100
 "let g:terraform_fmt_on_save=1
 let g:terraform_align=1
 
-if !empty(glob("~/.dotfiles/.vim_cabbrev.vim"))
- source ~/.dotfiles/.vim_cabbrev.vim
-endif
-
-if !empty(glob("~/.dotfiles/.vim_maps.vim"))
- source ~/.dotfiles/.vim_maps.vim
-endif
-
-" Experimenting with abbreviations
-func! WordProcessorMode()
-  " Map to custom abbreviations + dictionary
-  if !empty(glob("~/.vim-dictionary/abbreviations.vim"))
-    source ~/.vim-dictionary/abbreviations.vim
-  endif
-  set dictionary+=~/.vim/dict/20k.txt
-  set dictionary+=~/.vim-dictionary/custom_dictionary.txt
-  setlocal spell spelllang=en_us
-
-  augroup auto_capitalize_sentences
-    au!
-    au InsertCharPre <buffer> if search('\v(%^|%^[1-7]{2}\s|[.!?]\_s+|\_^\s*\-\s|\_^#+\s|\_^title\:\s|\n\n)%#', 'bcnw') != 0 | let v:char = toupper(v:char) | endif
-  augroup END
-endfu
-
 " When opening markdown files call WordProcessorMode
 au BufNewFile,BufRead *.md call WordProcessorMode()
 
@@ -520,6 +422,7 @@ let g:neoterm_default_mod='belowright' " open terminal in bottom split
 let g:neoterm_size=16 " terminal split size
 let g:neoterm_autoscroll=1 " scroll to the bottom when running a command
 
+" floatterm
 let g:floaterm_autoinsert=1
 let g:floaterm_width=0.9
 let g:floaterm_height=0.4
@@ -527,3 +430,18 @@ let g:floaterm_autoclose=1
 let g:floaterm_position='bottom'
 let g:floaterm_title='ft: $1/$2'
 hi FloatermBorder ctermfg=cyan
+
+" Load in cabbrev's
+if !empty(glob("~/.dotfiles/.vim_cabbrev.vim"))
+ source ~/.dotfiles/.vim_cabbrev.vim
+endif
+
+" Load in maps
+if !empty(glob("~/.dotfiles/.vim_maps.vim"))
+ source ~/.dotfiles/.vim_maps.vim
+endif
+
+" Load in func's
+if !empty(glob("~/.dotfiles/.vim_functions.vim"))
+ source ~/.dotfiles/.vim_functions.vim
+endif

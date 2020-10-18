@@ -1,0 +1,89 @@
+" Disable line numbers, Git Gutter, Indent Guides (Need this for cutting and
+" pasting)
+function! NumberToggle()
+	if(&number == 1 && &list == 1)
+		set nonumber
+		set nolist
+		GitGutterDisable
+		ALEDisable
+		IndentGuidesToggle
+		"setlocal conceallevel=0
+		"set concealcursor=
+	else
+		set number
+		set list
+		GitGutterEnable
+		ALEEnable
+		IndentGuidesToggle
+	endif
+endfunc
+
+" close all buffers
+function! CloseAllBuffersButCurrent()
+	let curr = bufnr("%")
+	let last = bufnr("$")
+
+	if curr > 1    | silent! execute "1,".(curr-1)."bd"     | endif
+	if curr < last | silent! execute (curr+1).",".last."bd" | endif
+endfunction
+
+" This func is necessary to remove the additional whitespace added after
+func! Eatchar(pat)
+	let c = nr2char(getchar(0))
+	return (c =~ a:pat) ? '' : c
+endfunc
+
+" Check to ensure we aren't in a nerdtree file browser when running command
+function! IsNerdTreeOpen(command_str)
+	if (expand('%') =~# 'NERD_tree' && winnr('$') > 1)
+		exe "normal! \<c-w>\<c-w>"
+	endif
+	exe 'normal! ' . a:command_str . "\<cr>"
+endfunction
+
+" function to create directory and cd into it.
+function! CreateDailyFolder()
+	let tstamp = strftime("%m-%d-%y")
+	let folderpath = $HOME."/git/cb/daily/".tstamp
+	let cmd = 'cd ' . folderpath
+	if !isdirectory(folderpath)
+		echo 'Dir does not exist, creating:' folderpath
+		call mkdir(folderpath, 'p')
+		echo 'Switching working dir to:' folderpath
+	else
+		echo 'Switching working dir to:' folderpath
+		execute cmd
+	endif
+endfunction
+
+" semshi default highlight color SteelBlue3
+function! SemshiCustomHighlights()
+	hi semshiSelected ctermfg=231 ctermbg=237
+endfunction
+
+" Experimenting with abbreviations
+func! WordProcessorMode()
+  " Map to custom abbreviations + dictionary
+  if !empty(glob("~/.vim-dictionary/abbreviations.vim"))
+    source ~/.vim-dictionary/abbreviations.vim
+  endif
+  set dictionary+=~/.vim/dict/20k.txt
+  set dictionary+=~/.vim-dictionary/custom_dictionary.txt
+  setlocal spell spelllang=en_us
+
+  augroup auto_capitalize_sentences
+    au!
+    au InsertCharPre <buffer> if search('\v(%^|%^[1-7]{2}\s|[.!?]\_s+|\_^\s*\-\s|\_^#+\s|\_^title\:\s|\n\n)%#', 'bcnw') != 0 | let v:char = toupper(v:char) | endif
+  augroup END
+endfu
+
+" Function to copy current buffer into a new file without manually writing and
+" re-opening
+function! CopyCurrentFile()
+	let old_name = expand('%')
+	let new_name = input('Copy to file name: ',)
+	if new_name != '' && new_name != old_name
+		exec ':saveas ' . new_name
+		redraw!
+	endif
+endfunction
