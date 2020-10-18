@@ -431,15 +431,15 @@ hi FloatermBorder ctermfg=cyan
 
 " Load in cabbrevs
 if !empty(glob("~/.dotfiles/.vim_cabbrev.vim"))
- source ~/.dotfiles/.vim_cabbrev.vim
+	source ~/.dotfiles/.vim_cabbrev.vim
 endif
 
 " Load in maps
 if !empty(glob("~/.dotfiles/.vim_maps.vim"))
- source ~/.dotfiles/.vim_maps.vim
+	source ~/.dotfiles/.vim_maps.vim
 endif
 
 " Load in funcs
 if !empty(glob("~/.dotfiles/.vim_functions.vim"))
- source ~/.dotfiles/.vim_functions.vim
+	source ~/.dotfiles/.vim_functions.vim
 endif
