@@ -1,5 +1,4 @@
 call plug#begin('~/.vim/plugged')
-
 " nvim view/cache location
 " $HOME/.local/share/nvim/view
 
@@ -25,16 +24,12 @@ endif
 
 Plug 'vim-test/vim-test'
 Plug 'deoplete-plugins/deoplete-dictionary'
-" Markdown
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
 Plug 'reedes/vim-wordy', { 'for': 'markdown' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
-" Indentguides
 Plug 'thaerkh/vim-indentguides', { 'for': ['go', 'python', 'neosnippet', 'sh', 'yaml', 'tf'] }
-
 Plug 'voldikss/vim-floaterm'
 Plug 'kassio/neoterm'
-
 Plug 'hashivim/vim-terraform'
 Plug 'gmarik/vundle'
 Plug 'tpope/vim-fugitive'
@@ -65,10 +60,6 @@ Plug 'w0rp/ale'
 Plug 'roxma/vim-tmux-clipboard'
 Plug 'majutsushi/tagbar'
 Plug 'justinmk/vim-sneak'
-" Override colorscheme defaults, I needed this because the pmenu popup was too
-" dark and wanted to use a lighter popup color
-" Customizations are stored in ~/.vim/after/colors/molokai.vim
-" https://stackoverflow.com/questions/10454038/setting-vim-omnicompletion-colors-pmenu-in-vimrc-not-working
 Plug 'dky/vim-aftercolors'
 Plug '907th/vim-auto-save'
 Plug 'luochen1990/rainbow'
@@ -129,11 +120,6 @@ let g:codi#rightalign = 0
 
 "Disable semshi error sign and just let flake8 handle it.
 let g:semshi#error_sign = v:false
-
-" nerdtree
-" Open nerdtree on startup.
-"autocmd StdinReadPre * let s:std_in=1
-"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 let NERDTreeIgnore = ['\.pyc$', '\.go.mod$', '\.DS_Store$', '__pycache__']
 let NERDTreeMinimalUI = 1
