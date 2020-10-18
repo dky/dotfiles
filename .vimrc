@@ -111,6 +111,9 @@ silent! colorscheme molokai
 " used for vimscripts
 scriptencoding utf-8
 
+" gitgutter
+set updatetime=100
+
 set encoding=utf-8
 set listchars=eol:¬,tab:▸-,trail:~,extends:>,precedes:<
 set list
@@ -121,16 +124,6 @@ if has("noinsert")
 elseif has ("noselect")
 	set completeopt+=noselect
 endif
-
-" create dir that does not exist on save
-" https://vi.stackexchange.com/questions/678/how-do-i-save-a-file-in-a-directory-that-does-not-yet-exist
-augroup createDirIfNoneExists
-	autocmd!
-	autocmd BufWritePre *
-				\ if !isdirectory(expand("<afile>:p:h")) |
-				\ call mkdir(expand("<afile>:p:h"), "p") |
-				\ endif
-augroup END
 
 set cursorline
 " default colors for CursorLine
@@ -157,13 +150,6 @@ hi SpellRare cterm=underline
 
 " restore last position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
-
-" If a file is detected as bash set it to sh
-fun! s:DetectNode()
-	if getline(1) == '#!/bin/bash'
-		set ft=sh
-	endif
-endfun
 
 " space code appropriately for file type.
 autocmd BufNewFile,BufRead * call s:DetectNode()
@@ -213,8 +199,15 @@ augroup remember_folds
 	autocmd BufWinEnter ?* silent! loadview
 augroup END
 
-" gitgutter
-set updatetime=100
+" create dir that does not exist on save
+" https://vi.stackexchange.com/questions/678/how-do-i-save-a-file-in-a-directory-that-does-not-yet-exist
+augroup createDirIfNoneExists
+	autocmd!
+	autocmd BufWritePre *
+				\ if !isdirectory(expand("<afile>:p:h")) |
+				\ call mkdir(expand("<afile>:p:h"), "p") |
+				\ endif
+augroup END
 
 " When opening markdown files call WordProcessorMode
 au BufNewFile,BufRead *.md call WordProcessorMode()
