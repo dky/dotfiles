@@ -1,5 +1,4 @@
-" Disable line numbers, Git Gutter, Indent Guides (Need this for cutting and
-" pasting)
+" Disable line numbers, Git Gutter, Indent Guides
 function! NumberToggle()
 	if(&number == 1 && &list == 1)
 		set nonumber
@@ -28,7 +27,7 @@ function! CloseAllBuffersButCurrent()
 endfunction
 
 " This func is necessary to remove the additional whitespace added after
-func! Eatchar(pat)
+function! Eatchar(pat)
 	let c = nr2char(getchar(0))
 	return (c =~ a:pat) ? '' : c
 endfunc
@@ -61,8 +60,8 @@ function! SemshiCustomHighlights()
 	hi semshiSelected ctermfg=231 ctermbg=237
 endfunction
 
-" Experimenting with abbreviations
-func! WordProcessorMode()
+" Call this func if we are dealing with markdown files
+function! WordProcessorMode()
   " Map to custom abbreviations + dictionary
   if !empty(glob("~/.vim-dictionary/abbreviations.vim"))
     source ~/.vim-dictionary/abbreviations.vim
