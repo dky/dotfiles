@@ -124,10 +124,8 @@ set encoding=utf-8
 set listchars=eol:¬,tab:▸-,trail:~,extends:>,precedes:<
 set list
 
-
 let g:codi#width = winwidth(winnr()) / 2
 let g:codi#rightalign = 0
-
 
 " Disable line numbers, Git Gutter, Indent Guides (Need this for cutting and
 " pasting)
@@ -213,7 +211,6 @@ endfunction
 "autocmd StdinReadPre * let s:std_in=1
 "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-
 let NERDTreeIgnore = ['\.pyc$', '\.go.mod$', '\.DS_Store$', '__pycache__']
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
@@ -227,7 +224,6 @@ let NERDTreeAutoDeleteBuffer = 1
 " refresh nerdtree
 set autoread
 au CursorHold * if exists("t:NerdTreeBufName") | call <SNR>15_refreshRoot() | endif
-
 
 " Custom surrounds
 " Python docstring
@@ -278,7 +274,6 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " Don't open up multiple buffer views (they are not tabs)
 let g:airline#extensions#tabline#show_buffers = 1
 
-
 " buffer tabs
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
@@ -306,7 +301,6 @@ let g:airline_symbols.notexists = '∄'
 let g:airline_symbols.whitespace = 'Ξ'
 
 " neosnippets
-
 let g:neosnippet#snippets_directory='~/.vim/snippets'
 let g:neosnippet#enable_snipmate_compatibility = 1
 " Autosave broke snippet expansion
@@ -315,9 +309,6 @@ let g:neosnippet#enable_snipmate_compatibility = 1
 let g:neosnippet#enable_auto_clear_markers = 0
 " Get rid of preview popup
 set completeopt-=preview
-
-
-
 
 " ale
 let g:ale_linters = {'go': ['gometalinter', 'gofmt'],}
@@ -486,7 +477,6 @@ let g:indentguides_conceal_color = 'ctermfg=238 ctermbg=234'
 
 " gitgutter
 set updatetime=100
-
 
 " terraform-vim plugin
 "let g:terraform_fmt_on_save=1
