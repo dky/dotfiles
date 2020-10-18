@@ -265,15 +265,12 @@ let g:clang_format#style_options = {
 			\ "AlwaysBreakTemplateDeclarations" : "true",
 			\ "Standard" : "C++11"}
 
-
 set omnifunc=syntaxcomplete#Complete
-
 
 let g:fzf_action = {
 			\ 'ctrl-t': 'tab split',
 			\ 'ctrl-i': 'split',
 			\ 'ctrl-v': 'vsplit' }
-
 
 " tern
 let g:tern_request_timeout = 1
@@ -361,6 +358,7 @@ au BufNewFile,BufRead *.js,*.html,*.css
 			\ set softtabstop=2 |
 			\ set shiftwidth=2
 
+" markdown
 au BufNewFile,BufRead *.md
 			\ set noautoindent |
 			\ set nocindent |
@@ -370,6 +368,9 @@ au BufNewFile,BufRead *.md
 " yaml
 au BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab indentkeys-=0# indentkeys-=<:> foldmethod=indent nofoldenable
+
+" .gohtml files should be html
+au BufReadPost *.gohtml set syntax=html
 
 " vim sneak
 let g:sneak#label = 1
@@ -414,9 +415,6 @@ au BufNewFile,BufRead *.md call WordProcessorMode()
 " plasticboy vim markdown disable folding
 let g:vim_markdown_folding_disabled = 1
 
-" .gohtml files should be html
-au BufReadPost *.gohtml set syntax=html
-
 " neoterm
 let g:neoterm_default_mod='belowright' " open terminal in bottom split
 let g:neoterm_size=16 " terminal split size
@@ -431,7 +429,7 @@ let g:floaterm_position='bottom'
 let g:floaterm_title='ft: $1/$2'
 hi FloatermBorder ctermfg=cyan
 
-" Load in cabbrev's
+" Load in cabbrevs
 if !empty(glob("~/.dotfiles/.vim_cabbrev.vim"))
  source ~/.dotfiles/.vim_cabbrev.vim
 endif
@@ -441,7 +439,7 @@ if !empty(glob("~/.dotfiles/.vim_maps.vim"))
  source ~/.dotfiles/.vim_maps.vim
 endif
 
-" Load in func's
+" Load in funcs
 if !empty(glob("~/.dotfiles/.vim_functions.vim"))
  source ~/.dotfiles/.vim_functions.vim
 endif
