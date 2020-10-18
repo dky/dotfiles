@@ -151,9 +151,6 @@ hi SpellRare cterm=underline
 " restore last position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
-" space code appropriately for file type.
-autocmd BufNewFile,BufRead * call s:DetectNode()
-
 " neosnippets
 " You can :set noet|%retab! in your .snip file to replace all spaces with hard tabs, that way the extra indentation is fixed!
 " https://github.com/Shougo/neosnippet.vim/issues/445
@@ -231,3 +228,13 @@ endif
 if !empty(glob("~/.dotfiles/.vim_plugins.vim"))
 	source ~/.dotfiles/.vim_plugins.vim
 endif
+
+" space code appropriately for file type.
+autocmd BufNewFile,BufRead * call s:DetectNode()
+
+" If a file is detected as bash set it to sh
+function! s:DetectNode()
+	if getline(1) == '#!/bin/bash'
+		set ft=sh
+	endif
+endfun

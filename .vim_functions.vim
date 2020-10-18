@@ -87,9 +87,3 @@ function! CopyCurrentFile()
 	endif
 endfunction
 
-" If a file is detected as bash set it to sh
-function! s:DetectNode()
-	if getline(1) == '#!/bin/bash'
-		set ft=sh
-	endif
-endfun
