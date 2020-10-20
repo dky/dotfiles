@@ -5,17 +5,14 @@ call plug#begin('~/.vim/plugged')
 if has('nvim')
 	" Do this at the OS level, then Run :UpdateRemotePlugins
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
 	" Go
 	Plug 'deoplete-plugins/deoplete-go', { 'do': 'make', 'for': 'go' }
 	Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
-
 	" Python
 	" pip3 install --user pynvim
 	Plug 'zchee/deoplete-jedi', { 'for': 'python' }
 	Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins', 'for': 'python' }
 	Plug 'jeetsukumaran/vim-pythonsense', { 'for': 'python' }
-
 	" JS
 	Plug 'carlitux/deoplete-ternjs', { 'for': 'javascript' }
 	Plug 'ternjs/tern_for_vim', { 'do': 'npm install -g tern', 'for': 'javascript' }
@@ -126,22 +123,6 @@ elseif has ("noselect")
 endif
 
 set cursorline
-" default colors for CursorLine
-" https://jonasjacek.github.io/colors
-hi CursorLine ctermbg=236
-hi LineNr ctermbg=236 ctermfg=246
-hi Visual ctermbg=190 ctermfg=16
-hi Comment ctermfg=43
-" search colors
-hi Search cterm=NONE ctermfg=white ctermbg=238
-
-" spelling and dictionary support
-" vim underline spelling errors don't color them.
-hi clear SpellBad
-hi SpellBad cterm=underline ctermfg=red
-hi SpellCap cterm=underline ctermfg=yellow
-hi SpellLocal cterm=underline
-hi SpellRare cterm=underline
 
 " Load in autocommands
 if !empty(glob("~/.dotfiles/.vim_autocommands.vim"))
@@ -166,6 +147,11 @@ endif
 " Load in plugin-specific-configs
 if !empty(glob("~/.dotfiles/.vim_plugins.vim"))
 	source ~/.dotfiles/.vim_plugins.vim
+endif
+
+" Load in highlighting
+if !empty(glob("~/.dotfiles/.vim_highlights.vim"))
+	source ~/.dotfiles/.vim_highlights.vim
 endif
 
 " This should be broken out into .vim_plugins and .vim_autocommands but don't know why it fails currently.
