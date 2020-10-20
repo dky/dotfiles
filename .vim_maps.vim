@@ -1,10 +1,6 @@
-" codi
-nnoremap <silent> ,cd :execute ":Codi"<cr>
 " remap esc to jk
 imap jk <Esc>
-" comment out blocks of code using nerdcommenter shortcut
-nmap <F7> <leader>c<space>
-vmap <F7> <leader>c<space>
+
 " no l/r arrow keys
 nmap <left> <nop>
 nmap <right> <nop>
@@ -20,14 +16,22 @@ au FileType coffee imap <F8> <Esc> :w <cr> :echo system('coffee "' . expand('%')
 au FileType sh nmap <F8> :echo system('bash "' . expand('%') . '"')<cr>
 au FileType c nmap <F8> :w <cr> :!gcc % -o %< && ./%< <cr>
 au FileType c imap <F8> <Esc> :w <cr> :!gcc % -o %< && ./%< <cr>
+
+" map F1 vim help to esc, kept bringing up the help menu in insert mode
+imap <F1> <Esc>
+nmap <F1> :NERDTreeToggle<cr>
+
 nnoremap <F4> :call NumberToggle()<cr>
 
-" tagbar toggle
-nmap ,tb :TagbarToggle<cr>
-" map f1 vim help to esc, kept bringing up the help menu in insert mode
-imap <F1> <Esc>
-nmap ,nt :NERDTreeToggle<cr>
-nmap <F1> :NERDTreeToggle<cr>
+" Comment out blocks of code using nerdcommenter
+nmap <F7> <leader>c<space>
+vmap <F7> <leader>c<space>
+
+" fugitive
+nnoremap <F9> :execute ":!git push origin HEAD"<cr>
+nnoremap <F10> :!git add . && git commit -a -m "
+imap <F10> <Esc> :!git add . && git commit -a -m "
+
 " Nerdtree bookmark
 nmap ,nb :Bookmark
 
@@ -38,8 +42,6 @@ nmap ,up :UpdateRemotePlugins<cr>
 " shortcut for vundle
 nmap ,bi :PlugInstall<cr>
 nmap ,gib :GoInstallBinaries<cr>
-
-"nnoremap <leader>r :source $MYVIMRC<cr>
 
 " map space rather than colon
 nmap <space> :
@@ -53,19 +55,11 @@ nmap <c-l> 4l
 nnoremap <silent> <leader>gs :call IsNerdTreeOpen(':Git status')<cr>
 nnoremap <silent> <leader>gd :call IsNerdTreeOpen(':Git diff')<cr>
 
-" fugitive
-nnoremap <F9> :execute ":!git push origin HEAD"<cr>
-nnoremap <F10> :!git add . && git commit -a -m "
-imap <F10> <Esc> :!git add . && git commit -a -m "
-
 " https://stackoverflow.com/questions/11037825/vim-get-out-of-parenthesis-brackets-etc
 inoremap <C-e> <C-o>A
 inoremap <C-f> <C-o>l
 inoremap <C-j> <C-o>o
 inoremap <C-k> <C-o>O
-"Open a line below in insert, backspace then add a blank line. Useful for def
-"in Python, map this to Alt. A = Alt
-inoremap <A-o> <C-o>o<BS><cr>
 
 " surround markdown emphasis
 nnoremap ,s* ciw**<C-r>"**<Esc>
@@ -78,6 +72,8 @@ nnoremap ,s{ ciw{<C-r>"}<Esc>
 " shorter aliases for vim-go plugin
 au FileType go nmap <leader><F12> :GoDecls<cr>
 au FileType go nmap <F12> <Plug>(go-def)
+
+" Vim airline tab switching
 nmap <Leader>1 <Plug>AirlineSelectTab1
 nmap <Leader>2 <Plug>AirlineSelectTab2
 nmap <Leader>3 <Plug>AirlineSelectTab3
@@ -92,12 +88,6 @@ xmap <C-l> <Plug>(neosnippet_expand_target)
 nnoremap <leader>rs :call neosnippet#variables#set_snippets({})<cr>
 " Pull up help docs for snippet syntax
 nnoremap <leader>hs :help neosnippet-snippet-syntax<cr>
-
-" Python help
-nnoremap <buffer> H :<C-u>execute "!pydoc3 " . expand("<cword>")<cr>
-
-" Python add trailing space when using #
-autocmd BufRead,BufNewFile *.py inoremap # #<space>
 
 " Toggle ale on and off. At was for ale toggle...
 "au FileType python nmap <silent> <F3> :ALEFix<cr>
@@ -154,24 +144,21 @@ nnoremap <C-g> :BCommits!<cr>
 " ctrl-i on a file splits horizontally.
 " ctrl-v on a file splits vertically.
 nnoremap <C-f> :FZF<cr>
+
 " deoplete tab completion
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
 " vim-logbook
 noremap ,lb :Lb<cr>
 noremap ,ts :Ts<cr>
-"map ,s <Plug>Sneak_s
-"map ,S <Plug>Sneak_S
+
+" Vim-Sneek
 map f <Plug>Sneak_s
 map F <Plug>Sneak_S
+
 " autoclose for only certain strings/braces
-"inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
-"inoremap ` ``<left>
-autocmd FileType python,go,sh inoremap " ""<left>
-autocmd FileType python,go,sh inoremap ' ''<left>
-
-autocmd FileType python call SemshiCustomHighlights()
 
 " Experiments with nvim terminal
 if has('nvim')
@@ -232,8 +219,24 @@ nnoremap <silent> <Left> :bp<cr>
 nnoremap <F3> :execute 'edit ~/tmp/py_' . strftime("%m%d%y_%H%M%S") . '.py'<cr>
 nnoremap <leader>it :IndentGuidesToggle<cr>
 
+"Open a line below in insert, backspace then add a blank line. Useful for def
+"in Python, map this to Alt. A = Alt
+inoremap <A-o> <C-o>o<BS><cr>
+
+" Python help
+nnoremap <buffer> H :<C-u>execute "!pydoc3 " . expand("<cword>")<cr>
+
+" Python add trailing space when using #
+autocmd BufRead,BufNewFile *.py inoremap # #<space>
+
+autocmd FileType python,go,sh inoremap " ""<left>
+autocmd FileType python,go,sh inoremap ' ''<left>
+autocmd FileType python call SemshiCustomHighlights()
+
 nnoremap mkd :call CreateDailyFolder()<cr>
+
 " macdictionary support
 nnoremap <C-d> :MacDictWord<cr>
+
 " Quickly copy a file in the buffer
 nnoremap <leader>c :call CopyCurrentFile()<cr>
