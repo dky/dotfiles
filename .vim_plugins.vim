@@ -40,6 +40,8 @@ let g:go_fmt_command = "goimports"
 let g:go_fmt_experimental = 1
 
 " vim-airline
+" Don't display INSERT at the bottom, airline already does this.
+set noshowmode
 let g:airline_theme='papercolor'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#hunks#enabled = 0
