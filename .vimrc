@@ -76,8 +76,7 @@ set hidden
 set noswapfile
 set nobackup
 set number
-"set relativenumber
-"
+
 set tabstop=3
 set shiftwidth=3
 set smartindent
@@ -115,14 +114,14 @@ set encoding=utf-8
 set listchars=eol:¬,tab:▸-,trail:~,extends:>,precedes:<
 set list
 
+set cursorline
+
 if has("noinsert")
 	"neocomplete like
 	set completeopt+=noinsert
 elseif has ("noselect")
 	set completeopt+=noselect
 endif
-
-set cursorline
 
 " Load in autocommands
 if !empty(glob("~/.dotfiles/.vim_autocommands.vim"))
