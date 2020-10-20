@@ -1,10 +1,3 @@
-" remap esc to jk
-imap jk <Esc>
-
-" no l/r arrow keys
-nmap <left> <nop>
-nmap <right> <nop>
-
 au FileType go nmap <F8> :w <cr> :echo system('go run "' . expand('%') . '"')<cr>
 au FileType go imap <F8> <Esc> :w <cr> :echo system('go run "' . expand('%') . '"')<cr>
 au FileType python nmap <F8> :echo system('python3 "' . expand('%') . '"')<cr>
@@ -16,6 +9,39 @@ au FileType coffee imap <F8> <Esc> :w <cr> :echo system('coffee "' . expand('%')
 au FileType sh nmap <F8> :echo system('bash "' . expand('%') . '"')<cr>
 au FileType c nmap <F8> :w <cr> :!gcc % -o %< && ./%< <cr>
 au FileType c imap <F8> <Esc> :w <cr> :!gcc % -o %< && ./%< <cr>
+
+" shorter aliases for vim-go plugin
+au FileType go nmap <leader><F12> :GoDecls<cr>
+au FileType go nmap <F12> <Plug>(go-def)
+
+" tmux-send keys to send commands to other panes.
+au FileType go nmap <F5> :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<cr><cr>
+au FileType go imap <F5> <Esc> :w <cr> :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<cr><cr>
+nnoremap <silent> ,rg :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<cr><cr>
+au FileType go nmap <F5><F5> :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<cr><cr>
+au FileType go imap <F5><F5> <Esc> :w <cr> :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<cr><cr>
+nnoremap <silent> ,gr :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<cr><cr>
+nnoremap <silent> ,c :execute ":!tmux send-keys -t 3 C-c"<cr><cr>
+nnoremap <silent> ,cl :execute ":!tmux send-keys -t 3 clear"<cr><cr>
+au FileType python nmap <F5> :execute ":!tmux send-keys -t bottom 'python3 *.py' C-m"<cr><cr>
+au FileType python imap <F5> <Esc> :w <cr> :execute ":!tmux send-keys -t bottom 'python3 *.py' C-m"<cr><cr>
+
+au FileType terraform nmap <F5> :execute ":!tmux send-keys -t bottom 'terraform apply -auto-approve' C-m"<cr><cr>
+au FileType terraform imap <F5> <Esc> :w <cr> :execute ":!tmux send-keys -t bottom 'terraform apply -auto-approve' C-m"<cr><cr>
+
+au FileType terraform nmap <F6> :execute ":!tmux send-keys -t bottom 'terraform destroy -auto-approve' C-m"<cr><cr>
+au FileType terraform imap <F6> <Esc> :w <cr> :execute ":!tmux send-keys -t bottom 'terraform destroy -auto-approve' C-m"<cr><cr>
+
+autocmd FileType python,go,sh inoremap " ""<left>
+autocmd FileType python,go,sh inoremap ' ''<left>
+autocmd FileType python call SemshiCustomHighlights()
+
+" remap esc to jk
+imap jk <Esc>
+
+" no l/r arrow keys
+nmap <left> <nop>
+nmap <right> <nop>
 
 " map F1 vim help to esc, kept bringing up the help menu in insert mode
 imap <F1> <Esc>
@@ -69,9 +95,6 @@ nnoremap ,s[ ciw[<C-r>"]<Esc>
 nnoremap ,s( ciw(<C-r>")<Esc>
 nnoremap ,s{ ciw{<C-r>"}<Esc>
 
-" shorter aliases for vim-go plugin
-au FileType go nmap <leader><F12> :GoDecls<cr>
-au FileType go nmap <F12> <Plug>(go-def)
 
 " Vim airline tab switching
 nmap <Leader>1 <Plug>AirlineSelectTab1
@@ -100,23 +123,6 @@ autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<cr>
 
 " toggle auto formatting:
 nmap <Leader>C :ClangFormatAutoToggle<cr>
-" tmux-send keys to send commands to other panes.
-au FileType go nmap <F5> :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<cr><cr>
-au FileType go imap <F5> <Esc> :w <cr> :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<cr><cr>
-nnoremap <silent> ,rg :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<cr><cr>
-au FileType go nmap <F5><F5> :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<cr><cr>
-au FileType go imap <F5><F5> <Esc> :w <cr> :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<cr><cr>
-nnoremap <silent> ,gr :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<cr><cr>
-nnoremap <silent> ,c :execute ":!tmux send-keys -t 3 C-c"<cr><cr>
-nnoremap <silent> ,cl :execute ":!tmux send-keys -t 3 clear"<cr><cr>
-au FileType python nmap <F5> :execute ":!tmux send-keys -t bottom 'python3 *.py' C-m"<cr><cr>
-au FileType python imap <F5> <Esc> :w <cr> :execute ":!tmux send-keys -t bottom 'python3 *.py' C-m"<cr><cr>
-
-au FileType terraform nmap <F5> :execute ":!tmux send-keys -t bottom 'terraform apply -auto-approve' C-m"<cr><cr>
-au FileType terraform imap <F5> <Esc> :w <cr> :execute ":!tmux send-keys -t bottom 'terraform apply -auto-approve' C-m"<cr><cr>
-
-au FileType terraform nmap <F6> :execute ":!tmux send-keys -t bottom 'terraform destroy -auto-approve' C-m"<cr><cr>
-au FileType terraform imap <F6> <Esc> :w <cr> :execute ":!tmux send-keys -t bottom 'terraform destroy -auto-approve' C-m"<cr><cr>
 
 nnoremap <silent> ,dkps :execute ":!tmux send-keys -t 2 'docker ps' C-m"<cr><cr>
 nnoremap <silent> ,mpl :execute ":!tmux send-keys -t 2 'make post-linux' C-m"<cr><cr>
@@ -228,10 +234,6 @@ nnoremap <buffer> H :<C-u>execute "!pydoc3 " . expand("<cword>")<cr>
 
 " Python add trailing space when using #
 autocmd BufRead,BufNewFile *.py inoremap # #<space>
-
-autocmd FileType python,go,sh inoremap " ""<left>
-autocmd FileType python,go,sh inoremap ' ''<left>
-autocmd FileType python call SemshiCustomHighlights()
 
 nnoremap mkd :call CreateDailyFolder()<cr>
 
