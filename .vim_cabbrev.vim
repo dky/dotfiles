@@ -65,8 +65,8 @@ cabbrev ftk FloatermKill<cr>
 "cabbrev got GoTest
 
 " Codi
-"cabbrev oc Codi
-"cabbrev ec Codi!
+cabbrev oc Codi
+cabbrev ec Codi!
 
 " goyo
 "cabbrev gy Goyo
