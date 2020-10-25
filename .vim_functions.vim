@@ -66,7 +66,9 @@ function! WordProcessorMode()
   if !empty(glob("~/.vim-dictionary/abbreviations.vim"))
     source ~/.vim-dictionary/abbreviations.vim
   endif
-  set dictionary+=~/.vim/dict/20k.txt
+  "This loads a lot of words we don't really need. Rather use our custom
+  "dictionary for better completion.
+  "set dictionary+=~/.vim/dict/20k.txt
   set dictionary+=~/.vim-dictionary/custom_dictionary.txt
   setlocal spell spelllang=en_us
 
