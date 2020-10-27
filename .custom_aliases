@@ -216,6 +216,7 @@ alias pipi="pip install"
 alias pipr="pip install -r requirements.txt"
 alias pipvim="pip install flake8 yapf pynvim jedi pylint"
 alias pippurge="pip uninstall -y -r <(pip freeze)"
+alias py="python3"
 
 #alias for chmod
 alias chux="chmod u+x"
