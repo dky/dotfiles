@@ -25,7 +25,7 @@ cabbrev rs call neosnippet#variables#set_snippets({})<cr>
 cabbrev rv source $MYVIMRC<cr>
 
 " Reload vim abbreviations
-cabbrev ra source ~/.vim/dict/abbreviations.vim<cr>
+cabbrev ra source ~/.vim-dictionary/abbreviations.vim<cr>
 
 " quickly set file type, python, bash, shell
 cabbrev setftpy set ft=python
