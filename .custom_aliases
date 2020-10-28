@@ -27,6 +27,7 @@ alias packc="rm -rf ./output-vmware"
 alias packit="packc && packb"
 
 #docker aliases
+alias dc="docker-compose"
 alias dkls="docker images"
 alias dkps="docker ps -a"
 #docker last container to start, only list id
