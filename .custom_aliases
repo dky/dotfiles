@@ -274,3 +274,5 @@ alias kba="kubectl apply -f"
 
 # mutt
 alias nm="neomutt"
+
+alias ifa="/sbin/ifconfig -a"
