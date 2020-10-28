@@ -49,6 +49,7 @@ cabbrev mp :!make public<cr><cr>
 " Neoterm
 cabbrev tn Tnew<cr>
 cabbrev tc Tclose<cr>
+cabbrev to Topen<cr>
 cabbrev t T
 
 " floatterm
