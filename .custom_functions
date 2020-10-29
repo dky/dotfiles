@@ -28,6 +28,10 @@ function dkr {
 	docker run -it --name $name -h $name $image /bin/bash;
 }
 
+function dki {
+	docker inspect $1 | less
+}
+
 function dkrmce {
 	for i in `docker ps -a | grep "Exited" | awk '{ print $1 }'`; do docker rm -f $i; done
 }
