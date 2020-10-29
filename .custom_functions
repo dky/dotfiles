@@ -270,3 +270,7 @@ function unsetaws {
 gccd() {
   git clone "$1" && cd "$(basename "$1" .git)"
 }
+
+function dcu {
+	docker-compose -f $1 up -d
+}
