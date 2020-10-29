@@ -294,3 +294,7 @@ function dcs() {
 	echo Stopping: $COMPOSE_FILE
 	docker-compose -f $COMPOSE_FILE stop
 }
+
+function mysqlh() {
+	mysql -h $1 -u root -p -P 3306
+}
