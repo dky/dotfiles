@@ -271,6 +271,22 @@ gccd() {
   git clone "$1" && cd "$(basename "$1" .git)"
 }
 
-function dcu {
-	docker-compose -f $1 up -d
+function dcu() {
+	echo Starting: $1
+	FILE=$1
+	COMPOSE_FILE=${FILE:-docker-compose.yml} 
+	docker-compose -f $COMPOSE_FILE up -d
+}
+function dcr() {
+	echo Re-Starting: $1
+	FILE=$1
+	COMPOSE_FILE=${FILE:-docker-compose.yml} 
+	docker-compose -f $COMPOSE_FILE restart
+}
+function dcs() {
+	echo Stopping: $1
+	FILE=$1
+	COMPOSE_FILE=${FILE:-docker-compose.yml} 
+	echo Stopping: $COMPOSE_FILE
+	docker-compose -f $COMPOSE_FILE stop
 }
