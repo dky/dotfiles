@@ -32,8 +32,8 @@ au FileType terraform imap <F5> <Esc> :w <cr> :execute ":!tmux send-keys -t bott
 au FileType terraform nmap <F6> :execute ":!tmux send-keys -t bottom 'terraform destroy -auto-approve' C-m"<cr><cr>
 au FileType terraform imap <F6> <Esc> :w <cr> :execute ":!tmux send-keys -t bottom 'terraform destroy -auto-approve' C-m"<cr><cr>
 
-autocmd FileType python,go,sh inoremap " ""<left>
-autocmd FileType python,go,sh inoremap ' ''<left>
+autocmd FileType python,go inoremap " ""<left>
+autocmd FileType python,go inoremap ' ''<left>
 autocmd FileType python call SemshiCustomHighlights()
 
 " remap esc to jk
