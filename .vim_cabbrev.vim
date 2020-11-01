@@ -38,6 +38,9 @@ cabbrev cdh cd $HOME<cr>
 cabbrev cdg cd $HOME/git<cr>
 cabbrev cdd cd $HOME/.dotfiles<cr>
 
+" set conceallevel=0
+cabbrev nc set conceallevel=0
+
 " Create a directory with current date
 cabbrev cdcb cd $HOME/git/cb<cr>
 
@@ -49,7 +52,8 @@ cabbrev mp :!make public<cr><cr>
 " Neoterm
 cabbrev tn Tnew<cr>
 cabbrev tc Tclose<cr>
-cabbrev to Topen<cr>
+"Need to come up with new mapping for this, this breaks typing the word "to"
+"cabbrev to Topen<cr>
 cabbrev t T
 
 " floatterm
