@@ -27,6 +27,9 @@ au BufNewFile,BufRead *.md
 			\ set nosmartindent |
 			\ set indentexpr=
 
+" json
+au Filetype json setlocal ts=2 sw=2 expandtab
+
 " yaml
 au BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab indentkeys-=0# indentkeys-=<:> foldmethod=indent nofoldenable
