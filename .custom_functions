@@ -298,3 +298,8 @@ function dcs() {
 function mysqlh() {
 	mysql -h $1 -u root -p -P 3306
 }
+
+function jfmt() {
+	python3 -mjson.tool < $1 > /tmp/$1
+	cp /tmp/$1 $1
+}
