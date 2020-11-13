@@ -10,6 +10,9 @@ au FileType sh nmap <F8> :echo system('bash "' . expand('%') . '"')<cr>
 au FileType c nmap <F8> :w <cr> :!gcc % -o %< && ./%< <cr>
 au FileType c imap <F8> <Esc> :w <cr> :!gcc % -o %< && ./%< <cr>
 
+au FileType json nmap <F8> :w <cr> :echo system('python -m json.tool "' . expand('%') . '"')<cr>
+au FileType json imap <F8> <Esc> :w <cr> :echo system('python -m json.tool "' . expand('%') . '"')<cr>
+
 " shorter aliases for vim-go plugin
 au FileType go nmap <leader><F12> :GoDecls<cr>
 au FileType go nmap <F12> <Plug>(go-def)
