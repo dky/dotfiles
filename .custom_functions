@@ -226,9 +226,7 @@ function uvenv {
 		app/static/js app/static/css app/static/img
 
 cat << EOF > ./requirements.txt
-flask
 sqlalchemy
-passlib
 EOF
 
 cat << EOF > ./requirements-dev.txt
