@@ -234,6 +234,11 @@ cat << EOF > ./requirements-dev.txt
 pytest
 pytest-cov
 webtest
+flake8
+yapf
+pynvim
+jedi
+pylint
 EOF
 
 pip install -r ./requirements.txt
