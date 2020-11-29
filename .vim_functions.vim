@@ -91,4 +91,3 @@ function! CopyCurrentFile()
 		redraw!
 	endif
 endfunction
-
