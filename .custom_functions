@@ -212,6 +212,34 @@ function dic {
 	fi
 }
 
+function uvenvfast {
+	python3 -m venv venv 
+	source venv/bin/activate 
+	pip install --upgrade pip setuptools
+
+cat << EOF > ./requirements.txt
+fastapi
+uvicorn
+sqlalchemy
+httpx
+EOF
+
+cat << EOF > ./requirements-dev.txt
+-r requirements.txt
+pytest
+pytest-cov
+webtest
+flake8
+yapf
+pynvim
+jedi
+pylint
+EOF
+
+pip install -r ./requirements.txt
+pip install -r ./requirements-dev.txt
+}
+
 function uvenv {
 	python3 -m venv venv 
 	source venv/bin/activate 
