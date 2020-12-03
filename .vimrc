@@ -25,7 +25,7 @@ Plug 'deoplete-plugins/deoplete-dictionary'
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
 Plug 'reedes/vim-wordy', { 'for': 'markdown' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
-Plug 'thaerkh/vim-indentguides', { 'for': ['go', 'python', 'neosnippet', 'sh', 'yaml', 'tf'] }
+Plug 'thaerkh/vim-indentguides', { 'for': ['go', 'python', 'neosnippet', 'sh', 'yaml', 'tf', 'json', 'html', 'js'] }
 Plug 'voldikss/vim-floaterm'
 Plug 'kassio/neoterm'
 Plug 'hashivim/vim-terraform'

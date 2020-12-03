@@ -10,6 +10,9 @@ au FileType sh nmap <F8> :echo system('bash "' . expand('%') . '"')<cr>
 au FileType c nmap <F8> :w <cr> :!gcc % -o %< && ./%< <cr>
 au FileType c imap <F8> <Esc> :w <cr> :!gcc % -o %< && ./%< <cr>
 
+au FileType json nmap <F8> :w <cr> :echo system('python -m json.tool "' . expand('%') . '"')<cr>
+au FileType json imap <F8> <Esc> :w <cr> :echo system('python -m json.tool "' . expand('%') . '"')<cr>
+
 " shorter aliases for vim-go plugin
 au FileType go nmap <leader><F12> :GoDecls<cr>
 au FileType go nmap <F12> <Plug>(go-def)
@@ -32,8 +35,8 @@ au FileType terraform imap <F5> <Esc> :w <cr> :execute ":!tmux send-keys -t bott
 au FileType terraform nmap <F6> :execute ":!tmux send-keys -t bottom 'terraform destroy -auto-approve' C-m"<cr><cr>
 au FileType terraform imap <F6> <Esc> :w <cr> :execute ":!tmux send-keys -t bottom 'terraform destroy -auto-approve' C-m"<cr><cr>
 
-autocmd FileType python,go,sh inoremap " ""<left>
-autocmd FileType python,go,sh inoremap ' ''<left>
+autocmd FileType python,go inoremap " ""<left>
+autocmd FileType python,go inoremap ' ''<left>
 autocmd FileType python call SemshiCustomHighlights()
 
 " remap esc to jk

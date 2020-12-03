@@ -38,6 +38,9 @@ cabbrev cdh cd $HOME<cr>
 cabbrev cdg cd $HOME/git<cr>
 cabbrev cdd cd $HOME/.dotfiles<cr>
 
+" set conceallevel=0
+cabbrev nc set conceallevel=0
+
 " Create a directory with current date
 cabbrev cdcb cd $HOME/git/cb<cr>
 
@@ -49,7 +52,8 @@ cabbrev mp :!make public<cr><cr>
 " Neoterm
 cabbrev tn Tnew<cr>
 cabbrev tc Tclose<cr>
-cabbrev to Topen<cr>
+"Need to come up with new mapping for this, this breaks typing the word "to"
+"cabbrev to Topen<cr>
 cabbrev t T
 
 " floatterm
@@ -69,23 +73,3 @@ cabbrev ftk FloatermKill<cr>
 " Codi
 cabbrev oc Codi
 cabbrev ec Codi!
-
-" goyo
-"cabbrev gy Goyo
-"cabbrev cp call CopyCurrentFile()<cr>
-"cabbrev luw MacDictQuery<cr>
-"cabbrev lu MacDictQuery<cr>
-
-" Language tool
-"cabbrev gc LanguageToolCheck<cr>
-"cabbrev gq LanguageToolClear<cr>
-
-" Wordy
-"cabbrev ww Wordy weak
-"cabbrev wp Wordy problematic
-"cabbrev wr Wordy redundant
-"cabbrev wadj Wordy adjectives
-"cabbrev wadv Wordy adverbs
-"cabbrev nw NoWordy
-"cabbrev it IndentGuidesToggle
-"cabbrev, see cabbrev gma as an example

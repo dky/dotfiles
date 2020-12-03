@@ -169,7 +169,7 @@ function mkd () {
 fd() {
 	cd ~
 	local dir
-	dir=$(find ${1:-.} -path '*/\.*' \
+	dir=$(find -L ${1:-.} -path '*/\.*' \
 		-o \( -name Music -o -name logbook -o -name Library -o -name Pictures -o -name Public -o -name Movies -o -name Applications -o -name Downloads \) -prune \
 		-o \( -name '.git' -o -name 'lib' \) -prune \
 		-o \( -path './go/bin/*' -o -path './go/pkg/*' -o -path './.vim/plugged/*' -o -path './.vim/view/*' -o -path './.local/share/nvim/view/*' -o -path './go/src/*' -o -path './iCloud*/*' -o -path './google-cloud-sdk/*' -o -path './tmp/*' -o -path './Documents/*' -o -path './Desktop/*' -o -path './git/dky.io/*' -o -path './git/docker/*' -o -path './git/kinesis-qmk/*' \) -prune \
@@ -212,6 +212,34 @@ function dic {
 	fi
 }
 
+function uvenvfast {
+	python3 -m venv venv 
+	source venv/bin/activate 
+	pip install --upgrade pip setuptools
+
+cat << EOF > ./requirements.txt
+fastapi
+uvicorn
+sqlalchemy
+httpx
+EOF
+
+cat << EOF > ./requirements-dev.txt
+-r requirements.txt
+pytest
+pytest-cov
+webtest
+flake8
+yapf
+pynvim
+jedi
+pylint
+EOF
+
+pip install -r ./requirements.txt
+pip install -r ./requirements-dev.txt
+}
+
 function uvenv {
 	python3 -m venv venv 
 	source venv/bin/activate 
@@ -226,9 +254,7 @@ function uvenv {
 		app/static/js app/static/css app/static/img
 
 cat << EOF > ./requirements.txt
-flask
 sqlalchemy
-passlib
 EOF
 
 cat << EOF > ./requirements-dev.txt
@@ -236,6 +262,11 @@ cat << EOF > ./requirements-dev.txt
 pytest
 pytest-cov
 webtest
+flake8
+yapf
+pynvim
+jedi
+pylint
 EOF
 
 pip install -r ./requirements.txt
@@ -297,4 +328,9 @@ function dcs() {
 
 function mysqlh() {
 	mysql -h $1 -u root -p -P 3306
+}
+
+function jfmt() {
+	python3 -mjson.tool < $1 > /tmp/$1
+	cp /tmp/$1 $1
 }

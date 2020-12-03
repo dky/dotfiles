@@ -75,6 +75,7 @@ alias gpm='git pull origin master'
 alias gph='git pull origin HEAD'
 alias gpd='git pull origin HEAD'
 alias gpu='git push origin HEAD'
+alias gpuf='git push origin HEAD --force'
 alias gl='git log --pretty --pretty=oneline'
 alias gs='git status'
 alias gd='git diff'
@@ -207,12 +208,12 @@ alias venva="source venv/bin/activate"
 alias svenv="source venv/bin/activate"
 alias da="deactivate"
 alias venvd="deactivate"
-alias pipl="pip list"
-alias pipf="pip freeze > requirements.txt"
-alias pipi="pip install"
-alias pipr="pip install -r requirements.txt"
-alias pipvim="pip install flake8 yapf pynvim jedi pylint"
-alias pippurge="pip uninstall -y -r <(pip freeze)"
+alias pipl="pip3 list"
+alias pipf="pip3 freeze > requirements.txt"
+alias pipi="pip3 install"
+alias pipr="pip3 install -r requirements.txt"
+alias pipvim="pip3 install flake8 yapf pynvim jedi pylint"
+alias pippurge="pip3 uninstall -y -r <(pip freeze)"
 alias py="python3"
 
 #alias for chmod

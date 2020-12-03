@@ -62,6 +62,9 @@ endfunction
 
 " Call this func if we are dealing with markdown files
 function! WordProcessorMode()
+  " Insert mode auto completion case-insensitivity
+  set ignorecase
+  set infercase
   " Map to custom abbreviations + dictionary
   if !empty(glob("~/.vim-dictionary/abbreviations.vim"))
     source ~/.vim-dictionary/abbreviations.vim
@@ -88,4 +91,3 @@ function! CopyCurrentFile()
 		redraw!
 	endif
 endfunction
-
