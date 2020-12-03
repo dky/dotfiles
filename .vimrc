@@ -62,6 +62,9 @@ Plug 'dky/vim-aftercolors'
 Plug '907th/vim-auto-save'
 Plug 'luochen1990/rainbow'
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+Plug 'fatih/vim-hclfmt'
+Plug 'b4b4r07/vim-hcl'
+
 
 let g:rainbow_active = 1
 let g:deoplete#enable_at_startup = 1

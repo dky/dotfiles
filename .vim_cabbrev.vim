@@ -58,7 +58,7 @@ cabbrev t T
 
 " floatterm
 cabbrev fts FloatermShow<cr>
-cabbrev ft FloatermNew<cr>
+cabbrev ftn FloatermNew<cr>
 cabbrev ftt FloatermToggle<cr>
 cabbrev ftp FloatermPrev<cr>
 cabbrev ftn FloatermNext<cr>
