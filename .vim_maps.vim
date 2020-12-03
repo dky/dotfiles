@@ -135,9 +135,9 @@ nnoremap <silent> ,pa :execute ":!tmux send-keys -t 2 './apply.sh' C-m"<cr><cr>
 
 " FZF key bindings
 " fzf - check first to make sure we aren't in a nerdtree buffer
-"nmap <Leader>F :GFiles<cr>
+nmap <Leader>Fz :GFiles<cr>
 "nnoremap <silent> <expr> <Leader>F (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":GFiles\<cr>"
-"nmap <Leader>f :Files<cr>
+nmap <Leader>f :Files<cr>
 "nnoremap <silent> <expr> <Leader>f (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Files\<cr>"
 "nmap <Leader>b :Buffers<cr>
 nnoremap <silent> <expr> <Leader>b (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Buffers\<cr>"
@@ -152,7 +152,7 @@ nnoremap <C-g> :BCommits!<cr>
 " ctrl-t on a file brings up in new tab
 " ctrl-i on a file splits horizontally.
 " ctrl-v on a file splits vertically.
-nnoremap <C-f> :FZF<cr>
+"nnoremap <C-f> :FZF<cr>
 
 " deoplete tab completion
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
@@ -246,5 +246,5 @@ nnoremap <C-d> :MacDictWord<cr>
 " Quickly copy a file in the buffer
 nnoremap <leader>c :call CopyCurrentFile()<cr>
 
-" Quickly copy a file in the buffer
-nnoremap <leader>ft :FloatermToggle<cr>
+" Floatterm
+nnoremap <silent> <leader>ft :FloatermToggle<cr>
