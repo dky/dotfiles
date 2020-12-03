@@ -133,9 +133,9 @@ nnoremap <silent> ,pa :execute ":!tmux send-keys -t 2 './apply.sh' C-m"<cr><cr>
 " FZF key bindings
 " fzf - check first to make sure we aren't in a nerdtree buffer
 "nmap <Leader>F :GFiles<cr>
-nnoremap <silent> <expr> <Leader>F (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":GFiles\<cr>"
+"nnoremap <silent> <expr> <Leader>F (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":GFiles\<cr>"
 "nmap <Leader>f :Files<cr>
-nnoremap <silent> <expr> <Leader>f (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Files\<cr>"
+"nnoremap <silent> <expr> <Leader>f (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Files\<cr>"
 "nmap <Leader>b :Buffers<cr>
 nnoremap <silent> <expr> <Leader>b (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Buffers\<cr>"
 "nmap <Leader>h :History<cr>
@@ -242,3 +242,6 @@ nnoremap <C-d> :MacDictWord<cr>
 
 " Quickly copy a file in the buffer
 nnoremap <leader>c :call CopyCurrentFile()<cr>
+
+" Quickly copy a file in the buffer
+nnoremap <leader>ft :FloatermToggle<cr>
