@@ -135,7 +135,7 @@ nnoremap <silent> ,pa :execute ":!tmux send-keys -t 2 './apply.sh' C-m"<cr><cr>
 
 " FZF key bindings
 " fzf - check first to make sure we aren't in a nerdtree buffer
-nmap <Leader>Fz :GFiles<cr>
+nmap <Leader>F :GFiles<cr>
 "nnoremap <silent> <expr> <Leader>F (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":GFiles\<cr>"
 nmap <Leader>f :Files<cr>
 "nnoremap <silent> <expr> <Leader>f (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Files\<cr>"
