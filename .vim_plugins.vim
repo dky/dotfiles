@@ -4,7 +4,7 @@ let g:codi#rightalign = 0
 "Disable semshi error sign and just let flake8 handle it.
 let g:semshi#error_sign = v:false
 
-let NERDTreeIgnore = ['\.pyc$', '\.go.mod$', '\.DS_Store$', '__pycache__']
+let NERDTreeIgnore = ['\.pyc$', '\.go.mod$', '\.DS_Store$', '__pycache__', 'venv']
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeShowHidden = 1
