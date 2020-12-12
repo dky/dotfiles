@@ -144,20 +144,6 @@ let g:fzf_action = {
 			\ 'ctrl-i': 'split',
 			\ 'ctrl-v': 'vsplit' }
 
-" tern
-let g:tern_request_timeout = 1
-let g:tern_request_timeout = 6000
-let g:tern#command = ["tern"]
-let g:tern#arguments = ["--persistent"]
-let g:deoplete#sources#tss#javascript_support = 1
-let g:tsuquyomi_javascript_support = 1
-let g:tsuquyomi_auto_open = 1
-let g:tsuquyomi_disable_quickfix = 1
-
-" deoplete-go
-let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
-let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
-
 " vim AutoSave
 let g:auto_save = 1  " enable AutoSave on Vim startup
 

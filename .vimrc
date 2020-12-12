@@ -4,24 +4,17 @@ call plug#begin('~/.vim/plugged')
 
 if has('nvim')
 	" Do this at the OS level, then Run :UpdateRemotePlugins
-	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-	" Go
-	Plug 'deoplete-plugins/deoplete-go', { 'do': 'make', 'for': 'go' }
-	Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
-	" Python
 	" pip3 install --user pynvim
-	Plug 'zchee/deoplete-jedi', { 'for': 'python' }
 	Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins', 'for': 'python' }
 	Plug 'jeetsukumaran/vim-pythonsense', { 'for': 'python' }
-	" JS
-	Plug 'carlitux/deoplete-ternjs', { 'for': 'javascript' }
-	Plug 'ternjs/tern_for_vim', { 'do': 'npm install -g tern', 'for': 'javascript' }
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 else
 endif
 
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
 Plug 'jmcantrell/vim-virtualenv'
 Plug 'vim-test/vim-test'
-Plug 'deoplete-plugins/deoplete-dictionary'
+"Plug 'deoplete-plugins/deoplete-dictionary'
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
 Plug 'reedes/vim-wordy', { 'for': 'markdown' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
@@ -67,7 +60,6 @@ Plug 'b4b4r07/vim-hcl'
 
 
 let g:rainbow_active = 1
-let g:deoplete#enable_at_startup = 1
 
 call plug#end()
 
