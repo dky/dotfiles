@@ -6,15 +6,14 @@ if has('nvim')
 	" Do this at the OS level, then Run :UpdateRemotePlugins
 	" pip3 install --user pynvim
 	Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins', 'for': 'python' }
-	Plug 'jeetsukumaran/vim-pythonsense', { 'for': 'python' }
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 else
 endif
 
+Plug 'jeetsukumaran/vim-pythonsense', { 'for': 'python' }
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
 Plug 'jmcantrell/vim-virtualenv'
 Plug 'vim-test/vim-test'
-"Plug 'deoplete-plugins/deoplete-dictionary'
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
 Plug 'reedes/vim-wordy', { 'for': 'markdown' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
