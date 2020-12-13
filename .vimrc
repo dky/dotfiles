@@ -79,13 +79,3 @@ elseif has ("noselect")
 	set completeopt+=noselect
 endif
 
-" This should be broken out into .vim_plugins and .vim_autocommands but don't know why it fails currently.
-" space code appropriately for file type.
-autocmd BufNewFile,BufRead * call s:DetectNode()
-
-" If a file is detected as bash set it to sh
-function! s:DetectNode()
-	if getline(1) == '#!/bin/bash'
-		set ft=sh
-	endif
-endfun
