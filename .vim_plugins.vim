@@ -145,7 +145,7 @@ let g:fzf_action = {
 			\ 'ctrl-v': 'vsplit' }
 
 " :F opens rg fzf to search files.
-command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
+command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, {'options': '--no-preview'}, <bang>0)
 
 " vim AutoSave
 let g:auto_save = 1  " enable AutoSave on Vim startup
