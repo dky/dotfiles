@@ -16,6 +16,8 @@ source ~/.dotfiles/.vim_maps.vim
 source ~/.dotfiles/.vim_functions.vim
 " Load in highlighting
 source ~/.dotfiles/.vim_highlights.vim
+" gutentags
+source ~/.dotfiles/.vim_gutentags.vim
 
 let g:rainbow_active = 1
 
