@@ -19,7 +19,6 @@ source ~/.dotfiles/.vim_highlights.vim
 " gutentags
 source ~/.dotfiles/.vim_gutentags.vim
 
-let g:rainbow_active = 1
 
 call plug#end()
 
