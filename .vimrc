@@ -122,34 +122,17 @@ elseif has ("noselect")
 endif
 
 " Load in autocommands
-if !empty(glob("~/.dotfiles/.vim_autocommands.vim"))
-	source ~/.dotfiles/.vim_autocommands.vim
-endif
-
+source ~/.dotfiles/.vim_autocommands.vim
 " Load in cabbrevs
-if !empty(glob("~/.dotfiles/.vim_cabbrev.vim"))
-	source ~/.dotfiles/.vim_cabbrev.vim
-endif
-
+source ~/.dotfiles/.vim_cabbrev.vim
 " Load in maps
-if !empty(glob("~/.dotfiles/.vim_maps.vim"))
-	source ~/.dotfiles/.vim_maps.vim
-endif
-
+source ~/.dotfiles/.vim_maps.vim
 " Load in funcs
-if !empty(glob("~/.dotfiles/.vim_functions.vim"))
-	source ~/.dotfiles/.vim_functions.vim
-endif
-
+source ~/.dotfiles/.vim_functions.vim
 " Load in plugin-specific-configs
-if !empty(glob("~/.dotfiles/.vim_plugins.vim"))
-	source ~/.dotfiles/.vim_plugins.vim
-endif
-
+source ~/.dotfiles/.vim_plugins.vim
 " Load in highlighting
-if !empty(glob("~/.dotfiles/.vim_highlights.vim"))
-	source ~/.dotfiles/.vim_highlights.vim
-endif
+source ~/.dotfiles/.vim_highlights.vim
 
 " This should be broken out into .vim_plugins and .vim_autocommands but don't know why it fails currently.
 " space code appropriately for file type.
