@@ -1,0 +1,272 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/Users/dky/.dotfiles/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/15251e1/
+,bi	.vim_maps.vim	/^nmap ,bi :PlugInstall<cr>$/;"	m
+,c	.vim_maps.vim	/^nnoremap <silent> ,c :execute ":!tmux send-keys -t 3 C-c"<cr><cr>$/;"	m
+,ch	.vim_maps.vim	/^nmap ,ch :CheckHealth<cr>$/;"	m
+,cl	.vim_maps.vim	/^nnoremap <silent> ,cl :execute ":!tmux send-keys -t 2 'clear' C-m"<cr><cr>$/;"	m
+,cl	.vim_maps.vim	/^nnoremap <silent> ,cl :execute ":!tmux send-keys -t 3 clear"<cr><cr>$/;"	m
+,dkps	.vim_maps.vim	/^nnoremap <silent> ,dkps :execute ":!tmux send-keys -t 2 'docker ps' C-m"<cr><cr>$/;"	m
+,ev	.vim_maps.vim	/^nmap ,ev :tabedit $HOME\/.dotfiles\/.vimrc<cr>$/;"	m
+,gib	.vim_maps.vim	/^nmap ,gib :GoInstallBinaries<cr>$/;"	m
+,gr	.vim_maps.vim	/^nnoremap <silent> ,gr :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<cr><cr>$/;"	m
+,lb	.vim_maps.vim	/^noremap ,lb :Lb<cr>$/;"	m
+,mpl	.vim_maps.vim	/^nnoremap <silent> ,mpl :execute ":!tmux send-keys -t 2 'make post-linux' C-m"<cr><cr>$/;"	m
+,mpr	.vim_maps.vim	/^nnoremap <silent> ,mpr :execute ":!tmux send-keys -t 2 'make post-registrator' C-m"<cr><cr>$/;"	m
+,nb	.vim_maps.vim	/^nmap ,nb :Bookmark$/;"	m
+,pa	.vim_maps.vim	/^nnoremap <silent> ,pa :execute ":!tmux send-keys -t 2 '.\/apply.sh' C-m"<cr><cr>$/;"	m
+,rg	.vim_maps.vim	/^nnoremap <silent> ,rg :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<cr><cr>$/;"	m
+,rs	.vim_maps.vim	/^nnoremap ,rs :call neosnippet#variables#set_snippets({})<cr>$/;"	m
+,s"	.vim_maps.vim	/^nnoremap ,s" ciw"<C-r>""<Esc>$/;"	m
+,s(	.vim_maps.vim	/^nnoremap ,s( ciw(<C-r>")<Esc>$/;"	m
+,s*	.vim_maps.vim	/^nnoremap ,s* ciw**<C-r>"**<Esc>$/;"	m
+,s[	.vim_maps.vim	/^nnoremap ,s[ ciw[<C-r>"]<Esc>$/;"	m
+,s`	.vim_maps.vim	/^nnoremap ,s` ciw`<C-r>"`<Esc>$/;"	m
+,s{	.vim_maps.vim	/^nnoremap ,s{ ciw{<C-r>"}<Esc>$/;"	m
+,ts	.vim_maps.vim	/^noremap ,ts :Ts<cr>$/;"	m
+,up	.vim_maps.vim	/^nmap ,up :UpdateRemotePlugins<cr>$/;"	m
+<A-h>	.vim_maps.vim	/^map <A-h> <C-W>h$/;"	m
+<A-j>	.vim_maps.vim	/^map <A-j> <C-W>j$/;"	m
+<A-k>	.vim_maps.vim	/^map <A-k> <C-W>k$/;"	m
+<A-l>	.vim_maps.vim	/^map <A-l> <C-W>l$/;"	m
+<A-o>	.vim_maps.vim	/^inoremap <A-o> <C-o>o<BS><cr>$/;"	m
+<C-d>	.vim_maps.vim	/^nnoremap <C-d> :MacDictWord<cr>$/;"	m
+<C-e>	.vim_maps.vim	/^inoremap <C-e> <C-o>A$/;"	m
+<C-f>	.vim_maps.vim	/^inoremap <C-f> <C-o>l$/;"	m
+<C-j>	.vim_maps.vim	/^inoremap <C-j> <C-o>o$/;"	m
+<C-k>	.vim_maps.vim	/^inoremap <C-k> <C-o>O$/;"	m
+<C-l>	.vim_maps.vim	/^imap <C-l> <Plug>(neosnippet_expand_or_jump)$/;"	m
+<C-l>	.vim_maps.vim	/^smap <C-l> <Plug>(neosnippet_expand_or_jump)$/;"	m
+<C-l>	.vim_maps.vim	/^xmap <C-l> <Plug>(neosnippet_expand_target)$/;"	m
+<F10>	.vim_maps.vim	/^imap <F10> <Esc> :!git add . && git commit -a -m "$/;"	m
+<F10>	.vim_maps.vim	/^nnoremap <F10> :!git add . && git commit -a -m "$/;"	m
+<F1>	.vim_maps.vim	/^imap <F1> <Esc>$/;"	m
+<F1>	.vim_maps.vim	/^nmap <F1> :NERDTreeToggle<cr>$/;"	m
+<F3>	.vim_maps.vim	/^nnoremap <F3> :execute 'edit ~\/tmp\/py_' . strftime("%m%d%y_%H%M%S") . '.py'<cr>$/;"	m
+<F4>	.vim_maps.vim	/^nnoremap <F4> :call NumberToggle()<cr>$/;"	m
+<F7>	.vim_maps.vim	/^nmap <F7> <leader>c<space>$/;"	m
+<F7>	.vim_maps.vim	/^vmap <F7> <leader>c<space>$/;"	m
+<F9>	.vim_maps.vim	/^nnoremap <F9> :execute ":!git push origin HEAD"<cr>$/;"	m
+<Leader>1	.vim_maps.vim	/^nmap <Leader>1 <Plug>AirlineSelectTab1$/;"	m
+<Leader>2	.vim_maps.vim	/^nmap <Leader>2 <Plug>AirlineSelectTab2$/;"	m
+<Leader>3	.vim_maps.vim	/^nmap <Leader>3 <Plug>AirlineSelectTab3$/;"	m
+<Leader>4	.vim_maps.vim	/^nmap <Leader>4 <Plug>AirlineSelectTab4$/;"	m
+<Leader>5	.vim_maps.vim	/^nmap <Leader>5 <Plug>AirlineSelectTab5$/;"	m
+<Leader>B	.vim_maps.vim	/^nmap <Leader>B :Lines<CR>$/;"	m
+<Leader>C	.vim_maps.vim	/^nmap <Leader>C :ClangFormatAutoToggle<cr>$/;"	m
+<Leader>F	.vim_maps.vim	/^nmap <Leader>F :GFiles<cr>$/;"	m
+<Leader>b	.vim_maps.vim	/^nmap <Leader>b :BLines<CR>$/;"	m
+<Leader>f	.vim_maps.vim	/^nmap <Leader>f :Find<cr>$/;"	m
+<Leader>h	.vim_maps.vim	/^nmap <Leader>h :History<cr>$/;"	m
+<Leader>rb	.vim_maps.vim	/^map <Leader>rb :call VimuxRunCommand("clear; rspec " . bufname("%"))<cr>$/;"	m
+<Leader>t	.vim_maps.vim	/^nmap <Leader>t :BTags<cr>$/;"	m
+<Leader>vi	.vim_maps.vim	/^map <Leader>vi :VimuxInspectRunner<cr>$/;"	m
+<Leader>vl	.vim_maps.vim	/^map <Leader>vl :VimuxRunLastCommand<cr>$/;"	m
+<Leader>vp	.vim_maps.vim	/^map <Leader>vp :VimuxPromptCommand<cr>$/;"	m
+<Leader>vq	.vim_maps.vim	/^map <Leader>vq :VimuxCloseRunner<cr>$/;"	m
+<Leader>vx	.vim_maps.vim	/^map <Leader>vx :VimuxInterruptRunner<cr>$/;"	m
+<Leader>vz	.vim_maps.vim	/^map <Leader>vz :call VimuxZoomRunner()<cr>$/;"	m
+<Left>	.vim_maps.vim	/^nnoremap <silent> <Left> :bp<cr>$/;"	m
+<Right>	.vim_maps.vim	/^nnoremap <silent> <Right> :bn<cr>$/;"	m
+<c-h>	.vim_maps.vim	/^nmap <c-h> 4h$/;"	m
+<c-j>	.vim_maps.vim	/^nmap <c-j> 4j$/;"	m
+<c-k>	.vim_maps.vim	/^nmap <c-k> 4k$/;"	m
+<c-l>	.vim_maps.vim	/^nmap <c-l> 4l$/;"	m
+<leader>af	.vim_maps.vim	/^map <leader>af :ALEFix<CR>$/;"	m
+<leader>at	.vim_maps.vim	/^map <leader>at :ALEToggle<CR>$/;"	m
+<leader>c	.vim_maps.vim	/^nnoremap <leader>c :call CopyCurrentFile()<cr>$/;"	m
+<leader>cd	.vim_maps.vim	/^map <leader>cd :lcd %:h<cr>$/;"	m
+<leader>d	.vim_maps.vim	/^inoremap <leader>d <esc>:1,$d<cr>$/;"	m
+<leader>d	.vim_maps.vim	/^nnoremap <leader>d :1,$d<cr>$/;"	m
+<leader>ew	.vim_maps.vim	/^map <leader>ew :e <C-R>=expand("%:p:h") . "\/" <cr>$/;"	m
+<leader>ft	.vim_maps.vim	/^nnoremap <silent> <leader>ft :FloatermToggle<cr>$/;"	m
+<leader>gd	.vim_maps.vim	/^nnoremap <silent> <leader>gd :call IsNerdTreeOpen(':Git diff')<cr>$/;"	m
+<leader>gs	.vim_maps.vim	/^nnoremap <silent> <leader>gs :call IsNerdTreeOpen(':Git status')<cr>$/;"	m
+<leader>hs	.vim_maps.vim	/^nnoremap <leader>hs :help neosnippet-snippet-syntax<cr>$/;"	m
+<leader>it	.vim_maps.vim	/^nnoremap <leader>it :IndentGuidesToggle<cr>$/;"	m
+<leader>l	.vim_maps.vim	/^nnoremap <leader>l :ls<cr>:b<space>$/;"	m
+<leader>rs	.vim_maps.vim	/^nnoremap <leader>rs :call neosnippet#variables#set_snippets({})<cr>$/;"	m
+<left>	.vim_maps.vim	/^nmap <left> <nop>$/;"	m
+<right>	.vim_maps.vim	/^nmap <right> <nop>$/;"	m
+<space>	.vim_maps.vim	/^nmap <space> :$/;"	m
+Bootstrap Linux .dotfiles	README.md	/^# Bootstrap Linux .dotfiles$/;"	c
+CMD	bin/format_shell_cmd.py	/^    CMD = "CMD"$/;"	v	class:Kind
+CloseAllBuffersButCurrent	.vim_functions.vim	/^function! CloseAllBuffersButCurrent()$/;"	f
+Command	.tmux.conf	/^bind E command-prompt -p "Command:" \\$/;"	k
+Command	.tmux.conf	/^bind e command-prompt -p "Command:" \\$/;"	k
+CopyCurrentFile	.vim_functions.vim	/^function! CopyCurrentFile()$/;"	f
+CreateDailyFolder	.vim_functions.vim	/^function! CreateDailyFolder()$/;"	f
+DOUBLE_QUOTE_STRING	bin/format_shell_cmd.py	/^    DOUBLE_QUOTE_STRING = "DOUBLE_QUOTE_STRING"$/;"	v	class:Kind
+Eatchar	.vim_functions.vim	/^function! Eatchar(pat)$/;"	f
+F	.vim_maps.vim	/^map F <Plug>Sneak_S$/;"	m
+Find	.vim_plugins.vim	/^command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-s/;"	c
+Fmtsh	.vim_plugins.vim	/^command! -range Fmtsh <line1>!format_shell_cmd.py$/;"	c
+H	.vim_maps.vim	/^nnoremap <buffer> H :<C-u>execute "!pydoc3 " . expand("<cword>")<cr>$/;"	m
+I	.tmux.conf	/^setw -g window-status-current-format " #F#I:#W#F "$/;"	k
+I	.tmux.conf	/^setw -g window-status-format " #F#I:#W#F "$/;"	k
+IsNerdTreeOpen	.vim_functions.vim	/^function! IsNerdTreeOpen(command_str)$/;"	f
+Kind	bin/format_shell_cmd.py	/^class Kind:$/;"	c
+NERDTreeAutoDeleteBuffer	.vim_plugins.vim	/^let NERDTreeAutoDeleteBuffer = 1$/;"	v
+NERDTreeDirArrows	.vim_plugins.vim	/^let NERDTreeDirArrows = 1$/;"	v
+NERDTreeIgnore	.vim_plugins.vim	/^let NERDTreeIgnore = ['\\.pyc$', '\\.go.mod$', '\\.DS_Store$', '__pycache__', 'venv', '.git']$/;"	v
+NERDTreeMinimalUI	.vim_plugins.vim	/^let NERDTreeMinimalUI = 1$/;"	v
+NERDTreeQuitOnOpen	.vim_plugins.vim	/^let NERDTreeQuitOnOpen = 1$/;"	v
+NERDTreeShowHidden	.vim_plugins.vim	/^let NERDTreeShowHidden = 1$/;"	v
+NumberToggle	.vim_functions.vim	/^function! NumberToggle()$/;"	f
+OPTION	bin/format_shell_cmd.py	/^    OPTION = "OPTION"$/;"	v	class:Kind
+PIPE	bin/format_shell_cmd.py	/^    PIPE = "PIPE"$/;"	v	class:Kind
+SINGLE_QUOTE_STRING	bin/format_shell_cmd.py	/^    SINGLE_QUOTE_STRING = "SINGLE_QUOTE_STRING"$/;"	v	class:Kind
+SemshiCustomHighlights	.vim_functions.vim	/^function! SemshiCustomHighlights()$/;"	f
+Token	bin/format_shell_cmd.py	/^class Token(t.NamedTuple):$/;"	c
+UNSET	bin/format_shell_cmd.py	/^    UNSET = "UNSET"$/;"	v	class:Kind
+WordProcessorMode	.vim_functions.vim	/^function! WordProcessorMode()$/;"	f
+[	.vim_maps.vim	/^inoremap [ []<left>$/;"	m
+__author__	bin/format_shell_cmd.py	/^__author__ = "Benjamin Kane"$/;"	v
+__doc__	bin/format_shell_cmd.py	/^__doc__ = f"""$/;"	v
+__fzf_cd__	.fzf.key-bindings.bash	/^__fzf_cd__() {$/;"	f
+__fzf_history__	.fzf.key-bindings.bash	/^__fzf_history__() {$/;"	f
+__fzf_select__	.fzf.key-bindings.bash	/^__fzf_select__() {$/;"	f
+__fzfcmd	.fzf.key-bindings.bash	/^__fzfcmd() {$/;"	f
+__version__	bin/format_shell_cmd.py	/^__version__ = "0.1.0"$/;"	v
+_z	z.sh	/^_z() {$/;"	f
+_z_dirs	z.sh	/^    _z_dirs () {$/;"	f
+_z_precmd	z.sh	/^            _z_precmd() {$/;"	f
+_z_zsh_tab_completion	z.sh	/^    _z_zsh_tab_completion() {$/;"	f
+airline#extensions#tabline#show_splits	.vim_plugins.vim	/^let airline#extensions#tabline#show_splits = 0$/;"	v
+auto_capitalize_sentences	.vim_functions.vim	/^  augroup auto_capitalize_sentences$/;"	a
+b:surround_	.vim_plugins.vim	/^let b:surround_{char2nr('c')} = "\\"\\"\\"\\r\\"\\"\\""$/;"	v
+common	z.sh	/^            function common(matches) {$/;"	f
+createDirIfNoneExists	.vim_autocommands.vim	/^augroup createDirIfNoneExists$/;"	a
+f	.vim_maps.vim	/^map f <Plug>Sneak_s$/;"	m
+fg	.tmux.conf	/^setw -g window-status-bell-style bold,fg=colour255,bg=colour1$/;"	k
+frecent	z.sh	/^            function frecent(rank, time) {$/;"	f
+fzf-file-widget	.fzf.key-bindings.bash	/^fzf-file-widget() {$/;"	f
+fzf_then_open_in_editor	.fzf.bash	/^fzf_then_open_in_editor() {$/;"	f
+g:VimuxPromptString	.vim_maps.vim	/^let g:VimuxPromptString = "run: "$/;"	v
+g:airline#extensions#ale#enabled	.vim_plugins.vim	/^let g:airline#extensions#ale#enabled = 1$/;"	v
+g:airline#extensions#branch#enabled	.vim_plugins.vim	/^let g:airline#extensions#branch#enabled = 1$/;"	v
+g:airline#extensions#hunks#enabled	.vim_plugins.vim	/^let g:airline#extensions#hunks#enabled = 0$/;"	v
+g:airline#extensions#tabline#buffer_idx_mode	.vim_plugins.vim	/^let g:airline#extensions#tabline#buffer_idx_mode = 1$/;"	v
+g:airline#extensions#tabline#buffer_nr_show	.vim_plugins.vim	/^let g:airline#extensions#tabline#buffer_nr_show = 0$/;"	v
+g:airline#extensions#tabline#buffers_label	.vim_plugins.vim	/^let g:airline#extensions#tabline#buffers_label = 'b'$/;"	v
+g:airline#extensions#tabline#enabled	.vim_plugins.vim	/^let g:airline#extensions#tabline#enabled = 1$/;"	v
+g:airline#extensions#tabline#fnamecollapse	.vim_plugins.vim	/^let g:airline#extensions#tabline#fnamecollapse = 1$/;"	v
+g:airline#extensions#tabline#fnamemod	.vim_plugins.vim	/^let g:airline#extensions#tabline#fnamemod = ':t'$/;"	v
+g:airline#extensions#tabline#left_alt_sep	.vim_plugins.vim	/^let g:airline#extensions#tabline#left_alt_sep = '|'$/;"	v
+g:airline#extensions#tabline#left_sep	.vim_plugins.vim	/^let g:airline#extensions#tabline#left_sep = ' '$/;"	v
+g:airline#extensions#tabline#show_buffers	.vim_plugins.vim	/^let g:airline#extensions#tabline#show_buffers = 1$/;"	v
+g:airline#extensions#tabline#show_close_button	.vim_plugins.vim	/^let g:airline#extensions#tabline#show_close_button = 0$/;"	v
+g:airline#extensions#tabline#show_tab_nr	.vim_plugins.vim	/^let g:airline#extensions#tabline#show_tab_nr = 1$/;"	v
+g:airline#extensions#tabline#show_tab_type	.vim_plugins.vim	/^let g:airline#extensions#tabline#show_tab_type = 0$/;"	v
+g:airline#extensions#tabline#tab_nr_type	.vim_plugins.vim	/^let g:airline#extensions#tabline#tab_nr_type = 1$/;"	v
+g:airline#extensions#tabline#tabs_label	.vim_plugins.vim	/^let g:airline#extensions#tabline#tabs_label = 't'$/;"	v
+g:airline#extensions#virtualenv#enabled	.vim_plugins.vim	/^let g:airline#extensions#virtualenv#enabled = 1$/;"	v
+g:airline_left_alt_sep	.vim_plugins.vim	/^let g:airline_left_alt_sep = ''$/;"	v
+g:airline_left_sep	.vim_plugins.vim	/^let g:airline_left_sep = ''$/;"	v
+g:airline_right_alt_sep	.vim_plugins.vim	/^let g:airline_right_alt_sep = ''$/;"	v
+g:airline_right_sep	.vim_plugins.vim	/^let g:airline_right_sep = ''$/;"	v
+g:airline_symbols	.vim_plugins.vim	/^	let g:airline_symbols = {}$/;"	v
+g:airline_symbols	.vim_plugins.vim	/^let g:airline_symbols.branch = '⎇'$/;"	v
+g:airline_symbols	.vim_plugins.vim	/^let g:airline_symbols.linenr = '¶'$/;"	v
+g:airline_symbols	.vim_plugins.vim	/^let g:airline_symbols.linenr = '␊'$/;"	v
+g:airline_symbols	.vim_plugins.vim	/^let g:airline_symbols.linenr = '␤'$/;"	v
+g:airline_symbols	.vim_plugins.vim	/^let g:airline_symbols.maxlinenr = ''$/;"	v
+g:airline_symbols	.vim_plugins.vim	/^let g:airline_symbols.maxlinenr = '☰'$/;"	v
+g:airline_symbols	.vim_plugins.vim	/^let g:airline_symbols.notexists = '∄'$/;"	v
+g:airline_symbols	.vim_plugins.vim	/^let g:airline_symbols.paste = 'Þ'$/;"	v
+g:airline_symbols	.vim_plugins.vim	/^let g:airline_symbols.paste = 'ρ'$/;"	v
+g:airline_symbols	.vim_plugins.vim	/^let g:airline_symbols.paste = '∥'$/;"	v
+g:airline_symbols	.vim_plugins.vim	/^let g:airline_symbols.spell = 'Ꞩ'$/;"	v
+g:airline_symbols	.vim_plugins.vim	/^let g:airline_symbols.whitespace = 'Ξ'$/;"	v
+g:airline_theme	.vim_plugins.vim	/^let g:airline_theme='papercolor'$/;"	v
+g:ale_fix_on_save	.vim_plugins.vim	/^let g:ale_fix_on_save = 0$/;"	v
+g:ale_fixers	.vim_plugins.vim	/^let g:ale_fixers = {}$/;"	v
+g:ale_fixers	.vim_plugins.vim	/^let g:ale_fixers['javascript'] = ['prettier', 'eslint']$/;"	v
+g:ale_fixers	.vim_plugins.vim	/^let g:ale_fixers['python'] = ['remove_trailing_lines', 'isort', 'yapf']$/;"	v
+g:ale_javascript_prettier_options	.vim_plugins.vim	/^let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --no-semi'$/;"	v
+g:ale_lint_on_enter	.vim_plugins.vim	/^let g:ale_lint_on_enter = 0 " Less distracting when opening a new file$/;"	v
+g:ale_lint_on_save	.vim_plugins.vim	/^let g:ale_lint_on_save = 0$/;"	v
+g:ale_lint_on_text_changed	.vim_plugins.vim	/^let g:ale_lint_on_text_changed = 1$/;"	v
+g:ale_linters	.vim_plugins.vim	/^let g:ale_linters = {'go': ['gometalinter', 'gofmt'],}$/;"	v
+g:ale_linters	.vim_plugins.vim	/^let g:ale_linters = {'javascript': ['eslint'],}$/;"	v
+g:ale_linters	.vim_plugins.vim	/^let g:ale_linters = {'markdown': ['proselint'],}$/;"	v
+g:ale_linters	.vim_plugins.vim	/^let g:ale_linters = {'python': ['flake8', 'pylint'],}$/;"	v
+g:ale_sign_error	.vim_plugins.vim	/^let g:ale_sign_error = '●' " Less aggressive than the default '>>'$/;"	v
+g:ale_sign_warning	.vim_plugins.vim	/^let g:ale_sign_warning = '.'$/;"	v
+g:auto_save	.vim_plugins.vim	/^let g:auto_save = 1  " enable AutoSave on Vim startup$/;"	v
+g:clang_format#style_options	.vim_plugins.vim	/^let g:clang_format#style_options = {$/;"	v
+g:codi#rightalign	.vim_plugins.vim	/^let g:codi#rightalign = 0$/;"	v
+g:codi#width	.vim_plugins.vim	/^let g:codi#width = winwidth(winnr()) \/ 2$/;"	v
+g:floaterm_autoclose	.vim_plugins.vim	/^let g:floaterm_autoclose=1$/;"	v
+g:floaterm_autoinsert	.vim_plugins.vim	/^let g:floaterm_autoinsert=1$/;"	v
+g:floaterm_height	.vim_plugins.vim	/^let g:floaterm_height=0.4$/;"	v
+g:floaterm_position	.vim_plugins.vim	/^let g:floaterm_position='bottom'$/;"	v
+g:floaterm_title	.vim_plugins.vim	/^let g:floaterm_title='ft: $1\/$2'$/;"	v
+g:floaterm_width	.vim_plugins.vim	/^let g:floaterm_width=0.9$/;"	v
+g:fzf_action	.vim_plugins.vim	/^let g:fzf_action = {$/;"	v
+g:go_auto_sameids	.vim_plugins.vim	/^let g:go_auto_sameids = 1$/;"	v
+g:go_auto_type_info	.vim_plugins.vim	/^let g:go_auto_type_info = 1$/;"	v
+g:go_fmt_autosave	.vim_plugins.vim	/^let g:go_fmt_autosave = 1$/;"	v
+g:go_fmt_command	.vim_plugins.vim	/^let g:go_fmt_command = "goimports"$/;"	v
+g:go_fmt_experimental	.vim_plugins.vim	/^let g:go_fmt_experimental = 1$/;"	v
+g:go_highlight_build_constraints	.vim_plugins.vim	/^let g:go_highlight_build_constraints = 1$/;"	v
+g:go_highlight_extra_types	.vim_plugins.vim	/^let g:go_highlight_extra_types = 1$/;"	v
+g:go_highlight_fields	.vim_plugins.vim	/^let g:go_highlight_fields = 1$/;"	v
+g:go_highlight_functions	.vim_plugins.vim	/^let g:go_highlight_functions = 1$/;"	v
+g:go_highlight_methods	.vim_plugins.vim	/^let g:go_highlight_methods = 1$/;"	v
+g:go_highlight_operators	.vim_plugins.vim	/^let g:go_highlight_operators = 1$/;"	v
+g:go_highlight_structs	.vim_plugins.vim	/^let g:go_highlight_structs = 1$/;"	v
+g:go_highlight_types	.vim_plugins.vim	/^let g:go_highlight_types = 1$/;"	v
+g:go_version_warning	.vim_plugins.vim	/^let g:go_version_warning = 0$/;"	v
+g:indentguides_conceal_color	.vim_plugins.vim	/^let g:indentguides_conceal_color = 'ctermfg=238 ctermbg=234'$/;"	v
+g:indentguides_firstlevel	.vim_plugins.vim	/^let g:indentguides_firstlevel = 1$/;"	v
+g:indentguides_spacechar	.vim_plugins.vim	/^let g:indentguides_spacechar = '┆'$/;"	v
+g:indentguides_tabchar	.vim_plugins.vim	/^let g:indentguides_tabchar = '|'$/;"	v
+g:neosnippet#enable_auto_clear_markers	.vim_plugins.vim	/^let g:neosnippet#enable_auto_clear_markers = 0$/;"	v
+g:neosnippet#enable_snipmate_compatibility	.vim_plugins.vim	/^let g:neosnippet#enable_snipmate_compatibility = 1$/;"	v
+g:neosnippet#snippets_directory	.vim_plugins.vim	/^let g:neosnippet#snippets_directory='~\/.vim\/snippets'$/;"	v
+g:neoterm_autoscroll	.vim_plugins.vim	/^let g:neoterm_autoscroll=1 " scroll to the bottom when running a command$/;"	v
+g:neoterm_default_mod	.vim_plugins.vim	/^let g:neoterm_default_mod='belowright' " open terminal in bottom split$/;"	v
+g:neoterm_size	.vim_plugins.vim	/^let g:neoterm_size=16 " terminal split size$/;"	v
+g:rainbow_active	.vimrc	/^let g:rainbow_active = 1$/;"	v
+g:semshi#error_sign	.vim_plugins.vim	/^let g:semshi#error_sign = v:false$/;"	v
+g:sneak#label	.vim_plugins.vim	/^let g:sneak#label = 1$/;"	v
+g:terraform_align	.vim_plugins.vim	/^let g:terraform_align=1$/;"	v
+g:vim_mac_dictionary_use_app	.vim_plugins.vim	/^let g:vim_mac_dictionary_use_app = 1$/;"	v
+g:vim_markdown_folding_disabled	.vim_plugins.vim	/^let g:vim_markdown_folding_disabled = 1$/;"	v
+go_bootstrap	bin/nvim-bootstrap.sh	/^go_bootstrap() {$/;"	f
+install_python36	bin/nvim-bootstrap.sh	/^install_python36(){$/;"	f
+jk	.vim_maps.vim	/^imap jk <Esc>$/;"	m
+main	bin/format_shell_cmd.py	/^def main():$/;"	f
+mkd	.vim_maps.vim	/^nnoremap mkd :call CreateDailyFolder()<cr>$/;"	m
+nvim_bootstrap	bin/nvim-bootstrap.sh	/^nvim_bootstrap() {$/;"	f
+output	z.sh	/^            function output(matches, best_match, common) {$/;"	f
+parse_args	bin/format_shell_cmd.py	/^def parse_args(*args, **kwargs):$/;"	f
+pip_bootstrap	bin/nvim-bootstrap.sh	/^pip_bootstrap() {$/;"	f
+print_cmd	bin/format_shell_cmd.py	/^def print_cmd(tokens: t.Iterable[Token]):$/;"	f
+python_version	bin/nvim-bootstrap.sh	/^python_version(){$/;"	f
+remember_folds	.vim_autocommands.vim	/^augroup remember_folds$/;"	a
+s:DetectNode	.vimrc	/^function! s:DetectNode()$/;"	f
+style bg	.tmux.conf	/^set -g status-style bg=default,fg=colour12,bg=colour234,fg=colour137,dim$/;"	k
+style bg	.tmux.conf	/^setw -g mode-style bg=colour6,fg=colour0,bold,fg=colour196,bg=colour238$/;"	k
+style bg	.tmux.conf	/^setw -g window-status-current-style bg=colour0,fg=colour11,dim,fg=colour81,bg=colour238,bold$/;"	k
+style bg	.tmux.conf	/^setw -g window-status-style bg=green,fg=black,reverse,fg=colour138,bg=colour235,none$/;"	k
+style fg	.tmux.conf	/^set -g message-command-style fg=blue,bg=black$/;"	k
+style fg	.tmux.conf	/^set -g message-style fg=black,bg=yellow,bold,fg=colour232,bg=colour166$/;"	k
+style fg	.tmux.conf	/^set -g pane-active-border-style fg=brightred,bg=colour236,fg=colour51$/;"	k
+style fg	.tmux.conf	/^set -g pane-border-style fg=black,bg=colour235,fg=colour238$/;"	k
+t	.tmux.conf	/^bind -r C-h select-window -t:-$/;"	k
+t	.tmux.conf	/^bind -r C-l select-window -t:+$/;"	k
+t	bin/format_shell_cmd.py	/^import typing as t$/;"	I	nameref:module:typing
+tn	.vim_maps.vim	/^nmap tn :tabn<cr>$/;"	m
+tokenize	bin/format_shell_cmd.py	/^def tokenize(expr):$/;"	f
+tp	.vim_maps.vim	/^nmap tp :tabp<cr>$/;"	m
+{	.vim_maps.vim	/^inoremap { {}<left>$/;"	m

@@ -137,13 +137,14 @@ nnoremap <silent> ,pa :execute ":!tmux send-keys -t 2 './apply.sh' C-m"<cr><cr>
 nmap <Leader>F :GFiles<cr>
 "nmap <Leader>f :Files<cr>
 "Call our custom Find command we defined to use fzf search across all files in
-"project, this is in .vim_plugins
+"project, this is defined in .vim_plugins.vim
 nmap <Leader>f :Find<cr>
 "Search current buffer
 nmap <Leader>b :BLines<CR>
 "Search across all loaded buffers
 nmap <Leader>B :Lines<CR>
 nmap <Leader>h :History<cr>
+nmap <Leader>t :BTags<cr>
 
 " ctrl+f brings up fzf
 " ctrl-t on a file brings up in new tab

@@ -56,6 +56,9 @@ Plug 'luochen1990/rainbow'
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'fatih/vim-hclfmt'
 Plug 'b4b4r07/vim-hcl'
+"Ctags pre-requisite
+"brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+Plug 'ludovicchabant/vim-gutentags'
 
 
 let g:rainbow_active = 1
