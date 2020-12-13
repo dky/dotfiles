@@ -6,6 +6,8 @@ call plug#begin('~/.vim/plugged')
 source ~/.dotfiles/.vim_plug.vim
 " Load in plugin-specific-configs
 source ~/.dotfiles/.vim_plugins.vim
+call plug#end()
+
 " Load in autocommands
 source ~/.dotfiles/.vim_autocommands.vim
 " Load in cabbrevs
@@ -18,9 +20,6 @@ source ~/.dotfiles/.vim_functions.vim
 source ~/.dotfiles/.vim_highlights.vim
 " gutentags
 source ~/.dotfiles/.vim_gutentags.vim
-
-
-call plug#end()
 
 filetype on
 set ruler
