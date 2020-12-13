@@ -135,7 +135,10 @@ nnoremap <silent> ,pa :execute ":!tmux send-keys -t 2 './apply.sh' C-m"<cr><cr>
 
 " FZF key bindings
 nmap <Leader>F :GFiles<cr>
-nmap <Leader>f :Files<cr>
+"nmap <Leader>f :Files<cr>
+"Call our custom Find command we defined to use fzf search across all files in
+"project, this is in .vim_plugins
+nmap <Leader>f :Find<cr>
 "Search current buffer
 nmap <Leader>b :BLines<CR>
 "Search across all loaded buffers
