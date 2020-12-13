@@ -154,9 +154,6 @@ nnoremap <C-g> :BCommits!<cr>
 " ctrl-v on a file splits vertically.
 "nnoremap <C-f> :FZF<cr>
 
-" deoplete tab completion
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-
 " vim-logbook
 noremap ,lb :Lb<cr>
 noremap ,ts :Ts<cr>
