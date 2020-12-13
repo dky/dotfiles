@@ -134,19 +134,13 @@ nnoremap <silent> ,cl :execute ":!tmux send-keys -t 2 'clear' C-m"<cr><cr>
 nnoremap <silent> ,pa :execute ":!tmux send-keys -t 2 './apply.sh' C-m"<cr><cr>
 
 " FZF key bindings
-" fzf - check first to make sure we aren't in a nerdtree buffer
 nmap <Leader>F :GFiles<cr>
-"nnoremap <silent> <expr> <Leader>F (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":GFiles\<cr>"
 nmap <Leader>f :Files<cr>
-"nnoremap <silent> <expr> <Leader>f (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Files\<cr>"
-"nmap <Leader>b :Buffers<cr>
-nnoremap <silent> <expr> <Leader>b (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Buffers\<cr>"
-"nmap <Leader>h :History<cr>
-" In insert mode if ctrl+f use blines to search for string in file.
-"inoremap <C-f> <Esc><Esc>:BLines!<cr> "This conflicts with other mappings,
-"re-think
-" ctrl+g opens git commit browser
-nnoremap <C-g> :BCommits!<cr>
+"Search current buffer
+nmap <Leader>b :BLines<CR>
+"Search across all loaded buffers
+nmap <Leader>B :Lines<CR>
+nmap <Leader>h :History<cr>
 
 " ctrl+f brings up fzf
 " ctrl-t on a file brings up in new tab
