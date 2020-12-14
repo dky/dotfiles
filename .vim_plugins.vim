@@ -22,9 +22,6 @@ let NERDTreeAutoDeleteBuffer = 1
 set autoread
 au CursorHold * if exists("t:NerdTreeBufName") | call <SNR>15_refreshRoot() | endif
 
-" Custom surrounds
-" Python docstring
-let b:surround_{char2nr('c')} = "\"\"\"\r\"\"\""
 
 " vim-go
 " Don't show warnings if we are not using nvim or > 7.4.1099, thanks RedHat...

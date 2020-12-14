@@ -90,6 +90,7 @@ inoremap <C-f> <C-o>l
 inoremap <C-j> <C-o>o
 inoremap <C-k> <C-o>O
 
+" Custom surrounds
 " surround markdown emphasis
 nnoremap ,s* ciw**<C-r>"**<Esc>
 nnoremap ,s" ciw"<C-r>""<Esc>
@@ -98,6 +99,8 @@ nnoremap ,s[ ciw[<C-r>"]<Esc>
 nnoremap ,s( ciw(<C-r>")<Esc>
 nnoremap ,s{ ciw{<C-r>"}<Esc>
 
+" Python docstring
+let b:surround_{char2nr('c')} = "\"\"\"\r\"\"\""
 
 " Vim airline tab switching
 nmap <Leader>1 <Plug>AirlineSelectTab1
