@@ -8,7 +8,7 @@ let g:gutentags_generate_on_write = 1
 let g:gutentags_generate_on_empty_buffer = 0
 let g:gutentags_ctags_extra_args = ['--tag-relative=yes','--fields=+ailmnS']
 let g:gutentags_ctags_exclude = [
-\  '*.git', '*.svn', '*.hg',
+\  '*.git', '*.svn', '*.hg', '*.gitignore', '.env',
 \  'cache', 'build', 'dist', 'bin', 'node_modules', 'bower_components',
 \  '*-lock.json',  '*.lock',
 \  '*.min.*',
