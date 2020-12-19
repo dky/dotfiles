@@ -20,6 +20,8 @@ source ~/.dotfiles/.vim_functions.vim
 source ~/.dotfiles/.vim_highlights.vim
 " gutentags
 source ~/.dotfiles/.vim_gutentags.vim
+" coc
+source ~/.dotfiles/.vim_coc.vim
 
 filetype on
 set ruler
