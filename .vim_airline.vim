@@ -55,3 +55,9 @@ let g:airline_symbols.spell = 'Ꞩ'
 let g:airline_symbols.notexists = '∄'
 let g:airline_symbols.whitespace = 'Ξ'
 
+" Vim airline tab switching
+nmap <Leader>1 <Plug>AirlineSelectTab1
+nmap <Leader>2 <Plug>AirlineSelectTab2
+nmap <Leader>3 <Plug>AirlineSelectTab3
+nmap <Leader>4 <Plug>AirlineSelectTab4
+nmap <Leader>5 <Plug>AirlineSelectTab5

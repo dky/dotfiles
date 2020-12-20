@@ -102,12 +102,6 @@ nnoremap ,s{ ciw{<C-r>"}<Esc>
 " Python docstring
 let b:surround_{char2nr('c')} = "\"\"\"\r\"\"\""
 
-" Vim airline tab switching
-nmap <Leader>1 <Plug>AirlineSelectTab1
-nmap <Leader>2 <Plug>AirlineSelectTab2
-nmap <Leader>3 <Plug>AirlineSelectTab3
-nmap <Leader>4 <Plug>AirlineSelectTab4
-nmap <Leader>5 <Plug>AirlineSelectTab5
 
 " reload snippets
 nnoremap ,rs :call neosnippet#variables#set_snippets({})<cr>
