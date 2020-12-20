@@ -1,5 +1,6 @@
 " default colors for CursorLine
 " https://jonasjacek.github.io/colors
+":verbose hi comment
 hi CursorLine ctermbg=236
 hi LineNr ctermbg=236 ctermfg=246
 hi Visual ctermbg=190 ctermfg=16
@@ -15,7 +16,11 @@ hi SpellCap cterm=underline ctermfg=yellow
 hi SpellLocal cterm=underline
 hi SpellRare cterm=underline
 
-" change Color when entering Insert Mode
+" change Color when entering Insert Mode to indicate the current active line
 autocmd InsertEnter * hi CursorLine ctermbg=24
+" comment was too dark so decided to make it a easier color.
+autocmd InsertEnter * hi Comment ctermfg=43
 " revert Color to default when leaving Insert Mode
+"
 autocmd InsertLeave * hi CursorLine ctermbg=236
+autocmd InsertLeave * hi Comment ctermfg=59
