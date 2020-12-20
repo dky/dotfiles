@@ -27,6 +27,7 @@ filetype on
 set ruler
 set nocompatible
 set hidden
+set mouse=a
 
 " no backups and swap
 set noswapfile
