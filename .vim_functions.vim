@@ -4,7 +4,7 @@ function! NumberToggle()
 		set nonumber
 		set nolist
 		GitGutterDisable
-		ALEDisable
+		"ALEDisable
 		IndentGuidesToggle
 		"setlocal conceallevel=0
 		"set concealcursor=
@@ -12,7 +12,7 @@ function! NumberToggle()
 		set number
 		set list
 		GitGutterEnable
-		ALEEnable
+		"ALEEnable
 		IndentGuidesToggle
 	endif
 endfunc
