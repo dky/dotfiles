@@ -55,11 +55,6 @@ function! CreateDailyFolder()
 	endif
 endfunction
 
-" semshi default highlight color SteelBlue3
-function! SemshiCustomHighlights()
-	hi semshiSelected ctermfg=231 ctermbg=237
-endfunction
-
 " Call this func if we are dealing with markdown files
 function! WordProcessorMode()
   " Insert mode auto completion case-insensitivity

@@ -26,3 +26,8 @@ autocmd InsertEnter * hi Comment ctermfg=43
 "
 autocmd InsertLeave * hi CursorLine ctermbg=236
 autocmd InsertLeave * hi Comment ctermfg=59
+
+" semshi default highlight color SteelBlue3
+function! SemshiCustomHighlights()
+	hi semshiSelected ctermfg=231 ctermbg=237
+endfunction
