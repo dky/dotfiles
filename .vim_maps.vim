@@ -112,10 +112,6 @@ nnoremap <leader>rs :call neosnippet#variables#set_snippets({})<cr>
 " Pull up help docs for snippet syntax
 nnoremap <leader>hs :help neosnippet-snippet-syntax<cr>
 
-" Toggle ale on and off. At was for ale toggle...
-"au FileType python nmap <silent> <F3> :ALEFix<cr>
-map <leader>at :ALEToggle<CR>
-map <leader>af :ALEFix<CR>
 
 " map to <Leader>cf in C++ code
 autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<cr>

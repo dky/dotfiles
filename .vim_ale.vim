@@ -22,3 +22,7 @@ let g:ale_lint_on_save = 0
 
 let g:airline#extensions#ale#enabled = 1
 
+" Toggle ale on and off. At was for ale toggle...
+"au FileType python nmap <silent> <F3> :ALEFix<cr>
+map <leader>at :ALEToggle<CR>
+map <leader>af :ALEFix<CR>
