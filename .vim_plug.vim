@@ -1,11 +1,11 @@
 if has('nvim')
 	" Do this at the OS level, then Run :UpdateRemotePlugins
 	" pip3 install --user pynvim
-	Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins', 'for': 'python' }
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 else
 endif
 
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins', 'for': 'python' }
 Plug 'jeetsukumaran/vim-pythonsense', { 'for': 'python' }
 Plug 'jmcantrell/vim-virtualenv'
 Plug 'vim-test/vim-test'
