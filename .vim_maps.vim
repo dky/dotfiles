@@ -137,8 +137,8 @@ nnoremap <silent> ,cl :execute ":!tmux send-keys -t 2 'clear' C-m"<cr><cr>
 nnoremap <silent> ,pa :execute ":!tmux send-keys -t 2 './apply.sh' C-m"<cr><cr>
 
 " FZF key bindings
+" GFiles searches all files in the git repo
 nmap <Leader>F :GFiles<cr>
-"nmap <Leader>f :Files<cr>
 "Call our custom Find command we defined to use fzf search across all files in
 "project, this is defined in .vim_plugins.vim
 nmap <Leader>f :Find<cr>
@@ -148,12 +148,6 @@ nmap <Leader>b :BLines<CR>
 nmap <Leader>B :Lines<CR>
 nmap <Leader>h :History<cr>
 nmap <Leader>t :BTags<cr>
-
-" ctrl+f brings up fzf
-" ctrl-t on a file brings up in new tab
-" ctrl-i on a file splits horizontally.
-" ctrl-v on a file splits vertically.
-"nnoremap <C-f> :FZF<cr>
 
 " vim-logbook
 noremap ,lb :Lb<cr>
