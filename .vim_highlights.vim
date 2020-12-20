@@ -1,5 +1,7 @@
 " default colors for CursorLine
 " https://jonasjacek.github.io/colors
+"Figure out what comment highting is set to. You can also use :highlight to
+"dump everything
 ":verbose hi comment
 hi CursorLine ctermbg=236
 hi LineNr ctermbg=236 ctermfg=246
