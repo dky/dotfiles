@@ -61,9 +61,3 @@ augroup END
 
 " When opening markdown files call WordProcessorMode
 au BufNewFile,BufRead *.md call WordProcessorMode()
-
-" change Color when entering Insert Mode
-autocmd InsertEnter * hi CursorLine ctermbg=24
-" revert Color to default when leaving Insert Mode
-autocmd InsertLeave * hi CursorLine ctermbg=236
-" autocmd InsertLeave * highlight  Cursor guibg=#A6E22E;" This

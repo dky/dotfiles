@@ -14,3 +14,8 @@ hi SpellBad cterm=underline ctermfg=red
 hi SpellCap cterm=underline ctermfg=yellow
 hi SpellLocal cterm=underline
 hi SpellRare cterm=underline
+
+" change Color when entering Insert Mode
+autocmd InsertEnter * hi CursorLine ctermbg=24
+" revert Color to default when leaving Insert Mode
+autocmd InsertLeave * hi CursorLine ctermbg=236
