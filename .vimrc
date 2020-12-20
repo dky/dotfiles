@@ -24,6 +24,8 @@ source ~/.dotfiles/.vim_gutentags.vim
 source ~/.dotfiles/.vim_coc.vim
 " airline
 source ~/.dotfiles/.vim_airline.vim
+" ale
+source ~/.dotfiles/.vim_ale.vim
 
 filetype on
 set ruler
