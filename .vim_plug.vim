@@ -7,16 +7,15 @@ else
 endif
 
 Plug 'jeetsukumaran/vim-pythonsense', { 'for': 'python' }
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
 Plug 'jmcantrell/vim-virtualenv'
 Plug 'vim-test/vim-test'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
 Plug 'reedes/vim-wordy', { 'for': 'markdown' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
-Plug 'thaerkh/vim-indentguides', { 'for': ['go', 'python', 'neosnippet', 'sh', 'yaml', 'tf', 'json', 'html', 'js'] }
+Plug 'thaerkh/vim-indentguides', { 'for': ['go', 'python', 'neosnippet', 'sh', 'yaml', 'tf', 'html', 'js'] }
 Plug 'voldikss/vim-floaterm'
 Plug 'kassio/neoterm'
-Plug 'hashivim/vim-terraform'
 Plug 'gmarik/vundle'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -40,7 +39,7 @@ Plug 'iberianpig/tig-explorer.vim'
 Plug 'kana/vim-arpeggio'
 Plug 'benmills/vimux'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 "Plug 'w0rp/ale'
 Plug 'roxma/vim-tmux-clipboard'
@@ -52,6 +51,7 @@ Plug 'luochen1990/rainbow'
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'fatih/vim-hclfmt'
 Plug 'b4b4r07/vim-hcl'
+Plug 'hashivim/vim-terraform'
 "Ctags pre-requisite
 "brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 Plug 'ludovicchabant/vim-gutentags'
