@@ -56,5 +56,5 @@ Plug 'dky/vim-aftercolors'
 Plug 'luochen1990/rainbow'
 "Ctags pre-requisite
 "brew install --HEAD universal-ctags/universal-ctags/universal-ctags
-Plug 'ludovicchabant/vim-gutentags'
+"Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'

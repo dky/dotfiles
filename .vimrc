@@ -19,7 +19,7 @@ source ~/.dotfiles/.vim_functions.vim
 " Load in highlighting
 source ~/.dotfiles/.vim_highlights.vim
 " gutentags
-source ~/.dotfiles/.vim_gutentags.vim
+"source ~/.dotfiles/.vim_gutentags.vim
 " coc
 source ~/.dotfiles/.vim_coc.vim
 " airline
