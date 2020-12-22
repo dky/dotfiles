@@ -58,3 +58,6 @@ Plug 'luochen1990/rainbow'
 "brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 "Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
+"Ranger
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
