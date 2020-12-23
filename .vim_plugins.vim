@@ -106,5 +106,10 @@ hi FloatermBorder ctermfg=cyan
 let g:sneak#label = 1
 
 " Ranger
-let g:ranger_map_keys = 0
-nnoremap <silent> <leader>r :Ranger<CR>.
+nnoremap <silent> <leader>r :RnvimrToggle<CR>.
+" Make Ranger to be hidden after picking a file
+let g:rnvimr_enable_picker = 1
+" Disable a border for floating window
+let g:rnvimr_draw_border = 0
+" Hide the files included in gitignore
+let g:rnvimr_hide_gitignore = 1

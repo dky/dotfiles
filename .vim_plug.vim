@@ -59,5 +59,4 @@ Plug 'luochen1990/rainbow'
 "Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
 "Ranger
-Plug 'francoiscabrol/ranger.vim'
-Plug 'rbgrouleff/bclose.vim'
+Plug 'kevinhwang91/rnvimr'
