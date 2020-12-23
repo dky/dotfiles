@@ -81,8 +81,8 @@ nmap <c-k> 4k
 nmap <c-h> 4h
 nmap <c-l> 4l
 
-nnoremap <silent> <leader>gs :call IsNerdTreeOpen(':Git status')<cr>
-nnoremap <silent> <leader>gd :call IsNerdTreeOpen(':Git diff')<cr>
+"nnoremap <silent> <leader>gs :call IsNerdTreeOpen(':Git status')<cr>
+"nnoremap <silent> <leader>gd :call IsNerdTreeOpen(':Git diff')<cr>
 
 " https://stackoverflow.com/questions/11037825/vim-get-out-of-parenthesis-brackets-etc
 inoremap <C-e> <C-o>A

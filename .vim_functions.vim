@@ -33,12 +33,12 @@ function! Eatchar(pat)
 endfunc
 
 " Check to ensure we aren't in a nerdtree file browser when running command
-function! IsNerdTreeOpen(command_str)
-	if (expand('%') =~# 'NERD_tree' && winnr('$') > 1)
-		exe "normal! \<c-w>\<c-w>"
-	endif
-	exe 'normal! ' . a:command_str . "\<cr>"
-endfunction
+"function! IsNerdTreeOpen(command_str)
+	"if (expand('%') =~# 'NERD_tree' && winnr('$') > 1)
+		"exe "normal! \<c-w>\<c-w>"
+	"endif
+	"exe 'normal! ' . a:command_str . "\<cr>"
+"endfunction
 
 " function to create directory and cd into it.
 function! CreateDailyFolder()

@@ -8,19 +8,19 @@ let g:codi#rightalign = 0
 "Disable semshi error sign and just let flake8 handle it.
 let g:semshi#error_sign = v:false
 
-let NERDTreeIgnore = ['\.pyc$', '\.go.mod$', '\.DS_Store$', '__pycache__', 'venv', '.git', '.vim']
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
-let NERDTreeShowHidden = 1
-let NERDTreeQuitOnOpen = 1
-let NERDTreeAutoDeleteBuffer = 1
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
-let NERDTreeAutoDeleteBuffer = 1
+"let NERDTreeIgnore = ['\.pyc$', '\.go.mod$', '\.DS_Store$', '__pycache__', 'venv', '.git', '.vim']
+"let NERDTreeMinimalUI = 1
+"let NERDTreeDirArrows = 1
+"let NERDTreeShowHidden = 1
+"let NERDTreeQuitOnOpen = 1
+"let NERDTreeAutoDeleteBuffer = 1
+"let NERDTreeMinimalUI = 1
+"let NERDTreeDirArrows = 1
+"let NERDTreeAutoDeleteBuffer = 1
 
 " refresh nerdtree
-set autoread
-au CursorHold * if exists("t:NerdTreeBufName") | call <SNR>15_refreshRoot() | endif
+"set autoread
+"au CursorHold * if exists("t:NerdTreeBufName") | call <SNR>15_refreshRoot() | endif
 
 " vim-go
 " Don't show warnings if we are not using nvim or > 7.4.1099, thanks RedHat...
