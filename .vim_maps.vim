@@ -168,6 +168,7 @@ endif
 " leader l to quickly switch buffers.
 "nnoremap <leader>l :ls<cr>:b<space>
 nnoremap <silent> <Leader>l :Buffers<CR>
+nnoremap <silent> <Leader>m :FZFMru<CR>
 
 " Experimenting with tabs
 " tp "tab previous in normal mode"
