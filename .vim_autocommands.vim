@@ -1,42 +1,6 @@
 " restore last position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
-" neosnippets
-" You can :set noet|%retab! in your .snip file to replace all spaces with hard tabs, that way the extra indentation is fixed!
-" https://github.com/Shougo/neosnippet.vim/issues/445
-au BufNewFile,BufRead *.snip
-			\ set noet|%retab!
-
-" golang
-au BufNewFile,BufRead *.go
-			\ set noexpandtab |
-			\ set tabstop=4 |
-			\ set softtabstop=4 |
-			\ set shiftwidth=4
-
-" js, html, css
-au BufNewFile,BufRead *.js,*.html,*.css
-			\ set tabstop=2 |
-			\ set softtabstop=2 |
-			\ set shiftwidth=2
-
-" markdown
-au BufNewFile,BufRead *.md
-			\ set noautoindent |
-			\ set nocindent |
-			\ set nosmartindent |
-			\ set indentexpr=
-
-" json
-au Filetype json setlocal ts=2 sw=2 expandtab
-
-" yaml
-au BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab indentkeys-=0# indentkeys-=<:> foldmethod=indent nofoldenable
-
-" .gohtml files should be html
-au BufReadPost *.gohtml set syntax=html
-
 augroup remember_folds
 	autocmd!
 	" https://vi.stackexchange.com/questions/13864/bufwinleave-mkview-with-unnamed-file-error-32
@@ -58,6 +22,16 @@ augroup createDirIfNoneExists
 				\ call mkdir(expand("<afile>:p:h"), "p") |
 				\ endif
 augroup END
+
+" snippets
+" https://github.com/Shougo/neosnippet.vim/issues/445
+au BufNewFile,BufRead *.snip set noet|%retab!
+
+" yaml
+au BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml
+
+" .gohtml files should be html
+au BufReadPost *.gohtml set syntax=html
 
 " When opening markdown files call WordProcessorMode
 au BufNewFile,BufRead *.md call WordProcessorMode()
