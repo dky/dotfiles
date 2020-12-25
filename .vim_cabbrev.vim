@@ -3,6 +3,8 @@ cabbrev cab call CloseAllBuffersButCurrent()<cr>
 
 " Git
 cabbrev gs Git status
+cabbrev gba Git branch -a
+cabbrev gcof Git checkout -f
 cabbrev gd Git diff
 cabbrev gco Git checkout
 cabbrev grh Git reset --hard
