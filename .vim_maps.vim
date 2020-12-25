@@ -102,8 +102,10 @@ nnoremap ,s[ ciw[<C-r>"]<Esc>
 nnoremap ,s( ciw(<C-r>")<Esc>
 nnoremap ,s{ ciw{<C-r>"}<Esc>
 
-" Python docstring
-let b:surround_{char2nr('c')} = "\"\"\"\r\"\"\""
+" Python docstring or markdown code block - Select text with visual mode +
+" shift + " or shift + `
+let b:surround_{char2nr('"')} = "\"\"\"\r\"\"\""
+let b:surround_{char2nr('`')} = "\`\`\`\r\`\`\`"
 
 
 " reload snippets
@@ -151,8 +153,8 @@ map f <Plug>Sneak_s
 map F <Plug>Sneak_S
 
 " autoclose for only certain strings/braces
-inoremap [ []<left>
-inoremap { {}<left>
+"inoremap [ []<left>
+"inoremap { {}<left>
 
 " Experiments with nvim terminal
 if has('nvim')
