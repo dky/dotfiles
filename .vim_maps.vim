@@ -75,14 +75,6 @@ nmap ,gib :GoInstallBinaries<cr>
 " map space rather than colon
 nmap <space> :
 
-" navigate 4x faster when holding down Ctrl
-nmap <c-j> 4j
-nmap <c-k> 4k
-"nmap <c-h> 4h
-"nmap <c-l> 4l
-" Jump between left/right splits without as much pain
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
 
 "nnoremap <silent> <leader>gs :call IsNerdTreeOpen(':Git status')<cr>
 "nnoremap <silent> <leader>gd :call IsNerdTreeOpen(':Git diff')<cr>
@@ -170,6 +162,21 @@ if has('nvim')
 	tnoremap <A-l> <c-\><c-n><c-w>l
 endif
 
+" navigate 4x faster when holding down Ctrl
+nmap <c-j> 4j
+nmap <c-k> 4k
+"nmap <c-h> 4h
+"nmap <c-l> 4l
+" Jump between left/right splits without as much pain
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Hop around splits faster, this break my faster ctrl+j,k,l,h movements
+map <A-j> <C-W>j
+map <A-k> <C-W>k
+map <A-h> <C-W>h
+map <A-l> <C-W>l
+
 " leader l to quickly switch buffers.
 "nnoremap <leader>l :ls<cr>:b<space>
 nnoremap <silent> <Leader>l :Buffers<CR>
@@ -184,11 +191,6 @@ nmap tn :tabn<cr>
 "nmap <C-t> :tabnew<cr>
 "nmap <C-w> :tabclose<cr>
 
-" Hop around splits faster, this break my faster ctrl+j,k,l,h movements
-map <A-j> <C-W>j
-map <A-k> <C-W>k
-map <A-h> <C-W>h
-map <A-l> <C-W>l
 
 " 'cd' towards the dir in which the current file is edited
 " but only change the path for the current window
