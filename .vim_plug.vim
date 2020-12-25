@@ -60,3 +60,4 @@ Plug 'majutsushi/tagbar'
 "Ranger
 Plug 'kevinhwang91/rnvimr'
 Plug 'ryanoasis/vim-devicons'
+Plug 'sheerun/vim-polyglot'
