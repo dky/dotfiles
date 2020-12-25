@@ -78,8 +78,11 @@ nmap <space> :
 " navigate 4x faster when holding down Ctrl
 nmap <c-j> 4j
 nmap <c-k> 4k
-nmap <c-h> 4h
-nmap <c-l> 4l
+"nmap <c-h> 4h
+"nmap <c-l> 4l
+" Jump between left/right splits without as much pain
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 "nnoremap <silent> <leader>gs :call IsNerdTreeOpen(':Git status')<cr>
 "nnoremap <silent> <leader>gd :call IsNerdTreeOpen(':Git diff')<cr>
