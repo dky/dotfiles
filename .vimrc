@@ -1,6 +1,11 @@
 call plug#begin('~/.vim/plugged')
 " nvim view/cache location
 " $HOME/.local/share/nvim/view
+if has('nvim')
+	" coc
+	source ~/.dotfiles/.vim_coc.vim
+else
+endif
 "
 " Source all plugins
 source ~/.dotfiles/.vim_plug.vim
@@ -20,8 +25,6 @@ source ~/.dotfiles/.vim_functions.vim
 source ~/.dotfiles/.vim_highlights.vim
 " gutentags
 "source ~/.dotfiles/.vim_gutentags.vim
-" coc
-source ~/.dotfiles/.vim_coc.vim
 " airline
 source ~/.dotfiles/.vim_airline.vim
 " ale
