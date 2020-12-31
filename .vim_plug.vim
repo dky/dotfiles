@@ -61,3 +61,4 @@ Plug 'majutsushi/tagbar'
 Plug 'kevinhwang91/rnvimr'
 Plug 'ryanoasis/vim-devicons'
 Plug 'sheerun/vim-polyglot'
+Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
