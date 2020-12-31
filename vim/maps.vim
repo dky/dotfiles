@@ -39,6 +39,9 @@ autocmd FileType python,go inoremap " ""<left>
 autocmd FileType python,go inoremap ' ''<left>
 autocmd FileType python call SemshiCustomHighlights()
 
+" remap leader to space
+let mapleader = "\<Space>"
+
 " remap esc to jk
 imap jk <Esc>
 
