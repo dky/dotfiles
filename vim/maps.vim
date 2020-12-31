@@ -73,7 +73,7 @@ nmap ,bi :PlugInstall<cr>
 nmap ,gib :GoInstallBinaries<cr>
 
 " map space rather than colon
-nmap <space> :
+"nmap <space> :
 
 
 "nnoremap <silent> <leader>gs :call IsNerdTreeOpen(':Git status')<cr>

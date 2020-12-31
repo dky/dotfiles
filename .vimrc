@@ -3,32 +3,34 @@ call plug#begin('~/.vim/plugged')
 " $HOME/.local/share/nvim/view
 if has('nvim')
 	" coc
-	source ~/.dotfiles/.vim_coc.vim
+	source ~/.dotfiles/vim/coc.vim
 else
 endif
 "
 " Source all plugins
-source ~/.dotfiles/.vim_plug.vim
+source ~/.dotfiles/vim/plug.vim
 " Load in plugin-specific-configs
-source ~/.dotfiles/.vim_plugins.vim
+source ~/.dotfiles/vim/plugins.vim
 call plug#end()
 
 " Load in autocommands
-source ~/.dotfiles/.vim_autocommands.vim
+source ~/.dotfiles/vim/autocommands.vim
 " Load in cabbrevs
-source ~/.dotfiles/.vim_cabbrev.vim
+source ~/.dotfiles/vim/cabbrev.vim
 " Load in maps
-source ~/.dotfiles/.vim_maps.vim
+source ~/.dotfiles/vim/maps.vim
 " Load in funcs
-source ~/.dotfiles/.vim_functions.vim
+source ~/.dotfiles/vim/functions.vim
 " Load in highlighting
-source ~/.dotfiles/.vim_highlights.vim
+source ~/.dotfiles/vim/highlights.vim
 " gutentags
-"source ~/.dotfiles/.vim_gutentags.vim
+"source ~/.dotfiles/vim/gutentags.vim
 " airline
-source ~/.dotfiles/.vim_airline.vim
+source ~/.dotfiles/vim/airline.vim
 " ale
-source ~/.dotfiles/.vim_ale.vim
+source ~/.dotfiles/vim/ale.vim
+" whichkey
+source ~/.dotfiles/vim/whichkey.vim
 
 filetype on
 set ruler
@@ -86,4 +88,3 @@ if has("noinsert")
 elseif has ("noselect")
 	set completeopt+=noselect
 endif
-
