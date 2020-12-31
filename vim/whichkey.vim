@@ -71,8 +71,8 @@ let g:which_key_map.g = {
 let g:which_key_map.m = {
       \ 'name' : '+misc' ,
       \ 'c' : [':call CloseAllBuffersButCurrent()'        , 'close all buffers except current'],
-      \ '1' : [':call call CreateDailyFolder()'           , 'create folder with current date'],
-      \ '2' : [':call call CopyCurrentFile()'             , 'create copy of current file'],
+      \ '1' : [':call CreateDailyFolder()'           , 'create folder with current date'],
+      \ '2' : [':call CopyCurrentFile()'             , 'create copy of current file'],
       \ }
 
 " Register which key map

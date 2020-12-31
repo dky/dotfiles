@@ -125,7 +125,7 @@ autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<cr>
 autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<cr>
 
 " toggle auto formatting:
-nmap <Leader>C :ClangFormatAutoToggle<cr>
+"nmap <Leader>C :ClangFormatAutoToggle<cr>
 
 nnoremap <silent> ,dkps :execute ":!tmux send-keys -t 2 'docker ps' C-m"<cr><cr>
 nnoremap <silent> ,mpl :execute ":!tmux send-keys -t 2 'make post-linux' C-m"<cr><cr>
