@@ -133,13 +133,6 @@ nnoremap <silent> ,mpr :execute ":!tmux send-keys -t 2 'make post-registrator' C
 nnoremap <silent> ,cl :execute ":!tmux send-keys -t 2 'clear' C-m"<cr><cr>
 nnoremap <silent> ,pa :execute ":!tmux send-keys -t 2 './apply.sh' C-m"<cr><cr>
 
-" FZF key bindings
-" GFiles searches all files in the git repo
-nmap <Leader>F :GFiles<cr>
-"Call our custom Find command we defined to use fzf search across all files in
-"project, this is defined in .vim_plugins.vim
-nmap <Leader>f :Find<cr>
-
 " vim-logbook
 noremap ,lb :Lb<cr>
 noremap ,ts :Ts<cr>
@@ -181,7 +174,6 @@ map <A-k> <C-W>k
 map <A-h> <C-W>h
 map <A-l> <C-W>l
 
-
 " Experimenting with tabs
 " tp "tab previous in normal mode"
 nmap tp :tabp<cr>
@@ -215,6 +207,13 @@ inoremap <localleader>d <esc>:1,$d<cr>
 "nnoremap <leader>l :ls<cr>:b<space>
 nnoremap <silent> <localleader>l :Buffers<CR>
 nnoremap <silent> <localleader>m :FZFMru<CR>
+
+" FZF key bindings
+" GFiles searches all files in the git repo
+nmap <localleader>F :GFiles<cr>
+"Call our custom Find command we defined to use fzf search across all files in
+"project, this is defined in .vim_plugins.vim
+nmap <localleader>f :Find<cr>
 
 nnoremap <silent> <Right> :bn<cr>
 nnoremap <silent> <Left> :bp<cr>
