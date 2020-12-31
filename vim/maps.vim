@@ -87,6 +87,9 @@ inoremap <C-e> <C-o>A
 inoremap <C-f> <C-o>l
 inoremap <C-j> <C-o>o
 inoremap <C-k> <C-o>O
+"Open a line below in insert, backspace then add a blank line. Useful for def
+"in Python, map this to Alt. A = Alt
+inoremap <A-o> <C-o>o<BS><cr>
 
 " Custom surrounds
 " surround markdown emphasis
@@ -96,7 +99,6 @@ nnoremap ,s` ciw`<C-r>"`<Esc>
 nnoremap ,s[ ciw[<C-r>"]<Esc>
 nnoremap ,s( ciw(<C-r>")<Esc>
 nnoremap ,s{ ciw{<C-r>"}<Esc>
-
 " Python docstring or markdown code block - Select text with visual mode +
 " shift + " or shift + `
 let b:surround_{char2nr('"')} = "\"\"\"\r\"\"\""
@@ -191,7 +193,6 @@ nmap tn :tabn<cr>
 "nmap <C-t> :tabnew<cr>
 "nmap <C-w> :tabclose<cr>
 
-
 " 'cd' towards the dir in which the current file is edited
 " but only change the path for the current window
 map <leader>cd :lcd %:h<cr>
@@ -219,9 +220,6 @@ nnoremap <silent> <Left> :bp<cr>
 nnoremap <F3> :execute 'edit ~/tmp/py_' . strftime("%m%d%y_%H%M%S") . '.py'<cr>
 nnoremap <leader>it :IndentGuidesToggle<cr>
 
-"Open a line below in insert, backspace then add a blank line. Useful for def
-"in Python, map this to Alt. A = Alt
-inoremap <A-o> <C-o>o<BS><cr>
 
 " Python help
 nnoremap <buffer> H :<C-u>execute "!pydoc3 " . expand("<cword>")<cr>
