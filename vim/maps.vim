@@ -181,10 +181,6 @@ map <A-k> <C-W>k
 map <A-h> <C-W>h
 map <A-l> <C-W>l
 
-" leader l to quickly switch buffers.
-"nnoremap <leader>l :ls<cr>:b<space>
-nnoremap <silent> <Leader>l :Buffers<CR>
-nnoremap <silent> <Leader>m :FZFMru<CR>
 
 " Experimenting with tabs
 " tp "tab previous in normal mode"
@@ -215,6 +211,11 @@ map <leader>ew :e <C-R>=expand("%:p:h") . "/" <cr>
 nnoremap <localleader>d :1,$d<cr>
 inoremap <localleader>d <esc>:1,$d<cr>
 
+" leader l to quickly switch buffers.
+"nnoremap <leader>l :ls<cr>:b<space>
+nnoremap <silent> <localleader>l :Buffers<CR>
+nnoremap <silent> <localleader>m :FZFMru<CR>
+
 nnoremap <silent> <Right> :bn<cr>
 nnoremap <silent> <Left> :bp<cr>
 
@@ -228,7 +229,7 @@ nnoremap <buffer> H :<C-u>execute "!pydoc3 " . expand("<cword>")<cr>
 " Python add trailing space when using #
 autocmd BufRead,BufNewFile *.py inoremap # #<space>
 
-nnoremap mkd :call CreateDailyFolder()<cr>
+"nnoremap mkd :call CreateDailyFolder()<cr>
 
 " Quickly copy a file in the buffer
-nnoremap <leader>c :call CopyCurrentFile()<cr>
+"nnoremap <leader>c :call CopyCurrentFile()<cr>

@@ -59,5 +59,21 @@ let g:which_key_map.t = {
       \ 'k' : [':FloatermKill'        , 'Prev Floaterm'],
       \ }
 
+let g:which_key_map.g = {
+      \ 'name' : '+git' ,
+      \ 's' : [':Git status'          , 'git status'],
+      \ 'b' : [':Git branch'          , 'git branch'],
+      \ 'a' : [':Git branch -a'       , 'git branch -a'],
+      \ '1' : [':Git commit --amend'  , 'git commit --amend'],
+      \ 'r' : [':Git reset --hard'    , 'git reset --hard'],
+      \ }
+
+let g:which_key_map.m = {
+      \ 'name' : '+misc' ,
+      \ 'c' : [':call CloseAllBuffersButCurrent()'        , 'close all buffers except current'],
+      \ '1' : [':call call CreateDailyFolder()'           , 'create folder with current date'],
+      \ '2' : [':call call CopyCurrentFile()'             , 'create copy of current file'],
+      \ }
+
 " Register which key map
 call which_key#register('<Space>', "g:which_key_map")

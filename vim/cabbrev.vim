@@ -1,6 +1,3 @@
-" Short for "Close all buffers" - Closes all open buffers except current.
-cabbrev cab call CloseAllBuffersButCurrent()<cr>
-
 " Git
 cabbrev gs Git status
 cabbrev gba Git branch -a
@@ -46,8 +43,9 @@ cabbrev nc set conceallevel=0
 " Create a directory with current date
 cabbrev cdcb cd $HOME/git/cb<cr>
 
-" Supposed to be Change dir
-cabbrev Cd :call fzf#run({'source':  'find . \( -name ".git" -o -name ".vim" -o -name "Library" \) -prune  -o -type d -print','sink': 'cd'})
+" Supposed to be Change dir, this might go away since it might be faster to
+" just open the file...
+"cabbrev Cd :call fzf#run({'source':  'find . \( -name ".git" -o -name ".vim" -o -name "Library" \) -prune  -o -type d -print','sink': 'cd'})
 
 " Hugo make public
-cabbrev mp :!make public<cr><cr>
+"cabbrev mp :!make public<cr><cr>

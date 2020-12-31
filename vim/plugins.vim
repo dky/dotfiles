@@ -96,7 +96,7 @@ let g:neoterm_autoscroll=1 " scroll to the bottom when running a command
 " floatterm
 let g:floaterm_autoinsert=1
 let g:floaterm_width=0.9
-let g:floaterm_height=0.4
+let g:floaterm_height=0.6
 let g:floaterm_autoclose=1
 let g:floaterm_position='bottom'
 let g:floaterm_title='ft: $1/$2'
