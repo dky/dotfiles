@@ -1,15 +1,21 @@
+"Golang
 au FileType go nmap <F8> :w <cr> :echo system('go run "' . expand('%') . '"')<cr>
 au FileType go imap <F8> <Esc> :w <cr> :echo system('go run "' . expand('%') . '"')<cr>
+"Python
 au FileType python nmap <F8> :echo system('python3 "' . expand('%') . '"')<cr>
 au FileType python imap <F8> <Esc> :w <cr> :echo system('python3 "' . expand('%') . '"')<cr>
+"JS
 au FileType javascript nmap <F8> :echo system('node "' . expand('%') . '"')<cr>
 au FileType javascript imap <F8> <Esc> :w <cr> :echo system('node "' . expand('%') . '"')<cr>
+"Coffeescript
 au FileType coffee nmap <F8> :echo system('coffee "' . expand('%') . '"')<cr>
 au FileType coffee imap <F8> <Esc> :w <cr> :echo system('coffee "' . expand('%') . '"')<cr>
+"Shell
 au FileType sh nmap <F8> :echo system('bash "' . expand('%') . '"')<cr>
 au FileType c nmap <F8> :w <cr> :!gcc % -o %< && ./%< <cr>
+"C
 au FileType c imap <F8> <Esc> :w <cr> :!gcc % -o %< && ./%< <cr>
-
+"Json
 au FileType json nmap <F8> :w <cr> :echo system('python -m json.tool "' . expand('%') . '"')<cr>
 au FileType json imap <F8> <Esc> :w <cr> :echo system('python -m json.tool "' . expand('%') . '"')<cr>
 
@@ -35,6 +41,8 @@ au FileType go nmap <F12> <Plug>(go-def)
 "au FileType terraform nmap <F6> :execute ":!tmux send-keys -t bottom 'terraform destroy -auto-approve' C-m"<cr><cr>
 "au FileType terraform imap <F6> <Esc> :w <cr> :execute ":!tmux send-keys -t bottom 'terraform destroy -auto-approve' C-m"<cr><cr>
 
+"This should be taken care of using coc, basically close single and double
+"quotes
 autocmd FileType python,go inoremap " ""<left>
 autocmd FileType python,go inoremap ' ''<left>
 
@@ -210,8 +218,8 @@ map <Leader>vx :VimuxInterruptRunner<cr>
 map <Leader>vz :call VimuxZoomRunner()<cr>
 
 " Delete everything in the file and start over, good for scratch testing.
-nnoremap <leader>d :1,$d<cr>
-inoremap <leader>d <esc>:1,$d<cr>
+nnoremap <localleader>d :1,$d<cr>
+inoremap <localleader>d <esc>:1,$d<cr>
 
 nnoremap <silent> <Right> :bn<cr>
 nnoremap <silent> <Left> :bp<cr>
@@ -219,7 +227,6 @@ nnoremap <silent> <Left> :bp<cr>
 " Quickly create Python scratch files.
 nnoremap <F3> :execute 'edit ~/tmp/py_' . strftime("%m%d%y_%H%M%S") . '.py'<cr>
 nnoremap <leader>it :IndentGuidesToggle<cr>
-
 
 " Python help
 nnoremap <buffer> H :<C-u>execute "!pydoc3 " . expand("<cword>")<cr>
