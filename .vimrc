@@ -1,18 +1,14 @@
 call plug#begin('~/.vim/plugged')
 " nvim view/cache location
 " $HOME/.local/share/nvim/view
-if has('nvim')
-	" coc
-	source ~/.dotfiles/vim/coc.vim
-else
-endif
 "
-" Source all plugins
+" Source all plug plugins
 source ~/.dotfiles/vim/plug.vim
 " Load in plugin-specific-configs
-source ~/.dotfiles/vim/plugins.vim
 call plug#end()
 
+" Source all plugin specific configurations here
+source ~/.dotfiles/vim/plugins.vim
 " Load in autocommands
 source ~/.dotfiles/vim/autocommands.vim
 " Load in cabbrevs
@@ -23,14 +19,20 @@ source ~/.dotfiles/vim/maps.vim
 source ~/.dotfiles/vim/functions.vim
 " Load in highlighting
 source ~/.dotfiles/vim/highlights.vim
-" gutentags
-"source ~/.dotfiles/vim/gutentags.vim
 " airline
 source ~/.dotfiles/vim/airline.vim
 " ale
 source ~/.dotfiles/vim/ale.vim
 " whichkey
 source ~/.dotfiles/vim/whichkey.vim
+" gutentags
+"source ~/.dotfiles/vim/gutentags.vim
+
+if has('nvim')
+	" coc
+	source ~/.dotfiles/vim/coc.vim
+else
+endif
 
 filetype on
 set ruler

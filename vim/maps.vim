@@ -64,9 +64,6 @@ nnoremap <F9> :execute ":!git push origin HEAD"<cr>
 nnoremap <F10> :!git add . && git commit -a -m "
 imap <F10> <Esc> :!git add . && git commit -a -m "
 
-" Nerdtree bookmark
-nmap ,nb :Bookmark
-
 " edit .vimrc quickly
 nmap ,ev :tabedit $HOME/.dotfiles/.vimrc<cr>
 nmap ,ch :CheckHealth<cr>
@@ -102,16 +99,16 @@ nnoremap ,s{ ciw{<C-r>"}<Esc>
 let b:surround_{char2nr('"')} = "\"\"\"\r\"\"\""
 let b:surround_{char2nr('`')} = "\`\`\`\r\`\`\`"
 
-
 " reload snippets
 nnoremap ,rs :call neosnippet#variables#set_snippets({})<cr>
+
+" neosnippets
 imap <C-l> <Plug>(neosnippet_expand_or_jump)
 smap <C-l> <Plug>(neosnippet_expand_or_jump)
 xmap <C-l> <Plug>(neosnippet_expand_target)
 nnoremap <leader>rs :call neosnippet#variables#set_snippets({})<cr>
 " Pull up help docs for snippet syntax
 nnoremap <leader>hs :help neosnippet-snippet-syntax<cr>
-
 
 " map to <Leader>cf in C++ code
 autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<cr>
