@@ -46,33 +46,8 @@ cabbrev nc set conceallevel=0
 " Create a directory with current date
 cabbrev cdcb cd $HOME/git/cb<cr>
 
+" Supposed to be Change dir
 cabbrev Cd :call fzf#run({'source':  'find . \( -name ".git" -o -name ".vim" -o -name "Library" \) -prune  -o -type d -print','sink': 'cd'})
 
 " Hugo make public
 cabbrev mp :!make public<cr><cr>
-
-" Neoterm
-cabbrev tn Tnew<cr>
-cabbrev tc Tclose<cr>
-"Need to come up with new mapping for this, this breaks typing the word "to"
-"cabbrev to Topen<cr>
-cabbrev t T
-
-" floatterm
-cabbrev fts FloatermShow<cr>
-cabbrev ftl FloatermShow<cr>
-cabbrev nft FloatermNew<cr>
-cabbrev ftt FloatermToggle<cr>
-cabbrev ftp FloatermPrev<cr>
-cabbrev ftn FloatermNext<cr>
-cabbrev ftk FloatermKill<cr>
-
-" Golang
-"cabbrev goi GoImport
-"cabbrev god GoDrop
-"cabbrev gof GoFmt
-"cabbrev got GoTest
-
-" Codi
-cabbrev oc Codi
-cabbrev ec Codi!

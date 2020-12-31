@@ -27,24 +27,36 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 " Single mappings
 let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below']
 let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
-let g:which_key_map['T'] = [ 'FloatermToggle'             , 'Floatterm' ]
-let g:which_key_map['goyo'] = [ 'Goyo'                       , 'goyo' ]
+let g:which_key_map['g'] = [ 'Goyo'                       , 'goyo' ]
 
 " s is for search
 let g:which_key_map.s = {
       \ 'name' : '+search' ,
-      \ 'P' : [':Tags'         , 'project tags'],
-      \ 't' : [':Rg'           , 'text Rg'],
-      \ 'T' : [':BTags'        , 'buffer tags'],
-      \ 'w' : [':Windows'      , 'search windows'],
-      \ 'y' : [':Filetypes'    , 'file types'],
-      \ 'z' : [':FZF'          , 'FZF'],
+      \ 'b' : [':BLines'        , 'Search current buffer'],
+      \ 'B' : [':Lines'         , 'Search all **open** buffers'],
       \ }
 
+" ale might yank this soon since coc has this
 let g:which_key_map.a = {
-      \ 'name' : '+a' ,
+      \ 'name' : '+ale' ,
       \ 'f' : [':AleFix'           , 'AleFix'],
-      \ 't' : [':AleToggle'           , 'AleToggle on off'],
+      \ 't' : [':AleToggle'        , 'AleToggle on off'],
+      \ }
+
+let g:which_key_map.T = {
+      \ 'name' : '+neoterm' ,
+      \ 'n' : [':Tnew'           , 'New Neoterm'],
+      \ 't' : [':Tclose'         , 'Close Neoterm'],
+      \ }
+
+let g:which_key_map.t = {
+      \ 'name' : '+floatterm' ,
+      \ 's' : [':FloatermShow'        , 'Show Floaterm'],
+      \ '1' : [':FloatermNew'         , 'New Floaterm'],
+      \ 'n' : [':FloatermNext'        , 'New Floaterm'],
+      \ 'p' : [':FloatermPrev'        , 'Prev Floaterm'],
+      \ 't' : [':FloatermToggle'      , 'Toggle Floaterm'],
+      \ 'k' : [':FloatermKill'        , 'Prev Floaterm'],
       \ }
 
 " Register which key map

@@ -139,12 +139,6 @@ nmap <Leader>F :GFiles<cr>
 "Call our custom Find command we defined to use fzf search across all files in
 "project, this is defined in .vim_plugins.vim
 nmap <Leader>f :Find<cr>
-"Search current buffer
-nmap <Leader>b :BLines<CR>
-"Search across all loaded buffers
-nmap <Leader>B :Lines<CR>
-nmap <Leader>h :History<cr>
-nmap <Leader>t :BTags<cr>
 
 " vim-logbook
 noremap ,lb :Lb<cr>
@@ -208,14 +202,14 @@ map <leader>cd :lcd %:h<cr>
 map <leader>ew :e <C-R>=expand("%:p:h") . "/" <cr>
 
 " run the current file with rspec
-let g:VimuxPromptString = "run: "
-map <Leader>rb :call VimuxRunCommand("clear; rspec " . bufname("%"))<cr>
-map <Leader>vp :VimuxPromptCommand<cr>
-map <Leader>vl :VimuxRunLastCommand<cr>
-map <Leader>vi :VimuxInspectRunner<cr>
-map <Leader>vq :VimuxCloseRunner<cr>
-map <Leader>vx :VimuxInterruptRunner<cr>
-map <Leader>vz :call VimuxZoomRunner()<cr>
+"let g:VimuxPromptString = "run: "
+"map <Leader>rb :call VimuxRunCommand("clear; rspec " . bufname("%"))<cr>
+"map <Leader>vp :VimuxPromptCommand<cr>
+"map <Leader>vl :VimuxRunLastCommand<cr>
+"map <Leader>vi :VimuxInspectRunner<cr>
+"map <Leader>vq :VimuxCloseRunner<cr>
+"map <Leader>vx :VimuxInterruptRunner<cr>
+"map <Leader>vz :call VimuxZoomRunner()<cr>
 
 " Delete everything in the file and start over, good for scratch testing.
 nnoremap <localleader>d :1,$d<cr>
@@ -236,11 +230,5 @@ autocmd BufRead,BufNewFile *.py inoremap # #<space>
 
 nnoremap mkd :call CreateDailyFolder()<cr>
 
-" macdictionary support
-nnoremap <C-d> :MacDictWord<cr>
-
 " Quickly copy a file in the buffer
 nnoremap <leader>c :call CopyCurrentFile()<cr>
-
-" Floatterm
-nnoremap <silent> <leader>ft :FloatermToggle<cr>
