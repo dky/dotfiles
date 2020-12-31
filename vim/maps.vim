@@ -18,29 +18,31 @@ au FileType go nmap <leader><F12> :GoDecls<cr>
 au FileType go nmap <F12> <Plug>(go-def)
 
 " tmux-send keys to send commands to other panes.
-au FileType go nmap <F5> :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<cr><cr>
-au FileType go imap <F5> <Esc> :w <cr> :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<cr><cr>
-nnoremap <silent> ,rg :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<cr><cr>
-au FileType go nmap <F5><F5> :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<cr><cr>
-au FileType go imap <F5><F5> <Esc> :w <cr> :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<cr><cr>
-nnoremap <silent> ,gr :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<cr><cr>
-nnoremap <silent> ,c :execute ":!tmux send-keys -t 3 C-c"<cr><cr>
-nnoremap <silent> ,cl :execute ":!tmux send-keys -t 3 clear"<cr><cr>
-au FileType python nmap <F5> :execute ":!tmux send-keys -t bottom 'python3 *.py' C-m"<cr><cr>
-au FileType python imap <F5> <Esc> :w <cr> :execute ":!tmux send-keys -t bottom 'python3 *.py' C-m"<cr><cr>
+"au FileType go nmap <F5> :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<cr><cr>
+"au FileType go imap <F5> <Esc> :w <cr> :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<cr><cr>
+"nnoremap <silent> ,rg :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<cr><cr>
+"au FileType go nmap <F5><F5> :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<cr><cr>
+"au FileType go imap <F5><F5> <Esc> :w <cr> :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<cr><cr>
+"nnoremap <silent> ,gr :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<cr><cr>
+"nnoremap <silent> ,c :execute ":!tmux send-keys -t 3 C-c"<cr><cr>
+"nnoremap <silent> ,cl :execute ":!tmux send-keys -t 3 clear"<cr><cr>
+"au FileType python nmap <F5> :execute ":!tmux send-keys -t bottom 'python3 *.py' C-m"<cr><cr>
+"au FileType python imap <F5> <Esc> :w <cr> :execute ":!tmux send-keys -t bottom 'python3 *.py' C-m"<cr><cr>
 
-au FileType terraform nmap <F5> :execute ":!tmux send-keys -t bottom 'terraform apply -auto-approve' C-m"<cr><cr>
-au FileType terraform imap <F5> <Esc> :w <cr> :execute ":!tmux send-keys -t bottom 'terraform apply -auto-approve' C-m"<cr><cr>
+"au FileType terraform nmap <F5> :execute ":!tmux send-keys -t bottom 'terraform apply -auto-approve' C-m"<cr><cr>
+"au FileType terraform imap <F5> <Esc> :w <cr> :execute ":!tmux send-keys -t bottom 'terraform apply -auto-approve' C-m"<cr><cr>
 
-au FileType terraform nmap <F6> :execute ":!tmux send-keys -t bottom 'terraform destroy -auto-approve' C-m"<cr><cr>
-au FileType terraform imap <F6> <Esc> :w <cr> :execute ":!tmux send-keys -t bottom 'terraform destroy -auto-approve' C-m"<cr><cr>
+"au FileType terraform nmap <F6> :execute ":!tmux send-keys -t bottom 'terraform destroy -auto-approve' C-m"<cr><cr>
+"au FileType terraform imap <F6> <Esc> :w <cr> :execute ":!tmux send-keys -t bottom 'terraform destroy -auto-approve' C-m"<cr><cr>
 
 autocmd FileType python,go inoremap " ""<left>
 autocmd FileType python,go inoremap ' ''<left>
+
 autocmd FileType python call SemshiCustomHighlights()
 
 " remap leader to space
 let mapleader = "\<Space>"
+let maplocalleader = '\'
 
 " remap esc to jk
 imap jk <Esc>
@@ -71,10 +73,11 @@ nmap ,up :UpdateRemotePlugins<cr>
 " shortcut for vundle
 nmap ,bi :PlugInstall<cr>
 nmap ,gib :GoInstallBinaries<cr>
+" reload snippets
+nnoremap ,rs :call neosnippet#variables#set_snippets({})<cr>
 
 " map space rather than colon
 "nmap <space> :
-
 
 "nnoremap <silent> <leader>gs :call IsNerdTreeOpen(':Git status')<cr>
 "nnoremap <silent> <leader>gd :call IsNerdTreeOpen(':Git diff')<cr>
@@ -98,9 +101,6 @@ nnoremap ,s{ ciw{<C-r>"}<Esc>
 " shift + " or shift + `
 let b:surround_{char2nr('"')} = "\"\"\"\r\"\"\""
 let b:surround_{char2nr('`')} = "\`\`\`\r\`\`\`"
-
-" reload snippets
-nnoremap ,rs :call neosnippet#variables#set_snippets({})<cr>
 
 " neosnippets
 imap <C-l> <Plug>(neosnippet_expand_or_jump)
