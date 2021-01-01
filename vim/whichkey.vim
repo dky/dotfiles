@@ -1,6 +1,4 @@
 " Map leader to which_key
-"nnoremap <silent> <leader> :silent WhichKey '<Space>'<CR>
-"vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
 nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
 nnoremap <silent> <localleader> :<c-u>WhichKey  '\'<CR>
 
@@ -10,7 +8,7 @@ let g:which_key_map =  {}
 let g:which_key_sep = '→'
 " set timeoutlen=100
 
-" Not a fan of floating windows for this
+" Don't float
 let g:which_key_use_floating_win = 0
 
 " Change the colors if you want
@@ -27,7 +25,7 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 " Single mappings
 let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below']
 let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
-let g:which_key_map['g'] = [ 'Goyo'                       , 'goyo' ]
+let g:which_key_map['f'] = [ 'Files'                      , 'Open file' ]
 
 " s is for search
 let g:which_key_map.s = {
@@ -43,20 +41,13 @@ let g:which_key_map.a = {
       \ 't' : [':AleToggle'        , 'AleToggle on off'],
       \ }
 
-let g:which_key_map.T = {
-      \ 'name' : '+neoterm' ,
-      \ 'n' : [':Tnew'           , 'New Neoterm'],
-      \ 't' : [':Tclose'         , 'Close Neoterm'],
-      \ }
-
 let g:which_key_map.t = {
-      \ 'name' : '+floatterm' ,
+      \ 'name' : '+floatterm: ' ,
       \ 's' : [':FloatermShow'        , 'Show Floaterm'],
       \ '1' : [':FloatermNew'         , 'New Floaterm'],
       \ 'n' : [':FloatermNext'        , 'New Floaterm'],
       \ 'p' : [':FloatermPrev'        , 'Prev Floaterm'],
       \ 't' : [':FloatermToggle'      , 'Toggle Floaterm'],
-      \ 'k' : [':FloatermKill'        , 'Prev Floaterm'],
       \ }
 
 let g:which_key_map.g = {

@@ -88,19 +88,13 @@ let g:terraform_align=1
 " plasticboy vim markdown disable folding
 let g:vim_markdown_folding_disabled = 1
 
-" neoterm
-let g:neoterm_default_mod='belowright' " open terminal in bottom split
-let g:neoterm_size=16 " terminal split size
-let g:neoterm_autoscroll=1 " scroll to the bottom when running a command
-
 " floatterm
 let g:floaterm_autoinsert=1
-let g:floaterm_width=0.9
-let g:floaterm_height=0.6
+let g:floaterm_width=1.0
+let g:floaterm_height=0.7
 let g:floaterm_autoclose=1
 let g:floaterm_position='bottom'
 let g:floaterm_title='ft: $1/$2'
-hi FloatermBorder ctermfg=cyan
 
 " vim sneak
 let g:sneak#label = 1

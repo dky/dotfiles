@@ -22,7 +22,6 @@ Plug 'reedes/vim-wordy', { 'for': 'markdown' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 "
 Plug 'voldikss/vim-floaterm'
-Plug 'kassio/neoterm'
 Plug 'gmarik/vundle'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
