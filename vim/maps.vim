@@ -233,3 +233,6 @@ autocmd BufRead,BufNewFile *.py inoremap # #<space>
 
 " Quickly copy a file in the buffer
 "nnoremap <leader>c :call CopyCurrentFile()<cr>
+"
+" Leader q out of finding a file... Much easier than esc + :q!
+autocmd! FileType fzf tnoremap <buffer> <leader>q <c-c>
