@@ -2,7 +2,7 @@
 let g:rainbow_active = 1
 
 " Codi
-let g:codi#width = winwidth(winnr()) / 2
+"let g:codi#width = winwidth(winnr()) / 2
 let g:codi#rightalign = 0
 
 "Disable semshi error sign and just let flake8 handle it.
