@@ -100,7 +100,7 @@ let g:floaterm_title='ft: $1/$2'
 let g:sneak#label = 1
 
 " Ranger
-nnoremap <silent> <leader>r :RnvimrToggle<CR>.
+"nnoremap <silent> <leader>r :RnvimrToggle<CR>.
 " Make Ranger to be hidden after picking a file
 let g:rnvimr_enable_picker = 1
 " Disable a border for floating window
