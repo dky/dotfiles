@@ -236,5 +236,6 @@ nnoremap <buffer> H :<C-u>execute "!pydoc3 " . expand("<cword>")<cr>
 " Python add trailing space when using #
 autocmd BufRead,BufNewFile *.py inoremap # #<space>
 
-" Leader q out of finding a file... Much easier than esc + :q!
+" Leader q out of finding a file... Much easier than esc + :q!, this is also
+" defined in whichkeys so we don't re-map that to something else.
 autocmd! FileType fzf tnoremap <buffer> <leader>q <c-c>
