@@ -107,3 +107,6 @@ let g:rnvimr_enable_picker = 1
 let g:rnvimr_draw_border = 0
 " Hide the files included in gitignore
 let g:rnvimr_hide_gitignore = 1
+
+"vim-test
+let test#python#runner = 'pytest'
