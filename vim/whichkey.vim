@@ -27,6 +27,7 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 let g:leader_map['h'] = [ '<C-W>s'                     , 'split below']
 let g:leader_map['v'] = [ '<C-W>v'                     , 'split right']
 let g:leader_map['f'] = [ 'Files'                      , 'Open file' ]
+let g:leader_map['q'] = [ '<c-c>'                      , 'Quit FZF search' ]
 
 " s is for search
 let g:leader_map.s = {
@@ -68,7 +69,8 @@ let g:leader_map.m = {
       \ }
 
 " localleader mappings
-let g:localleader_map['t'] = [ 'TestFile'                     , 'TestFile']
+let g:localleader_map['t'] = [ 'TestFile'                   , 'TestFile']
+let g:localleader_map['q'] = [ '<c-c>'                      , 'Quit FZF search' ]
 
 let g:localleader_map.1 = {
       \ 'name' : '+test' ,
