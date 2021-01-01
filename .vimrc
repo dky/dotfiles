@@ -50,7 +50,9 @@ set shiftwidth=3
 set smartindent
 
 " autocompletion
-set wildmode=list:longest
+set wildmenu
+set wildmode=full
+set wildignorecase
 
 " split below
 set splitbelow
