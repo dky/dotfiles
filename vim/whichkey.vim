@@ -71,6 +71,13 @@ let g:leader_map.m = {
 " localleader mappings
 let g:localleader_map['t'] = [ 'TestFile'                   , 'TestFile']
 let g:localleader_map['q'] = [ '<c-c>'                      , 'Quit FZF search' ]
+let g:localleader_map['c'] = [ 'Codi'                       , 'Codi' ]
+
+let g:localleader_map.c = {
+      \ 'name' : '+codi' ,
+      \ 'c' : [':Codi'        , 'Start Codi'],
+      \ 't' : [':Codi!'        , 'Toggle Codi'],
+      \ }
 
 let g:localleader_map.1 = {
       \ 'name' : '+test' ,
