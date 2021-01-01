@@ -48,9 +48,10 @@ autocmd FileType python,go inoremap ' ''<left>
 
 autocmd FileType python call SemshiCustomHighlights()
 
-" remap leader to space
+" remap leader to space local leader to , since your middle is probably
+" stronger than your pinky.
 let mapleader = "\<Space>"
-let maplocalleader = '\'
+let maplocalleader = ','
 
 " remap esc to jk
 imap jk <Esc>

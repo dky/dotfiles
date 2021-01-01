@@ -1,6 +1,6 @@
 " Map leader to which_key
 nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
-nnoremap <silent> <localleader> :<c-u>WhichKey  '\'<CR>
+nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
 
 " Create map to add keys to
 let g:leader_map =  {}
@@ -77,4 +77,4 @@ let g:localleader_map.1 = {
 
 " Register which key map
 call which_key#register('<Space>', "g:leader_map")
-call which_key#register('\', "g:localleader_map")
+call which_key#register(',', "g:localleader_map")
