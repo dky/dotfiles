@@ -27,7 +27,8 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 let g:leader_map['h'] = [ '<C-W>s'                     , 'split below']
 let g:leader_map['v'] = [ '<C-W>v'                     , 'split right']
 let g:leader_map['f'] = [ 'Files'                      , 'Open file' ]
-let g:leader_map['q'] = [ '<c-c>'                      , 'Quit FZF search' ]
+let g:leader_map['q'] = [ '<c-c>'                      , 'Quit FZF search with a Vengence!' ]
+let g:leader_map['r'] = [ 'Ranger'                      , 'Ranger Search' ]
 
 " s is for search
 let g:leader_map.s = {
