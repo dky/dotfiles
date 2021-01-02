@@ -26,9 +26,9 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 " leader mappings
 let g:leader_map['h'] = [ '<C-W>s'                     , 'split below']
 let g:leader_map['v'] = [ '<C-W>v'                     , 'split right']
-let g:leader_map['f'] = [ 'Files'                      , 'Search all files' ]
-let g:leader_map['F'] = [ 'GFiles'                     , 'Open file within Git Repo' ]
-let g:leader_map['q'] = [ '<c-c>'                      , 'Quit FZF search with a Vengence!' ]
+let g:leader_map['f'] = [ 'GFiles'                     , 'Search all files in current Git Repo' ]
+let g:leader_map['F'] = [ 'Find'                       , 'Use Rg + Fzf to find files' ]
+let g:leader_map['q'] = [ '<c-c>'                      , 'Quit FZF search' ]
 let g:leader_map['r'] = [ 'RnvimrToggle'               , 'Ranger Search' ]
 
 " s is for search
