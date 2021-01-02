@@ -3,6 +3,7 @@ if has('nvim')
 	" pip3 install --user pynvim
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins', 'for': 'python' }
+	Plug 'kevinhwang91/rnvimr'
 else
 endif
 
@@ -57,7 +58,6 @@ Plug 'luochen1990/rainbow'
 "Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
 "Ranger
-Plug 'kevinhwang91/rnvimr'
 Plug 'ryanoasis/vim-devicons'
 Plug 'sheerun/vim-polyglot'
 Plug 'liuchengxu/vim-which-key'
