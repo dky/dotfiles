@@ -69,6 +69,8 @@ let g:leader_map.m = {
       \ 'c' : [':call CloseAllBuffersButCurrent()'   , 'close all buffers except current'],
       \ '1' : [':call CreateDailyFolder()'           , 'create folder with current date'],
       \ '2' : [':call CopyCurrentFile()'             , 'create copy of current file'],
+      \ 'b' : [':set ft=sh'                          , 'Set filetype to sh'],
+      \ 'p' : [':set ft=python'                      , 'Set filetype to python'],
       \ }
 
 " localleader mappings

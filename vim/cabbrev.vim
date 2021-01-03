@@ -27,21 +27,20 @@ cabbrev rv source $MYVIMRC<cr>
 cabbrev ra source ~/.vim-dictionary/abbreviations.vim<cr>
 
 " quickly set file type, python, bash, shell
-cabbrev setftpy set ft=python
-cabbrev setftpython set ft=python
-cabbrev setftsh set ft=sh
-cabbrev setftbash set ft=sh
+"cabbrev setftpy set ft=python
+"cabbrev setftpython set ft=python
+"cabbrev setftsh set ft=sh
+"cabbrev setftbash set ft=sh
 
 " Aliases for jumping around quickly
 cabbrev cdh cd $HOME<cr>
 cabbrev cdg cd $HOME/git<cr>
 cabbrev cdd cd $HOME/.dotfiles<cr>
+" cd to codebreakers dir
+cabbrev cdcb cd $HOME/git/cb<cr>
 
 " set conceallevel=0
 cabbrev nc set conceallevel=0
-
-" Create a directory with current date
-cabbrev cdcb cd $HOME/git/cb<cr>
 
 " Supposed to be Change dir, this might go away since it might be faster to
 " just open the file...
