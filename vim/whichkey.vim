@@ -30,6 +30,7 @@ let g:leader_map['f'] = [ 'GFiles'                     , 'Search all files in cu
 let g:leader_map['F'] = [ 'Find'                       , 'Use Rg + Fzf to find files' ]
 let g:leader_map['q'] = [ '<c-c>'                      , 'Quit FZF search' ]
 let g:leader_map['r'] = [ 'RnvimrToggle'               , 'Ranger Search' ]
+let g:leader_map['c'] = [ ':!pwd'                      , 'Current working dir' ]
 
 " s is for search
 let g:leader_map.s = {
