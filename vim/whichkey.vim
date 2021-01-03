@@ -38,7 +38,7 @@ let g:leader_map.s = {
       \ 'name' : '+search' ,
       \ 'b' : [':BLines'        , 'Search current buffer'],
       \ 'B' : [':Lines'         , 'Search all **open** buffers'],
-      \ 'B' : [':GFiles'         , 'Search only files in Git'],
+      \ 'f' : [':GFiles'        , 'Search only files in Git'],
       \ }
 
 " ale might yank this soon since coc has this
