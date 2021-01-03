@@ -88,11 +88,11 @@ let g:terraform_align=1
 " plasticboy vim markdown disable folding
 let g:vim_markdown_folding_disabled = 1
 
-" floatterm
+" floaterm
 let g:floaterm_autoinsert=1
 let g:floaterm_width=1.0
 let g:floaterm_height=0.7
-let g:floaterm_autoclose=1
+let g:floaterm_autoclose=0
 let g:floaterm_position='bottom'
 let g:floaterm_title='ft: $1/$2'
 
@@ -110,3 +110,4 @@ let g:rnvimr_hide_gitignore = 1
 
 "vim-test
 let test#python#runner = 'pytest'
+let test#strategy = "floaterm"
