@@ -31,6 +31,7 @@ let g:leader_map['F'] = [ 'Find'                       , 'Use Rg + Fzf to find f
 let g:leader_map['q'] = [ '<c-c>'                      , 'Quit FZF search' ]
 let g:leader_map['r'] = [ 'RnvimrToggle'               , 'Ranger Search' ]
 let g:leader_map['c'] = [ ':!pwd'                      , 'Current working dir' ]
+let g:leader_map['w'] = [ 'w'                        , 'Save current working buffer' ]
 
 " s is for search
 let g:leader_map.s = {
