@@ -1,3 +1,7 @@
+" Autosave
+let g:auto_save = 1  " enable AutoSave on Vim startup
+let g:auto_save_events = ["InsertLeave", "TextChanged"]
+
 " Rainbow Parenthesis
 let g:rainbow_active = 1
 
@@ -65,9 +69,6 @@ let g:fzf_action = {
 
 " <leader>f opens rg fzf to search files.
 command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, {'options': '--no-preview'}, <bang>0)
-
-" vim AutoSave
-let g:auto_save = 1  " enable AutoSave on Vim startup
 
 " mac dictionary
 let g:vim_mac_dictionary_use_app = 1
