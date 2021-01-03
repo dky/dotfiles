@@ -59,5 +59,5 @@ Plug 'luochen1990/rainbow'
 Plug 'majutsushi/tagbar'
 "Ranger
 Plug 'ryanoasis/vim-devicons'
-Plug 'sheerun/vim-polyglot'
+"Plug 'sheerun/vim-polyglot'
 Plug 'liuchengxu/vim-which-key'
