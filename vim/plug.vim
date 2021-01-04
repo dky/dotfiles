@@ -47,7 +47,7 @@ Plug 'roxma/vim-tmux-clipboard'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'pbogut/fzf-mru.vim'
-"Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'justinmk/vim-sneak'
 Plug '907th/vim-auto-save'
 Plug 'fatih/vim-hclfmt'
