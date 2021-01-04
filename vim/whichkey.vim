@@ -26,8 +26,8 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 " leader mappings
 let g:leader_map['h'] = [ '<C-W>s'                     , 'split below']
 let g:leader_map['v'] = [ '<C-W>v'                     , 'split right']
-let g:leader_map['f'] = [ 'Files'                      , 'Search all files in current Git Repo' ]
-let g:leader_map['F'] = [ 'Find'                       , 'Use Rg + Fzf to find files' ]
+let g:leader_map['f'] = [ 'GFiles'                     , 'Search all files in current Git Repo' ]
+let g:leader_map['F'] = [ 'Find'                       , 'Custom Find() Use Rg + Fzf to find files' ]
 let g:leader_map['q'] = [ '<c-c>'                      , 'Quit FZF search' ]
 let g:leader_map['r'] = [ 'RnvimrToggle'               , 'Ranger Search' ]
 let g:leader_map['c'] = [ ':!pwd'                      , 'Current working dir' ]
@@ -45,7 +45,7 @@ let g:leader_map.s = {
       \ 'name' : '+search' ,
       \ 'b' : [':BLines'        , 'Search current buffer'],
       \ 'B' : [':Lines'         , 'Search all **open** buffers'],
-      \ 'f' : [':GFiles'        , 'Search only files in Git'],
+      \ 'f' : [':Files'         , 'Search all files in project'],
       \ }
 
 let g:leader_map.t = {
