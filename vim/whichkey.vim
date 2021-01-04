@@ -31,9 +31,15 @@ let g:leader_map['F'] = [ 'Find'                       , 'Use Rg + Fzf to find f
 let g:leader_map['q'] = [ '<c-c>'                      , 'Quit FZF search' ]
 let g:leader_map['r'] = [ 'RnvimrToggle'               , 'Ranger Search' ]
 let g:leader_map['c'] = [ ':!pwd'                      , 'Current working dir' ]
-let g:leader_map['a'] = [ 'ALEFix'                     , 'ALEFix it' ]
 
-" s is for search
+" a is for search
+let g:leader_map.a = {
+      \ 'name' : '+ale' ,
+      \ 'f' : ['ALEFix'        , 'ALEFix'],
+      \ 't' : ['ALEToggle'       , 'Toggle ALE on/off'],
+      \ }
+
+" a is for ale
 let g:leader_map.s = {
       \ 'name' : '+search' ,
       \ 'b' : [':BLines'        , 'Search current buffer'],
