@@ -44,7 +44,7 @@ Plug 'iberianpig/tig-explorer.vim'
 Plug 'kana/vim-arpeggio'
 Plug 'benmills/vimux'
 Plug 'roxma/vim-tmux-clipboard'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'pbogut/fzf-mru.vim'
 Plug 'dense-analysis/ale'
