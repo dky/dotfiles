@@ -26,12 +26,12 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 " leader mappings
 let g:leader_map['h'] = [ '<C-W>s'                     , 'split below']
 let g:leader_map['v'] = [ '<C-W>v'                     , 'split right']
-let g:leader_map['f'] = [ 'Files'                     , 'Search all files in current Git Repo' ]
+let g:leader_map['f'] = [ 'Files'                      , 'Search all files in current Git Repo' ]
 let g:leader_map['F'] = [ 'Find'                       , 'Use Rg + Fzf to find files' ]
 let g:leader_map['q'] = [ '<c-c>'                      , 'Quit FZF search' ]
 let g:leader_map['r'] = [ 'RnvimrToggle'               , 'Ranger Search' ]
 let g:leader_map['c'] = [ ':!pwd'                      , 'Current working dir' ]
-let g:leader_map['w'] = [ 'w'                        , 'Save current working buffer' ]
+let g:leader_map['a'] = [ 'ALEFix'                     , 'ALEFix it' ]
 
 " s is for search
 let g:leader_map.s = {
@@ -39,13 +39,6 @@ let g:leader_map.s = {
       \ 'b' : [':BLines'        , 'Search current buffer'],
       \ 'B' : [':Lines'         , 'Search all **open** buffers'],
       \ 'f' : [':GFiles'        , 'Search only files in Git'],
-      \ }
-
-" ale might yank this soon since coc has this
-let g:leader_map.a = {
-      \ 'name' : '+ale' ,
-      \ 'f' : [':AleFix'           , 'AleFix'],
-      \ 't' : [':AleToggle'        , 'AleToggle on off'],
       \ }
 
 let g:leader_map.t = {
