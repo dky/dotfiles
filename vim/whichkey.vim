@@ -36,7 +36,8 @@ let g:leader_map['c'] = [ ':!pwd'                      , 'Current working dir' ]
 let g:leader_map.a = {
       \ 'name' : '+ale' ,
       \ 'f' : ['ALEFix'        , 'ALEFix'],
-      \ 't' : ['ALEToggle'       , 'Toggle ALE on/off'],
+      \ 't' : ['ALEToggle'     , 'Toggle ALE on/off'],
+      \ 'i' : ['ALEInfo'       , 'Get more info on ALE'],
       \ }
 
 " a is for ale
