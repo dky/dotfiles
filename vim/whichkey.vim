@@ -52,7 +52,7 @@ let g:leader_map.t = {
       \ 'name' : '+floatterm: ' ,
       \ 's' : [':FloatermShow'        , 'Show Floaterm'],
       \ '1' : [':FloatermNew'         , 'New Floaterm'],
-      \ 'n' : [':FloatermNext'        , 'New Floaterm'],
+      \ 'n' : [':FloatermNext'        , 'Next Floaterm'],
       \ 'p' : [':FloatermPrev'        , 'Prev Floaterm'],
       \ 't' : [':FloatermToggle'      , 'Toggle Floaterm'],
       \ }
