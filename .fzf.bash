@@ -28,7 +28,7 @@ export FZF_DEFAULT_OPTS='--height=90% --preview="cat {}" --preview-window=down:6
 export FZF_FIND_EXCLUDE="\( -name Music -o -name logbook -o -name Library -o -name Pictures -o -name Public -o -name Movies -o -name Applications -o -name Downloads \) -prune \
 	-o \( -name '.git' -o -name 'lib' -o -name 'venv' -o -name '__init__.py' \) -prune \
 	-o \( -path './go/bin/*' -o -path './go/pkg/*' -o -path './.vim/plugged/*' -o -path './.vim/view/*' -o -path './.local/share/nvim/view/*' -o -path './go/src/*' -o -path './iCloud*/*' -o -path './google-cloud-sdk/*' -o -path './tmp/*' -o -path './Documents/*' -o -path './Desktop/*' -o -path './git/dky.io/*' -o -path './git/docker/*' -o -path './git/kinesis-qmk/*' -o -path './.npm' -o -path './.pyenv' -o -path './.fzf' -o -path './.templateengine' -o -path './.bash_sessions' -o -path './.pytest_cache' -o -path './.cache' -o -path './node_modules' -o -path './volumes' \) -prune \
-	-o \( -name '*.mp4' -o -name '*.mp3' -o -name '.DS_Store' -o -name '*.png' -o -name '*.jpg' -o -name '*.jpeg' -o -name '*.gz' -o -name '*.tgz' -o -name '*.ipa' -o -name '*.apk' -o -name '*.pyc' -o -name '*.sqlite' -o -name '*.ico' \) -prune"
+	-o \( -name '*.mp4' -o -name '*.mp3' -o -name '.DS_Store' -o -name '*.png' -o -name '*.jpg' -o -name '*.jpeg' -o -name '*.gz' -o -name '*.tgz' -o -name '*.ipa' -o -name '*.apk' -o -name '*.pyc' -o -name '*.sqlite' -o -name '*.ico' -o -name '*.rpm' -o -name '*.deb' \) -prune"
 
 export FZF_DEFAULT_COMMAND="find . \
 	$FZF_FIND_EXCLUDE \
