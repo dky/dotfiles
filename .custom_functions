@@ -190,7 +190,7 @@ fdg() {
 		-o \( -name '*.mp4' -o -name '*.mp3' -o -name '.DS_Store' -o -name '*.png' -o -name '*.jpg' -o -name '*.jpeg' -o -name '*.gz' -o -name '*.tgz' \) -prune \
 		-o -type d \
 		-print 2> /dev/null | fzf +m) &&
-		cd "$dir"
+		cd "$dir" && nvim
 }
 
 # Pet snippets shortcut for "pet new"
