@@ -6,6 +6,7 @@ let g:ale_linters = {'markdown': ['proselint'],}
 
 let g:ale_fixers = {}
 let g:ale_fixers['javascript'] = ['prettier', 'eslint']
+let g:ale_fixers['vue'] = ['prettier', 'eslint']
 let g:ale_fixers['python'] = ['remove_trailing_lines', 'isort', 'yapf']
 
 let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5 --no-semi'
