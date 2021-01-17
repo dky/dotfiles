@@ -7,6 +7,7 @@ if has('nvim')
 else
 endif
 
+Plug 'posva/vim-vue'
 Plug 'jeetsukumaran/vim-pythonsense', { 'for': 'python' }
 Plug 'jmcantrell/vim-virtualenv'
 Plug 'vim-test/vim-test'
