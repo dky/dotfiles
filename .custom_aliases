@@ -156,7 +156,7 @@ alias azstls='azure storage account list'
 alias azvmls='azure vm list'
 
 #hugo
-alias mp="make public"
+alias mp="ko && make public && kc"
 alias cddky="cd ~/git/hugo/dky.io/"
 alias cddk="cd ~/git/hugo/dky.io/"
 
