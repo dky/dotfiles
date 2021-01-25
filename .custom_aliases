@@ -275,3 +275,6 @@ alias kba="kubectl apply -f"
 alias nm="neomutt"
 
 alias ifa="/sbin/ifconfig -a | less"
+
+"nvim views nuke
+alias rmv="rm -rf ~/.local/share/nvim/view/* && ls ~/.local/share/nvim/view/"
