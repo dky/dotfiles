@@ -68,15 +68,16 @@ let g:leader_map.t = {
 
 let g:leader_map.g = {
       \ 'name' : '+git' ,
-      \ 'a' : [':Git add .'           , 'git add .'],
-      \ 's' : [':Git status'          , 'git status'],
-      \ '6' : [':Git branch'          , 'git branch'],
-      \ '7' : [':Git branch -a'       , 'git branch -a'],
-      \ '1' : [':Git commit'          , 'git commit'],
-      \ '2' : [':Git commit --amend'  , 'git commit --amend'],
-      \ 'r' : [':Git reset --hard'    , 'git reset --hard'],
-      \ 'd' : [':Git diff --cached'   , 'git diff --cached'],
-      \ 'c' : [':Git checkout'        , 'git checkout'],
+      \ 'a' : [':Git add .'              , 'git add .'],
+      \ 's' : [':Git status'             , 'git status'],
+      \ '6' : [':Git branch'             , 'git branch'],
+      \ '7' : [':Git branch -a'          , 'git branch -a'],
+      \ '1' : [':Git commit'             , 'git commit'],
+      \ '2' : [':Git commit --amend'     , 'git commit --amend'],
+      \ 'r' : [':Git reset --hard'       , 'git reset --hard'],
+      \ 'd' : [':Git diff --cached'      , 'git diff --cached'],
+      \ 'c' : [':Git checkout'           , 'git checkout'],
+      \ 'p' : [':Git push origin HEAD'   , 'git push origin HEAD'],
       \ }
 
 let g:leader_map.m = {
