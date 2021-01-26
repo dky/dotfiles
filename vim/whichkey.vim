@@ -31,7 +31,6 @@ let g:leader_map['F'] = [ 'Find'                             , 'Custom Find() Us
 let g:leader_map['q'] = [ '<c-c>'                            , 'Quit FZF search' ]
 let g:leader_map['r'] = [ 'RnvimrToggle'                     , 'Ranger Search' ]
 let g:leader_map['c'] = [ ':!pwd'                            , 'Current working dir' ]
-let g:leader_map['6'] = [ ':Tig'                             , 'Tig explorer' ]
 let g:leader_map['1'] = [ '<Plug>AirlineSelectTab1'          , 'Switch to airline tab 1' ]
 let g:leader_map['2'] = [ '<Plug>AirlineSelectTab2'          , 'Switch to airline tab 2' ]
 let g:leader_map['3'] = [ '<Plug>AirlineSelectTab3'          , 'Switch to airline tab 3' ]
@@ -75,6 +74,7 @@ let g:leader_map.g = {
       \ 'd' : [':Git diff --cached'      , 'git diff --cached'],
       \ 'c' : [':Git checkout'           , 'git checkout'],
       \ 'p' : [':Git push origin HEAD'   , 'git push origin HEAD'],
+      \ 't' : [':Tig'                    , 'Git Tig'],
       \ }
 
 let g:leader_map.m = {
