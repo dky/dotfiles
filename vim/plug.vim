@@ -22,6 +22,10 @@ Plug 'thaerkh/vim-indentguides', { 'for': ['go', 'python', 'neosnippet', 'sh', '
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
 Plug 'reedes/vim-wordy', { 'for': 'markdown' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+
+" Tig - Bclose plugin is required to close tig cleanly
+Plug 'iberianpig/tig-explorer.vim'
+Plug 'rbgrouleff/bclose.vim'
 "
 Plug 'voldikss/vim-floaterm'
 Plug 'gmarik/vundle'
@@ -41,7 +45,6 @@ Plug 'mattn/emmet-vim'
 Plug 'jamesroutley/vim-logbook'
 Plug 'metakirby5/codi.vim'
 Plug 'rhysd/vim-clang-format'
-Plug 'iberianpig/tig-explorer.vim'
 Plug 'kana/vim-arpeggio'
 Plug 'benmills/vimux'
 Plug 'roxma/vim-tmux-clipboard'
