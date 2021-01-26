@@ -24,22 +24,19 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
 
 " leader mappings
-let g:leader_map['h'] = [ '<C-W>s'                     , 'split below']
-let g:leader_map['v'] = [ '<C-W>v'                     , 'split right']
-let g:leader_map['f'] = [ 'Files'                      , 'Search all files in current Git Repo' ]
-let g:leader_map['F'] = [ 'Find'                       , 'Custom Find() Use Rg + Fzf to find files' ]
-let g:leader_map['q'] = [ '<c-c>'                      , 'Quit FZF search' ]
-let g:leader_map['r'] = [ 'RnvimrToggle'               , 'Ranger Search' ]
-let g:leader_map['c'] = [ ':!pwd'                      , 'Current working dir' ]
+let g:leader_map['h'] = [ '<C-W>s'                           , 'split below']
+let g:leader_map['v'] = [ '<C-W>v'                           , 'split right']
+let g:leader_map['f'] = [ 'Files'                            , 'Search all files in current Git Repo' ]
+let g:leader_map['F'] = [ 'Find'                             , 'Custom Find() Use Rg + Fzf to find files' ]
+let g:leader_map['q'] = [ '<c-c>'                            , 'Quit FZF search' ]
+let g:leader_map['r'] = [ 'RnvimrToggle'                     , 'Ranger Search' ]
+let g:leader_map['c'] = [ ':!pwd'                            , 'Current working dir' ]
+let g:leader_map['6'] = [ ':Tig'                             , 'Tig explorer' ]
 let g:leader_map['1'] = [ '<Plug>AirlineSelectTab1'          , 'Switch to airline tab 1' ]
 let g:leader_map['2'] = [ '<Plug>AirlineSelectTab2'          , 'Switch to airline tab 2' ]
 let g:leader_map['3'] = [ '<Plug>AirlineSelectTab3'          , 'Switch to airline tab 3' ]
 let g:leader_map['4'] = [ '<Plug>AirlineSelectTab4'          , 'Switch to airline tab 4' ]
 let g:leader_map['5'] = [ '<Plug>AirlineSelectTab5'          , 'Switch to airline tab 5' ]
-let g:leader_map['6'] = [ '<Plug>AirlineSelectTab6'          , 'Switch to airline tab 6' ]
-let g:leader_map['7'] = [ '<Plug>AirlineSelectTab7'          , 'Switch to airline tab 7' ]
-let g:leader_map['8'] = [ '<Plug>AirlineSelectTab8'          , 'Switch to airline tab 8' ]
-let g:leader_map['9'] = [ '<Plug>AirlineSelectTab9'          , 'Switch to airline tab 9' ]
 
 " a is for search
 let g:leader_map.a = {
