@@ -56,6 +56,10 @@ function rl() {
 	docker run --rm -v /var/run/docker.sock:/var/run/docker.sock assaflavie/runlike $1
 }
 
+function ap() {
+	ansible-playbook $1 -v
+}
+
 function sshn {
 	echo "Usage: sshnokey host port"
 	sshhost=$1
