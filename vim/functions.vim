@@ -43,7 +43,7 @@ endfunc
 " function to create directory and cd into it.
 function! CreateDailyFolder()
 	let tstamp = strftime("%m-%d-%y")
-	let folderpath = $HOME."/git/cb/daily/".tstamp
+	let folderpath = $PWD."/".tstamp
 	let cmd = 'cd ' . folderpath
 	if !isdirectory(folderpath)
 		echo 'Dir does not exist, creating:' folderpath
