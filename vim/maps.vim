@@ -45,7 +45,7 @@
 "nnoremap <silent> <leader>gd :call IsNerdTreeOpen(':Git diff')<cr>
 "
 "Golang
-au FileType go nmap <F8> :w <cr> :echo system('go run "' . expand('%') . '"')<cr>
+au FileType go nmap <F8> :echo system('go run "' . expand('%') . '"')<cr>
 au FileType go imap <F8> <Esc> :w <cr> :echo system('go run "' . expand('%') . '"')<cr>
 "Python
 au FileType python nmap <F8> :echo system('python3 "' . expand('%') . '"')<cr>
