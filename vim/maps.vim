@@ -1,49 +1,3 @@
-" tmux-send keys to send commands to other panes.
-"au FileType go nmap <F5> :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<cr><cr>
-"au FileType go imap <F5> <Esc> :w <cr> :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<cr><cr>
-"nnoremap <silent> ,rg :execute ":!tmux send-keys -t 3 C-c 'go run *.go' C-m"<cr><cr>
-"au FileType go nmap <F5><F5> :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<cr><cr>
-"au FileType go imap <F5><F5> <Esc> :w <cr> :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<cr><cr>
-"nnoremap <silent> ,gr :execute ":!tmux send-keys -t 3 'go run *.go' C-m"<cr><cr>
-"nnoremap <silent> ,c :execute ":!tmux send-keys -t 3 C-c"<cr><cr>
-"nnoremap <silent> ,cl :execute ":!tmux send-keys -t 3 clear"<cr><cr>
-"au FileType python nmap <F5> :execute ":!tmux send-keys -t bottom 'python3 *.py' C-m"<cr><cr>
-"au FileType python imap <F5> <Esc> :w <cr> :execute ":!tmux send-keys -t bottom 'python3 *.py' C-m"<cr><cr>
-
-"au FileType terraform nmap <F5> :execute ":!tmux send-keys -t bottom 'terraform apply -auto-approve' C-m"<cr><cr>
-"au FileType terraform imap <F5> <Esc> :w <cr> :execute ":!tmux send-keys -t bottom 'terraform apply -auto-approve' C-m"<cr><cr>
-
-"au FileType terraform nmap <F6> :execute ":!tmux send-keys -t bottom 'terraform destroy -auto-approve' C-m"<cr><cr>
-"au FileType terraform imap <F6> <Esc> :w <cr> :execute ":!tmux send-keys -t bottom 'terraform destroy -auto-approve' C-m"<cr><cr>
-
-"More send keys madness
-"nnoremap <silent> ,dkps :execute ":!tmux send-keys -t 2 'docker ps' C-m"<cr><cr>
-"nnoremap <silent> ,mpl :execute ":!tmux send-keys -t 2 'make post-linux' C-m"<cr><cr>
-"nnoremap <silent> ,mpr :execute ":!tmux send-keys -t 2 'make post-registrator' C-m"<cr><cr>
-"nnoremap <silent> ,cl :execute ":!tmux send-keys -t 2 'clear' C-m"<cr><cr>
-"nnoremap <silent> ,pa :execute ":!tmux send-keys -t 2 './apply.sh' C-m"<cr><cr>
-"
-" run the current file with rspec
-"let g:VimuxPromptString = "run: "
-"map <Leader>rb :call VimuxRunCommand("clear; rspec " . bufname("%"))<cr>
-"map <Leader>vp :VimuxPromptCommand<cr>
-"map <Leader>vl :VimuxRunLastCommand<cr>
-"map <Leader>vi :VimuxInspectRunner<cr>
-"map <Leader>vq :VimuxCloseRunner<cr>
-"map <Leader>vx :VimuxInterruptRunner<cr>
-"map <Leader>vz :call VimuxZoomRunner()<cr>
-"
-"nnoremap mkd :call CreateDailyFolder()<cr>
-
-" Quickly copy a file in the buffer
-"nnoremap <leader>c :call CopyCurrentFile()<cr>
-"
-" map space rather than colon
-"nmap <space> :
-
-"nnoremap <silent> <leader>gs :call IsNerdTreeOpen(':Git status')<cr>
-"nnoremap <silent> <leader>gd :call IsNerdTreeOpen(':Git diff')<cr>
-"
 "Golang
 au FileType go nmap <F8> :echo system('go run "' . expand('%') . '"')<cr>
 au FileType go imap <F8> <Esc> :w <cr> :echo system('go run "' . expand('%') . '"')<cr>
@@ -69,8 +23,6 @@ au FileType json imap <F8> <Esc> :w <cr> :echo system('python -m json.tool "' . 
 au FileType go nmap <leader><F12> :GoDecls<cr>
 au FileType go nmap <F12> <Plug>(go-def)
 
-
-"This should be taken care of using coc, basically close single and double
 "quotes
 autocmd FileType python,go inoremap " ""<left>
 autocmd FileType python,go inoremap ' ''<left>
@@ -110,7 +62,6 @@ nmap ,ch :CheckHealth<cr>
 nmap ,up :UpdateRemotePlugins<cr>
 " shortcut for vundle
 nmap ,bi :PlugInstall<cr>
-nmap ,gib :GoInstallBinaries<cr>
 " reload snippets
 nnoremap ,rs :call neosnippet#variables#set_snippets({})<cr>
 
@@ -207,7 +158,6 @@ nmap tn :tabn<cr>
 map <leader>cd :lcd %:h<cr>
 " Open files located in the same dir in with the current file is edited
 map <leader>ew :e <C-R>=expand("%:p:h") . "/" <cr>
-
 
 " Delete everything in the file and start over, good for scratch testing.
 nnoremap <localleader>d :1,$d<cr>
