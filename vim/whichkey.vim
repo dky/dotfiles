@@ -36,6 +36,10 @@ let g:leader_map['2'] = [ '<Plug>AirlineSelectTab2'          , 'Switch to airlin
 let g:leader_map['3'] = [ '<Plug>AirlineSelectTab3'          , 'Switch to airline tab 3' ]
 let g:leader_map['4'] = [ '<Plug>AirlineSelectTab4'          , 'Switch to airline tab 4' ]
 let g:leader_map['5'] = [ '<Plug>AirlineSelectTab5'          , 'Switch to airline tab 5' ]
+let g:leader_map['6'] = [ '<Plug>AirlineSelectTab6'          , 'Switch to airline tab 6' ]
+let g:leader_map['7'] = [ '<Plug>AirlineSelectTab7'          , 'Switch to airline tab 7' ]
+let g:leader_map['8'] = [ '<Plug>AirlineSelectTab8'          , 'Switch to airline tab 8' ]
+let g:leader_map['9'] = [ '<Plug>AirlineSelectTab9'          , 'Switch to airline tab 9' ]
 
 " a is for search
 let g:leader_map.a = {

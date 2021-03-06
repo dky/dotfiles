@@ -131,10 +131,12 @@ nnoremap ,s` ciw`<C-r>"`<Esc>
 nnoremap ,s[ ciw[<C-r>"]<Esc>
 nnoremap ,s( ciw(<C-r>")<Esc>
 nnoremap ,s{ ciw{<C-r>"}<Esc>
-" Python docstring or markdown code block - Select text with visual mode +
-" shift + " or shift + `
+" Python docstring or markdown code block fencing
+" 1. Select text with shift + v
+" 2. Shift + S + " or / to fence
 let b:surround_{char2nr('"')} = "\"\"\"\r\"\"\""
 let b:surround_{char2nr('`')} = "\`\`\`\r\`\`\`"
+let b:surround_{char2nr('b')} = "\`\`\`bash\r\`\`\`"
 
 " neosnippets
 imap <C-l> <Plug>(neosnippet_expand_or_jump)

@@ -20,7 +20,9 @@ export PYTHONDONTWRITEBYTECODE=1
 [ -f ~/.dotfiles/z.sh ] && source ~/.dotfiles/z.sh
 
 # Kubctl bash completions
-source <(kubectl completion bash)
+if [ -x "$(command -v kubectl)" ]; then
+	source <(kubectl completion bash)
+fi
 
 # Don't exit the shell on ctrl+d
 shopt -s -o ignoreeof
