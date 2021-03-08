@@ -94,6 +94,11 @@ let g:leader_map.m = {
 let g:localleader_map['t'] = [ 'TestFile'                   , 'TestFile']
 let g:localleader_map['q'] = [ '<c-c>'                      , 'Quit FZF search' ]
 
+let g:localleader_map.g = {
+      \ 'name' : '+go' ,
+      \ 'f' : [':GoFmt'         , 'Go Fmt']
+      \ }
+
 let g:localleader_map.c = {
       \ 'name' : '+codi' ,
       \ 'c' : [':Codi'         , 'Start Codi'],
