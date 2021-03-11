@@ -45,7 +45,7 @@ nmap <right> <nop>
 imap <F1> <Esc>
 nmap <F1> :RnvimrToggle<cr>
 
-nnoremap <F4> :call NumberToggle()<cr>
+nnoremap <silent> <F4> :call NumberToggle()<cr>
 
 " Comment out blocks of code using nerdcommenter
 nmap <F7> <leader>c<space>
