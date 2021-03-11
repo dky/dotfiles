@@ -3,6 +3,7 @@ function! NumberToggle()
 	if(&number == 1 && &list == 1)
 		set nonumber
 		set nolist
+		set signcolumn=no
 		GitGutterDisable
 		"ALEDisable
 		IndentGuidesToggle
@@ -11,6 +12,7 @@ function! NumberToggle()
 	else
 		set number
 		set list
+		set signcolumn=yes
 		GitGutterEnable
 		"ALEEnable
 		IndentGuidesToggle
