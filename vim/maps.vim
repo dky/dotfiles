@@ -88,6 +88,9 @@ nnoremap ,s{ ciw{<C-r>"}<Esc>
 let b:surround_{char2nr('"')} = "\"\"\"\r\"\"\""
 let b:surround_{char2nr('`')} = "\`\`\`\r\`\`\`"
 let b:surround_{char2nr('b')} = "\`\`\`bash\r\`\`\`"
+" Handle fencing in *.md files where the first letter is auto capitalized.
+let b:surround_{char2nr('~')} = "\`\`\`\r\`\`\`"
+let b:surround_{char2nr('B')} = "\`\`\`bash\r\`\`\`"
 
 " neosnippets
 imap <C-l> <Plug>(neosnippet_expand_or_jump)
