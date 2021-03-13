@@ -113,3 +113,6 @@ let g:localleader_map.1 = {
 " Register which key map
 call which_key#register('<Space>', "g:leader_map")
 call which_key#register(',', "g:localleader_map")
+
+"Clear out highlighting from search"
+map <leader>l :nohl<CR>
