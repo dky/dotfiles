@@ -117,5 +117,5 @@ call which_key#register(',', "g:localleader_map")
 
 "Clear out highlighting from search
 map <silent><leader>l :nohl<CR>
-"Leader p runs python
-au FileType python nmap <silent><leader>p :echo system('python3 "' . expand('%') . '"')<CR>
+"Leader <space> or <space><space> runs python
+au FileType python nmap <silent><leader><leader> :echo system('python3 "' . expand('%') . '"')<CR>
