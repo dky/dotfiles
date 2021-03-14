@@ -102,7 +102,8 @@ let g:localleader_map.g = {
 let g:localleader_map.c = {
       \ 'name' : '+codi' ,
       \ 'c' : [':Codi'         , 'Start Codi'],
-      \ 't' : [':Codi!'        , 'Toggle Codi'],
+      \ 'd' : [':Codi!'        , 'Deactivate Codi'],
+      \ 't' : [':Codi!!'       , 'Codi Codi'],
       \ }
 
 let g:localleader_map.1 = {
