@@ -78,7 +78,7 @@ let g:leader_map.g = {
       \ 'd' : [':Git diff --cached'      , 'git diff --cached'],
       \ 'c' : [':Git checkout'           , 'git checkout'],
       \ 'p' : [':Git push origin HEAD'   , 'git push origin HEAD'],
-      \ 't' : [':Tig'                    , 'Git Tig'],
+      \ 't' : [':Tig'                    , 'git Tig'],
       \ }
 
 let g:leader_map.m = {
@@ -117,3 +117,5 @@ call which_key#register(',', "g:localleader_map")
 
 "Clear out highlighting from search
 map <silent><leader>l :nohl<CR>
+"Leader p runs python
+au FileType python nmap <silent><leader>p :echo system('python3 "' . expand('%') . '"')<CR>
