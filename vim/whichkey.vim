@@ -31,6 +31,7 @@ let g:leader_map['F'] = [ 'Find'                             , 'Custom Find() Us
 let g:leader_map['q'] = [ '<c-c>'                            , 'Quit FZF search' ]
 let g:leader_map['r'] = [ 'RnvimrToggle'                     , 'Ranger Search' ]
 let g:leader_map['c'] = [ ':!pwd'                            , 'Current working dir' ]
+let g:leader_map['nc'] = [ ':nc'                             , 'No Conceal' ]
 let g:leader_map['1'] = [ '<Plug>AirlineSelectTab1'          , 'Switch to airline tab 1' ]
 let g:leader_map['2'] = [ '<Plug>AirlineSelectTab2'          , 'Switch to airline tab 2' ]
 let g:leader_map['3'] = [ '<Plug>AirlineSelectTab3'          , 'Switch to airline tab 3' ]
