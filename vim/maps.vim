@@ -43,7 +43,7 @@ nmap <right> <nop>
 
 " map F1 vim help to esc, kept bringing up the help menu in insert mode
 imap <F1> <Esc>
-nmap <F1> :RnvimrToggle<cr>
+nmap <F1> :NERDTreeToggle<cr>
 
 nnoremap <silent> <F4> :call NumberToggle()<cr>
 
