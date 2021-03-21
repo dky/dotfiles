@@ -3,7 +3,6 @@ if has('nvim')
 	" pip3 install --user pynvim
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins', 'for': 'python' }
-	Plug 'kevinhwang91/rnvimr', { 'branch': 'main' }
 else
 endif
 
@@ -38,7 +37,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
-Plug 'scrooloose/nerdcommenter'
+Plug 'preservim/nerdcommenter'
+Plug 'preservim/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'godlygeek/tabular'
 Plug 'mattn/emmet-vim'
