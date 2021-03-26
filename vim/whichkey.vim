@@ -65,6 +65,9 @@ let g:leader_map.t = {
       \ 'n' : [':FloatermNext'        , 'Next Floaterm'],
       \ 'p' : [':FloatermPrev'        , 'Prev Floaterm'],
       \ 't' : [':FloatermToggle'      , 'Toggle Floaterm'],
+      \ 'a' : [':FloatermSend mp a'   , 'Make public algorithms'],
+      \ 'd' : [':FloatermSend mp d'   , 'Make public dky'],
+      \ 'k' : [':FloatermSend mp k'   , 'Make public keycap'],
       \ }
 
 let g:leader_map.g = {
