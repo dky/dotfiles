@@ -68,6 +68,7 @@ let g:leader_map.t = {
       \ 'a' : [':FloatermSend mp a'   , 'Make public algorithms'],
       \ 'd' : [':FloatermSend mp d'   , 'Make public dky'],
       \ 'k' : [':FloatermSend mp k'   , 'Make public keycap'],
+      \ '7' : [':FloatermSend pytest' , 'pytest'],
       \ }
 
 let g:leader_map.g = {
