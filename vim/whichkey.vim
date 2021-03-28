@@ -42,6 +42,7 @@ let g:leader_map['6'] = [ '<Plug>AirlineSelectTab6'          , 'Switch to airlin
 let g:leader_map['7'] = [ '<Plug>AirlineSelectTab7'          , 'Switch to airline tab 7' ]
 let g:leader_map['8'] = [ '<Plug>AirlineSelectTab8'          , 'Switch to airline tab 8' ]
 let g:leader_map['9'] = [ '<Plug>AirlineSelectTab9'          , 'Switch to airline tab 9' ]
+let g:leader_map['y'] = [ ':FloatermSend pytest'             , 'Send pytest to floatterm' ]
 
 " a is for search
 let g:leader_map.a = {
@@ -69,7 +70,6 @@ let g:leader_map.t = {
       \ 'a' : [':FloatermSend mp a'   , 'Make public algorithms'],
       \ 'd' : [':FloatermSend mp d'   , 'Make public dky'],
       \ 'k' : [':FloatermSend mp k'   , 'Make public keycap'],
-      \ '7' : [':FloatermSend pytest' , 'pytest'],
       \ }
 
 let g:leader_map.g = {
