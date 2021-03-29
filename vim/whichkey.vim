@@ -33,6 +33,8 @@ let g:leader_map['q'] = [ '<c-c>'                            , 'Quit FZF search'
 let g:leader_map['r'] = [ 'RnvimrToggle'                     , 'Ranger Search' ]
 let g:leader_map['c'] = [ ':!pwd'                            , 'Current working dir' ]
 let g:leader_map['n'] = [ ':set conceallevel=0'              , 'No Conceal' ]
+let g:leader_map['y'] = [ ':FloatermSend pytest'             , 'Send pytest to floatterm' ]
+let g:leader_map['p'] = [ '<M-p>'                            , 'Toggle Autopairs' ]
 let g:leader_map['1'] = [ '<Plug>AirlineSelectTab1'          , 'Switch to airline tab 1' ]
 let g:leader_map['2'] = [ '<Plug>AirlineSelectTab2'          , 'Switch to airline tab 2' ]
 let g:leader_map['3'] = [ '<Plug>AirlineSelectTab3'          , 'Switch to airline tab 3' ]
@@ -42,7 +44,6 @@ let g:leader_map['6'] = [ '<Plug>AirlineSelectTab6'          , 'Switch to airlin
 let g:leader_map['7'] = [ '<Plug>AirlineSelectTab7'          , 'Switch to airline tab 7' ]
 let g:leader_map['8'] = [ '<Plug>AirlineSelectTab8'          , 'Switch to airline tab 8' ]
 let g:leader_map['9'] = [ '<Plug>AirlineSelectTab9'          , 'Switch to airline tab 9' ]
-let g:leader_map['y'] = [ ':FloatermSend pytest'             , 'Send pytest to floatterm' ]
 
 " a is for search
 let g:leader_map.a = {
