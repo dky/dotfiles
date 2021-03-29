@@ -23,9 +23,9 @@ au FileType json imap <F8> <Esc> :w <cr> :echo system('python -m json.tool "' . 
 au FileType go nmap <leader><F12> :GoDecls<cr>
 au FileType go nmap <F12> <Plug>(go-def)
 
-"quotes
-autocmd FileType python,go inoremap " ""<left>
-autocmd FileType python,go inoremap ' ''<left>
+"auto pair quotes
+"autocmd FileType python,go inoremap " ""<left>
+"autocmd FileType python,go inoremap ' ''<left>
 
 autocmd FileType python call SemshiCustomHighlights()
 
