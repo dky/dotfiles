@@ -32,7 +32,7 @@ autocmd FileType python call SemshiCustomHighlights()
 " remap leader to space local leader to , since your middle is probably
 " stronger than your pinky.
 let mapleader = "\<Space>"
-let maplocalleader = ','
+let maplocalleader = '\'
 
 " remap esc to jk
 imap jk <Esc>
@@ -183,6 +183,7 @@ nnoremap <silent> <Left> :bp<cr>
 
 " Quickly create Python scratch files.
 nnoremap <F3> :execute 'edit ~/tmp/py_' . strftime("%m%d%y_%H%M%S") . '.py'<cr>
+nnoremap <F3><F3> :execute 'edit ~/tmp/go_' . strftime("%m%d%y_%H%M%S") . '.go'<cr>
 nnoremap <leader>it :IndentGuidesToggle<cr>
 
 " Python help
