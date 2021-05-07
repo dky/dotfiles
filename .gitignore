@@ -5,3 +5,4 @@
 *.swm
 *.swn
 tags
+.gitconfig
