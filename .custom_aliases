@@ -71,6 +71,7 @@ alias tls="tmux ls"
 alias Git='git'
 alias gi='git init'
 alias ga='git add'
+alias gA='git add -A'
 alias gpd='git pull origin HEAD'
 alias gpu='git push origin HEAD'
 alias gpuf='git push origin HEAD --force'
