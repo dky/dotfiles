@@ -280,4 +280,5 @@ alias rmv="rm -rf ~/.local/share/nvim/view/*"
 
 # ruby
 alias be="bundle exec"
+alias bi="bundle install"
 alias rkl="rake list"
