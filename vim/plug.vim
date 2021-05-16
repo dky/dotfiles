@@ -27,6 +27,7 @@ Plug 'iberianpig/tig-explorer.vim'
 Plug 'rbgrouleff/bclose.vim'
 "
 Plug 'voldikss/vim-floaterm'
+Plug 'voldikss/fzf-floaterm'
 Plug 'gmarik/vundle'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
