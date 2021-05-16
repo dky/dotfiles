@@ -85,15 +85,6 @@ let g:floaterm_title='ft: $1/$2'
 " vim sneak
 let g:sneak#label = 1
 
-" Ranger
-"nnoremap <silent> <leader>r :RnvimrToggle<CR>.
-" Make Ranger to be hidden after picking a file
-let g:rnvimr_enable_picker = 1
-" Disable a border for floating window
-let g:rnvimr_draw_border = 0
-" Hide the files included in gitignore
-let g:rnvimr_hide_gitignore = 1
-
 "vim-test
 let test#python#runner = 'pytest'
 let test#strategy = "floaterm"
