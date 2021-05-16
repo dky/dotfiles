@@ -73,10 +73,12 @@ alias gi='git init'
 alias ga='git add'
 alias gA='git add -A'
 alias gpd='git pull origin HEAD'
+alias gcmp='git commit -p'
 alias gpu='git push origin HEAD'
 alias gpuf='git push origin HEAD --force'
 alias gl='git log --pretty --pretty=oneline'
-alias gs='git status'
+alias gsh='git show'
+alias gst='git status'
 alias gd='git diff'
 alias gcma='git add . && git commit -m'
 alias gcm='git commit -m'
@@ -282,3 +284,6 @@ alias rmv="rm -rf ~/.local/share/nvim/view/*"
 alias be="bundle exec"
 alias bi="bundle install"
 alias rkl="rake list"
+
+# shortcut to source dotfiles
+alias sca="source ~/.custom_aliases"
