@@ -16,7 +16,7 @@ Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'b4b4r07/vim-hcl'
 Plug 'hashivim/vim-terraform'
 " Indenting guides
-Plug 'thaerkh/vim-indentguides', { 'for': ['go', 'python', 'neosnippet', 'sh', 'yaml', 'tf', 'html', 'js', 'vue'] }
+Plug 'thaerkh/vim-indentguides', { 'for': ['go', 'python', 'neosnippet', 'sh', 'yaml', 'tf', 'html', 'js', 'vue', 'ruby'] }
 "
 " Writing plugins
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
