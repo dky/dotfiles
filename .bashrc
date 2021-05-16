@@ -29,3 +29,9 @@ shopt -s -o ignoreeof
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
+	export VISUAL="nvr -cc split --remote-wait +'set bufhidden=wipe'"
+else
+	export VISUAL="nvim"
+fi
