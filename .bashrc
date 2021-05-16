@@ -31,7 +31,7 @@ shopt -s -o ignoreeof
 export PATH="$PATH:$HOME/.rvm/bin"
 
 if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
-	export VISUAL="nvr -cc split --remote-wait +'set bufhidden=wipe'"
+	export VISUAL="nvr --remote-wait +'set bufhidden=wipe'"
 else
 	export VISUAL="nvim"
 fi
