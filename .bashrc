@@ -31,6 +31,9 @@ shopt -s -o ignoreeof
 export PATH="$PATH:$HOME/.rvm/bin"
 
 if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
+	# Set my ni alias to call nvr by default when inside a nvim terminal
+	alias ni="nvr"
+	# https://thoughtbot.com/upcase/videos/neovim-remote-as-preferred-editor
 	export VISUAL="nvr --remote-wait +'set bufhidden=wipe'"
 else
 	export VISUAL="nvim"
