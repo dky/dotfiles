@@ -63,6 +63,7 @@ let g:leader_map.s = {
 
 let g:leader_map.t = {
       \ 'name' : '+floatterm: ' ,
+      \ 'f' : [':Floaterms'           , 'Use fzf to find terms'],
       \ 's' : [':FloatermShow'        , 'Show Floaterm'],
       \ '1' : [':FloatermNew'         , 'New Floaterm'],
       \ 'n' : [':FloatermNext'        , 'Next Floaterm'],
