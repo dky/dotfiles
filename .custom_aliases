@@ -288,7 +288,7 @@ alias rkl="rake list"
 alias rvml="rvm list"
 alias rvmv="rvm -v"
 
-alias rubyv"ruby -version"
+alias rubyv="ruby -v"
 
 # shortcut to source dotfiles
 alias sca="source ~/.custom_aliases"
