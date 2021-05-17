@@ -286,6 +286,7 @@ alias be="bundle exec"
 alias bi="bundle install"
 
 alias rtl="bundle exec rake --tasks"
+alias rkl="bundle exec rake --tasks"
 
 alias rvml="rvm list"
 alias rvmv="rvm -v"
