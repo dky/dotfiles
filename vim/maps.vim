@@ -1,3 +1,6 @@
+"Ruby
+au FileType ruby nmap <F8> :echo system('ruby "' . expand('%') . '"')<cr>
+au FileType ruby imap <F8> <Esc> :w <cr> :echo system('ruby "' . expand('%') . '"')<cr>
 "Golang
 au FileType go nmap <F8> :echo system('go run "' . expand('%') . '"')<cr>
 au FileType go imap <F8> <Esc> :w <cr> :echo system('go run "' . expand('%') . '"')<cr>
