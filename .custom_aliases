@@ -285,5 +285,10 @@ alias be="bundle exec"
 alias bi="bundle install"
 alias rkl="rake list"
 
+alias rvml="rvm list"
+alias rvmv="rvm -v"
+
+alias rubyv"ruby -version"
+
 # shortcut to source dotfiles
 alias sca="source ~/.custom_aliases"
