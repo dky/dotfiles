@@ -84,6 +84,7 @@ alias gcma='git add . && git commit -m'
 alias gcm='git commit -m'
 alias gco='git checkout'
 alias gra='git remote add origin'
+alias grv='git remote -v'
 alias gc='git clone'
 alias gb='git branch'
 alias gbl='git branch -v'
@@ -287,6 +288,9 @@ alias bi="bundle install"
 
 alias rtl="bundle exec rake --tasks"
 alias rkl="bundle exec rake --tasks"
+
+# capistrano
+alias cpl="cap --tasks"
 
 alias rvml="rvm list"
 alias rvmv="rvm -v"
