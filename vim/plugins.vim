@@ -47,6 +47,9 @@ let g:clang_format#style_options = {
 
 set omnifunc=syntaxcomplete#Complete
 
+" Moar FZF!
+let g:fzf_layout = { 'window': { 'width': 1.0, 'height': 1.0, 'highlight': 'Comment' } }
+
 let g:fzf_action = {
 			\ 'ctrl-t': 'tab split',
 			\ 'ctrl-i': 'split',
