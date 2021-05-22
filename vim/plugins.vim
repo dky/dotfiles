@@ -52,7 +52,7 @@ let g:fzf_action = {
 			\ 'ctrl-i': 'split',
 			\ 'ctrl-v': 'vsplit' }
 
-" <leader>f opens rg fzf to search files.
+" :Find or whichkey F opens ripgrep fzf to search files.
 command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, {'options': '--no-preview'}, <bang>0)
 
 " mac dictionary
