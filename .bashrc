@@ -31,12 +31,12 @@ shopt -s -o ignoreeof
 export PATH="$PATH:$HOME/.rvm/bin"
 
 if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
-	# Set my ni alias to call nvr by default when inside a nvim terminal
-	#alias ni="nvr"
-	# Don't use nvr since I'm mostly using this inside of floaterm, just open the file in a new buffer using floaterm
+	# If inside of floaterm just open the file in a new buffer using floaterm
 	alias ni="floaterm"
+	# make alias for e as well!
 	alias e="floaterm"
 	# https://thoughtbot.com/upcase/videos/neovim-remote-as-preferred-editor
+	# Used my git commit - git commit gets ugly without this
 	export VISUAL="nvr --remote-wait +'set bufhidden=wipe'"
 else
 	export VISUAL="nvim"
