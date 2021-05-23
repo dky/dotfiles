@@ -134,7 +134,7 @@ if has('nvim')
 	tnoremap <A-k> <c-\><c-n><c-w>k
 	tnoremap <A-l> <c-\><c-n><c-w>l
 	" Exit out of a floaterm with jk
-	tnoremap jk <C-\><C-n> :FloatermToggle<cr>
+	tnoremap <silent> jk <C-\><C-n> :FloatermToggle<cr>
 endif
 
 " navigate 4x faster when holding down Ctrl
