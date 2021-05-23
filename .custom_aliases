@@ -71,6 +71,7 @@ alias tls="tmux ls"
 alias Git='git'
 alias gi='git init'
 alias ga='git add'
+alias gg='git grep'
 alias gA='git add -A'
 alias gpd='git pull origin HEAD'
 alias gcmp='git commit -p'
