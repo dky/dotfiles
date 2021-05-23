@@ -24,17 +24,17 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
 
 " leader mappings
-let g:leader_map['h'] = [ '<C-W>s'                           , 'split below']
-let g:leader_map['v'] = [ '<C-W>v'                           , 'split right']
-let g:leader_map['j'] = [ '<C-W>w'                           , 'jump splits']
+let g:leader_map['c'] = [ ':!pwd'                            , 'Current working dir' ]
 let g:leader_map['f'] = [ 'Files'                            , 'Search all files in current Git Repo' ]
 let g:leader_map['F'] = [ 'Find'                             , 'Custom Find() Use Rg + Fzf to find files' ]
+let g:leader_map['h'] = [ '<C-W>s'                           , 'split below']
+let g:leader_map['j'] = [ '<C-W>w'                           , 'jump splits']
+let g:leader_map['n'] = [ ':set conceallevel=0'              , 'No Conceal' ]
+let g:leader_map['p'] = [ '<M-p>'                            , 'Toggle Autopairs' ]
 let g:leader_map['q'] = [ '<c-c>'                            , 'Quit FZF search' ]
 let g:leader_map['r'] = [ ':FloatermNew ranger'              , 'Floaterm Ranger Search' ]
-let g:leader_map['c'] = [ ':!pwd'                            , 'Current working dir' ]
-let g:leader_map['n'] = [ ':set conceallevel=0'              , 'No Conceal' ]
+let g:leader_map['v'] = [ '<C-W>v'                           , 'split right']
 let g:leader_map['y'] = [ ':FloatermSend pytest'             , 'Send pytest to floatterm' ]
-let g:leader_map['p'] = [ '<M-p>'                            , 'Toggle Autopairs' ]
 let g:leader_map['1'] = [ '<Plug>AirlineSelectTab1'          , 'Switch to airline tab 1' ]
 let g:leader_map['2'] = [ '<Plug>AirlineSelectTab2'          , 'Switch to airline tab 2' ]
 let g:leader_map['3'] = [ '<Plug>AirlineSelectTab3'          , 'Switch to airline tab 3' ]
@@ -61,7 +61,7 @@ let g:leader_map.s = {
       \ 'f' : [':GFiles'        , 'Search only Git checked in files'],
       \ }
 
-let g:leader_map.t = {
+let g:leader_map.n = {
       \ 'name' : '+floatterm: ' ,
       \ 'f' : [':Floaterms'           , 'Use fzf to find terms'],
       \ 's' : [':FloatermShow'        , 'Show Floaterm'],
