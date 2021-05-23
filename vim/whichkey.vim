@@ -29,6 +29,7 @@ let g:leader_map['f'] = [ 'Files'                            , 'Search all files
 let g:leader_map['F'] = [ 'Find'                             , 'Custom Find() Use Rg + Fzf to find files' ]
 let g:leader_map['h'] = [ '<C-W>s'                           , 'split below']
 let g:leader_map['j'] = [ '<C-W>w'                           , 'jump splits']
+let g:leader_map['o'] = [ ':FloatermToggle'                  , 'Toggle Floaterm']
 let g:leader_map['n'] = [ ':set conceallevel=0'              , 'No Conceal' ]
 let g:leader_map['p'] = [ '<M-p>'                            , 'Toggle Autopairs' ]
 let g:leader_map['q'] = [ '<c-c>'                            , 'Quit FZF search' ]
