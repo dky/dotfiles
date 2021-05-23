@@ -33,6 +33,7 @@ let g:leader_map['o'] = [ ':FloatermToggle'                  , 'Toggle Floaterm'
 let g:leader_map['n'] = [ ':set conceallevel=0'              , 'No Conceal' ]
 let g:leader_map['p'] = [ '<M-p>'                            , 'Toggle Autopairs' ]
 let g:leader_map['q'] = [ '<c-c>'                            , 'Quit FZF search' ]
+let g:leader_map['w'] = [ ':!tmux new-window bash -ci fp'    , 'Switch tmux sessions' ]
 let g:leader_map['r'] = [ ':FloatermNew ranger'              , 'Floaterm Ranger Search' ]
 let g:leader_map['v'] = [ '<C-W>v'                           , 'split right']
 let g:leader_map['y'] = [ ':FloatermSend pytest'             , 'Send pytest to floatterm' ]
