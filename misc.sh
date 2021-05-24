@@ -1,6 +1,9 @@
 #!/bin/bash
 # This script is to bootstrap Coc post nvim coc plugin install. It's mean't to suppliment anything we can't do after running plug install.
 
+# Brew install bat for syntax highlighting with fzf
+brew install bat
+
 # Ranger devicons
 if [ -d "~/.config/ranger/plugins/ranger_devicons" ] 
 then

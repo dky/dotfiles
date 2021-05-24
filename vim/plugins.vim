@@ -50,6 +50,9 @@ set omnifunc=syntaxcomplete#Complete
 " Moar FZF!
 let g:fzf_layout = { 'window': { 'width': 1.0, 'height': 1.0, 'highlight': 'Comment' } }
 
+" This relies on the bat command for rendering terminal colors - brew install bat, this is also in the misc.sh script
+let $FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --layout reverse --margin=1,4 --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
+
 let g:fzf_action = {
 			\ 'ctrl-t': 'tab split',
 			\ 'ctrl-i': 'split',
