@@ -22,7 +22,9 @@ fzf_then_open_in_editor() {
 # Disable ctr-t in .fzf/key-bindings.bash and override with this function which opens a file directly in vim when ctrl-t is used.
 bind -x '"\C-t": fzf_then_open_in_editor'
 
-export FZF_DEFAULT_OPTS='--height=90% --preview="cat {}" --preview-window=down:60%:wrap --color fg:-1,bg:-1,hl:230,fg+:3,bg+:233,hl+:229 --color info:150,prompt:110,spinner:150,pointer:167,marker:174'
+# Rely on bat command `brew install bat` for preview syntax highlighting
+export FZF_DEFAULT_OPTS='--ansi --preview-window 'right:60%' --layout reverse --margin=1,4 --preview "bat --color=always --style=header,grid --line-range :300 {}"'
+#export FZF_DEFAULT_OPTS='--height=90% --preview="cat {}" --preview-window=down:60%:wrap --color fg:-1,bg:-1,hl:230,fg+:3,bg+:233,hl+:229 --color info:150,prompt:110,spinner:150,pointer:167,marker:174'
 
 # Files I don't want to see this applies to vim as well...
 export FZF_FIND_EXCLUDE="\( -name Music -o -name logbook -o -name Library -o -name Pictures -o -name Public -o -name Movies -o -name Applications -o -name Downloads \) -prune \
