@@ -98,6 +98,8 @@ let g:leader_map.m = {
       \ '2' : [':call CopyCurrentFile()'             , 'create copy of current file'],
       \ 'b' : [':set ft=sh'                          , 'Set filetype to sh'],
       \ 'p' : [':set ft=python'                      , 'Set filetype to python'],
+      \ 'r' : [':call EditLangFile("rb")'            , 'Open a ruby tmp file for editing'],
+      \ 'g' : [':call EditLangFile("go")'            , 'Open a go tmp file for editing'],
       \ }
 
 " localleader mappings
