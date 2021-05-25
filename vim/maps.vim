@@ -188,9 +188,7 @@ nnoremap <silent> <Left> :bp<cr>
 
 " Quickly create Python scratch files.
 nnoremap <F3> :execute 'edit ~/tmp/py_' . strftime("%m%d%y_%H%M%S") . '.py'<cr>
-" Keep F3 to open python files but for new files call which key + m + file
-" type which calls the EditLangFile() func
-"nnoremap <F3><F3> :execute 'edit ~/tmp/go_' . strftime("%m%d%y_%H%M%S") . '.go'<cr>
+nnoremap <F3><F3> :execute 'edit ~/tmp/go_' . strftime("%m%d%y_%H%M%S") . '.go'<cr>
 nnoremap <leader>it :IndentGuidesToggle<cr>
 
 " Python help
