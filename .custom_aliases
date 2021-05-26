@@ -301,3 +301,5 @@ alias rubyv="ruby -v"
 
 # shortcut to source dotfiles
 alias sca="source ~/.custom_aliases"
+
+alias gri="grep -i"
