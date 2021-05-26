@@ -303,3 +303,6 @@ alias rubyv="ruby -v"
 alias sca="source ~/.custom_aliases"
 
 alias gri="grep -i"
+
+# Chewbacca
+alias cba="chewbacca"
