@@ -257,7 +257,7 @@ alias cdconf="cd ~/.config"
 # pet aliases
 alias ptedit="pet edit"
 alias ptl="pet list"
-alias pts="pet search"
+alias pts="FZF_DEFAULT_OPTS="" pet search"
 alias ptn="pet new"
 alias pte="pet exec"
 alias ptsc="pet search | pbcopy"
