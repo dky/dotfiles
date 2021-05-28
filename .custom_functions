@@ -338,7 +338,7 @@ function dcr() {
 	COMPOSE_FILE=${FILE:-docker-compose.yml} 
 	docker-compose -f $COMPOSE_FILE restart
 }
-function dcs() {
+function dcd() {
 	echo Stopping: $1
 	FILE=$1
 	COMPOSE_FILE=${FILE:-docker-compose.yml} 
