@@ -31,6 +31,9 @@ shopt -s -o ignoreeof
 export PATH="$PATH:$HOME/.rvm/bin"
 
 if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
+	# Load up fzf settings in terminal
+	export FZF_DEFAULT_OPTS=""
+	source ~/.fzf.bash
 	# If inside of floaterm just open the file in a new buffer using floaterm
 	alias ni="floaterm"
 	# make alias for e as well!
