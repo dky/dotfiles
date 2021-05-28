@@ -38,7 +38,7 @@ let mapleader = "\<Space>"
 let maplocalleader = '\'
 
 " remap esc to jk
-imap jk <Esc>
+"imap jk <Esc>
 
 " no l/r arrow keys
 nmap <left> <nop>
