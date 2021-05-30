@@ -17,6 +17,10 @@ cabbrev gcma Git add .<cr>:Git commit -m ""<Left><C-R>=Eatchar('\s')<cr>
 cabbrev gam Git commit --amend
 cabbrev gamend Git commit --amend
 
+" Floaterm
+cabbrev fts FloatermSend
+cabbrev ftn FloatermNew
+
 " Reload snippets
 cabbrev rs call neosnippet#variables#set_snippets({})<cr>
 
