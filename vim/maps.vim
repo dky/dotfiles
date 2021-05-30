@@ -135,6 +135,9 @@ if has('nvim')
 	tnoremap <A-l> <c-\><c-n><c-w>l
 	" Exit out of a floaterm with jk
 	tnoremap <silent> jk <C-\><C-n> :FloatermToggle<cr>
+	" Experiment with this, unsure if this is going to interfere with double
+	" spaces
+	tnoremap <Space><Space> <C-\><C-n> :FloatermToggle<cr>
 endif
 
 " navigate 4x faster when holding down Ctrl
