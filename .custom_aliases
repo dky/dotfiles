@@ -226,6 +226,7 @@ alias py="python3"
 alias chux="chmod u+x"
 #apt update
 alias aptupdate="sudo apt-get update && sudo apt-get -y upgrade"
+alias sai="sudo apt-get -y install mosh"
 
 #nvim alias to ni
 alias ni=nvim
