@@ -132,4 +132,4 @@ map <silent><leader>l :nohl<CR>
 "Leader <space> or <space><space> runs python
 "au FileType python nmap <silent><leader><leader> :echo system('python3 "' . expand('%') . '"')<CR>
 " Space + Space brings up floaterm
-nmap <leader><leader> :FloatermToggle<CR>
+nmap <silent><leader><leader> :FloatermToggle<CR>
