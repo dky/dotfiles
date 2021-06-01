@@ -35,3 +35,6 @@ au BufReadPost *.gohtml set syntax=html
 
 " When opening markdown files call WordProcessorMode
 au BufNewFile,BufRead *.md call WordProcessorMode()
+
+" When opening Jenkinsfiles set syntax to groovy
+au BufNewFile,BufRead Jenkinsfile setf groovy
