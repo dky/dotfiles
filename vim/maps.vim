@@ -136,8 +136,9 @@ if has('nvim')
 	" Exit out of a floaterm with jk
 	tnoremap <silent> jk <C-\><C-n><C-\><C-n> :FloatermToggle<cr>
 	" Experiment with this, unsure if this is going to interfere with double
-	" spaces
-	tnoremap <silent><Space><Space> <C-\><C-n><C-\><C-n> :FloatermToggle<cr>
+	" spaces - Removing space space as an escape sequence this ended up
+	" hindering typing in a nested terminal.
+	"tnoremap <silent><Space><Space> <C-\><C-n><C-\><C-n> :FloatermToggle<cr>
 endif
 
 " navigate 4x faster when holding down Ctrl
