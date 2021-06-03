@@ -137,7 +137,7 @@ if has('nvim')
 	tnoremap <silent> jk <C-\><C-n> :FloatermToggle<cr>
 	" Experiment with this, unsure if this is going to interfere with double
 	" spaces
-	tnoremap <silent><Space><Space> <C-\><C-n> :FloatermToggle<cr>
+	tnoremap <silent><Space><Space> <C-\><C-n><C-\><C-n> :FloatermToggle<cr>
 endif
 
 " navigate 4x faster when holding down Ctrl
