@@ -98,6 +98,7 @@ alias gamend='git commit --amend'
 alias gdiff='git diff'
 alias gbc='git checkout -b'
 alias grmo="git remote rm origin"
+alias grrm="git remote rm"
 
 #vim alias
 alias vi="vim"
