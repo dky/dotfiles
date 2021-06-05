@@ -37,9 +37,6 @@ autocmd FileType python call SemshiCustomHighlights()
 let mapleader = "\<Space>"
 let maplocalleader = '\'
 
-" remap esc to jk
-"imap jk <Esc>
-
 " no l/r arrow keys
 nmap <left> <nop>
 nmap <right> <nop>
@@ -121,6 +118,10 @@ map F <Plug>Sneak_S
 "inoremap [ []<left>
 "inoremap { {}<left>
 
+" remap esc to jk if in insert mode to avoid the reach, this is also being
+" used for terminal mode esc so don't get them confused, see below
+imap jk <Esc>
+
 " Experiments with nvim terminal
 if has('nvim')
 	" map esc back to something sane in terminal mode.
@@ -133,8 +134,10 @@ if has('nvim')
 	tnoremap <A-j> <c-\><c-n><c-w>j
 	tnoremap <A-k> <c-\><c-n><c-w>k
 	tnoremap <A-l> <c-\><c-n><c-w>l
-	" Exit out of a floaterm with jk
+	" Exit out of a floaterm with jk if in terminal insert mode
 	tnoremap <silent> jk <C-\><C-n><C-\><C-n> :FloatermToggle<cr>
+	" Exit out of a floaterm with jk if in not in terminal insert mode
+	nnoremap <silent> jk :FloatermToggle<cr>
 	" Experiment with this, unsure if this is going to interfere with double
 	" spaces - Removing space space as an escape sequence this ended up
 	" hindering typing in a nested terminal.
