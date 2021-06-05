@@ -285,6 +285,8 @@ alias ifa="/sbin/ifconfig -a | less"
 
 # nvim views nuke
 alias rmv="rm -rf ~/.local/share/nvim/view/*"
+" nvim - I typed this thinking "rm vim cache"
+alias rmvc="rm -rf ~/.local/share/nvim/view/*"
 
 # ruby
 alias be="bundle exec"
