@@ -87,15 +87,15 @@ endfunction
 " toggle terminal
 
 " command :REPLToggle <empty>, :REPLToggle python
-command! -nargs=* REPLToggle :call <SID>REPLToggle(<f-args>)
+"command! -nargs=* REPLToggle :call <SID>REPLToggle(<f-args>)
 
-nnoremap <silent><leader>tt :call <SID>REPLToggle()<CR>
-tnoremap <silent><leader>tt <C-\><C-n> :call <SID>REPLToggle()<CR>
+"nnoremap <silent><leader>tt :call <SID>REPLToggle()<CR>
+"tnoremap <silent><leader>tt <C-\><C-n> :call <SID>REPLToggle()<CR>
 " restart terminal
-nnoremap <silent><leader>tr :call <SID>REPLRestart()<CR>
+"nnoremap <silent><leader>tr :call <SID>REPLRestart()<CR>
 " send current line
-nnoremap <silent><leader><CR> :call <SID>REPLSendLine()<CR>
+"nnoremap <silent><leader><CR> :call <SID>REPLSendLine()<CR>
 " send visual selection
 " ('> goes to the beginning of the last line of the last selected Visual
 " area in the current buffer)
-vnoremap <silent><leader><CR> :<C-u>call <SID>REPLSendSelection()<CR>'>
+"vnoremap <silent><leader><CR> :<C-u>call <SID>REPLSendSelection()<CR>'>
