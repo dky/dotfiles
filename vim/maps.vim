@@ -137,9 +137,9 @@ if has('nvim')
 	" Exit out of a floaterm with tt if in terminal insert mode
 	" This used to be mapped to jk but those are movement keys in terminal
 	" normal mode
-	tnoremap <silent> tt <C-\><C-n><C-\><C-n> :FloatermToggle<cr>
+	tnoremap <silent> <leader>tt <C-\><C-n><C-\><C-n> :FloatermToggle<cr>
 	" Exit out of a floaterm with tt if in not in terminal insert mode
-	nnoremap <silent> tt :FloatermToggle<cr>
+	nnoremap <silent> <leader>tt :FloatermToggle<cr>
 	" Experiment with this, unsure if this is going to interfere with double
 	" spaces - Removing space space as an escape sequence this ended up
 	" hindering typing in a nested terminal.
