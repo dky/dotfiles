@@ -25,6 +25,8 @@ source ~/.dotfiles/vim/airline.vim
 source ~/.dotfiles/vim/ale.vim
 " whichkey
 source ~/.dotfiles/vim/whichkey.vim
+" floaterm
+source ~/.dotfiles/vim/floaterm.vim
 " gutentags
 "source ~/.dotfiles/vim/gutentags.vim
 
