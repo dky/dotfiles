@@ -1,8 +1,5 @@
-" don't enter insert mode after opening a floaterm
-let g:floaterm_autoinsert=0
-
-" floaterm
-"let g:floaterm_autoinsert=1
+" enter insert mode after opening a floaterm
+let g:floaterm_autoinsert=1
 let g:floaterm_width=1.0
 let g:floaterm_height=0.8
 let g:floaterm_autoclose=0
