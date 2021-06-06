@@ -71,6 +71,8 @@ let g:leader_map.n = {
       \ 'a' : [':FloatermSend mp a'   , 'Make public algorithms'],
       \ 'd' : [':FloatermSend mp d'   , 'Make public dky'],
       \ 'k' : [':FloatermSend mp k'   , 'Make public keycap'],
+      \ 'g' : [':call FtGo()'         , 'Open go specific floaterm'],
+      \ 't' : [':FloatermSend --name=go go test'      , 'Go test to a term'],
       \ }
 
 let g:leader_map.g = {
