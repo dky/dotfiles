@@ -4,7 +4,13 @@ let g:floaterm_autoclose=0
 " when opening files inside of a float open in new buffer
 let g:floaterm_opener='edit'
 
-" Floaterm
+let g:floaterm_width=1.0
+let g:floaterm_height=0.8
+let g:floaterm_position='bottom'
+let g:floaterm_title='default'
+"let g:floaterm_title='ft: $1/$2'
+
+
 cabbrev fts FloatermSend
 cabbrev ftn FloatermNext
 cabbrev ftp FloatermPrev
