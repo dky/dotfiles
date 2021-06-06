@@ -66,11 +66,8 @@ let g:leader_map.s = {
 let g:leader_map.n = {
       \ 'name' : '+floatterm: ' ,
       \ 'f' : [':Floaterms'           , 'Use fzf to find terms'],
-      \ 's' : [':FloatermShow'        , 'Show Floaterm'],
-      \ '1' : [':FloatermNew'         , 'New Floaterm'],
       \ 'n' : [':FloatermNext'        , 'Next Floaterm'],
       \ 'p' : [':FloatermPrev'        , 'Prev Floaterm'],
-      \ 't' : [':FloatermToggle'      , 'Toggle Floaterm'],
       \ 'a' : [':FloatermSend mp a'   , 'Make public algorithms'],
       \ 'd' : [':FloatermSend mp d'   , 'Make public dky'],
       \ 'k' : [':FloatermSend mp k'   , 'Make public keycap'],
