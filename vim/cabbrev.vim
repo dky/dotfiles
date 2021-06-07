@@ -17,6 +17,8 @@ cabbrev gcma Git add .<cr>:Git commit -m ""<Left><C-R>=Eatchar('\s')<cr>
 cabbrev gam Git commit --amend
 cabbrev gamend Git commit --amend
 
+" Add @dpr for github cc's
+cabbrev @dpr @DanielRussell
 
 " Reload snippets
 cabbrev rs call neosnippet#variables#set_snippets({})<cr>
