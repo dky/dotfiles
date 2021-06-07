@@ -11,6 +11,7 @@ let g:floaterm_title='default'
 "let g:floaterm_title='ft: $1/$2'
 
 
+cabbrev ftne FloatermNew
 cabbrev fts FloatermSend
 cabbrev ftn FloatermNext
 cabbrev ftp FloatermPrev
