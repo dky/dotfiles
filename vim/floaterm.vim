@@ -11,11 +11,12 @@ let g:floaterm_title='default'
 "let g:floaterm_title='ft: $1/$2'
 
 
-cabbrev ftne FloatermNew
+cabbrev ftc FloatermNew
 cabbrev fts FloatermSend
 cabbrev ftn FloatermNext
 cabbrev ftp FloatermPrev
 cabbrev ftl Floaterms
+cabbrev ftls Floaterms
 
 function! FtGo()
 	execute 'FloatermNew --name=go --title=go --width=1.0 --height=0.8 --position=bottom --silent'
