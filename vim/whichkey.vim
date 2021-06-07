@@ -8,7 +8,6 @@ let g:localleader_map =  {}
 " Define a separator
 let g:which_key_sep = '→'
 " set timeoutlen=100
-
 " Don't float
 let g:which_key_use_floating_win = 0
 
@@ -29,12 +28,12 @@ let g:leader_map['f'] = [ 'Files'                            , 'Search all files
 let g:leader_map['F'] = [ 'Find'                             , 'Custom Find() Use Rg + Fzf to find files' ]
 let g:leader_map['h'] = [ '<C-W>s'                           , 'split below']
 let g:leader_map['j'] = [ '<C-W>w'                           , 'jump splits']
-let g:leader_map['t'] = [ ':FloatermToggle'                  , 'Toggle Floaterm']
+"let g:leader_map['t'] = [ ':Reserved - Don't use            , 'This is already being mapped via floaterm.vim, do not re-use it.']
 let g:leader_map['o'] = [ ':set conceallevel=0'              , 'No Conceal' ]
 let g:leader_map['p'] = [ '<M-p>'                            , 'Toggle Autopairs' ]
 let g:leader_map['q'] = [ '<c-c>'                            , 'Quit FZF search' ]
 let g:leader_map['w'] = [ ':!tmux new-window bash -ci fp'    , 'Switch tmux sessions' ]
-let g:leader_map['r'] = [ ':FloatermNew ranger'              , 'Floaterm Ranger Search' ]
+"let g:leader_map['r'] = [ ':Reserved - Don't use            , 'Plan to use this to run files similar to F8.' ]
 let g:leader_map['v'] = [ '<C-W>v'                           , 'split right']
 let g:leader_map['y'] = [ ':FloatermSend pytest'             , 'Send pytest to floatterm' ]
 let g:leader_map['1'] = [ '<Plug>AirlineSelectTab1'          , 'Switch to airline tab 1' ]
@@ -47,7 +46,6 @@ let g:leader_map['7'] = [ '<Plug>AirlineSelectTab7'          , 'Switch to airlin
 let g:leader_map['8'] = [ '<Plug>AirlineSelectTab8'          , 'Switch to airline tab 8' ]
 let g:leader_map['9'] = [ '<Plug>AirlineSelectTab9'          , 'Switch to airline tab 9' ]
 
-" a is for search
 let g:leader_map.a = {
       \ 'name' : '+ale' ,
       \ 'a' : ['ALEFix'        , 'ALEFix'],
@@ -55,12 +53,10 @@ let g:leader_map.a = {
       \ 'i' : ['ALEInfo'       , 'Get more info on ALE'],
       \ }
 
-" a is for ale
-let g:leader_map.s = {
-      \ 'name' : '+search' ,
-      \ 'b' : [':BLines'        , 'Search current buffer'],
-      \ 'B' : [':Lines'         , 'Search all **open** buffers'],
-      \ 'f' : [':GFiles'        , 'Search only Git checked in files'],
+let g:leader_map.e = {
+      \ 'name' : '+edit' ,
+      \ 'r' : [':call EditLangFile("rb")'            , 'Open a ruby tmp file for editing'],
+      \ 'g' : [':call EditLangFile("go")'            , 'Open a go tmp file for editing'],
       \ }
 
 let g:leader_map.n = {
@@ -75,20 +71,6 @@ let g:leader_map.n = {
       \ 't' : [':FloatermSend --name=go go test'      , 'Go test to a term'],
       \ }
 
-let g:leader_map.g = {
-      \ 'name' : '+git' ,
-      \ 'a' : [':Git add .'              , 'git add .'],
-      \ 's' : [':Git status'             , 'git status'],
-      \ '6' : [':Git branch'             , 'git branch'],
-      \ '7' : [':Git branch -a'          , 'git branch -a'],
-      \ '1' : [':Git commit'             , 'git commit'],
-      \ '2' : [':Git commit --amend'     , 'git commit --amend'],
-      \ 'r' : [':Git reset --hard'       , 'git reset --hard'],
-      \ 'd' : [':Git diff --cached'      , 'git diff --cached'],
-      \ 'c' : [':Git checkout'           , 'git checkout'],
-      \ 'p' : [':Git push origin HEAD'   , 'git push origin HEAD'],
-      \ 't' : [':Tig'                    , 'git Tig'],
-      \ }
 
 let g:leader_map.m = {
       \ 'name' : '+misc' ,
@@ -97,11 +79,17 @@ let g:leader_map.m = {
       \ '2' : [':call CopyCurrentFile()'             , 'create copy of current file'],
       \ 'b' : [':set ft=sh'                          , 'Set filetype to sh'],
       \ 'p' : [':set ft=python'                      , 'Set filetype to python'],
-      \ 'r' : [':call EditLangFile("rb")'            , 'Open a ruby tmp file for editing'],
-      \ 'g' : [':call EditLangFile("go")'            , 'Open a go tmp file for editing'],
+      \ 'r' : [':FloatermNew ranger'                 , 'Call ranger from floaterm'],
       \ }
 
-" localleader mappings
+let g:leader_map.s = {
+      \ 'name' : '+search' ,
+      \ 'b' : [':BLines'        , 'Search current buffer'],
+      \ 'B' : [':Lines'         , 'Search all **open** buffers'],
+      \ 'f' : [':GFiles'        , 'Search only Git checked in files'],
+      \ }
+
+" localleader \ mappings
 let g:localleader_map['t'] = [ 'TestFile'                   , 'TestFile']
 let g:localleader_map['q'] = [ '<c-c>'                      , 'Quit FZF search' ]
 
@@ -128,7 +116,5 @@ call which_key#register(',', "g:localleader_map")
 
 "Clear out highlighting from search
 map <silent><leader>l :nohl<CR>
-"Leader <space> or <space><space> runs python
-"au FileType python nmap <silent><leader><leader> :echo system('python3 "' . expand('%') . '"')<CR>
-" Space + Space brings up floaterm
+" Space + Space brings up toggles floaterm
 nmap <silent><leader><leader> :FloatermToggle<CR>
