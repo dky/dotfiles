@@ -313,3 +313,6 @@ alias cba="chewbacca"
 
 # markdown viewer md go get github.com/tlight/md -n 3 = update every 3 seconds
 alias md="md -p 3050 -n 3"
+
+# Alias to sync up all .dotconfigs
+alias pd="cd ~/.dotfiles && git pull origin master && cd ~/.vim && git pull origin master && cd ~/.vim-dictionary && git pull origin master && cd ~/.config && git pull origin master"
