@@ -16,6 +16,7 @@ cabbrev fts FloatermSend
 cabbrev ftn FloatermNext
 cabbrev ftp FloatermPrev
 cabbrev ftl Floaterms
+cabbrev fth FloatermHide
 cabbrev ftls Floaterms
 
 function! FtGo()
