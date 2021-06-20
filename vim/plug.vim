@@ -51,7 +51,7 @@ Plug 'rhysd/vim-clang-format'
 Plug 'kana/vim-arpeggio'
 Plug 'benmills/vimux'
 Plug 'roxma/vim-tmux-clipboard'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'pbogut/fzf-mru.vim'
 Plug 'dense-analysis/ale'
