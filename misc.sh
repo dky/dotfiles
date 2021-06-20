@@ -6,7 +6,10 @@ if [ "$(uname)" == "Darwin" ]; then
 	brew install bat
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 	echo "On Linux, installing nodejs, npm because this is required for Coc to work"
-	sudo apt-get -y install nodejs npm fzf
+	sudo apt-get -y install nodejs npm
+	# Get latest fzf
+	git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+	~/.fzf/install
 fi
 
 # Ranger devicons
