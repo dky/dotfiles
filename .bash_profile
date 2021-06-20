@@ -38,11 +38,15 @@ if [ -x /usr/games/cowsay -a -x /usr/games/fortune ]; then
 	fortune | cowsay
 fi
 
+if which pyenv >/dev/null; then
+
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
+fi
+
 fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
