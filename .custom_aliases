@@ -154,6 +154,7 @@ alias suod="sudo"
 alias gob="go build main.go"
 alias gor="go run"
 alias cdgo="cd /Users/dky/go/src/github.com/dky"
+alias gov="go version"
 
 #digital ocean
 alias doctlls="doctl droplet list"
@@ -227,7 +228,7 @@ alias py="python3"
 alias chux="chmod u+x"
 #apt update
 alias aptupdate="sudo apt-get update && sudo apt-get -y upgrade"
-alias sai="sudo apt-get -y install mosh"
+alias sai="sudo apt-get -y install"
 
 #nvim alias to ni
 alias ni=nvim
