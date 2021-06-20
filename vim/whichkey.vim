@@ -29,6 +29,7 @@ let g:leader_map['F'] = [ 'Find'                             , 'Custom Find() Us
 let g:leader_map['h'] = [ '<C-W>s'                           , 'split below']
 let g:leader_map['j'] = [ '<C-W>w'                           , 'jump splits']
 "let g:leader_map['t'] = [ ':Reserved - Don't use            , 'This is already being mapped via floaterm.vim, do not re-use it.']
+let g:leader_map['t'] = [ ':FloatermToggle'                  , 'Toggle Floaterm, space space also does this']
 let g:leader_map['o'] = [ ':set conceallevel=0'              , 'No Conceal' ]
 let g:leader_map['p'] = [ '<M-p>'                            , 'Toggle Autopairs' ]
 let g:leader_map['q'] = [ '<c-c>'                            , 'Quit FZF search' ]
