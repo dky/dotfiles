@@ -38,7 +38,7 @@ if [ -x /usr/games/cowsay -a -x /usr/games/fortune ]; then
 	fortune | cowsay
 fi
 
-if which pyenv >/dev/null; then
+if [ -x  ~/.pyenv/bin/pyenv ]; then
 
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
