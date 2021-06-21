@@ -9,7 +9,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 	sudo apt-get -y install nodejs npm
 	# Get latest fzf
 	git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-	~/.fzf/install
+	y | ~/.fzf/install
 fi
 
 # Ranger devicons
