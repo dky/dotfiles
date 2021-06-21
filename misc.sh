@@ -10,6 +10,8 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 	# Get latest fzf
 	git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 	y | ~/.fzf/install
+	# Undo any modifications the .fzf.bash file
+	git checkout ~/.dotfiles/.fzf.bash
 fi
 
 # Ranger devicons
