@@ -10,8 +10,7 @@ let g:floaterm_position='bottom'
 let g:floaterm_title='default'
 "let g:floaterm_title='ft: $1/$2'
 
-
-cabbrev ftc FloatermNew
+cabbrev ftc FloatermNew bash
 cabbrev fts FloatermSend
 cabbrev ftn FloatermNext
 cabbrev ftp FloatermPrev
