@@ -137,7 +137,7 @@ if has('nvim')
 	" Exit out of a floaterm with tt if in terminal insert mode
 	" This used to be mapped to jk but those are movement keys in terminal
 	" normal mode
-	tnoremap <silent> <leader>tt <C-\><C-n> \| :FloatermToggle<CR>
+	tnoremap <leader>tt <C-\><C-n>:FloatermToggle<CR>
 	" Exit out of a floaterm with tt if in not in terminal insert mode
 	"nnoremap <silent> <leader>tt :FloatermToggle<cr>
 	" Experiment with this, unsure if this is going to interfere with double
