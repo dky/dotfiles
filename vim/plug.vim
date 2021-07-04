@@ -3,7 +3,8 @@ if has('nvim')
 	" pip3 install --user pynvim
 	Plug 'neovim/nvim-lspconfig'
 	Plug 'hrsh7th/nvim-compe'
-	Plug 'nvim-treesitter/nvim-treesitter'
+	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+	Plug 'nvim-treesitter/playground', {'do': ':TSUpdate'}
 else
 endif
 
