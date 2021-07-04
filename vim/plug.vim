@@ -1,16 +1,12 @@
 if has('nvim')
 	" Do this at the OS level, then Run :UpdateRemotePlugins
 	" pip3 install --user pynvim
-	" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'neovim/nvim-lspconfig'
 	Plug 'hrsh7th/nvim-compe'
 	Plug 'nvim-treesitter/nvim-treesitter'
-	"Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins', 'for': 'python' }
 else
 endif
 
-"Plug 'posva/vim-vue'
-"Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'jeetsukumaran/vim-pythonsense', { 'for': 'python' }
 Plug 'jmcantrell/vim-virtualenv'
 Plug 'vim-test/vim-test'
@@ -63,13 +59,10 @@ Plug '907th/vim-auto-save'
 Plug 'fatih/vim-hclfmt'
 Plug 'dky/vim-aftercolors'
 Plug 'luochen1990/rainbow'
-"Ctags pre-requisite
-"brew install --HEAD universal-ctags/universal-ctags/universal-ctags
-"Plug 'ludovicchabant/vim-gutentags'
+
 Plug 'majutsushi/tagbar'
 "Ranger
 Plug 'ryanoasis/vim-devicons'
-"Plug 'sheerun/vim-polyglot'
 Plug 'liuchengxu/vim-which-key'
 Plug 'wellle/targets.vim'
 Plug 'jiangmiao/auto-pairs'
