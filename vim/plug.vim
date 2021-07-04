@@ -12,7 +12,6 @@ Plug 'jeetsukumaran/vim-pythonsense', { 'for': 'python' }
 Plug 'jmcantrell/vim-virtualenv'
 Plug 'vim-test/vim-test'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
-Plug 'b4b4r07/vim-hcl'
 Plug 'hashivim/vim-terraform'
 " Indenting guides
 "Plug 'thaerkh/vim-indentguides', { 'for': ['go', 'python', 'neosnippet', 'sh', 'yaml', 'tf', 'html', 'js', 'vue', 'ruby'] }
