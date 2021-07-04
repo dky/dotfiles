@@ -34,6 +34,7 @@ if has('nvim')
 	source ~/.dotfiles/vim/lsp-config.vim
 	source ~/.dotfiles/vim/python-ls.lua
 	source ~/.dotfiles/vim/compe-config.lua
+	source ~/.dotfiles/vim/treesitter.lua
 else
 endif
 
