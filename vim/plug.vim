@@ -9,16 +9,16 @@ if has('nvim')
 else
 endif
 
-Plug 'posva/vim-vue'
+"Plug 'posva/vim-vue'
+"Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'jeetsukumaran/vim-pythonsense', { 'for': 'python' }
 Plug 'jmcantrell/vim-virtualenv'
 Plug 'vim-test/vim-test'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
-Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'b4b4r07/vim-hcl'
 Plug 'hashivim/vim-terraform'
 " Indenting guides
-Plug 'thaerkh/vim-indentguides', { 'for': ['go', 'python', 'neosnippet', 'sh', 'yaml', 'tf', 'html', 'js', 'vue', 'ruby'] }
+"Plug 'thaerkh/vim-indentguides', { 'for': ['go', 'python', 'neosnippet', 'sh', 'yaml', 'tf', 'html', 'js', 'vue', 'ruby'] }
 "
 " Writing plugins
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
@@ -43,8 +43,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'preservim/nerdcommenter'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
 Plug 'godlygeek/tabular'
 Plug 'mattn/emmet-vim'
