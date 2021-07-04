@@ -32,7 +32,7 @@ source ~/.dotfiles/vim/floaterm.vim
 
 if has('nvim')
 	" coc
-	source ~/.dotfiles/vim/coc.vim
+	"source ~/.dotfiles/vim/coc.vim
 else
 endif
 
