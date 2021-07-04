@@ -3,6 +3,7 @@ if has('nvim')
 	" pip3 install --user pynvim
 	" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'neovim/nvim-lspconfig'
+	Plug 'hrsh7th/nvim-compe'
 	Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins', 'for': 'python' }
 else
 endif
