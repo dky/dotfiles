@@ -31,10 +31,10 @@ source ~/.dotfiles/vim/floaterm.vim
 "source ~/.dotfiles/vim/gutentags.vim
 
 if has('nvim')
-	source ~/.dotfiles/vim/lsp.lua
-	source ~/.dotfiles/vim/compe-config.lua
-	source ~/.dotfiles/vim/compe-words.lua
-	source ~/.dotfiles/vim/treesitter.lua
+	source ~/.dotfiles/lua/lsp.lua
+	source ~/.dotfiles/lua/compe-config.lua
+	source ~/.dotfiles/lua/compe-words.lua
+	source ~/.dotfiles/lua/treesitter.lua
 else
 endif
 
