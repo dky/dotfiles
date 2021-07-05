@@ -33,6 +33,7 @@ source ~/.dotfiles/vim/floaterm.vim
 if has('nvim')
 	source ~/.dotfiles/vim/lsp.lua
 	source ~/.dotfiles/vim/compe-config.lua
+	source ~/.dotfiles/vim/compe-words.lua
 	source ~/.dotfiles/vim/treesitter.lua
 else
 endif
