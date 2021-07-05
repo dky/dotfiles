@@ -30,7 +30,7 @@ au FileType go nmap <F12> <Plug>(go-def)
 "autocmd FileType python,go inoremap " ""<left>
 "autocmd FileType python,go inoremap ' ''<left>
 
-autocmd FileType python call SemshiCustomHighlights()
+"autocmd FileType python call SemshiCustomHighlights()
 
 " remap leader to space local leader to , since your middle is probably
 " stronger than your pinky.
