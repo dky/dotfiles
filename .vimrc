@@ -32,9 +32,12 @@ source ~/.dotfiles/vim/floaterm.vim
 
 if has('nvim')
 	source ~/.dotfiles/lua/lsp.lua
-	source ~/.dotfiles/lua/compe-config.lua
-	source ~/.dotfiles/lua/compe-words.lua
 	source ~/.dotfiles/lua/treesitter.lua
+	autocmd BufNewFile,BufRead *.py source ~/.dotfiles/lua/compe-config.lua
+	"We only use coc at this point for markdown files, with the coc-dictionary
+	"extension, everything else should use nvim lsp until dictionary support is
+	"added
+	autocmd BufNewFile,BufRead *.md source ~/.dotfiles/vim/coc.vim
 else
 endif
 
