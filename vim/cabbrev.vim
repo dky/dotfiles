@@ -1,24 +1,21 @@
 " Git
-cabbrev gs Git status
-cabbrev gba Git branch -a
-cabbrev gcof Git checkout -f
-cabbrev gd Git diff
-cabbrev gco Git checkout
-cabbrev grh Git reset --hard
-cabbrev ga Git add
-cabbrev gcm Git commit -m ""<Left><C-R>=Eatchar('\s')<cr>
-cabbrev gb Git branch
-cabbrev gbc Git checkout -b
-cabbrev gpu Git push origin master
-cabbrev gpoh Git push origin HEAD
-cabbrev gpd Git pull origin master
-cabbrev gl Git log --pretty --pretty=oneline
-cabbrev gcma Git add .<cr>:Git commit -m ""<Left><C-R>=Eatchar('\s')<cr>
-cabbrev gam Git commit --amend
-cabbrev gamend Git commit --amend
-
-" Add @dpr for github cc's
-cabbrev dpr @DanielRussell
+"cabbrev gs Git status
+"cabbrev gba Git branch -a
+"cabbrev gcof Git checkout -f
+"cabbrev gd Git diff
+"cabbrev gco Git checkout
+"cabbrev grh Git reset --hard
+"cabbrev ga Git add
+"cabbrev gcm Git commit -m ""<Left><C-R>=Eatchar('\s')<cr>
+"cabbrev gb Git branch
+"cabbrev gbc Git checkout -b
+"cabbrev gpu Git push origin master
+"cabbrev gpoh Git push origin HEAD
+"cabbrev gpd Git pull origin master
+"cabbrev gl Git log --pretty --pretty=oneline
+"cabbrev gcma Git add .<cr>:Git commit -m ""<Left><C-R>=Eatchar('\s')<cr>
+"cabbrev gam Git commit --amend
+"cabbrev gamend Git commit --amend
 
 " Reload snippets
 cabbrev rs call neosnippet#variables#set_snippets({})<cr>
@@ -40,10 +37,10 @@ cabbrev cdh cd $HOME<cr>
 cabbrev cdg cd $HOME/git<cr>
 cabbrev cdd cd $HOME/.dotfiles<cr>
 " cd to codebreakers dir
-cabbrev cdcb cd $HOME/git/cb<cr>
+"cabbrev cdcb cd $HOME/git/cb<cr>
 
 " set conceallevel=0
-cabbrev nc set conceallevel=0
+"cabbrev nc set conceallevel=0
 
 " Supposed to be Change dir, this might go away since it might be faster to
 " just open the file...
