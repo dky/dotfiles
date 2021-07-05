@@ -31,7 +31,6 @@ source ~/.dotfiles/vim/floaterm.vim
 "source ~/.dotfiles/vim/gutentags.vim
 
 if has('nvim')
-	source ~/.dotfiles/vim/lsp-config.vim
 	source ~/.dotfiles/vim/lsp.lua
 	source ~/.dotfiles/vim/compe-config.lua
 	source ~/.dotfiles/vim/treesitter.lua

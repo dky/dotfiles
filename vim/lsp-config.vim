@@ -1,4 +1,6 @@
 " LSP config (the mappings used in the default file don't quite work right)
+" These settings are already in lsp.lua so keeping this around just for
+" reference.
 nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
 nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
