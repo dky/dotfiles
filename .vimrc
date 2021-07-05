@@ -22,7 +22,7 @@ source ~/.dotfiles/vim/highlights.vim
 " airline
 source ~/.dotfiles/vim/airline.vim
 " ale
-source ~/.dotfiles/vim/ale.vim
+"source ~/.dotfiles/vim/ale.vim
 " whichkey
 source ~/.dotfiles/vim/whichkey.vim
 " floaterm
