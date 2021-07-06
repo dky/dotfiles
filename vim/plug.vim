@@ -6,6 +6,7 @@ if has('nvim')
 	Plug 'hrsh7th/nvim-compe'
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 	Plug 'nvim-treesitter/playground', {'do': ':TSUpdate'}
+	Plug 'p00f/nvim-ts-rainbow'
 else
 endif
 
@@ -59,7 +60,6 @@ Plug 'justinmk/vim-sneak'
 Plug '907th/vim-auto-save'
 Plug 'fatih/vim-hclfmt'
 Plug 'dky/vim-aftercolors'
-Plug 'luochen1990/rainbow'
 
 Plug 'majutsushi/tagbar'
 "Ranger
