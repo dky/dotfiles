@@ -1,7 +1,4 @@
 call plug#begin('~/.vim/plugged')
-" nvim view/cache location
-" $HOME/.local/share/nvim/view
-"
 " Source all plug plugins
 source ~/.dotfiles/vim/plug.vim
 " Load in plugin-specific-configs
@@ -29,19 +26,6 @@ source ~/.dotfiles/vim/whichkey.vim
 source ~/.dotfiles/vim/floaterm.vim
 " gutentags
 "source ~/.dotfiles/vim/gutentags.vim
-
-if has('nvim')
-	source ~/.dotfiles/lua/lsp.lua
-	source ~/.dotfiles/lua/treesitter.lua
-	"call compe for python and go for now
-	autocmd BufNewFile,BufRead *.py,*.go source ~/.dotfiles/lua/compe-config.lua
-	"Only use coc completion for markdown files, with the coc-dictionary
-	"extension, everything else should use nvim compe until multifile
-	"dictionary support is added
-	"coc-plugin is only enabled for markdown files see plug.vim
-	autocmd BufNewFile,BufRead *.md source ~/.dotfiles/vim/coc.vim
-else
-endif
 
 filetype on
 set ruler
