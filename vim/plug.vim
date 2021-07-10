@@ -8,6 +8,8 @@ if has('nvim')
 	Plug 'nvim-treesitter/playground', {'do': ':TSUpdate'}
 	Plug 'p00f/nvim-ts-rainbow'
 	Plug 'sbdchd/neoformat'
+	Plug 'hrsh7th/vim-vsnip'
+	Plug 'hrsh7th/vim-vsnip-integ'
 else
 endif
 
@@ -40,8 +42,8 @@ Plug 'fatih/molokai'
 Plug 'w0ng/vim-hybrid'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'Shougo/neosnippet.vim'
-Plug 'Shougo/neosnippet-snippets'
+"Plug 'Shougo/neosnippet.vim'
+"Plug 'Shougo/neosnippet-snippets'
 Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
