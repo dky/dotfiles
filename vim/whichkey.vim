@@ -48,10 +48,8 @@ let g:leader_map['8'] = [ '<Plug>AirlineSelectTab8'          , 'Switch to airlin
 let g:leader_map['9'] = [ '<Plug>AirlineSelectTab9'          , 'Switch to airline tab 9' ]
 
 let g:leader_map.a = {
-      \ 'name' : '+ale' ,
-      \ 'a' : ['ALEFix'        , 'ALEFix'],
-      \ 't' : ['ALEToggle'     , 'Toggle ALE on/off'],
-      \ 'i' : ['ALEInfo'       , 'Get more info on ALE'],
+      \ 'name' : '+neoformat' ,
+      \ 'p' : ['Neoformat'        , 'Run Neoformat on Python files'],
       \ }
 
 let g:leader_map.e = {

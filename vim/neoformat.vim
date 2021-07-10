@@ -1,1 +1,1 @@
-let g:neoformat_enabled_python = ['autopep8', 'yapf', 'docformatter']
+let g:neoformat_enabled_python = ['yapf']
