@@ -7,6 +7,7 @@ if has('nvim')
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 	Plug 'nvim-treesitter/playground', {'do': ':TSUpdate'}
 	Plug 'p00f/nvim-ts-rainbow'
+	Plug 'sbdchd/neoformat'
 else
 endif
 
