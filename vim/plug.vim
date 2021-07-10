@@ -1,7 +1,6 @@
 if has('nvim')
 	" Do this at the OS level, then Run :UpdateRemotePlugins
 	" pip3 install --user pynvim
-	Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': 'markdown'}
 	Plug 'neovim/nvim-lspconfig'
 	Plug 'hrsh7th/nvim-compe'
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
