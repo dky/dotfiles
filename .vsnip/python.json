@@ -1,0 +1,6 @@
+{
+  "filename": {
+    "prefix": ["prt"],
+    "body": "print($1)$0"
+  }
+}
