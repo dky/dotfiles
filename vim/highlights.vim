@@ -31,3 +31,13 @@ autocmd InsertLeave * hi Comment ctermfg=59
 "function! SemshiCustomHighlights()
 "	hi semshiSelected ctermfg=231 ctermbg=237
 "endfunction
+"
+"nvim-lsp
+" Errors in Red
+hi LspDiagnosticsVirtualTextError ctermfg=Red
+" Warnings in Yellow
+hi LspDiagnosticsVirtualTextWarning ctermfg=Yellow
+" Info and Hints in White
+hi LspDiagnosticsVirtualTextInformation ctermfg=White
+hi LspDiagnosticsVirtualTextHint ctermfg=White
+hi LspDiagnosticsDefaultError ctermfg=161

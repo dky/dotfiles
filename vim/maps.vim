@@ -209,3 +209,11 @@ autocmd BufRead,BufNewFile *.py inoremap # #<space>
 " Leader q out of finding a file... Much easier than esc + :q!, this is also
 " defined in whichkeys so we don't re-map that to something else.
 autocmd! FileType fzf tnoremap <buffer> <leader>q <c-c>
+
+"call compe for python and go for now
+autocmd BufNewFile,BufRead *.py,*.go source ~/.dotfiles/lua/compe-config.lua
+"Only use coc completion for markdown files, with the coc-dictionary
+"extension, everything else should use nvim compe until multifile
+"dictionary support is added
+"coc-plugin is only enabled for markdown files see plug.vim
+autocmd BufNewFile,BufRead *.md source ~/.dotfiles/vim/coc.vim
