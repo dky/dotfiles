@@ -9,7 +9,6 @@ if has('nvim')
 	Plug 'p00f/nvim-ts-rainbow'
 	Plug 'sbdchd/neoformat'
 	Plug 'hrsh7th/vim-vsnip'
-	Plug 'hrsh7th/vim-vsnip-integ'
 else
 endif
 
