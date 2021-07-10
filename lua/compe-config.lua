@@ -28,7 +28,7 @@ require'compe'.setup {
     nvim_lsp = true;
     nvim_lua = true;
 	 vsnip = true;
-    spell = false;
+    spell = true;
     tags = true;
     snippets_nvim = true;
     treesitter = true;
