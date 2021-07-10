@@ -28,16 +28,6 @@ let NERDTreeAutoDeleteBuffer = 1
 "set autoread
 au CursorHold * if exists("t:NerdTreeBufName") | call <SNR>15_refreshRoot() | endif
 
-" neosnippets
-"let g:neosnippet#snippets_directory='~/.vim/snippets'
-"let g:neosnippet#enable_snipmate_compatibility = 1
-" Autosave broke snippet expansion
-" https://github.com/Shougo/neosnippet.vim/issues/331
-" :help g:neosnippet#enable_auto_clear_markers
-"let g:neosnippet#enable_auto_clear_markers = 0
-" Get rid of preview popup
-"set completeopt-=preview
-
 " clangformat C code
 let g:clang_format#style_options = {
 			\ "AccessModifierOffset" : -4,

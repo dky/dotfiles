@@ -92,14 +92,6 @@ let b:surround_{char2nr('b')} = "\`\`\`bash\r\`\`\`"
 let b:surround_{char2nr('~')} = "\`\`\`\r\`\`\`"
 let b:surround_{char2nr('B')} = "\`\`\`bash\r\`\`\`"
 
-" neosnippets
-"imap <C-l> <Plug>(neosnippet_expand_or_jump)
-"smap <C-l> <Plug>(neosnippet_expand_or_jump)
-"xmap <C-l> <Plug>(neosnippet_expand_target)
-"nnoremap <leader>rs :call neosnippet#variables#set_snippets({})<cr>
-" Pull up help docs for snippet syntax
-"nnoremap <leader>hs :help neosnippet-snippet-syntax<cr>
-
 " map to <Leader>cf in C++ code
 autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<cr>
 autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<cr>
