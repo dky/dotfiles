@@ -1,4 +1,5 @@
 vim.o.completeopt = "menuone,noselect"
+-- require'compe'.register_source('words', require'compe-custom-dictionary')
 
 require'compe'.setup {
 	enabled = true;
@@ -32,6 +33,7 @@ require'compe'.setup {
 		tags = true;
 		snippets_nvim = true;
 		treesitter = true;
+		words = true;
 	};
 }
 local t = function(str)
