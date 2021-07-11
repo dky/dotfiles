@@ -63,7 +63,7 @@ command! -range Fmtsh <line1>!format_shell_cmd.py
 "let g:indentguides_firstlevel = 1
 "let g:indentguides_conceal_color = 'ctermfg=238 ctermbg=234'
 
-let g:indent_blankline_space_char = '┆'
+"let g:indent_blankline_space_char = '┆'
 
 " terraform-vim plugin
 "let g:terraform_fmt_on_save=1
