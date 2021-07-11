@@ -1,7 +1,5 @@
-source ~/.dotfiles/lua/compe-config.lua
-
 " LSP diagnostics on hover
-autocmd CursorHold * lua vim.lsp.diagnostic.show_line_diagnostics()
+"autocmd CursorHold * lua vim.lsp.diagnostic.show_line_diagnostics()
 
 " Let there be signs
 sign define LspDiagnosticsSignError text=✖
