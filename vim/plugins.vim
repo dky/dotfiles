@@ -58,10 +58,12 @@ let g:vim_mac_dictionary_use_app = 1
 command! -range Fmtsh <line1>!format_shell_cmd.py
 
 " vim-indentguides
-let g:indentguides_spacechar = '┆'
-let g:indentguides_tabchar = '|'
-let g:indentguides_firstlevel = 1
-let g:indentguides_conceal_color = 'ctermfg=238 ctermbg=234'
+"let g:indentguides_spacechar = '┆'
+"let g:indentguides_tabchar = '|'
+"let g:indentguides_firstlevel = 1
+"let g:indentguides_conceal_color = 'ctermfg=238 ctermbg=234'
+
+let g:indent_blankline_space_char = '┆'
 
 " terraform-vim plugin
 "let g:terraform_fmt_on_save=1
