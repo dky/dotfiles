@@ -1,0 +1,16 @@
+{
+    "hle": {
+      "prefix": ["hle"],
+      "body": "[$1]($2)$0",
+      "description": "External link"
+    },
+    "h1": {
+      "prefix": ["H1"],
+      "body": "# $0",
+      "description": "H1 link"
+    },
+    "h6": {
+      "prefix": ["H6"],
+      "body": "###### $0"
+    }
+}
