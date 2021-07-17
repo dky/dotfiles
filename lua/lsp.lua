@@ -62,6 +62,18 @@ nvim_lsp.diagnosticls.setup {
 	},
 	init_options = {
 		linters = {
+			jsonlint = {
+				command = "jsonlint",
+				debounce = 100,
+				args = {"%filepath"},
+				sourceName = "jsonlint",
+				securities = {
+					error = "error",
+					warning = "warning",
+					info = "info",
+					style = "hint"
+				}
+			},
 			shellcheck = {
 				command = "shellcheck",
 				debounce = 100,
@@ -102,6 +114,7 @@ nvim_lsp.diagnosticls.setup {
 			}
 		},
 		filetypes = {
+			json = "jsonlint",
 			sh = "shellcheck",
 			markdown = "markdownlint"
 		},

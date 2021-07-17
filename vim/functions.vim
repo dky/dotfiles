@@ -5,6 +5,7 @@ function! NumberToggle()
 		set nolist
 		set signcolumn=no
 		GitGutterDisable
+		IndentBlanklineDisable
 		"setlocal conceallevel=0
 		"set concealcursor=
 	else
@@ -12,6 +13,7 @@ function! NumberToggle()
 		set list
 		set signcolumn=yes
 		GitGutterEnable
+		IndentBlanklineEnable
 	endif
 endfunc
 
