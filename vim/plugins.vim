@@ -57,13 +57,9 @@ let g:vim_mac_dictionary_use_app = 1
 " Shell command formatter, call this when editing ugly shell one liners with ctr-g
 command! -range Fmtsh <line1>!format_shell_cmd.py
 
-" vim-indentguides
-"let g:indentguides_spacechar = '┆'
-"let g:indentguides_tabchar = '|'
-"let g:indentguides_firstlevel = 1
-"let g:indentguides_conceal_color = 'ctermfg=238 ctermbg=234'
+" indent-blankline-nvim
 
-"let g:indent_blankline_space_char = '┆'
+let g:indent_blankline_space_char = '⋅'
 
 " terraform-vim plugin
 "let g:terraform_fmt_on_save=1
