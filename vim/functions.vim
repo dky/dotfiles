@@ -5,8 +5,6 @@ function! NumberToggle()
 		set nolist
 		set signcolumn=no
 		GitGutterDisable
-		"ALEDisable
-		IndentGuidesToggle
 		"setlocal conceallevel=0
 		"set concealcursor=
 	else
@@ -14,8 +12,6 @@ function! NumberToggle()
 		set list
 		set signcolumn=yes
 		GitGutterEnable
-		"ALEEnable
-		IndentGuidesToggle
 	endif
 endfunc
 
