@@ -2,6 +2,9 @@
 # This script is to bootstrap Coc post nvim coc plugin install. It's mean't to suppliment anything we can't do after running plug install.
 
 if [ "$(uname)" == "Darwin" ]; then
+	sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
 	# Brew install bat for syntax highlighting with fzf
 	brew install bat
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
@@ -24,8 +27,8 @@ else
 fi
 
 # Install Coc - Switch to native LSP soon so we don't have this bloat
-if [ ! -d "~/.config/coc/extensions" ]; then
-mkdir -p ~/.config/coc/extensions
-cd ~/.config/coc/extensions
-npm install coc-dictionary --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-fi
+#if [ ! -d "~/.config/coc/extensions" ]; then
+#mkdir -p ~/.config/coc/extensions
+#cd ~/.config/coc/extensions
+#npm install coc-dictionary --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+#fi
