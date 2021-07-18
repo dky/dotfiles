@@ -221,9 +221,10 @@ alias pipl="pip3 list"
 alias pipf="pip3 freeze > requirements.txt"
 alias pipi="pip3 install"
 alias pipr="pip3 install -r requirements.txt"
-alias pipu="pip install --upgrade pip"
-alias pipv="pip -V"
-alias pipvim="pip3 install flake8 yapf pynvim jedi pylint ranger-fm black pytest neovim-remote flake8"
+alias pipu="pip3 install --upgrade pip"
+alias pipv="pip3 -V"
+# Install pip essentials when bumping or switching vim versions
+alias pipup="pip3 install flake8 pylint yapf black pytest ranger-fm neovim-remote pynvim"
 alias pippurge="pip3 uninstall -y -r <(pip freeze)"
 
 #alias for chmod
