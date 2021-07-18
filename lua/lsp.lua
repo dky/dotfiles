@@ -48,18 +48,31 @@ require'nvim-treesitter.configs'.setup {
 -- Setup diagnostics formaters and linters for non LSP provided files
 nvim_lsp.diagnosticls.setup {
 	on_attach = on_attach,
-	--capabilities = lsp_status.capabilities,
 	cmd = {"diagnostic-languageserver", "--stdio"},
 	filetypes = {
-		"lua",
-		"sh",
 		"markdown",
-		"json",
-		"yaml",
-		"toml"
+		"json"
 	},
 	init_options = {
 		linters = {
+			jsonlint = {
+				command = "jsonlint",
+				isStderr = true,
+				debounce = 100,
+				args = {"--compact"},
+				offsetLine = 0,
+				offsetColumn = 0,
+				sourceName = "jsonlint",
+				formatLines = 1,
+				formatPattern = {
+					"^line (\\d+), col (\\d*), (.+)$",
+					{
+						line = 1,
+						column = 2,
+						message = {3}
+					}
+				}
+			},
 			markdownlint = {
 				command = "markdownlint",
 				isStderr = true,
@@ -80,7 +93,8 @@ nvim_lsp.diagnosticls.setup {
 			}
 		},
 		filetypes = {
-			markdown = "markdownlint"
+			markdown = "markdownlint",
+			json = "jsonlint"
 		},
 		formatters = {
 			shfmt = {
@@ -94,11 +108,7 @@ nvim_lsp.diagnosticls.setup {
 		},
 		formatFiletypes = {
 			sh = "shfmt",
-			json = "prettier",
-			yaml = "prettier",
-			toml = "prettier",
-			markdown = "prettier",
-			lua = "prettier"
+			markdown = "prettier"
 		}
 	}
 }
