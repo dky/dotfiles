@@ -216,15 +216,15 @@ alias venva="source venv/bin/activate"
 alias svenv="source venv/bin/activate"
 alias da="deactivate"
 alias venvd="deactivate"
+# Pip
 alias pipl="pip3 list"
 alias pipf="pip3 freeze > requirements.txt"
 alias pipi="pip3 install"
 alias pipr="pip3 install -r requirements.txt"
+alias pipu="pip install --upgrade pip"
+alias pipv="pip -V"
 alias pipvim="pip3 install flake8 yapf pynvim jedi pylint ranger-fm black pytest neovim-remote flake8"
 alias pippurge="pip3 uninstall -y -r <(pip freeze)"
-alias py="python3"
-alias pipup="pip install --upgrade pip"
-alias pipv="pip -V"
 
 #alias for chmod
 alias chux="chmod u+x"
