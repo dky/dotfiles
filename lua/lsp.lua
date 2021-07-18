@@ -1,8 +1,6 @@
 local nvim_lsp = require('lspconfig')
 
 local on_attach = function(client, bufnr)
-	--require('completion').on_attach()
-
 	local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
 	local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
@@ -62,38 +60,6 @@ nvim_lsp.diagnosticls.setup {
 	},
 	init_options = {
 		linters = {
-			jsonlint = {
-				command = "jsonlint",
-				debounce = 100,
-				args = {"%filepath"},
-				sourceName = "jsonlint",
-				securities = {
-					error = "error",
-					warning = "warning",
-					info = "info",
-					style = "hint"
-				}
-			},
-			shellcheck = {
-				command = "shellcheck",
-				debounce = 100,
-				args = {"--format", "json", "-"},
-				sourceName = "shellcheck",
-				parseJson = {
-					line = "line",
-					column = "column",
-					endLine = "endLine",
-					endColumn = "endColumn",
-					message = "${message} [${code}]",
-					security = "level"
-				},
-				securities = {
-					error = "error",
-					warning = "warning",
-					info = "info",
-					style = "hint"
-				}
-			},
 			markdownlint = {
 				command = "markdownlint",
 				isStderr = true,
@@ -114,8 +80,6 @@ nvim_lsp.diagnosticls.setup {
 			}
 		},
 		filetypes = {
-			json = "jsonlint",
-			sh = "shellcheck",
 			markdown = "markdownlint"
 		},
 		formatters = {
@@ -138,7 +102,6 @@ nvim_lsp.diagnosticls.setup {
 		}
 	}
 }
-
 
 -- Vim diagnostics, more to do here
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
