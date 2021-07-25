@@ -17,5 +17,15 @@
         "list = [\"kafka\", \"mysql\", \"postgres\", \"mongo\"]"
       ],
       "description": "Sample string list"
+    },
+    "mlc": {
+      "prefix": ["mlc"],
+      "body": [
+        "\"\"\"",
+        "$1",
+        "\"\"\"",
+        "$0"
+      ],
+      "description": "multi line comment"
     }
 }
