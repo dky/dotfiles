@@ -231,8 +231,8 @@ alias pippurge="pip3 uninstall -y -r <(pip freeze)"
 alias chux="chmod u+x"
 #apt update
 alias au="sudo apt-get update && sudo apt-get -y upgrade"
-alias sai="sudo apt-get -y install"
-alias sar="sudo apt-get -y remove"
+alias ai="sudo apt-get -y install"
+alias ar="sudo apt-get -y remove"
 
 #nvim alias to ni
 alias ni=nvim
