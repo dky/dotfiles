@@ -82,6 +82,8 @@ alias gsh='git show'
 alias gst='git status'
 alias gd='git diff'
 alias gcma='git add . && git commit -m'
+# Because typing is hard...
+alias gcam="gcma"
 alias gcm='git commit -m'
 alias gco='git checkout'
 alias gra='git remote add origin'
