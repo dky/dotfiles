@@ -61,15 +61,16 @@ let g:leader_map.e = {
 let g:leader_map.n = {
       \ 'name' : '+floatterm: ' ,
       \ '1' : [':FloatermNew --autoclose=0 terraform plan'           , 'terraform plan'],
-      \ '2' : [':FloatermNew --autoclose=0 terraform apply'           , 'terraform apply'],
-      \ 'a' : [':FloatermNew --autoclose=0 ansible-playbook -v %'           , 'ansible-playbook apply'],
-      \ 'p' : [':FloatermNew --autoclose=0 python3 %'           , 'run current buffer with python in float'],
-      \ 'ft' : [':Floaterms'           , 'Use fzf to find terms'],
-      \ 'fn' : [':FloatermNext'        , 'Next Floaterm'],
-      \ 'fp' : [':FloatermPrev'        , 'Prev Floaterm'],
-      \ 'dk' : [':FloatermSend mp d'   , 'Make public dky'],
-      \ 'g' : [':call FtGo()'         , 'Open go specific floaterm'],
-      \ 'gt' : [':FloatermSend --name=go go test'      , 'Go test to a term'],
+      \ '2' : [':FloatermNew --autoclose=0 terraform apply'          , 'terraform apply'],
+      \ '3' : [':FloatermNew --autoclose=0 terraform destroy'        , 'terraform destroy'],
+      \ 'a' : [':FloatermNew --autoclose=0 ansible-playbook -v %'    , 'ansible-playbook apply'],
+      \ 'p' : [':FloatermNew --autoclose=0 python3 %'                , 'run current buffer with python in float'],
+      \ 'ft' : [':Floaterms'                                         , 'Use fzf to find terms'],
+      \ 'fn' : [':FloatermNext'                                      , 'Next Floaterm'],
+      \ 'fp' : [':FloatermPrev'                                      , 'Prev Floaterm'],
+      \ 'dk' : [':FloatermSend mp d'                                 , 'Make public dky'],
+      \ 'g' : [':call FtGo()'                                        , 'Open go specific floaterm'],
+      \ 'gt' : [':FloatermSend --name=go go test'                    , 'Go test to a term'],
       \ }
 
 
