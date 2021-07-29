@@ -11,10 +11,15 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 	# These packages *should* be handled by terraform but just in case.
 	sudo apt-get -y install bats gcc g++ nodejs npm
 	# Get latest fzf
-	git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-	y | ~/.fzf/install
-	# Undo any modifications the .fzf.bash file
-	git checkout ~/.dotfiles/.fzf.bash
+	if [ -d "$HOME/.fzf" ]
+	then
+		echo ".fzf already exists"
+	else
+		git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+		yes | ~/.fzf/install
+		# Undo any modifications the .fzf.bash file
+		git checkout ~/.dotfiles/.fzf.bash
+	fi
 
 	# setup lua custom dictionary
 	lua_custom_dictionary_script="$HOME/.config/nvim/lua/compe-custom-dictionary.lua"
