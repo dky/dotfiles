@@ -28,7 +28,12 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 		ln -s $HOME/.dotfiles/lua/compe-custom-dictionary.lua $lua_custom_dictionary_script
 	fi
 
-	mkdir $HOME/.vim-dictionary && touch $HOME/.vim-dictionary/custom_dictionary.txt
+	if [ -d "$HOME/.vim-dictionary" ]
+	then
+		echo "vim-dictionary already exists, do nothing."
+	else
+		mkdir $HOME/.vim-dictionary && touch $HOME/.vim-dictionary/custom_dictionary.txt
+	fi
 
 	if [ -d "$HOME/bin" ]
 	then
