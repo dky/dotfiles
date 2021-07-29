@@ -2,7 +2,12 @@
 # This script is to bootstrap nvim
 
 # Setup plug for nvim
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+if [ -f "$HOME/.local/share/nvim/site/autoload/plug.vim" ]
+then
+   echo "Plug already installed for nvim"
+else
+   sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+fi
 
 if [ "$(uname)" == "Darwin" ]; then
 	# Brew install bat for syntax highlighting with fzf
