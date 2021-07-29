@@ -31,9 +31,12 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 	mkdir $HOME/.vim-dictionary && touch $HOME/.vim-dictionary/custom_dictionary.txt
 
 	if [ -d "$HOME/bin" ]
+	then
+		wget https://github.com/neovim/neovim/releases/download/v0.5.0/nvim.appimage -O $HOME/bin/nvim && chmod u+x $HOME/bin/nvim
+	else
 		mkdir $HOME/bin
+		wget https://github.com/neovim/neovim/releases/download/v0.5.0/nvim.appimage -O $HOME/bin/nvim && chmod u+x $HOME/bin/nvim
 	fi
-	wget https://github.com/neovim/neovim/releases/download/v0.5.0/nvim.appimage -O $HOME/bin/nvim && chmod u+x $HOME/bin/nvim
 fi
 
 # Ranger devicons
