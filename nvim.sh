@@ -42,7 +42,13 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 
 	if [ -d "$HOME/bin" ]
 	then
-		wget https://github.com/neovim/neovim/releases/download/v0.5.0/nvim.appimage -O $HOME/bin/nvim && chmod u+x $HOME/bin/nvim
+		if [ -f "$HOME/bin/nvim" ]
+		then
+			echo "nvim app-image already installed."
+		else
+			echo "nvim app-image not installed, fetching"
+			wget https://github.com/neovim/neovim/releases/download/v0.5.0/nvim.appimage -O $HOME/bin/nvim && chmod u+x $HOME/bin/nvim
+		fi
 	else
 		mkdir $HOME/bin
 		wget https://github.com/neovim/neovim/releases/download/v0.5.0/nvim.appimage -O $HOME/bin/nvim && chmod u+x $HOME/bin/nvim
