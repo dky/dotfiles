@@ -18,15 +18,21 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 
 	# setup lua custom dictionary
 	lua_custom_dictionary_script="$HOME/.config/nvim/lua/compe-custom-dictionary.lua"
-	if [ -f $lua_custom_dictionary_script ]
+	if [ -L $lua_custom_dictionary_script ]
 	then
+		echo "nvim lua symlink script already exists, nuking it!"
 		rm $lua_custom_dictionary_script
-		cd $HOME/.config/nvim/lua && ln -s $lua_custom_dictionary_script .
+		ln -s $HOME/.dotfiles/lua/compe-custom-dictionary.lua $lua_custom_dictionary_script
+	else
+		echo "nvim lua doesn't exist, creating it"
+		ln -s $HOME/.dotfiles/lua/compe-custom-dictionary.lua $lua_custom_dictionary_script
 	fi
 
 	mkdir $HOME/.vim-dictionary && touch $HOME/.vim-dictionary/custom_dictionary.txt
 
-	mkdir $HOME/bin
+	if [ -d "$HOME/bin" ]
+		mkdir $HOME/bin
+	fi
 	wget https://github.com/neovim/neovim/releases/download/v0.5.0/nvim.appimage -O $HOME/bin/nvim && chmod u+x $HOME/bin/nvim
 fi
 
