@@ -45,7 +45,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 fi
 
 # Ranger devicons
-if [ -d "~/.config/ranger/plugins/ranger_devicons" ] 
+if [ -d "$HOME/.config/ranger/plugins/ranger_devicons" ] 
 then
     echo "Ranger devicons exist, doing nothing" 
 else
