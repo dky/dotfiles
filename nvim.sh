@@ -14,7 +14,7 @@ if [ "$(uname)" == "Darwin" ]; then
 	brew install bat
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 	# These packages *should* be handled by terraform but just in case.
-	sudo apt-get -y install bats gcc g++ nodejs npm
+	sudo DEBIAN_FRONTEND=noninteractive apt-get -y install bats gcc g++ nodejs npm
 	# Get latest fzf
 	if [ -d "$HOME/.fzf" ]
 	then
