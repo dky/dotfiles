@@ -27,6 +27,7 @@ alias packc="rm -rf ./output-vmware"
 alias packit="packc && packb"
 
 #docker aliases
+alias dkrmia="docker rmi -f $(docker images -a -q)"
 alias dcb="docker-compose build"
 alias dc="docker-compose"
 alias dkls="docker images"
