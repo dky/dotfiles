@@ -81,6 +81,10 @@ function sshf {
 	ssh-keygen -f "$HOME/.ssh/known_hosts" -R "$host"
 }
 
+function sship {
+	ssh $(cat .private_ip.txt)
+}
+
 function hnp {
 	post_id=$1
 	hugo new post/$post_id
