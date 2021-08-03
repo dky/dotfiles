@@ -36,6 +36,10 @@ function dkrmce {
 	for i in `docker ps -a | grep "Exited" | awk '{ print $1 }'`; do docker rm -f $i; done
 }
 
+function dkrmia {
+	docker rmi -f $(docker images -a -q)
+}
+
 function dkrmcc {
 	for i in `docker ps -a | grep "Created" | awk '{ print $1 }'`; do docker rm -f $i; done
 }
