@@ -46,8 +46,7 @@ alias dkrmclf='docker rm -f `docker ps -l -q`'
 alias dkvls='docker volume ls'
 alias dkvrm='docker volume rm'
 #logs/top
-alias dklog='docker logs $1'
-alias dlf='docker logs -f'
+alias dklf='docker logs -f $1'
 alias dktop='docker top $1'
 #docker swarm
 alias dksls="docker service ls"
