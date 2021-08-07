@@ -1,0 +1,12 @@
+{
+    "ubuntu": {
+      "prefix": ["ubu"],
+      "body": "ubuntu-21-04-x64",
+      "description": "Ubuntu ubuntu-21-04-x64"
+    },
+    "debian": {
+      "prefix": ["deb"],
+      "body": "debian-10-x64",
+      "description": "Debian debian-10-x64"
+    }
+}
