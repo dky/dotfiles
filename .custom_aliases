@@ -101,6 +101,7 @@ alias gdiff='git diff'
 alias gbc='git checkout -b'
 alias grmo="git remote rm origin"
 alias grrm="git remote rm"
+alias gds="git diff --staged"
 
 #vim alias
 alias vi="vim"
