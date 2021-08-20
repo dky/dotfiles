@@ -37,7 +37,9 @@ for _, lsp in ipairs(servers) do
 	nvim_lsp[lsp].setup {
 		settings = {
          yaml = {
-           schemas = { kubernetes = "test.yaml" },
+           schemas = { 
+				  kubernetes = "/*.yaml" 
+			  },
       	},
 		},
 		on_attach = on_attach,
