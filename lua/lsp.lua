@@ -32,9 +32,14 @@ local on_attach = function(client, bufnr)
 	end
 end
 
-local servers = {'pyright', 'gopls', 'rust_analyzer', 'solargraph', 'bashls', 'dockerls', 'cmake', 'clangd'}
+local servers = {'pyright', 'gopls', 'rust_analyzer', 'solargraph', 'bashls', 'dockerls', 'cmake', 'clangd', 'yamlls'}
 for _, lsp in ipairs(servers) do
 	nvim_lsp[lsp].setup {
+		settings = {
+         yaml = {
+           schemas = { kubernetes = "test.yaml" },
+      	},
+		},
 		on_attach = on_attach,
 	}
 end
@@ -110,13 +115,6 @@ nvim_lsp.diagnosticls.setup {
 			sh = "shfmt",
 			markdown = "prettier"
 		}
-	}
-}
-
---kubernetes yaml
-settings = {
-	yaml = {
-		schemas = { kubernetes = "globPattern" },
 	}
 }
 
