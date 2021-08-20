@@ -38,7 +38,8 @@ for _, lsp in ipairs(servers) do
 		settings = {
          yaml = {
            schemas = { 
-				  kubernetes = "/*.yaml" 
+				['https://raw.githubusercontent.com/docker/cli/master/cli/compose/schema/data/config_schema_v3.9.json'] = '/docker-compose.yml',
+            kubernetes = '/*.yaml',
 			  },
       	},
 		},
