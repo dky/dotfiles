@@ -12,5 +12,19 @@
     "h6": {
       "prefix": ["H6"],
       "body": "###### $0"
+    },
+    "fm": {
+      "prefix": ["Fm"],
+      "body": [
+        "---",
+        "title: $1",
+        "date: \"$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE\"",
+        "tags: [\"$3\"]",
+        "draft: true",
+        "---",
+        "",
+        "$0"
+      ],
+      "description": "Front Matter"
     }
 }
