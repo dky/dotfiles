@@ -282,11 +282,13 @@ alias chme="chown `echo $(whoami):$(whoami)`"
 
 # kubernetes
 alias k="kubectl"
-alias kgs="kubectl get svc"
-alias kgn="kubectl get nodes"
-alias kge="kubectl get events"
-alias kgp="kubectl get pods"
 alias ka="kubectl apply -f"
+alias kgc="kubectl config get-contexts"
+alias kgd="kubectl get svc"
+alias kge="kubectl get events"
+alias kgn="kubectl get nodes"
+alias kgp="kubectl get pods"
+alias kgs="kubectl get deployment"
 
 # mutt
 alias nm="neomutt"
