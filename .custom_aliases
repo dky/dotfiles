@@ -284,6 +284,8 @@ alias chme="chown `echo $(whoami):$(whoami)`"
 alias k="kubectl"
 alias kgs="kubectl get svc"
 alias kgn="kubectl get nodes"
+alias kge="kubectl get events"
+alias kgp="kubectl get pods"
 alias ka="kubectl apply -f"
 
 # mutt
