@@ -13,6 +13,17 @@
       "prefix": ["H6"],
       "body": "###### $0"
     },
+    "Cb": {
+      "prefix": ["Cb"],
+      "body": [
+        "```",
+        "$1",
+        "```",
+        "",
+        "$0"
+      ],
+      "description": "Code block"
+    },
     "fm": {
       "prefix": ["Fm"],
       "body": [
