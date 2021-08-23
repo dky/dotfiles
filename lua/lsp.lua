@@ -36,17 +36,9 @@ local on_attach = function(client, bufnr)
     end
 end
 
-local servers = {"pyright", "gopls", "rust_analyzer", "solargraph", "bashls", "dockerls", "cmake", "clangd", "yamlls"}
+local servers = {"pyright", "gopls", "rust_analyzer", "solargraph", "bashls", "dockerls", "cmake", "clangd"}
 for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {
-        settings = {
-            yaml = {
-                schemas = {
-                    ["https://raw.githubusercontent.com/docker/cli/master/cli/compose/schema/data/config_schema_v3.9.json"] = "/docker-compose.yml",
-                    kubernetes = "/*.yaml"
-                }
-            }
-        },
         on_attach = on_attach
     }
 end
@@ -56,9 +48,22 @@ nvim_lsp.terraformls.setup{
 	on_attach = on_attach
 }
 
--- Experiment with LaTex
-nvim_lsp.textlab.setup{
+-- Experiment with latex
+nvim_lsp.texlab.setup{
 	on_attach = on_attach
+}
+
+-- Experiment with yamlls and kubernetes
+nvim_lsp.yamlls.setup{
+	  settings = {
+			yaml = {
+				 schemas = {
+					  ["https://raw.githubusercontent.com/docker/cli/master/cli/compose/schema/data/config_schema_v3.9.json"] = "/docker-compose.yml",
+					  kubernetes = "/*.yaml"
+				 }
+			}
+	  },
+	  on_attach = on_attach
 }
 
 require "nvim-treesitter.configs".setup {
