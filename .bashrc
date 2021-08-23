@@ -22,6 +22,8 @@ export PYTHONDONTWRITEBYTECODE=1
 # Kubctl bash completions
 if [ -x "$(command -v kubectl)" ]; then
 	source <(kubectl completion bash)
+	# Add completion for k alias
+	complete -F __start_kubectl k
 fi
 
 # Don't exit the shell on ctrl+d
