@@ -287,7 +287,7 @@ alias kgc="kubectl config get-contexts"
 alias kgd="kubectl get svc"
 alias kge="kubectl get events"
 alias kgn="kubectl get nodes"
-alias kgp="kubectl get pods"
+alias kgp="kubectl get pods --namespace="
 alias kgs="kubectl get deployment"
 
 # mutt
