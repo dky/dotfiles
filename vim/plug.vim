@@ -61,7 +61,7 @@ Plug 'pbogut/fzf-mru.vim'
 "Plug 'dense-analysis/ale'
 Plug 'justinmk/vim-sneak'
 Plug '907th/vim-auto-save'
-Plug 'fatih/vim-hclfmt'
+"Plug 'fatih/vim-hclfmt'
 Plug 'dky/vim-aftercolors'
 
 Plug 'majutsushi/tagbar'
