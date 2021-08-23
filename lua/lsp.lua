@@ -52,7 +52,9 @@ for _, lsp in ipairs(servers) do
 end
 
 -- Terraform lsp on it's own to see how I could do this outside of the for loop of languages above, use this in the future if we need to extend.
-nvim_lsp.terraformls.setup{}
+nvim_lsp.terraformls.setup{
+	on_attach = on_attach
+}
 
 require "nvim-treesitter.configs".setup {
     highlight = {
