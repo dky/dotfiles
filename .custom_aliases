@@ -283,6 +283,7 @@ alias chme="chown `echo $(whoami):$(whoami)`"
 # kubernetes
 alias k="kubectl"
 alias ka="kubectl apply -f"
+alias kl="kubectl logs"
 alias kgc="kubectl config get-contexts"
 alias kgd="kubectl get svc"
 alias kge="kubectl get events"
