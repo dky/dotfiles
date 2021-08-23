@@ -38,3 +38,6 @@ au BufNewFile,BufRead *.md call WordProcessorMode()
 
 " When opening Jenkinsfiles set syntax to groovy
 au BufNewFile,BufRead Jenkinsfile setf groovy
+
+" When opening nomad files set syntax to groovy
+au BufNewFile,BufRead *.nomad setf hcl
