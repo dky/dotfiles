@@ -21,6 +21,12 @@ function pmin {
 
 color_my_prompt
 
+#kubectl functions
+function kgp {
+	name="$1"
+	kubectl get pods --namespace=$name;
+}
+
 #docker functions
 function dkr {
 	name="$1"
