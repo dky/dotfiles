@@ -56,6 +56,11 @@ nvim_lsp.terraformls.setup{
 	on_attach = on_attach
 }
 
+-- Experiment with LaTex
+nvim_lsp.textlab.setup{
+	on_attach = on_attach
+}
+
 require "nvim-treesitter.configs".setup {
     highlight = {
         enable = true
