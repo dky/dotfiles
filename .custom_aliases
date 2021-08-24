@@ -325,7 +325,7 @@ alias gri="grep -i"
 alias md="md -p 3050 -n 3"
 
 # Alias to sync up all .dotconfigs
-alias pd="cd ~/.dotfiles && git pull origin master && source ~/.dotfiles/.customer_aliases && source ~/.dotfiles/.custom_functions && cd ~/.vim && git pull origin master && cd ~/.vim-dictionary && git pull origin master && cd ~/.config && git pull origin master && cd -"
+alias pd="cd ~/.dotfiles && git pull origin master && source ~/.dotfiles/.custom_aliases && source ~/.dotfiles/.custom_functions && cd ~/.vim && git pull origin master && cd ~/.vim-dictionary && git pull origin master && cd ~/.config && git pull origin master && cd -"
 
 alias pu="cd ~/.dotfiles && git push origin master && cd ~/.vim && git push origin master && cd ~/.vim-dictionary && git push origin master && cd ~/.config && git push origin maste && cd -"
 
