@@ -290,6 +290,8 @@ alias kge="kubectl get events"
 alias kgn="kubectl get nodes"
 alias kgpa="kubectl get pods --all-namespaces"
 alias kgs="kubectl get deployment"
+alias kdn="kubectl describe nodes"
+alias kgcs="kubectl get componentstatuses"
 
 # mutt
 alias nm="neomutt"
