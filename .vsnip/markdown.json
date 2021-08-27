@@ -19,6 +19,11 @@
       "body": "### $0",
       "description": "H3 link"
     },
+    "h4": {
+      "prefix": ["H4"],
+      "body": "#### $0",
+      "description": "H3 link"
+    },
     "h6": {
       "prefix": ["H6"],
       "body": "###### $0"
