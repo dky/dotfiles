@@ -27,5 +27,13 @@
         "$0"
       ],
       "description": "multi line comment"
+    },
+    "ifnm": {
+      "prefix": ["ifnm"],
+      "body": [
+        "if __name__ == \"__main__\":",
+        "$0"
+      ],
+      "description": "If name == main"
     }
 }
