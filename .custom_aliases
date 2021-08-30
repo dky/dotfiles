@@ -1,3 +1,6 @@
+#jsonlint
+alias jl="jsonlint"
+
 #vagrant aliases
 alias vgi="vagrant init"
 alias vgu="vagrant up"
