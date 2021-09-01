@@ -40,7 +40,7 @@
       "prefix": ["dis"],
       "body": [
         "def __init__(self, $1):",
-        "$0"
+        "    $0"
       ],
       "description": "def __init__(self)"
     }
