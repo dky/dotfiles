@@ -30,6 +30,7 @@ alias packc="rm -rf ./output-vmware"
 alias packit="packc && packb"
 
 #docker aliases
+alias dkcl="docker context list"
 alias dcb="docker-compose build"
 alias dc="docker-compose"
 alias dkls="docker images"
