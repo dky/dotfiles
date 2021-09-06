@@ -1,0 +1,21 @@
+{
+    "fpl": {
+      "prefix": ["fpl"],
+      "body": [
+        "fmt.Println($1)",
+        "$0"
+      ],
+      "description": "fmt.Println()"
+    },
+    "fm": {
+      "prefix": ["fm"],
+      "body": [
+        "package main",
+        "",
+        "func main() {",
+        "$1",
+        "}"
+      ],
+      "description": "fmt.Println()"
+    }
+}
