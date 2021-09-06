@@ -13,7 +13,7 @@
         "package main",
         "",
         "func main() {",
-        "$1",
+        "    $1",
         "}"
       ],
       "description": "fmt.Println()"
