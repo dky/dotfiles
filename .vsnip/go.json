@@ -17,5 +17,15 @@
         "}"
       ],
       "description": "fmt.Println()"
+    },
+    "for": {
+      "prefix": ["for"],
+      "body": [
+        "for i := 1; i <= 10; i++ {",
+        "    $1",
+        "}",
+        "$0"
+      ],
+      "description": "for i "
     }
 }
