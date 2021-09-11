@@ -223,4 +223,4 @@ key_bindings:
     #Jump to first window 6 with cmd + 7
   - { key: Key7, mods: Command, chars: "\x01\x36" }
     #Go fullscreen! It's level 9000!
-  - { key: Return, mods: Command|Shift, action: ToggleFullScreen }
+  - { key: Return, mods: Command, action: ToggleFullScreen }
