@@ -208,3 +208,13 @@ key_bindings:
   - { key: D, mods: Command|Shift, chars: "\x01\x2d"}
     #Emulate iterm Command + D vertical split in tmux
   - { key: D, mods: Command, chars: "\x01\x7c"}
+    #Jump to first window 0 with cmd + 1
+  - { key: Key1, mods: Command, chars: "\x01\x30" }
+    #Jump to first window 1 with cmd + 2
+  - { key: Key2, mods: Command, chars: "\x01\x31" }
+    #Jump to first window 2 with cmd + 3
+  - { key: Key3, mods: Command, chars: "\x01\x32" }
+    #Jump to first window 3 with cmd + 4
+  - { key: Key4, mods: Command, chars: "\x01\x33" }
+    #Jump to first window 4 with cmd + 5
+  - { key: Key5, mods: Command, chars: "\x01\x34" }
