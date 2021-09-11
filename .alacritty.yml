@@ -193,5 +193,7 @@ shell:
 
 alt_send_esc: true
 
+# Use xxd -psd to get chars code, need this because alt_send_esc doesn't seem to be doing anything...
+# xdd -psd will return a string like 1b620a, Split this up to 1b, 62, and 0a, the 0a is the return character. So skip it.
 key_bindings:
-  - { key: H, mods: Alt, chars: "\x1bh"}
+  - { key: B, mods: Alt, chars: "\x1b\x62"}
