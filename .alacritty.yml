@@ -208,19 +208,19 @@ key_bindings:
   - { key: D, mods: Command|Shift, chars: "\x01\x2d"}
     #Emulate iterm Command + D vertical split in tmux
   - { key: D, mods: Command, chars: "\x01\x7c"}
-    #Jump to first window 0 with cmd + 1
-  - { key: Key1, mods: Command, chars: "\x01\x30" }
-    #Jump to first window 1 with cmd + 2
-  - { key: Key2, mods: Command, chars: "\x01\x31" }
-    #Jump to first window 2 with cmd + 3
-  - { key: Key3, mods: Command, chars: "\x01\x32" }
-    #Jump to first window 3 with cmd + 4
-  - { key: Key4, mods: Command, chars: "\x01\x33" }
-    #Jump to first window 4 with cmd + 5
-  - { key: Key5, mods: Command, chars: "\x01\x34" }
-    #Jump to first window 5 with cmd + 6
-  - { key: Key6, mods: Command, chars: "\x01\x35" }
-    #Jump to first window 6 with cmd + 7
-  - { key: Key7, mods: Command, chars: "\x01\x36" }
+    #Jump to window 1 with cmd + 1
+  - { key: Key1, mods: Command, chars: "\x01\x31" }
+    #Jump to window 2 with cmd + 2
+  - { key: Key2, mods: Command, chars: "\x01\x32" }
+    #Jump to window 3 with cmd + 3
+  - { key: Key3, mods: Command, chars: "\x01\x33" }
+    #Jump to window 4 with cmd + 4
+  - { key: Key4, mods: Command, chars: "\x01\x34" }
+    #Jump to window 5 with cmd + 5
+  - { key: Key5, mods: Command, chars: "\x01\x35" }
+    #Jump to window 6 with cmd + 6
+  - { key: Key6, mods: Command, chars: "\x01\x36" }
+    #Jump to window 7 with cmd + 7
+  - { key: Key7, mods: Command, chars: "\x01\x37" }
     #Go fullscreen! It's level 9000!
   - { key: Return, mods: Command, action: ToggleFullScreen }
