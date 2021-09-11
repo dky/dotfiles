@@ -196,4 +196,7 @@ alt_send_esc: true
 # Use xxd -psd to get chars code, need this because alt_send_esc doesn't seem to be doing anything...
 # xdd -psd will return a string like 1b620a, Split this up to 1b, 62, and 0a, the 0a is the return character. So skip it.
 key_bindings:
+    #Get alt/option + b to jump back a character
   - { key: B, mods: Alt, chars: "\x1b\x62"}
+    #Get alt/option + f to jump back a character
+  - { key: F, mods: Alt, chars: "\xc6\x20"}
