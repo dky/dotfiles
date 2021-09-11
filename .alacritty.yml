@@ -203,7 +203,7 @@ key_bindings:
     #Create a new tmux pane
   - { key: T, mods: Command, chars: "\x01\x63"}
     #Kill a new tmux pane
-  - { key: X, mods: Command, chars: "\x01\x78"}
+  - { key: W, mods: Command, chars: "\x01\x78"}
     #Emulate iterm Command + Shift + D to split horizontal in tmux
   - { key: D, mods: Command|Shift, chars: "\x01\x2d"}
     #Emulate iterm Command + D vertical split in tmux
@@ -218,3 +218,7 @@ key_bindings:
   - { key: Key4, mods: Command, chars: "\x01\x33" }
     #Jump to first window 4 with cmd + 5
   - { key: Key5, mods: Command, chars: "\x01\x34" }
+    #Jump to first window 5 with cmd + 6
+  - { key: Key6, mods: Command, chars: "\x01\x35" }
+    #Jump to first window 6 with cmd + 7
+  - { key: Key7, mods: Command, chars: "\x01\x36" }
