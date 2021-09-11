@@ -73,6 +73,7 @@ alias tad="tmux attach -dt $1"
 alias tls="tmux ls"
 
 #Git
+alias cdg="cd $HOME/git"
 alias Git='git'
 alias gi='git init'
 alias ga='git add'
