@@ -224,3 +224,7 @@ key_bindings:
   - { key: Key7, mods: Command, chars: "\x01\x37" }
     #Go fullscreen! It's level 9000!
   - { key: Return, mods: Command, action: ToggleFullScreen }
+    #Go to prev tmux pane
+  - { key: LBracket, mods: Command, chars: "\x01\x70" }
+    #Go to next tmux pane
+  - { key: RBracket, mods: Command, chars: "\x01\x6e" }
