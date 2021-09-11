@@ -200,3 +200,11 @@ key_bindings:
   - { key: B, mods: Alt, chars: "\x1b\x62"}
     #Get alt/option + f to jump back a character
   - { key: F, mods: Alt, chars: "\xc6\x20"}
+    #Create a new tmux pane
+  - { key: T, mods: Command, chars: "\x01\x63"}
+    #Kill a new tmux pane
+  - { key: X, mods: Command, chars: "\x01\x78"}
+    #Emulate iterm Command + Shift + D to split horizontal in tmux
+  - { key: D, mods: Command|Shift, chars: "\x01\x2d"}
+    #Emulate iterm Command + D vertical split in tmux
+  - { key: D, mods: Command, chars: "\x01\x7c"}
