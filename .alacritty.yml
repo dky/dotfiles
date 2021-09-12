@@ -137,7 +137,7 @@ key_bindings:
     #Get alt/option + b to jump back a character
   - { key: B, mods: Alt, chars: "\x1b\x62"}
     #Get alt/option + f to jump back a character
-  - { key: F, mods: Alt, chars: "\xc6\x20"}
+  - { key: F, mods: Alt, chars: "\x1b\x66"}
     #Create a new tmux pane
   - { key: T, mods: Command, chars: "\x01\x63"}
     #Kill a new tmux pane
