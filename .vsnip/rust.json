@@ -1,0 +1,19 @@
+{
+    "pl": {
+      "prefix": ["pl"],
+      "body": [
+        "println!($1)",
+        "$0"
+      ],
+      "description": "fmt.Println()"
+    },
+    "fm": {
+      "prefix": ["fm"],
+      "body": [
+        "fn main() {",
+        "    $1",
+        "}"
+      ],
+      "description": "fn main()"
+    }
+}
