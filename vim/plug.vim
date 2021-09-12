@@ -12,8 +12,8 @@ if has('nvim')
 else
 endif
 
-Plug 'jeetsukumaran/vim-pythonsense', { 'for': 'python' }
-Plug 'jmcantrell/vim-virtualenv'
+"Plug 'jeetsukumaran/vim-pythonsense', { 'for': 'python' }
+"Plug 'jmcantrell/vim-virtualenv'
 Plug 'vim-test/vim-test'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
 Plug 'hashivim/vim-terraform'
