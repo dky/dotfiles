@@ -18,26 +18,13 @@ hi SpellCap cterm=underline ctermfg=yellow
 hi SpellLocal cterm=underline
 hi SpellRare cterm=underline
 
-" change Color when entering Insert Mode to indicate the current active line
-autocmd InsertEnter * hi CursorLine ctermbg=24
+" change Color dark blue when entering Insert Mode to indicate the current active line
+" commented this out because the blue during insert mode is horrid, this would
+" highlight the line all in blue which was really hard to see things.
+"autocmd InsertEnter * hi CursorLine ctermbg=24
 " comment was too dark so decided to make it a easier color.
 autocmd InsertEnter * hi Comment ctermfg=43
 " revert Color to default when leaving Insert Mode
 "
-autocmd InsertLeave * hi CursorLine ctermbg=236
+"autocmd InsertLeave * hi CursorLine ctermbg=236
 autocmd InsertLeave * hi Comment ctermfg=59
-
-" semshi default highlight color SteelBlue3
-"function! SemshiCustomHighlights()
-"	hi semshiSelected ctermfg=231 ctermbg=237
-"endfunction
-"
-"nvim-lsp
-" Errors in Red
-hi LspDiagnosticsVirtualTextError ctermfg=Red
-" Warnings in Yellow
-hi LspDiagnosticsVirtualTextWarning ctermfg=Yellow
-" Info and Hints in White
-hi LspDiagnosticsVirtualTextInformation ctermfg=White
-hi LspDiagnosticsVirtualTextHint ctermfg=White
-hi LspDiagnosticsDefaultError ctermfg=161
