@@ -44,45 +44,45 @@ for _, lsp in ipairs(servers) do
 end
 
 -- Golang
-nvim_lsp.gopls.setup{
-	cmd = {'gopls'},
-	capabilities = capabilities,
-		 settings = {
-			 gopls = {
-				 experimentalPostfixCompletions = true,
-				 analyses = {
-					 unusedparams = true,
-					 shadow = true,
-				 },
-				 staticcheck = true,
-			 },
-		 },
-	--By default gopls will not attach unless a .git or a .go.mod file is present. I'm including the current directory with "."
-	root_dir = require("lspconfig").util.root_pattern(".git", "go.mod", "."),
-	on_attach = on_attach
+nvim_lsp.gopls.setup {
+    cmd = {"gopls"},
+    capabilities = capabilities,
+    settings = {
+        gopls = {
+            experimentalPostfixCompletions = true,
+            analyses = {
+                unusedparams = true,
+                shadow = true
+            },
+            staticcheck = true
+        }
+    },
+    --By default gopls will not attach unless a .git or a .go.mod file is present. I'm including the current directory with "."
+    root_dir = require("lspconfig").util.root_pattern(".git", "go.mod", "."),
+    on_attach = on_attach
 }
 
 -- Terraform lsp on it's own to see how I could do this outside of the for loop of languages above, use this in the future if we need to extend.
-nvim_lsp.terraformls.setup{
-	on_attach = on_attach
+nvim_lsp.terraformls.setup {
+    on_attach = on_attach
 }
 
 -- Experiment with latex
-nvim_lsp.texlab.setup{
-	on_attach = on_attach
+nvim_lsp.texlab.setup {
+    on_attach = on_attach
 }
 
 -- Experiment with yamlls and kubernetes
-nvim_lsp.yamlls.setup{
-	  settings = {
-			yaml = {
-				 schemas = {
-					  ["https://raw.githubusercontent.com/docker/cli/master/cli/compose/schema/data/config_schema_v3.9.json"] = "/docker-compose.yml",
-					  kubernetes = "/*.yaml"
-				 }
-			}
-	  },
-	  on_attach = on_attach
+nvim_lsp.yamlls.setup {
+    settings = {
+        yaml = {
+            schemas = {
+                ["https://raw.githubusercontent.com/docker/cli/master/cli/compose/schema/data/config_schema_v3.9.json"] = "/docker-compose.yml",
+                kubernetes = "/*.yaml"
+            }
+        }
+    },
+    on_attach = on_attach
 }
 
 require "nvim-treesitter.configs".setup {
