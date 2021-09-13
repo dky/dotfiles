@@ -55,7 +55,7 @@ nvim_lsp.gopls.setup {
                 shadow = true
             },
             staticcheck = true
-        }
+        },
     },
     --By default gopls will not attach unless a .git or a .go.mod file is present. I'm including the current directory with "."
     root_dir = require("lspconfig").util.root_pattern(".git", "go.mod", "."),
