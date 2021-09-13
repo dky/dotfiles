@@ -36,12 +36,19 @@ local on_attach = function(client, bufnr)
     end
 end
 
-local servers = {"pyright", "gopls", "rust_analyzer", "solargraph", "bashls", "dockerls", "cmake", "clangd"}
+local servers = {"pyright", "rust_analyzer", "solargraph", "bashls", "dockerls", "cmake", "clangd"}
 for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {
         on_attach = on_attach
     }
 end
+
+-- Golang
+nvim_lsp.gopls.setup{
+	-- By default gopls will not attach unless a .git or a .go.mod file is present. I'm including the current directory with "."
+	root_dir = require("lspconfig").util.root_pattern(".git", "go.mod", "."),
+	on_attach = on_attach
+}
 
 -- Terraform lsp on it's own to see how I could do this outside of the for loop of languages above, use this in the future if we need to extend.
 nvim_lsp.terraformls.setup{
