@@ -21,6 +21,9 @@ for name in `find . -maxdepth 1 -iname ".*" -type f | sed -e 's/\.\// /'`; do
 	fi
 done
 
+# .vsnip snippets
+ln -s $HOME/.dotfiles/.vsnip $HOME/.vsnip
+
 # Setup .vim
 DOTVIM_DIR=~/.vim
 DOTVIM_GIT=https://github.com/dky/dotvim
