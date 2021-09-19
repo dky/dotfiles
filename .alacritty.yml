@@ -10,7 +10,10 @@ window:
     x: 1
     y: 1
 
-  decorations: none
+  # set to full or none if you want to get rid of the title bar
+  # I can't adjust to no titlebar so switch back and forth as needed
+  #decorations: none
+  decorations: full
 
   # Window title
   title: a
