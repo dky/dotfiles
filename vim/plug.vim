@@ -12,13 +12,8 @@ if has('nvim')
 else
 endif
 
-"Plug 'jeetsukumaran/vim-pythonsense', { 'for': 'python' }
-"Plug 'jmcantrell/vim-virtualenv'
 Plug 'vim-test/vim-test'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
 Plug 'hashivim/vim-terraform'
-" Indenting guides
-"Plug 'thaerkh/vim-indentguides', { 'for': ['go', 'python', 'neosnippet', 'sh', 'yaml', 'tf', 'html', 'js', 'vue', 'ruby'] }
 "
 " Writing plugins
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
@@ -38,11 +33,8 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-abolish'
 Plug 'fatih/molokai'
-Plug 'w0ng/vim-hybrid'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-"Plug 'Shougo/neosnippet.vim'
-"Plug 'Shougo/neosnippet-snippets'
 Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -58,10 +50,8 @@ Plug 'roxma/vim-tmux-clipboard'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'pbogut/fzf-mru.vim'
-"Plug 'dense-analysis/ale'
 Plug 'justinmk/vim-sneak'
 Plug '907th/vim-auto-save'
-"Plug 'fatih/vim-hclfmt'
 Plug 'dky/vim-aftercolors'
 
 Plug 'majutsushi/tagbar'
