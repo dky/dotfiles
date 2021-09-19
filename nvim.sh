@@ -68,10 +68,3 @@ else
 	echo "Cloning ranger devicons"
 	git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
 fi
-
-# Install Coc - Switch to native LSP soon so we don't have this bloat
-#if [ ! -d "~/.config/coc/extensions" ]; then
-#mkdir -p ~/.config/coc/extensions
-#cd ~/.config/coc/extensions
-#npm install coc-dictionary --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-#fi
