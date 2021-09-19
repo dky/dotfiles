@@ -9,6 +9,7 @@ if has('nvim')
 	Plug 'sbdchd/neoformat'
 	Plug 'hrsh7th/vim-vsnip'
 	Plug 'lukas-reineke/indent-blankline.nvim'
+	Plug 'windwp/nvim-autopairs'
 else
 endif
 
