@@ -4,6 +4,9 @@
 # Install it, you should have the aliases already defined
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 
+#source bashrc
+source ~/.bashrc
+
 # Install latest version of node
 nvm install node
 
