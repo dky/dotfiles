@@ -13,6 +13,9 @@ if has('nvim')
 else
 endif
 
+" Jinja2 for salt
+Plug 'Glench/Vim-Jinja2-Syntax'
+
 Plug 'vim-test/vim-test'
 Plug 'hashivim/vim-terraform'
 "
