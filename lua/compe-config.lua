@@ -1,6 +1,6 @@
 vim.o.completeopt = "menuone,noselect"
 -- Note you'll have to simlink compe-custom-dictionary to .config/nvim/lua/compe-custom-dictionary.lua or this won't work.
-require'compe'.register_source('words', require'compe-custom-dictionary')
+-- require'compe'.register_source('words', require'compe-custom-dictionary')
 
 require'compe'.setup {
 	enabled = true;
