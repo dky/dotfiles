@@ -78,6 +78,7 @@ nvim_lsp.yamlls.setup {
         yaml = {
             schemas = {
                 ["https://raw.githubusercontent.com/docker/cli/master/cli/compose/schema/data/config_schema_v3.9.json"] = "/docker-compose.yml",
+                ["https://github.com/SchemaStore/schemastore/blob/master/src/schemas/json/gitlab-ci.json"] = "/.gitlab.ci.yml",
                 kubernetes = "/*.yaml"
             }
         }
