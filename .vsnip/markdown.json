@@ -52,5 +52,13 @@
         "$0"
       ],
       "description": "Front Matter"
+    },
+    "ddate": {
+      "prefix": ["ddate"],
+      "body": [
+        "$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+        "$0"
+      ],
+      "description": "ddate"
     }
 }
