@@ -89,6 +89,7 @@ alias gsh='git show'
 alias gst='git status'
 alias gd='git diff'
 alias gcma='git add . && git commit -m'
+alias gmca="gcma"
 # Because typing is hard...
 alias gcam="gcma"
 alias gcm='git commit -m'
