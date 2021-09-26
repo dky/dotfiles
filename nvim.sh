@@ -68,3 +68,6 @@ else
 	echo "Cloning ranger devicons"
 	git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
 fi
+
+# Simlink nvim init.vim
+ln -s $HOME/.config/nvim/init.vim .
