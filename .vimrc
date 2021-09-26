@@ -18,14 +18,10 @@ source ~/.dotfiles/vim/functions.vim
 source ~/.dotfiles/vim/highlights.vim
 " airline
 source ~/.dotfiles/vim/airline.vim
-" ale
-"source ~/.dotfiles/vim/ale.vim
 " whichkey
 source ~/.dotfiles/vim/whichkey.vim
 " floaterm
 source ~/.dotfiles/vim/floaterm.vim
-" gutentags
-"source ~/.dotfiles/vim/gutentags.vim
 
 filetype on
 set ruler
