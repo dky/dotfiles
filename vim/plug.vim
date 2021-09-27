@@ -13,6 +13,8 @@ if has('nvim')
 	" Git gutter
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'lewis6991/gitsigns.nvim'
+	" Status line
+	Plug 'beauwilliams/statusline.lua'
 else
 endif
 
@@ -42,8 +44,8 @@ Plug 'tpope/vim-abolish'
 Plug 'fatih/molokai'
 Plug 'tanvirtin/monokai.nvim'
 Plug 'fatih/vim-go'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
