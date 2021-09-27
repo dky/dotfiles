@@ -37,15 +37,6 @@ let g:leader_map['w'] = [ ':!tmux new-window bash -ci fp'    , 'Switch tmux sess
 "let g:leader_map['r'] = [ ':Reserved - Don't use            , 'Plan to use this to run files similar to F8.' ]
 let g:leader_map['v'] = [ '<C-W>v'                           , 'split right']
 let g:leader_map['y'] = [ ':FloatermSend pytest'             , 'Send pytest to floatterm' ]
-let g:leader_map['1'] = [ '<Plug>AirlineSelectTab1'          , 'Switch to airline tab 1' ]
-let g:leader_map['2'] = [ '<Plug>AirlineSelectTab2'          , 'Switch to airline tab 2' ]
-let g:leader_map['3'] = [ '<Plug>AirlineSelectTab3'          , 'Switch to airline tab 3' ]
-let g:leader_map['4'] = [ '<Plug>AirlineSelectTab4'          , 'Switch to airline tab 4' ]
-let g:leader_map['5'] = [ '<Plug>AirlineSelectTab5'          , 'Switch to airline tab 5' ]
-let g:leader_map['6'] = [ '<Plug>AirlineSelectTab6'          , 'Switch to airline tab 6' ]
-let g:leader_map['7'] = [ '<Plug>AirlineSelectTab7'          , 'Switch to airline tab 7' ]
-let g:leader_map['8'] = [ '<Plug>AirlineSelectTab8'          , 'Switch to airline tab 8' ]
-let g:leader_map['9'] = [ '<Plug>AirlineSelectTab9'          , 'Switch to airline tab 9' ]
 
 let g:leader_map.a = {
       \ 'name' : '+neoformat' ,
