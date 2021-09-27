@@ -13,8 +13,7 @@ if has('nvim')
 	" Git gutter
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'lewis6991/gitsigns.nvim'
-	" Status line
-	"Plug 'beauwilliams/statusline.lua'
+	" Status line + web devicons
 	Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 	Plug 'kyazdani42/nvim-web-devicons' " lua
 else
