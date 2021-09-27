@@ -14,7 +14,9 @@ if has('nvim')
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'lewis6991/gitsigns.nvim'
 	" Status line
-	Plug 'beauwilliams/statusline.lua'
+	"Plug 'beauwilliams/statusline.lua'
+	Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
+	Plug 'kyazdani42/nvim-web-devicons' " lua
 else
 endif
 
