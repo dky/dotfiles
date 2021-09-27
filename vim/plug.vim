@@ -10,6 +10,9 @@ if has('nvim')
 	Plug 'hrsh7th/vim-vsnip'
 	Plug 'lukas-reineke/indent-blankline.nvim'
 	Plug 'windwp/nvim-autopairs'
+	" Git gutter
+	Plug 'nvim-lua/plenary.nvim'
+	Plug 'lewis6991/gitsigns.nvim'
 else
 endif
 
@@ -44,7 +47,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'airblade/vim-gitgutter'
+"Plug 'airblade/vim-gitgutter'
 Plug 'godlygeek/tabular'
 Plug 'jamesroutley/vim-logbook'
 Plug 'metakirby5/codi.vim'
