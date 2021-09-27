@@ -58,7 +58,6 @@ let g:vim_mac_dictionary_use_app = 1
 command! -range Fmtsh <line1>!format_shell_cmd.py
 
 " indent-blankline-nvim
-
 let g:indent_blankline_space_char = '⋅'
 
 " terraform-vim plugin
