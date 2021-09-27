@@ -155,7 +155,6 @@ gls.right[3] = {
 gls.right[4] = {
   PerCent = {
     provider = 'LinePercent',
-	 separator = '|',
     separator_highlight = {'NONE',colors.bg},
     highlight = {colors.fg,colors.bg,'bold'},
   }
@@ -163,7 +162,7 @@ gls.right[4] = {
 gls.right[5] = {
   LineInfo = {
     provider = 'LineColumn',
-	 separator = '| ',
+	 separator = '|',
     separator_highlight = {'NONE',colors.bg},
     highlight = {colors.fg,colors.bg},
   },
