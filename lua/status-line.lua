@@ -28,7 +28,6 @@ gls.left[2] = {
     highlight = {colors.red,colors.bg,'bold'},
   },
 }
-
 gls.left[3] = {
   GitIcon = {
     provider = function() return '  ' end,
@@ -38,15 +37,14 @@ gls.left[3] = {
     highlight = {colors.violet,colors.bg,'bold'},
   }
 }
-
 gls.left[4] = {
   GitBranch = {
     provider = 'GitBranch',
+    separator = ' ',
     condition = condition.check_git_workspace,
     highlight = {colors.violet,colors.bg,'bold'},
   }
 }
-
 gls.left[5] = {
   DiffAdd = {
     provider = 'DiffAdd',
@@ -71,24 +69,20 @@ gls.left[7] = {
     highlight = {colors.red,colors.bg},
   }
 }
-
-gls.left[8] ={
-  FileIcon = {
-    provider = 'FileIcon',
-    condition = condition.buffer_not_empty,
-    highlight = {require('galaxyline.provider_fileinfo').get_file_icon_color,colors.bg},
-  },
-}
-
-gls.left[9] = {
+gls.left[8] = {
   FileName = {
     provider = 'FileName',
     condition = condition.buffer_not_empty,
     highlight = {colors.magenta,colors.bg,'bold'}
   }
 }
-
-
+gls.left[9] ={
+  FileIcon = {
+    provider = 'FileIcon',
+    condition = condition.buffer_not_empty,
+    highlight = {require('galaxyline.provider_fileinfo').get_file_icon_color,colors.bg},
+  },
+}
 gls.left[10] = {
   DiagnosticError = {
     provider = 'DiagnosticError',
@@ -103,7 +97,6 @@ gls.left[11] = {
     highlight = {colors.yellow,colors.bg},
   }
 }
-
 gls.left[12] = {
   DiagnosticHint = {
     provider = 'DiagnosticHint',
@@ -111,7 +104,6 @@ gls.left[12] = {
     highlight = {colors.cyan,colors.bg},
   }
 }
-
 gls.left[13] = {
   DiagnosticInfo = {
     provider = 'DiagnosticInfo',
@@ -144,7 +136,6 @@ gls.right[1] = {
     highlight = {colors.green,colors.bg,'bold'}
   }
 }
-
 gls.right[2] = {
   FileFormat = {
     provider = 'FileFormat',
@@ -154,34 +145,29 @@ gls.right[2] = {
     highlight = {colors.green,colors.bg,'bold'}
   }
 }
-
-gls.right[8] = {
+gls.right[3] = {
   FileSize = {
     provider = 'FileSize',
+    separator = ' ',
     condition = condition.buffer_not_empty,
     highlight = {colors.fg,colors.bg}
   }
 }
-
-gls.right[9] = {
-  LineInfo = {
-    provider = 'LineColumn',
-    separator = ' ',
-    separator_highlight = {'NONE',colors.bg},
-    highlight = {colors.fg,colors.bg},
-  },
-}
-
-gls.right[10] = {
+gls.right[4] = {
   PerCent = {
     provider = 'LinePercent',
-    separator = ' ',
     separator_highlight = {'NONE',colors.bg},
     highlight = {colors.fg,colors.bg,'bold'},
   }
 }
-
-gls.right[11] = {
+gls.right[5] = {
+  LineInfo = {
+    provider = 'LineColumn',
+    separator_highlight = {'NONE',colors.bg},
+    highlight = {colors.fg,colors.bg},
+  },
+}
+gls.right[6] = {
   RainbowBlue = {
     provider = function() return ' ▊' end,
     highlight = {colors.blue,colors.bg}
