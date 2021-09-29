@@ -303,6 +303,7 @@ alias kgpa="kubectl get pods --all-namespaces"
 alias kgs="kubectl get deployment"
 alias kdn="kubectl describe nodes"
 alias kgcs="kubectl get componentstatuses"
+alias kgns="kubectl get ns"
 
 # mutt
 alias nm="neomutt"
