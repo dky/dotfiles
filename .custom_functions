@@ -27,6 +27,12 @@ function kgp {
 	kubectl get pods --namespace=$name;
 }
 
+function kgcpn {
+	pod=$1
+	name=$2
+	kubectl get pods $pod -o jsonpath='{.spec.containers[*].name}{"\n"}' --namespace=$name;
+}
+
 #docker functions
 function dkr {
 	name="$1"
