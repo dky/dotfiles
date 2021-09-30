@@ -305,6 +305,8 @@ alias kgcs="kubectl get componentstatuses"
 alias kgn="kubectl get ns"
 alias kgno="kubectl get nodes"
 alias kcuc="kubectl config use-context"
+alias ksn="kubectl config set-context --current --namespace"
+alias ksc="kubectl config use-context"
 
 # mutt
 alias nm="neomutt"
