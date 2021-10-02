@@ -4,6 +4,15 @@ local condition = require('galaxyline.condition')
 local gls = gl.section
 gl.short_line_list = {'NvimTree','vista','dbui','packer'}
 
+local function trailing_whitespace()
+    local trail = vim.fn.search("\\s$", "nw")
+    if trail ~= 0 then
+        return " "
+    else
+        return nil
+    end
+ end
+
 gls.left[1] = {
   RainbowRed = {
     provider = function() return '▊ ' end,
@@ -126,16 +135,22 @@ gls.mid[1] = {
   }
 }
 
-gls.right[1] = {
+gls.right[1] = { 
+  TrailingWhitespace = {
+    provider =  { trailing_whitespace },
+    separator_highlight = {'NONE',colors.bg},
+    highlight = {colors.fg,colors.bg},
+  },
+}
+gls.right[2] = {
   FileEncode = {
     provider = 'FileEncode',
     condition = condition.hide_in_width,
-    separator = ' ',
     separator_highlight = {'NONE',colors.bg},
     highlight = {colors.green,colors.bg,'bold'}
   }
 }
-gls.right[2] = {
+gls.right[3] = {
   FileFormat = {
     provider = 'FileFormat',
     condition = condition.hide_in_width,
@@ -144,7 +159,7 @@ gls.right[2] = {
     highlight = {colors.green,colors.bg,'bold'}
   }
 }
-gls.right[3] = {
+gls.right[4] = {
   FileSize = {
     provider = 'FileSize',
     separator = ' ',
@@ -152,22 +167,21 @@ gls.right[3] = {
     highlight = {colors.fg,colors.bg}
   }
 }
-gls.right[4] = {
+gls.right[5] = {
   PerCent = {
     provider = 'LinePercent',
     separator_highlight = {'NONE',colors.bg},
     highlight = {colors.fg,colors.bg,'bold'},
   }
 }
-gls.right[5] = {
+gls.right[6] = {
   LineInfo = {
     provider = 'LineColumn',
-	 separator = '|',
     separator_highlight = {'NONE',colors.bg},
     highlight = {colors.fg,colors.bg},
   },
 }
-gls.right[6] = {
+gls.right[7] = {
   RainbowBlue = {
     provider = function() return ' ▊' end,
     highlight = {colors.blue,colors.bg}
