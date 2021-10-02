@@ -4,7 +4,8 @@ function! NumberToggle()
 		set nonumber
 		set nolist
 		set signcolumn=no
-		GitGutterDisable
+		"GitGutterDisable
+		Gitsigns toggle_signs
 		IndentBlanklineDisable
 		"setlocal conceallevel=0
 		"set concealcursor=
@@ -12,7 +13,8 @@ function! NumberToggle()
 		set number
 		set list
 		set signcolumn=yes
-		GitGutterEnable
+		"GitGutterEnable
+		Gitsigns toggle_signs
 		IndentBlanklineEnable
 	endif
 endfunc
