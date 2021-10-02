@@ -41,3 +41,6 @@ au BufNewFile,BufRead Jenkinsfile setf groovy
 
 " When opening nomad files set syntax to groovy
 au BufNewFile,BufRead *.nomad setf hcl
+
+" When opening .markdownlintrc treat it as json
+au BufNewFile,BufRead .markdownlintrc setf json
