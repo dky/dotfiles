@@ -175,8 +175,9 @@ alias azvmls='azure vm list'
 
 #hugo
 alias mp="make public"
-alias cddky="cd ~/git/hugo/dky.io/"
-alias cddk="cd ~/git/hugo/dky.io/"
+alias cddky="cd ~/git/dky.io/"
+alias cddk="cd ~/git/dky.io/"
+alias cddkc="cd ~/git/dky.io/content"
 
 #exercism commands
 alias exer="exercism"
