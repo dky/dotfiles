@@ -2,7 +2,6 @@
   // Enable all markdownlint rules
   "default": true,
 
-  // Disable line length check for tables and code blocks
-  "MD013": { "line_length": 200, "code_blocks": false, "tables": false }
-
+  // Disable line length check (Setting this to 300) for tables and code blocks
+  "MD013": { "line_length": 300, "code_blocks": false, "tables": false }
 }
