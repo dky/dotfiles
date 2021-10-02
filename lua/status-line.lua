@@ -32,7 +32,7 @@ gls.left[2] = {
                           rm = colors.cyan, ['r?'] = colors.cyan,
                           ['!']  = colors.red,t = colors.red}
       vim.api.nvim_command('hi GalaxyViMode guifg='..mode_color[vim.fn.mode()])
-      return '  '
+      return ' '
     end,
     highlight = {colors.red,colors.bg,'bold'},
   },
@@ -135,7 +135,7 @@ gls.mid[1] = {
   }
 }
 
-gls.right[1] = { 
+gls.right[1] = {
   TrailingWhitespace = {
     provider =  { trailing_whitespace },
     separator_highlight = {'NONE',colors.bg},
@@ -196,7 +196,6 @@ gls.short_line_left[1] = {
     highlight = {colors.blue,colors.bg,'bold'}
   }
 }
-
 gls.short_line_left[2] = {
   SFileName = {
     provider =  'SFileName',
@@ -204,7 +203,6 @@ gls.short_line_left[2] = {
     highlight = {colors.fg,colors.bg,'bold'}
   }
 }
-
 gls.short_line_right[1] = {
   BufferIcon = {
     provider= 'BufferIcon',
