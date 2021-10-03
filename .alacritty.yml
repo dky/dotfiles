@@ -133,7 +133,9 @@ live_config_reload: true
 shell:
   program: /bin/bash
   args:
-    - --login
+    - -l
+    - -c
+    - "tmux attach || tmux new -s main"
 
 alt_send_esc: true
 # Use xxd -psd to get chars code, need this because alt_send_esc doesn't seem to be doing anything...
