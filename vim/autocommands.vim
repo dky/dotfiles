@@ -44,3 +44,6 @@ au BufNewFile,BufRead *.nomad setf hcl
 
 " When opening .markdownlintrc treat it as json
 au BufNewFile,BufRead .markdownlintrc setf json
+
+" When opening vagrant files treat it as ruby
+au BufNewFile,BufRead Vagrantfile setf ruby
