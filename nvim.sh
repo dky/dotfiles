@@ -15,7 +15,7 @@ if [ "$(uname)" == "Darwin" ]; then
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 	if [ -f /etc/lsb-release ]; then
 		sudo DEBIAN_FRONTEND=noninteractive apt-get -y install bats gcc g++ clang build-essential
-	elif [-f /etc/redhat-release ]; then
+	elif [ -f /etc/redhat-release ]; then
 		echo "it's redhat"
 	fi
 	# Get latest fzf
@@ -27,18 +27,6 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 		yes | ~/.fzf/install
 		# Undo any modifications the .fzf.bash file
 		git checkout ~/.dotfiles/.fzf.bash
-	fi
-
-	# setup lua custom dictionary
-	lua_custom_dictionary_script="$HOME/.config/nvim/lua/compe-custom-dictionary.lua"
-	if [ -L $lua_custom_dictionary_script ]
-	then
-		echo "nvim lua symlink script already exists, nuking it!"
-		rm $lua_custom_dictionary_script
-		ln -s $HOME/.dotfiles/lua/compe-custom-dictionary.lua $lua_custom_dictionary_script
-	else
-		echo "nvim lua doesn't exist, creating it"
-		ln -s $HOME/.dotfiles/lua/compe-custom-dictionary.lua $lua_custom_dictionary_script
 	fi
 
 	if [ -d "$HOME/.vim-dictionary" ]
@@ -64,13 +52,13 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 fi
 
 # Ranger devicons
-if [ -d "$HOME/.config/ranger/plugins/ranger_devicons" ] 
-then
-    echo "Ranger devicons exist, doing nothing" 
-else
-	echo "Cloning ranger devicons"
-	git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
-fi
+#if [ -d "$HOME/.config/ranger/plugins/ranger_devicons" ] 
+#then
+    #echo "Ranger devicons exist, doing nothing" 
+#else
+	#echo "Cloning ranger devicons"
+	#git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
+#fi
 
 # Simlink nvim init.vim
 ln -s $HOME/.config/nvim/init.vim .
