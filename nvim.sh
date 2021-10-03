@@ -16,7 +16,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 	if [ -f /etc/lsb-release ]; then
 		sudo DEBIAN_FRONTEND=noninteractive apt-get -y install bats gcc g++ clang build-essential
 	elif [ -f /etc/redhat-release ]; then
-		echo "it's redhat"
+		sudo yum -y install gcc-c++
 	fi
 	# Get latest fzf
 	if [ -d "$HOME/.fzf" ]
@@ -52,9 +52,9 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 fi
 
 # Ranger devicons
-#if [ -d "$HOME/.config/ranger/plugins/ranger_devicons" ] 
+#if [ -d "$HOME/.config/ranger/plugins/ranger_devicons" ]
 #then
-    #echo "Ranger devicons exist, doing nothing" 
+    #echo "Ranger devicons exist, doing nothing"
 #else
 	#echo "Cloning ranger devicons"
 	#git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
