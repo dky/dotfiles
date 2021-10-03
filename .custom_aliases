@@ -249,6 +249,9 @@ alias au="sudo apt-get update && sudo apt-get -y upgrade"
 alias ai="sudo apt-get -y install"
 alias ar="sudo apt-get -y remove"
 
+#yum
+alias yi="sudo yum -y install"
+
 #nvim alias to ni
 alias ni=nvim
 
