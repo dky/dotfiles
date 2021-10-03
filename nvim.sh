@@ -13,8 +13,11 @@ if [ "$(uname)" == "Darwin" ]; then
 	# Brew install bat for syntax highlighting with fzf
 	brew install bat
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-	# These packages *should* be handled by terraform but just in case.
-	sudo DEBIAN_FRONTEND=noninteractive apt-get -y install bats gcc g++ clang build-essential
+	if [ -f /etc/lsb-release ]; then
+		sudo DEBIAN_FRONTEND=noninteractive apt-get -y install bats gcc g++ clang build-essential
+	elif [-f /etc/redhat-release ]; then
+		echo "it's redhat"
+	fi
 	# Get latest fzf
 	if [ -d "$HOME/.fzf" ]
 	then
