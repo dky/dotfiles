@@ -39,6 +39,39 @@
       ],
       "description": "Code block"
     },
+    "Pc": {
+      "prefix": ["Pc"],
+      "body": [
+        "```python",
+        "$1",
+        "```",
+        "",
+        "$0"
+      ],
+      "description": "Python Code block"
+    },
+    "Bc": {
+      "prefix": ["Bc"],
+      "body": [
+        "```bash",
+        "$1",
+        "```",
+        "",
+        "$0"
+      ],
+      "description": "Bash Code block"
+    },
+    "Gc": {
+      "prefix": ["Gc"],
+      "body": [
+        "```go",
+        "$1",
+        "```",
+        "",
+        "$0"
+      ],
+      "description": "Go Code block"
+    },
     "fm": {
       "prefix": ["Fm"],
       "body": [
