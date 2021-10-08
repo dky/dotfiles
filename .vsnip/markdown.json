@@ -1,6 +1,6 @@
 {
     "hle": {
-      "prefix": ["hle"],
+      "prefix": ["Hle"],
       "body": "[$1]($2)$0",
       "description": "External link"
     },
