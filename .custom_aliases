@@ -315,6 +315,9 @@ alias ksn="kubectl config set-context --current --namespace"
 alias ksc="kubectl config use-context"
 alias kpf="kubectl port-forward"
 
+#jq and preserve colors
+alias jql="jq . -C | less -R"
+
 # mutt
 alias nm="neomutt"
 
