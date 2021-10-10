@@ -304,10 +304,12 @@ alias kgd="kubectl get svc"
 alias kge="kubectl get events"
 alias kgpa="kubectl get pods --all-namespaces"
 alias kgs="kubectl get deployment"
-alias kdn="kubectl describe nodes"
 alias kgcs="kubectl get componentstatuses"
+# Namespaces
 alias kgn="kubectl get ns"
+# Node operations
 alias kgno="kubectl get nodes"
+alias kdno="kubectl describe nodes"
 alias kcuc="kubectl config use-context"
 alias ksn="kubectl config set-context --current --namespace"
 alias ksc="kubectl config use-context"
