@@ -63,8 +63,8 @@ function! WordProcessorMode()
   set ignorecase
   set infercase
   " Map to custom abbreviations + dictionary
-  if !empty(glob("~/.vim-dictionary/abbreviations.vim"))
-    source ~/.vim-dictionary/abbreviations.vim
+  if !empty(glob("~/.vim/dict/abbreviations.vim"))
+    source ~/.vim/dict/abbreviations.vim
   endif
   "This loads a lot of words we don't really need. Rather use our custom
   "dictionary for better completion.
