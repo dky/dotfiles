@@ -68,8 +68,9 @@ function! WordProcessorMode()
   endif
   "This loads a lot of words we don't really need. Rather use our custom
   "dictionary for better completion.
-  set dictionary+=~/.vim/dict/20k.txt
-  set dictionary+=~/.vim-dictionary/custom_dictionary.txt
+  "set dictionary+=~/.vim/dict/20k.txt
+  "20k dictionary is useless, use custom instead
+  set dictionary+=~/.vim/dict/custom_dictionary.txt
   setlocal spell spelllang=en_us
 
   augroup auto_capitalize_sentences
