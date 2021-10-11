@@ -29,13 +29,6 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 		git checkout ~/.dotfiles/.fzf.bash
 	fi
 
-	if [ -d "$HOME/.vim-dictionary" ]
-	then
-		echo "vim-dictionary already exists, do nothing."
-	else
-		mkdir $HOME/.vim-dictionary && touch $HOME/.vim-dictionary/custom_dictionary.txt
-	fi
-
 	if [ -d "$HOME/bin" ]
 	then
 		if [ -f "$HOME/bin/nvim" ]
