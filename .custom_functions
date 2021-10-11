@@ -191,65 +191,10 @@ function mkd () {
 	fi
 }
 
-# fd - Find any directory and cd to selected directory
-fd() {
-	cd ~
-	local dir
-	dir=$(find -L ${1:-.} -path '*/\.*' \
-		-o \( -name Music -o -name logbook -o -name Library -o -name Pictures -o -name Public -o -name Movies -o -name Applications -o -name Downloads \) -prune \
-		-o \( -name '.git' -o -name 'lib' \) -prune \
-		-o \( -path './go/bin/*' -o -path './go/pkg/*' -o -path './.vim/plugged/*' -o -path './.vim/view/*' -o -path './.local/share/nvim/view/*' -o -path './go/src/*' -o -path './iCloud*/*' -o -path './google-cloud-sdk/*' -o -path './tmp/*' -o -path './Documents/*' -o -path './Desktop/*' -o -path './git/dky.io/*' -o -path './git/docker/*' -o -path './git/kinesis-qmk/*' \) -prune \
-		-o \( -name '*.mp4' -o -name '*.mp3' -o -name '.DS_Store' -o -name '*.png' -o -name '*.jpg' -o -name '*.jpeg' -o -name '*.gz' -o -name '*.tgz' \) -prune \
-		-o -type d \
-		-print 2> /dev/null | fzf +m) &&
-		cd "$dir"
-}
-
-# same as fd() but scoped to git, yes I know I need to figure out how to not hard code this dir paths.
-fdg() {
-	cd ~/git
-	local dir
-	dir=$(find -L ${1:-.} -path '*/\.*' \
-		-o \( -name Music -o -name logbook -o -name Library -o -name Pictures -o -name Public -o -name Movies -o -name Applications -o -name Downloads \) -prune \
-		-o \( -name '.git' -o -name 'lib' \) -prune \
-		-o \( -path './go/bin/*' -o -path './go/pkg/*' -o -path './.vim/plugged/*' -o -path './.vim/view/*' -o -path './.local/share/nvim/view/*' -o -path './go/src/*' -o -path './iCloud*/*' -o -path './google-cloud-sdk/*' -o -path './tmp/*' -o -path './Documents/*' -o -path './Desktop/*' -o -path './git/dky.io/*' -o -path './git/docker/*' -o -path './git/kinesis-qmk/*' \) -prune \
-		-o \( -name '*.mp4' -o -name '*.mp3' -o -name '.DS_Store' -o -name '*.png' -o -name '*.jpg' -o -name '*.jpeg' -o -name '*.gz' -o -name '*.tgz' \) -prune \
-		-o -type d \
-		-print 2> /dev/null | fzf +m) &&
-		cd "$dir" && nvim
-}
-
 # Pet snippets shortcut for "pet new"
 function pta() {
 	PREV=$(echo `history | tail -n2 | head -n1` | sed 's/[0-9]* //')
 	sh -c "pet new `printf %q "$PREV"`"
-}
-
-# Wordnet fzf
-# Default `fold` to screen width and break at spaces
-function fold {
-	if [ $# -eq 0 ]; then
-		/usr/bin/fold -w $COLUMNS -s
-	else
-		/usr/bin/fold $*
-	fi
-}
-
-# Use `fzf` against system dictionary
-function spell {
-	cat /usr/share/dict/words | fzf --preview 'wn {} -over | fold' --preview-window=up:60%
-}
-
-# Lookup definition of word using `wn $1 -over`.
-# If $1 is not provided, we'll use the `spell` command to pick a word.
-# brew install wordnet
-# brew install fzf
-function dic {
-	if [ $# -eq 0 ]; then
-		wn `spell` -over | fold
-	else
-		wn $1 -over | fold
-	fi
 }
 
 function uvenvfast {
