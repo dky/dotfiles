@@ -9,8 +9,8 @@ function color_my_prompt {
 	local __seperator="\[\033[35m\]-"
 	local __date="\[\033[0;32m\]\D{%m-%d-%y}"
 	local __time="\[\033[0;33m\]\D{%H:%M:%S}"
-	local __open_bracket="\[\033[36m\]["
-	local __close_bracket="\[\033[36m\]]"
+	local __open_bracket="\[\033[1;30m\]["
+	local __close_bracket="\[\033[1;30m\]]"
 	local __last_color="\[\033[00m\]"
 	export PS1="$__open_bracket$__user$__asterisk$__host $__cur_location $__date$__seperator$__time$__close_bracket$__git_branch_color$__git_branch\n$__prompt_tail$__last_color "
 }
