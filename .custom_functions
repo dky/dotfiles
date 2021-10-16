@@ -6,11 +6,13 @@ function color_my_prompt {
 	local __git_branch_color="\[\033[31m\]"
 	local __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
 	local __prompt_tail="\[\033[35m\]$"
-	local __date="\[\033[0;32m\]\D{%F %T}"
+	local __seperator="\[\033[35m\]-"
+	local __date="\[\033[0;32m\]\D{%m-%d-%y}"
+	local __time="\[\033[0;33m\]\D{%H:%M:%S}"
 	local __open_bracket="\[\033[35m\]["
 	local __close_bracket="\[\033[35m\]]"
 	local __last_color="\[\033[00m\]"
-	export PS1="$__open_bracket$__user$__asterisk$__host $__cur_location$__close_bracket $__date $__git_branch_color$__git_branch\n$__prompt_tail$__last_color "
+	export PS1="$__open_bracket$__user$__asterisk$__host $__cur_location$__close_bracket $__date$__seperator$__time $__git_branch_color$__git_branch\n$__prompt_tail$__last_color "
 }
 
 function pmin {
