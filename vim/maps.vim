@@ -95,7 +95,10 @@ let b:surround_{char2nr('B')} = "\`\`\`bash\r\`\`\`"
 " Surround things with print in Python
 let g:surround_{char2nr('p')} = "print\(\r\)"
 
-
+" Go to beginning of line, visual character select to end. Shift+s, then call
+" p which is the custom surround mapping to wrap things with p
+"nmap <C-A> 0v$<S-s>p - This was used to test, ctrl-a alone works.
+nmap ,sp 0v$<S-s>p
 
 " map to <Leader>cf in C++ code
 autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<cr>
