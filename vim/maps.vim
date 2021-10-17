@@ -92,6 +92,11 @@ let b:surround_{char2nr('b')} = "\`\`\`bash\r\`\`\`"
 let b:surround_{char2nr('~')} = "\`\`\`\r\`\`\`"
 let b:surround_{char2nr('B')} = "\`\`\`bash\r\`\`\`"
 
+" Surround things with print in Python
+let g:surround_{char2nr('p')} = "print\(\r\)"
+
+
+
 " map to <Leader>cf in C++ code
 autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<cr>
 autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<cr>
