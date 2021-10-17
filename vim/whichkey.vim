@@ -91,6 +91,8 @@ let g:localleader_map.g = {
       \ 'f' : [':GoFmt'         , 'Go Fmt']
       \ }
 
+let g:localleader_map['p'] = [ ',sp' , 'Surround with with print() func' ]
+
 let g:localleader_map.c = {
       \ 'name' : '+codi' ,
       \ 'c' : [':Codi'         , 'Start Codi'],
