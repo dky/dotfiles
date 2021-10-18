@@ -97,7 +97,8 @@ let g:surround_{char2nr('p')} = "print\(\r\)"
 
 " Go to beginning of line, visual character select to end. Shift+s, then call
 " p which is the custom surround mapping to wrap things with p
-"nmap <C-A> 0v$<S-s>p - This was used to test, ctrl-a alone works.
+" nmap <C-A> 0v$<S-s>p - This was used to test, ctrl-a alone works.
+" This can be simplified even further with yssp
 nmap ,sp 0v$<S-s>p
 
 " map to <Leader>cf in C++ code
