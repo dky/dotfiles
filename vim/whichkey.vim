@@ -91,7 +91,6 @@ let g:localleader_map.g = {
       \ 'f' : [':GoFmt'         , 'Go Fmt']
       \ }
 
-let g:localleader_map['p'] = [ ',sp' , 'Surround with with print() func' ]
 
 let g:localleader_map.c = {
       \ 'name' : '+codi' ,
@@ -103,6 +102,12 @@ let g:localleader_map.c = {
 let g:localleader_map.1 = {
       \ 'name' : '+test' ,
       \ 't' : [':TestFile'        , 'TestFile'],
+      \ }
+
+" surround maps are defined in maps.vim
+let g:localleader_map.s = {
+      \ 'name' : '+surround' ,
+      \ 'p' : [',sp'        , 'Surround Python code with print()'],
       \ }
 
 " Register which key map
