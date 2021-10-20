@@ -1,21 +1,22 @@
 " Disable line numbers, Git Gutter, Indent Guides
 function! NumberToggle()
 	if(&number == 1 && &list == 1)
+		IndentBlanklineDisable
 		set nonumber
 		set nolist
 		set signcolumn=no
 		"GitGutterDisable
 		Gitsigns toggle_signs
-		IndentBlanklineDisable
+		"IndentBlanklineDisable
 		"setlocal conceallevel=0
 		"set concealcursor=
 	else
+		IndentBlanklineEnable
 		set number
 		set list
 		set signcolumn=yes
 		"GitGutterEnable
 		Gitsigns toggle_signs
-		IndentBlanklineEnable
 	endif
 endfunc
 
