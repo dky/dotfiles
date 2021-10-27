@@ -83,8 +83,9 @@ let g:leader_map.s = {
       \ }
 
 " localleader \ mappings
-let g:localleader_map['t'] = [ 'TestFile'                   , 'TestFile']
-let g:localleader_map['q'] = [ '<c-c>'                      , 'Quit FZF search' ]
+let g:localleader_map['t'] = [ 'TestFile'                                    , 'TestFile']
+let g:localleader_map['q'] = [ '<c-c>'                                       , 'Quit FZF search' ]
+let g:localleader_map['p'] = [':FloatermNew --autoclose=0 python3 %'         , 'run current buffer with python in float']
 
 let g:localleader_map.g = {
       \ 'name' : '+go' ,
