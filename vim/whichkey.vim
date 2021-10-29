@@ -54,7 +54,7 @@ let g:leader_map.n = {
       \ '1' : [':FloatermNew --autoclose=0 terraform plan'           , 'terraform plan'],
       \ '2' : [':FloatermNew --autoclose=0 terraform apply -auto-approve'          , 'terraform apply with auto-approve'],
       \ '3' : [':FloatermNew --autoclose=0 terraform destroy'        , 'terraform destroy'],
-      \ 'a' : [':FloatermNew --autoclose=0 ansible-playbook -v %'    , 'ansible-playbook apply'],
+      \ 'a' : [':FloatermNew --autoclose=0 ansible-playbook -i inventory.yml -v %'    , 'ansible-playbook apply'],
       \ 'p' : [':FloatermNew --autoclose=0 python3 %'                , 'run current buffer with python in float'],
       \ 'ft' : [':Floaterms'                                         , 'Use fzf to find terms'],
       \ 'fn' : [':FloatermNext'                                      , 'Next Floaterm'],
