@@ -358,3 +358,6 @@ alias pu="cd ~/.dotfiles && git push origin master && cd ~/.vim && git push orig
 
 # Open directories using explorer using WSL
 alias exp="explorer.exe ."
+
+# Ansible local
+alias apl="ansible-playbook --connection=local --inventory 127.0.0.1 -limit=127.0.0.1"
