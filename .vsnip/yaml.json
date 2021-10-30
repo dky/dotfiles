@@ -1,0 +1,15 @@
+{
+    "avar": {
+      "prefix": ["ansible var"],
+      "body": "\"{{ $1 }}\"$0",
+      "description": "A variable for ansible"
+    },
+    "playbook": {
+      "prefix": ["ansible playbook header"],
+      "body": [ 
+        "---",
+        "$0"
+      ],
+      "description": "A variable for ansible"
+    }
+}
