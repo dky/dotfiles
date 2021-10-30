@@ -43,6 +43,12 @@ for _, lsp in ipairs(servers) do
     }
 end
 
+-- Ansible - make sure you get ansible-lint installed via pip
+nvim_lsp.ansiblels.setup {
+	 cmd = { "ansible-language-server", "--stdio" },
+    filetypes = { "yaml" }
+}
+
 -- Golang
 nvim_lsp.gopls.setup {
     cmd = {"gopls"},
