@@ -202,87 +202,29 @@ function pta() {
 	sh -c "pet new `printf %q "$PREV"`"
 }
 
-function uvenvfast {
-	python3 -m venv venv 
-	source venv/bin/activate 
-	pip install --upgrade pip setuptools
-
-cat << EOF > ./requirements.txt
-fastapi
-uvicorn
-sqlalchemy
-httpx
-EOF
-
-cat << EOF > ./requirements-dev.txt
--r requirements.txt
-pytest
-pytest-cov
-webtest
-flake8
-yapf
-pynvim
-jedi
-pylint
-EOF
-
-pip install -r ./requirements.txt
-pip install -r ./requirements-dev.txt
-}
-
 function uvenv {
 	python3 -m venv venv 
 	source venv/bin/activate 
 	pip install --upgrade pip setuptools
-	mkdir -p app/templates \
-		app/bin \
-		app/db \
-		app/static \
-		app/views \
-		app/viewmodels \
-		app/data \
-		app/static/js app/static/css app/static/img
 
 cat << EOF > ./requirements.txt
 sqlalchemy
+fastapi
+uvicorn
 EOF
 
 cat << EOF > ./requirements-dev.txt
 -r requirements.txt
 pytest
-pytest-cov
-webtest
 flake8
 yapf
 pynvim
-jedi
 pylint
 EOF
 
 pip install -r ./requirements.txt
 pip install -r ./requirements-dev.txt
 
-cat << EOF > app/app.py
-import flask
-
-
-app = flask.Flask(__name__)
-
-
-@app.route('/')
-def index():
-    return "Hello World!"
-
-
-if __name__ == '__main__':
-	app.run(debug=True)
-EOF
-}
-
-function venv {
-	python3 -m venv venv
-	source venv/bin/activate
-	pip install --upgrade pip setuptools
 }
 
 function unsetaws {
