@@ -3,6 +3,11 @@
       "prefix": ["shebang"],
       "body": [
         "#/usr/bin/env bash",
+        "# Some safety controls and details of each option",
+        "# -e exit immediately if command fails",
+        "# -u treat unset variables as an error and exit",
+        "# -x print each command before executing",
+        "# -o pipefail sets the exit code of a pipleine to the rightmost command to exit with non-zero",
         "set -euxo pipefail",
         "",
         "$0"
