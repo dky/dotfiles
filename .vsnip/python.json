@@ -1,8 +1,13 @@
 {
     "prt": {
-      "prefix": ["prt"],
+      "prefix": ["print"],
       "body": "print($1)$0",
-      "description": "Print"
+      "description": "Print to stdout"
+    },
+    "prtt": {
+      "prefix": ["print(type)"],
+      "body": "print(type($1))$0",
+      "description": "Print the type"
     },
     "ilist": {
       "prefix": ["ilist"],
