@@ -76,45 +76,61 @@ alias tls="tmux ls"
 # which
 alias wh="which"
 
-#Git
+# Git misc
 alias cdg="cd $HOME/git"
 alias Git='git'
 alias gi='git init'
-alias ga='git add'
 alias gg='git grep'
+alias gc='git clone'
+
+# Git add
+alias ga='git add'
 alias gA='git add -A'
+
+# Git pull
 alias gp='git pull'
-alias gpod='git push origin --delete'
-alias grh='git reset --hard'
 alias gpd='git pull origin HEAD'
-alias gcmp='git commit -p'
+
+# Git push
+alias gpod='git push origin --delete'
 alias gpu='git push origin HEAD'
 alias gpuf='git push origin HEAD --force'
+
+# Git checkout
+alias grh='git reset --hard'
 alias gl='git log --pretty --pretty=oneline'
 alias gsh='git show'
 alias gst='git status'
 alias gd='git diff'
+alias gbc='git checkout -b'
+alias gco='git checkout'
+alias gb='git checkout $(git branch | fzf)'
+
+# Git commit
+alias gcmp='git commit -p'
+alias gcm='git commit -m'
+alias gamend='git commit --amend'
+# Because typing is hard...
 alias gcma='git add . && git commit -m'
 alias gmca="gcma"
-# Because typing is hard...
 alias gcam="gcma"
-alias gcm='git commit -m'
-alias gco='git checkout'
+
+# Git remotes
+alias grmo='git remote rm origin'
+alias grrm='git remote rm'
 alias gra='git remote add origin'
 alias grv='git remote -v'
-alias gc='git clone'
-alias gb='git checkout $(git branch | fzf)'
+
+# Git branch
 alias gbl='git branch -v'
 alias gbd='git branch -d'
 alias gbD='git branch -D'
 alias gba='git branch -a'
 alias gbrm='git branch -d'
 alias grm='git branch -d'
-alias gamend='git commit --amend'
+
+# Git Diff
 alias gdiff='git diff'
-alias gbc='git checkout -b'
-alias grmo="git remote rm origin"
-alias grrm="git remote rm"
 alias gds="git diff --staged"
 
 #vim alias
