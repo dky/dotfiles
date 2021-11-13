@@ -83,6 +83,10 @@ alias gi='git init'
 alias gg='git grep'
 alias gc='git clone'
 alias gf='git fetch'
+alias grh='git reset --hard'
+alias gl='git log --pretty --pretty=oneline'
+alias gsh='git show'
+alias gst='git status'
 
 # Git add
 alias ga='git add'
@@ -99,11 +103,6 @@ alias gpu='git push origin HEAD'
 alias gpuf='git push origin HEAD --force'
 
 # Git checkout
-alias grh='git reset --hard'
-alias gl='git log --pretty --pretty=oneline'
-alias gsh='git show'
-alias gst='git status'
-alias gd='git diff'
 alias gbc='git checkout -b'
 alias gco='git checkout'
 alias gb='git checkout $(git branch | fzf)'
@@ -132,6 +131,7 @@ alias gbrm='git branch -d'
 alias grm='git branch -d'
 
 # Git Diff
+alias gd='git diff'
 alias gdiff='git diff'
 alias gds="git diff --staged"
 
