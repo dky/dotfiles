@@ -93,14 +93,16 @@ alias ga='git add'
 alias gA='git add -A'
 
 # Git pull
-alias gp='git pull'
-alias gpd='git pull origin HEAD'
-alias gpo='git pull origin'
+alias gpl='git pull'
+alias gplo='git pull origin'
+alias gplh='git pull origin HEAD'
 
 # Git push
-alias gpod='git push origin --delete'
-alias gpu='git push origin HEAD'
+alias gpu='git push'
+alias gpuo='git push origin'
+alias gpuh='git push origin HEAD'
 alias gpuf='git push origin HEAD --force'
+alias gpuod='git push origin --delete' # deleting branches
 
 # Git checkout
 alias gbc='git checkout -b'
