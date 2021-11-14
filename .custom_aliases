@@ -80,60 +80,60 @@ alias wh="which"
 alias cdg="cd $HOME/git"
 alias Git='git'
 alias gi='git init'
-alias gg='alias gg; git grep'
-alias gc='alias gc; git clone'
-alias gf='alias gf; git fetch'
-alias gl='alias gl; git log --pretty --pretty=oneline'
-alias grh='alias grhe; git reset HEAD'
-alias grh='alias grha; git reset --hard'
-alias gsh='alias gsh; git show'
-alias gst='alias gst; git status'
+alias gg='git grep'
+alias gc='git clone'
+alias gf='git fetch'
+alias gl='git log --pretty --pretty=oneline'
+alias grh='git reset HEAD'
+alias grh='git reset --hard'
+alias gsh='git show'
+alias gst='git status'
 
 # Git add
-alias ga='alias ga; git add'
-alias gA='alias gA; git add -A'
+alias ga='git add'
+alias gA='git add -A'
 
 # Git pull
-alias gpl='alias gpl; git pull'
-alias gplo='alias gplo; git pull --rebase origin'
-alias gplh='alias gplh; git pull --rebase origin HEAD'
+alias gpl='git pull'
+alias gplo='git pull --rebase origin'
+alias gplh='git pull --rebase origin HEAD'
 
 # Git push
-alias gpu='alias gpu; git push'
-alias gpuo='alias gpuo; git push origin'
-alias gpuh='alias gpuh; git push origin HEAD'
-alias gpuf='alias gpuf; git push origin HEAD --force'
-alias gpuod='alias gpuod; git push origin --delete' # deleting remote branches
+alias gpu='git push'
+alias gpuo='git push origin'
+alias gpuh='git push origin HEAD'
+alias gpuf='git push origin HEAD --force'
+alias gpuod='git push origin --delete' # deleting remote branches
 
 # Git checkout
-alias gbc='alias gbc; git checkout -b'
-alias gco='alias gco; git checkout'
+alias gbc='git checkout -b'
+alias gco='git checkout'
 alias gb='git checkout $(git branch | fzf)'
 
 # Git commit
-alias gcmp='alias gcmp; git commit -p'
-alias gcm='alias gcm; git commit -m'
-alias gamend='alias gamend; git commit --amend'
+alias gcmp='git commit -p'
+alias gcm='git commit -m'
+alias gamend='git commit --amend'
 # Because typing is hard...
-alias gcma='alias gcma; git add . && git commit -m'
+alias gcma='git add . && git commit -m'
 alias gmca="gcma"
 alias gcam="gcma"
 
 # Git remotes
-alias grmo='alias grmo; git remote rm origin'
-alias grrm='alias grrm; git remote rm'
-alias gra='alias gra; git remote add origin'
-alias grv='alias grv; git remote -v'
+alias grmo='git remote rm origin'
+alias grrm='git remote rm'
+alias gra='git remote add origin'
+alias grv='git remote -v'
 
 # Git branch
-alias gbv='alias gbv; git branch -v'
-alias gbd='alias gbd; git branch -d'
-alias gbD='alias gbD; git branch -D'
-alias gba='alias gba; git branch -a'
+alias gbv='git branch -v'
+alias gbd='git branch -d'
+alias gbD='git branch -D'
+alias gba='git branch -a'
 
 # Git Diff
-alias gd='alias gd; git diff --color-moved=zebra --'
-alias gds="alias gds; git diff --staged --color-moved=zebra --"
+alias gd='git diff --color-moved=zebra --'
+alias gds="git diff --staged --color-moved=zebra --"
 
 #vim alias
 alias vi="vim"
@@ -321,23 +321,23 @@ alias chme="chown `echo $(whoami):$(whoami)`"
 
 # kubernetes
 alias k="kubectl"
-alias ka="alias ka; kubectl apply -f"
-alias kl="alias kl; kubectl logs"
-alias kgc="alias kgc; kubectl config get-contexts"
-alias kgd="alias kdg; kubectl get svc"
-alias kge="alias kge; kubectl get events"
-alias kgpa="alias kgpa; kubectl get pods --all-namespaces"
-alias kgs="alias kgs; kubectl get deployment"
-alias kgcs="alias kgcs; kubectl get componentstatuses"
+alias ka="kubectl apply -f"
+alias kl="kubectl logs"
+alias kgc="kubectl config get-contexts"
+alias kgd="kubectl get svc"
+alias kge="kubectl get events"
+alias kgpa="kubectl get pods --all-namespaces"
+alias kgs="kubectl get deployment"
+alias kgcs="kubectl get componentstatuses"
 # Namespaces
-alias kgn="alias kgn; kubectl get ns"
+alias kgn="kubectl get ns"
 # Node operations
-alias kgno="alias kgno; kubectl get nodes"
-alias kdno="alias kdno; kubectl describe nodes"
-alias kcuc="alias kcuc; kubectl config use-context"
-alias ksn="alias ksn; kubectl config set-context --current --namespace"
-alias ksc="alias ksc; kubectl config use-context"
-alias kpf="alias kpf; kubectl port-forward"
+alias kgno="kubectl get nodes"
+alias kdno="kubectl describe nodes"
+alias kcuc="kubectl config use-context"
+alias ksn="kubectl config set-context --current --namespace"
+alias ksc="kubectl config use-context"
+alias kpf="kubectl port-forward"
 
 #jq and preserve colors
 alias jql="jq . -C | less -R"
