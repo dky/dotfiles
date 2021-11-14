@@ -1,4 +1,4 @@
-alias ag="alias |grep -i"
+#alias ag="alias |grep -i"
 #jsonlint
 alias jl="jsonlint"
 

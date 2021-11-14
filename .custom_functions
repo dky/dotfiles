@@ -38,6 +38,10 @@ function kgcpn {
 	kubectl get pods $pod -o jsonpath='{.spec.containers[*].name}{"\n"}' --namespace=$name;
 }
 
+function ag() {
+	alias | sed -e "s/^alias //g" -e "s/['\"]//g" | awk -F'=' '{ print $1, "=>", $2 }' | fzf
+}
+
 #docker functions
 function dkr {
 	name="$1"
