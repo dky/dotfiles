@@ -216,10 +216,10 @@ alias tf="terraform fmt"
 alias to="terraform output"
 
 #gcp
-alias gcl="gcloud config list"
-alias gpl="gcloud projects list"
-alias gcsp="gcloud config set project"
-alias gcrl="gcloud compute regions list"
+#alias gcl="gcloud config list"
+#alias gpl="gcloud projects list"
+#alias gcsp="gcloud config set project"
+#alias gcrl="gcloud compute regions list"
 
 #homebrew
 alias bu="brew update && brew upgrade"
