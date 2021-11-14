@@ -94,8 +94,8 @@ alias gA='alias gA; git add -A'
 
 # Git pull
 alias gpl='alias gpl; git pull'
-alias gplo='alias gplo; git pull origin'
-alias gplh='alias gplh; git pull origin HEAD'
+alias gplo='alias gplo; git pull --rebase origin'
+alias gplh='alias gplh; git pull --rebase origin HEAD'
 
 # Git push
 alias gpu='alias gpu; git push'
@@ -132,7 +132,7 @@ alias gba='alias gba; git branch -a'
 
 # Git Diff
 alias gd='alias gd; git diff --color-moved=zebra --'
-alias gds="alias gds; git diff --staged"
+alias gds="alias gds; git diff --staged --color-moved=zebra --"
 
 #vim alias
 alias vi="vim"
