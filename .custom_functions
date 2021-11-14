@@ -39,7 +39,9 @@ function kgcpn {
 }
 
 function ag() {
-	alias | sed -e "s/^alias //g" -e "s/['\"]//g" | awk -F'=' '{ print $1, "=>", $2 }' | fzf
+	local alias_cmd
+	alias_cmd=$(alias | sed -e "s/^alias //g" -e "s/['\"]//g" | awk -F'=' '{ print $1, "#", $2 }' | fzf)
+	$alias_cmd
 }
 
 #docker functions
