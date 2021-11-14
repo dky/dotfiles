@@ -131,7 +131,7 @@ alias gbD='alias gbD; git branch -D'
 alias gba='alias gba; git branch -a'
 
 # Git Diff
-alias gd='alias gd; git diff'
+alias gd='alias gd; git diff --color-moved=zebra --'
 alias gds="alias gds; git diff --staged"
 
 #vim alias
