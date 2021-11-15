@@ -63,7 +63,7 @@ __fzf_history__() {
 
 __fzf_alias__() {
   local cmd dir
-  cmd="${FZF_ALT_C_COMMAND:-"command alias 2> /dev/null" | sed -e 's/^alias //g' | tr -d \''"\' | "awk -F'=' '{ print \$1, \$2 }'" }"
+  cmd="${FZF_ALT_C_COMMAND:-"command alias 2> /dev/null" | sed -e 's/^alias //g' | tr -d \''"\' | cut -d= -f 1 }"
   alias_cmd=$(eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse $FZF_DEFAULT_OPTS $FZF_ALT_C_OPTS" $(__fzfcmd) +m) && printf '%q' "$alias_cmd"
 }
 
