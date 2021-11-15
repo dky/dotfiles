@@ -61,6 +61,14 @@ __fzf_history__() {
   fi
 }
 
+__fzf_alias__() {
+  local cmd dir
+  cmd="${FZF_ALT_C_COMMAND:-"command find -L . -mindepth 1 \
+    \\( -path '*/\\.*' -o -fstype 'sysfs' -o -fstype 'devfs' -o -fstype 'devtmpfs' -o -fstype 'proc' \\) -prune \
+    -o -type d -print 2> /dev/null | cut -b3-"}"
+  dir=$(eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse $FZF_DEFAULT_OPTS $FZF_ALT_C_OPTS" $(__fzfcmd) +m) && printf 'cd %q' "$dir"
+}
+
 # Required to refresh the prompt after fzf
 bind -m emacs-standard '"\er": redraw-current-line'
 
@@ -92,7 +100,7 @@ else
 fi
 
 # ALT-C - cd into the selected directory
-bind -m emacs-standard '"\ec": " \C-b\C-k \C-u`__fzf_cd__`\e\C-e\er\C-m\C-y\C-h\e \C-y\ey\C-x\C-x\C-d"'
+bind -m emacs-standard '"\ec": " \C-b\C-k \C-u`__fzf_alias__`\e\C-e\er\C-m\C-y\C-h\e \C-y\ey\C-x\C-x\C-d"'
 bind -m vi-command '"\ec": "\C-z\ec\C-z"'
 bind -m vi-insert '"\ec": "\C-z\ec\C-z"'
 
