@@ -63,8 +63,8 @@ __fzf_history__() {
 
 __fzf_alias__() {
   local cmd dir
-  cmd="${FZF_ALT_C_COMMAND:-"command find . -type d -print 2> /dev/null | cut -b3-"}"
-  dir=$(eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse $FZF_DEFAULT_OPTS $FZF_ALT_C_OPTS" $(__fzfcmd) +m) && printf 'cd %q' "$dir"
+  cmd="${FZF_ALT_C_COMMAND:-"command alias 2> /dev/null"}"
+  alias_cmd=$(eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse $FZF_DEFAULT_OPTS $FZF_ALT_C_OPTS" $(__fzfcmd) +m) && printf 'cd %q' "$alias_cmd"
 }
 
 # Required to refresh the prompt after fzf
