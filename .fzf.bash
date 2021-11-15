@@ -15,7 +15,7 @@ fzf_then_open_in_editor() {
 	# Open the file if it exists
 	if [ -n "$file" ]; then
 		# Use the default editor if it's defined, otherwise Vim
-		${EDITOR:-vim} "$file"
+		${EDITOR:-nvim} "$file"
 	fi
 }
 
