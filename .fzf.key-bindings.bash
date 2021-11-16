@@ -11,6 +11,16 @@
 # - $FZF_ALT_C_COMMAND
 # - $FZF_ALT_C_OPTS
 
+# - Keybinding overrides by dky
+
+# We override the following default bash keys:
+
+#ctrl-t - __fzf__ file finding
+#ctrl-r - __fzf__history__
+#ctrl-n - custom alias search
+
+
+
 # Key bindings
 # ------------
 __fzf_select__() {
