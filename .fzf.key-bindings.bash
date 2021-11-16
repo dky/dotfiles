@@ -97,9 +97,14 @@ else
   bind -m vi-insert -x '"\C-r": __fzf_history__'
 fi
 
-# ALT-C - cd into the selected directory
-bind -m emacs-standard '"\ec": " \C-b\C-k \C-u`__fzf_alias__`\e\C-e\er\C-m\C-y\C-h\e \C-y\ey\C-x\C-x\C-d"'
-bind -m vi-command '"\ec": "\C-z\ec\C-z"'
-bind -m vi-insert '"\ec": "\C-z\ec\C-z"'
+# ALT-C - Search for an alias to run
+#bind -m emacs-standard '"\ec": " \C-b\C-k \C-u`__fzf_alias__`\e\C-e\er\C-m\C-y\C-h\e \C-y\ey\C-x\C-x\C-d"'
+#bind -m vi-command '"\ec": "\C-z\ec\C-z"'
+#bind -m vi-insert '"\ec": "\C-z\ec\C-z"'
+
+# CTRL-N - Search for an alias to run
+bind -m emacs-standard '"\C-n": "\C-e \C-u\C-y\ey\C-u"$(__fzf_alias__)"\e\C-e\er"'
+bind -m vi-command '"\C-n": "\C-z\C-r\C-z"'
+bind -m vi-insert '"\C-n": "\C-z\C-r\C-z"'
 
 fi
