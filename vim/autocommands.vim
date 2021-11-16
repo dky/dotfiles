@@ -47,3 +47,9 @@ au BufNewFile,BufRead .markdownlintrc setf json
 
 " When opening vagrant files treat it as ruby
 au BufNewFile,BufRead Vagrantfile setf ruby
+
+" Set .custom_functions to shell
+au BufNewFile,BufRead .custom_functions setf sh
+
+" Set .custom_alias to shell
+au BufNewFile,BufRead .custom_aliases setf sh
