@@ -15,7 +15,7 @@
 
 # We override the following default bash keys:
 
-#ctrl-t - __fzf__ file finding
+#ctrl-t - __fzf__ file finding check .fzf.bash because that's where ths keybinding happens, not in this file.
 #ctrl-r - __fzf__history__
 #ctrl-n - custom alias search
 
