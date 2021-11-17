@@ -21,5 +21,22 @@
         "$0"
       ],
       "description": "Array"
+    },
+    "echo": {
+      "prefix": ["echo"],
+      "body": [
+        "echo $1",
+        "$0"
+      ],
+      "description": "echo something to stdout"
+    },
+    "fora": {
+      "prefix": ["forarray"],
+      "body": [
+        "for i in ${array[@]}; do",
+        " echo $i",
+        "done"
+      ],
+      "description": "For array"
     }
 }
