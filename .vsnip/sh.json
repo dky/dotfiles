@@ -12,6 +12,14 @@
         "",
         "$0"
       ],
-      "description": "A variable for ansible"
+      "description": "Bash Shebang"
+    },
+    "arr": {
+      "prefix": ["array"],
+      "body": [
+        "array=($1)",
+        "$0"
+      ],
+      "description": "Array"
     }
 }
