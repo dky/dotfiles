@@ -31,12 +31,33 @@
       "description": "echo something to stdout"
     },
     "fora": {
-      "prefix": ["forarray"],
+      "prefix": ["fora"],
       "body": [
         "for i in \\${array[@]}; do",
         " echo $i",
         "done"
       ],
       "description": "For array"
+    },
+    "here": {
+      "prefix": ["here"],
+      "body": [
+        "cat << EOF > /tmp/heredoc",
+        "Some contents",
+        "EOF"
+      ],
+      "description": "heredoc"
+    },
+    "ifel": {
+      "prefix": ["ifel"],
+      "body": [
+        "if [[ $1 = \"$2\" ]]",
+        "then",
+        "  $3",
+        "else",
+        "  $4",
+        "fi"
+      ],
+      "description": "if-else"
     }
 }
