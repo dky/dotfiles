@@ -33,7 +33,7 @@
     "fora": {
       "prefix": ["forarray"],
       "body": [
-        "for i in ${array[@]}; do",
+        "for i in \\${array[@]}; do",
         " echo $i",
         "done"
       ],
