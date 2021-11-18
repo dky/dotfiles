@@ -1,6 +1,6 @@
 {
     "shb": {
-      "prefix": ["shebang"],
+      "prefix": ["sheb"],
       "body": [
         "#/usr/bin/env bash",
         "# Some safety controls and details of each option",
@@ -15,7 +15,7 @@
       "description": "Bash Shebang"
     },
     "arr": {
-      "prefix": ["array"],
+      "prefix": ["ar"],
       "body": [
         "array=($1)",
         "$0"
