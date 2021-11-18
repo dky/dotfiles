@@ -43,8 +43,9 @@
       "prefix": ["here"],
       "body": [
         "cat << EOF > /tmp/heredoc",
-        "Some contents",
-        "EOF"
+        "$1",
+        "EOF",
+        "$0"
       ],
       "description": "heredoc"
     },
