@@ -88,6 +88,7 @@ alias grh='git reset HEAD'
 alias grh='git reset --hard'
 alias gsh='git show'
 alias gst='git status'
+alias gcp='git cherry-pick'
 
 # Git add
 alias ga='git add'
