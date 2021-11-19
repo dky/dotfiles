@@ -90,6 +90,8 @@ alias gsh='git show'
 alias gst='git status'
 alias gcp='git cherry-pick'
 alias gsta='git stash'
+alias gstaa='git stash apply'
+alias gstap='git stash pop'
 
 # Git add
 alias ga='git add'
