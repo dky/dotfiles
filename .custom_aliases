@@ -92,7 +92,7 @@ alias gcp='git cherry-pick'
 alias gsta='git stash'
 alias gstaa='git stash apply'
 alias gstap='git stash pop'
-alias gcb="git symbolic-ref --short HEAD"
+alias gcb="git symbolic-ref --short HEAD" # Equiv to git branch --show-current but this is only in Git 2.22
 
 # Git add
 alias ga='git add'
