@@ -1,7 +1,7 @@
 export HISTCONTROL=erasedups
 export HISTSIZE=10000
 export HISTTIMEFORMAT='%F %T '
-export EDITOR=vim
+export EDITOR=nvim
 #This is to silence the zsh banner in Catalina...
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
