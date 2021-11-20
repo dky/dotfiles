@@ -100,13 +100,13 @@ alias gA='git add -A'
 # Git pull
 alias gpl='git pull'
 alias gplo='git pull --rebase origin'
-alias gplh='git pull --rebase origin HEAD'
+alias gplh='git pull --rebase origin "$(git symbolic-ref --short HEAD)"'
 
 # Git push
 alias gpu='git push'
 alias gpuo='git push origin'
-alias gpuh='git push origin HEAD'
-alias gpuf='git push origin HEAD --force'
+alias gpuh='git push origin "$(git symbolic-ref --short HEAD)"'
+alias gpuf='git push origin "$(git symbolic-ref --short HEAD)" --force'
 alias gpuod='git push origin --delete' # deleting remote branches
 
 # Git checkout
