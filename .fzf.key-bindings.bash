@@ -17,7 +17,7 @@
 
 #ctrl-t - __fzf__ file finding check .fzf.bash because that's where ths keybinding happens, not in this file.
 #ctrl-r - __fzf__history__
-#ctrl-n - custom alias search
+#ctrl-k - custom alias search
 
 
 
@@ -112,9 +112,9 @@ fi
 #bind -m vi-command '"\ec": "\C-z\ec\C-z"'
 #bind -m vi-insert '"\ec": "\C-z\ec\C-z"'
 
-# CTRL-N - Search for an alias to run
-bind -m emacs-standard '"\C-n": "\C-e \C-u\C-y\ey\C-u"$(__fzf_alias__)"\e\C-e\er"'
-bind -m vi-command '"\C-n": "\C-z\C-r\C-z"'
-bind -m vi-insert '"\C-n": "\C-z\C-r\C-z"'
+# CTRL-K - Search for an alias to run
+bind -m emacs-standard '"\C-k": "\C-e \C-u\C-y\ey\C-u"$(__fzf_alias__)"\e\C-e\er"'
+bind -m vi-command '"\C-k": "\C-z\C-r\C-z"'
+bind -m vi-insert '"\C-k": "\C-z\C-r\C-z"'
 
 fi
