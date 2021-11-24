@@ -9,6 +9,13 @@
       "body": "print(type($1))$0",
       "description": "Print the type"
     },
+    "prf": {
+      "prefix": ["prtf"],
+      "body": [
+        "print(f\"$1, {$2}\")$0"
+      ],
+      "description": "printf"
+    },
     "ilist": {
       "prefix": ["ilist"],
       "body": [
