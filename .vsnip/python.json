@@ -31,6 +31,21 @@
       ],
       "description": "Sample int list"
     },
+    "set": {
+      "prefix": ["set"],
+      "body": [
+        "$1 = {$2}"
+      ],
+      "description": "set"
+    },
+    "tup": {
+      "prefix": ["tup"],
+      "body": [
+        "($1)",
+        "$0"
+      ],
+      "description": "tuple"
+    },
     "slist": {
       "prefix": ["slist"],
       "body": [
@@ -43,6 +58,16 @@
       "body": [
         "\"\"\"",
         "$1",
+        "\"\"\"",
+        "$0"
+      ],
+      "description": "multi line comment"
+    },
+    "mls": {
+      "prefix": ["mls"],
+      "body": [
+        "$1 = \"\"\"",
+        "$2",
         "\"\"\"",
         "$0"
       ],
@@ -63,12 +88,5 @@
         "    $0"
       ],
       "description": "def __init__(self)"
-    },
-    "set": {
-      "prefix": ["set"],
-      "body": [
-        "$1 = {$2}"
-      ],
-      "description": "set"
     }
 }
