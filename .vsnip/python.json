@@ -63,5 +63,12 @@
         "    $0"
       ],
       "description": "def __init__(self)"
+    },
+    "set": {
+      "prefix": ["set"],
+      "body": [
+        "$1 = {$2}"
+      ],
+      "description": "set"
     }
 }
