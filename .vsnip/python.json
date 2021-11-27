@@ -16,6 +16,14 @@
       ],
       "description": "printf"
     },
+    "in": {
+      "prefix": ["in"],
+      "body": [
+        "$1 = input($2)",
+        "$0"
+      ],
+      "description": "input"
+    },
     "ilist": {
       "prefix": ["ilist"],
       "body": [
