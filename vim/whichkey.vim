@@ -73,6 +73,7 @@ let g:leader_map.m = {
       \ 'b' : [':set ft=sh'                          , 'Set filetype to sh'],
       \ 'p' : [':set ft=python'                      , 'Set filetype to python'],
       \ 'r' : [':FloatermNew ranger'                 , 'Call ranger from floaterm'],
+      \ 'w' : [':TrimWhitespace'                     , 'Trim the fat that is whitespace'],
       \ }
 
 let g:leader_map.s = {
