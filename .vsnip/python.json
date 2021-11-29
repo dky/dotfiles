@@ -19,7 +19,7 @@
     "dir": {
       "prefix": ["dir"],
       "body": [
-        "dir($1)",
+        "print(dir($1))",
         "$0"
       ],
       "description": "dir func"
