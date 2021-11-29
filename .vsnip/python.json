@@ -16,6 +16,14 @@
       ],
       "description": "printf"
     },
+    "dir": {
+      "prefix": ["dir"],
+      "body": [
+        "dir($1)",
+        "$0"
+      ],
+      "description": "dir func"
+    },
     "in": {
       "prefix": ["in"],
       "body": [
