@@ -70,7 +70,7 @@
       "description": "Sample string list"
     },
     "mlc": {
-      "prefix": ["mlc"],
+      "prefix": ["mlc", "docstring", "docs"],
       "body": [
         "\"\"\"",
         "$1",
