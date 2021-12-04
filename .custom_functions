@@ -297,3 +297,7 @@ gshow() {
       --preview-window=top:70% \
       --height 100%
 }
+
+function exd() {
+	exercism download --exercise=$1 --track=$2
+}
