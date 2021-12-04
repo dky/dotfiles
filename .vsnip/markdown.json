@@ -39,6 +39,17 @@
       ],
       "description": "Code block"
     },
+    "Sb": {
+      "prefix": ["Sb", "sb"],
+      "body": [
+        "```sql",
+        "$1",
+        "```",
+        "",
+        "$0"
+      ],
+      "description": "SQL Code block"
+    },
     "Pc": {
       "prefix": ["Pc"],
       "body": [
