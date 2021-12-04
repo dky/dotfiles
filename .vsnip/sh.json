@@ -1,6 +1,6 @@
 {
     "shb": {
-      "prefix": ["sheb"],
+      "prefix": ["sheb", "shebang"],
       "body": [
         "#/usr/bin/env bash",
         "# Some safety controls and details of each option",
