@@ -5,7 +5,7 @@
       "description": "Print to stdout"
     },
     "pt": {
-      "prefix": ["pt"],
+      "prefix": ["pt", "prt"],
       "body": "print(type($1))$0",
       "description": "Print the type"
     },
