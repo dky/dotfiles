@@ -37,10 +37,10 @@
         "",
         "$0"
       ],
-      "description": "Code block"
+      "description": "Empty Code block"
     },
     "Sb": {
-      "prefix": ["Sb", "sb"],
+      "prefix": ["Sc", "sc"],
       "body": [
         "```sql",
         "$1",
