@@ -18,8 +18,7 @@
 #ctrl-t - __fzf__ file finding check .fzf.bash because that's where ths keybinding happens, not in this file.
 #ctrl-r - __fzf__history__
 #ctrl-k - custom alias search
-
-
+#alt-c - custom cd_git_home_dir function. See .fzf.bash
 
 # Key bindings
 # ------------
