@@ -1,26 +1,27 @@
 "Ruby
 au FileType ruby nmap <F8> :echo system('ruby "' . expand('%') . '"')<cr>
-au FileType ruby imap <F8> <Esc> :w <cr> :echo system('ruby "' . expand('%') . '"')<cr>
+au FileType ruby imap <F8> <Esc>:echo system('ruby "' . expand('%') . '"')<cr>
 "Golang
 au FileType go nmap <F8> :echo system('go run "' . expand('%') . '"')<cr>
-au FileType go imap <F8> <Esc> :w <cr> :echo system('go run "' . expand('%') . '"')<cr>
+au FileType go imap <F8> <Esc>:echo system('go run "' . expand('%') . '"')<cr>
 "Python
 au FileType python nmap <F8> :echo system('python3 "' . expand('%') . '"')<cr>
-au FileType python imap <F8> <Esc> :w <cr> :echo system('python3 "' . expand('%') . '"')<cr>
+au FileType python imap <F8> <Esc>:echo system('python3 "' . expand('%') . '"')<cr>
 "JS
 au FileType javascript nmap <F8> :echo system('node "' . expand('%') . '"')<cr>
-au FileType javascript imap <F8> <Esc> :w <cr> :echo system('node "' . expand('%') . '"')<cr>
+au FileType javascript imap <F8>:echo system('node "' . expand('%') . '"')<cr>
 "Coffeescript
 au FileType coffee nmap <F8> :echo system('coffee "' . expand('%') . '"')<cr>
-au FileType coffee imap <F8> <Esc> :w <cr> :echo system('coffee "' . expand('%') . '"')<cr>
+au FileType coffee imap <F8>:echo system('coffee "' . expand('%') . '"')<cr>
 "Shell
 au FileType sh nmap <F8> :echo system('bash "' . expand('%') . '"')<cr>
-au FileType c nmap <F8> :w <cr> :!gcc % -o %< && ./%< <cr>
+au FileType sh imap <F8> <Esc>:echo system('bash "' . expand('%') . '"')<cr>
 "C
-au FileType c imap <F8> <Esc> :w <cr> :!gcc % -o %< && ./%< <cr>
+au FileType c nmap <F8> :w <cr> :!gcc % -o %< && ./%< <cr>
+au FileType c imap <F8> <Esc>:!gcc % -o %< && ./%< <cr>
 "Json
 au FileType json nmap <F8> :w <cr> :echo system('python -m json.tool "' . expand('%') . '"')<cr>
-au FileType json imap <F8> <Esc> :w <cr> :echo system('python -m json.tool "' . expand('%') . '"')<cr>
+au FileType json imap <F8>:echo system('python -m json.tool "' . expand('%') . '"')<cr>
 
 " shorter aliases for vim-go plugin
 au FileType go nmap <leader><F12> :GoDecls<cr>
