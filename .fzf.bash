@@ -19,8 +19,15 @@ fzf_then_open_in_editor() {
 	fi
 }
 
+function cd_home_git_dir() {
+	cd $(find $HOME/git -type d | fzf)
+}
+
 # Disable ctr-t in .fzf/key-bindings.bash and override with this function which opens a file directly in vim when ctrl-t is used.
 bind -x '"\C-t": fzf_then_open_in_editor'
+
+# Bind alt-c to custom cd_home_git_dir function to quickly change to a git dir.
+bind -x '"\ec": cd_home_git_dir'
 
 # Rely on bat command `brew install bat` for preview syntax highlighting
 #export FZF_DEFAULT_OPTS='--ansi --preview-window 'right:60%' --layout reverse --margin=1,4 --preview "bat --color=always --style=header,grid --line-range :300 {}"'
