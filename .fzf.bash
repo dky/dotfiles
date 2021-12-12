@@ -20,7 +20,7 @@ fzf_then_open_in_editor() {
 }
 
 function cd_home_git_dir() {
-	cd $(find -L $HOME/git -not \( -path '*/\.git/*' \) -not \( -path '*/\.pytest_cache' \) -type d | fzf)
+	cd $(find -L $HOME/git -not \( -path '*/\.git/*' \) -type d | fzf)
 	ls
 }
 
