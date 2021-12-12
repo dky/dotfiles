@@ -20,7 +20,8 @@ fzf_then_open_in_editor() {
 }
 
 function cd_home_git_dir() {
-	cd $(find $HOME/git -type d | fzf)
+	cd $(find -L $HOME/git -not \( -path '*/\.git/*' \) -not \( -path '*/\.pytest_cache' \) -type d | fzf)
+	ls
 }
 
 # Disable ctr-t in .fzf/key-bindings.bash and override with this function which opens a file directly in vim when ctrl-t is used.
