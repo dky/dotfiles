@@ -77,7 +77,7 @@ alias tls="tmux ls"
 alias wh="which"
 
 # Git misc
-alias cdg="cd $HOME/git"
+alias cdg=cd_home_git_dir
 alias Git='git'
 alias gi='git init'
 alias gg='git grep'
