@@ -19,6 +19,15 @@ fzf_then_open_in_editor() {
 	fi
 }
 
+nid() {
+	local file=$(find -L $HOME/.dotfiles -not \( -path '*/\.git/*' \) -type f | fzf)
+	# Open the file if it exists
+	if [ -n "$file" ]; then
+		# Use the default editor if it's defined, otherwise Vim
+		${EDITOR:-nvim} "$file"
+	fi
+}
+
 function cd_home_git_dir() {
 	cd $(find -L $HOME/git -not \( -path '*/\.git/*' \) -type d | fzf)
 	ls
