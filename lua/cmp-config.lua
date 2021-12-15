@@ -1,6 +1,5 @@
 local cmp = require'cmp'
 
-
 local lsp_symbols = {
     Text = "   (Text) ",
     Method = "   (Method)",
@@ -34,6 +33,7 @@ cmp.setup({
         { name = "buffer" },
         { name = "nvim_lsp" },
         { name = "vsnip" },
+        { name = "dictionary", keyword_length = 2 },
     },
     mapping = {
         ["<cr>"] = cmp.mapping.confirm({select = true}),
@@ -57,4 +57,15 @@ cmp.setup({
             vim.fn["vsnip#anonymous"](args.body)
         end,
     },
+})
+
+require("cmp_dictionary").setup({
+    dic = {
+        ["markdown"] = { "$HOME/.vim/dict/custom_dictionary.txt" },
+    },
+    -- The following are default values, so you don't need to write them if you don't want to change them
+    exact = 2,
+    async = false, 
+    capacity = 5,
+    debug = false, 
 })
