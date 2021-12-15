@@ -107,6 +107,7 @@ alias gplh='git pull --rebase origin "$(git symbolic-ref --short HEAD)"'
 alias gpu='git push'
 alias gpuo='git push origin'
 alias gpuh='git push origin "$(git symbolic-ref --short HEAD)"'
+alias gpuhf='git push origin "$(git symbolic-ref --short HEAD)" --force'
 alias gpuf='git push origin "$(git symbolic-ref --short HEAD)" --force'
 alias gpuod='git push origin --delete' # deleting remote branches
 
