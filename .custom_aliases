@@ -244,6 +244,7 @@ alias yug="yum -y upgrade"
 
 #cd dotfiles
 alias cddot="cd ~/.dotfiles"
+alias cdd="cddot"
 
 #cd tmp
 alias cdt="cd ~/tmp"
