@@ -60,5 +60,19 @@
         "fi"
       ],
       "description": "if-else"
+    },
+    "iffile": {
+      "prefix": ["if-file"],
+      "body": [
+        "[ -f $1 ] && echo \"File exists\""
+      ],
+      "description": "check if file exists"
+    },
+    "ifdir": {
+      "prefix": ["if-dir"],
+      "body": [
+        "[ -d $1 ] && echo \"Dir exists\""
+      ],
+      "description": "check if dir exists"
     }
 }
