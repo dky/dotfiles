@@ -277,6 +277,11 @@ gbf() {
 	git for-each-ref --format='%(refname:short)' refs/heads | fzf | xargs git checkout
 }
 
+gtp() {
+	git tag $1
+	git push origin $1
+}
+
 # gshow - git commit browser
 gshow() {
   local filter
