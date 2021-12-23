@@ -142,7 +142,7 @@ alias gd='git diff --color-moved=zebra --'
 alias gds="git diff --staged --color-moved=zebra --"
 
 # Git tag
-alias gtp"git tag $1 and git push origin $1"
+alias gtp="git tag $1 and git push origin $1"
 
 #vim alias
 alias vi="vim"
