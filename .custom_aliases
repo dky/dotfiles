@@ -279,7 +279,7 @@ alias pippurge="pip3 uninstall -y -r <(pip freeze)"
 #alias for chmod
 alias chux="chmod u+x"
 #apt update
-alias au="sudo apt-get update && sudo apt-get -y upgrade"
+alias au="sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade"
 alias ai="sudo apt-get -y install"
 alias ar="sudo apt-get -y remove"
 
