@@ -16,3 +16,4 @@ npm -g install dockerfile-language-server-nodejs
 npm -g install yaml-language-server
 npm -g install yarn
 npm -g install ansible-language-server
+npm -g install diagnostic-languageserver
