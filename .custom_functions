@@ -308,3 +308,12 @@ gshow() {
 function exd() {
 	exercism download --exercise=$1 --track=$2
 }
+
+# Vault tidy
+vtidy() {
+	echo "Tidying up Vault"
+	vault write pki_int/tidy \
+    safety_buffer=5s \
+    tidy_cert_store=true \
+    tidy_revocation_list=true
+}
