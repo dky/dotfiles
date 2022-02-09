@@ -109,7 +109,7 @@
       "prefix": ["df"],
       "body": [
         "def $1($2):",
-        "$0"
+        "    $0"
       ],
       "description": "Python Def"
     },
