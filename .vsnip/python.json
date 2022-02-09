@@ -105,6 +105,14 @@
       ],
       "description": "def __init__(self)"
     },
+    "def": {
+      "prefix": ["df"],
+      "body": [
+        "def $1($2):",
+        "$0"
+      ],
+      "description": "Python Def"
+    },
     "longstring": {
       "prefix": ["longest-string"],
       "body": [
