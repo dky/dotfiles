@@ -6,7 +6,7 @@ export EDITOR=nvim
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 #Ansible no cows
-export ANISIBLE_NOCOWS=1
+export ANSIBLE_NOCOWS=1
 
 shopt -s histappend
 
