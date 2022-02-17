@@ -72,7 +72,7 @@
     "mlc": {
       "prefix": ["mlc", "docstring", "docs"],
       "body": [
-        "\"\"\" $1 \"\"\"",
+        "\"\"\"$1\"\"\"",
         "$0"
       ],
       "description": "multi line comment"
