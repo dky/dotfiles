@@ -71,7 +71,7 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'pbogut/fzf-mru.vim'
 Plug 'justinmk/vim-sneak'
-Plug '907th/vim-auto-save'
+Plug 'Pocco81/AutoSave.nvim'
 Plug 'dky/vim-aftercolors'
 
 Plug 'ryanoasis/vim-devicons'
