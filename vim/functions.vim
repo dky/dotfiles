@@ -74,10 +74,11 @@ function! WordProcessorMode()
   set dictionary+=~/.vim/dict/custom_dictionary.txt
   setlocal spell spelllang=en_us
 
-  augroup auto_capitalize_sentences
-    au!
-    au InsertCharPre <buffer> if search('\v(%^|%^[1-7]{2}\s|[.!?]\_s+|\_^\s*\-\s|\_^#+\s|\_^title\:\s|\n\n)%#', 'bcnw') != 0 | let v:char = toupper(v:char) | endif
-  augroup END
+  "Stop doing this because it got annoying as hell.
+  "augroup auto_capitalize_sentences
+    "au!
+    "au InsertCharPre <buffer> if search('\v(%^|%^[1-7]{2}\s|[.!?]\_s+|\_^\s*\-\s|\_^#+\s|\_^title\:\s|\n\n)%#', 'bcnw') != 0 | let v:char = toupper(v:char) | endif
+  "augroup END
 endfu
 
 " This function allows us to replace all the F3 mappings and potentially use
