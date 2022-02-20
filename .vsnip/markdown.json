@@ -1,35 +1,35 @@
 {
     "hle": {
-      "prefix": ["Hle"],
+      "prefix": ["hle"],
       "body": "[$1]($2)$0",
       "description": "External link"
     },
     "h1": {
-      "prefix": ["H1"],
+      "prefix": ["h1"],
       "body": "# $0",
       "description": "H1 link"
     },
     "h2": {
-      "prefix": ["H2"],
+      "prefix": ["h2"],
       "body": "## $0",
       "description": "H2 link"
     },
     "h3": {
-      "prefix": ["H3"],
+      "prefix": ["h3"],
       "body": "### $0",
       "description": "H3 link"
     },
     "h4": {
-      "prefix": ["H4"],
+      "prefix": ["h4"],
       "body": "#### $0",
       "description": "H3 link"
     },
     "h6": {
-      "prefix": ["H6"],
+      "prefix": ["h6"],
       "body": "###### $0"
     },
     "Cb": {
-      "prefix": ["Cb"],
+      "prefix": ["cb"],
       "body": [
         "```",
         "$1",
@@ -40,7 +40,7 @@
       "description": "Empty Code block"
     },
     "Sb": {
-      "prefix": ["Sc", "sc"],
+      "prefix": ["sc"],
       "body": [
         "```sql",
         "$1",
@@ -51,7 +51,7 @@
       "description": "SQL Code block"
     },
     "Pc": {
-      "prefix": ["Pc"],
+      "prefix": ["pc"],
       "body": [
         "```python",
         "$1",
@@ -62,7 +62,7 @@
       "description": "Python Code block"
     },
     "Bc": {
-      "prefix": ["Bc"],
+      "prefix": ["bc"],
       "body": [
         "```bash",
         "$1",
@@ -73,7 +73,7 @@
       "description": "Bash Code block"
     },
     "Gc": {
-      "prefix": ["Gc"],
+      "prefix": ["gc"],
       "body": [
         "```go",
         "$1",
@@ -84,13 +84,13 @@
       "description": "Go Code block"
     },
     "fm": {
-      "prefix": ["Fm"],
+      "prefix": ["fm"],
       "body": [
         "---",
         "title: $1",
         "date: \"$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE\"",
-        "tags: [\"$3\"]",
-        "draft: true",
+        "tags: [\"$2\"]",
+        "draft: $3",
         "---",
         "",
         "$0"
