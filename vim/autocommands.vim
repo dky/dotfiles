@@ -53,3 +53,7 @@ au BufNewFile,BufRead .custom_functions setf sh
 
 " Set .custom_alias to shell
 au BufNewFile,BufRead .custom_aliases setf sh
+
+" Trim empty lines at end of files - This runs on every save
+au FileType ruby,python,markdown autocmd BufWritePre <buffer> :%s/\($\n\s*\)\+\%$//e
+
