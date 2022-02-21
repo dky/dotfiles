@@ -49,6 +49,20 @@ let g:leader_map.e = {
       \ 'g' : [':call EditLangFile("go")'            , 'Open a go tmp file for editing'],
       \ }
 
+"Git mappings
+let g:which_key_map =  {}
+let g:which_key_map.g = { 'name' : '+git' }
+
+nnoremap <silent> <leader>gs :Git status<CR>
+let g:which_key_map.g.s = 'git-status'
+
+nnoremap <silent> <leader>ga :Git add
+let g:which_key_map.g.a = 'git-add'
+
+nnoremap <silent> <leader>gcma :Git commit -a -m "
+let g:which_key_map.g.cma = 'git-cma'
+
+
 let g:leader_map.n = {
       \ 'name' : '+floatterm: ' ,
       \ '1' : [':FloatermNew --autoclose=0 terraform plan'           , 'terraform plan'],
@@ -93,7 +107,6 @@ let g:localleader_map.g = {
       \ 'name' : '+go' ,
       \ 'f' : [':GoFmt'         , 'Go Fmt']
       \ }
-
 
 let g:localleader_map.c = {
       \ 'name' : '+codi' ,
