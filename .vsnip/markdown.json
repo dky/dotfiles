@@ -28,7 +28,7 @@
       "prefix": ["h6"],
       "body": "###### $0"
     },
-    "Cb": {
+    "cb": {
       "prefix": ["cb"],
       "body": [
         "```",
@@ -39,7 +39,7 @@
       ],
       "description": "Empty Code block"
     },
-    "Sb": {
+    "sb": {
       "prefix": ["sc"],
       "body": [
         "```sql",
@@ -50,7 +50,7 @@
       ],
       "description": "SQL Code block"
     },
-    "Pc": {
+    "pc": {
       "prefix": ["pc"],
       "body": [
         "```python",
@@ -61,7 +61,7 @@
       ],
       "description": "Python Code block"
     },
-    "Bc": {
+    "bc": {
       "prefix": ["bc"],
       "body": [
         "```bash",
@@ -72,7 +72,7 @@
       ],
       "description": "Bash Code block"
     },
-    "Gc": {
+    "gc": {
       "prefix": ["gc"],
       "body": [
         "```go",
@@ -104,5 +104,13 @@
         "$0"
       ],
       "description": "ddate"
+    },
+    "wr": {
+      "prefix": ["wr"],
+      "body": [
+        "What is the result of:",
+        "$0"
+      ],
+      "description": "What is the result of?"
     }
 }
