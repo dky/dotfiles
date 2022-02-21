@@ -114,11 +114,3 @@ function! s:DetectNode()
 		set ft=sh
 	endif
 endfun
-
-" Trim whitespace
-fun! TrimWhitespace()
-    let l:save = winsaveview()
-    keeppatterns %s/\s\+$//e
-    call winrestview(l:save)
-endfun
-command! TrimWhitespace call TrimWhitespace()
