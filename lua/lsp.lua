@@ -39,7 +39,7 @@ local on_attach = function(client, bufnr)
     --end
 end
 
-local servers = {"pyright", "rust_analyzer", "solargraph", "bashls", "dockerls", "cmake", "clangd"}
+local servers = {"pylsp", "rust_analyzer", "solargraph", "bashls", "dockerls", "cmake", "clangd"}
 for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {
         on_attach = on_attach
