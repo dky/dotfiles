@@ -114,3 +114,8 @@ function! s:DetectNode()
 		set ft=sh
 	endif
 endfun
+
+" Removes trailing spaces
+function TrimWhiteSpace()
+  %s/\($\n\s*\)\+\%$//e
+endfunction
