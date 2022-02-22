@@ -30,9 +30,9 @@ local lsp_symbols = {
 
 cmp.setup({
     sources = {
-        { name = "buffer" },
         { name = "nvim_lsp" },
         { name = "vsnip" },
+        { name = "buffer" },
         { name = "dictionary", keyword_length = 2 },
     },
     mapping = {
