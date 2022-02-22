@@ -112,5 +112,13 @@
         "$0"
       ],
       "description": "What is the result of?"
+    },
+    "an": {
+      "prefix": ["an"],
+      "body": [
+        "Ans: $1",
+        "$0"
+      ],
+      "description": "Answer/Ans:"
     }
 }
