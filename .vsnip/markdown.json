@@ -116,7 +116,7 @@
     "an": {
       "prefix": ["an"],
       "body": [
-        "Ans: $1",
+        "Ans: `$1`",
         "$0"
       ],
       "description": "Answer/Ans:"
