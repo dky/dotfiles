@@ -69,6 +69,8 @@ let g:which_key_map.g.cma = 'git-cma'
 nnoremap <silent> <leader>gcm :Git commit -m "
 let g:which_key_map.g.cm = 'git-cm'
 
+nnoremap <silent> <leader>gl :Git log --pretty --pretty=oneline<CR>
+let g:which_key_map.g.l = 'git-log'
 
 let g:leader_map.n = {
       \ 'name' : '+floatterm: ' ,
