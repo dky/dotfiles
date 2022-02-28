@@ -120,5 +120,15 @@
         "$0"
       ],
       "description": "Answer/Ans:"
+    },
+    "table": {
+      "prefix": ["tab"],
+      "body": [
+        "|$1 |$2   |$3   |",
+        "|---|:---:|:---:|",
+        "|$3 |$4   |$5   |",
+        "$0"
+      ],
+      "description": "Markdown table"
     }
 }
