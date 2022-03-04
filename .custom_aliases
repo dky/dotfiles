@@ -215,6 +215,8 @@ alias cddkc="cd ~/git/dky.io/content"
 #exercism commands
 alias ex="exercism"
 alias exs="exercism sumbit"
+#cd exercism/python
+alias cdexp="cd $HOME/Exercism/python"
 
 #terraform
 alias tp="terraform plan"
@@ -248,9 +250,6 @@ alias yug="yum -y upgrade"
 #cd dotfiles
 alias cddot="cd ~/.dotfiles"
 alias cdd="cddot"
-
-#cd exercism/python
-alias cdexp="cd $HOME/Exercism/python"
 
 #cd tmp
 alias cdt="cd ~/tmp"
