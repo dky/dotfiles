@@ -326,7 +326,7 @@ fzf-git-branch() {
 		sed "s/.* //"
 }
 
-fzf-git-checkout() {
+fzf-git-branch-checkout() {
 	git rev-parse HEAD > /dev/null 2>&1 || return
 
 	local branch
