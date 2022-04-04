@@ -143,6 +143,7 @@ alias gba='git branch -a'
 # Git Diff
 alias gd='git diff --color-moved=zebra --'
 alias gds="git diff --staged --color-moved=zebra --"
+alias gdc="git diff --cached"
 
 # Git tag
 #alias gtp="git tag $1 and git push origin $1"
