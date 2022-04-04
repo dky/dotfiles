@@ -98,6 +98,7 @@ alias gcb="git symbolic-ref --short HEAD" # Equiv to git branch --show-current b
 # Git add
 alias ga='git add'
 alias gA='git add -A'
+alias gae='git add -e'
 
 # Git pull
 alias gpl='git pull'
