@@ -56,3 +56,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Rust cargo
 [ -f ~/.cargo/env ] && . ~/.cargo/env
+
+# Navi https://github.com/denisidoro/navi
+export NAVI_CONFIG=~/.dotfiles/.navi/config.yaml
