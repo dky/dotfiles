@@ -39,12 +39,7 @@ docker network create <network_name>
 $ image_id: docker images --- --headers 1 --column 3
 $ container_id: docker ps --- --headers 1 --column 1
 
-
-
 % docker-compose
-
-# Builds, (re)creates, starts, and attaches to containers for a service
-docker-compose up -d <service_name>
 
 # Builds, (re)creates, starts, and dettaches to containers for a service
 docker-compose up -d <service_name>
