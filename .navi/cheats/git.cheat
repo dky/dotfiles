@@ -1,0 +1,7 @@
+% git
+
+# Display file contents from git hash
+git cat-file -p <SHA>
+
+# Display the type of file from git hash
+git cat-file -t <SHA>
