@@ -57,17 +57,26 @@ let g:which_key_map.g = { 'name' : '+git' }
 nnoremap <silent> <leader>gs :Git status<CR>
 let g:which_key_map.g.s = 'git-status'
 
+nnoremap <silent> <leader>gb :Git checkout -b<CR>
+let g:which_key_map.g.b = 'git-branch-checkout'
+
 nnoremap <silent> <leader>gd :Git diff<CR>
 let g:which_key_map.g.d = 'git-diff'
+
+nnoremap <silent> <leader>gds :Git diff --staged<CR>
+let g:which_key_map.g.ds = 'git-diff-staged'
 
 nnoremap <silent> <leader>ga :Git add
 let g:which_key_map.g.a = 'git-add'
 
-nnoremap <silent> <leader>gcma :Git commit -a -m "
-let g:which_key_map.g.cma = 'git-cma'
+nnoremap <silent> <leader>gaa :Git add .<CR>
+let g:which_key_map.g.aa = 'git-add-all'
 
 nnoremap <silent> <leader>gcm :Git commit -m "
-let g:which_key_map.g.cm = 'git-cm'
+let g:which_key_map.g.cm = 'git-commit'
+
+nnoremap <silent> <leader>gcma :Git commit -a -m "
+let g:which_key_map.g.cma = 'git-commit-all'
 
 nnoremap <silent> <leader>gl :Git log --pretty --graph --decorate --oneline<CR>
 let g:which_key_map.g.l = 'git-log'
