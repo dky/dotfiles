@@ -57,8 +57,14 @@ let g:which_key_map.g = { 'name' : '+git' }
 nnoremap <silent> <leader>gs :Git status<CR>
 let g:which_key_map.g.s = 'git-status'
 
-nnoremap <silent> <leader>gb :Git checkout -b<CR>
-let g:which_key_map.g.b = 'git-branch-checkout'
+nnoremap <silent> <leader>gb :Git checkout -b 
+let g:which_key_map.g.b = 'git-branch'
+
+nnoremap <silent> <leader>gco :Git checkout
+let g:which_key_map.g.co = 'git-checkout'
+
+nnoremap <silent> <leader>gbl :Git blame<CR>
+let g:which_key_map.g.bl = 'git-blame'
 
 nnoremap <silent> <leader>gd :Git diff<CR>
 let g:which_key_map.g.d = 'git-diff'
