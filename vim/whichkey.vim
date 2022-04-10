@@ -57,7 +57,7 @@ let g:which_key_map.g = { 'name' : '+git' }
 nnoremap <silent> <leader>gs :Git status<CR>
 let g:which_key_map.g.s = 'git-status'
 
-nnoremap <silent> <leader>gs :Git diff<CR>
+nnoremap <silent> <leader>gd :Git diff<CR>
 let g:which_key_map.g.d = 'git-diff'
 
 nnoremap <silent> <leader>ga :Git add
