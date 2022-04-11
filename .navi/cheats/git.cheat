@@ -5,3 +5,6 @@ git cat-file -p <SHA>
 
 # Display the type of file from git hash
 git cat-file -t <SHA>
+
+# Git log graph
+git log --all --decorate --graph
