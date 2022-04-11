@@ -11,7 +11,7 @@ export ANSIBLE_NOCOWS=1
 shopt -s histappend
 
 export LANG=en_US.UTF-8
-export PATH=$HOME/bin:$HOME/.dotfiles/bin:$HOME/go/bin:/usr/local/sbin:/usr/local/go/bin:$HOME/.local/bin:/usr/local/opt/llvm/bin:$HOME/.yarn/bin:/opt/homebrew/bin:$PATH
+export PATH=$HOME/bin:$HOME/.dotfiles/bin:$HOME/go/bin:/usr/local/sbin:/usr/local/go/bin:$HOME/.local/bin:/usr/local/opt/llvm/bin:$HOME/.yarn/bin:/opt/homebrew/bin:$HOME/.cargo/bin:$PATH
 
 # Tell python to stop writing __pycache__ dirs all over the place.
 export PYTHONDONTWRITEBYTECODE=1
