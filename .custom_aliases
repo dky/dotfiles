@@ -135,6 +135,7 @@ alias grv='git remote -v'
 # Git branch
 alias gbc='fzf-git-branch-checkout'
 alias gb='git checkout -b'
+alias gsw='git switch -c'
 alias gbv='git branch -v'
 alias gbd='git branch -d $(git branch | fzf)'
 alias gbD='git branch -D $(git branch | fzf)'
