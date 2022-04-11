@@ -84,7 +84,7 @@ let g:which_key_map.g.aa = 'git-add-all'
 nnoremap <silent> <leader>gcm :Git commit -m "
 let g:which_key_map.g.cm = 'git-commit'
 
-nnoremap <silent> <leader>gcma :Git commit -a -m "
+nnoremap <silent> <leader>gcma :Git add . <bar> :Git commit -a -m "
 let g:which_key_map.g.cma = 'git-commit-all'
 
 nnoremap <silent> <leader>gl :Git log --pretty --graph --decorate --oneline<CR>
