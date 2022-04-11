@@ -12,5 +12,8 @@ git log --all --decorate --graph
 # Git rebase abort
 git rebase --abort
 
+# Git rebase continue
+git rebase --continue
+
 # Git rebase
 git rebase <BRANCH>
