@@ -8,3 +8,6 @@ git cat-file -t <SHA>
 
 # Git log graph
 git log --all --decorate --graph
+
+# Git rebase abort
+git rebase --abort
