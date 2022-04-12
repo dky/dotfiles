@@ -36,6 +36,12 @@ kubectl logs -f pods/<name> -n <namespace>
 # Get deployments
 kubectl get deployments -n <namespace>
 
+# Delete deployments
+kubectl delete deployment <name>
+
+# Create deployment 
+kubectl apply -f <deploy>
+
 # Edit deployments
 kubectl edit deployment/<name> -n <namespace>
 
