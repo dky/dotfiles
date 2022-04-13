@@ -39,6 +39,9 @@ kubectl get deployments -n <namespace>
 # Delete deployments
 kubectl delete deployment <name>
 
+# Delete service
+kubectl delete svc <name>
+
 # Create deployment 
 kubectl apply -f <deploy>
 
