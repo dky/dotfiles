@@ -1,0 +1,9 @@
+% nfs
+
+# nfsiostat grabs input from /proc/self/mountstats
+nfsiostat 5 <mount>
+
+% ps
+
+# Look for processes in Uninterruptible Sleep (D) state
+ps -eo state,pid,cmd | grep "^D"
