@@ -30,6 +30,9 @@ kubectl get services -n <namespace>
 # Get details from resource on namespace
 kubectl describe <resource>/<name> -n <namespace>
 
+# Get details from pod
+kubectl describe po <pod>
+
 # Print logs from namespace
 kubectl logs -f pods/<name> -n <namespace>
 
