@@ -49,3 +49,6 @@ docker-compose logs --tail 100 <service_name> | less
 
 # Print the last lines of a service's logs and following its logs
 docker-compose logs -f --tail 100 <service_name>
+
+# Remove exited or created images
+docker rm $(docker ps -a -f status=exited -f status=created -q)
