@@ -17,3 +17,9 @@ git rebase --continue
 
 # Git rebase
 git rebase <BRANCH>
+
+# Setup repo called "bare", you can then clone the repo with git clone bare newrepo
+git init --bare bare
+
+# Clone bare repo
+git clone bare newrepo && cd newrepo
