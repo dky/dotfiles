@@ -100,7 +100,7 @@ let g:which_key_map.g.cm = 'git-commit'
 nnoremap <silent> <leader>gcma :Git add . <bar> :Git commit -a -m "
 let g:which_key_map.g.cma = 'git-commit-all'
 
-nnoremap <silent> <leader>gl :Git log --pretty --graph --decorate --oneline<CR>
+nnoremap <silent> <leader>gl :Git log<CR>
 let g:which_key_map.g.l = 'git-log'
 
 let g:leader_map.n = {
