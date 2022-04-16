@@ -76,7 +76,7 @@ let g:which_key_map.g.puc = 'git-push-origin-current'
 nnoremap <silent> <leader>gplh :exec "Git pull --rebase origin " . fugitive#head()<cr>
 let g:which_key_map.g.plh = 'git-pull-origin-head'
 
-nnoremap <silent> <leader>gpuh :Git -c push.default=current push<CR>
+nnoremap <silent> <leader>gpuh :exec "Git push origin " . fugitive#head()<CR>
 let g:which_key_map.g.puh = 'git-push-origin-head'
 
 nnoremap <silent> <leader>gbl :Git blame<CR>
