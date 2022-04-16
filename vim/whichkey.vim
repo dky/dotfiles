@@ -72,6 +72,9 @@ let g:which_key_map.g.puo = 'git-push-origin'
 nnoremap <silent> <leader>gpuc :Git -c push.default=current push<CR>
 let g:which_key_map.g.puc = 'git-push-origin-current'
 
+nnoremap <silent> <leader>gpuh :Git -c push.default=current push<CR>
+let g:which_key_map.g.puh = 'git-push-origin-head'
+
 nnoremap <silent> <leader>gbl :Git blame<CR>
 let g:which_key_map.g.bl = 'git-blame'
 
