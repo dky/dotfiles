@@ -66,6 +66,12 @@ let g:which_key_map.g.sw = 'git-switch'
 nnoremap <silent> <leader>gco :Git checkout
 let g:which_key_map.g.co = 'git-checkout'
 
+nnoremap <silent> <leader>gpuo :Git push origin
+let g:which_key_map.g.puo = 'git-push-origin'
+
+nnoremap <silent> <leader>gpoc :Git -c push.default=current push
+let g:which_key_map.g.puc = 'git-push-origin-current'
+
 nnoremap <silent> <leader>gbl :Git blame<CR>
 let g:which_key_map.g.bl = 'git-blame'
 
