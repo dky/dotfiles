@@ -32,7 +32,7 @@ let g:leader_map['j'] = [ '<C-W>w'                           , 'jump splits']
 let g:leader_map['t'] = [ ':FloatermToggle'                  , 'Toggle Floaterm, space space also does this']
 let g:leader_map['o'] = [ ':set conceallevel=0'              , 'No Conceal' ]
 let g:leader_map['p'] = [ '<M-p>'                            , 'Toggle Autopairs' ]
-let g:leader_map['q'] = [ '<c-c>'                            , 'Quit FZF search' ]
+let g:leader_map['q'] = [ ':bd'                              , 'Buffer close to ease having to type :bd' ]
 let g:leader_map['w'] = [ ':!tmux new-window bash -ci fp'    , 'Switch tmux sessions' ]
 "let g:leader_map['r'] = [ ':Reserved - Don't use            , 'Plan to use this to run files similar to F8.' ]
 let g:leader_map['v'] = [ '<C-W>v'                           , 'split right']
@@ -126,7 +126,6 @@ let g:leader_map.s = {
 " localleader \ mappings
 "let g:localleader_map['t'] = [ 'TestFile'                                    , 'TestFile']
 let g:localleader_map['t'] = [':FloatermNew --autoclose=0 pytest .'          , 'run pytest']
-let g:localleader_map['q'] = [ '<c-c>'                                       , 'Quit FZF search' ]
 let g:localleader_map['p'] = [':FloatermNew --autoclose=0 python3 %'         , 'run current buffer with python in float']
 
 let g:localleader_map.g = {
