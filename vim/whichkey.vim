@@ -94,7 +94,7 @@ let g:which_key_map.g.puhf = 'git-push-origin-head-force'
 nnoremap <silent> <leader>gbla :Git blame<CR>
 let g:which_key_map.g.bla = 'git-blame'
 
-nnoremap <silent> <leader>gd :Git diff<CR>
+nnoremap <silent> <leader>gd :Gdiff<CR>
 let g:which_key_map.g.d = 'git-diff'
 
 nnoremap <silent> <leader>gds :Git diff --staged<CR>
