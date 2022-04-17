@@ -63,7 +63,7 @@ let g:which_key_map.g.b = 'git-branch'
 nnoremap <silent> <leader>gsw :Git switch -c
 let g:which_key_map.g.sw = 'git-switch'
 
-nnoremap <silent> <leader>gco :Git checkout
+nnoremap <silent> <leader>gco :Git checkout 
 let g:which_key_map.g.co = 'git-checkout'
 
 nnoremap <silent> <leader>gpuo :Git push origin
