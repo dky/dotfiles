@@ -82,6 +82,9 @@ let g:which_key_map.g.plh = 'git-pull-origin-head'
 nnoremap <silent> <leader>gpuh :exec "Git push origin " . fugitive#head()<CR>
 let g:which_key_map.g.puh = 'git-push-origin-head'
 
+nnoremap <silent> <leader>gpuhf :exec "Git push origin --force " . fugitive#head()<CR>
+let g:which_key_map.g.puhf = 'git-push-origin-head-force'
+
 nnoremap <silent> <leader>gbl :Git blame<CR>
 let g:which_key_map.g.bl = 'git-blame'
 
@@ -91,17 +94,17 @@ let g:which_key_map.g.d = 'git-diff'
 nnoremap <silent> <leader>gds :Git diff --staged<CR>
 let g:which_key_map.g.ds = 'git-diff-staged'
 
-nnoremap <silent> <leader>ga :Git add
-let g:which_key_map.g.a = 'git-add'
+nnoremap <silent> <leader>gaf :Git add
+let g:which_key_map.g.af = 'git-add-file-specific-or-single-file'
 
-nnoremap <silent> <leader>gaa :Git add .<CR>
-let g:which_key_map.g.aa = 'git-add-all'
+nnoremap <silent> <leader>ga :Git add .<CR>
+let g:which_key_map.g.a = 'git-add-all'
 
 nnoremap <silent> <leader>gcm :Git commit -m "
 let g:which_key_map.g.cm = 'git-commit'
 
 nnoremap <silent> <leader>gcma :Git add . <bar> :Git commit -a -m "
-let g:which_key_map.g.cma = 'git-commit-all'
+let g:which_key_map.g.cma = 'git-add-plus-commit'
 
 nnoremap <silent> <leader>gl :Git log<CR>
 let g:which_key_map.g.l = 'git-log'
