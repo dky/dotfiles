@@ -24,5 +24,19 @@ git init --bare bare-repo
 # Clone bare repo
 git clone bare-repo newrepo && cd newrepo
 
-# Git add -e
+# Git add -e, --edit 
 git add -e
+
+# Git unstage all files
+git reset --
+
+# Git unstage specific file
+git reset -- <file>
+
+# Git checkout file back to the state before modifications
+git checkout -- <file>
+
+# Remove file from repo but keep on it on disk. Useful if you forgot to add to .gitignore
+git rm <file> --cache
+
+$ file: ls -1 --- --column 1
