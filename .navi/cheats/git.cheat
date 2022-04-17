@@ -16,7 +16,6 @@ git rebase --abort
 git rebase --continue
 
 # Git rebase
-git rebase <BRANCH>
 git rebase <branch>
 
 # Setup repo called "bare", you can then clone the repo with git clone bare newrepo
@@ -40,5 +39,9 @@ git checkout -- <file>
 # Remove file from repo but keep on it on disk. Useful if you forgot to add to .gitignore
 git rm <file> --cache
 
+# Git reset --hard
+git reset --hard <commit_sha>
+
 $ file: ls -1 --- --column 1
 $ branch: git branch | awk '{print $NF}'
+$ commit_sha: git log --pretty=format:"%h   %an   %ar   %s" --- --column 1
