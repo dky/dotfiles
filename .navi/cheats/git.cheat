@@ -17,6 +17,7 @@ git rebase --continue
 
 # Git rebase
 git rebase <BRANCH>
+git rebase <branch>
 
 # Setup repo called "bare", you can then clone the repo with git clone bare newrepo
 git init --bare bare-repo
@@ -40,3 +41,4 @@ git checkout -- <file>
 git rm <file> --cache
 
 $ file: ls -1 --- --column 1
+$ branch: git branch | awk '{print $NF}'
