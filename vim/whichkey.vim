@@ -63,6 +63,9 @@ let g:which_key_map.g.b = 'git-branch'
 nnoremap <silent> <leader>gbl :Git branch<CR>
 let g:which_key_map.g.bl = 'git-branch-list'
 
+nnoremap <silent> <leader>gbd :Git branch -d<CR>
+let g:which_key_map.g.bd = 'git-branch-delete'
+
 nnoremap <silent> <leader>gsw :Git switch -c
 let g:which_key_map.g.sw = 'git-switch'
 
