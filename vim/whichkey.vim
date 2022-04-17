@@ -33,7 +33,7 @@ let g:leader_map['t'] = [ ':FloatermToggle'                  , 'Toggle Floaterm,
 let g:leader_map['o'] = [ ':set conceallevel=0'              , 'No Conceal' ]
 let g:leader_map['p'] = [ '<M-p>'                            , 'Toggle Autopairs' ]
 let g:leader_map['q'] = [ ':bd'                              , 'Buffer close to ease having to type :bd' ]
-let g:leader_map['m'] = [ ':!tmux new-window bash -ci fp'    , 'Switch tmux sessions' ]
+let g:leader_map['s'] = [ ':!tmux new-window bash -ci fp'    , 'Switch tmux sessions' ]
 "let g:leader_map['r'] = [ ':Reserved - Don't use            , 'Plan to use this to run files similar to F8.' ]
 let g:leader_map['v'] = [ '<C-W>v'                           , 'split right']
 let g:leader_map['y'] = [ ':FloatermSend pytest'             , 'Send pytest to floatterm' ]
@@ -147,12 +147,12 @@ let g:leader_map.m = {
       \ 'r' : [':FloatermNew ranger'                 , 'Call ranger from floaterm'],
       \ }
 
-let g:leader_map.s = {
-      \ 'name' : '+search' ,
-      \ 'b' : [':BLines'        , 'Search current buffer'],
-      \ 'B' : [':Lines'         , 'Search all **open** buffers'],
-      \ 'f' : [':GFiles'        , 'Search only Git checked in files'],
-      \ }
+"let g:leader_map.s = {
+      "\ 'name' : '+search' ,
+      "\ 'b' : [':BLines'        , 'Search current buffer'],
+      "\ 'B' : [':Lines'         , 'Search all **open** buffers'],
+      "\ 'f' : [':GFiles'        , 'Search only Git checked in files'],
+      "\ }
 
 " localleader \ mappings
 "let g:localleader_map['t'] = [ 'TestFile'                                    , 'TestFile']
