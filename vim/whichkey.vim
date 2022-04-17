@@ -57,6 +57,9 @@ let g:which_key_map.g = { 'name' : '+git' }
 nnoremap <silent> <leader>gs :Git status<CR>
 let g:which_key_map.g.s = 'git-status'
 
+nnoremap <silent> <leader>gg :Git<CR>
+let g:which_key_map.g.g = 'fugitive-interactive'
+
 nnoremap <silent> <leader>gb :Git checkout -b 
 let g:which_key_map.g.b = 'git-branch'
 
