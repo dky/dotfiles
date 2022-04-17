@@ -94,7 +94,7 @@ let g:which_key_map.g.d = 'git-diff'
 nnoremap <silent> <leader>gds :Git diff --staged<CR>
 let g:which_key_map.g.ds = 'git-diff-staged'
 
-nnoremap <silent> <leader>gaf :Git add
+nnoremap <silent> <leader>gaf :Git add . <CR>
 let g:which_key_map.g.af = 'git-add-file-specific-or-single-file'
 
 nnoremap <silent> <leader>ga :Git add .<CR>
