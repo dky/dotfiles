@@ -60,7 +60,7 @@ let g:which_key_map.g.s = 'git-status'
 nnoremap <silent> <leader>gb :Git checkout -b 
 let g:which_key_map.g.b = 'git-branch'
 
-nnoremap <silent> <leader>gbl :Git branch
+nnoremap <silent> <leader>gbl :Git branch<CR>
 let g:which_key_map.g.bl = 'git-branch-list'
 
 nnoremap <silent> <leader>gsw :Git switch -c
