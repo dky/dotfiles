@@ -88,8 +88,8 @@ let g:which_key_map.g.puh = 'git-push-origin-head'
 nnoremap <silent> <leader>gpuhf :exec "Git push origin --force " . fugitive#head()<CR>
 let g:which_key_map.g.puhf = 'git-push-origin-head-force'
 
-nnoremap <silent> <leader>gbl :Git blame<CR>
-let g:which_key_map.g.bl = 'git-blame'
+nnoremap <silent> <leader>gbla :Git blame<CR>
+let g:which_key_map.g.bla = 'git-blame'
 
 nnoremap <silent> <leader>gd :Git diff<CR>
 let g:which_key_map.g.d = 'git-diff'
