@@ -43,6 +43,9 @@ git rm <file> --cache
 git reset --mixed
 
 # Git reset --hard
+git reset --hard
+
+# Git reset --hard to a commit
 git reset --hard <commit_sha>
 
 $ file: ls -1 --- --column 1
