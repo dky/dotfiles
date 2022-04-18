@@ -39,6 +39,9 @@ git checkout -- <file>
 # Remove file from repo but keep on it on disk. Useful if you forgot to add to .gitignore
 git rm <file> --cache
 
+# Git reset --mixed
+git reset --mixed
+
 # Git reset --hard
 git reset --hard <commit_sha>
 
