@@ -48,6 +48,15 @@ git reset --hard
 # Git reset --hard to a commit
 git reset --hard <commit_sha>
 
+# Git stash
+git stash
+
+# Git stash list - List stashes
+git stash list
+
+# Git stash pop - Reapply changes
+git stash pop
+
 $ file: ls -1 --- --column 1
 $ branch: git branch | awk '{print $NF}'
 $ commit_sha: git log --pretty=format:"%h   %an   %ar   %s" --- --column 1
