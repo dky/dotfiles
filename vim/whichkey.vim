@@ -64,6 +64,9 @@ let g:which_key_map.g.g = 'fugitive-interactive'
 nnoremap <silent> <leader>gb :Git checkout -b 
 let g:which_key_map.g.b = 'git-branch'
 
+nnoremap <silent> <leader>gam :Git commit --amend
+let g:which_key_map.g.am = 'git-commit-ammend'
+
 nnoremap <silent> <leader>gbl :Git branch<CR>
 let g:which_key_map.g.bl = 'git-branch-list'
 
