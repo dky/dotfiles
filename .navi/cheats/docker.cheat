@@ -1,14 +1,5 @@
 % docker
 
-# Remove an image
-docker image rm <image_id>
-
-# Clean none/dangling images
-docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
-
-# Force clean none/dangling images
-docker rmi $(docker images --filter "dangling=true" -q --no-trunc) -f
-
 # Build an image from the Dockerfile in the current directory and tag the image
 docker build -t <image>:<version> .
 
@@ -49,6 +40,15 @@ docker-compose logs -f --tail 100 <service_name>
 
 # Remove exited or created images
 docker rm $(docker ps -a -f status=exited -f status=created -q)
+
+# Remove an image
+docker image rm <image_id>
+
+# Remove none/dangling images
+docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
+
+# Force remove none/dangling images
+docker rmi $(docker images --filter "dangling=true" -q --no-trunc) -f
 
 # Docker run and rm
 docker run -it --rm <image> /bin/sh
