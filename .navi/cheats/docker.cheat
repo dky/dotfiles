@@ -1,3 +1,14 @@
+% docker-compose
+
+# Builds, (re)creates, starts, and dettaches to containers for a service
+docker-compose up -d <service_name>
+
+# Print the last lines of a service’s logs
+docker-compose logs --tail 100 <service_name> | less
+
+# Print the last lines of a service's logs and following its logs
+docker-compose logs -f --tail 100 <service_name>
+
 % docker
 
 # Build an image from the Dockerfile in the current directory and tag the image
@@ -27,16 +38,6 @@ docker logs --tail 100 <container_id> -f
 # Create new network
 docker network create <network_name>
 
-% docker-compose
-
-# Builds, (re)creates, starts, and dettaches to containers for a service
-docker-compose up -d <service_name>
-
-# Print the last lines of a service’s logs
-docker-compose logs --tail 100 <service_name> | less
-
-# Print the last lines of a service's logs and following its logs
-docker-compose logs -f --tail 100 <service_name>
 
 # Remove exited or created images
 docker rm $(docker ps -a -f status=exited -f status=created -q)
