@@ -116,6 +116,7 @@ alias gpuod='git push origin --delete' # deleting remote branches
 
 # Git checkout
 alias gco='git checkout'
+alias gco-='git checkout -'
 
 # Git commit
 alias gcmp='git commit -p'
