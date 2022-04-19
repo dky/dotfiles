@@ -23,8 +23,6 @@ docker kill <container_id>
 # List the networks
 docker network ls
 
-# Delete all running and stopped containers
-docker rm -f $(docker ps -aq)
 # Create new network
 docker network create <network_name>
 
@@ -37,6 +35,8 @@ docker logs --tail 100 <container_id> | less
 # Print the last lines of a container's logs and following its logs
 docker logs --tail 100 <container_id> -f
 
+# Remove all running and stopped containers
+docker rm -f $(docker ps -aq)
 
 # Remove exited or created images
 docker rm $(docker ps -a -f status=exited -f status=created -q)
