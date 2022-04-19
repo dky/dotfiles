@@ -25,6 +25,8 @@ docker network ls
 
 # Delete all running and stopped containers
 docker rm -f $(docker ps -aq)
+# Create new network
+docker network create <network_name>
 
 # Create a new bash process inside the container and connect it to the terminal
 docker exec -it <container_id> bash
@@ -34,9 +36,6 @@ docker logs --tail 100 <container_id> | less
 
 # Print the last lines of a container's logs and following its logs
 docker logs --tail 100 <container_id> -f
-
-# Create new network
-docker network create <network_name>
 
 
 # Remove exited or created images
