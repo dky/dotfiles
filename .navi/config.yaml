@@ -16,7 +16,7 @@ finder:
 cheats:
    paths: 
      - ~/.dotfiles/.navi/cheats
-    # - /path/to/another/dir
+     - ~/.navi_private/cheats
 
 # search:
   # tags: git,!checkout # equivalent to the --tag-rules option
