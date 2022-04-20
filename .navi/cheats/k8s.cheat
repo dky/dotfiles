@@ -62,3 +62,9 @@ kubectl cordon <name>
 
 # Display resource (cpu/memory/storage) usage
 kubectl top <type>
+
+# Get role bindings
+kubectl get rolebinding -n <namespace>
+
+# Get rbac def
+kubectl get RBACDefinition
