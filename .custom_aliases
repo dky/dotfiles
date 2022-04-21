@@ -368,6 +368,8 @@ alias kpf="kubectl port-forward"
 alias kgrba="kubectl get rolebinding --all-namespaces"
 alias kgcrb="kubectl get clusterrolebinding"
 
+alias kdn="kubectl describe ns"
+
 #jq and preserve colors
 alias jql="jq . -C | less -R"
 
