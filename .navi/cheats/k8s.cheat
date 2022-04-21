@@ -68,3 +68,6 @@ kubectl get rolebinding -n <namespace>
 
 # Get rbac def
 kubectl get RBACDefinition
+
+# List containers in a pod
+kubectl get pods <pod> -o jsonpath='{.spec.containers[*].name}{"\n"}'
