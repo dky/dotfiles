@@ -349,27 +349,34 @@ alias chme="chown `echo $(whoami):$(whoami)`"
 alias k="kubectl"
 alias ka="kubectl apply -f"
 alias kl="kubectl logs"
-alias kgc="kubectl config get-contexts"
-alias kgd="kubectl get deployment"
-alias kge="kubectl get events"
-alias kgpa="kubectl get pods --all-namespaces"
-alias kgs="kubectl get services"
-alias kgcs="kubectl get componentstatuses"
-# Namespaces
-alias kgn="kubectl get ns"
-# Node operations
-alias kgno="kubectl get nodes"
-alias kdno="kubectl describe nodes"
+
+# Config
 alias kcuc="kubectl config use-context"
 alias ksn="kubectl config set-context --current --namespace"
 alias ksc="kubectl config use-context"
-alias kpf="kubectl port-forward"
 alias kcv="kubectl config view"
-# Roles
+
+alias kpf="kubectl port-forward"
+
+# Get
+alias kgc="kubectl config get-contexts"
 alias kgrba="kubectl get rolebinding --all-namespaces"
 alias kgcrb="kubectl get clusterrolebinding"
+alias kgd="kubectl get deployment"
+alias kge="kubectl get events"
+alias kgpa="kubectl get pods --all-namespaces"
 
+alias kgs="kubectl get services"
+alias kgsec="kubectl get secrets"
+alias kgsa="kubectl get sa"
+
+alias kgcs="kubectl get componentstatuses"
+alias kgn="kubectl get ns"
+alias kgno="kubectl get nodes"
+
+# Describe
 alias kdn="kubectl describe ns"
+alias kdno="kubectl describe nodes"
 
 #jq and preserve colors
 alias jql="jq . -C | less -R"
