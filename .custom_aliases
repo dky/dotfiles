@@ -364,6 +364,7 @@ alias kcuc="kubectl config use-context"
 alias ksn="kubectl config set-context --current --namespace"
 alias ksc="kubectl config use-context"
 alias kpf="kubectl port-forward"
+alias kcv="kubectl config view"
 # Roles
 alias kgrba="kubectl get rolebinding --all-namespaces"
 alias kgcrb="kubectl get clusterrolebinding"
