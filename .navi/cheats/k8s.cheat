@@ -1,4 +1,4 @@
-% kubernetes, k8s
+% kubectl
 
 # Print all contexts
 kubectl config get-contexts
@@ -27,6 +27,18 @@ kubectl get pods --all-namespaces
 # Get services from namespace
 kubectl get services -n <namespace>
 
+# Get deployments
+kubectl get deployments -n <namespace>
+
+# List containers in a pod
+kubectl get pods <pod> -o jsonpath='{.spec.containers[*].name}{"\n"}'
+
+# Get role bindings
+kubectl get rolebinding -n <namespace>
+
+# Get rbac def
+kubectl get RBACDefinition
+
 # Get details from resource on namespace
 kubectl describe <resource>/<name> -n <namespace>
 
@@ -35,9 +47,6 @@ kubectl describe po <pod>
 
 # Print logs from namespace
 kubectl logs -f pods/<name> -n <namespace>
-
-# Get deployments
-kubectl get deployments -n <namespace>
 
 # Delete deployments
 kubectl delete deployment <name>
@@ -62,12 +71,3 @@ kubectl cordon <name>
 
 # Display resource (cpu/memory/storage) usage
 kubectl top <type>
-
-# Get role bindings
-kubectl get rolebinding -n <namespace>
-
-# Get rbac def
-kubectl get RBACDefinition
-
-# List containers in a pod
-kubectl get pods <pod> -o jsonpath='{.spec.containers[*].name}{"\n"}'
