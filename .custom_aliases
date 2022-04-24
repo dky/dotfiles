@@ -369,6 +369,7 @@ alias kgpa="kubectl get pods --all-namespaces"
 alias kgs="kubectl get services"
 alias kgsec="kubectl get secrets"
 alias kgsa="kubectl get sa"
+alias kgcm="kubectl get configmap"
 
 alias kgcs="kubectl get componentstatuses"
 alias kgn="kubectl get ns"
