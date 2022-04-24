@@ -71,3 +71,9 @@ kubectl cordon <name>
 
 # Display resource (cpu/memory/storage) usage
 kubectl top <type>
+
+# Configuration maps literal
+kubectl create configmap <configmap-name> --from-literal=<key>=<value>
+
+# Configuration map from file
+kubectl create configmap <configmap-name> --from-file=<path-to-file>
