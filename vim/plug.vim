@@ -27,6 +27,7 @@ if has('nvim')
 	Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 	Plug 'kyazdani42/nvim-web-devicons' " lua
 	Plug 'tmhedberg/SimpylFold' "Python folding
+	Plug 'brunovcosta/crossover'
 else
 endif
 
