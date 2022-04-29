@@ -1,5 +1,8 @@
 % kubectl
 
+# Get component status
+kubectl get componentstatuses
+
 # Print all contexts
 kubectl config get-contexts
 
