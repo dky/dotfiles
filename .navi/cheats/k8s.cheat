@@ -54,8 +54,8 @@ kubectl describe ns <namespace>
 # Get details from pod
 kubectl describe po <pod>
 
-# Print logs from namespace
-kubectl logs -f pods/<name> -n <namespace>
+# Print logs from pod
+kubectl logs -f <pod>
 
 # Delete deployments
 kubectl delete deployment <name>
