@@ -48,8 +48,8 @@ kubectl get RBACDefinition
 # Get node info
 kubectl describe node <node>
 
-# Get details from resource on namespace
-kubectl describe <resource>/<name> -n <namespace>
+# Get namespace info
+kubectl describe -n <namespace>
 
 # Get details from pod
 kubectl describe po <pod>
