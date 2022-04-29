@@ -45,6 +45,9 @@ kubectl get rolebinding -n <namespace>
 # Get rbac def
 kubectl get RBACDefinition
 
+# Get node info
+kubectl describe node <node>
+
 # Get details from resource on namespace
 kubectl describe <resource>/<name> -n <namespace>
 
