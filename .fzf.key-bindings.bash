@@ -112,6 +112,7 @@ fi
 #bind -m vi-insert '"\ec": "\C-z\ec\C-z"'
 
 # CTRL-K - Search for an alias to run
+# This was disabled 04/28/22 because I wanted to bind ctrl-g to navi and it's causing some weird conflict. Where it overlaps with it when turned on.
 #bind -m emacs-standard '"\C-k": "\C-e \C-u\C-y\ey\C-u"$(__fzf_alias__)"\e\C-e\er"'
 bind -m vi-command '"\C-k": "\C-z\C-r\C-z"'
 bind -m vi-insert '"\C-k": "\C-z\C-r\C-z"'
