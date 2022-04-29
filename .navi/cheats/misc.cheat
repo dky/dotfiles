@@ -1,0 +1,4 @@
+% misc
+
+# bash aliases
+$(__fzf_alias__)
