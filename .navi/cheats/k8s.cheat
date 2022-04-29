@@ -1,5 +1,8 @@
 % kubectl
 
+# version
+kubectl version
+
 # Get component status
 kubectl get componentstatuses
 
