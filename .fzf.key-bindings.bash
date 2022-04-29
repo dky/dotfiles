@@ -112,7 +112,7 @@ fi
 #bind -m vi-insert '"\ec": "\C-z\ec\C-z"'
 
 # CTRL-K - Search for an alias to run
-bind -m emacs-standard '"\C-k": "\C-e \C-u\C-y\ey\C-u"$(__fzf_alias__)"\e\C-e\er"'
+#bind -m emacs-standard '"\C-k": "\C-e \C-u\C-y\ey\C-u"$(__fzf_alias__)"\e\C-e\er"'
 bind -m vi-command '"\C-k": "\C-z\C-r\C-z"'
 bind -m vi-insert '"\C-k": "\C-z\C-r\C-z"'
 

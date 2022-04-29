@@ -59,3 +59,4 @@ export NVM_DIR="$HOME/.nvm"
 
 # Navi https://github.com/denisidoro/navi
 export NAVI_CONFIG=~/.dotfiles/.navi/config.yaml
+eval "$(navi widget bash)"
