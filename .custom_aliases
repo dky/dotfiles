@@ -428,6 +428,6 @@ alias exp="explorer.exe ."
 alias apl="ansible-playbook --connection=local --inventory 127.0.0.1, --limit=127.0.0.1"
 
 # navi shorter
-#alias n="navi"
+alias n="navi"
 # get to cheats
 alias cdcheat="cd ~/.dotfiles/.navi/cheats"
