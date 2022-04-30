@@ -18,8 +18,14 @@ kubectl config use-context <context>
 # Print resource documentation
 kubectl explain <resource>
 
-# Get nodes (add option '-o wide' for details)
+# Get nodes
 kubectl get nodes
+
+# Get nodes with labels
+kubectl get nodes --show-labels
+
+# Get nodes wide
+kubectl get nodes -o wide
 
 # Get namespaces
 kubectl get namespaces
