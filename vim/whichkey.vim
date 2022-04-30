@@ -119,7 +119,7 @@ let g:which_key_map.g.a = 'git-add-all'
 nnoremap <silent> <leader>gcm :Git commit -m "
 let g:which_key_map.g.cm = 'git-commit'
 
-nnoremap <silent> <leader>gc :Git commit "
+nnoremap <silent> <leader>gc :Git commit"<CR>
 let g:which_key_map.g.c = 'git-commit'
 
 nnoremap <silent> <leader>gcma :Git add . <bar> :Git commit -a -m "
