@@ -7,3 +7,8 @@ nfsiostat 5 <mount>
 
 # Look for processes in Uninterruptible Sleep (D) state
 ps -eo state,pid,cmd | grep "^D"
+
+% lsof
+
+# list files being held open
+lsof -nP | grep '(deleted)'
