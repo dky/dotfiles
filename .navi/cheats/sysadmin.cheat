@@ -22,3 +22,8 @@ dig @127.0.0.1 -p <port> <host> ANY
 
 # Snap info on microk8s
 snap info microk8s
+
+% netstat
+
+# grab listening tcp ports, p = process, l = listen, n = no resolve service, t = tcp, use sudo to get pids
+sudo netstat -plnt
