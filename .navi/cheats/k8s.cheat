@@ -60,6 +60,9 @@ kubectl describe ns <namespace>
 # Get details from pod
 kubectl describe po <pod>
 
+# Get details for sa
+kubectl describe sa <sa>
+
 # Print logs from pod
 kubectl logs -f <pod>
 
