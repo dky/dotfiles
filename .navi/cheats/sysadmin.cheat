@@ -35,3 +35,8 @@ sudo netstat -plnu
 
 # tail /var/log/syslog
 sudo tail -f /var/log/syslog
+
+% systemctl
+
+# List all systemctl unit services that are active
+systemctl list-units --type=service --state=active
