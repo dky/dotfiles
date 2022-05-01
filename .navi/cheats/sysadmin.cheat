@@ -12,3 +12,8 @@ ps -eo state,pid,cmd | grep "^D"
 
 # list files being held open
 lsof -nP | grep '(deleted)'
+
+% dig
+
+# Dig on a alternative port, replace port with non standard port
+dig @127.0.0.1 -p <port> <host> ANY
