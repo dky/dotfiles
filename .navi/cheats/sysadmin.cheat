@@ -32,4 +32,6 @@ sudo netstat -plnt
 sudo netstat -plnu
 
 % tail
+
+# tail /var/log/syslog
 sudo tail -f /var/log/syslog
