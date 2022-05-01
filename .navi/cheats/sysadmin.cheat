@@ -17,3 +17,8 @@ lsof -nP | grep '(deleted)'
 
 # Dig on a alternative port, replace port with non standard port
 dig @127.0.0.1 -p <port> <host> ANY
+
+% snap
+
+# Snap info on microk8s
+snap info microk8s
