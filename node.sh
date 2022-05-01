@@ -10,10 +10,10 @@ source ~/.bashrc
 nvm install node
 
 # Install all the lsp cruft
-npm -g install pyright
-npm -g install bash-language-server
-npm -g install dockerfile-language-server-nodejs
-npm -g install yaml-language-server
-npm -g install yarn
-npm -g install ansible-language-server
-npm -g install diagnostic-languageserver
+npm install pyright
+npm install bash-language-server
+npm install dockerfile-language-server-nodejs
+npm install yaml-language-server
+npm install yarn
+npm install ansible-language-server
+npm install diagnostic-languageserver
