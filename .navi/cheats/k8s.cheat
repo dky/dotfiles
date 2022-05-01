@@ -122,6 +122,9 @@ microk8s.inspect
 # Micro k8s status
 microk8s.status
 
+# Micro k8s enable
+microk8s.enable
+
 # Micro k8s stop
 microk8s.stop
 
