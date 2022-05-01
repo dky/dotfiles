@@ -118,3 +118,6 @@ microk8s.inspect
 
 # Micro k8s stop
 microk8s.stop
+
+# Micro k8s start
+microk8s.start
