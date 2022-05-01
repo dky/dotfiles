@@ -108,6 +108,9 @@ kubectl create configmap <configmap-name> --from-file=<path-to-file>
 # Run a pod interactively for debugging
 kubectl run -i --tty --rm test --image=busybox --restart=Never -- sh
 
+# Cluster info
+kubectl cluster-info
+
 # Export kube config - Talk to remote clusters by exporting KUBECONFIG env
 export KUBECONFIG=<config>
 
