@@ -110,3 +110,8 @@ kubectl run -i --tty --rm test --image=busybox --restart=Never -- sh
 
 # Export kube config - Talk to remote clusters by exporting KUBECONFIG env
 export KUBECONFIG=<config>
+
+% microk8s
+
+# Micro k8s inspect
+microk8s.inspect
