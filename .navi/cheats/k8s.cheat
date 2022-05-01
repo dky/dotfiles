@@ -116,6 +116,9 @@ export KUBECONFIG=<config>
 # Micro k8s inspect
 microk8s.inspect
 
+# Micro k8s status
+microk8s.status
+
 # Micro k8s stop
 microk8s.stop
 
