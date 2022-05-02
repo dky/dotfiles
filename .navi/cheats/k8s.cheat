@@ -66,17 +66,17 @@ kubectl describe sa <sa>
 # Print logs from pod
 kubectl logs -f <pod>
 
-# Delete deployments
-kubectl delete deployment <name>
-
 # Delete service
 kubectl delete svc <name>
 
-# Create deployment 
-kubectl apply -f <deploy>
+# Create deployment from spec file
+kubectl apply -f <spec>
 
-# Delete deployment 
-kubectl delete -f <deploy>
+# Delete deployment from spec file
+kubectl delete -f <spec>
+
+# Delete deployment using name
+kubectl delete deployment <name>
 
 # Delete a pod
 kubectl delete pod <pod>
