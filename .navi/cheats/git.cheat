@@ -57,6 +57,9 @@ git stash list
 # Git stash pop - Reapply changes
 git stash pop
 
+# Git Squash - reset head x # of commits
+git reset --soft HEAD~<number of commits>
+
 $ file: ls -1 --- --column 1
 $ branch: git branch | awk '{print $NF}'
 $ commit_sha: git log --pretty=format:"%h   %an   %ar   %s" --- --column 1
