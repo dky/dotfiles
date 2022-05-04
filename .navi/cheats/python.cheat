@@ -2,3 +2,14 @@
 
 # Make a request using the request library
 python -c "import requests; r = requests.get('https://<url>'); print r.status_code"
+
+% conda
+
+# Conda show configs
+conda config --show
+
+# Conda install
+conda install -v <package>
+
+# Conda env config
+connda env config vars set export <env_var_key>='<env_value>'
