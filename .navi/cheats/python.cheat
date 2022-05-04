@@ -1,0 +1,4 @@
+% python
+
+# Make a request using the request library
+python -c "import requests; r = requests.get('https://<url>'); print r.status_code"
