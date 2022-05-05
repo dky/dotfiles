@@ -33,6 +33,9 @@ git reset --
 # Git unstage specific file
 git reset -- <file>
 
+# Git checkout commit into it's own branch
+git branch <branch-name> <commit-id>
+
 # Git checkout file back to the state before modifications
 git checkout -- <file>
 
