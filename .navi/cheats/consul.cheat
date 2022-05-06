@@ -2,3 +2,6 @@
 
 # Consul registration via curl
 curl --request PUT --header "X-Consul-Token: <consul_token>" --data @<file> http://127.0.0.1:8500/v1/agent/service/register
+
+# Get services in catalog
+curl --request PUT --header "X-Consul-Token: <consul_token>" http://127.0.0.1:8500/v1/agent/services
