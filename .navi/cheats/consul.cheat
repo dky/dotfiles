@@ -3,5 +3,8 @@
 # Consul service registration via curl
 curl --request PUT --header "X-Consul-Token: $CONSUL_TOKEN" --data @<file> http://127.0.0.1:8500/v1/agent/service/register
 
+# Consul service deregistration via curl
+curl --request PUT --header "X-Consul-Token: $CONSUL_TOKEN" http://127.0.0.1:8500/v1/agent/service/register/<service>
+
 # Get Agent services via curl
 curl --header "X-Consul-Token: $CONSUL_TOKEN" http://127.0.0.1:8500/v1/agent/services
