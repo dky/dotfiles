@@ -4,4 +4,4 @@
 curl --request PUT --header "X-Consul-Token: $CONSUL_TOKEN" --data @<file> http://127.0.0.1:8500/v1/agent/service/register
 
 # Get Agent services via curl
-curl --request PUT --header "X-Consul-Token: $CONSUL_TOKEN" http://127.0.0.1:8500/v1/agent/services
+curl --header "X-Consul-Token: $CONSUL_TOKEN" http://127.0.0.1:8500/v1/agent/services
