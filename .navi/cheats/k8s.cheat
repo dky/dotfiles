@@ -39,6 +39,9 @@ kubectl get pods --all-namespaces
 # Get services from namespace
 kubectl get services -n <namespace>
 
+# Get endpoints
+kubectl get ep
+
 # Get deployments
 kubectl get deployments -n <namespace>
 
