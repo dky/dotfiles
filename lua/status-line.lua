@@ -121,37 +121,24 @@ gls.left[9] = {
   }
 }
 gls.left[10] = {
-  Space = {
-    provider = function() return ' ' end,
-    highlight = {colors.section_bg}
-  }
-}
-gls.left[11] = {
   DiagnosticWarn = {
     provider = 'DiagnosticWarn',
     icon = '  ',
     highlight = {colors.orange}
   }
 }
-gls.left[12] = {
+gls.left[11] = {
   DiagnosticHint = {
     provider = 'DiagnosticHint',
     icon = '  ',
     highlight = {colors.fg}
   }
 }
-gls.left[13] = {
-  Space = {
-    provider = function() return ' ' end,
-    highlight = {colors.section_bg}
-  }
-}
-gls.left[14] = {
+gls.left[12] = {
   DiagnosticInfo = {
     provider = 'DiagnosticInfo',
     icon = '  ',
     highlight = {colors.blue},
-    separator_highlight = {colors.section_bg, colors.bg}
   }
 }
 
