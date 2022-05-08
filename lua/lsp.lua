@@ -46,6 +46,10 @@ for _, lsp in ipairs(servers) do
     }
 end
 
+-- If you open a ruby file and solargraph does not attach see:
+-- Solargraph https://github.com/neovim/nvim-lspconfig/issues/387
+nvim_lsp.solargraph.setup{}
+
 -- Ansible - make sure you get ansible-lint installed via pip
 nvim_lsp.ansiblels.setup {
 	 cmd = { "ansible-language-server", "--stdio" },
