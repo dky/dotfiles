@@ -166,7 +166,7 @@ gls.mid[1] = {
       end
       return true
     end,
-    icon = ':',
+    icon = ' ',
   }
 }
 
