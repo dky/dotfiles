@@ -171,7 +171,6 @@ gls.right[2] = {
   FileEncode = {
     provider = 'FileEncode',
     condition = condition.hide_in_width,
-    separator_highlight = {'NONE',colors.bg},
     highlight = {colors.green,colors.bg,'bold'}
   }
 }
@@ -180,7 +179,6 @@ gls.right[3] = {
     provider = 'FileFormat',
     condition = condition.hide_in_width,
     separator = ' ',
-    separator_highlight = {'NONE',colors.bg},
     highlight = {colors.green,colors.bg,'bold'}
   }
 }
@@ -188,14 +186,12 @@ gls.right[4] = {
   FileSize = {
     provider = 'FileSize',
     separator = ' ',
-    condition = condition.buffer_not_empty,
     highlight = {colors.fg,colors.bg}
   }
 }
 gls.right[5] = {
   PerCent = {
     provider = 'LinePercent',
-    separator_highlight = {'NONE',colors.bg},
     highlight = {colors.orange,'bold'},
   }
 }
@@ -210,7 +206,6 @@ gls.short_line_left[1] = {
   BufferType = {
     provider = 'FileTypeName',
     separator = ' ',
-    separator_highlight = {'NONE',colors.bg},
     highlight = {colors.blue,colors.bg,'bold'}
   }
 }
