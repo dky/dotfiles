@@ -170,35 +170,7 @@ gls.mid[1] = {
   }
 }
 
-gls.right[1] = {
-  FileEncode = {
-    provider = 'FileEncode',
-    condition = condition.hide_in_width,
-    separator_highlight = {'NONE',colors.bg},
-    highlight = {colors.green,colors.bg,'bold'}
-  }
-}
-gls.right[2] = {
-  FileFormat = {
-    provider = 'FileFormat',
-    condition = condition.hide_in_width,
-    separator = ' ',
-    separator_highlight = {'NONE',colors.bg},
-    highlight = {colors.green,colors.bg,'bold'}
-  }
-}
-gls.right[3] = {
-  FileSize = {
-    provider = 'FileSize',
-    separator = ' ',
-    condition = condition.buffer_not_empty,
-    highlight = {colors.fg,colors.bg}
-  }
-}
-
-gls.right[4]= {
-      icon = ' : ',
-
+gls.right[1]= {
   LineColumn = {
     provider = function ()
       local max_lines = vim.fn.line('$')
@@ -209,7 +181,31 @@ gls.right[4]= {
     highlight = {colors.yellow},
   }
 }
-
+gls.right[2] = {
+  FileEncode = {
+    provider = 'FileEncode',
+    condition = condition.hide_in_width,
+    separator_highlight = {'NONE',colors.bg},
+    highlight = {colors.green,colors.bg,'bold'}
+  }
+}
+gls.right[3] = {
+  FileFormat = {
+    provider = 'FileFormat',
+    condition = condition.hide_in_width,
+    separator = ' ',
+    separator_highlight = {'NONE',colors.bg},
+    highlight = {colors.green,colors.bg,'bold'}
+  }
+}
+gls.right[4] = {
+  FileSize = {
+    provider = 'FileSize',
+    separator = ' ',
+    condition = condition.buffer_not_empty,
+    highlight = {colors.fg,colors.bg}
+  }
+}
 gls.right[5] = {
   PerCent = {
     provider = 'LinePercent',
