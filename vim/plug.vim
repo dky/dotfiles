@@ -24,7 +24,7 @@ if has('nvim')
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'lewis6991/gitsigns.nvim'
 	" Status line + web devicons
-	Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
+	Plug 'NTBBloodbath/galaxyline.nvim',
 	Plug 'kyazdani42/nvim-web-devicons' " lua
 	Plug 'tmhedberg/SimpylFold' "Python folding
 else
