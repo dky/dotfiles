@@ -45,7 +45,7 @@ local function trailing_whitespace()
     else
         return nil
     end
- end
+end
 
 gls.left[1] = {
   RainbowRed = {
@@ -156,7 +156,15 @@ gls.mid[1] = {
   }
 }
 
-gls.right[1]= {
+
+gls.right[1] = {
+  TrailingWhitespace = {
+    provider =  { trailing_whitespace },
+    separator_highlight = {'NONE',colors.bg},
+    highlight = {colors.fg,colors.bg},
+  },
+}
+gls.right[2]= {
   LineColumn = {
     provider = function ()
       local max_lines = vim.fn.line('$')
@@ -167,14 +175,14 @@ gls.right[1]= {
     highlight = {colors.yellow},
   }
 }
-gls.right[2] = {
+gls.right[3] = {
   FileEncode = {
     provider = 'FileEncode',
     condition = condition.hide_in_width,
     highlight = {colors.green,colors.bg,'bold'}
   }
 }
-gls.right[3] = {
+gls.right[4] = {
   FileFormat = {
     provider = 'FileFormat',
     condition = condition.hide_in_width,
@@ -182,20 +190,20 @@ gls.right[3] = {
     highlight = {colors.green,colors.bg,'bold'}
   }
 }
-gls.right[4] = {
+gls.right[5] = {
   FileSize = {
     provider = 'FileSize',
     separator = ' ',
     highlight = {colors.fg,colors.bg}
   }
 }
-gls.right[5] = {
+gls.right[6] = {
   PerCent = {
     provider = 'LinePercent',
     highlight = {colors.orange,'bold'},
   }
 }
-gls.right[6] = {
+gls.right[7] = {
   RainbowBlue = {
     provider = function() return ' ▊' end,
     highlight = {colors.blue,colors.bg}
