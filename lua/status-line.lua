@@ -64,7 +64,7 @@ gls.left[2] = {
 gls.left[3] = {
   FileName = {
     provider = 'FileName',
-    highlight = {colors.fg, colors.section_bg},
+    highlight = {colors.fg},
     separator = " ",
     separator_highlight = {colors.section_bg, colors.bg}
   }
@@ -124,41 +124,40 @@ gls.left[10] = {
   DiagnosticError = {
     provider = 'DiagnosticError',
     icon = '  ',
-    highlight = {colors.red, colors.section_bg}
+    highlight = {colors.red}
   }
 }
 gls.left[11] = {
   Space = {
     provider = function() return ' ' end,
-    highlight = {colors.section_bg, colors.section_bg}
+    highlight = {colors.section_bg}
   }
 }
 gls.left[12] = {
   DiagnosticWarn = {
     provider = 'DiagnosticWarn',
     icon = '  ',
-    highlight = {colors.orange, colors.section_bg}
+    highlight = {colors.orange}
   }
 }
 gls.left[13] = {
   DiagnosticHint = {
     provider = 'DiagnosticHint',
     icon = '  ',
-    highlight = {colors.fg, colors.section_bg}
+    highlight = {colors.fg}
   }
 }
 gls.left[14] = {
   Space = {
     provider = function() return ' ' end,
-    highlight = {colors.section_bg, colors.section_bg}
+    highlight = {colors.section_bg}
   }
 }
 gls.left[15] = {
   DiagnosticInfo = {
     provider = 'DiagnosticInfo',
     icon = '  ',
-    highlight = {colors.blue, colors.section_bg},
-    separator = '| ',
+    highlight = {colors.blue},
     separator_highlight = {colors.section_bg, colors.bg}
   }
 }
