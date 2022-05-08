@@ -176,7 +176,7 @@ gls.right[1]= {
       local max_lines = vim.fn.line('$')
       local line = vim.fn.line('.')
       local column = vim.fn.col('.')
-      return string.format(" :%3d :%d ", line, column)
+      return string.format(" :%d :%d ", line, column)
     end,
     highlight = {colors.yellow},
   }
