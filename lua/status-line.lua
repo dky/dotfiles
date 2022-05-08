@@ -171,13 +171,6 @@ gls.mid[1] = {
 }
 
 gls.right[1] = {
-  TrailingWhitespace = {
-    provider =  { trailing_whitespace },
-    separator_highlight = {'NONE',colors.bg},
-    highlight = {colors.fg,colors.bg},
-  },
-}
-gls.right[2] = {
   FileEncode = {
     provider = 'FileEncode',
     condition = condition.hide_in_width,
@@ -185,7 +178,7 @@ gls.right[2] = {
     highlight = {colors.green,colors.bg,'bold'}
   }
 }
-gls.right[3] = {
+gls.right[2] = {
   FileFormat = {
     provider = 'FileFormat',
     condition = condition.hide_in_width,
@@ -194,7 +187,7 @@ gls.right[3] = {
     highlight = {colors.green,colors.bg,'bold'}
   }
 }
-gls.right[4] = {
+gls.right[3] = {
   FileSize = {
     provider = 'FileSize',
     separator = ' ',
@@ -202,7 +195,7 @@ gls.right[4] = {
     highlight = {colors.fg,colors.bg}
   }
 }
-gls.right[5] = {
+gls.right[4] = {
   PerCent = {
     provider = 'LinePercent',
     separator = ' ',
@@ -210,14 +203,14 @@ gls.right[5] = {
     highlight = {colors.fg,colors.bg,'bold'},
   }
 }
-gls.right[6] = {
+gls.right[5] = {
   LineInfo = {
     provider = 'LineColumn',
     separator_highlight = {'NONE',colors.bg},
     highlight = {colors.fg,colors.bg},
   },
 }
-gls.right[7] = {
+gls.right[6] = {
   RainbowBlue = {
     provider = function() return ' ▊' end,
     highlight = {colors.blue,colors.bg}
