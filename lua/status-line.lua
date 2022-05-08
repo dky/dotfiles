@@ -195,20 +195,27 @@ gls.right[3] = {
     highlight = {colors.fg,colors.bg}
   }
 }
-gls.right[4] = {
-  PerCent = {
-    provider = 'LinePercent',
-    separator = ' ',
-    separator_highlight = {'NONE',colors.bg},
-    highlight = {colors.fg,colors.bg,'bold'},
+
+gls.right[4]= {
+      icon = ' : ',
+
+  LineColumn = {
+    provider = function ()
+      local max_lines = vim.fn.line('$')
+      local line = vim.fn.line('.')
+      local column = vim.fn.col('.')
+      return string.format(" :%3d :%d ", line, column)
+    end,
+    highlight = {colors.yellow},
   }
 }
+
 gls.right[5] = {
-  LineInfo = {
-    provider = 'LineColumn',
+  PerCent = {
+    provider = 'LinePercent',
     separator_highlight = {'NONE',colors.bg},
-    highlight = {colors.fg,colors.bg},
-  },
+    highlight = {colors.orange,'bold'},
+  }
 }
 gls.right[6] = {
   RainbowBlue = {
