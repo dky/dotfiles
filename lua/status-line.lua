@@ -65,7 +65,6 @@ gls.left[3] = {
   FileName = {
     provider = 'FileName',
     highlight = {colors.fg},
-    separator = " ",
     separator_highlight = {colors.section_bg, colors.bg}
   }
 }
