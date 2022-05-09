@@ -24,7 +24,6 @@ local on_attach = function(client, bufnr)
     buf_set_keymap("n", "<space>D", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
     buf_set_keymap("n", "<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
     buf_set_keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-    buf_set_keymap("n", "<space>e", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", opts)
     buf_set_keymap("n", "<space>e", '<cmd>lua vim.diagnostic.open_float(0, { scope = "line", border = "single" })<CR>', opts)
 
     buf_set_keymap("n", "<C-n>", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
@@ -100,6 +99,24 @@ nvim_lsp.yamlls.setup {
         }
     },
     on_attach = on_attach
+}
+
+-- Setup pylsp
+nvim_lsp.pylsp.setup {
+     enable = false,
+     cmd = {"pylsp"},
+     on_attach = on_attach,
+         settings = {
+             pylsp = {
+             configurationSources = { "flake8" },
+                 plugins = {
+                     flake8 = { enabled = true },
+                     mypy = { enabled = false },
+                     pycodestyle= { enabled = false },
+                     pyflakes = { enabled = false },
+                 }
+             }
+         }
 }
 
 require "nvim-treesitter.configs".setup {
