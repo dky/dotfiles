@@ -14,6 +14,8 @@ conda install -v <package>
 # Conda env config
 connda env config vars set export <env_var_key>='<env_value>'
 
+# Conda env create
+conda env create -v -n test -f <env-file>
 
 % pip
 # Pip upgrade package
