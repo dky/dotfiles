@@ -18,5 +18,6 @@ connda env config vars set export <env_var_key>='<env_value>'
 conda env create -v -n test -f <env-file>
 
 % pip
+
 # Pip upgrade package
 python3 -m pip install --upgrade <package>
