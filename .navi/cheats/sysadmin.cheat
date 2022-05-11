@@ -40,3 +40,8 @@ sudo tail -f /var/log/syslog
 
 # List all systemctl unit services that are active
 systemctl list-units --type=service --state=active
+
+% sar
+
+# sar -r
+sar -r | awk '{if($5>99.00)print}'
