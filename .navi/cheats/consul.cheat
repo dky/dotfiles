@@ -8,3 +8,9 @@ curl --request PUT --header "X-Consul-Token: $CONSUL_TOKEN" http://127.0.0.1:850
 
 # Get Agent services via curl
 curl --header "X-Consul-Token: $CONSUL_TOKEN" http://127.0.0.1:8500/v1/agent/services
+
+# Register a service into k/v
+curl --header "X-Consul-Token: $CONSUL_TOKEN" -XPUT http://127.0.0.1:8500/v1/kv/somewhere/hello -d "Hello world"
+
+# Fetch a service from k/v
+curl --header "X-Consul-Token: $CONSUL_TOKEN" -XGET http://127.0.0.1:8500/v1/kv/somewhere/hello
