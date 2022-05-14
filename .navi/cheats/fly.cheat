@@ -1,0 +1,7 @@
+% flyctl
+
+# List apps
+flyctl apps list
+
+# Delete app
+flyctl apps destroy <app>
