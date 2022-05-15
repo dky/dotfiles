@@ -50,3 +50,8 @@ sar -r | awk '{if($5>99.00)print}'
 
 # wget a file and save to disk wget -O ~/tmp/ https://dky.io/test
 wget -O <path>  <url>
+
+% tar
+
+# Extract file to another location tar -xzvf ~/tmp/nvim.tar.gz -C /tmp/
+tar -xzvf <file> -C <destination>
