@@ -5,3 +5,8 @@
 
 # Install specific version of module
 npm install -g <module>@<version>
+
+% nvm
+
+# Install specific version of node - npm install node 18.0.0
+nvm install <version>
