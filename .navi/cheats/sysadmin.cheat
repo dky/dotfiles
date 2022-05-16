@@ -55,3 +55,8 @@ wget -O <path>  <url>
 
 # Extract file to another location tar -xzvf ~/tmp/nvim.tar.gz -C /tmp/
 tar -xzvf <file> -C <destination>
+
+% man
+
+# man syscalls (2)
+man syscalls
