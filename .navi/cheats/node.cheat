@@ -1,0 +1,7 @@
+% npm
+
+# List packages
+ npm list -g
+
+# Install specific version of module
+npm install -g <module>@<version>
