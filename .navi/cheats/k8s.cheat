@@ -114,6 +114,8 @@ kubectl run -i --tty --rm test --image=busybox --restart=Never -- sh
 # Cluster info
 kubectl cluster-info
 
+$ pod_name: kubectl get pods --no-headers -o custom-columns=":metadata.name"
+
 # Export kube config - Talk to remote clusters by exporting KUBECONFIG env
 export KUBECONFIG=<config>
 
@@ -133,5 +135,3 @@ microk8s.stop
 
 # Micro k8s start
 microk8s.start
-
-$ pod_name: kubectl get pods --no-headers -o custom-columns=":metadata.name"
