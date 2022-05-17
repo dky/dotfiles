@@ -33,7 +33,10 @@ kubectl get namespaces
 # Get pods from namespace (add option '-o wide' for details)
 kubectl get pods -n <namespace>
 
-# Get pods from all namespace (add option '-o wide' for details)
+# kgp - Get pods
+kubectl get pods
+
+# kgpa - Get pods from all namespace (add option '-o wide' for details)
 kubectl get pods --all-namespaces
 
 # Get replicaset
