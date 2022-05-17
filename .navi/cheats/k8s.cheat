@@ -67,7 +67,7 @@ kubectl describe po <pod>
 kubectl describe sa <sa>
 
 # Print logs from pod
-kubectl logs -f <pod>
+kubectl logs -f <pod_name>
 
 # Delete service
 kubectl delete svc <name>
@@ -133,3 +133,5 @@ microk8s.stop
 
 # Micro k8s start
 microk8s.start
+
+$ pod_name: kubectl get pods --no-headers -o custom-columns=":metadata.name"
