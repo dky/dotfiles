@@ -46,7 +46,7 @@ kubectl get ep
 kubectl get deployments -n <namespace>
 
 # List containers in a pod
-kubectl get pods <pod> -o jsonpath='{.spec.containers[*].name}{"\n"}'
+kubectl get pods <pod_name> -o jsonpath='{.spec.containers[*].name}{"\n"}'
 
 # Get role bindings
 kubectl get rolebinding -n <namespace>
@@ -61,7 +61,7 @@ kubectl describe node <node>
 kubectl describe ns <namespace>
 
 # Get details from pod
-kubectl describe po <pod>
+kubectl describe po <pod_name>
 
 # Get details for sa
 kubectl describe sa <sa>
@@ -82,7 +82,7 @@ kubectl delete -f <spec>
 kubectl delete deployment <name>
 
 # Delete a pod
-kubectl delete pod <pod>
+kubectl delete pod <pod_name>
 
 # Edit deployments
 kubectl edit deployment/<name> -n <namespace>
@@ -114,6 +114,7 @@ kubectl run -i --tty --rm test --image=busybox --restart=Never -- sh
 # Cluster info
 kubectl cluster-info
 
+# Get pod_name so we can pipe into log and other commands.
 $ pod_name: kubectl get pods --no-headers -o custom-columns=":metadata.name"
 
 # Export kube config - Talk to remote clusters by exporting KUBECONFIG env
