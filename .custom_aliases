@@ -349,6 +349,7 @@ alias chme="chown `echo $(whoami):$(whoami)`"
 alias k="kubectl"
 alias ka="kubectl apply -f"
 alias kl="kubectl logs"
+alias klf="kubectl logs -f"
 
 # Config
 alias kcuc="kubectl config use-context"
