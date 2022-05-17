@@ -371,6 +371,7 @@ alias kdp="kubectl describe pod"
 alias kds="kubectl describe service"
 alias kds="kubectl describe statefulset"
 alias kd="kubectl describe"
+alias kgrs="kubectl get replicaset"
 
 alias kgs="kubectl get services"
 alias kgss="kubectl get statefulset"
