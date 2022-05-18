@@ -18,6 +18,9 @@ kubectl config use-context <context>
 # Print resource documentation
 kubectl explain <resource>
 
+# Get all resources in namespace
+kubectl get all -n <namespace>
+
 # Get nodes
 kubectl get nodes
 
