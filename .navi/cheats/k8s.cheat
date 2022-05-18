@@ -36,6 +36,9 @@ kubectl get pods -n <namespace>
 # kgp - Get pods
 kubectl get pods
 
+# kgpw - Get pods watch
+kubectl get pods --watch
+
 # kgpa - Get pods from all namespace (add option '-o wide' for details)
 kubectl get pods --all-namespaces
 
