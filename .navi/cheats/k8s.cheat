@@ -148,3 +148,14 @@ microk8s.stop
 
 # Micro k8s start
 microk8s.start
+
+% helm
+
+# helm list
+helm list
+
+# helm upgrade
+helm upgrade --install <chart_name> <chart_path>
+
+# helm install
+helm install <chart_name> <chart_path>
