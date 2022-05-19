@@ -155,14 +155,16 @@ microk8s.start
 
 % helm
 
-# helm list
+# hl - helm list
 helm list
 
-# helm delete
-helm delete <chart_name>
+# hd - helm delete
+helm delete <helm_chart_list>
 
 # helm upgrade
 helm upgrade --install <chart_name> <chart_path>
 
 # helm install
 helm install <chart_name> <chart_path>
+
+$ helm_chart_list: helm list --short
