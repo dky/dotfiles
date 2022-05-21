@@ -96,6 +96,9 @@ kubectl delete deployment <name>
 # Delete a pod
 kubectl delete pod <pod_name>
 
+# Delete all pods within namespace
+kubectl delete --all-pods --namespace=<namespace>
+
 # Edit deployments
 kubectl edit deployment/<name> -n <namespace>
 
