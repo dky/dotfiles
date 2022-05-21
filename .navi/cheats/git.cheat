@@ -1,5 +1,8 @@
 % git
 
+# git config global
+git config --global user.name <first_last> && git config --global user.email <email>
+
 # Display file contents from git hash
 git cat-file -p <SHA>
 
