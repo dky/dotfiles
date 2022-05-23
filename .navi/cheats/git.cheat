@@ -27,6 +27,9 @@ git rebase <branch>
 # Setup repo called "bare", you can then clone the repo with git clone bare newrepo
 git init --bare bare-repo
 
+# Submodule init
+git submodule update --init
+
 # Clone bare repo
 git clone bare-repo newrepo && cd newrepo
 
