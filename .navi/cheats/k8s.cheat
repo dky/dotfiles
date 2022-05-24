@@ -21,6 +21,12 @@ kubectl explain <resource>
 # Get all resources in namespace
 kubectl get all -n <namespace>
 
+# Get volume claims
+kubectl get pvc -o wide
+
+# Get secrets
+kubectl get secrets
+
 # Get nodes
 kubectl get nodes
 
