@@ -60,3 +60,8 @@ tar -xzvf <file> -C <destination>
 
 # man syscalls (2)
 man syscalls
+
+& sendmail
+
+# flushing sendmail mail queue
+sendmail -q -v
