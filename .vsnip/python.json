@@ -1,4 +1,9 @@
 {
+    "sep": {
+      "prefix": ["sep"],
+      "body": "print(\"---$1---\")",
+      "description": "Line Separator"
+    },
     "prt": {
       "prefix": ["pr"],
       "body": "print($1)$0",
