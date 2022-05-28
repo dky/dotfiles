@@ -78,7 +78,7 @@ nvim_lsp.solargraph.setup{}
 -- Ansible - make sure you get ansible-lint installed via pip
 nvim_lsp.ansiblels.setup {
 	 cmd = { "ansible-language-server", "--stdio" },
-    filetypes = { "yaml" }
+    filetypes = { "ansible" }
 }
 
 -- Golang
