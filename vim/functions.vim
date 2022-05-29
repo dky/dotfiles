@@ -115,8 +115,11 @@ function! s:DetectNode()
 	endif
 endfun
 
-" Removes trailing spaces and the end not to be confused with whitespace after
+" Removes trailing spaces from a sentence + Removes any empty trailing lines
 " a sentence.
-function TrimTrailingLineSpace()
+function TrimTrailingLinesAndTrailingWhiteSpace()
+  " Trims any trailing blank lines
   %s/\($\n\s*\)\+\%$//e
+  " Trims trailing whitespace after a sentence or line of code
+  %s/ \+$//
 endfunction

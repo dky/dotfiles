@@ -38,7 +38,7 @@ let g:leader_map['s'] = [ ':!tmux new-window bash -ci fp'    , 'Switch tmux sess
 "let g:leader_map['r'] = [ ':Reserved - Don't use            , 'Plan to use this to run files similar to F8.' ]
 let g:leader_map['v'] = [ '<C-W>v'                           , 'split right']
 let g:leader_map['y'] = [ ':FloatermSend pytest'             , 'Send pytest to floatterm' ]
-let g:leader_map['z'] = [ ':call TrimTrailingLineSpace()'    , 'Call TrimTrailingLineSpace() function to get rid of trailing lines' ]
+let g:leader_map['z'] = [ ':call TrimTrailingLinesAndTrailingWhiteSpace()'    , 'Call TrimTrailingLinesAndTrailingWhiteSpace() function to get rid of trailing lines + Any sentences with trailing whitespace' ]
 
 let g:leader_map.a = {
       \ 'name' : '+neoformat' ,
