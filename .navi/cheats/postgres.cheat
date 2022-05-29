@@ -1,10 +1,13 @@
 % postgres
 
 # pgcli login interactive - ensure you have PG_HOST, PG_USER and PG_PASS environment vars set
-PGPASSWORD=$PG_PASS pgcli -h $PG_HOST -U $PG_USER -d $PG_DATABASE
+PGPASSWORD=$PG_PASS pgcli -h $PG_HOST -p $PG_PORT -U $PG_USER -d $PG_DATABASE
 
 # pgsql CREATE DATABASE
-PGPASSWORD=$PG_PASS psql -h $PG_HOST -U $PG_USER -d $PG_DATABASE -c"CREATE DATABASE <db_name>" 
+PGPASSWORD=$PG_PASS psql -h $PG_HOST -p $PG_PORT -U $PG_USER -d $PG_DATABASE -c"CREATE DATABASE <db_name>" 
 
 # pgsql DROP DATABASE
-PGPASSWORD=$PG_PASS psql -h $PG_HOST -U $PG_USER -d $PG_DATABASE -c"DROP DATABASE <db_name>" 
+PGPASSWORD=$PG_PASS psql -h $PG_HOST -p $PG_PORT -U $PG_USER -d $PG_DATABASE -c"DROP DATABASE <db_name>" 
+
+# pgsql list remote databases
+PGPASSWORD=$PG_PASS psql -h $PG_HOST -p $PG_PORT -U $PG_USER -d $PG_DATABASE -l
