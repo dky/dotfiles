@@ -5,8 +5,8 @@ au FileType ruby imap <F8> <Esc>:echo system('ruby "' . expand('%') . '"')<cr>
 au FileType go nmap <F8> :echo system('go run "' . expand('%') . '"')<cr>
 au FileType go imap <F8> <Esc>:echo system('go run "' . expand('%') . '"')<cr>
 "Python
-au FileType python nmap <F8> :echo system('python3 "' . expand('%') . '"')<cr>
-au FileType python imap <F8> <Esc>:echo system('python3 "' . expand('%') . '"')<cr>
+au FileType python nmap <F8> :w<CR>:echo system('python3 "' . expand('%') . '"')<cr>
+au FileType python imap <F8> <Esc>:w<CR>:echo system('python3 "' . expand('%') . '"')<cr>
 "JS
 au FileType javascript nmap <F8> :echo system('node "' . expand('%') . '"')<cr>
 au FileType javascript imap <F8>:echo system('node "' . expand('%') . '"')<cr>
