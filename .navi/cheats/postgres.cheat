@@ -11,3 +11,6 @@ PGPASSWORD=$PG_PASS psql -h $PG_HOST -p $PG_PORT -U $PG_USER -d $PG_DATABASE -c"
 
 # pgsql list remote databases
 PGPASSWORD=$PG_PASS psql -h $PG_HOST -p $PG_PORT -U $PG_USER -d $PG_DATABASE -l
+
+# pgsql list remote tables
+PGPASSWORD=$PG_PASS psql -h $PG_HOST -p $PG_PORT -U $PG_USER -d $PG_DATABASE -dt

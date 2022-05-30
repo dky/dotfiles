@@ -1,0 +1,4 @@
+% redis
+
+# redis-cli connect to host
+redis-cli -h <redis_host> -p 6379
