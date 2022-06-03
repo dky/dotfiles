@@ -70,7 +70,7 @@ git stash list
 git stash pop
 
 # Git Squash - reset head x # of commits
-git reset --soft HEAD~<number of commits>
+git reset --soft HEAD~<num>
 
 # Git fetch dev:dev branch without having to check it out
 git fetch origin dev:dev
