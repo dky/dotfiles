@@ -1,0 +1,4 @@
+% vault
+
+# Vault token renew
+vault token renew -increment=72h
