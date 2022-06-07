@@ -345,6 +345,10 @@ alias ii="open"
 
 alias chme="chown `echo $(whoami):$(whoami)`"
 
+# helm
+alias hl="helm list"
+alias hh="helm history"
+
 # kubernetes
 alias k="kubectl"
 alias ka="kubectl apply -f"
