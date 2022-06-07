@@ -26,18 +26,26 @@ function pmin {
 
 color_my_prompt
 
-#kubectl functions
+# kubectl functions
 function kgp {
 	name=$1
 	kubectl get pods --namespace=$name;
 }
 
+# kubectl exec <pod> -i -t -- /bin/sh
+function ke {
+	pod=$1
+	kubectl exec $pod -i -t -- /bin/sh
+}
+
+# kubectl get container pod namespace
 function kgcpn {
 	pod=$1
 	name=$2
 	kubectl get pods $pod -o jsonpath='{.spec.containers[*].name}{"\n"}' --namespace=$name;
 }
 
+# Some alias fzf greppery
 function ag() {
 	local alias_cmd
 	alias_cmd=$(alias | sed -e "s/^alias //g" -e "s/['\"]//g" | awk -F'=' '{ print $1, "#", $2 }' | fzf)
