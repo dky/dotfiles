@@ -267,7 +267,7 @@ alias powershell="/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
 alias exp="explorer.exe ."
 
 #python 3 please
-#alias python=python3
+alias p3=python3
 #Virtual env aliases
 alias venva="source venv/bin/activate"
 alias svenv="source venv/bin/activate"
