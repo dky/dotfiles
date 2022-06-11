@@ -26,7 +26,7 @@ if has('nvim')
 	" Status line + web devicons
 	Plug 'NTBBloodbath/galaxyline.nvim',
 	Plug 'kyazdani42/nvim-web-devicons' " lua
-	Plug 'tmhedberg/SimpylFold' "Python folding
+	"Plug 'tmhedberg/SimpylFold' "Python folding
 else
 endif
 
