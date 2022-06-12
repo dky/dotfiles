@@ -25,6 +25,9 @@ python3 -m pip install --upgrade <package>
 # Upgrade pip itself
 python -m pip install --upgrade pip
 
+# Pip list
+pip3 list
+
 % autopep8
 
 # Format file in place manually
