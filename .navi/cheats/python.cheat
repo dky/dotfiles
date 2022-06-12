@@ -19,11 +19,11 @@ conda env create -v -n test -f <env-file>
 
 % pip
 
-# Pip upgrade package
+# pip upgrade package
 python3 -m pip install --upgrade <package>
 
-# Upgrade pip itself
-python -m pip install --upgrade pip
+# pip upgrade self
+python -m pip install --upgrade pip setuptools
 
 # Pip list
 pip3 list
