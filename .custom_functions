@@ -210,12 +210,6 @@ function mkd () {
 	fi
 }
 
-# Pet snippets shortcut for "pet new"
-function pta() {
-	PREV=$(echo `history | tail -n2 | head -n1` | sed 's/[0-9]* //')
-	sh -c "pet new `printf %q "$PREV"`"
-}
-
 function uvenv {
 	python3 -m venv venv 
 	source venv/bin/activate 
