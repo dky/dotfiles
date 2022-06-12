@@ -31,9 +31,9 @@ pip3 list
 % autopep8
 
 # Format file in place manually
- autopep8 --in-place <file>
+autopep8 --in-place <file>
 
- % venv
+% venv
 
 # Start a venv
 python3 -m venv venv
