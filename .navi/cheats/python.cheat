@@ -26,3 +26,11 @@ python3 -m pip install --upgrade <package>
 
 # Format file in place manually
  autopep8 --in-place <file>
+
+ % venv
+
+# Start a venv
+python3 -m venv venv
+
+# venv activate
+source venv/bin/activate
