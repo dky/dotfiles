@@ -114,8 +114,8 @@ noremap ,lb :Lb<cr>
 noremap ,ts :Ts<cr>
 
 " Vim-Sneek
-map f <Plug>Sneak_s
-map F <Plug>Sneak_S
+map z <Plug>Sneak_s
+map Z <Plug>Sneak_S
 
 " autoclose for only certain strings/braces
 "inoremap [ []<left>
