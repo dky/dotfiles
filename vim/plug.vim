@@ -30,6 +30,9 @@ if has('nvim')
 else
 endif
 
+" Python text objects
+Plug 'jeetsukumaran/vim-pythonsense'
+
 " Jinja2 for salt
 Plug 'Glench/Vim-Jinja2-Syntax'
 
