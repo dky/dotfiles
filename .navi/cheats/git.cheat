@@ -75,6 +75,9 @@ git reset --soft HEAD~<num>
 # Git fetch dev:dev branch without having to check it out
 git fetch origin dev:dev
 
+# Git delete remote branch - You should delete the branch locally before this
+git push origin :<branch-to-delete>
+
 $ file: ls -1 --- --column 1
 $ branch: git branch | awk '{print $NF}'
 $ commit_sha: git log --pretty=format:"%h   %an   %ar   %s" --- --column 1
