@@ -198,9 +198,9 @@ nmap <localleader>f :Find<cr>
 nnoremap <silent> <Right> :bn<cr>
 nnoremap <silent> <Left> :bp<cr>
 
-" Quickly create Python scratch files.
-nnoremap <F3> :execute 'edit ~/tmp/py_' . strftime("%m%d%y_%H%M%S") . '.py'<cr>
-nnoremap <F3><F3> :execute 'edit ~/tmp/go_' . strftime("%m%d%y_%H%M%S") . '.go'<cr>
+" cd ~/tmp/python and quickly create Python scratch file for testing out
+" snippets.
+nnoremap <F3> :cd ~/tmp/python<cr>:execute 'edit ~/tmp/python/py_' . strftime("%m%d%y_%H%M%S") . '.py'<cr>
 nnoremap <leader>it :IndentGuidesToggle<cr>
 
 " Python help
