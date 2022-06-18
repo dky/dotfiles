@@ -45,6 +45,11 @@ let g:leader_map.a = {
       \ 'p' : ['Neoformat'        , 'Run Neoformat on Python files'],
       \ }
 
+let g:leader_map.d = {
+      \ 'name' : '+Trouble' ,
+      \ 't' : [':TroubleToggle'            , 'Toggle trouble']
+      \ }
+
 let g:leader_map.e = {
       \ 'name' : '+edit' ,
       \ 'r' : [':call EditLangFile("rb")'            , 'Open a ruby tmp file for editing'],
