@@ -34,15 +34,6 @@ local on_attach = function(client, bufnr)
     buf_set_keymap("n", "<C-n>", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
     buf_set_keymap("n", "<C-p>", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
     buf_set_keymap("n", "<space>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", opts)
-
-    -- Set some keybinds conditional on server capabilities
-    -- if client.resolved_capabilities.document_formatting then
-    -- Disable because this was conflicting with my leader-f whichkey mapping.
-    -- buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
-    --elseif client.resolved_capabilities.document_range_formatting then
-    -- Disable because this was conflicting with my leader-f whichkey mapping.
-    -- buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
-    --end
 end
 
 local servers = {"pylsp", "rust_analyzer", "solargraph", "bashls", "dockerls", "cmake", "clangd"}
