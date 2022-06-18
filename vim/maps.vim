@@ -113,9 +113,9 @@ autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<cr>
 noremap ,lb :Lb<cr>
 noremap ,ts :Ts<cr>
 
-" Vim-Sneek
-map z <Plug>Sneak_s
-map Z <Plug>Sneak_S
+" vim-sneak - If you are looking for the keymaps they are in maps.vim
+map ,s <Plug>Sneak_s
+map ,S <Plug>Sneak_S
 
 " autoclose for only certain strings/braces
 "inoremap [ []<left>
