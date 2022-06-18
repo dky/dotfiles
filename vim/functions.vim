@@ -84,12 +84,12 @@ endfu
 " This function allows us to replace all the F3 mappings and potentially use
 " whichkey to call a function with a file type
 function! EditLangFile(prog_file)
-	"'edit ~/tmp/py_' . strftime("%m%d%y_%H%M%S") . '.py'<cr>
 	let file_type = a:prog_file
 	let file_path = "~/tmp/" . file_type
 	let file_date = strftime("%m%d%y_%H%M%S")
 	let edit_file = file_path . "_" . file_date . "." . file_type
-	"echom edit_file
+	" cd into ~/tmp before editing file.
+	execute "cd ~/tmp"
 	execute "e ".edit_file
 endfunction
 
