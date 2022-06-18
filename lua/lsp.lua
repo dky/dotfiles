@@ -24,7 +24,12 @@ local on_attach = function(client, bufnr)
     buf_set_keymap("n", "<space>D", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
     buf_set_keymap("n", "<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
     buf_set_keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-    buf_set_keymap("n", "<space>e", '<cmd>lua vim.diagnostic.open_float(0, { scope = "line", border = "single" })<CR>', opts)
+    buf_set_keymap(
+        "n",
+        "<space>e",
+        '<cmd>lua vim.diagnostic.open_float(0, { scope = "line", border = "single" })<CR>',
+        opts
+    )
 
     buf_set_keymap("n", "<C-n>", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
     buf_set_keymap("n", "<C-p>", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
@@ -32,11 +37,11 @@ local on_attach = function(client, bufnr)
 
     -- Set some keybinds conditional on server capabilities
     -- if client.resolved_capabilities.document_formatting then
-		  -- Disable because this was conflicting with my leader-f whichkey mapping.
-        -- buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+    -- Disable because this was conflicting with my leader-f whichkey mapping.
+    -- buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
     --elseif client.resolved_capabilities.document_range_formatting then
-		  -- Disable because this was conflicting with my leader-f whichkey mapping.
-        -- buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+    -- Disable because this was conflicting with my leader-f whichkey mapping.
+    -- buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
     --end
 end
 
@@ -47,38 +52,38 @@ for _, lsp in ipairs(servers) do
     }
 end
 
-nvim_lsp.rust_analyzer.setup{
-  on_attach = on_attach,
-  settings = {
-    ["rust-analyzer"] = {
-      assist = {
-        importMergeBehavior = "last",
-        importPrefix = "by_self",
-      },
-      diagnostics = {
-        disabled = { "unresolved-import" }
-      },
-      cargo = {
-          loadOutDirsFromCheck = true
-      },
-      procMacro = {
-          enable = true
-      },
-      checkOnSave = {
-          command = "clippy"
-      },
+nvim_lsp.rust_analyzer.setup {
+    on_attach = on_attach,
+    settings = {
+        ["rust-analyzer"] = {
+            assist = {
+                importMergeBehavior = "last",
+                importPrefix = "by_self"
+            },
+            diagnostics = {
+                disabled = {"unresolved-import"}
+            },
+            cargo = {
+                loadOutDirsFromCheck = true
+            },
+            procMacro = {
+                enable = true
+            },
+            checkOnSave = {
+                command = "clippy"
+            }
+        }
     }
-  }
 }
 
 -- If you open a ruby file and solargraph does not attach see:
 -- Solargraph https://github.com/neovim/nvim-lspconfig/issues/387
-nvim_lsp.solargraph.setup{}
+nvim_lsp.solargraph.setup {}
 
 -- Ansible - make sure you get ansible-lint installed via pip
 nvim_lsp.ansiblels.setup {
-	 cmd = { "ansible-language-server", "--stdio" },
-    filetypes = { "ansible" }
+    cmd = {"ansible-language-server", "--stdio"},
+    filetypes = {"ansible"}
 }
 
 -- Golang
@@ -93,7 +98,7 @@ nvim_lsp.gopls.setup {
                 shadow = true
             },
             staticcheck = true
-        },
+        }
     },
     --By default gopls will not attach unless a .git or a .go.mod file is present. I'm including the current directory with "."
     root_dir = require("lspconfig").util.root_pattern(".git", "go.mod", "."),
@@ -127,20 +132,20 @@ nvim_lsp.yamlls.setup {
 
 -- Setup pylsp
 nvim_lsp.pylsp.setup {
-     enable = false,
-     cmd = {"pylsp"},
-     on_attach = on_attach,
-         settings = {
-             pylsp = {
-             configurationSources = { "flake8" },
-                 plugins = {
-                     flake8 = { enabled = true },
-                     mypy = { enabled = false },
-                     pycodestyle= { enabled = false },
-                     pyflakes = { enabled = false },
-                 }
-             }
-         }
+    enable = false,
+    cmd = {"pylsp"},
+    on_attach = on_attach,
+    settings = {
+        pylsp = {
+            configurationSources = {"flake8"},
+            plugins = {
+                flake8 = {enabled = true},
+                mypy = {enabled = false},
+                pycodestyle = {enabled = false},
+                pyflakes = {enabled = false}
+            }
+        }
+    }
 }
 
 require "nvim-treesitter.configs".setup {
@@ -222,8 +227,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] =
     vim.lsp.with(
     vim.lsp.diagnostic.on_publish_diagnostics,
     {
-        virtual_text = false,
-        signs = true,
+        virtual_text = true,
         update_in_insert = false
     }
 )
