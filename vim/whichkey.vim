@@ -22,27 +22,25 @@ autocmd! FileType which_key
 autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
 
-" leader mappings
-let g:leader_map['c'] = [ ':!pwd'                            , 'Current working dir' ]
-let g:leader_map['f'] = [ 'Files'                            , 'Search all files in current Git Repo' ]
-let g:leader_map['F'] = [ 'Find'                             , 'Custom Find() Use Rg + Fzf to find files' ]
-let g:leader_map['h'] = [ '<C-W>s'                           , 'split below']
-let g:leader_map['j'] = [ '<C-W>w'                           , 'jump splits']
-"let g:leader_map['t'] = [ ':Reserved - Don't use            , 'This is already being mapped via floaterm.vim, do not re-use it.']
-let g:leader_map['t'] = [ ':FloatermToggle'                  , 'Toggle Floaterm, space space also does this']
-let g:leader_map['o'] = [ ':set conceallevel=0'              , 'No Conceal' ]
-let g:leader_map['p'] = [ '<M-p>'                            , 'Toggle Autopairs' ]
-let g:leader_map['w'] = [ ':wq!'                             , 'wq!' ]
-let g:leader_map['q'] = [ ':bd'                              , 'Buffer close to ease having to type :bd' ]
-let g:leader_map['s'] = [ ':!tmux new-window bash -ci fp'    , 'Switch tmux sessions' ]
-"let g:leader_map['r'] = [ ':Reserved - Don't use            , 'Plan to use this to run files similar to F8.' ]
-let g:leader_map['v'] = [ '<C-W>v'                           , 'split right']
-let g:leader_map['y'] = [ ':FloatermSend pytest'             , 'Send pytest to floatterm' ]
-let g:leader_map['z'] = [ ':call TrimTrailingLinesAndTrailingWhiteSpace()'    , 'Call TrimTrailingLinesAndTrailingWhiteSpace() function to get rid of trailing lines + Any sentences with trailing whitespace' ]
+" leader mappings - Check here before assigning a key
+let g:leader_map['c'] = [':!pwd'                            , 'Print current working dir']
+let g:leader_map['f'] = ['Files'                            , 'Search all files in current Git Repo']
+let g:leader_map['F'] = ['Find'                             , 'Custom Find() Use Rg + Fzf to find files']
+let g:leader_map['t'] = [':FloatermToggle'                  , 'Toggle Floaterm, space space also does this']
+let g:leader_map['o'] = [':set conceallevel=0'              , 'No Conceal']
+let g:leader_map['p'] = ['<M-p>'                            , 'Toggle Autopairs']
+let g:leader_map['w'] = [':wq!'                             , 'wq!']
+let g:leader_map['q'] = [':bd'                              , 'Buffer close to ease having to type :bd']
+let g:leader_map['s'] = [':!tmux new-window bash -ci fp'    , 'Switch tmux sessions']
+"let g:leader_map['r'] = [ ':Reserved - Don't use            , 'Plan to use this to run files similar to F8.']
+let g:leader_map['y'] = [ ':FloatermSend pytest'             , 'Send pytest to floatterm']
 
-let g:leader_map.a = {
-      \ 'name' : '+neoformat' ,
-      \ 'p' : ['Neoformat'        , 'Run Neoformat on Python files'],
+let g:leader_map.z = {
+      \ 'name' : '+formatting' ,
+      \ 'z' : [':call TrimTrailingLinesAndTrailingWhiteSpace()'        , 'Trim trailing whitespace, Trailing blank lines'],
+      \ 'p' : [':Neoformat! python black'                              , 'Run Neoformat on Python files'],
+      \ 'g' : [':GoFmt'                                                , 'Go Fmt'],
+      \ 'n' : [':nohl'                                                 , 'No highlighting']
       \ }
 
 let g:leader_map.d = {
@@ -135,19 +133,18 @@ let g:which_key_map.g.l = 'git-log'
 
 let g:leader_map.n = {
       \ 'name' : '+floatterm: ' ,
-      \ '1' : [':FloatermNew --autoclose=0 terraform plan'           , 'terraform plan'],
-      \ '2' : [':FloatermNew --autoclose=0 terraform apply -auto-approve'          , 'terraform apply with auto-approve'],
-      \ '3' : [':FloatermNew --autoclose=0 terraform destroy'        , 'terraform destroy'],
-      \ 'a' : [':FloatermNew --autoclose=0 ansible-playbook -i inventory.yml -v %'    , 'ansible-playbook apply'],
-      \ 'p' : [':FloatermNew --autoclose=0 python3 %'                , 'run current buffer with python in float'],
-      \ 'ft' : [':Floaterms'                                         , 'Use fzf to find terms'],
-      \ 'fn' : [':FloatermNext'                                      , 'Next Floaterm'],
-      \ 'fp' : [':FloatermPrev'                                      , 'Prev Floaterm'],
-      \ 'dk' : [':FloatermSend mp d'                                 , 'Make public dky'],
-      \ 'g' : [':call FtGo()'                                        , 'Open go specific floaterm'],
-      \ 'gt' : [':FloatermSend --name=go go test'                    , 'Go test to a term'],
+      \ '1' : [':FloatermNew --autoclose=0 terraform plan'                              , 'terraform plan'],
+      \ '2' : [':FloatermNew --autoclose=0 terraform apply -auto-approve'               , 'terraform apply with auto-approve'],
+      \ '3' : [':FloatermNew --autoclose=0 terraform destroy'                           , 'terraform destroy'],
+      \ 'a' : [':FloatermNew --autoclose=0 ansible-playbook -i inventory.yml -v %'      , 'ansible-playbook apply'],
+      \ 'p' : [':FloatermNew --autoclose=0 python3 %'                                   , 'run current buffer with python in float'],
+      \ 'ft' : [':Floaterms'                                                            , 'Use fzf to find terms'],
+      \ 'fn' : [':FloatermNext'                                                         , 'Next Floaterm'],
+      \ 'fp' : [':FloatermPrev'                                                         , 'Prev Floaterm'],
+      \ 'dk' : [':FloatermSend mp d'                                                    , 'Make public dky'],
+      \ 'g' : [':call FtGo()'                                                           , 'Open go specific floaterm'],
+      \ 'gt' : [':FloatermSend --name=go go test'                                       , 'Go test to a term'],
       \ }
-
 
 let g:leader_map.m = {
       \ 'name' : '+misc' ,
@@ -159,22 +156,9 @@ let g:leader_map.m = {
       \ 'r' : [':FloatermNew ranger'                 , 'Call ranger from floaterm'],
       \ }
 
-"let g:leader_map.s = {
-      "\ 'name' : '+search' ,
-      "\ 'b' : [':BLines'        , 'Search current buffer'],
-      "\ 'B' : [':Lines'         , 'Search all **open** buffers'],
-      "\ 'f' : [':GFiles'        , 'Search only Git checked in files'],
-      "\ }
-
 " localleader \ mappings
-"let g:localleader_map['t'] = [ 'TestFile'                                    , 'TestFile']
 let g:localleader_map['t'] = [':FloatermNew --autoclose=0 pytest .'          , 'run pytest']
 let g:localleader_map['p'] = [':FloatermNew --autoclose=0 python3 %'         , 'run current buffer with python in float']
-
-let g:localleader_map.g = {
-      \ 'name' : '+go' ,
-      \ 'f' : [':GoFmt'         , 'Go Fmt']
-      \ }
 
 let g:localleader_map.c = {
       \ 'name' : '+codi' ,
@@ -183,22 +167,9 @@ let g:localleader_map.c = {
       \ 't' : [':Codi!!'       , 'Toggle Codi'],
       \ }
 
-let g:localleader_map.1 = {
-      \ 'name' : '+test' ,
-      \ 't' : [':TestFile'        , 'TestFile'],
-      \ }
-
-" surround maps are defined in maps.vim
-let g:localleader_map.s = {
-      \ 'name' : '+surround' ,
-      \ 'p' : [',sp'        , 'Surround Python code with print()'],
-      \ }
-
 " Register which key map
 call which_key#register('<Space>', "g:leader_map")
 call which_key#register(',', "g:localleader_map")
 
-"Clear out highlighting from search
-map <silent><leader>l :nohl<CR>
-" Space + Space brings up toggles floaterm
+" Space + Space brings up/toggles floaterm
 nmap <silent><leader><leader> :FloatermToggle<CR>
