@@ -119,7 +119,7 @@ endfun
 " a sentence.
 function TrimTrailingLinesAndTrailingWhiteSpace()
   " Trims any trailing blank lines
-  %s/\($\n\s*\)\+\%$//e
+  silent! %s/\($\n\s*\)\+\%$//e
   " Trims trailing whitespace after a sentence or line of code
-  %s/ \+$//
+  silent! %s/ \+$//
 endfunction
