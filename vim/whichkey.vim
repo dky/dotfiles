@@ -32,8 +32,8 @@ let g:leader_map['p'] = ['<M-p>'                            , 'Toggle Autopairs'
 let g:leader_map['w'] = [':wq!'                             , 'wq!']
 let g:leader_map['q'] = [':bd'                              , 'Buffer close to ease having to type :bd']
 let g:leader_map['s'] = [':!tmux new-window bash -ci fp'    , 'Switch tmux sessions']
-"let g:leader_map['r'] = [ ':Reserved - Don't use            , 'Plan to use this to run files similar to F8.']
-let g:leader_map['y'] = [ ':FloatermSend pytest'             , 'Send pytest to floatterm']
+"let g:leader_map['r'] = [ ':Reserved - Don't use           , 'Plan to use this to run files similar to F8.']
+let g:leader_map['y'] = [ ':FloatermSend pytest'            , 'Send pytest to floatterm']
 
 let g:leader_map.z = {
       \ 'name' : '+formatting' ,
@@ -54,7 +54,9 @@ let g:leader_map.e = {
       \ 'g' : [':call EditLangFile("go")'            , 'Open a go tmp file for editing'],
       \ }
 
-"Git mappings
+"Git mappings - We do it this wap because we need to take input for some of
+"these mappings which it doesn't appear leadermap supports. Example gb - to
+"check out branch requires a branch name.
 let g:which_key_map =  {}
 let g:which_key_map.g = { 'name' : '+git' }
 
