@@ -26,7 +26,13 @@
     },
     "h6": {
       "prefix": ["h6"],
-      "body": "###### $0"
+      "body": "###### $0",
+      "description": "H6 link"
+    },
+    "b3": {
+      "prefix": ["b3"],
+      "body": "```",
+      "description": "3 backticks to close codeblock off"
     },
     "cb": {
       "prefix": ["cb"],
@@ -37,7 +43,7 @@
         "",
         "$0"
       ],
-      "description": "Empty Code block"
+      "description": "Generic - Empty Code block"
     },
     "sb": {
       "prefix": ["sc"],
