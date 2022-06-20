@@ -1,8 +1,6 @@
 if has('nvim')
-	" Do this at the OS level, then Run :UpdateRemotePlugins
-	" pip3 install --user pynvim
+	" Run pip3 install --user pynvim outside of vim then: :UpdateRemotePlugins
 	Plug 'neovim/nvim-lspconfig'
-"	Plug 'hrsh7th/nvim-compe'
 	Plug 'hrsh7th/nvim-cmp'
 	Plug 'hrsh7th/cmp-nvim-lsp'
 	Plug 'hrsh7th/cmp-buffer'
@@ -26,7 +24,6 @@ if has('nvim')
 	" Status line + web devicons
 	Plug 'NTBBloodbath/galaxyline.nvim',
 	Plug 'kyazdani42/nvim-web-devicons' " lua
-	"Plug 'tmhedberg/SimpylFold' "Python folding
 	Plug 'folke/trouble.nvim'
 else
 endif
@@ -60,12 +57,9 @@ Plug 'tpope/vim-abolish'
 Plug 'fatih/molokai'
 Plug 'tanvirtin/monokai.nvim'
 Plug 'fatih/vim-go'
-"Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-"Plug 'airblade/vim-gitgutter'
 Plug 'godlygeek/tabular'
 Plug 'jamesroutley/vim-logbook'
 Plug 'metakirby5/codi.vim'
@@ -78,5 +72,4 @@ Plug 'justinmk/vim-sneak'
 Plug 'Pocco81/AutoSave.nvim'
 Plug 'dky/vim-aftercolors'
 
-Plug 'ryanoasis/vim-devicons'
 Plug 'liuchengxu/vim-which-key'
