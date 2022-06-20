@@ -144,8 +144,6 @@ let g:leader_map.n = {
       \ 'ft' : [':Floaterms'                                                            , 'Use fzf to find terms'],
       \ 'fn' : [':FloatermNext'                                                         , 'Next Floaterm'],
       \ 'fp' : [':FloatermPrev'                                                         , 'Prev Floaterm'],
-      \ 'dk' : [':FloatermSend mp d'                                                    , 'Make public dky'],
-      \ 'g' : [':call FtGo()'                                                           , 'Open go specific floaterm'],
       \ 'gt' : [':FloatermSend --name=go go test'                                       , 'Go test to a term'],
       \ }
 
@@ -156,7 +154,6 @@ let g:leader_map.m = {
       \ '2' : [':call CopyCurrentFile()'             , 'create copy of current file'],
       \ 'b' : [':set ft=sh'                          , 'Set filetype to sh'],
       \ 'p' : [':set ft=python'                      , 'Set filetype to python'],
-      \ 'r' : [':FloatermNew ranger'                 , 'Call ranger from floaterm'],
       \ }
 
 " localleader \ mappings
