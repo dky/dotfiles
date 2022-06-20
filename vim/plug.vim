@@ -25,6 +25,8 @@ if has('nvim')
 	Plug 'NTBBloodbath/galaxyline.nvim',
 	Plug 'kyazdani42/nvim-web-devicons' " lua
 	Plug 'folke/trouble.nvim'
+	" Required for vale
+	Plug 'jose-elias-alvarez/null-ls.nvim'
 else
 endif
 
