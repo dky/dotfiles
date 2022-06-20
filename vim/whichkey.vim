@@ -54,7 +54,7 @@ let g:leader_map.e = {
       \ 'g' : [':call EditLangFile("go")'            , 'Open a go tmp file for editing'],
       \ }
 
-"Git mappings - We do it this wap because we need to take input for some of
+"Git mappings - because we need to take input for some of
 "these mappings which it doesn't appear leadermap supports. Example gb - to
 "check out branch requires a branch name.
 let g:which_key_map =  {}
@@ -69,7 +69,7 @@ let g:which_key_map.g.g = 'fugitive-interactive'
 nnoremap <silent> <leader>gb :Git checkout -b 
 let g:which_key_map.g.b = 'git-branch'
 
-nnoremap <silent> <leader>gam :Git commit --amend
+nnoremap <silent> <leader>gam :Git add . <bar> :Git commit --amend<CR>
 let g:which_key_map.g.am = 'git-commit-ammend'
 
 nnoremap <silent> <leader>gbl :Git branch<CR>
@@ -92,19 +92,18 @@ let g:which_key_map.g.puo = 'git-push-origin'
 
 nnoremap <silent> <leader>gpuc :Git -c push.default=current push<CR>
 let g:which_key_map.g.puc = 'git-push-origin-current'
+" Push origin HEAD
+nnoremap <silent> <leader>gpuh :exec "Git push origin " . fugitive#head()<CR>
+let g:which_key_map.g.puh = 'git-push-origin-head'
+" Force pushing origin HEAD
+nnoremap <silent> <leader>gpuhf :exec "Git push origin --force " . fugitive#head()<CR>
+let g:which_key_map.g.puhf = 'git-push-origin-head-force'
 
 nnoremap <silent> <leader>gf :Git fetch<CR>
 let g:which_key_map.g.f = 'fetch'
-
 " Somewhat ugly but this works for now
-nnoremap <silent> <leader>gplh :exec "Git pull --rebase origin " . fugitive#head()<cr>
+nnoremap <silent> <leader>gplh :exec "Git pull --rebase origin " . fugitive#head()<CR>
 let g:which_key_map.g.plh = 'git-pull-origin-head'
-
-nnoremap <silent> <leader>gpuh :exec "Git push origin " . fugitive#head()<CR>
-let g:which_key_map.g.puh = 'git-push-origin-head'
-
-nnoremap <silent> <leader>gpuhf :exec "Git push origin --force " . fugitive#head()<CR>
-let g:which_key_map.g.puhf = 'git-push-origin-head-force'
 
 nnoremap <silent> <leader>gbla :Git blame<CR>
 let g:which_key_map.g.bla = 'git-blame'
@@ -114,8 +113,8 @@ let g:which_key_map.g.d = 'git-diff'
 
 nnoremap <silent> <leader>gds :Git diff --staged<CR>
 let g:which_key_map.g.ds = 'git-diff-staged'
-
-nnoremap <silent> <leader>gaf :Git add . <CR>
+" Add a specific file - gaf - git add file.
+nnoremap <silent> <leader>gaf :Git add
 let g:which_key_map.g.af = 'git-add-file-specific-or-single-file'
 
 nnoremap <silent> <leader>ga :Git add .<CR>
@@ -128,7 +127,7 @@ nnoremap <silent> <leader>gc :Git commit"<CR>
 let g:which_key_map.g.c = 'git-commit'
 
 nnoremap <silent> <leader>gcma :Git add . <bar> :Git commit -a -m "
-let g:which_key_map.g.cma = 'git-add-plus-commit'
+let g:which_key_map.g.cma = 'git-add-and-commit'
 
 nnoremap <silent> <leader>gl :Git log<CR>
 let g:which_key_map.g.l = 'git-log'
