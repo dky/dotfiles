@@ -35,12 +35,14 @@ let g:leader_map['s'] = [':!tmux new-window bash -ci fp'    , 'Switch tmux sessi
 "let g:leader_map['r'] = [ ':Reserved - Don't use           , 'Plan to use this to run files similar to F8.']
 let g:leader_map['y'] = [ ':FloatermSend pytest'            , 'Send pytest to floatterm']
 
+" :nohl but with whichkey
+map <silent><leader>l :nohl<CR>
+
 let g:leader_map.z = {
       \ 'name' : '+formatting' ,
       \ 'z' : [':call TrimTrailingLinesAndTrailingWhiteSpace()'        , 'Trim trailing whitespace, Trailing blank lines'],
       \ 'p' : [':Neoformat! python black'                              , 'Run Neoformat on Python files'],
       \ 'g' : [':GoFmt'                                                , 'Go Fmt'],
-      \ 'n' : [':nohl'                                                 , 'No highlighting']
       \ }
 
 let g:leader_map.d = {
