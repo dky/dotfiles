@@ -36,7 +36,7 @@ local on_attach = function(client, bufnr)
     buf_set_keymap("n", "<space>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", opts)
 end
 
-local servers = {"pylsp", "rust_analyzer", "solargraph", "bashls", "dockerls", "cmake", "clangd"}
+local servers = {"pylsp", "rust_analyzer", "solargraph", "bashls", "dockerls", "cmake", "clangd", "html"}
 for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {
         on_attach = on_attach
@@ -65,6 +65,11 @@ nvim_lsp.rust_analyzer.setup {
             }
         }
     }
+}
+
+-- vscode-html-language-server even though this doesn't really work.
+nvim_lsp.html.setup {
+  capabilities = capabilities,
 }
 
 -- If you open a ruby file and solargraph does not attach see:

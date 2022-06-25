@@ -17,3 +17,4 @@ npm i -g yaml-language-server
 npm i -g yarn
 npm i -g ansible-language-server
 npm i -g diagnostic-languageserver
+npm i -g vscode-langservers-extracted
