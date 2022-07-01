@@ -2,3 +2,6 @@
 
 # Vault token renew
 vault token renew -increment=72h
+
+# Vault token lookup - Self inspect one's token.
+vault token lookup
