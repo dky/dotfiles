@@ -154,6 +154,7 @@ let g:leader_map.m = {
       \ '2' : [':call CopyCurrentFile()'             , 'create copy of current file'],
       \ 'b' : [':set ft=sh'                          , 'Set filetype to sh'],
       \ 'p' : [':set ft=python'                      , 'Set filetype to python'],
+      \ 'm' : [':marks'                              , 'Marks'],
       \ }
 
 " localleader \ mappings
