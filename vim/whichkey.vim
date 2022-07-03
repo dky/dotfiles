@@ -135,16 +135,17 @@ nnoremap <silent> <leader>gl :Git log<CR>
 let g:which_key_map.g.l = 'git-log'
 
 let g:leader_map.n = {
-      \ 'name' : '+floatterm: ' ,
+      \ 'name' : '+floaterm: ' ,
       \ '1' : [':FloatermNew --autoclose=0 terraform plan'                              , 'terraform plan'],
       \ '2' : [':FloatermNew --autoclose=0 terraform apply -auto-approve'               , 'terraform apply with auto-approve'],
       \ '3' : [':FloatermNew --autoclose=0 terraform destroy'                           , 'terraform destroy'],
-      \ 'a' : [':FloatermNew --autoclose=0 ansible-playbook -i inventory.yml -v %'      , 'ansible-playbook apply'],
-      \ 'p' : [':FloatermNew --autoclose=0 python3 %'                                   , 'run current buffer with python in float'],
-      \ 'ft' : [':Floaterms'                                                            , 'Use fzf to find terms'],
-      \ 'fn' : [':FloatermNext'                                                         , 'Next Floaterm'],
-      \ 'fp' : [':FloatermPrev'                                                         , 'Prev Floaterm'],
-      \ 'gt' : [':FloatermSend --name=go go test'                                       , 'Go test to a term'],
+      \ '4' : [':FloatermNew --autoclose=0 ansible-playbook -i inventory.yml -v %'      , 'ansible-playbook apply'],
+      \ '5' : [':FloatermNew --autoclose=0 python3 %'                                   , 'run current buffer with python in float'],
+      \ 's' : [':Floaterms'                                                             , 'Use fzf to search open floaterms'],
+      \ 'c' : [':FloatermNew'                                                           , 'Create new Floaterm'],
+      \ 'n' : [':FloatermNext'                                                          , 'Next Floaterm'],
+      \ 'p' : [':FloatermPrev'                                                          , 'Prev Floaterm'],
+      \ 'g' : [':FloatermSend --name=go go test'                                        , 'Go test to a term'],
       \ }
 
 let g:leader_map.m = {
