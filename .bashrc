@@ -1,22 +1,27 @@
 export HISTCONTROL=erasedups
 export HISTSIZE=10000
 export HISTTIMEFORMAT='%F %T '
-export EDITOR=nvim
+#Append to history don't overwrite
+shopt -s histappend
+# Save and reload the history after each command finishes
+# The need was to share a single history across multiple terminals. Experimental!
+# https://unix.stackexchange.com/questions/1288/preserve-bash-history-in-multiple-terminal-windows
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
+# Don't exit the shell on ctrl+d
+shopt -s -o ignoreeof
+
 #This is to silence the zsh banner in Catalina...
 export BASH_SILENCE_DEPRECATION_WARNING=1
-
 #Ansible no cows
 export ANSIBLE_NOCOWS=1
 
-#Append to history don't overwrite
-shopt -s histappend
-
+export EDITOR=nvim
 export LANG=en_US.UTF-8
 export PATH=$HOME/bin:$HOME/.dotfiles/bin:$HOME/go/bin:/usr/local/sbin:/usr/local/go/bin:$HOME/.local/bin:/usr/local/opt/llvm/bin:$HOME/.yarn/bin:/opt/homebrew/bin:$HOME/.cargo/bin:$PATH
 
 # Tell python to stop writing __pycache__ dirs all over the place.
 export PYTHONDONTWRITEBYTECODE=1
-
 
 [ -f ~/.fzf/bin/fzf -o -f /usr/local/bin/fzf ] && source ~/.fzf.bash
 [ -f ~/.custom_functions ] && source ~/.custom_functions
@@ -29,9 +34,6 @@ if [ -x "$(command -v kubectl)" ]; then
 	# Add completion for k alias
 	complete -F __start_kubectl k
 fi
-
-# Don't exit the shell on ctrl+d
-shopt -s -o ignoreeof
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
