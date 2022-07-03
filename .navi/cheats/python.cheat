@@ -48,3 +48,6 @@ python3 -m unittest
 
 # web server
 python3 -m http.server
+
+# httpwatcher - live web server that updates
+httpwatcher
