@@ -27,7 +27,7 @@ let g:leader_map['c'] = [':!pwd'                            , 'Print current wor
 let g:leader_map['f'] = ['Files'                            , 'Search all files in current Git Repo']
 let g:leader_map['F'] = ['Find'                             , 'Custom Find() Use Rg + Fzf to find files']
 let g:leader_map['t'] = [':FloatermToggle'                  , 'Toggle Floaterm, space space also does this']
-let g:leader_map['o'] = [':set conceallevel=0'              , 'No Conceal']
+"let g:leader_map['o'] = [':set conceallevel=0'              , 'No Conceal']
 let g:leader_map['p'] = ['<M-p>'                            , 'Toggle Autopairs']
 let g:leader_map['w'] = [':wq!'                             , 'wq!']
 let g:leader_map['q'] = [':bd'                              , 'Buffer close to ease having to type :bd']
