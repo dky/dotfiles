@@ -1,4 +1,5 @@
-" enter insert mode after opening a floaterm
+" enter insert mode after opening a floaterm - check .bashrc for what to do
+" when we have a floaterm split
 let g:floaterm_autoinsert=1
 let g:floaterm_autoclose=0
 " when opening files inside of a float open in new buffer
