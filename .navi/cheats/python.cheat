@@ -45,3 +45,6 @@ source venv/bin/activate
 
 # Run test
 python3 -m unittest
+
+# web server
+python3 -m http.server
