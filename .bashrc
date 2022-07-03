@@ -35,7 +35,8 @@ shopt -s -o ignoreeof
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
+# Detect what to do with child nvim in floaterm aka detect parent. $NVIM_LISTEN_ADDRESS is depreciated now using $NVIM instead.
+if [ -n "$NVIM" ]; then
 	# Load up fzf settings in terminal
 	export FZF_DEFAULT_OPTS=""
 	source ~/.fzf.bash
