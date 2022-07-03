@@ -8,6 +8,7 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 #Ansible no cows
 export ANSIBLE_NOCOWS=1
 
+#Append to history don't overwrite
 shopt -s histappend
 
 export LANG=en_US.UTF-8
