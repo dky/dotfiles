@@ -141,7 +141,7 @@ let g:leader_map.n = {
       \ '3' : [':FloatermNew --autoclose=0 terraform destroy'                           , 'terraform destroy'],
       \ '4' : [':FloatermNew --autoclose=0 ansible-playbook -i inventory.yml -v %'      , 'ansible-playbook apply'],
       \ '5' : [':FloatermNew --autoclose=0 python3 %'                                   , 'run current buffer with python in float'],
-      \ 's' : [':Floaterms'                                                             , 'Use fzf to search open floaterms'],
+      \ 'f' : [':Floaterms'                                                             , 'Use fzf to find open floaterms'],
       \ 'c' : [':FloatermNew'                                                           , 'Create new Floaterm'],
       \ 'n' : [':FloatermNext'                                                          , 'Next Floaterm'],
       \ 'p' : [':FloatermPrev'                                                          , 'Prev Floaterm'],
