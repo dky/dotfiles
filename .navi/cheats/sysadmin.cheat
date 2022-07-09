@@ -1,3 +1,11 @@
+% getent
+
+# find a userid
+getent passwd <user>
+
+# find a groupid
+getent groups <user>
+
 % nfs
 
 # nfsiostat grabs input from /proc/self/mountstats
