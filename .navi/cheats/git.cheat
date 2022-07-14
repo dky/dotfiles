@@ -6,6 +6,9 @@ git config --global user.name <first_last> && git config --global user.email <em
 # Git config global default branch - Use main as default.
 git config --global init.defaultBranch main
 
+# Git config list
+git config --list
+
 # Display file contents from git hash
 git cat-file -p <SHA>
 
