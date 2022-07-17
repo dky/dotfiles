@@ -5,3 +5,6 @@ $(__fzf_alias__)
 
 # Create Empty files
 echo '<content>' >> <file_name>
+
+# heredoc, close with END
+cat > <file> <<END
