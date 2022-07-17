@@ -21,6 +21,9 @@ git cat-file -t <SHA>
 # Git log graph
 git log --all --decorate --graph
 
+# Git reflog
+git reflog
+
 # Git rebase abort
 git rebase --abort
 
