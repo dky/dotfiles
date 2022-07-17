@@ -75,7 +75,10 @@ git stash pop
 # Git Squash - reset head x # of commits
 git reset --soft HEAD~<num>
 
-# Git switch
+# Git remote -v
+git remote -v
+
+# Git create new branch equiv to git checkout -b <new_branch>
 git switch -c <branch>
 
 # Git fetch dev:dev branch without having to check it out
