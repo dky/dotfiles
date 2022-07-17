@@ -1,5 +1,8 @@
 % git
 
+# initial commit - Because I use this so much...
+git commit -a -m "Initial"
+
 # Git config global username and email
 git config --global user.name <first_last> && git config --global user.email <email>
 
