@@ -78,6 +78,12 @@ git stash list
 # Git stash pop - Reapply changes
 git stash pop
 
+# Git stash show stash@{}
+git stash show --patch <stash_id>
+
+# Git stash apply
+git stash apply <stash_id>
+
 # Git Squash - reset head x # of commits
 git reset --soft HEAD~<num>
 
@@ -101,3 +107,4 @@ git restore --source=<branch> <file>
 
 $ branch: git branch | awk '{print $NF}'
 $ commit_sha: git log --pretty=format:"%h   %an   %ar   %s" --- --column 1
+$ stash_id: git stash list | cut -d ':' -f 1
