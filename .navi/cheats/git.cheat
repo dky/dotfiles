@@ -30,14 +30,14 @@ git rebase --continue
 # Git rebase
 git rebase <branch>
 
-# Setup repo called "bare", you can then clone the repo with git clone bare newrepo
+# Setup repo called "bare"
 git init --bare bare-repo
+
+# Clone bare repo to newrepo
+git clone bare-repo newrepo
 
 # Submodule init
 git submodule update --init
-
-# Clone bare repo
-git clone bare-repo newrepo
 
 # Git add -e, --edit 
 git add -e
