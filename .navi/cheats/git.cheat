@@ -78,6 +78,9 @@ git reset --soft HEAD~<num>
 # Git remote -v
 git remote -v
 
+# Git switch - Checkout/switch to existing branch
+git switch
+
 # Git create new branch equiv to git checkout -b <new_branch>
 git switch -c <branch>
 
