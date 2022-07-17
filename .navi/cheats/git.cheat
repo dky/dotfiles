@@ -48,6 +48,9 @@ git reset --
 # Git unstage specific file
 git reset -- <file>
 
+# Git branch - list branches
+git branch
+
 # Git checkout commit into it's own branch
 git branch <branch-name> <commit-id>
 
