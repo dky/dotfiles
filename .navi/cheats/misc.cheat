@@ -2,3 +2,6 @@
 
 # bash aliases
 $(__fzf_alias__)
+
+# Create Empty files
+echo <contents> >> <file_name>
