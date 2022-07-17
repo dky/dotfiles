@@ -4,4 +4,4 @@
 $(__fzf_alias__)
 
 # Create Empty files
-echo <contents> >> <file_name>
+echo "<content>" >> <file_name>
