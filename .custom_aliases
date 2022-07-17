@@ -79,6 +79,7 @@ alias wh="which"
 # Git misc
 alias cdg=cd_home_git_dir
 alias Git='git'
+alias gs='git status'
 alias gi='git init'
 alias gg='git grep'
 alias gc='git clone'
