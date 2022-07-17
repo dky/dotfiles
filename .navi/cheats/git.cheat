@@ -34,7 +34,7 @@ git init --bare bare-repo
 git submodule update --init
 
 # Clone bare repo
-git clone bare-repo newrepo && cd newrepo
+git clone bare-repo newrepo
 
 # Git add -e, --edit 
 git add -e
@@ -74,6 +74,9 @@ git stash pop
 
 # Git Squash - reset head x # of commits
 git reset --soft HEAD~<num>
+
+# Git switch
+git switch -c <branch>
 
 # Git fetch dev:dev branch without having to check it out
 git fetch origin dev:dev
