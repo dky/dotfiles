@@ -2,3 +2,6 @@
 
 # Invoke-webrequest
 Invoke-Webrequest -URI <url>
+
+# Invoke-webrequest save file
+Invoke-Webrequest -URI <url> -outfile <outputdir>
