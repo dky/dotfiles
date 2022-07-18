@@ -1,0 +1,4 @@
+% poweshell
+
+# Invoke-webrequest
+Invoke-Webrequest -URI <url>
