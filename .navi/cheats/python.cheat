@@ -26,6 +26,9 @@ conda env config vars list
 # Conda set env var
 conda env config vars set <SOME_ENV_VAR>=<SOME_ENV_VALUE>
 
+# Conda unset env var
+conda env config vars unset <SOME_ENV_VAR>
+
 % pip
 
 # pip upgrade package
