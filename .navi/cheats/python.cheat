@@ -20,6 +20,12 @@ conda env create -v -n test -f <env-file>
 # Conda activate
 conda activate <env>
 
+# Conda env list
+conda env config vars list
+
+# Conda set env var
+conda env config vars set <SOME_ENV_VAR>=<SOME_ENV_VALUE>
+
 % pip
 
 # pip upgrade package
