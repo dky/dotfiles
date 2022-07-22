@@ -1,0 +1,4 @@
+% s3
+
+# list bucket
+aws s3 ls s3://<bucket-name>
