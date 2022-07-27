@@ -2,3 +2,6 @@
 
 # list bucket
 aws s3 ls s3://<bucket-name>
+
+# sts caller identitiy
+aws sts get-caller-identity
