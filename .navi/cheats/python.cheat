@@ -65,3 +65,11 @@ python3 -m http.server
 
 # httpwatcher - live web server that updates
 httpwatcher
+
+% pyenv
+
+# List versions of python we can install, omit anything below 8
+pyenv install --list | grep " 3\.[891]" | less
+
+# Install pyenv python version
+pyenv install <version>
