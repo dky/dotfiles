@@ -1,5 +1,8 @@
 % python
 
+# Check python version
+python3 --version
+
 # Make a request using the request library
 python -c "import requests; r = requests.get('<url>'); print (r.status_code)"
 
@@ -71,5 +74,11 @@ httpwatcher
 # List versions of python we can install, omit anything below 8
 pyenv install --list | grep " 3\.[891]" | less
 
-# Install pyenv python version
+# pyenv install python version
 pyenv install <version>
+
+# pyenv list installed versions
+pyenv versions
+
+# Set activive python version
+pyenv global <version>
