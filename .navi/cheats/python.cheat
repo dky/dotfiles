@@ -34,6 +34,9 @@ conda env config vars unset <SOME_ENV_VAR>
 
 % pip
 
+# List configuration location
+pip config list -v
+
 # pip upgrade package
 python3 -m pip install --upgrade <package>
 
