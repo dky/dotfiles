@@ -39,6 +39,9 @@ kubectl get nodes -o wide
 # Get namespaces
 kubectl get namespaces
 
+# ksn - kubectl set namespace
+kubectl config set-context --current --namespace <namespaces>
+
 # Get pods from namespace (add option '-o wide' for details)
 kubectl get pods -n <namespace>
 
@@ -141,6 +144,7 @@ kubectl get pod <pod_name> --template='{{(index (index .spec.containers 0).ports
 # Get pod_name so we can pipe into log and other commands.
 $ pod_name: kubectl get pods --no-headers -o custom-columns=":metadata.name"
 $ context_name: kubectl config get-contexts --output=name
+$ namespaces:  kubectl get ns  --no-headers -o custom-columns=":metadata.name"
 
 # Export kube config - Talk to remote clusters by exporting KUBECONFIG env
 export KUBECONFIG=<config>
