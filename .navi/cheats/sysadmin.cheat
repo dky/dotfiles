@@ -18,8 +18,20 @@ ps -eo state,pid,cmd | grep "^D"
 
 % lsof
 
-# list files being held open
+# list files being held open -n = No hostname lookup - -P no port lookup
 lsof -nP | grep '(deleted)'
+
+# lsof list open files by directory 
+lsof +D <directory_path>
+
+# lsof files opened by user
+lsof -u <user>
+
+# lsof - show out a process running on a port
+lsof -i :<port_number>
+
+# lsof - files opened by pid
+lsof -i <PID>
 
 % dig
 
