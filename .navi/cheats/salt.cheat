@@ -1,0 +1,4 @@
+% salt
+
+# salt state apply
+salt-call state.apply
