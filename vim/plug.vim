@@ -27,6 +27,7 @@ if has('nvim')
 	Plug 'folke/trouble.nvim'
 	" Required for vale
 	Plug 'jose-elias-alvarez/null-ls.nvim'
+	Plug 'Pocco81/auto-save.nvim'
 else
 endif
 
