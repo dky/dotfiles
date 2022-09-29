@@ -96,6 +96,9 @@ git stash apply <stash_id>
 # Git Squash - reset head x # of commits
 git reset --soft HEAD~<num>
 
+# Git reset soft
+git reset --soft <commit-id>
+
 # Git remote -v
 git remote -v
 
