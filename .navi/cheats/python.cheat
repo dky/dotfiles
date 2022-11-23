@@ -46,6 +46,12 @@ python -m pip install --upgrade pip setuptools
 # Pip list
 pip3 list
 
+# Pip uninstall
+pip3 uninstall <package>
+
+# Pip install from git
+pip3 install git+https://<url> --upgrade --force
+
 % autopep8
 
 # Format file in place manually
