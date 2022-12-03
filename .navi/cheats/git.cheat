@@ -3,6 +3,9 @@
 # merge squash - merges but squash all commits from feature branch
 git merge --squash <branch>
 
+# git merge ours
+git merge -X ours <their_branch>
+
 # initial commit - Because I use this so much...
 git commit -a -m "Initial"
 
