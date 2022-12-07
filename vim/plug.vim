@@ -32,7 +32,8 @@ else
 endif
 
 " Python text objects
-Plug 'jeetsukumaran/vim-pythonsense'
+" Disabling - This causes neovim on wsl to open files slowly
+"Plug 'jeetsukumaran/vim-pythonsense'
 
 " Jinja2 for salt
 Plug 'Glench/Vim-Jinja2-Syntax'
