@@ -8,3 +8,6 @@ aws sts get-caller-identity
 
 # list profiles
 aws configure list-profiles | fzf
+
+# list current profile
+aws configure list
