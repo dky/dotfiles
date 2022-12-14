@@ -71,6 +71,9 @@ let g:which_key_map.g.g = 'fugitive-interactive'
 nnoremap <silent> <leader>gb :Git checkout -b 
 let g:which_key_map.g.b = 'git-branch'
 
+nnoremap <silent> <leader>grv :Git remote -v
+let g:which_key_map.g.rv = 'git-remote'
+
 nnoremap <silent> <leader>gam :Git add . <bar> :Git commit --amend<CR>
 let g:which_key_map.g.am = 'git-commit-ammend'
 
