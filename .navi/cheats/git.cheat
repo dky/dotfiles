@@ -6,6 +6,9 @@ git merge --squash <branch>
 # git merge ours
 git merge -X ours <their_branch>
 
+# git merge --abort
+git merge --abort
+
 # initial commit - Because I use this so much...
 git commit -a -m "Initial"
 
