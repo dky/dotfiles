@@ -11,3 +11,6 @@ aws configure list-profiles | fzf
 
 # list current profile
 aws configure list
+
+# lambda list-functions
+aws lambda list-functions
