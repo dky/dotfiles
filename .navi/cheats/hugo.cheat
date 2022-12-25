@@ -1,0 +1,4 @@
+% hugo
+
+# hugo local
+hugo server --buildDrafts --watch --port 9001 --disableFastRender
