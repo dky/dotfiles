@@ -1,0 +1,4 @@
+% entr
+
+# entr - Run the update.sh script if main.py changes
+ls main.py | entr bash update.sh
