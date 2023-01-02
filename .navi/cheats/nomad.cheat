@@ -1,0 +1,4 @@
+% nomad
+
+# Delete/Purge nomad job
+nomad job stop -purge <job_name>
