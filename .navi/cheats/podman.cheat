@@ -1,0 +1,16 @@
+% podman
+
+# podman machine stop
+podman machine stop
+
+# podman machine init
+podman machine init
+
+# podman machine list
+podman machine list
+
+# podman machine rm
+podman machine rm
+
+# podman machine start
+podman machine start
