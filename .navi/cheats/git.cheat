@@ -6,6 +6,9 @@ git merge --squash <branch>
 # git merge ours
 git merge -X ours <their_branch>
 
+# git pull origin dev but favor -X ours
+git pull origin dev -X ours
+
 # git merge --abort
 git merge --abort
 
