@@ -3,11 +3,11 @@
 # merge squash - merges but squash all commits from feature branch
 git merge --squash <branch>
 
-# git merge ours
-git merge -X ours <their_branch>
+# git merge ours <branch> - dev used by default
+git merge -X ours dev
 
 # git pull origin dev but favor -X ours
-git pull origin dev -X ours
+git pull origin dev -X ours --no-edit
 
 # git merge --abort
 git merge --abort
