@@ -1,0 +1,10 @@
+% github
+
+# github pr d2m
+gh pr create -B main -t "d2m" -b "d2m"
+
+# github pr list
+gh pr list
+
+# github merge pr
+gh pr merge -m
