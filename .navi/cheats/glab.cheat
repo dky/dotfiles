@@ -1,0 +1,10 @@
+% glab
+
+# glab - mr list
+glab mr list
+
+# glab mr approve
+gh mr approve
+
+# glab mr create dev
+glab mr create -b dev -a dky -t <title> -d <description>
