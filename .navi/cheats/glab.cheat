@@ -6,8 +6,8 @@ glab mr list
 # glab mr approve
 gh mr approve
 
-# glab mr create dev
-glab mr create -b dev -a dky -t <title> -d <description>
+# glab mr dev
+glab mr create -b dev -a dky -t "Merge to Dev" -d "Merge branch changes to dev"
 
-# glab mr create dev2main - d2m
-glab mr create -s dev -b main -a dky -t "dev2main" -d "Promote changes from dev to main/master branch"
+# glab mr d2m
+glab mr create -s dev -b main -a dky -t "dev2main" -d "Merge changes from dev to main/master branch"
