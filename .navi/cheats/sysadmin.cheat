@@ -85,3 +85,6 @@ man syscalls
 
 # flushing sendmail mail queue
 sendmail -q -v
+
+# sssd_cache flush
+sss_cache -E
