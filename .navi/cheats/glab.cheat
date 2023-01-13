@@ -9,5 +9,5 @@ gh mr approve
 # glab mr create dev
 glab mr create -b dev -a dky -t <title> -d <description>
 
-# glab mr create dev2main
-glab mr create -s dev -b main -a dky -t "dev2main" -d <description>
+# glab mr create dev2main - d2m
+glab mr create -s dev -b main -a dky -t "dev2main" -d "Promote changes from dev to main/master branch"
