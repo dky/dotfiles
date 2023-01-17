@@ -16,7 +16,7 @@ git merge --abort
 git commit -a -m "Initial"
 
 # git commit amend no edit
-git add . && git commit --amend --no-edit
+git add . && git commit --amend --no-edit && git push origin "$(git symbolic-ref --short HEAD)" --force-with-lease
 
 # Git config global username and email
 git config --global user.name <first_last> && git config --global user.email <email>
