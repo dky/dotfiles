@@ -81,6 +81,9 @@ git branch <branch-name> <commit-id>
 # Git checkout file back to the state before modifications
 git checkout -- <file>
 
+# Git checkout --theirs - prefer the version from the branch we are about to merge over ours
+git checkout --theirs <file>
+
 # Remove file from repo but keep on it on disk. Useful if you forgot to add to .gitignore
 git rm <file> --cache
 
