@@ -127,22 +127,22 @@ nvim_lsp.yamlls.setup {
 }
 
 -- Setup pylsp
---nvim_lsp.pylsp.setup {
-    --enable = false,
-    --cmd = {"pylsp"},
-    --on_attach = on_attach,
-    --settings = {
-        --pylsp = {
-            --configurationSources = {"flake8"},
-            --plugins = {
-                --flake8 = {enabled = true},
-                --mypy = {enabled = false},
-                --pycodestyle = {enabled = false},
-                --pyflakes = {enabled = false}
-            --}
-        --}
-    --}
---}
+nvim_lsp.pylsp.setup {
+	 enable = false,
+	 cmd = {"pylsp"},
+	 on_attach = on_attach,
+	 settings = {
+		  pylsp = {
+				configurationSources = {"flake8"},
+				plugins = {
+					 flake8 = {enabled = true},
+					 mypy = {enabled = false},
+					 pycodestyle = {enabled = false},
+					 pyflakes = {enabled = false}
+				}
+		  }
+	 }
+}
 
 require "nvim-treesitter.configs".setup {
     highlight = {
