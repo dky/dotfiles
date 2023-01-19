@@ -1,5 +1,8 @@
 % kubectl
 
+# k8s api aws readyz/verbose
+kubectl get --raw='/readyz?verbose'
+
 # version
 kubectl version
 
