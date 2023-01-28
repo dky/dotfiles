@@ -31,7 +31,7 @@ kubectl get pvc -o wide
 kubectl get secrets
 
 # Get nodes
-kubectl get nodes
+kubectl get nodes --sort-by=.metadata.creationTimestamp
 
 # Get nodes with labels
 kubectl get nodes --show-labels
@@ -47,6 +47,9 @@ kubectl config set-context --current --namespace <namespaces>
 
 # Get pods from namespace (add option '-o wide' for details)
 kubectl get pods -n <namespace>
+
+# Get running|completed pods
+kubectl get pods --all-namespaces -o wide | egrep -v 'Running|Completed'
 
 # kgp - Get pods
 kubectl get pods
