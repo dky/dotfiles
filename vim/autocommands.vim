@@ -30,6 +30,9 @@ au BufNewFile,BufRead *.snip set noet|%retab!
 " yaml
 au BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml
 
+" consul-template
+au BufNewFile,BufReadPost *.{ctmpl} set filetype=gohtmltmpl
+
 " .gohtml files should be html
 au BufReadPost *.gohtml set syntax=html
 
