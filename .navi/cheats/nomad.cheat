@@ -1,4 +1,10 @@
 % nomad
 
-# Delete/Purge nomad job
+# Delete/Purge Nomad job
 nomad job stop -purge <job_name>
+
+# Nomad gc
+nomad system gc
+
+# Nomad status
+nomad job status
