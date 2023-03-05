@@ -89,7 +89,7 @@ pyenv install <version>
 # pyenv list installed versions
 pyenv versions
 
-# Set activive python version
+# Set active python version
 pyenv global <version>
 
 # jupyter notebook
