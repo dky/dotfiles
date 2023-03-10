@@ -8,3 +8,6 @@ nomad system gc
 
 # Nomad status
 nomad job status
+
+# Nomad run
+nomad job run job.nomad
