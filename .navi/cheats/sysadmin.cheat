@@ -91,3 +91,6 @@ sss_cache -E
 
 # journalctl logs
 journalctl -u <service-name>.service
+
+# systemd reload
+systemctl daemon-reload
