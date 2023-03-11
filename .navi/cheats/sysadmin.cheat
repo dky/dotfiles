@@ -90,7 +90,7 @@ sendmail -q -v
 sss_cache -E
 
 # journalctl logs
-journalctl -u <service-name>.service
+journalctl -u <service-name>.service -f
 
 # systemd reload
 systemctl daemon-reload
