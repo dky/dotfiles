@@ -88,3 +88,6 @@ sendmail -q -v
 
 # sssd_cache flush
 sss_cache -E
+
+# journalctl logs
+journalctl -u <service-name>.service
