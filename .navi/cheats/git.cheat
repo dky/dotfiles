@@ -15,14 +15,15 @@ git merge --abort
 # initial commit - Because I use this so much...
 git commit -a -m "Initial"
 
-# git ammend (interactive)
+# git ammend (edit) + no-push
 git commit --amend
 
-# git commit amend no edit
+# git ammend (no edit) + no-push
+git add . && git commit --amend --no-edit
+
+# git amend (no edit) + push
 git add . && git commit --amend --no-edit && git push origin "$(git symbolic-ref --short HEAD)" --force-with-lease
 
-# git commit ammend no push
-git add . && git commit --amend --no-edit
 
 # Git config global username and email
 git config --global user.name <first_last> && git config --global user.email <email>
