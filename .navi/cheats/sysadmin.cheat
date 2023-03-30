@@ -94,3 +94,12 @@ journalctl -u <service-name>.service -f
 
 # systemd reload
 systemctl daemon-reload
+
+# KRB5CCNAME - Kerberos cache
+export KRB5CCNAME=~/.krb5cc_tmp
+
+# setspn -L <service-account> - List all SPNs tied to a service account
+setspn -L <service_account>
+
+# setspn -Q <spn> - List service account mapped to SPN
+setspn -Q <spn>
