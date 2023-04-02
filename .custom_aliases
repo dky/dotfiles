@@ -96,7 +96,7 @@ alias gsta='git stash'
 alias gstaa='git stash apply'
 alias gstap='git stash pop'
 alias gcb="git symbolic-ref --short HEAD" # Equiv to git branch --show-current but this is only in Git 2.22
-alias gitconf="git config --global user.email "don.d.ky@gmail.com" && git config --global user.name "Don Ky""
+alias gitconf="git config --global user.email \"don.d.ky@gmail.com\" && git config --global user.name \"Don Ky\""
 
 # Git add
 alias ga='git add'
