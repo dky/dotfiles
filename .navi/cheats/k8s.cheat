@@ -187,3 +187,8 @@ helm upgrade --install <chart_name> <chart_path>
 helm install <chart_name> <chart_path>
 
 $ helm_chart_list: helm list --short
+
+% kind
+
+# kind cluster create
+kind create cluster
