@@ -14,3 +14,6 @@ aws configure list
 
 # lambda list-functions
 aws lambda list-functions
+
+# aws sso login
+aws sso login --profile <my-profile>
