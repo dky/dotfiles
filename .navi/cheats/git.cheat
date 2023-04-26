@@ -46,8 +46,8 @@ git log --all --decorate --graph
 # Git reflog
 git reflog
 
-# Git log format (useful to pull author + commit id)
-git log --pretty=format:"%h%x09%an%x09%s"
+# Git log --pretty-format
+git log --pretty=format:"%h%x09%an%x09%s" <branch>
 
 # Git rebase abort
 git rebase --abort
