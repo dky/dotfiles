@@ -1,0 +1,4 @@
+% terraform
+
+# terraform preflight set to 1 or 0 | true or false
+export TF_VAR_terraform_preflight=<state>
