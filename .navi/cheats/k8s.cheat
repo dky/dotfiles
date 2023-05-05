@@ -192,3 +192,8 @@ $ helm_chart_list: helm list --short
 
 # kind cluster create
 kind create cluster
+
+% k9s
+
+# k9s headless
+k9s --headless
