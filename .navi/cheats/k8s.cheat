@@ -75,6 +75,9 @@ kubectl get deployments -n <namespace>
 # List containers in a pod
 kubectl get pods <pod_name> -o jsonpath='{.spec.containers[*].name}{"\n"}'
 
+# k auth can i
+kubectl auth can-i <verb> <resource> <optional-resourcename>
+
 # Get role bindings
 kubectl get rolebinding -n <namespace>
 
