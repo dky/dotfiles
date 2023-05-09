@@ -61,3 +61,6 @@ colima start -c 2 -m 4 -a x86_64
 
 # colima list
 colima list
+
+# export DOCKER_HOST ssh
+export DOCKER_HOST="ssh://<HOST>"
