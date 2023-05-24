@@ -1,0 +1,4 @@
+% java
+
+# Figure out where JAVA_HOME
+java -XshowSettings:properties -version
