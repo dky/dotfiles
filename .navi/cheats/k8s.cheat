@@ -3,6 +3,9 @@
 # watch kubectl get nodes
 watch -n 2 "kubectl get nodes -L nodegroup"
 
+# httpproxies
+kubectl get HTTPProxies
+
 # kubectl get nodegroups
 kubectl get nodes -L nodegroup
 
