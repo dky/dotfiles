@@ -3,6 +3,9 @@
 # watch kubectl get nodes
 watch -n 2 "kubectl get nodes -L nodegroup"
 
+# kubectl get nodegroups
+kubectl get nodes -L nodegroup
+
 # k8s api aws readyz/verbose
 kubectl get --raw='/readyz?verbose'
 
