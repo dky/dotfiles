@@ -6,6 +6,9 @@ watch -n 2 "kubectl get nodes -L nodegroup"
 # httpproxies
 kubectl get HTTPProxies
 
+# Contour endpoints
+kubectl get endpoints
+
 # port-forward
 kubectl port-forward svc/<service> <local-port>/<service-pod-port>
 
