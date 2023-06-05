@@ -203,3 +203,6 @@ kind create cluster
 
 # k9s headless
 k9s --headless
+
+# watch kubectl get nodes
+watch -n 2 "kubectl get nodes -L nodegroup"
