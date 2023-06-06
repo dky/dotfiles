@@ -1,3 +1,8 @@
+% apt
+
+# apt packages critical for troubleshooting
+apt-get -y update && apt-get -y install net-tools iproute2 procps
+
 % getent
 
 # find a userid
