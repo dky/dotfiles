@@ -364,7 +364,7 @@ alias klf="kubectl logs -f"
 # Config
 alias kcuc="kubectl config use-context"
 alias ksn="kubectl config set-context --current --namespace"
-alias ksc="kubectl config use-context"
+alias ksc="kubectl config get-contexts -o name | fzf | xargs kubectl config use-context"
 alias kcv="kubectl config view"
 
 alias kpf="kubectl port-forward"
