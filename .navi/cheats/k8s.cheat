@@ -1,5 +1,8 @@
 % kubectl
 
+# Get all kubectl get all resources in namespace
+kubectl -n <namespace> get $(kubectl api-resources --namespaced=true --no-headers -o name | egrep -v 'events|nodes' | paste -s -d, - ) --no-headers
+
 # watch kubectl get nodes
 watch -n 2 "kubectl get nodes -L nodegroup"
 
