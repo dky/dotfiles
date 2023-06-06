@@ -1,4 +1,4 @@
 % aliases
 
-# fzf cd git
-cd $(find -L $HOME/git -not \( -path '*/\.git/*' \) -type d | fzf)
+# cd tfe + fzf
+cdtf
