@@ -1,5 +1,8 @@
 % kubectl
 
+# resource quotas for namespace
+kubectl describe resourcequota namespace-quotas
+
 # Get all resources in namespace
 kubectl -n <namespace> get $(kubectl api-resources --namespaced=true --no-headers -o name | egrep -v 'events|nodes' | paste -s -d, - ) --no-headers
 
