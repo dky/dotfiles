@@ -169,25 +169,6 @@ alias cdlocal="cd /opt/splunk/etc/system/local"
 alias spkrd="sudo /opt/splunk/bin/splunk reload deploy-server"
 alias tailsplunk="sudo tail -f /opt/splunkforwarder/var/log/splunk/splunkd.log"
 
-#Puppet aliases
-alias cdmanprd="cd /etc/puppetlabs/code/environments/production/manifests"
-alias cdmodprd="cd /etc/puppetlabs/code/environments/production/modules"
-alias cdenvprd="cd /etc/puppetlabs/code/environments/production"
-
-alias cdmandev="cd /etc/puppetlabs/code/environments/development/manifests"
-alias cdmoddev="cd /etc/puppetlabs/code/environments/development/modules"
-alias cdenvdev="cd /etc/puppetlabs/code/environments/development"
-
-alias pcla="puppet cert list --all"
-alias pcl="puppet cert list"
-
-alias spcla="sudo /opt/puppetlabs/bin/puppet cert list --all"
-alias spcl="sudo /opt/puppetlabs/bin/puppet cert list"
-alias spcc="sudo /opt/puppetlabs/bin/puppet cert clean $1"
-alias spcs="sudo /opt/puppetlabs/bin/puppet cert sign $1"
-#
-alias spv="sudo /opt/puppetlabs/bin/puppet parser validate $1"
-
 #RPM Build aliases
 alias rpmspec="cd $HOME/rpmbuild/SPECS"
 alias rpmsrc="cd $HOME/rpmbuild/SOURCES"
