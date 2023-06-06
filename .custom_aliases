@@ -431,6 +431,6 @@ alias n="navi"
 # get to cheats
 alias cdcheat="cd ~/.dotfiles/.navi/cheats"
 
-alias cdtf="cd \$(find -L $HOME/git/tfe -not \( -path '*/\.git/*' \) -type d | fzf)"
-alias cdk8s="cd \$(find -L $HOME/git/k8s -not \( -path '*/\.git/*' \) -type d | fzf)"
-alias cdk8="cdk8s"
+#k8s/tfe
+alias cdt="cd \$(find -L $HOME/git/tfe -not \( -path '*/\.git/*' \) -type d | fzf)"
+alias cdk="cd \$(find -L $HOME/git/k8s -not \( -path '*/\.git/*' \) -type d | fzf)"
