@@ -1,4 +1,4 @@
 % aliases
 
 # fzf cd git
-cd_home_git_dir
+cd $(find -L $HOME/git -not \( -path '*/\.git/*' \) -type d | fzf)
