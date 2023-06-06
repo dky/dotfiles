@@ -343,6 +343,7 @@ alias kl="kubectl logs"
 alias klf="kubectl logs -f"
 
 # Config
+# kgl does not handle multi container pods very well... TBC
 alias kgl="kubectl get pods --no-headers -o custom-columns=":metadata.name" | fzf | xargs kubectl logs"
 alias ksn="kubectl get ns --no-headers -o custom-columns=":metadata.name" | fzf | xargs kubectl config set-context --current --namespace"
 alias ksc="kubectl config get-contexts -o name | fzf | xargs kubectl config use-context"
