@@ -431,4 +431,4 @@ alias n="navi"
 # get to cheats
 alias cdcheat="cd ~/.dotfiles/.navi/cheats"
 
-alias cdtf="cd $(find -L $HOME/git/tfe -not \( -path '*/\.git/*' \) -type d | fzf)"
+alias cdtf="cd \$(find -L $HOME/git/tfe -not \( -path '*/\.git/*' \) -type d | fzf)"
