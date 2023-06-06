@@ -373,7 +373,7 @@ alias kgcm="kubectl get configmap"
 
 alias kgcs="kubectl get componentstatuses"
 alias kgn="kubectl get ns"
-alias kgno="kubectl get nodes"
+alias kgno="kubectl get nodes -L nodegroup"
 
 # Describe
 alias kdn="kubectl describe ns"
