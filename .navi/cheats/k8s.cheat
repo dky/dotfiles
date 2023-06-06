@@ -1,6 +1,6 @@
 % kubectl
 
-# Get all kubectl get all resources in namespace
+# Get all resources in namespace
 kubectl -n <namespace> get $(kubectl api-resources --namespaced=true --no-headers -o name | egrep -v 'events|nodes' | paste -s -d, - ) --no-headers
 
 # watch kubectl get nodes
@@ -38,9 +38,6 @@ kubectl config use-context <context_name>
 
 # Print resource documentation
 kubectl explain <resource>
-
-# Get all resources in namespace
-kubectl get all -n <namespace>
 
 # Get volume claims
 kubectl get pvc -o wide
