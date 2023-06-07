@@ -84,7 +84,7 @@ kubectl get pods --all-namespaces -o wide | egrep -v 'Running|Completed'
 # kgp - Get pods
 kubectl get pods
 
-# kgpw - Get pods wide
+# Get pods wide
 kubectl get pods -o wide
 
 # kgpw - Get pods watch
