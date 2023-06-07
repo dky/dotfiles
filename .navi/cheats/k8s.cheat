@@ -15,6 +15,9 @@ kubectl -n <namespace> get $(kubectl api-resources --namespaced=true --no-header
 # watch kubectl get nodes
 watch -n 2 "kubectl get nodes -L nodegroup"
 
+# watch kubectl get pods
+watch -n 2 "kubectl get pods"
+
 # httpproxies
 kubectl get HTTPProxies
 
