@@ -28,7 +28,7 @@ kubectl get endpoints
 kubectl port-forward svc/<service> :<service-pod-port>
 
 # port-forward hubble
-kubectl port-forward svc/hubble-ui :80
+kubectl port-forward svc/hubble-ui :80 -n kube-system
 
 # kubectl get nodegroups
 kubectl get nodes -L nodegroup
