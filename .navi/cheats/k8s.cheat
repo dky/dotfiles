@@ -27,6 +27,9 @@ kubectl get endpoints
 # port-forward - leave local port empty for ephemeral
 kubectl port-forward svc/<service> :<service-pod-port>
 
+# port-forward hubble
+kubectl port-forward svc/hubble-ui :80
+
 # kubectl get nodegroups
 kubectl get nodes -L nodegroup
 
