@@ -24,8 +24,8 @@ kubectl get HTTPProxies
 # Contour endpoints
 kubectl get endpoints
 
-# port-forward
-kubectl port-forward svc/<service> <local-port>/<service-pod-port>
+# port-forward - leave local port empty for ephemeral
+kubectl port-forward svc/<service> :<service-pod-port>
 
 # kubectl get nodegroups
 kubectl get nodes -L nodegroup
