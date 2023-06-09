@@ -3,6 +3,9 @@
 # autoscaler logs
 kubectl logs -f -n kube-system -l app.kubernetes.io/name=aws-cluster-autoscaler | egrep -v "failed to acquire lease|lock is held by cluster*"
 
+# karpenter logs
+kubectl logs -f -n karpenter -l app.kubernetes.io/name=karpenter
+
 # get kube-system versions
 kubectl get deployment,daemonset,statefulsets -o=jsonpath="{range .items[*]}{'\n'}{.metadata.name}{':\t'}{range .spec.template.spec.containers[*]}{.image}{', '}{end}{end}" -n kube-system
 
