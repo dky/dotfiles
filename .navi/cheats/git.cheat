@@ -1,5 +1,8 @@
 % git
 
+# git discard unstaged changes
+git restore .
+
 # merge squash - merges but squash all commits from feature branch
 git merge --squash <branch>
 
