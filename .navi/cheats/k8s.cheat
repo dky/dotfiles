@@ -45,6 +45,9 @@ kubectl port-forward svc/hubble-ui :80 -n kube-system
 # kubectl get nodegroups
 kubectl get nodes -L nodegroup
 
+# node labels
+kubectl get nodes --show-labels
+
 # k8s api aws readyz/verbose
 kubectl get --raw='/readyz?verbose'
 
