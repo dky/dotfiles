@@ -27,6 +27,9 @@ watch -n 2 "kubectl get nodes -L nodegroup"
 # watch pods
 watch -n 2 "kubectl get pods"
 
+# get pods kube-system
+kubectl get pods -n kube-system
+
 # httpproxies
 kubectl get HTTPProxies
 
