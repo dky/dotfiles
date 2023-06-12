@@ -6,6 +6,9 @@ kubectl debug -n <namespace> -it <pod_name> --image=busybox
 # autoscaler logs
 kubectl logs -f -n kube-system -l app.kubernetes.io/name=aws-cluster-autoscaler | egrep -v "failed to acquire lease|lock is held by cluster*"
 
+# scale deployment
+kubectl scale deployment <name> --replicas=<count>
+
 # karpenter logs
 kubectl logs -f -n karpenter -l app.kubernetes.io/name=karpenter
 
