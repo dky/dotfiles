@@ -78,7 +78,7 @@ kubectl get pvc -o wide
 # Get secrets
 kubectl get secrets
 
-# Get nodes
+# sort nodes by age
 kubectl get nodes --sort-by=.metadata.creationTimestamp
 
 # Get nodes with labels
