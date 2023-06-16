@@ -1,7 +1,10 @@
 % kubectl
 
-# debug pod
-kubectl debug -n <namespace> -it <pod_name> --image=busybox
+# debug node generic
+kubectl debug node/<node-name> -it --image=centos
+
+# debug pod interactive
+kubectl run -i --tty --rm test --image=<image> --restart=Never -- sh
 
 # autoscaler logs
 kubectl logs -f -n kube-system -l app.kubernetes.io/name=aws-cluster-autoscaler | egrep -v "failed to acquire lease|lock is held by cluster*"
@@ -191,9 +194,6 @@ kubectl create configmap <configmap-name> --from-literal=<key>=<value>
 
 # Configuration map from file
 kubectl create configmap <configmap-name> --from-file=<path-to-file>
-
-# Run a pod interactively for debugging
-kubectl run -i --tty --rm test --image=busybox --restart=Never -- sh
 
 # Cluster info
 kubectl cluster-info
