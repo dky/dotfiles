@@ -1,25 +1,36 @@
 % kubectl
 
-# debug node generic
+# Debug node generic
 kubectl debug node/<node> -it --image=centos
 
-# sort nodes by age
+# Sort nodes by age
 kubectl get nodes --sort-by=.metadata.creationTimestamp
 
-# watch nodes
+# Watch nodes
 watch -n 2 "kubectl get nodes -L nodegroup"
 
-# get get nodegroups
+# Get get nodegroups
 kubectl get nodes -L nodegroup
 
-# get node labels
+# Get node labels
 kubectl get nodes --show-labels
 
-# get nodes with labels
+# Get nodes with labels
 kubectl get nodes --show-labels
 
-# get nodes wide
+# Get nodes wide
 kubectl get nodes -o wide
+
+# Drain node in preparation for maintenance
+kubectl drain <node>
+
+# Mark node as schedulable
+kubectl uncordon <node>
+
+# Mark node as unschedulable
+kubectl cordon <node>
+
+$ nodes:  kubectl get nodes --no-headers -o custom-columns=":metadata.name"
 
 # debug pod interactive
 kubectl run -i --tty --rm test --image=<image> --restart=Never -- sh
@@ -174,15 +185,6 @@ kubectl delete --all-pods --namespace=<namespace>
 # Edit deployments
 kubectl edit deployment/<name> -n <namespace>
 
-# Drain node in preparation for maintenance
-kubectl drain <name>
-
-# Mark node as schedulable
-kubectl uncordon <name>
-
-# Mark node as unschedulable
-kubectl cordon <name>
-
 # Display resource (cpu/memory/storage) usage
 kubectl top <type>
 
@@ -205,7 +207,6 @@ kubectl get pod <pod_name> --template='{{(index (index .spec.containers 0).ports
 $ pod_name: kubectl get pods --no-headers -o custom-columns=":metadata.name"
 $ context_name: kubectl config get-contexts --output=name
 $ namespaces:  kubectl get ns --no-headers -o custom-columns=":metadata.name"
-$ nodes:  kubectl get nodes --no-headers -o custom-columns=":metadata.name"
 
 # Export kube config - Talk to remote clusters by exporting KUBECONFIG env
 export KUBECONFIG=<config>
