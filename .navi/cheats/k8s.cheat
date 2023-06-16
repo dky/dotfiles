@@ -1,7 +1,25 @@
 % kubectl
 
 # debug node generic
-kubectl debug node/<node-name> -it --image=centos
+kubectl debug node/<node> -it --image=centos
+
+# sort nodes by age
+kubectl get nodes --sort-by=.metadata.creationTimestamp
+
+# watch nodes
+watch -n 2 "kubectl get nodes -L nodegroup"
+
+# get get nodegroups
+kubectl get nodes -L nodegroup
+
+# get node labels
+kubectl get nodes --show-labels
+
+# get nodes with labels
+kubectl get nodes --show-labels
+
+# get nodes wide
+kubectl get nodes -o wide
 
 # debug pod interactive
 kubectl run -i --tty --rm test --image=<image> --restart=Never -- sh
@@ -24,9 +42,6 @@ kubectl describe resourcequota namespace-quotas
 # Get all resources in namespace
 kubectl -n <namespace> get $(kubectl api-resources --namespaced=true --no-headers -o name | egrep -v 'events|nodes' | paste -s -d, - ) --no-headers
 
-# watch nodes
-watch -n 2 "kubectl get nodes -L nodegroup"
-
 # watch pods
 watch -n 2 "kubectl get pods"
 
@@ -44,12 +59,6 @@ kubectl port-forward svc/<service> :<service-pod-port>
 
 # port-forward hubble
 kubectl port-forward svc/hubble-ui :80 -n kube-system
-
-# kubectl get nodegroups
-kubectl get nodes -L nodegroup
-
-# node labels
-kubectl get nodes --show-labels
 
 # k8s api aws readyz/verbose
 kubectl get --raw='/readyz?verbose'
@@ -77,15 +86,6 @@ kubectl get pvc -o wide
 
 # Get secrets
 kubectl get secrets
-
-# sort nodes by age
-kubectl get nodes --sort-by=.metadata.creationTimestamp
-
-# Get nodes with labels
-kubectl get nodes --show-labels
-
-# Get nodes wide
-kubectl get nodes -o wide
 
 # Get namespaces
 kubectl get namespaces
@@ -204,7 +204,8 @@ kubectl get pod <pod_name> --template='{{(index (index .spec.containers 0).ports
 # Get pod_name so we can pipe into log and other commands.
 $ pod_name: kubectl get pods --no-headers -o custom-columns=":metadata.name"
 $ context_name: kubectl config get-contexts --output=name
-$ namespaces:  kubectl get ns  --no-headers -o custom-columns=":metadata.name"
+$ namespaces:  kubectl get ns --no-headers -o custom-columns=":metadata.name"
+$ nodes:  kubectl get nodes --no-headers -o custom-columns=":metadata.name"
 
 # Export kube config - Talk to remote clusters by exporting KUBECONFIG env
 export KUBECONFIG=<config>
