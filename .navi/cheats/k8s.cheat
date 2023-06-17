@@ -111,7 +111,7 @@ kubectl get pods -n <namespace>
 kubectl get pods --all-namespaces -o wide | egrep -v 'Running|Completed'
 
 # Get logs pod
-kubectl logs -f <pod_name>
+kubectl logs -f --tail=100 <pod_name>
 
 # debug pod interactive
 kubectl run -i --tty --rm temp-debug-pod --image=<image> --restart=Never -- sh
