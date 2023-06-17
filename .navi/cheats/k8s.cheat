@@ -7,7 +7,7 @@ kubectl debug node/<node> -it --image=centos
 kubectl get nodes --sort-by=.metadata.creationTimestamp
 
 # Watch nodes
-watch -n 2 "kubectl get nodes -L nodegroup"
+watch -n 2 "kubectl get nodes -L nodegroup --sort-by=.metadata.creationTimestamp"
 
 # Get get nodegroups
 kubectl get nodes -L nodegroup
