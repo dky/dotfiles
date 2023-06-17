@@ -1,5 +1,8 @@
 % kubectl
 
+# Describe node
+kubectl describe node <nodes>
+
 # Debug node generic
 kubectl debug node/<node> -it --image=centos
 
@@ -148,9 +151,6 @@ kubectl get rolebinding,clusterrolebinding --all-namespaces
 
 # Get rbac def
 kubectl get RBACDefinition
-
-# Get node info
-kubectl describe node <node>
 
 # Get namespace info
 kubectl describe ns <namespace>
