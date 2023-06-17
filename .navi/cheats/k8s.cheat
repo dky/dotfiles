@@ -89,7 +89,7 @@ kubectl get secrets
 # Describe quotas for namespace
 kubectl describe resourcequota namespace-quotas
 
-# Get namespace info
+# Describe namespace
 kubectl describe ns <namespaces>
 
 # Get namespaces
