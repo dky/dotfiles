@@ -32,10 +32,10 @@ kubectl describe node <nodes>
 
 $ nodes:  kubectl get nodes --no-headers -o custom-columns=":metadata.name"
 
-# autoscaler logs
+# Get autoscaler logs
 kubectl logs -f -n kube-system -l app.kubernetes.io/name=aws-cluster-autoscaler | egrep -v "failed to acquire lease|lock is held by cluster*"
 
-# scale deployment
+# Scale deployment
 kubectl scale deployment <name> --replicas=<count>
 
 # karpenter logs
@@ -47,7 +47,7 @@ kubectl get deployment,daemonset,statefulsets -o=jsonpath="{range .items[*]}{'\n
 # Get all resources in namespace
 kubectl -n <namespace> get $(kubectl api-resources --namespaced=true --no-headers -o name | egrep -v 'events|nodes' | paste -s -d, - ) --no-headers
 
-# httpproxies
+# Get httpproxies
 kubectl get HTTPProxies
 
 # Contour endpoints
