@@ -87,7 +87,7 @@ kubectl get pvc -o wide
 kubectl get secrets
 
 # Describe quotas for namespace
-kubectl describe resourcequota namespace-quotas -n <namespaces>
+kubectl describe resourcequota namespace-quotas
 
 # Get namespace info
 kubectl describe ns <namespaces>
