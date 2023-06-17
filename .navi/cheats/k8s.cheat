@@ -18,25 +18,19 @@ kubectl get nodes -L nodegroup
 # Get node labels
 kubectl get nodes --show-labels
 
-# Get nodes with labels
-kubectl get nodes --show-labels
-
 # Get nodes wide
 kubectl get nodes -o wide
 
-# Drain node in preparation for maintenance
-kubectl drain <node>
+# Drain node ignore daemonset
+kubectl drain <nodes> --ignore-daemonsets
 
 # Mark node as schedulable
-kubectl uncordon <node>
+kubectl uncordon <nodes>
 
 # Mark node as unschedulable
-kubectl cordon <node>
+kubectl cordon <nodes>
 
 $ nodes:  kubectl get nodes --no-headers -o custom-columns=":metadata.name"
-
-# debug pod interactive
-kubectl run -i --tty --rm test --image=<image> --restart=Never -- sh
 
 # autoscaler logs
 kubectl logs -f -n kube-system -l app.kubernetes.io/name=aws-cluster-autoscaler | egrep -v "failed to acquire lease|lock is held by cluster*"
@@ -110,6 +104,12 @@ kubectl get pods -n <namespace>
 # Get running|completed pods
 kubectl get pods --all-namespaces -o wide | egrep -v 'Running|Completed'
 
+# Get logs pod
+kubectl logs -f <pod_name>
+
+# debug pod interactive
+kubectl run -i --tty --rm temp-debug-pod --image=<image> --restart=Never -- sh
+
 # Watch pods
 watch -n 2 "kubectl get pods"
 
@@ -131,6 +131,17 @@ kubectl get pods --all-namespaces
 # Describe pod
 kubectl describe po <pod_name>
 
+# Delete pod
+kubectl delete pod <pod_name>
+
+# Delete all pods from namespace
+kubectl delete --all-pods --namespace=<namespace>
+
+# Get pod container port
+kubectl get pod <pod_name> --template='{{(index (index .spec.containers 0).ports 0).containerPort}}{{"\n"}}'
+
+$ pod_name: kubectl get pods --no-headers -o custom-columns=":metadata.name"
+
 # Get replicaset
 kubectl get replicaset
 
@@ -143,7 +154,7 @@ kubectl get ep
 # Get deployments
 kubectl get deployments -n <namespace>
 
-# k auth can i
+# auth can-i
 kubectl auth can-i <verb> <resource> <optional-resourcename>
 
 # Get role bindings
@@ -156,13 +167,10 @@ kubectl get rolebinding,clusterrolebinding --all-namespaces
 kubectl get RBACDefinition
 
 # Get namespace info
-kubectl describe ns <namespace>
+kubectl describe ns <namespaces>
 
 # Get details for sa
 kubectl describe sa <sa>
-
-# Print logs from pod
-kubectl logs -f <pod_name>
 
 # Delete service
 kubectl delete svc <name>
@@ -175,15 +183,6 @@ kubectl delete -f <spec>
 
 # Delete deployment using name
 kubectl delete deployment <name>
-
-# Delete a pod
-kubectl delete pod <pod_name>
-
-# Delete all pods within namespace
-kubectl delete --all-pods --namespace=<namespace>
-
-# Pod container port
-kubectl get pod <pod_name> --template='{{(index (index .spec.containers 0).ports 0).containerPort}}{{"\n"}}'
 
 # Edit deployments
 kubectl edit deployment/<name> -n <namespace>
@@ -203,8 +202,6 @@ kubectl create configmap <configmap-name> --from-file=<path-to-file>
 # Cluster info
 kubectl cluster-info
 
-# Get pod_name so we can pipe into log and other commands.
-$ pod_name: kubectl get pods --no-headers -o custom-columns=":metadata.name"
 $ context_name: kubectl config get-contexts --output=name
 $ namespaces:  kubectl get ns --no-headers -o custom-columns=":metadata.name"
 
