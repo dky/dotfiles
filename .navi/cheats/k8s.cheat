@@ -56,12 +56,6 @@ kubectl describe resourcequota namespace-quotas
 # Get all resources in namespace
 kubectl -n <namespace> get $(kubectl api-resources --namespaced=true --no-headers -o name | egrep -v 'events|nodes' | paste -s -d, - ) --no-headers
 
-# watch pods
-watch -n 2 "kubectl get pods"
-
-# get pods kube-system
-kubectl get pods -n kube-system
-
 # httpproxies
 kubectl get HTTPProxies
 
@@ -104,8 +98,11 @@ kubectl get secrets
 # Get namespaces
 kubectl get namespaces
 
-# ksn - kubectl set namespace
+# kubectl set namespace
 kubectl config set-context --current --namespace <namespaces>
+
+# Get pods kube-system
+kubectl get pods -n kube-system
 
 # Get pods from namespace (add option '-o wide' for details)
 kubectl get pods -n <namespace>
@@ -113,17 +110,26 @@ kubectl get pods -n <namespace>
 # Get running|completed pods
 kubectl get pods --all-namespaces -o wide | egrep -v 'Running|Completed'
 
-# kgp - Get pods
+# Watch pods
+watch -n 2 "kubectl get pods"
+
+# Get pods
 kubectl get pods
 
 # Get pods wide
 kubectl get pods -o wide
 
-# kgpw - Get pods watch
+# Get pods watch
 kubectl get pods --watch
 
-# kgpa - Get pods from all namespace (add option '-o wide' for details)
+# List containers in a pod
+kubectl get pods <pod_name> -o jsonpath='{.spec.containers[*].name}{"\n"}'
+
+# Get pods from all namespace (add option '-o wide' for details)
 kubectl get pods --all-namespaces
+
+# Describe pod
+kubectl describe po <pod_name>
 
 # Get replicaset
 kubectl get replicaset
@@ -136,9 +142,6 @@ kubectl get ep
 
 # Get deployments
 kubectl get deployments -n <namespace>
-
-# List containers in a pod
-kubectl get pods <pod_name> -o jsonpath='{.spec.containers[*].name}{"\n"}'
 
 # k auth can i
 kubectl auth can-i <verb> <resource> <optional-resourcename>
@@ -154,9 +157,6 @@ kubectl get RBACDefinition
 
 # Get namespace info
 kubectl describe ns <namespace>
-
-# Get details from pod
-kubectl describe po <pod_name>
 
 # Get details for sa
 kubectl describe sa <sa>
@@ -182,13 +182,16 @@ kubectl delete pod <pod_name>
 # Delete all pods within namespace
 kubectl delete --all-pods --namespace=<namespace>
 
+# Pod container port
+kubectl get pod <pod_name> --template='{{(index (index .spec.containers 0).ports 0).containerPort}}{{"\n"}}'
+
 # Edit deployments
 kubectl edit deployment/<name> -n <namespace>
 
 # Display resource (cpu/memory/storage) usage
 kubectl top <type>
 
-# Get config maps
+# Get configmaps
 kubectl get configmap
 
 # Configuration maps literal
@@ -200,15 +203,12 @@ kubectl create configmap <configmap-name> --from-file=<path-to-file>
 # Cluster info
 kubectl cluster-info
 
-# Pod container port
-kubectl get pod <pod_name> --template='{{(index (index .spec.containers 0).ports 0).containerPort}}{{"\n"}}'
-
 # Get pod_name so we can pipe into log and other commands.
 $ pod_name: kubectl get pods --no-headers -o custom-columns=":metadata.name"
 $ context_name: kubectl config get-contexts --output=name
 $ namespaces:  kubectl get ns --no-headers -o custom-columns=":metadata.name"
 
-# Export kube config - Talk to remote clusters by exporting KUBECONFIG env
+# Export kubeconfig - Talk to remote clusters by exporting KUBECONFIG env
 export KUBECONFIG=<config>
 
 % microk8s
