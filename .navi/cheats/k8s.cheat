@@ -1,8 +1,5 @@
 % kubectl
 
-# Describe node
-kubectl describe node <nodes>
-
 # Debug node generic
 kubectl debug node/<node> -it --image=centos
 
@@ -21,14 +18,17 @@ kubectl get nodes --show-labels
 # Get nodes wide
 kubectl get nodes -o wide
 
+# Uncordon node
+kubectl uncordon <nodes>
+
+# Cordon node
+kubectl cordon <nodes>
+
 # Drain node ignore daemonset
 kubectl drain <nodes> --ignore-daemonsets
 
-# Mark node as schedulable
-kubectl uncordon <nodes>
-
-# Mark node as unschedulable
-kubectl cordon <nodes>
+# Describe node
+kubectl describe node <nodes>
 
 $ nodes:  kubectl get nodes --no-headers -o custom-columns=":metadata.name"
 
@@ -41,11 +41,8 @@ kubectl scale deployment <name> --replicas=<count>
 # karpenter logs
 kubectl logs -f -n karpenter -l app.kubernetes.io/name=karpenter
 
-# get kube-system versions
+# Get kube-system versions
 kubectl get deployment,daemonset,statefulsets -o=jsonpath="{range .items[*]}{'\n'}{.metadata.name}{':\t'}{range .spec.template.spec.containers[*]}{.image}{', '}{end}{end}" -n kube-system
-
-# resource quotas for namespace
-kubectl describe resourcequota namespace-quotas
 
 # Get all resources in namespace
 kubectl -n <namespace> get $(kubectl api-resources --namespaced=true --no-headers -o name | egrep -v 'events|nodes' | paste -s -d, - ) --no-headers
@@ -89,8 +86,17 @@ kubectl get pvc -o wide
 # Get secrets
 kubectl get secrets
 
+# Describe quotas for namespace
+kubectl describe resourcequota namespace-quotas -n <namespaces>
+
+# Get namespace info
+kubectl describe ns <namespaces>
+
 # Get namespaces
 kubectl get namespaces
+
+# Get pods from all namespace (add option '-o wide' for details)
+kubectl get pods --all-namespaces
 
 # kubectl set namespace
 kubectl config set-context --current --namespace <namespaces>
@@ -124,9 +130,6 @@ kubectl get pods --watch
 
 # List containers in a pod
 kubectl get pods <pod_name> -o jsonpath='{.spec.containers[*].name}{"\n"}'
-
-# Get pods from all namespace (add option '-o wide' for details)
-kubectl get pods --all-namespaces
 
 # Describe pod
 kubectl describe po <pod_name>
@@ -165,9 +168,6 @@ kubectl get rolebinding,clusterrolebinding --all-namespaces
 
 # Get rbac def
 kubectl get RBACDefinition
-
-# Get namespace info
-kubectl describe ns <namespaces>
 
 # Get details for sa
 kubectl describe sa <sa>
