@@ -1,22 +1,28 @@
-% postgres
+% pgcli
 
 # pgcli pi4
-PGPASSWORD=install pgcli -h pi4 -p 5432 -u root
+PGPASSWORD=install pgcli -h postgres -p 5432 -u root
 
 # pgcli login interactive - ensure you have PG_HOST, PG_USER and PG_PASS environment vars set
 PGPASSWORD=<pg_pass> pgcli -h <pg_host> -p <pg_port> -u <pg_user>
 
-# pgsql CREATE DATABASE
-PGPASSWORD=<pg_pass> psql -h <pg_host> -p <pg_port> -U <pg_user> -d <pg_database> -c"CREATE DATABASE <db_name>"
+% psql
 
-# pgsql DROP DATABASE
-PGPASSWORD=<pg_pass> psql -h <pg_host> -p <pg_port> -U <pg_user> -d <pg_database> -c"DROP DATABASE <db_name>"
+# psql connect
+PGPASSWORD=<pg_pass> psql -h <pg_host> -p <pg_port> -U <pg_user> -d <pg_database>
 
-# pgsql list remote databases
-PGPASSWORD=<pg_pass> psql -h <pg_host> -p <pg_port> -U <pg_user> -d <pg_database> -l
+# psql list remote tables
+PGPASSWORD=<pg_pass> psql -h <pg_host> -p <pg_port> -U <pg_user> -d <pg_database> -c "\dt"
 
-# pgsql list remote tables
-PGPASSWORD=<pg_pass> psql -h <pg_host> -p <pg_port> -U <pg_user> -d <pg_database> -dt
+# psql list remote databases
+PGPASSWORD=<pg_pass> psql -h <pg_host> -p <pg_port> -U <pg_user> -d <pg_database> -c "\l"
+
+# psql CREATE DATABASE
+PGPASSWORD=<pg_pass> psql -h <pg_host> -p <pg_port> -U <pg_user> -d <pg_database> -c "CREATE DATABASE <db_name>"
+
+# psql DROP DATABASE
+PGPASSWORD=<pg_pass> psql -h <pg_host> -p <pg_port> -U <pg_user> -d <pg_database> -c "DROP DATABASE <db_name>"
+
 
 $ pg_host: echo -e 'postgres\n'
 $ pg_port: echo -e '5432\n'
