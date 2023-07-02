@@ -20,10 +20,6 @@ PGPASSWORD=<pg_pass> psql -h <pg_host> -p <pg_port> -U <pg_user> -d <pg_database
 # psql CREATE DATABASE
 PGPASSWORD=<pg_pass> psql -h <pg_host> -p <pg_port> -U <pg_user> -d <pg_database> -c "CREATE DATABASE <db_name>"
 
-# psql DROP DATABASE
-PGPASSWORD=<pg_pass> psql -h <pg_host> -p <pg_port> -U <pg_user> -d <pg_database> -c "DROP DATABASE <db_name>"
-
-
 $ pg_host: echo -e 'postgres\n'
 $ pg_port: echo -e '5432\n'
 $ pg_user: echo -e 'root\n'
