@@ -1,10 +1,10 @@
 % pgcli
 
 # pgcli pi4
-PGPASSWORD=install pgcli -h postgres -p 5432 -u root
+PGPASSWORD=install pgcli -h postgres -p 5432 -u root -d postgres
 
 # pgcli login interactive - ensure you have PG_HOST, PG_USER and PG_PASS environment vars set
-PGPASSWORD=<pg_pass> pgcli -h <pg_host> -p <pg_port> -u <pg_user>
+PGPASSWORD=<pg_pass> pgcli -h <pg_host> -p <pg_port> -u <pg_user> -d <pg_database>
 
 % psql
 
