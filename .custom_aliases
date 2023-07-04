@@ -268,7 +268,7 @@ alias pipr="pip3 install -r requirements.txt"
 alias pipu="pip3 install --upgrade pip"
 alias pipv="pip3 -V"
 # Install pip essentials when bumping or switching vim versions
-alias pipup="pip3 install flake8 pylint yapf black pytest ranger-fm neovim-remote pynvim"
+alias pipup="pip3 install flake8 pylint yapf black pytest neovim-remote pynvim"
 # Uninstall all pip packages
 alias pippurge="pip3 uninstall -y -r <(pip freeze)"
 # List outdated packages
