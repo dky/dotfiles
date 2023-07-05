@@ -429,8 +429,8 @@ alias apl="ansible-playbook --connection=local --inventory 127.0.0.1, --limit=12
 
 # navi shorter
 alias n="navi"
-# get to cheats
-alias cdcheat="cd ~/.dotfiles/.navi/cheats"
+# edit cheats
+alias enavi="find ~/.dotfiles/.navi/cheats -type f | fzf | xargs nvim"
 
 #k8s/tfe
 alias cdt="cd \$(find -L $HOME/git/tfe -not \( -path '*/\.git/*' \) -type d | fzf)"
