@@ -1,0 +1,4 @@
+% mongo
+
+# mongosh
+mongosh --host mongo -u root -p install
