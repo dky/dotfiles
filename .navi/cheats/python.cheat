@@ -106,3 +106,7 @@ django-admin startproject <project_name>
 # Django run server
 python manage.py runserver
 
+% uvicorn
+
+# uvicorn
+uvicorn main:app --reload
