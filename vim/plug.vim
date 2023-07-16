@@ -29,6 +29,7 @@ if has('nvim')
 	Plug 'jose-elias-alvarez/null-ls.nvim'
 	Plug 'Pocco81/auto-save.nvim'
 	Plug 'zbirenbaum/copilot.lua'
+	Plug 'zbirenbaum/copilot-cmp'
 else
 endif
 

@@ -16,6 +16,7 @@ local lsp_symbols = {
     Enum = " 練 (Enum)",
     Keyword = "   (Keyword)",
     Snippet = "   (Snippet)",
+    Copilot = " (Copilot)",
     Color = "   (Color)",
     File = "   (File)",
     Reference = "   (Reference)",
@@ -30,15 +31,18 @@ local lsp_symbols = {
 
 cmp.setup({
     sources = {
+        { name = "copilot", group_index = 2 },
         { name = "nvim_lsp" },
         { name = "vsnip" },
         { name = "buffer" },
         { name = "dictionary", keyword_length = 2 },
     },
     mapping = {
-        -- ["<cr>"] = cmp.mapping.confirm({select = true}),
         ["<s-tab>"] = cmp.mapping.select_prev_item(),
         ["<tab>"] = cmp.mapping.select_next_item(),
+        ['<C-Space>'] = cmp.mapping.complete(),
+        ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+
     },
     formatting = {
         format = function(entry, item)
@@ -47,6 +51,7 @@ cmp.setup({
                 buffer = "[Buffer]",
                 nvim_lsp = "[LSP]",
                 luasnip = "[Snippet]",
+                copilot = "[Copilot]",
             })[entry.source.name]
 
             return item
@@ -58,6 +63,8 @@ cmp.setup({
         end,
     },
 })
+
+require("copilot_cmp").setup()
 
 require("cmp_dictionary").setup({
     dic = {
