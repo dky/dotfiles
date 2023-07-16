@@ -44,6 +44,9 @@ cmp.setup({
     mapping = {
         ["<s-tab>"] = cmp.mapping.select_prev_item(),
         ["<tab>"] = cmp.mapping.select_next_item(),
+        ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-f>'] = cmp.mapping.scroll_docs(4),
+        ['<C-e>'] = cmp.mapping.abort(),
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 
@@ -55,7 +58,6 @@ cmp.setup({
                 buffer = "[Buffer]",
                 nvim_lsp = "[LSP]",
                 luasnip = "[Snippet]",
-                copilot = "[Copilot]",
             })[entry.source.name]
 
             return item
