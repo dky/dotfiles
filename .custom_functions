@@ -348,3 +348,17 @@ fzf-git-branch-checkout() {
 		 git checkout $branch;
 	 fi
  }
+
+en() {
+# Edit navi cheats
+
+if [[ -z "${NVIM}" ]]; then
+  _e="nvim"
+else
+  _e="floaterm"
+fi
+
+echo Editing with: $_e
+find ~/.dotfiles/.navi/cheats -type f | fzf | xargs $_e
+
+ }
