@@ -16,7 +16,7 @@ local lsp_symbols = {
     Enum = " 練 (Enum)",
     Keyword = "   (Keyword)",
     Snippet = "   (Snippet)",
-    Copilot = " (Copilot)",
+    Copilot = "",
     Color = "   (Color)",
     File = "   (File)",
     Reference = "   (Reference)",
@@ -36,6 +36,10 @@ cmp.setup({
         { name = "vsnip" },
         { name = "buffer" },
         { name = "dictionary", keyword_length = 2 },
+    },
+    window = {
+      completion = cmp.config.window.bordered(),
+      documentation = cmp.config.window.bordered(),
     },
     mapping = {
         ["<s-tab>"] = cmp.mapping.select_prev_item(),
@@ -72,7 +76,7 @@ require("cmp_dictionary").setup({
     },
     -- The following are default values, so you don't need to write them if you don't want to change them
     exact = 2,
-    async = false, 
+    async = false,
     capacity = 5,
-    debug = false, 
+    debug = false,
 })
