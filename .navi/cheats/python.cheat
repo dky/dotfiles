@@ -59,11 +59,14 @@ autopep8 --in-place <file>
 
 % venv
 
-# Start a venv
+# new venv
 python3 -m venv venv
 
 # venv activate
 source venv/bin/activate
+
+# venv deactivate
+deactivate
 
 % unittest
 
