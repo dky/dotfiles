@@ -107,6 +107,7 @@ alias gap='git add -p'
 
 # Git pull
 alias gpl='git pull'
+alias gpod='git pull origin dev'
 alias gplo='git pull --rebase origin'
 alias gplh='git pull --rebase origin "$(git symbolic-ref --short HEAD)"'
 
