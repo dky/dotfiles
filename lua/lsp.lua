@@ -69,7 +69,7 @@ nvim_lsp.rust_analyzer.setup {
 
 -- vscode-html-language-server even though this doesn't really work.
 nvim_lsp.html.setup {
-  capabilities = capabilities,
+    capabilities = capabilities
 }
 
 -- If you open a ruby file and solargraph does not attach see:
@@ -128,25 +128,35 @@ nvim_lsp.yamlls.setup {
 
 -- Setup pylsp
 nvim_lsp.pylsp.setup {
-	 enable = false,
-	 cmd = {"pylsp"},
-	 on_attach = on_attach,
-	 settings = {
-		  pylsp = {
-				configurationSources = {"flake8"},
-				plugins = {
-					 flake8 = {enabled = true},
-					 mypy = {enabled = false},
-					 pycodestyle = {enabled = false},
-					 pyflakes = {enabled = false}
-				}
-		  }
-	 }
+    enable = false,
+    cmd = {"pylsp"},
+    on_attach = on_attach,
+    settings = {
+        pylsp = {
+            configurationSources = {"flake8"},
+            plugins = {
+                flake8 = {enabled = false},
+                mypy = {enabled = false},
+                pycodestyle = {enabled = false},
+                pyflakes = {enabled = false}
+            }
+        }
+    }
 }
 
 require "nvim-treesitter.configs".setup {
     highlight = {
         enable = true
+    }
+}
+
+nvim_lsp.ruff_lsp.setup {
+    on_attach = on_attach,
+    init_options = {
+        settings = {
+            -- Any extra CLI arguments for `ruff` go here.
+            args = {}
+        }
     }
 }
 
