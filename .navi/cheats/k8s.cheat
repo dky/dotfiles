@@ -258,3 +258,5 @@ kubectl get clusterissuers
 # Get certmanager logs
 kubectl logs -f -n cert-manager -l app.kubernetes.io/instance=cert-manager
 
+# Describe vault clusterissuer
+kubectl describe clusterissuer vault-clusterissuer
