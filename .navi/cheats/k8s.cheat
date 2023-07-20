@@ -35,9 +35,6 @@ $ nodes:  kubectl get nodes --no-headers -o custom-columns=":metadata.name"
 # Get autoscaler logs
 kubectl logs -f -n kube-system -l app.kubernetes.io/name=aws-cluster-autoscaler | egrep -v "failed to acquire lease|lock is held by cluster*"
 
-# Get certmanager logs
-kubectl logs -f -n cert-manager -l app.kubernetes.io/instance=cert-manager
-
 # Scale deployment
 kubectl scale deployment <name> --replicas=<count>
 
@@ -253,3 +250,11 @@ kind create cluster
 
 # k9s headless
 k9s --headless
+
+% cert-manager
+# get clusterissuers
+k get clusterissuers
+
+# Get certmanager logs
+kubectl logs -f -n cert-manager -l app.kubernetes.io/instance=cert-manager
+
