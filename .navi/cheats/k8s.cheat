@@ -252,11 +252,11 @@ kind create cluster
 k9s --headless
 
 % cert-manager
-# get clusterissuers
+# kubectl get clusterissuers
 kubectl get clusterissuers
 
-# Get certmanager logs
+# kubectl get certmanager logs
 kubectl logs -f -n cert-manager -l app.kubernetes.io/instance=cert-manager
 
-# Describe vault clusterissuer
-kubectl describe clusterissuer vault-clusterissuer
+# kubectl describe vault clusterissuer
+kubectl describe clusterissuers vault-cluster-issuer
