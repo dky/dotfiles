@@ -86,6 +86,9 @@ kubectl get pvc -o wide
 # Get secrets
 kubectl get secrets
 
+# kubectl create secret tls
+kubectl create secret tls <secret_name> --key <key_file> --cert <cert_file>
+
 # Describe quotas for namespace
 kubectl describe resourcequota namespace-quotas
 
