@@ -233,7 +233,8 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] =
     vim.lsp.with(
     vim.lsp.diagnostic.on_publish_diagnostics,
     {
-        virtual_text = false,
+        -- Enable virtual text popup for errors/warnings, if disable use hover space-e to popup float--
+        virtual_text = true,
         update_in_insert = true
     }
 )
