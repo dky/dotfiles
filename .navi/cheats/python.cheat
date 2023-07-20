@@ -110,3 +110,11 @@ python manage.py runserver
 
 # uvicorn
 uvicorn main:app --reload
+
+% ruff
+
+# ruff check fix
+ruff check . --fix
+
+# ruff check .
+ruff check .
