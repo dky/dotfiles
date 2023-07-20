@@ -253,7 +253,7 @@ k9s --headless
 
 % cert-manager
 # get clusterissuers
-k get clusterissuers
+kubectl get clusterissuers
 
 # Get certmanager logs
 kubectl logs -f -n cert-manager -l app.kubernetes.io/instance=cert-manager
