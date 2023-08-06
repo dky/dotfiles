@@ -3,8 +3,8 @@ env:
 
 window:
   dimensions:
-    columns: 140
-    lines: 45
+    columns: 150
+    lines: 80
 
   padding:
     x: 1
@@ -172,4 +172,5 @@ key_bindings:
     #Go to prev tmux pane
   - { key: LBracket, mods: Command, chars: "\x01\x70" }
     #Go to next tmux pane
+  - { key: RBracket, mods: Command, chars: "\x01\x6e" }
   - { key: RBracket, mods: Command, chars: "\x01\x6e" }

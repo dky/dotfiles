@@ -3,6 +3,9 @@
 # apt packages critical for troubleshooting
 apt-get -y update && apt-get -y install net-tools iproute2 procps
 
+# apt-autoremove
+sudo apt autoremove
+
 % getent
 
 # find a userid
