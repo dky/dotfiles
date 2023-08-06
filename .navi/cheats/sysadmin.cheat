@@ -110,3 +110,7 @@ setspn -L <service_account>
 
 # setspn -Q <spn> - List service account mapped to SPN
 setspn -Q <spn>
+
+% sshd
+# disable ssh service
+sudo systemctl disable ssh.service
