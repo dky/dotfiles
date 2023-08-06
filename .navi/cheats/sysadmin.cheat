@@ -117,3 +117,9 @@ setspn -Q <spn>
 % sshd
 # disable ssh service
 sudo systemctl disable ssh.service
+
+# start sshd
+sudo service sshd start
+
+# stop sshd
+sudo service sshd stop
