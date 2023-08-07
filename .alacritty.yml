@@ -174,3 +174,7 @@ key_bindings:
     #Go to next tmux pane
   - { key: RBracket, mods: Command, chars: "\x01\x6e" }
   - { key: RBracket, mods: Command, chars: "\x01\x6e" }
+    #Tradtional copy and paste
+    # key: C interfers with bash ctrl-c at the shell though
+    #- { key: C, mods: Control, action: Copy }
+  - { key: V, mods: Control, action: Paste }
