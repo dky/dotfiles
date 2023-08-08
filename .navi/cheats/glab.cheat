@@ -1,10 +1,13 @@
 % glab
 
-# glab - mr list
+# glab mr list
 glab mr list
 
 # glab mr approve
-gh mr approve
+glab mr approve
+
+# glab mr merge
+glab mr merge
 
 # glab mr dev b2d
 glab mr create -b dev -a dky -t "Merge to Dev" -d "Merge branch changes to dev"
