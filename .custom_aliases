@@ -243,7 +243,11 @@ alias yug="yum -y upgrade"
 
 #cd dotfiles
 alias cddot="cd ~/.dotfiles"
-#alias cdd="cddot"
+#cd dotconfig
+alias cddotc="cd ~/.dotconfig"
+alias cddotconfig="cd ~/.dotconfig"
+alias cddotconf="cd ~/.dotconfig"
+
 alias cdtmp="cd ~/tmp"
 
 #cd tmp
