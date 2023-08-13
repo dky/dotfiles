@@ -125,7 +125,12 @@ selection:
 dynamic_title: false
 
 cursor:
-  style: Block
+  style:
+    shape: Beam
+    blinking: Always
+  blink_interval: 500
+  unfocused_hollow: true
+  thickness: 0.15
 
 # Live config reload (changes require restart)
 live_config_reload: true
