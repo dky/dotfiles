@@ -1,0 +1,10 @@
+% xrander
+
+# Start DP-2
+xrandr --output DP-2 --auto --right-of DP-1
+
+# Stop eDP-1
+xrandr --output eDP-1 --off
+
+# Start eDP-1
+xrandr --output eDP-1 --auto --left-of DP-1
