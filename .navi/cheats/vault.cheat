@@ -34,10 +34,10 @@ vault login -method userpass username=dky password=install
 vault secrets enable -path=<path> kv-v2
 
 # vault kv put
-vault kv put a/test user=jonny password=appleseed
+vault kv put -mount=a test user=jonny password=appleseed
 
 # vault kv get
-vault kv get a/test
+vault kv get -mount=a test
 
 # vault token revoke - self
 vault token revoke -self
