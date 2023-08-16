@@ -3,7 +3,7 @@
 # vault token renew
 vault token renew -increment=72h
 
-# vault token lookup - Self inspect one's token.
+# vault token lookup - self
 vault token lookup
 
 # vault unseal
@@ -39,5 +39,5 @@ vault kv put a/test user=jonny password=appleseed
 # vault kv get
 vault kv get a/test
 
-# vault token revoke
+# vault token revoke - self
 vault token revoke -self
