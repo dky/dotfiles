@@ -35,3 +35,6 @@ vault secrets enable -path=<path> kv-v2
 
 # vault kv put
 vault kv put a/test user=jonny password=appleseed
+
+# vault kv get
+vault kv get test a/test
