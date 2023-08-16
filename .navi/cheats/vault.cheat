@@ -23,3 +23,9 @@ vault auth enable userpass
 
 # vault user dky
 vault write auth/userpass/users/dky password=install
+
+# vault write policy
+vault policy write <policy_name> <policy_file>
+
+# vault login userpass
+vault login -method userpass username=dky password=install
