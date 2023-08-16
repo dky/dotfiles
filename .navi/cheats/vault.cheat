@@ -17,3 +17,9 @@ export VAULT_ADDR=http://<host>:8200
 
 # export vault token
 export VAULT_TOKEN=root
+
+# vault userpass
+vault auth enable userpass
+
+# vault user dky
+vault write auth/userpass/users/dky password=install
