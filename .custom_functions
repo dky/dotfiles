@@ -362,3 +362,7 @@ echo Editing with: $_e
 find ~/.dotfiles/.navi/cheats -type f | fzf | xargs $_e
 
  }
+
+function seed_vault() {
+	echo $1 > ~/.vault-token
+}
