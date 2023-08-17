@@ -21,6 +21,9 @@ export VAULT_TOKEN=root
 # vault userpass
 vault auth enable userpass
 
+# vault auth list
+vault auth list
+
 # vault user dky
 vault write auth/userpass/users/dky password=install policies=test
 
