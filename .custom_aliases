@@ -153,6 +153,9 @@ alias gd='git diff --color-moved=zebra --'
 alias gds="git diff --staged --color-moved=zebra --"
 alias gdc="git diff --cached"
 
+# Git root
+alias gro='cd $(git rev-parse --show-toplevel)'
+
 # Git tag
 #alias gtp="git tag $1 and git push origin $1"
 
