@@ -363,6 +363,6 @@ find ~/.dotfiles/.navi/cheats -type f | fzf | xargs $_e
 
  }
 
-function seed_vault() {
+function vault_seed() {
 	echo $1 > ~/.vault-token
 }
