@@ -122,7 +122,7 @@ selection:
   save_to_clipboard: true
 
 # Allow terminal applications to change Alacritty's window title.
-dynamic_title: false
+dynamic_title: true
 
 cursor:
   style:
