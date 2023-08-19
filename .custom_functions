@@ -1,4 +1,6 @@
 function color_my_prompt {
+	# set the current working directory as the terminal title
+	local __term_title="\[\e]0;\W\a\]"
 	local __user="\[\033[1;37m\]\u"
 	local __asterisk="\[\033[0;36m\]@"
 	local __host="\[\033[0;31m\]\h"
@@ -12,7 +14,7 @@ function color_my_prompt {
 	local __open_bracket="\[\033[1;30m\]["
 	local __close_bracket="\[\033[1;30m\]]"
 	local __last_color="\[\033[00m\]"
-	export PS1="$__open_bracket$__user$__asterisk$__host $__cur_location $__date$__seperator$__time$__close_bracket$__git_branch_color$__git_branch\n$__prompt_tail$__last_color "
+	export PS1="$__term_title$__open_bracket$__user$__asterisk$__host $__cur_location $__date$__seperator$__time$__close_bracket$__git_branch_color$__git_branch\n$__prompt_tail$__last_color "
 }
 
 function pmin {
