@@ -268,3 +268,6 @@ kubectl logs -f -n cert-manager -l app.kubernetes.io/instance=cert-manager
 
 # kubectl describe vault clusterissuer
 kubectl describe clusterissuers vault-cluster-issuer
+
+# kubectl decode base64 secret
+kubectl get secret <secret-name> -o json | jq '.data | map_values(@base64d)'
