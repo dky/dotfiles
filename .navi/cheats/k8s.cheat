@@ -121,6 +121,9 @@ kubectl logs -f --tail=100 <pod_name>
 # Get logs container in pod
 kubectl logs -c <container> <pod_name>
 
+# Get events
+kubectl get events
+
 # debug pod interactive
 kubectl run -i --tty --rm temp-debug-pod --image=<image> --restart=Never -- sh
 
