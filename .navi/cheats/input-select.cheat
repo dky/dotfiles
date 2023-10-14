@@ -1,0 +1,10 @@
+% InputSourceSelector
+
+# US input extended
+~/git/InputSourceSelector/InputSourceSelector select com.apple.keylayout.USExtended
+
+# Pinyin input
+~/git/InputSourceSelector/InputSourceSelector select com.apple.inputmethod.SCIM.ITABC
+
+# list InputSourceSelector
+~/git/InputSourceSelector/InputSourceSelector list-enabled
