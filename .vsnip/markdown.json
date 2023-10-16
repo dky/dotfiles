@@ -103,6 +103,20 @@
       ],
       "description": "Front Matter"
     },
+    "dp": {
+      "prefix": ["dp"],
+      "body": [
+        "---",
+        "title: \"$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE\"",
+        "date: \"$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE\"",
+        "tags: [\"daily-post\"]",
+        "draft: false",
+        "---",
+        "",
+        "$0"
+      ],
+      "description": "Daily post Front Matter"
+    },
     "ddate": {
       "prefix": ["ddate"],
       "body": [

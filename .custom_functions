@@ -131,6 +131,10 @@ function lb() {
 	nvim ~/logbook/$(date '+%Y-%m-%d').md
 }
 
+function dp() {
+	nvim $(date '+%Y-%m-%d').md
+}
+
 # FZF to switch Tmux sessions:
 function fs() {
 	export FZF_DEFAULT_OPTS=""
