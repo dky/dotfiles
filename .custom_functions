@@ -132,7 +132,7 @@ function lb() {
 }
 
 function dp() {
-	nvim $(date '+%Y-%m-%d').md
+	nvim content/daily/$(date '+%Y')/$(date '+%m')/$(date '+%Y-%m-%d').md
 }
 
 # FZF to switch Tmux sessions:
