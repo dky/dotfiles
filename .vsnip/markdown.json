@@ -113,7 +113,15 @@
         "draft: false",
         "---",
         "",
-        "$0"
+        "Today I learned:",
+        "",
+        "Vocabulary:",
+        "",
+        "$1",
+        "",
+        "Sentences:",
+        "",
+        "$2"
       ],
       "description": "Daily post Front Matter"
     },
