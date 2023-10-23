@@ -131,8 +131,17 @@ function lb() {
 	nvim ~/logbook/$(date '+%Y-%m-%d').md
 }
 
+# Check if we are in a nvim floaterm buffer
+if [[ -z "${NVIM}" ]]; then
+  _e="nvim"
+else
+  _e="floaterm"
+fi
+
 function dp() {
-	nvim content/daily/$(date '+%Y')/$(date '+%m')/$(date '+%Y-%m-%d').md
+
+
+	$_e content/daily/$(date '+%Y')/$(date '+%m')/$(date '+%Y-%m-%d').md
 }
 
 # FZF to switch Tmux sessions:
@@ -356,18 +365,10 @@ fzf-git-branch-checkout() {
  }
 
 en() {
-# Edit navi cheats
-
-if [[ -z "${NVIM}" ]]; then
-  _e="nvim"
-else
-  _e="floaterm"
-fi
-
-echo Editing with: $_e
-find ~/.dotfiles/.navi/cheats -type f | fzf | xargs $_e
-
- }
+	# Edit navi cheats
+	echo Editing with: $_e
+	find ~/.dotfiles/.navi/cheats -type f | fzf | xargs $_e
+}
 
 function vault_seed() {
 	echo $1 > ~/.vault-token
