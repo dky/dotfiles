@@ -30,6 +30,11 @@ if has('nvim')
 	Plug 'Pocco81/auto-save.nvim'
 	Plug 'zbirenbaum/copilot.lua'
 	Plug 'zbirenbaum/copilot-cmp'
+	" ChatGPT + it's dependent plugins
+	Plug 'jackMort/ChatGPT.nvim'
+	Plug 'MunifTanjim/nui.nvim'
+	Plug 'nvim-lua/plenary.nvim'
+	Plug 'nvim-telescope/telescope.nvim'
 else
 endif
 
