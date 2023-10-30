@@ -165,7 +165,9 @@ let g:leader_map.m = {
 let g:leader_map.c = {
       \ 'name' : '+ChatGPT' ,
       \ 'c' : [':ChatGPT'        , 'ChatGPT'],
-      \ 'e' : [':ChatGPTRun explain_code '        , 'ChatGPT explain code'],
+      \ 'e' : [':ChatGPTRun explain_code ', 'ChatGPT explain code'],
+      \ 't' : [':ChatGPTRun translate ', 'ChatGPT translate'],
+      \ 'g' : [':ChatGPTRun grammar_correction ', 'ChatGPT Grammar Correction'],
       \ }
 
 " localleader \ mappings
