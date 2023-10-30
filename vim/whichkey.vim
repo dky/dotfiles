@@ -23,7 +23,7 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
 
 " leader mappings - Check here before assigning a key
-let g:leader_map['c'] = [':!echo "Current file: %"'         , 'Print full path to current file']
+"let g:leader_map['c'] = [':!echo "Current file: %"'         , 'Print full path to current file']
 let g:leader_map['f'] = ['Files'                            , 'Search all files in current Git Repo']
 let g:leader_map['F'] = ['Find'                             , 'Custom Find() Use Rg + Fzf to find files']
 let g:leader_map['t'] = [':FloatermToggle'                  , 'Toggle Floaterm, space space also does this']
@@ -160,6 +160,12 @@ let g:leader_map.m = {
       \ 'p' : [':set ft=python'                      , 'Set filetype to python'],
       \ 'm' : [':marks'                              , ':marks'],
       \ 'r' : [':reg'                                , ':reg'],
+      \ }
+
+let g:leader_map.c = {
+      \ 'name' : '+ChatGPT' ,
+      \ 'c' : [':ChatGPT'        , 'ChatGPT'],
+      \ 'e' : [':ChatGPTRun explain_code '        , 'ChatGPT explain code'],
       \ }
 
 " localleader \ mappings
