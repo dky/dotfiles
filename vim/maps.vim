@@ -177,7 +177,7 @@ nmap tn :tabn<cr>
 
 " 'cd' towards the dir in which the current file is edited
 " but only change the path for the current window
-map <leader>cd :lcd %:h<cr>
+"map <leader>cd :lcd %:h<cr>
 " Open files located in the same dir in with the current file is edited
 map <leader>ew :e <C-R>=expand("%:p:h") . "/" <cr>
 
