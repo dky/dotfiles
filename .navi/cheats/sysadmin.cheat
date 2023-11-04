@@ -123,3 +123,9 @@ sudo service sshd start
 
 # stop sshd
 sudo service sshd stop
+
+# mount nfs
+sudo mount -o resvport pi4:/mnt/usb/shared $HOME/mnt/usb/
+
+# unmount nfs
+sudo umount -f $HOME/mnt/usb/
