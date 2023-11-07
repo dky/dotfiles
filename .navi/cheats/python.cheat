@@ -118,3 +118,6 @@ ruff check . --fix
 
 # ruff check .
 ruff check .
+
+# pytest install
+pip3 install pytest

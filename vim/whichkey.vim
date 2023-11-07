@@ -173,6 +173,7 @@ let g:leader_map.c = {
 " localleader \ mappings
 let g:localleader_map['t'] = [':FloatermNew --autoclose=0 pytest .'          , 'run pytest']
 let g:localleader_map['p'] = [':FloatermNew --autoclose=0 python3 %'         , 'run current buffer with python in float']
+let g:localleader_map['cd'] = [':lcd %:p:h' , 'cd to current dir']
 
 let g:localleader_map.c = {
       \ 'name' : '+codi' ,
