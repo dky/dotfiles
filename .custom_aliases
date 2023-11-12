@@ -205,6 +205,7 @@ alias azvmls='azure vm list'
 #hugo
 alias mp="make public"
 alias md="make dev"
+alias md="make local"
 #alias cddky="cd ~/git/dky.io/"
 #alias cddk="cd ~/git/dky.io/"
 #alias cddkc="cd ~/git/dky.io/content"
