@@ -28,6 +28,7 @@ if has('nvim')
 	" Required for vale
 	Plug 'jose-elias-alvarez/null-ls.nvim'
 	Plug 'Pocco81/auto-save.nvim'
+	Plug 'github/copilot.vim'
 	"Disabling lua copilot and all the chatgpt stuff for now
 	"Plug 'zbirenbaum/copilot.lua'
 	"Plug 'zbirenbaum/copilot-cmp'
