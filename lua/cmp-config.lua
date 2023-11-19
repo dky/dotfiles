@@ -69,7 +69,7 @@ cmp.setup({
     },
 })
 
-require("copilot_cmp").setup()
+--require("copilot_cmp").setup()
 
 require("cmp_dictionary").setup({
     dic = {
