@@ -373,3 +373,10 @@ en() {
 function vault_seed() {
 	echo $1 > ~/.vault-token
 }
+
+# Git Commit latest changes with a message
+function gcml() {
+	git add .
+	git commit -m "$(echo "Updates for: $(date +%d-%m-%y-%H:%M:%S)")"
+	git push origin "$(git symbolic-ref --short HEAD)" --force-with-lease
+}
