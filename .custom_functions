@@ -376,9 +376,11 @@ function vault_seed() {
 
 # Git Commit latest changes with a message
 function gcml() {
+	cd ~git/obsidian-dky
 	git add .
 	git commit -m "$(echo "Updates for: $(date +%d-%m-%y-%H:%M:%S)")"
 	git push origin "$(git symbolic-ref --short HEAD)" --force-with-lease
+	cd -
 }
 
 function pd() {
