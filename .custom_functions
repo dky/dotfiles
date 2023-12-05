@@ -397,6 +397,11 @@ function pd() {
 function pu() {
 	echo "Pushing dotfiles"
 	cd ~/.dotfiles && git push origin master && cd -
+	echo "Pushing dotconfig"
+	cd ~/.config && git push origin master && cd -
+	echo "Pushing dotvim"
+	cd ~/.vim && git push origin master && cd -
+
 	if [ -d ~/git/obsidian-dky ]; then
 		echo "Obsidian directory exists, pushing updates"
 		cd ~/git/obsidian-dky && git push origin "$(git symbolic-ref --short HEAD)" && cd -
