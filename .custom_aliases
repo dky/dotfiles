@@ -427,11 +427,6 @@ alias gri="grep -i"
 # markdown viewer md go get github.com/tlight/md -n 3 = update every 3 seconds
 #alias md="md -p 3050 -n 3"
 
-# Alias to sync up all .dotconfigs
-#alias pd="cd ~/.dotfiles && git pull origin master && source ~/.dotfiles/.custom_aliases && source ~/.dotfiles/.custom_functions && cd -"
-
-alias pu="cd ~/.dotfiles && git push origin master && cd ~/.vim && git push origin master && cd ~/.config && git push origin master && cd -"
-
 # Open directories using explorer using WSL
 alias exp="explorer.exe ."
 

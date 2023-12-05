@@ -133,9 +133,9 @@ function lb() {
 
 # Check if we are in a nvim floaterm buffer
 if [[ -z "${NVIM}" ]]; then
-  _e="nvim"
+	_e="nvim"
 else
-  _e="floaterm"
+	_e="floaterm"
 fi
 
 function dp() {
@@ -172,15 +172,15 @@ function fp() {
 		tmux select-pane -t ${target_window}.${target_pane}
 	else
 		tmux select-pane -t ${target_window}.${target_pane} &&
-		tmux select-window -t $target_window
+			tmux select-window -t $target_window
 	fi
 }
 
 function gignore() {
 	tee .gitignore <<EOF
-main
+	main
 
-*.swp
+	*.swp
 EOF
 }
 
@@ -189,9 +189,9 @@ function gitpc() {
 	if [ -d $GIT_HOOKS ]; then
 		echo "./git/hooks exists, creating post-commit script"
 		cat > $GIT_HOOKS/post-commit << EOF
-#!/bin/sh
+		#!/bin/sh
 
-git push origin master >/dev/null 2>&1 &
+		git push origin master >/dev/null 2>&1 &
 EOF
 chmod u+x $GIT_HOOKS/post-commit
 else
@@ -230,10 +230,10 @@ function uvenv {
 	source venv/bin/activate 
 	pip install --upgrade pip setuptools
 
-cat << EOF > ./requirements.txt
-sqlalchemy
-fastapi
-uvicorn
+	cat << EOF > ./requirements.txt
+	sqlalchemy
+	fastapi
+	uvicorn
 EOF
 
 cat << EOF > ./requirements-dev.txt
@@ -258,7 +258,7 @@ function unsetaws {
 
 # Git clone and cd into dir immediately after
 gccd() {
-  git clone "$1" && cd "$(basename "$1" .git)"
+	git clone "$1" && cd "$(basename "$1" .git)"
 }
 
 function dcu() {
@@ -303,28 +303,28 @@ function gtp() {
 
 # gshow - git commit browser
 gshow() {
-  local filter
-  if [ -n $@ ] && [ -f $@ ]; then
-    filter="-- $@"
-  fi
+	local filter
+	if [ -n $@ ] && [ -f $@ ]; then
+		filter="-- $@"
+	fi
 
-  git log \
-    --graph --color=always --abbrev=7 --format='%C(auto)%h %an %C(blue)%s %C(yellow)%cr' $@ | \
-    fzf \
-      --ansi --no-sort --reverse --tiebreak=index \
-      --preview "f() { set -- \$(echo -- \$@ | grep -o '[a-f0-9]\{7\}'); [ \$# -eq 0 ] || git show --color=always \$1 $filter; }; f {}" \
-      --bind "j:down,k:up,alt-j:preview-down,alt-k:preview-up,ctrl-f:preview-page-down,ctrl-b:preview-page-up,q:abort,ctrl-m:execute:
-                (grep -o '[a-f0-9]\{7\}' | head -1 |
-                xargs -I % sh -c 'git show --color=always % | less -R') << 'FZF-EOF'
-                {}
-                FZF-EOF" \
-      --preview-window=top:70% \
-      --height 100%
-}
+	git log \
+		--graph --color=always --abbrev=7 --format='%C(auto)%h %an %C(blue)%s %C(yellow)%cr' $@ | \
+		fzf \
+		--ansi --no-sort --reverse --tiebreak=index \
+		--preview "f() { set -- \$(echo -- \$@ | grep -o '[a-f0-9]\{7\}'); [ \$# -eq 0 ] || git show --color=always \$1 $filter; }; f {}" \
+		--bind "j:down,k:up,alt-j:preview-down,alt-k:preview-up,ctrl-f:preview-page-down,ctrl-b:preview-page-up,q:abort,ctrl-m:execute:
+			(grep -o '[a-f0-9]\{7\}' | head -1 |
+				xargs -I % sh -c 'git show --color=always % | less -R') << 'FZF-EOF'
+							{}
+							FZF-EOF" \
+								--preview-window=top:70% \
+								--height 100%
+							}
 
-function exd() {
-	exercism download --exercise=$1 --track=$2
-}
+							function exd() {
+								exercism download --exercise=$1 --track=$2
+							}
 
 # Vault tidy
 vtidy() {
@@ -334,25 +334,25 @@ vtidy() {
 
 # Credit to https://polothy.github.io/post/2019-08-19-fzf-git-checkout
 fzf-git-branch() {
-	git rev-parse HEAD > /dev/null 2>&1 || return
+git rev-parse HEAD > /dev/null 2>&1 || return
 
-	git branch --color=always --all --sort=-committerdate |
-		grep -v HEAD |
-		fzf --height 50% --ansi --no-multi --preview-window right:65% \
-		--preview 'git log -n 50 --color=always --date=short --pretty="format:%C(auto)%cd %h%d %s" $(sed "s/.* //" <<< {})' |
-		sed "s/.* //"
+git branch --color=always --all --sort=-committerdate |
+	grep -v HEAD |
+	fzf --height 50% --ansi --no-multi --preview-window right:65% \
+	--preview 'git log -n 50 --color=always --date=short --pretty="format:%C(auto)%cd %h%d %s" $(sed "s/.* //" <<< {})' |
+	sed "s/.* //"
 }
 
 fzf-git-branch-checkout() {
-	git rev-parse HEAD > /dev/null 2>&1 || return
+git rev-parse HEAD > /dev/null 2>&1 || return
 
-	local branch
+local branch
 
-	branch=$(fzf-git-branch)
-	if [[ "$branch" = "" ]]; then
-		echo "No branch selected."
-		return
-	fi
+branch=$(fzf-git-branch)
+if [[ "$branch" = "" ]]; then
+	echo "No branch selected."
+	return
+fi
 
 	 # If branch name starts with 'remotes/' then it is a remote branch. By
 	 # using --track and a remote branch name, it is the same as:
@@ -364,15 +364,15 @@ fzf-git-branch-checkout() {
 	 fi
  }
 
-en() {
-	# Edit navi cheats
-	echo Editing with: $_e
-	find ~/.dotfiles/.navi/cheats -type f | fzf | xargs $_e
-}
+ en() {
+	 # Edit navi cheats
+	 echo Editing with: $_e
+	 find ~/.dotfiles/.navi/cheats -type f | fzf | xargs $_e
+ }
 
-function vault_seed() {
-	echo $1 > ~/.vault-token
-}
+ function vault_seed() {
+	 echo $1 > ~/.vault-token
+ }
 
 # Git Commit latest changes with a message
 function gcml() {
@@ -389,6 +389,17 @@ function pd() {
 	if [ -d ~/git/obsidian-dky ]; then
 		echo "Obsidian directory exists, pulling updates"
 		cd ~/git/obsidian-dky && git pull origin "$(git symbolic-ref --short HEAD)" && cd -
+	else
+		echo "Obsidian repo directory doesn't exist"
+	fi
+}
+
+function pu() {
+	echo "Pushing dotfiles"
+	cd ~/.dotfiles && git push origin master && cd -
+	if [ -d ~/git/obsidian-dky ]; then
+		echo "Obsidian directory exists, pushing updates"
+		cd ~/git/obsidian-dky && git push origin "$(git symbolic-ref --short HEAD)" && cd -
 	else
 		echo "Obsidian repo directory doesn't exist"
 	fi
