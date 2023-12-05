@@ -376,11 +376,9 @@ fi
 
 # Git Commit latest changes with a message
 function gcml() {
-	cd ~git/obsidian-dky
 	git add .
 	git commit -m "$(echo "Updates for: $(date +%d-%m-%y-%H:%M:%S)")"
 	git push origin "$(git symbolic-ref --short HEAD)" --force-with-lease
-	cd -
 }
 
 function pd() {
@@ -404,7 +402,7 @@ function pu() {
 
 	if [ -d ~/git/obsidian-dky ]; then
 		echo "Obsidian directory exists, pushing updates"
-		cd ~/git/obsidian-dky && git push origin "$(git symbolic-ref --short HEAD)" && cd -
+		cd ~/git/obsidian-dky && gcml && git push origin "$(git symbolic-ref --short HEAD)" && cd -
 	else
 		echo "Obsidian repo directory doesn't exist"
 	fi
