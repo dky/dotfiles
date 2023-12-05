@@ -59,6 +59,9 @@ sudo netstat -plnt
 # grab listening udp ports, p = process, l = listen, n = no resolve service, t = tcp, use sudo to get pids
 sudo netstat -plnu
 
+# get service listening on port
+netst -lntp
+
 % tail
 
 # tail /var/log/syslog
