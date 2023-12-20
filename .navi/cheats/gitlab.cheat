@@ -1,0 +1,6 @@
+% gitlab
+
+# gitlab Delete pipeline
+curl --header "PRIVATE-TOKEN: <PAT_TOKEN>" --request "DELETE" "https://<GITLAB_URL>/api/v4/projects/1/pipelines/46"
+
+
