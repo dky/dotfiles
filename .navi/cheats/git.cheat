@@ -1,5 +1,8 @@
 % git
 
+# git clean, discard local files directories
+git clean -fd
+
 # git discard unstaged changes
 git restore .
 
