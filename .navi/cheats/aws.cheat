@@ -17,3 +17,6 @@ aws lambda list-functions
 
 # aws sso login
 aws sso login --profile <my-profile>
+
+# list instance profiles
+aws iam list-instance-profiles
