@@ -20,3 +20,6 @@ aws sso login --profile <my-profile>
 
 # list instance profiles
 aws iam list-instance-profiles
+
+# export aws profile AWS_PROFILE
+export AWS_PROFILE=
