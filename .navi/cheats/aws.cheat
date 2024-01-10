@@ -23,3 +23,6 @@ aws iam list-instance-profiles
 
 # export aws profile AWS_PROFILE
 export AWS_PROFILE=
+
+# eks node viewer
+eks-node-viewer --resources cpu,memory --disable-pricing
