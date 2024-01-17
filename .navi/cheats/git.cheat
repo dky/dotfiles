@@ -1,5 +1,14 @@
 % git
 
+# list tags
+git tag -l
+
+# delete a tag
+git tag -d
+
+# git push tag, this is useful if a branch already exist with same tag
+git push origin tag 
+
 # git clean, discard local files directories
 git clean -fd
 
