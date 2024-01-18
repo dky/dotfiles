@@ -9,6 +9,9 @@ git tag -d
 # git push tag, this is useful if a branch already exist with same tag
 git push origin tag 
 
+# list remote tags origin
+git ls-remote --tags origin
+
 # git clean, discard local files directories
 git clean -fd
 
