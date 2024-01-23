@@ -157,6 +157,9 @@ git switch
 # Git create new branch equiv to git checkout -b <new_branch>
 git switch -c <branch>
 
+# Git switch branch discard changes
+git switch -c <branch> --discard-changes
+
 # Git fetch dev:dev branch without having to check it out
 git fetch origin dev:dev
 
