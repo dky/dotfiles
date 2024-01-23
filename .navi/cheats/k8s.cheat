@@ -124,6 +124,9 @@ kubectl logs -c <container> <pod_name>
 # Get events
 kubectl get events
 
+# Get events watch
+kubectl get events -w
+
 # debug pod interactive
 kubectl run -i --tty --rm temp-debug-pod --image=<image> --restart=Never -- sh
 
