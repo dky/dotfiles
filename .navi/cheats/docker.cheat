@@ -64,3 +64,6 @@ colima list
 
 # export DOCKER_HOST ssh
 export DOCKER_HOST="ssh://<HOST>"
+
+# download docker-compose 1.29.2 - last docker-compose 1 release.
+curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o docker-compose
