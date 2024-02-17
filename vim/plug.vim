@@ -7,7 +7,6 @@ if has('nvim')
 	Plug 'hrsh7th/cmp-path'
 	Plug 'hrsh7th/cmp-cmdline'
 	Plug 'uga-rosa/cmp-dictionary'
-
 	" For vsnip users.
 	Plug 'hrsh7th/cmp-vsnip'
 	Plug 'hrsh7th/vim-vsnip'
@@ -28,26 +27,15 @@ if has('nvim')
 	" Required for vale
 	Plug 'jose-elias-alvarez/null-ls.nvim'
 	Plug 'Pocco81/auto-save.nvim'
-
 	"Check if ENABLE_COPILOT env is set. If it is load the co-pilot plugin
 	if !empty($ENABLE_COPILOT)
 		Plug 'github/copilot.vim'
 	endif
-	"Disabling lua copilot and all the chatgpt stuff for now
-	"Plug 'zbirenbaum/copilot.lua'
-	"Plug 'zbirenbaum/copilot-cmp'
-	" ChatGPT + it's dependent plugins
-	"Plug 'jackMort/ChatGPT.nvim'
-	"Plug 'MunifTanjim/nui.nvim'
-	"Plug 'nvim-lua/plenary.nvim'
-	"Plug 'nvim-telescope/telescope.nvim'
 else
 endif
 
 " Python text objects
 " Disabling - This causes neovim on wsl to open files slowly
-"Plug 'jeetsukumaran/vim-pythonsense'
-
 " Jinja2 for salt
 Plug 'Glench/Vim-Jinja2-Syntax'
 
@@ -71,22 +59,18 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-abolish'
-"Plug 'fatih/molokai'
 Plug 'tanvirtin/monokai.nvim'
 Plug 'fatih/vim-go'
 "Plug 'preservim/nerdcommenter'
 "Plug 'preservim/nerdtree'
 "Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'godlygeek/tabular'
-Plug 'jamesroutley/vim-logbook'
-Plug 'metakirby5/codi.vim'
 Plug 'benmills/vimux'
 Plug 'roxma/vim-tmux-clipboard'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'pbogut/fzf-mru.vim'
 Plug 'justinmk/vim-sneak'
-Plug 'Pocco81/AutoSave.nvim'
 Plug 'dky/vim-aftercolors'
 
 Plug 'liuchengxu/vim-which-key'
