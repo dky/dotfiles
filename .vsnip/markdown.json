@@ -4,6 +4,11 @@
       "body": "[$1]($2)$0",
       "description": "External link"
     },
+    "img": {
+      "prefix": ["img"],
+      "body": "{{<img \"$0\" >}}",
+      "description": "image link"
+    },
     "h1": {
       "prefix": ["h1"],
       "body": "# $0",
