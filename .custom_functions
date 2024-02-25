@@ -139,22 +139,15 @@ else
 fi
 
 function dp() {
-
-
 	$_e content/daily/$(date '+%Y')/$(date '+%m')/$(date '+%Y-%m-%d').md
 }
 
 # FZF to switch Tmux sessions:
-function fs() {
-	export FZF_DEFAULT_OPTS=""
-	local -r fmt='#{session_id}:|#S|(#{session_attached} attached)'
-		{ tmux display-message -p -F "$fmt" && tmux list-sessions -F "$fmt"; } \
-			| awk '!seen[$1]++' \
-			| column -t -s'|' \
-			| fzf -q '$' --reverse --prompt 'switch session: ' -1 \
-			| cut -d':' -f1 \
-			| xargs tmux switch-client -t
-		}
+#
+function tmuxSessionSwitch() {
+	session=$(tmux list-windows -a | fzf | sed 's/: .*//g')
+	tmux switch-client -t "$session"
+}
 
 # FZF to switch Tmux panes:
 function fp() {
@@ -334,25 +327,25 @@ vtidy() {
 
 # Credit to https://polothy.github.io/post/2019-08-19-fzf-git-checkout
 fzf-git-branch() {
-git rev-parse HEAD > /dev/null 2>&1 || return
+	git rev-parse HEAD > /dev/null 2>&1 || return
 
-git branch --color=always --all --sort=-committerdate |
-	grep -v HEAD |
-	fzf --height 50% --ansi --no-multi --preview-window right:65% \
-	--preview 'git log -n 50 --color=always --date=short --pretty="format:%C(auto)%cd %h%d %s" $(sed "s/.* //" <<< {})' |
-	sed "s/.* //"
-}
+	git branch --color=always --all --sort=-committerdate |
+		grep -v HEAD |
+		fzf --height 50% --ansi --no-multi --preview-window right:65% \
+		--preview 'git log -n 50 --color=always --date=short --pretty="format:%C(auto)%cd %h%d %s" $(sed "s/.* //" <<< {})' |
+		sed "s/.* //"
+	}
 
-fzf-git-branch-checkout() {
-git rev-parse HEAD > /dev/null 2>&1 || return
+	fzf-git-branch-checkout() {
+		git rev-parse HEAD > /dev/null 2>&1 || return
 
-local branch
+		local branch
 
-branch=$(fzf-git-branch)
-if [[ "$branch" = "" ]]; then
-	echo "No branch selected."
-	return
-fi
+		branch=$(fzf-git-branch)
+		if [[ "$branch" = "" ]]; then
+			echo "No branch selected."
+			return
+		fi
 
 	 # If branch name starts with 'remotes/' then it is a remote branch. By
 	 # using --track and a remote branch name, it is the same as:
