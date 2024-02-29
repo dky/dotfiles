@@ -32,6 +32,12 @@ kubectl describe node <nodes>
 
 $ nodes:  kubectl get nodes --no-headers -o custom-columns=":metadata.name"
 
+# Scale karpenter controller
+kubectl scale deployment karpenter --replicas=1 -n karpenter
+
+# Scale gatekeeper controller-manager
+kubectl scale deployment gatekeeper-controller-manager --replicas=1 -n kube-system
+
 # Get autoscaler logs
 kubectl logs -f -n kube-system -l app.kubernetes.io/name=aws-cluster-autoscaler | egrep -v "failed to acquire lease|lock is held by cluster*"
 

@@ -74,3 +74,5 @@ Plug 'justinmk/vim-sneak'
 Plug 'dky/vim-aftercolors'
 
 Plug 'liuchengxu/vim-which-key'
+
+Plug 'preservim/nerdcommenter'
