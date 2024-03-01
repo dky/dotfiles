@@ -34,8 +34,6 @@ if has('nvim')
 else
 endif
 
-" Python text objects
-" Disabling - This causes neovim on wsl to open files slowly
 " Jinja2 for salt
 Plug 'Glench/Vim-Jinja2-Syntax'
 
@@ -61,9 +59,6 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-abolish'
 Plug 'tanvirtin/monokai.nvim'
 Plug 'fatih/vim-go'
-"Plug 'preservim/nerdcommenter'
-"Plug 'preservim/nerdtree'
-"Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'godlygeek/tabular'
 Plug 'benmills/vimux'
 Plug 'roxma/vim-tmux-clipboard'
@@ -72,7 +67,5 @@ Plug 'junegunn/fzf.vim'
 Plug 'pbogut/fzf-mru.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'dky/vim-aftercolors'
-
 Plug 'liuchengxu/vim-which-key'
-
 Plug 'preservim/nerdcommenter'

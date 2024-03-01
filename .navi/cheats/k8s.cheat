@@ -33,7 +33,7 @@ kubectl describe node <nodes>
 $ nodes:  kubectl get nodes --no-headers -o custom-columns=":metadata.name"
 
 # Scale karpenter controller
-kubectl scale deployment karpenter --replicas=1 -n karpenter
+kubectl scale deployment karpenter --replicas=1 -n kube-system
 
 # Scale gatekeeper controller-manager
 kubectl scale deployment gatekeeper-controller-manager --replicas=1 -n kube-system
@@ -45,7 +45,7 @@ kubectl logs -f -n kube-system -l app.kubernetes.io/name=aws-cluster-autoscaler 
 kubectl scale deployment <name> --replicas=<count>
 
 # karpenter logs
-kubectl logs -f -n karpenter -l app.kubernetes.io/name=karpenter
+kubectl logs -f -n kube-system -l app.kubernetes.io/name=karpenter
 
 # Get kube-system versions
 kubectl get deployment,daemonset,statefulsets -o=jsonpath="{range .items[*]}{'\n'}{.metadata.name}{':\t'}{range .spec.template.spec.containers[*]}{.image}{', '}{end}{end}" -n kube-system
