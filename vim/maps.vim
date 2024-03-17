@@ -47,6 +47,8 @@ imap <F1> <Esc>
 "nmap <F1> :NERDTreeToggle<cr>
 " Turn this on if you want to disable help in normal mode
 "nmap <F1> <Esc>
+"
+set pastetoggle=<F2>
 
 nnoremap <silent> <F4> :call NumberToggle()<cr>
 
