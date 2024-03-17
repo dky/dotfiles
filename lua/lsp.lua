@@ -245,6 +245,11 @@ for type, icon in pairs(signs) do
     vim.fn.sign_define(hl, {text = icon, texthl = hl, numhl = hl})
 end
 
+-- We don't need any plugins just install ltex-ls and use the configuration below.
+-- Make sure you set the environment variables LT_ below
+local lt_premium_username = os.getenv("LT_PREMIUM_EMAIL")
+local lt_premium_pass = os.getenv("LT_PREMIUM_PASS")
+
 nvim_lsp.ltex.setup {
     on_attach = on_attach,
     cmd = {"ltex-ls"},
@@ -255,8 +260,8 @@ nvim_lsp.ltex.setup {
         language = "en",
         languageToolHttpServerUri='https://api.languagetoolplus.com',
         languageToolOrg = {
-          username='abc',
-          apiKey = 'abc',
+          username = lt_premium_username,
+          apiKey = lt_premium_pass,
         }
       }
     }
