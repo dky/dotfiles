@@ -244,3 +244,20 @@ for type, icon in pairs(signs) do
     local hl = "DiagnosticSign" .. type
     vim.fn.sign_define(hl, {text = icon, texthl = hl, numhl = hl})
 end
+
+nvim_lsp.ltex.setup {
+    on_attach = on_attach,
+    cmd = {"ltex-ls"},
+    filetypes = { "markdown", "text" },
+    flags = { debounce_text_changes = 300 },
+    settings ={
+      ltex = {
+        language = "en",
+        languageToolHttpServerUri='https://api.languagetoolplus.com',
+        languageToolOrg = {
+          username='abc',
+          apiKey = 'abc',
+        }
+      }
+    }
+}
