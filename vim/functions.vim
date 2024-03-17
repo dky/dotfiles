@@ -1,7 +1,7 @@
 " Disable line numbers, Git Gutter, Indent Guides
 function! NumberToggle()
 	if(&number == 1 && &list == 1)
-		IndentBlanklineDisable
+		"IndentBlanklineDisable
 		set nonumber
 		set nolist
 		set signcolumn=no
@@ -11,7 +11,7 @@ function! NumberToggle()
 		"setlocal conceallevel=0
 		"set concealcursor=
 	else
-		IndentBlanklineEnable
+		"IndentBlanklineEnable
 		set number
 		set list
 		set signcolumn=yes
