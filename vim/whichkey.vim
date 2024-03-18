@@ -34,6 +34,7 @@ let g:leader_map['q'] = [':bd'                              , 'Buffer close to e
 let g:leader_map['s'] = [':!tmux new-window bash -ci fp'    , 'Switch tmux sessions']
 "let g:leader_map['r'] = [ ':Reserved - Don't use           , 'Plan to use this to run files similar to F8.']
 let g:leader_map['y'] = [ ':FloatermSend pytest'            , 'Send pytest to floatterm']
+let g:leader_map['G'] = ['Goyo'                             , 'Custom Find() Use Rg + Fzf to find files']
 
 " :nohl but with whichkey
 map <silent><leader>l :nohl<CR>
