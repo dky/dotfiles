@@ -4,6 +4,16 @@
       "body": "[$1]($2)$0",
       "description": "External link"
     },
+    "cite": {
+      "prefix": ["cite"],
+      "body": [
+        "> $1",
+        "> -- <cite>$2<cite>",
+        "",
+        "$0"
+      ],
+      "description": "Site"
+    },
     "img": {
       "prefix": ["img"],
       "body": "{{<img \"$0\" >}}",
