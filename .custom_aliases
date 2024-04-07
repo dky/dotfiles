@@ -304,6 +304,7 @@ alias yi="sudo yum -y install"
 
 #nvim alias to ni
 alias ni=nvim
+alias nic=nvim --clean
 
 #alias dict to dic
 alias dict=dic
