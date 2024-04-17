@@ -16,4 +16,4 @@ openssl s_client -showcerts -connect <url>:443 </dev/null
 openssl s_client -showcerts -servername <url> -connect <url>:443 </dev/null
 
 # nginx - create a bundle cert for ssl_certificate
-cat cert.pem chain.pem > bundle.pm
+cat cert.pem chain.pem > bundle.pem
