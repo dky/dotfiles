@@ -33,8 +33,8 @@ alias packit="packc && packb"
 #docker aliases
 alias dkcl="docker context list"
 alias dkcu="docker context use"
-alias dcb="docker-compose build"
-alias dc="docker-compose"
+alias dcb="docker compose build"
+alias dc="docker compose"
 alias dkls="docker images"
 alias dkps="docker ps -a"
 #docker last container to start, only list id

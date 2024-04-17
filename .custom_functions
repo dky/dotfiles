@@ -258,20 +258,20 @@ function dcu() {
 	echo Starting: $1
 	FILE=$1
 	COMPOSE_FILE=${FILE:-docker-compose.yml} 
-	docker-compose -f $COMPOSE_FILE up -d
+	docker compose -f $COMPOSE_FILE up -d
 }
 function dcr() {
 	echo Re-Starting: $1
 	FILE=$1
 	COMPOSE_FILE=${FILE:-docker-compose.yml} 
-	docker-compose -f $COMPOSE_FILE restart
+	docker compose -f $COMPOSE_FILE restart
 }
 function dcd() {
 	echo Stopping: $1
 	FILE=$1
 	COMPOSE_FILE=${FILE:-docker-compose.yml} 
 	echo Stopping: $COMPOSE_FILE
-	docker-compose -f $COMPOSE_FILE stop
+	docker compose -f $COMPOSE_FILE stop
 }
 
 function mysqlh() {
