@@ -1,0 +1,4 @@
+% go
+
+# Install go into .local
+tar -C ~/.local -xzvf <golang compressed>
