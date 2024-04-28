@@ -31,6 +31,7 @@ kubectl drain <nodes> --ignore-daemonsets
 kubectl describe node <nodes>
 
 $ nodes:  kubectl get nodes --no-headers -o custom-columns=":metadata.name"
+$ deployments:  kubectl get deployments --no-headers -o custom-columns=":metadata.name"
 
 # Get karpenter logs
 kubectl logs -f -l app.kubernetes.io/name=karpenter -n kube-system
@@ -47,8 +48,11 @@ kubectl logs -f -n kube-system -l app.kubernetes.io/name=aws-cluster-autoscaler 
 # Scale autoscaler
 kubectl scale deployment cluster-autoscaler-aws-cluster-autoscaler --replicas=1 -n kube-system
 
-# Scale deployment
-kubectl scale deployment <name> --replicas=<count>
+# Scale autoscaler
+kubectl scale deployment cluster-autoscaler-aws-cluster-autoscaler --replicas=1 -n kube-system
+
+# Scale deployment to 1
+kubectl scale deployment <deployments> --replicas=1
 
 # Get kube-system versions
 kubectl get deployment,daemonset,statefulsets -o=jsonpath="{range .items[*]}{'\n'}{.metadata.name}{':\t'}{range .spec.template.spec.containers[*]}{.image}{', '}{end}{end}" -n kube-system
