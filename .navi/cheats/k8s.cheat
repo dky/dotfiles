@@ -32,6 +32,7 @@ kubectl describe node <nodes>
 
 $ nodes:  kubectl get nodes --no-headers -o custom-columns=":metadata.name"
 $ deployments:  kubectl get deployments --no-headers -o custom-columns=":metadata.name"
+$ nodeclaims:  kubectl get nodeclaims --no-headers -o custom-columns=":metadata.name"
 
 # Get karpenter logs
 kubectl logs -f -l app.kubernetes.io/name=karpenter -n kube-system
@@ -169,6 +170,9 @@ kubectl delete pod <pod_name>
 
 # Delete all pods from namespace
 kubectl delete --all-pods --namespace=<namespace>
+
+# Delete nodeclaims
+kubectl delete <nodeclaims>
 
 # Get pod container port
 kubectl get pod <pod_name> --template='{{(index (index .spec.containers 0).ports 0).containerPort}}{{"\n"}}'
