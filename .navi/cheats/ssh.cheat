@@ -1,0 +1,4 @@
+% ssh
+
+# Port forwarding -N = Don't spawn a shell
+ssh -N -L <local_port>:localhost:<remote_port> <user>@<remote_host>
