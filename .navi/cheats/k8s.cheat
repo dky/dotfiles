@@ -142,6 +142,9 @@ kubectl run -i --tty --rm temp-debug-pod --image=<image> --restart=Never -- sh
 # Watch pods
 watch -n 2 "kubectl get pods"
 
+# Watch nodeclaims
+watch -n 2 "kubectl get nodeclaims"
+
 # Get pods
 kubectl get pods
 
