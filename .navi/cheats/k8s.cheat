@@ -172,7 +172,7 @@ kubectl delete pod <pod_name>
 kubectl delete --all-pods --namespace=<namespace>
 
 # Delete nodeclaims
-kubectl delete <nodeclaims>
+kubectl delete nodeclaim <nodeclaims>
 
 # Get pod container port
 kubectl get pod <pod_name> --template='{{(index (index .spec.containers 0).ports 0).containerPort}}{{"\n"}}'
