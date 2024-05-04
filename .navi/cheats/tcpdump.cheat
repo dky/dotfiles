@@ -1,0 +1,4 @@
+% tcpdump
+
+# tcpdump write a pcap with date
+tcpdump -i <interface> -s0 -w $(date +"%Y-%m-%d-%H:%M:%S")
