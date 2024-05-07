@@ -4,6 +4,27 @@
       "body": "[$1]($2)$0",
       "description": "External link"
     },
+    "todo": {
+      "prefix": ["td"],
+      "body": "- [] {{< tag todo >}} - $0",
+      "description": "todo snippet"
+    },
+    "log": {
+      "prefix": ["log"],
+      "body": [
+        "---",
+        "title: ($CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE)",
+        "date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+        "weight: 1",
+        "version: v.0.0.$1",
+        "---",
+        "",
+        "$0",
+        "",
+        "### Additional notes"
+      ],
+      "description": "Daily log"
+    },
     "cite": {
       "prefix": ["cite"],
       "body": [
