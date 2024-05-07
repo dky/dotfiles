@@ -14,14 +14,15 @@
       "body": [
         "---",
         "title: ($CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE)",
-        "date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+        "date: $CURRENT_YEAR-$CURRENT_MONTH-${CURRENT_DATE}T$CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND+05:00",
         "weight: 1",
         "version: v.0.0.$1",
         "---",
         "",
         "$0",
         "",
-        "### Additional notes"
+        "##### Additional notes:",
+        ""
       ],
       "description": "Daily log"
     },
