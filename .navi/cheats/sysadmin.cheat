@@ -132,3 +132,7 @@ sudo mount -o resvport pi4:/mnt/usb/shared $HOME/mnt/usb/
 
 # unmount nfs
 sudo umount -f $HOME/mnt/usb/
+
+% reload
+# source
+source ~/.dot_private && source ~/.bash_profile && source ~/.bashrc
