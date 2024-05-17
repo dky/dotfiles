@@ -8,8 +8,3 @@ echo '<content>' >> <file_name>
 
 # heredoc, close with end
 cat > <file> <<end
-
-% sed
-
-# find all files and replace string with sed
-find . -type f -exec gsed -i 's/<search>/<replace>/g' {} +
