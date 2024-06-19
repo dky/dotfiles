@@ -133,6 +133,7 @@ alias gamend='git commit --amend'
 alias gcma='git add . && git commit -m'
 alias gmca="gcma"
 alias gcam="gcma"
+alias gcml="git commit -a -m "$(echo "Latest updates at: $(date +%m-%d-%y-%H:%M:%S)")""
 
 # Git remotes
 alias grmo='git remote rm origin'
