@@ -106,6 +106,16 @@ nvim_lsp.terraformls.setup {
     on_attach = on_attach
 }
 
+nvim_lsp.helm_ls.setup {
+  settings = {
+    ['helm-ls'] = {
+      yamlls = {
+        path = "yaml-language-server",
+      }
+    }
+  }
+}
+
 -- Experiment with latex
 nvim_lsp.texlab.setup {
     on_attach = on_attach
