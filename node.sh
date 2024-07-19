@@ -7,11 +7,11 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 source ~/.bashrc
 
 # Install 18.x version of node
-nvm install 18.0.0
+nvm install 20.15.1
 
 # Install all the lsp cruft
 npm i -g pyright
-npm i -g bash-language-server@1.17.0
+npm i -g bash-language-server
 npm i -g dockerfile-language-server-nodejs
 npm i -g yaml-language-server
 npm i -g yarn
