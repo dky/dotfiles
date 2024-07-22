@@ -116,22 +116,6 @@ nvim_lsp.helm_ls.setup {
   }
 }
 
--- Experiment with latex
-nvim_lsp.texlab.setup {
-    on_attach = on_attach
-}
-
--- Experiment with yamlls and kubernetes
-nvim_lsp.yamlls.setup {
-    settings = {
-        yaml = {
-            schemas = {
-            }
-        }
-    },
-    on_attach = on_attach
-}
-
 -- Setup pylsp
 nvim_lsp.pylsp.setup {
     enable = false,
