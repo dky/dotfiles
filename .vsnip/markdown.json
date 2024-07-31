@@ -4,6 +4,11 @@
       "body": "[$1]($2)$0",
       "description": "External link"
     },
+    "rel": {
+      "prefix": ["rel"],
+      "body": "[$1]({{< ref $2 >}})$0",
+      "description": "Relative link"
+    },
     "todo": {
       "prefix": ["td"],
       "body": "- [] {{< tag todo >}} - $0",
