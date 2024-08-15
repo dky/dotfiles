@@ -126,6 +126,9 @@ kubectl get pods -n kube-system
 # Get pods from namespace (add option '-o wide' for details)
 kubectl get pods -n <namespace>
 
+# Edit aws-auth configmap
+kubectl edit configmap aws-auth -n kube-system
+
 # Get running|completed pods
 kubectl get pods --all-namespaces -o wide | egrep -v 'Running|Completed'
 
