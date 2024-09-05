@@ -221,8 +221,8 @@ alias exs="exercism sumbit"
 alias cdexp="cd $HOME/Exercism/python"
 
 #terraform
-alias tp="terraform plan"
-alias td="terraform destroy -auto-approve"
+alias tp="terraform plan -no-color -out /tmp/tf.plan"
+alias td="terraform destroy"
 alias ta="terraform apply -auto-approve"
 alias tsrm="terraform state rm"
 alias ti="terraform init"
