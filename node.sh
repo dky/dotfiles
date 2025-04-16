@@ -2,12 +2,12 @@
 # Node version manager - Bootstrap node using nvm
 
 # Install it, you should have the aliases already defined
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
 
 source ~/.bashrc
 
 # Install 18.x version of node
-nvm install 20.15.1
+nvm install 23.11.0
 
 # Install all the lsp cruft
 npm i -g pyright
