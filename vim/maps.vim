@@ -48,7 +48,8 @@ imap <F1> <Esc>
 " Turn this on if you want to disable help in normal mode
 "nmap <F1> <Esc>
 "
-set pastetoggle=<F2>
+"Paste toggle is depreciated: https://cirw.in/blog/bracketed-paste
+"set pastetoggle=<F2>
 
 nnoremap <silent> <F4> :call NumberToggle()<cr>
 
