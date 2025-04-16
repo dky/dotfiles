@@ -140,7 +140,7 @@ require "nvim-treesitter.configs".setup {
     }
 }
 
-nvim_lsp.ruff_lsp.setup {
+nvim_lsp.ruff.setup {
     on_attach = on_attach,
     init_options = {
         settings = {
