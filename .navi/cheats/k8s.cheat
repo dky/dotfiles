@@ -300,3 +300,6 @@ kubectl describe clusterissuers vault-cluster-issuer
 
 # kubectl decode base64 secret
 kubectl get secret <secret-name> -o json | jq '.data | map_values(@base64d)'
+
+# kubectl decode docker gitlab-reg
+kubectl describe secret gitlab-reg --output="jsonpath={.data\.dockerconfigjson}" | base64 --decode
