@@ -26,10 +26,8 @@ if has('nvim')
 	Plug 'Pocco81/auto-save.nvim'
 	" helm yaml
 	Plug 'towolf/vim-helm'
-	"Check if ENABLE_COPILOT env is set. If it is load the co-pilot plugin
-	if !empty($ENABLE_COPILOT)
-		Plug 'github/copilot.vim'
-	endif
+	" copilot
+	Plug 'github/copilot.vim'
 else
 endif
 
