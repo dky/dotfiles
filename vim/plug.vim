@@ -20,8 +20,10 @@ if has('nvim')
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'lewis6991/gitsigns.nvim'
 	" Status line + web devicons
-	Plug 'NTBBloodbath/galaxyline.nvim',
-	Plug 'kyazdani42/nvim-web-devicons' " lua
+	Plug 'nvim-lualine/lualine.nvim'
+	" If you want to have icons in your statusline choose one of these
+	Plug 'nvim-tree/nvim-web-devicons'
+	"
 	Plug 'folke/trouble.nvim'
 	Plug 'Pocco81/auto-save.nvim'
 	" helm yaml
