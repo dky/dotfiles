@@ -8,3 +8,6 @@ echo '<content>' >> <file_name>
 
 # heredoc, close with end
 cat > <file> <<end
+
+# yt download yt-dlp mp3
+yt-dlp -x --audio-format mp3 <yt_url>
