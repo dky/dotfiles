@@ -35,6 +35,17 @@ if [ -x "$(command -v kubectl)" ]; then
 	complete -F __start_kubectl k
 fi
 
+# Check if pyenv dir exists, if it setup pyenv
+if [ -d  ~/.pyenv ]; then
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+	if command -v pyenv 1>/dev/null 2>&1; then
+	  eval "$(pyenv init -)"
+	fi
+fi
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 

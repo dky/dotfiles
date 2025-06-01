@@ -38,16 +38,6 @@ if [ -x /usr/games/cowsay -a -x /usr/games/fortune ]; then
 	fortune | cowsay
 fi
 
-# Check if pyenv dir exists, if it setup pyenv
-if [ -d  ~/.pyenv ]; then
-
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-	if command -v pyenv 1>/dev/null 2>&1; then
-	  eval "$(pyenv init -)"
-	fi
-fi
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
