@@ -93,6 +93,9 @@ kubectl config current-context
 # Set context of kubeconfig
 kubectl config use-context <context_name>
 
+# rm kubeconfig
+rm ~/.kube/config
+
 # Print resource documentation
 kubectl explain <resource>
 
