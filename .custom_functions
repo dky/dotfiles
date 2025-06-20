@@ -34,6 +34,12 @@ function kgp {
 	kubectl get pods --namespace=$name;
 }
 
+function ksn {
+	name=$1
+	echo $name
+	kubectl config set-context $(kubectl config current-context) --namespace=$name;
+}
+
 # kubectl exec <pod> -i -t -- /bin/sh
 function ke {
 	pod=$1
