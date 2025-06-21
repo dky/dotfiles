@@ -35,9 +35,9 @@ function kgp {
 }
 
 function ksn {
-	name=$1
-	echo $name
-	kubectl config set-context $(kubectl config current-context) --namespace=$name;
+	local namespace
+	namespace=$(kubectl get ns -o custom-columns=NAME:.metadata.name --no-headers | fzf)
+	kubectl config set-context $(kubectl config current-context) --namespace=$namespace;
 }
 
 # kubectl exec <pod> -i -t -- /bin/sh
