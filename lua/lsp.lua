@@ -36,7 +36,7 @@ local on_attach = function(client, bufnr)
     buf_set_keymap("n", "<space>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", opts)
 end
 
-local servers = {"rust_analyzer", "solargraph", "bashls", "dockerls", "cmake", "clangd", "html"}
+local servers = {"pylsp", "rust_analyzer", "solargraph", "bashls", "dockerls", "cmake", "clangd", "html"}
 for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {
         on_attach = on_attach
@@ -65,6 +65,11 @@ nvim_lsp.rust_analyzer.setup {
             }
         }
     }
+}
+
+-- vscode-html-language-server even though this doesn't really work.
+nvim_lsp.html.setup {
+    capabilities = capabilities
 }
 
 -- Golang
@@ -99,6 +104,24 @@ nvim_lsp.helm_ls.setup {
       }
     }
   }
+}
+
+-- Setup pylsp
+nvim_lsp.pylsp.setup {
+    enable = false,
+    cmd = {"pylsp"},
+    on_attach = on_attach,
+    settings = {
+        pylsp = {
+            configurationSources = {"flake8"},
+            plugins = {
+                flake8 = {enabled = false},
+                mypy = {enabled = false},
+                pycodestyle = {enabled = false},
+                pyflakes = {enabled = false}
+            }
+        }
+    }
 }
 
 require "nvim-treesitter.configs".setup {
