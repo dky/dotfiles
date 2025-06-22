@@ -8,3 +8,9 @@ gh pr list
 
 # github merge pr
 gh pr merge -m
+
+# gh install copilot extension
+gh extension install github/gh-copilot
+
+# gh auth login
+gh auth login
