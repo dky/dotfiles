@@ -11,3 +11,6 @@ cat > <file> <<end
 
 # yt download yt-dlp mp3
 yt-dlp -x --audio-format mp3 <yt_url>
+
+# ghostty config
+nvim /Users/dky/Library/Application\ Support/com.mitchellh.ghostty/config
