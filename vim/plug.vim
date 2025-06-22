@@ -1,6 +1,7 @@
 if has('nvim')
 	" Run pip3 install --user pynvim outside of vim then: :UpdateRemotePlugins
 	Plug 'neovim/nvim-lspconfig'
+
 	Plug 'hrsh7th/nvim-cmp'
 	Plug 'hrsh7th/cmp-nvim-lsp'
 	Plug 'hrsh7th/cmp-buffer'
@@ -21,13 +22,8 @@ if has('nvim')
 	Plug 'lewis6991/gitsigns.nvim'
 	" Status line + web devicons
 	Plug 'nvim-lualine/lualine.nvim'
-	" If you want to have icons in your statusline choose one of these
-	Plug 'nvim-tree/nvim-web-devicons'
-	"
-	Plug 'folke/trouble.nvim'
+
 	Plug 'Pocco81/auto-save.nvim'
-	" helm yaml
-	Plug 'towolf/vim-helm'
 	" copilot
 	Plug 'github/copilot.vim'
 else

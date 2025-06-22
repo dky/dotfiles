@@ -36,7 +36,7 @@ local on_attach = function(client, bufnr)
     buf_set_keymap("n", "<space>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", opts)
 end
 
-local servers = {"pylsp", "rust_analyzer", "solargraph", "bashls", "dockerls", "cmake", "clangd", "html"}
+local servers = {"rust_analyzer", "solargraph", "bashls", "dockerls", "cmake", "clangd", "html"}
 for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {
         on_attach = on_attach
@@ -65,21 +65,6 @@ nvim_lsp.rust_analyzer.setup {
             }
         }
     }
-}
-
--- vscode-html-language-server even though this doesn't really work.
-nvim_lsp.html.setup {
-    capabilities = capabilities
-}
-
--- If you open a ruby file and solargraph does not attach see:
--- Solargraph https://github.com/neovim/nvim-lspconfig/issues/387
-nvim_lsp.solargraph.setup {}
-
--- Ansible - make sure you get ansible-lint installed via pip
-nvim_lsp.ansiblels.setup {
-    cmd = {"ansible-language-server", "--stdio"},
-    filetypes = {"ansible"}
 }
 
 -- Golang
@@ -114,24 +99,6 @@ nvim_lsp.helm_ls.setup {
       }
     }
   }
-}
-
--- Setup pylsp
-nvim_lsp.pylsp.setup {
-    enable = false,
-    cmd = {"pylsp"},
-    on_attach = on_attach,
-    settings = {
-        pylsp = {
-            configurationSources = {"flake8"},
-            plugins = {
-                flake8 = {enabled = false},
-                mypy = {enabled = false},
-                pycodestyle = {enabled = false},
-                pyflakes = {enabled = false}
-            }
-        }
-    }
 }
 
 require "nvim-treesitter.configs".setup {
@@ -228,31 +195,3 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] =
         update_in_insert = true
     }
 )
-
-local signs = {Error = " ", Warn = " ", Hint = " ", Info = " "}
-for type, icon in pairs(signs) do
-    local hl = "DiagnosticSign" .. type
-    vim.fn.sign_define(hl, {text = icon, texthl = hl, numhl = hl})
-end
-
--- We don't need any plugins just install ltex-ls and use the configuration below.
--- Make sure you set the environment variables LT_ below
-local lt_premium_username = os.getenv("LT_PREMIUM_EMAIL")
-local lt_premium_pass = os.getenv("LT_PREMIUM_PASS")
-
-nvim_lsp.ltex.setup {
-    on_attach = on_attach,
-    cmd = {"ltex-ls"},
-    filetypes = { "markdown", "text" },
-    flags = { debounce_text_changes = 300 },
-    settings ={
-      ltex = {
-        language = "en",
-        languageToolHttpServerUri='https://api.languagetoolplus.com',
-        languageToolOrg = {
-          username = lt_premium_username,
-          apiKey = lt_premium_pass,
-        }
-      }
-    }
-}
