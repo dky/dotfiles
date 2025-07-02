@@ -26,6 +26,12 @@ if has('nvim')
 	Plug 'Pocco81/auto-save.nvim'
 	" copilot
 	Plug 'github/copilot.vim'
+
+	Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
+
+	Plug 'olimorris/persisted.nvim'
+
+
 else
 endif
 
