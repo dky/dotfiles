@@ -69,7 +69,7 @@ alias sr="screen -r"
 
 #tmux aliases
 alias tn="tmux new -s $1"
-alias ta="tmux attach -t $1"
+#alias ta="tmux attach -t $1"
 alias tad="tmux attach -dt $1"
 alias tls="tmux ls"
 
@@ -221,14 +221,10 @@ alias exs="exercism sumbit"
 alias cdexp="cd $HOME/Exercism/python"
 
 #terraform
-alias tp="terraform plan -no-color -out /tmp/tf.plan"
-alias td="terraform destroy"
-alias tps="terraform show /tmp/tf.plan | less -R"
-alias ta="terraform apply /tmp/tf.plan"
-alias tsrm="terraform state rm"
-alias ti="terraform init"
-alias tf="terraform fmt"
-alias to="terraform output"
+#alias tps="terraform show /tmp/tf.plan | less -R"
+#alias ta="terraform apply /tmp/tf.plan"
+#alias tsrm="terraform state rm"
+#alias to="terraform output"
 
 #gcp
 #alias gcl="gcloud config list"

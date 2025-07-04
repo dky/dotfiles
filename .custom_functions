@@ -406,3 +406,58 @@ function pu() {
 		echo "Obsidian repo directory doesn't exist"
 	fi
 }
+
+tp() {
+  if command -v terraform >/dev/null 2>&1; then
+    terraform plan -no-color -out /tmp/tf.plan "$@"
+  elif command -v tofu >/dev/null 2>&1; then
+    tofu plan -no-color -out /tmp/tf.plan "$@"
+  else
+    echo "Error: Neither terraform nor opentofu is installed." >&2
+    return 1
+  fi
+}
+
+ta() {
+  if command -v terraform >/dev/null 2>&1; then
+    terraform apply /tmp/tf.plan "$@"
+  elif command -v tofu >/dev/null 2>&1; then
+    tofu apply /tmp/tf.plan "$@"
+  else
+    echo "Error: Neither terraform nor opentofu is installed." >&2
+    return 1
+  fi
+}
+
+td() {
+  if command -v terraform >/dev/null 2>&1; then
+    terraform destroy "$@"
+  elif command -v tofu >/dev/null 2>&1; then
+    tofu destroy "$@"
+  else
+    echo "Error: Neither terraform nor opentofu is installed." >&2
+    return 1
+  fi
+}
+
+ti() {
+  if command -v terraform >/dev/null 2>&1; then
+    terraform init "$@"
+  elif command -v tofu >/dev/null 2>&1; then
+    tofu init "$@"
+  else
+    echo "Error: Neither terraform nor opentofu is installed." >&2
+    return 1
+  fi
+}
+
+tf() {
+  if command -v terraform >/dev/null 2>&1; then
+    terraform fmt "$@"
+  elif command -v tofu >/dev/null 2>&1; then
+    tofu fmt "$@"
+  else
+    echo "Error: Neither terraform nor opentofu is installed." >&2
+    return 1
+  fi
+}
