@@ -35,9 +35,18 @@ function kgp {
 }
 
 function ksn {
-	local namespace
-	namespace=$(kubectl get ns -o custom-columns=NAME:.metadata.name --no-headers | fzf)
-	kubectl config set-context $(kubectl config current-context) --namespace=$namespace;
+  local namespace=$1
+
+  # If no namespace provided, use fzf to select one
+  if [[ -z "$namespace" ]]; then
+    namespace=$(kubectl get ns -o custom-columns=NAME:.metadata.name --no-headers | fzf)
+    if [[ -z "$namespace" ]]; then
+      echo "No namespace selected."
+      return 1
+    fi
+  fi
+
+  kubectl config set-context --current --namespace="$namespace"
 }
 
 # kubectl exec <pod> -i -t -- /bin/sh
