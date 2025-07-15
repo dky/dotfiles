@@ -46,6 +46,7 @@ function ksn {
     fi
   fi
 
+  echo "Switching to namespace: $namespace"
   kubectl config set-context --current --namespace="$namespace"
 }
 
