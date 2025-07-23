@@ -350,6 +350,7 @@ alias hh="helm history"
 
 # kubernetes
 alias k="kubectl"
+alias kk="k9s"
 alias ka="kubectl apply -f"
 alias kl="kubectl logs"
 alias klf="kubectl logs -f"
