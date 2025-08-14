@@ -77,4 +77,6 @@ export NAVI_CONFIG=~/.dotfiles/.navi/config.yaml
 [ -f /usr/local/bin/navi -o -f $HOME/.cargo/bin/navi -o -f /opt/homebrew/bin/navi ] && eval "$(navi widget bash)"
 
 # Mise/Ruby
-eval "$(mise activate bash)"
+if [ -x "$(command -v mise)" ]; then
+	eval "$(mise activate bash)"
+fi
