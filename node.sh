@@ -6,7 +6,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 source ~/.bashrc
 
 # Install node
-nvm install 24.0.2
+nvm install 24.6.0
 
 # Install all the lsp cruft
 npm i -g bash-language-server
