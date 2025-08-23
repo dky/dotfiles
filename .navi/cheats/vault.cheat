@@ -9,6 +9,9 @@ vault token lookup
 # vault unseal
 vault operator unseal $VAULT_UNSEAL_KEY
 
+# bao unseal
+bao operator unseal $VAULT_UNSEAL_KEY
+
 # vault dev
 vault server -dev -dev-root-token-id=root -dev-listen-address="0.0.0.0:8200"
 
