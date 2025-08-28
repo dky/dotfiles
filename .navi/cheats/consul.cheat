@@ -14,3 +14,9 @@ curl --header "X-Consul-Token: $CONSUL_TOKEN" -XPUT http://127.0.0.1:8500/v1/kv/
 
 # Fetch a service from k/v
 curl --header "X-Consul-Token: $CONSUL_TOKEN" -XGET http://127.0.0.1:8500/v1/kv/somewhere/hello
+
+# Deregister a service from local catalog
+consul services deregister -token <consul_token> -id <service_id>
+
+# Export CONSUL_HTTP_ADDR
+export CONSUL_HTTP_ADDR=http://<consul_ip>:8500
