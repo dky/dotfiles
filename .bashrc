@@ -35,6 +35,13 @@ if [ -x "$(command -v kubectl)" ]; then
 	complete -F __start_kubectl k
 fi
 
+# Bash completion (only for bash 4+ with Homebrew)
+if [ "${BASH_VERSINFO[0]}" -ge 4 ] && command -v brew &> /dev/null; then
+    if [[ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]]; then
+        source "$(brew --prefix)/etc/profile.d/bash_completion.sh"
+    fi
+fi
+
 # Check if pyenv dir exists, if it setup pyenv
 if [ -d  ~/.pyenv ]; then
 
