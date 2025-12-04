@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+curl -fsSL https://pyenv.run | bash
+
 # Python deps for pyenv
 sudo apt-get update
 sudo apt-get install -y make build-essential libssl-dev zlib1g-dev \
