@@ -31,6 +31,7 @@ if has('nvim')
 
 	Plug 'olimorris/persisted.nvim'
 
+	Plug 'greggh/claude-code.nvim'
 
 else
 endif
