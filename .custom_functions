@@ -435,3 +435,27 @@ ti() { tf_cmd init "$@"; }
 tp() { tf_cmd plan -no-color -out /tmp/tf.plan "$@"; }
 ta() { tf_cmd apply /tmp/tf.plan "$@"; }
 tf() { tf_cmd fmt /tmp/tf.plan "$@"; }
+
+
+mkmd() {
+    local date_iso=$(date +%Y-%m-%dT%H:%M:%S%z | sed 's/\([+-][0-9][0-9]\)\([0-9][0-9]\)$/\1:\2/')
+    local date_prefix=$(date +%Y-%m-%d-%H:%M:%S)
+    local target_dir="${1:-.}"
+    local filename="${2:-note}"
+    local filepath="${target_dir}/${date_prefix}-${filename}.md"
+
+    # Create directory if it doesn't exist
+    mkdir -p "$target_dir"
+
+    # Create file with basic header
+    cat > "$filepath" << EOF
++++
+date = "${date_iso}"
++++
+
+
+
+EOF
+    echo "Created: $filepath"
+    echo "$filepath"
+}
