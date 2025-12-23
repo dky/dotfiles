@@ -13,7 +13,7 @@ if has('nvim')
 	Plug 'hrsh7th/vim-vsnip'
 
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-	Plug 'nvim-treesitter/playground', {'do': ':TSUpdate'}
+"	Plug 'nvim-treesitter/playground', {'do': ':TSUpdate'}
 	Plug 'sbdchd/neoformat'
 	Plug 'lukas-reineke/indent-blankline.nvim'
 	Plug 'windwp/nvim-autopairs'
