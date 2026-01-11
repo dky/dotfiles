@@ -1,0 +1,13 @@
+% wrangler
+
+# wrangler update
+npm i -D wrangler@latest
+
+# wrangler new project
+npx wrangler pages project create @<project> --production-branch main
+
+# wrangler list projects
+npx wrangler pages project list
+
+# wrangler deploy public folder to Cloudflare Pages
+npx wrangler pages deploy public
