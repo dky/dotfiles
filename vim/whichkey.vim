@@ -174,10 +174,8 @@ let g:localleader_map['p'] = [':FloatermNew --autoclose=0 python3 %'         , '
 let g:localleader_map['cd'] = [':lcd %:p:h' , 'cd to current dir']
 
 let g:localleader_map.c = {
-      \ 'name' : '+codi' ,
-      \ 'c' : [':Codi'         , 'Start Codi'],
-      \ 'd' : [':Codi!'        , 'Deactivate Codi'],
-      \ 't' : [':Codi!!'       , 'Toggle Codi'],
+      \ 'name' : '+ClaudeCode' ,
+      \ 'c' : [':ClaudeCodeFocus'         , 'Show or Hide claude'],
       \ }
 
 " Register which key map
