@@ -33,6 +33,7 @@ if has('nvim')
 
 	Plug 'coder/claudecode.nvim'
 	Plug 'folke/snacks.nvim'
+	Plug 'folke/which-key.nvim'
 
 else
 endif

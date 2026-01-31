@@ -19,7 +19,7 @@ source ~/.dotfiles/vim/highlights.vim
 " airline
 source ~/.dotfiles/vim/airline.vim
 " whichkey
-source ~/.dotfiles/vim/whichkey.vim
+"source ~/.dotfiles/vim/whichkey.vim
 " floaterm
 source ~/.dotfiles/vim/floaterm.vim
 
