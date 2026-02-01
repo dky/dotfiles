@@ -1,6 +1,7 @@
 require("claudecode").setup({
   terminal = {
     autoclose = true,
+    split_width_percentage = 0.4,
     cwd_provider = function(ctx)
       -- Prefer repo root; fallback to file's directory
       local cwd = require("claudecode.cwd").git_root(ctx.file_dir or ctx.cwd) or ctx.file_dir or ctx.cwd
@@ -27,5 +28,15 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = { "NvimTree", "neo-tree", "oil", "minifiles", "netrw" },
   callback = function()
     vim.keymap.set("n", "<leader>as", "<cmd>ClaudeCodeTreeAdd<cr>", { buffer = true, desc = "Add file" })
+  end,
+})
+
+-- Auto-enter insert mode when clicking in terminal (fixes click-to-type after scrolling)
+vim.api.nvim_create_autocmd("TermOpen", {
+  callback = function()
+    local buf = vim.api.nvim_get_current_buf()
+    -- Map mouse click in terminal normal mode to enter insert mode
+    vim.keymap.set("n", "<LeftMouse>", "<LeftMouse>i", { buffer = buf, silent = true })
+    vim.keymap.set("n", "<LeftRelease>", "<Nop>", { buffer = buf, silent = true })
   end,
 })
