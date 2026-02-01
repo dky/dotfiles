@@ -1,11 +1,13 @@
 require("claudecode").setup({
   terminal = {
+    autoclose = true,
     cwd_provider = function(ctx)
       -- Prefer repo root; fallback to file's directory
       local cwd = require("claudecode.cwd").git_root(ctx.file_dir or ctx.cwd) or ctx.file_dir or ctx.cwd
       return cwd
     end,
   },
+  focus_after_send = true,
 })
 
 -- Keybindings
