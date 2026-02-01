@@ -1,0 +1,4 @@
+% ghostty
+
+# ghostty show config
+ghostty +show-config
