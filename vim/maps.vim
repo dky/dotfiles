@@ -139,6 +139,8 @@ if has('nvim')
 	tnoremap <A-[> <Esc>
 	" alt+[h,j,k,l] for quickly switching between splits with terminals.
 	tnoremap <A-h> <c-\><c-n><c-w>h
+	" ctrl-h to quickly jump back to left window from terminal (e.g., snacks terminal)
+	tnoremap <C-h> <c-\><c-n><c-w>h
 	tnoremap <A-j> <c-\><c-n><c-w>j
 	tnoremap <A-k> <c-\><c-n><c-w>k
 	tnoremap <A-l> <c-\><c-n><c-w>l
