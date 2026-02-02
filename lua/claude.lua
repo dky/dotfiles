@@ -1,6 +1,5 @@
 require("claudecode").setup({
   terminal = {
-    autoclose = true,
     split_width_percentage = 0.4,
     cwd_provider = function(ctx)
       -- Prefer repo root; fallback to file's directory
