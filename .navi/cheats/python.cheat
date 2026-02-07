@@ -93,7 +93,10 @@ pyenv install <version>
 pyenv versions
 
 # pyenv - Set active python version
-pyenv global <version>
+pyenv global 3.14.0
+
+# pyenv install 3.14
+pyenv install 3.14.0
 
 # jupyter notebook
 jupyter notebook --ip=0.0.0.0 --port=8080
