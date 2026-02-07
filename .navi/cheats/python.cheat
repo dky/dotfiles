@@ -92,7 +92,7 @@ pyenv install <version>
 # pyenv - list installed versions
 pyenv versions
 
-# pyenv - Set active python version
+# pyenv global 3.14 - Set active python version
 pyenv global 3.14.0
 
 # pyenv install 3.14
