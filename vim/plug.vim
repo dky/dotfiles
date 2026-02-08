@@ -27,6 +27,7 @@ if has('nvim')
 	" copilot
 	Plug 'github/copilot.vim'
 
+	Plug 'nvim-tree/nvim-web-devicons'
 	Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 
 	Plug 'olimorris/persisted.nvim'
