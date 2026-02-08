@@ -25,7 +25,7 @@ if has('nvim')
 
 	Plug 'Pocco81/auto-save.nvim'
 	" copilot
-	Plug 'github/copilot.vim'
+	"Plug 'github/copilot.vim'
 
 	Plug 'nvim-tree/nvim-web-devicons'
 	Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
