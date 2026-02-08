@@ -28,3 +28,14 @@ autocmd InsertEnter * hi Comment ctermfg=43
 "
 "autocmd InsertLeave * hi CursorLine ctermbg=236
 autocmd InsertLeave * hi Comment ctermfg=59
+
+" subtle cmp popup styling (gui colors needed because termguicolors is on)
+hi Pmenu guibg=#2d2d2d guifg=#b0b0b0
+hi PmenuSel guibg=#3e3e3e guifg=#e0e0e0
+hi PmenuSbar guibg=#333333
+hi PmenuThumb guibg=#555555
+hi CmpItemAbbrMatch guibg=NONE guifg=#7dafc2
+hi CmpItemAbbrMatchFuzzy guibg=NONE guifg=#7dafc2
+hi CmpItemAbbrDeprecated guibg=NONE guifg=#555555 gui=strikethrough
+hi CmpItemKind guibg=NONE guifg=#777777
+hi CmpItemMenu guibg=NONE guifg=#666666

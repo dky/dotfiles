@@ -39,8 +39,14 @@ cmp.setup({
         { name = "dictionary", priority = 400, keyword_length = 2 },
     },
     window = {
-      completion = cmp.config.window.bordered(),
-      documentation = cmp.config.window.bordered(),
+      completion = cmp.config.window.bordered({
+        border = 'single',
+        winhighlight = 'Normal:Pmenu,FloatBorder:Pmenu,CursorLine:PmenuSel,Search:None',
+      }),
+      documentation = cmp.config.window.bordered({
+        border = 'single',
+        winhighlight = 'Normal:Pmenu,FloatBorder:Pmenu,CursorLine:PmenuSel,Search:None',
+      }),
     },
     mapping = {
         ["<s-tab>"] = cmp.mapping.select_prev_item(),
