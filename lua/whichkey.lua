@@ -17,6 +17,11 @@ wk.add({
   { "<leader>p", "\"_dP", desc = "Paste without overwrite" },
   { "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], desc = "Search and replace word under cursor" },
   { "<leader><leader>", "<cmd>FloatermToggle<cr>", desc = "Toggle floatterm" },
+  { "<leader>1", "<cmd>BufferLineGoToBuffer 1<cr>", desc = "Go to buffer 1" },
+  { "<leader>2", "<cmd>BufferLineGoToBuffer 2<cr>", desc = "Go to buffer 2" },
+  { "<leader>3", "<cmd>BufferLineGoToBuffer 3<cr>", desc = "Go to buffer 3" },
+  { "<leader>4", "<cmd>BufferLineGoToBuffer 4<cr>", desc = "Go to buffer 4" },
+  { "<leader>5", "<cmd>BufferLineGoToBuffer 5<cr>", desc = "Go to buffer 5" },
 
   -- Non-leader mappings
   { "n", "nzzzv", desc = "Next search result and center" },
