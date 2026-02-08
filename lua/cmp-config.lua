@@ -31,6 +31,7 @@ local lsp_symbols = {
 
 cmp.setup({
     sources = {
+        { name = "copilot", group_index = 2 },
         { name = "nvim_lsp" },
         { name = "vsnip" },
         { name = "buffer" },
@@ -53,6 +54,7 @@ cmp.setup({
         format = function(entry, item)
             item.kind = lsp_symbols[item.kind]
             item.menu = ({
+                copilot = "[Copilot]",
                 buffer = "[Buffer]",
                 nvim_lsp = "[LSP]",
                 luasnip = "[Snippet]",
@@ -68,7 +70,7 @@ cmp.setup({
     },
 })
 
---require("copilot_cmp").setup()
+require("copilot_cmp").setup()
 
 require("cmp_dictionary").setup({
     dic = {

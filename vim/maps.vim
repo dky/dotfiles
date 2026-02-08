@@ -219,7 +219,3 @@ autocmd BufRead,BufNewFile *.py inoremap # #<space>
 " Leader q out of finding a file... Much easier than esc + :q!, this is also
 " defined in whichkeys so we don't re-map that to something else.
 autocmd! FileType fzf tnoremap <buffer> <leader>q <c-c>
-
-" Copilot ctrl-j to accept completions
-imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
-let g:copilot_no_tab_map = v:true
