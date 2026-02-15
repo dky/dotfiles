@@ -1,0 +1,4 @@
+% claude
+
+# claude commit
+claude -p "$(cat ~/.config/prompts/commit-system-prompt.txt)" --model haiku
