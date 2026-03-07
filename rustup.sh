@@ -1,7 +1,6 @@
 #!/bin/bash
 #
-sudo apt-get install gcc build-essential
+sudo apt-get -y install gcc build-essential fzf
 
 curl https://sh.rustup.rs -sSf | sh -s -- -y
-apt-get -y install fzf
 cargo install navi
