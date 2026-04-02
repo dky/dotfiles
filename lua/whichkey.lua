@@ -15,6 +15,7 @@ wk.add({
   -- Leader mappings
   { "<leader>f", "<cmd>Files<cr>", desc = "Search all files in current Git Repo" },
   { "<leader>p", "\"_dP", desc = "Paste without overwrite" },
+  { "<leader>gg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
   { "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], desc = "Search and replace word under cursor" },
   { "<leader><leader>", "<cmd>FloatermToggle<cr>", desc = "Toggle floatterm" },
   { "<leader>1", "<cmd>BufferLineGoToBuffer 1<cr>", desc = "Go to buffer 1" },
