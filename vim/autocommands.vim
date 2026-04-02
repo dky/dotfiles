@@ -1,3 +1,10 @@
+" auto-reload buffers changed on disk when focusing a window or vim regains focus
+set autoread
+augroup auto_checktime
+	autocmd!
+	autocmd FocusGained,WinEnter * checktime
+augroup END
+
 " restore last position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
