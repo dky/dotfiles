@@ -32,6 +32,7 @@ if has('nvim')
 
 	Plug 'olimorris/persisted.nvim'
 
+	Plug 'kdheepak/lazygit.nvim'
 	Plug 'coder/claudecode.nvim'
 	Plug 'folke/snacks.nvim'
 	Plug 'folke/which-key.nvim'
