@@ -4,7 +4,14 @@
 # Use at your own risk.
 # This came from mitchellh's dotfiles git repo.  I modified it to suite my needs - dky
 
-for name in `find . -maxdepth 1 -iname ".*" -type f | sed -e 's/\.\// /'`; do 
+echo "WARNING: This will overwrite existing dotfiles in $HOME. This is destructive and cannot be undone."
+read -r -p "Continue? [y/N] " confirm
+if [[ ! "$confirm" =~ ^[Yy]$ ]]; then
+	echo "Aborted."
+	exit 1
+fi
+
+for name in `find . -maxdepth 1 -iname ".*" -type f | sed -e 's/\.\// /'`; do
 	if [ ! $name == ".gitignore" -a ! $name == "install.sh" ]; then
 		target="$HOME/$name"
 

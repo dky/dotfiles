@@ -114,6 +114,7 @@ function ap() {
 }
 
 function sshn {
+	# WARNING: Disables host key checking - MITM risk. Use only on trusted/throwaway hosts.
 	echo "Usage: sshnokey host port"
 	sshhost=$1
 	sshport=$2
@@ -125,6 +126,7 @@ function sshn {
 		sshport=22
 	fi
 
+	echo "WARNING: Connecting without host key verification - MITM risk on untrusted networks"
 	echo "Connecting to $sshhost on port: $sshport"
 	ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $sshhost -p $sshport
 }
@@ -194,9 +196,12 @@ EOF
 }
 
 function gitpc() {
+	# WARNING: Installs a post-commit hook that auto-pushes to master on every commit.
+	# Only use on personal repos where auto-push is intentional.
 	GIT_HOOKS="./.git/hooks"
 	if [ -d $GIT_HOOKS ]; then
 		echo "./git/hooks exists, creating post-commit script"
+		echo "WARNING: Every commit will automatically push to origin/master"
 		cat > $GIT_HOOKS/post-commit << EOF
 		#!/bin/sh
 
@@ -381,6 +386,7 @@ fzf-git-branch() {
 
  function vault_seed() {
 	 echo $1 > ~/.vault-token
+	 chmod 600 ~/.vault-token
  }
 
 # Git Commit latest changes with a message

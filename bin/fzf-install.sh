@@ -4,8 +4,9 @@
 FZF_DIR=~/.fzf
 
 if [ ! -d $FZF_DIR ]; then
-	echo "Directory $FZF_DIR exists."
-	rm -rf $FZF_DIR
+	echo "Directory $FZF_DIR does not exist, installing fzf..."
 	git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 	$FZF_DIR/install
+else
+	echo "fzf already installed at $FZF_DIR, skipping."
 fi
