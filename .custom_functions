@@ -465,3 +465,20 @@ EOF
     echo "Created: $filepath"
     echo "$filepath"
 }
+
+gac() {
+  git add -A
+  local diff=$(git diff --cached HEAD)
+  if [[ -z "$diff" ]]; then
+    echo "Nothing to commit."
+    return 1
+  fi
+  local msg=$(echo "${diff:0:8000}" | claude -p "propose a conventional commit message for these changes, one line only. output only the raw message text, no markdown, no backticks, nothing else.")
+  echo "$msg"
+  read -p "Commit with this message? [y/N] " confirm
+  if [[ "$confirm" == "y" ]]; then
+    git commit -m "$msg"
+  else
+    git restore --staged .
+  fi
+}
