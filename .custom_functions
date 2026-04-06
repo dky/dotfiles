@@ -475,9 +475,21 @@ gac() {
   fi
   local msg=$(echo "${diff:0:8000}" | claude -p "propose a conventional commit message for these changes, one line only. output only the raw message text, no markdown, no backticks, nothing else.")
   echo "$msg"
-  read -p "Commit with this message? [y/N] " confirm
+  read -p "Commit with this message? [y/e/N] " confirm
   if [[ "$confirm" == "y" ]]; then
     git commit -m "$msg"
+  elif [[ "$confirm" == "e" ]]; then
+    local tmpfile=$(mktemp)
+    echo "$msg" > "$tmpfile"
+    ${EDITOR:-vi} "$tmpfile"
+    local edited_msg=$(cat "$tmpfile")
+    rm "$tmpfile"
+    if [[ -n "$edited_msg" ]]; then
+      git commit -m "$edited_msg"
+    else
+      echo "Empty message, aborting."
+      git restore --staged .
+    fi
   else
     git restore --staged .
   fi
