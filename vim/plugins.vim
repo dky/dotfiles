@@ -42,7 +42,12 @@ set omnifunc=syntaxcomplete#Complete
 let g:fzf_layout = { 'window': { 'width': 1.0, 'height': 1.0, 'highlight': 'Comment' } }
 
 " This relies on the bat command for rendering terminal colors - brew install bat, this is also in the misc.sh script
-let $FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --layout reverse --margin=1,4 --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
+" ctrl-/ toggles preview layout (right / bottom-tall / hidden); ctrl-u/d scroll the preview half a page.
+let $FZF_DEFAULT_OPTS="--ansi --layout reverse --margin=1,4"
+            \ . " --preview 'bat --color=always --style=numbers,changes --line-range :500 {}'"
+            \ . " --preview-window 'right:60%:wrap'"
+            \ . " --bind 'ctrl-/:change-preview-window(down,70%|hidden|)'"
+            \ . " --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
 
 let g:fzf_action = {
 			\ 'ctrl-t': 'tab split',

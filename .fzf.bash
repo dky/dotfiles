@@ -49,4 +49,16 @@ export FZF_FIND_EXCLUDE="\( -name Music -o -name logbook -o -name Library -o -na
 	-o \( -path './go/bin/*' -o -path './go/pkg/*' -o -path './.vim/plugged/*' -o -path './.vim/view/*' -o -path './.local/share/nvim/view/*' -o -path './go/src/*' -o -path './iCloud*/*' -o -path './google-cloud-sdk/*' -o -path './tmp/*' -o -path './Documents/*' -o -path './Desktop/*' -o -path './git/dky.io/*' -o -path './git/docker/*' -o -path './git/kinesis-qmk/*' -o -path './.npm' -o -path './.pyenv' -o -path './.fzf' -o -path './.templateengine' -o -path './.bash_sessions' -o -path './.cache' -o -path './node_modules' -o -path './volumes' -o -path './.eclipse' -o -path './.config/coc/extensions' -o -path './themes/blowfish' \) -prune \
 	-o \( -name '*.mp4' -o -name '*.mp3' -o -name '.DS_Store' -o -name '*.png' -o -name '*.jpg' -o -name '*.jpeg' -o -name '*.gz' -o -name '*.tgz' -o -name '*.ipa' -o -name '*.apk' -o -name '*.pyc' -o -name '*.sqlite' -o -name '*.ico' -o -name '*.rpm' -o -name '*.deb' -o -name '*.zip' -o -name '*.log' -o -name '*.pem' \) -prune"
 
-export FZF_DEFAULT_COMMAND="find . $FZF_FIND_EXCLUDE -o -type f -print"
+# Prefer fd (faster, respects .gitignore). Fall back to the find-based command
+# above so :Files / Ctrl-T keep working if fd isn't installed.
+if command -v fd >/dev/null 2>&1; then
+	export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclude node_modules --exclude .terraform --exclude venv'
+else
+	export FZF_DEFAULT_COMMAND="find . $FZF_FIND_EXCLUDE -o -type f -print"
+fi
+
+# Make Ctrl-T (file widget) and Alt-C (cd widget) use the same backend.
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+if command -v fd >/dev/null 2>&1; then
+	export FZF_ALT_C_COMMAND='fd --type d --hidden --follow --exclude .git'
+fi
