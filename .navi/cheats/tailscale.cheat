@@ -1,0 +1,4 @@
+% tailscale
+
+# disable magic dns
+sudo tailscale set --accept-dns=false
