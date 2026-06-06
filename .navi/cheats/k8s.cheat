@@ -93,6 +93,9 @@ kubectl config current-context
 # Set context of kubeconfig
 kubectl config use-context <context_name>
 
+# List nodes by label
+kubectl get nodes -l nodegroup=<label>
+
 # rm kubeconfig
 rm ~/.kube/config
 
