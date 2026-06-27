@@ -474,6 +474,14 @@ gac() {
     return 1
   fi
   local msg=$(echo "${diff:0:8000}" | claude -p "propose a conventional commit message for these changes, one line only. output only the raw message text, no markdown, no backticks, nothing else.")
+
+  # Prepend the branch's ticket (e.g. SP-1234) if present and not already there
+  local branch=$(git symbolic-ref --short HEAD 2>/dev/null)
+  local ticket=$(echo "$branch" | grep -oiE '[A-Z]+-[0-9]+' | head -1 | tr '[:lower:]' '[:upper:]')
+  if [[ -n "$ticket" && "$msg" != "$ticket:"* ]]; then
+    msg="$ticket: $msg"
+  fi
+
   echo "$msg"
   read -p "Commit with this message? [y/e/N] " confirm
   if [[ "$confirm" == "y" ]]; then
