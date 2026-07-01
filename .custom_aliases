@@ -377,6 +377,7 @@ alias kds="kubectl describe statefulset"
 alias kd="kubectl describe"
 alias kgrs="kubectl get replicaset"
 alias kdrb="kubectl describe RBACDefinition"
+alias kgrb="kubectl get RBACDefinition"
 
 alias kgs="kubectl get services"
 alias kgss="kubectl get statefulset"
