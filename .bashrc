@@ -29,7 +29,7 @@ export PYTHONDONTWRITEBYTECODE=1
 command -v fzf >/dev/null && [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 [ -f ~/.custom_functions ] && source ~/.custom_functions
 [ -f ~/.custom_aliases ] && source ~/.custom_aliases
-[ -f ~/.dotfiles/z.sh ] && source ~/.dotfiles/z.sh
+[ -f ~/.dotfiles/bin/z.sh ] && source ~/.dotfiles/bin/z.sh
 
 # Kubctl bash completions
 if [ -x "$(command -v kubectl)" ]; then
