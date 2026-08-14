@@ -2,7 +2,7 @@ bindkey -v
 bindkey '^R' history-incremental-search-backward
 
 source $HOME/.custom_aliases
-source $HOME/.dotfiles/z.sh
+source $HOME/.dotfiles/bin/z.sh
 source $HOME/.fzf.zsh
 
 autoload colors; colors;
