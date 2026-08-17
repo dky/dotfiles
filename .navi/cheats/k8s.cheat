@@ -34,6 +34,9 @@ $ nodes:  kubectl get nodes --no-headers -o custom-columns=":metadata.name"
 $ deployments:  kubectl get deployments --no-headers -o custom-columns=":metadata.name"
 $ nodeclaims:  kubectl get nodeclaims --no-headers -o custom-columns=":metadata.name"
 
+# Restart deployment
+kubectl rollout restart deployment <deployment-name>
+
 # Get karpenter logs
 kubectl logs -f -l app.kubernetes.io/name=karpenter -n kube-system
 
@@ -303,6 +306,9 @@ kubectl logs -f -n cert-manager -l app.kubernetes.io/instance=cert-manager
 
 # kubectl describe vault clusterissuer
 kubectl describe clusterissuers vault-cluster-issuer
+
+# Edit certmanager certificate
+kubectl edit Certficate <certificate-name>
 
 # kubectl decode base64 secret
 kubectl get secret <secret-name> -o json | jq '.data | map_values(@base64d)'
