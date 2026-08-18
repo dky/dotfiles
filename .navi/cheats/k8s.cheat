@@ -40,6 +40,9 @@ kubectl rollout restart deployment <deployment-name>
 # Get karpenter logs
 kubectl logs -f -l app.kubernetes.io/name=karpenter -n kube-system
 
+# HAProxy logs
+kubectl logs -f -l app.kubernetes.io/name=haproxy-nonprod
+
 # Scale karpenter controller
 kubectl scale deployment karpenter --replicas=1 -n kube-system
 
