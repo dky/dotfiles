@@ -6,8 +6,11 @@ openssl s_client -servername <DOMAIN> -connect <DOMAIN>:443 2>/dev/null | \
 openssl x509 -text | \
 less
 
-# Validate crt file
+# Validate pem/crt file
 openssl x509 -in <FILE> -text -noout | less
+
+# Validate issuer
+echo | openssl s_client -connect <url>:443 2>/dev/null | openssl x509 -noout -issuer -subject -dates
 
 # Connect to remote server and dump certs without sni
 openssl s_client -showcerts -connect <url>:443 </dev/null
