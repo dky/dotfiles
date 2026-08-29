@@ -7,7 +7,7 @@ openssl x509 -text | \
 less
 
 # Validate crt file
-openssl x509 -in <FILE>.crt -text -noout | less
+openssl x509 -in <FILE> -text -noout | less
 
 # Connect to remote server and dump certs without sni
 openssl s_client -showcerts -connect <url>:443 </dev/null
